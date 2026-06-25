@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Web Design & Development Shelby NC | Shelby Web Company"
+  description="Your Local Shelby, NC web design, app development & digital marketing studio. Building modern websites and custom web apps that drive real growth for local businesses. Free logo design included + $100 referral rewards."
+>
+
+  <!-- Promo Ticker/Marquee Bar -->
+  <div class="bg-brand-dark border-b border-brand-sky/20 overflow-hidden">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <div class="flex items-center space-x-8 px-4">
+        <span class="text-brand-cyan text-sm font-medium">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ Free SEO Audit for Local Businesses!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ Free SEO Audit for Local Businesses!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-brand-cyan text-sm font-medium">✦ $100 Unlimited Referral Bonus!</span>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-32 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            We Don't Just Build You a Website or an App.
+          </h1>
+          <p class="text-xl text-brand-sky/80 mb-4">
+            We build the online engine that gets your business found, trusted, and hired!
+          </p>
+          <p class="text-sm text-brand-sky/60 mb-8">
+            Serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh
+          </p>
+          
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a 
+              href="/contact#get-in-touch"
+              class="bg-gradient-to-r from-brand-sky to-brand-cyan text-white px-8 py-3 rounded-lg font-medium hover:shadow-[0_0_20px_rgba(0,200,255,0.3)] transition-all duration-300"
+            >
+              Get Started Today
+            </a>
+            <a 
+              href="/about"
+              class="border border-brand-sky text-brand-sky px-8 py-3 rounded-lg font-medium hover:bg-brand-sky/10 transition-all duration-300"
+            >
+              Learn About Our Story
+            </a>
+          </div>
+
+          <div class="space-y-2 mb-8">
+            <p class="text-brand-sky/70 text-sm">• Custom websites that convert</p>
+            <p class="text-brand-sky/70 text-sm">• SEO optimization</p>
+            <p class="text-brand-sky/70 text-sm">• Quality digital assets</p>
+          </div>
+
+          <p class="text-brand-glow text-sm font-medium mb-4">
+            Trusted by 100+ Local Businesses
+          </p>
+
+          <p class="text-brand-sky/60 text-sm">
+            💬 Try our ShelbyBot chat widget! Click the bubble in the bottom-right.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gradient-to-br from-brand-dark to-brand-darkest rounded-2xl p-8 border border-brand-sky/20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-sky/5 to-brand-cyan/5"></div>
+            <div class="relative z-10">
+              <div class="aspect-square bg-brand-darkest rounded-xl flex items-center justify-center border border-brand-sky/30">
+                <div class="text-center">
+                  <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,200,255,0.3)]">
+                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p class="text-brand-sky font-heading font-bold">Your Digital Engine</p>
+                  <p class="text-brand-sky/60 text-sm mt-2">Built for Growth</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -inset-4 bg-gradient-to-r from-brand-sky/20 to-brand-cyan/20 rounded-2xl blur-xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech/Partner Logo Marquee Strip -->
+  <section class="py-12 bg-brand-dark border-y border-brand-sky/20" data-animate>
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-center text-brand-glow text-sm uppercase tracking-widest mb-8">
+        Powered by the best in the industry
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">CompTIA A+</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">VS Code</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">Claude</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">Hostinger</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">OpenRouter</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">Windsurf</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">Ollama</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">OpenCode</div>
+        <div class="text-brand-sky/40 hover:text-brand-cyan transition-colors font-bold text-lg">Lead Parrot</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
+        Everything Your Business Needs
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Web Design Card -->
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Web Design & Development</h3>
+          <ul class="space-y-2 text-sm text-brand-sky/70 mb-4">
+            <li>• Mobile-First Design</li>
+            <li>• Lightning Fast Loading</li>
+            <li>• Lead Generation Forms</li>
+            <li>• Local SEO Built-In</li>
+          </ul>
+          <a href="/services/web-design" class="text-brand-cyan hover:text-brand-glow text-sm font-medium transition-colors">
+            Learn About Web Design →
+          </a>
+        </div>
+
+        <!-- Branding Card -->
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Logo Design & Branding</h3>
+          <ul class="space-y-2 text-sm text-brand-sky/70 mb-4">
+            <li>• Custom Logo Design</li>
+            <li>• Brand Identity Package</li>
+            <li>• Business Card Design</li>
+            <li>• Social Media Assets</li>
+          </ul>
+          <a href="/services/branding" class="text-brand-cyan hover:text-brand-glow text-sm font-medium transition-colors">
+            Learn About Branding →
+          </a>
+        </div>
+
+        <!-- SEO Card -->
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">SEO Services</h3>
+          <ul class="space-y-2 text-sm text-brand-sky/70 mb-4">
+            <li>• Technical SEO</li>
+            <li>• On-Page Optimization</li>
+            <li>• Local Search Dominance</li>
+            <li>• Google Business Profile</li>
+          </ul>
+          <a href="/services/seo" class="text-brand-cyan hover:text-brand-glow text-sm font-medium transition-colors">
+            Learn About SEO Services →
+          </a>
+        </div>
+
+        <!-- Media Packs Card -->
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Custom Media Packs</h3>
+          <ul class="space-y-2 text-sm text-brand-sky/70 mb-4">
+            <li>• Custom Visuals & Graphics</li>
+            <li>• Website & Social Ready</li>
+            <li>• Fast Turnaround Delivery</li>
+            <li>• Conversion-Focused Design</li>
+          </ul>
+          <a href="/services/media-packs" class="text-brand-cyan hover:text-brand-glow text-sm font-medium transition-colors">
+            Learn About Media Packs →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="py-20 px-4 bg-brand-dark" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Specialized for Your Industry</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
+        We Understand Your Business
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Roofing Contractors</h3>
+          <p class="text-sm text-brand-sky/70">Lead generation systems that convert homeowners.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Landscaping Companies</h3>
+          <p class="text-sm text-brand-sky/70">Seasonal promotions and project portfolios.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Solar Panel Installers</h3>
+          <p class="text-sm text-brand-sky/70">ROI calculators and educational content.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Tree Specialists</h3>
+          <p class="text-sm text-brand-sky/70">Emergency services and seasonal care programs.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Expedited Trucking</h3>
+          <p class="text-sm text-brand-sky/70">Real-time tracking and logistics platforms.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Home Remodelers</h3>
+          <p class="text-sm text-brand-sky/70">Before/after galleries and booking systems.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Plumbers</h3>
+          <p class="text-sm text-brand-sky/70">Emergency dispatch and testimonial systems.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 hover:border-brand-cyan/50 transition-colors">
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Painters</h3>
+          <p class="text-sm text-brand-sky/70">Color tools and scheduling systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video/CTA Break Section -->
+  <section class="py-20 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">See Why We're Different!</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
+        Take the Shelby Web Co. Tour
+      </h2>
+      <a 
+        href="/about"
+        class="inline-block bg-gradient-to-r from-brand-sky to-brand-cyan text-white px-8 py-3 rounded-lg font-medium hover:shadow-[0_0_20px_rgba(0,200,255,0.3)] transition-all duration-300"
+      >
+        Learn More About Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Non-Exclusive Agency Section -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ We're also a Non-Exclusive Agency</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+        Your Success Is Our Success
+      </h2>
+      <p class="text-lg text-brand-sky/80 mb-8">
+        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.
+      </p>
+      <p class="text-brand-cyan font-medium">
+        No exclusivity, just great results.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 px-4 bg-brand-dark" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What Our Clients Say</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
+        Real Results from Real Businesses
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-darkest border-l-4 border-brand-cyan rounded-r-xl p-6">
+          <p class="text-brand-sky/80 mb-4 italic">
+            "Shelby Web Co. really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-full flex items-center justify-center text-white font-bold mr-4">
+              PR
+            </div>
+            <div>
+              <p class="text-white font-medium">Paul Richardson</p>
+              <p class="text-brand-sky/60 text-sm">Local Guide</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-darkest border-l-4 border-brand-cyan rounded-r-xl p-6">
+          <p class="text-brand-sky/80 mb-4 italic">
+            "Shelby Web Co. really knocked it out of the park. Our online presence is not only fully present, it's generating our business so many leads now! Thank You!!!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-full flex items-center justify-center text-white font-bold mr-4">
+              RJ
+            </div>
+            <div>
+              <p class="text-white font-medium">Ryan "Kris" Jones</p>
+              <p class="text-brand-sky/60 text-sm">Verified Customer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

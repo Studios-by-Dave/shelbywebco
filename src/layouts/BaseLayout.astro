@@ -1,0 +1,96 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ChatWidget from '../components/ChatWidget.jsx';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title, 
+  description, 
+  image = '/og-image.jpg',
+  canonical = new URL(Astro.url.pathname, Astro.site).href
+} = Astro.props;
+
+const fullTitle = `${title} | Shelby Web Company`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0EA5E9" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Fonts (self-hosted) -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    
+    <title>{fullTitle}</title>
+  </head>
+  <body class="bg-brand-darkest text-white font-body antialiased">
+    <Navbar />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <Footer />
+    <ChatWidget />
+    
+    <script>
+      // Scroll animation with IntersectionObserver
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+            }
+          });
+        }, observerOptions);
+
+        // Add fade-in-up animation to elements with data-animate attribute
+        document.querySelectorAll('[data-animate]').forEach(el => {
+          el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+          observer.observe(el);
+        });
+
+        // Add CSS for animation
+        const style = document.createElement('style');
+        style.textContent = `
+          .animate-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+        `;
+        document.head.appendChild(style);
+      });
+    </script>
+  </body>
+</html>
