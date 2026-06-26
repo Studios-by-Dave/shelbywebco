@@ -2,9 +2,10 @@
 import { Image } from 'astro:assets';
 import logo from '../../assets/SWeblogo1.jpg';
 import MobileNav from './MobileNav.jsx';
+import DesktopNav from './DesktopNav.jsx';
 ---
 
-<nav class="sticky top-0 z-50 bg-brand-darkest border-b border-brand-sky/20">
+<nav class="sticky top-0 z-50 bg-brand-darkest border-b border-brand-purple/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
@@ -20,64 +21,16 @@ import MobileNav from './MobileNav.jsx';
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-white hover:text-brand-glow transition-colors">Home</a>
-        
-        <!-- Services Dropdown -->
-        <div class="relative group">
-          <button class="text-white hover:text-brand-glow transition-colors flex items-center">
-            Services
-            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          <!-- Dropdown Menu -->
-          <div class="absolute left-0 mt-2 w-96 bg-brand-darkest border border-brand-sky/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-            <div class="p-4">
-              <!-- Service Pages -->
-              <div class="mb-4">
-                <p class="text-brand-glow text-xs uppercase tracking-widest mb-2">Our Services</p>
-                <div class="space-y-1">
-                  <a href="/services/web-design" class="block text-white hover:text-brand-cyan transition-colors py-1">Web Design & Development</a>
-                  <a href="/services/branding" class="block text-white hover:text-brand-cyan transition-colors py-1">Logo Design & Branding</a>
-                  <a href="/services/seo" class="block text-white hover:text-brand-cyan transition-colors py-1">SEO Services</a>
-                  <a href="/services/media-packs" class="block text-white hover:text-brand-cyan transition-colors py-1">Custom Media Packs</a>
-                  <a href="/services/audio-branding" class="block text-white hover:text-brand-cyan transition-colors py-1">Audio Branding</a>
-                  <a href="/services/case-studies" class="block text-white hover:text-brand-cyan transition-colors py-1">Case Studies</a>
-                  <a href="/services/portfolio" class="block text-white hover:text-brand-cyan transition-colors py-1">Portfolio</a>
-                </div>
-              </div>
-              
-              <!-- Service Areas -->
-              <div class="border-t border-brand-sky/20 pt-4">
-                <p class="text-brand-glow text-xs uppercase tracking-widest mb-2">Service Areas</p>
-                <div class="grid grid-cols-2 gap-1">
-                  <a href="/web-design-shelby-nc" class="block text-white hover:text-brand-cyan transition-colors py-1">Shelby, NC</a>
-                  <a href="/web-design-charlotte-nc" class="block text-white hover:text-brand-cyan transition-colors py-1">Charlotte, NC</a>
-                  <a href="/web-design-gastonia-nc" class="block text-white hover:text-brand-cyan transition-colors py-1">Gastonia, NC</a>
-                  <a href="/web-design-spartanburg-sc" class="block text-white hover:text-brand-cyan transition-colors py-1">Spartanburg, SC</a>
-                  <a href="/web-design-asheville-nc" class="block text-white hover:text-brand-cyan transition-colors py-1">Asheville, NC</a>
-                  <a href="/web-design-raleigh-nc" class="block text-white hover:text-brand-cyan transition-colors py-1">Raleigh, NC</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <a href="/about" class="text-white hover:text-brand-glow transition-colors">About</a>
-        <a href="/contact" class="text-white hover:text-brand-glow transition-colors">Contact</a>
-        <a href="/blog" class="text-white hover:text-brand-glow transition-colors">Blog</a>
-      </div>
+      <DesktopNav client:load />
 
       <!-- CTA Button & Phone -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="tel:+17044738188" class="text-brand-cyan hover:text-brand-glow transition-colors font-medium">
+        <a href="tel:+17044738188" class="text-brand-green hover:text-brand-greenLight transition-colors font-medium">
           (704) 473-8188
         </a>
         <a 
           href="/contact#get-in-touch" 
-          class="bg-gradient-to-r from-brand-sky to-brand-cyan text-white px-6 py-2.5 rounded-lg font-medium hover:shadow-[0_0_20px_rgba(0,200,255,0.3)] transition-all duration-300"
+          class="bg-brand-green text-white px-6 py-2.5 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300"
         >
           Get Started
         </a>

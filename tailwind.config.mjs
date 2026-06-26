@@ -5,11 +5,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          darkest: '#0A1628',
-          dark: '#0D1F3C',
-          sky: '#0EA5E9',
-          cyan: '#00C8FF',
-          glow: '#00E5FF',
+          darkest: '#0A0A0A',
+          dark: '#1A1A1A',
+          purple: '#8B5CF6',
+          purpleLight: '#A78BFA',
+          green: '#39FF14',
+          greenLight: '#6BFF47',
         },
       },
       fontFamily: {
