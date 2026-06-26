@@ -13,7 +13,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Abril Fatface', 'serif'],
+        heading: ['"Playfair Display"', 'serif'],
         body: ['Inter', 'sans-serif'],
       },
     },
