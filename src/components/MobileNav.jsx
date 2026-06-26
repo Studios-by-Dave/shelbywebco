@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <>
@@ -38,7 +39,57 @@ export default function MobileNav() {
         <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-sky/20 md:hidden">
           <div className="px-4 py-4 space-y-3">
             <a href="/" className="block text-white hover:text-brand-glow py-2">Home</a>
-            <a href="/services/web-design" className="block text-white hover:text-brand-glow py-2">Services</a>
+            
+            {/* Services Section */}
+            <div>
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center justify-between w-full text-white hover:text-brand-glow py-2"
+              >
+                Services
+                <svg
+                  className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              
+              {servicesOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {/* Our Services */}
+                  <div>
+                    <p className="text-brand-glow text-xs uppercase tracking-widest mb-2">Our Services</p>
+                    <a href="/services/web-design" className="block text-white hover:text-brand-cyan py-1">Web Design & Development</a>
+                    <a href="/services/branding" className="block text-white hover:text-brand-cyan py-1">Logo Design & Branding</a>
+                    <a href="/services/seo" className="block text-white hover:text-brand-cyan py-1">SEO Services</a>
+                    <a href="/services/media-packs" className="block text-white hover:text-brand-cyan py-1">Custom Media Packs</a>
+                    <a href="/services/audio-branding" className="block text-white hover:text-brand-cyan py-1">Audio Branding</a>
+                    <a href="/services/case-studies" className="block text-white hover:text-brand-cyan py-1">Case Studies</a>
+                    <a href="/services/portfolio" className="block text-white hover:text-brand-cyan py-1">Portfolio</a>
+                  </div>
+                  
+                  {/* Service Areas */}
+                  <div className="mt-4 pt-4 border-t border-brand-sky/20">
+                    <p className="text-brand-glow text-xs uppercase tracking-widest mb-2">Service Areas</p>
+                    <a href="/web-design-shelby-nc" className="block text-white hover:text-brand-cyan py-1">Shelby, NC</a>
+                    <a href="/web-design-charlotte-nc" className="block text-white hover:text-brand-cyan py-1">Charlotte, NC</a>
+                    <a href="/web-design-gastonia-nc" className="block text-white hover:text-brand-cyan py-1">Gastonia, NC</a>
+                    <a href="/web-design-spartanburg-sc" className="block text-white hover:text-brand-cyan py-1">Spartanburg, SC</a>
+                    <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan py-1">Asheville, NC</a>
+                    <a href="/web-design-raleigh-nc" className="block text-white hover:text-brand-cyan py-1">Raleigh, NC</a>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <a href="/about" className="block text-white hover:text-brand-glow py-2">About</a>
             <a href="/contact" className="block text-white hover:text-brand-glow py-2">Contact</a>
             <a href="/blog" className="block text-white hover:text-brand-glow py-2">Blog</a>

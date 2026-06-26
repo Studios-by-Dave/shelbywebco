@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-quality-trust-357123736.webp';
 ---
 
 <BaseLayout 
@@ -12,14 +14,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none"></div>
     <div class="flex whitespace-nowrap animate-marquee relative z-10">
       <div class="flex items-center space-x-12 px-4">
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
-        <span class="text-gray-800 text-lg font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-gray-800 text-xl font-medium drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
       </div>
     </div>
   </div>
@@ -40,7 +42,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-            We Don't Just Build You a Website or an App.
+            We Don't Just Build You a <span class="text-brand-cyan">Website</span> or an <span class="text-brand-glow">App</span>.
           </h1>
           <p class="text-xl text-brand-sky/80 mb-4">
             We build the online engine that gets your business found, trusted, and hired!
@@ -77,6 +79,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="text-brand-sky/60 text-sm">
             💬 Try our ShelbyBot chat widget! Click the bubble in the bottom-right.
           </p>
+
+          <div class="mt-6">
+            <Image 
+              src={trustedBadge} 
+              alt="Trusted Company Badge" 
+              width={120} 
+              height={120}
+              class="w-28 h-auto"
+            />
+          </div>
         </div>
 
         <div class="relative">
