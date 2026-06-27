@@ -25,8 +25,13 @@ import DesktopNav from './DesktopNav.jsx';
 
       <!-- CTA Button & Phone -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="tel:+17044738188" class="text-brand-green hover:text-brand-greenLight transition-colors font-medium">
-          (704) 473-8188
+        <a 
+          href="tel:+17044738188" 
+          class="bg-brand-dark border border-brand-purple/30 rounded-lg px-4 py-2 hover:border-brand-green/50 transition-all duration-300 group"
+        >
+          <p class="text-brand-purple text-xs font-bold uppercase tracking-wider group-hover:text-brand-green transition-colors">Call Us Text Us</p>
+          <p class="text-brand-green text-lg font-bold group-hover:text-brand-greenLight transition-colors">(704) 473-8188</p>
+          <p class="text-white/60 text-xs">We're here 24/7</p>
         </a>
         <a 
           href="/contact#get-in-touch" 

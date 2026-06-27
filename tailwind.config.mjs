@@ -9,8 +9,8 @@ export default {
           dark: '#1A1A1A',
           purple: '#8B5CF6',
           purpleLight: '#A78BFA',
-          green: '#39FF14',
-          greenLight: '#6BFF47',
+          green: '#4ADE80',
+          greenLight: '#86EFAC',
         },
       },
       fontFamily: {

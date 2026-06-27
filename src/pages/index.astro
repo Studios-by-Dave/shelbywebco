@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-quality-trust-357123736.webp';
+import heroImage from '../../assets/hero-human-inside.webp';
 ---
 
 <BaseLayout 
@@ -92,22 +93,11 @@ import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-
         </div>
 
         <div class="relative">
-          <div class="bg-gradient-to-br from-brand-dark to-brand-darkest rounded-2xl p-8 border border-brand-purple/20 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-brand-green/5"></div>
-            <div class="relative z-10">
-              <div class="aspect-square bg-brand-darkest rounded-xl flex items-center justify-center border border-brand-purple/30">
-                <div class="text-center">
-                  <div class="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-brand-purple to-brand-green rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(139,92,246,0.3)]">
-                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p class="text-white font-heading font-bold">Your Digital Engine</p>
-                  <p class="text-white/60 text-sm mt-2">Built for Growth</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Image 
+            src={heroImage} 
+            alt="Hero Image" 
+            class="rounded-2xl shadow-2xl"
+          />
           <div class="absolute -inset-4 bg-gradient-to-r from-brand-purple/20 to-brand-green/20 rounded-2xl blur-xl -z-10"></div>
         </div>
       </div>
