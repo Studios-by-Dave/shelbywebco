@@ -91,6 +91,7 @@ export default function MobileNav() {
             </div>
             
             <a href="/about" className="block text-white font-medium hover:text-brand-purple py-2">About</a>
+            <a href="/pricing" className="block text-white font-medium hover:text-brand-purple py-2">Pricing</a>
             <a href="/contact" className="block text-white font-medium hover:text-brand-purple py-2">Contact</a>
             <a href="/blog" className="block text-white font-medium hover:text-brand-purple py-2">Blog</a>
             <a href="tel:+17044738188" className="block text-brand-green hover:text-brand-greenLight py-2">

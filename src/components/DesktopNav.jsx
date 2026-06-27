@@ -75,6 +75,7 @@ export default function DesktopNav() {
       </div>
       
       <a href="/about" className="text-white font-medium hover:text-brand-purple transition-colors">About</a>
+      <a href="/pricing" className="text-white font-medium hover:text-brand-purple transition-colors">Pricing</a>
       <a href="/contact" className="text-white font-medium hover:text-brand-purple transition-colors">Contact</a>
       <a href="/blog" className="text-white font-medium hover:text-brand-purple transition-colors">Blog</a>
     </div>
