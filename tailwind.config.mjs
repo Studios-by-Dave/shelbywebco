@@ -7,10 +7,10 @@ export default {
         brand: {
           darkest: '#0A0A0A',
           dark: '#1A1A1A',
-          purple: '#8B5CF6',
-          purpleLight: '#A78BFA',
-          green: '#4ADE80',
-          greenLight: '#86EFAC',
+          blue: '#1D4ED8',
+          blueLight: '#3B82F6',
+          cyan: '#22D3EE',
+          cyanLight: '#67E8F9',
         },
       },
       fontFamily: {

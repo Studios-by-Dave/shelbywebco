@@ -36,15 +36,15 @@ export default function MobileNav() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-purple/20 md:hidden">
+        <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-blue/20 md:hidden">
           <div className="px-4 py-4 space-y-3">
-            <a href="/" className="block text-white font-medium hover:text-brand-purple py-2">Home</a>
+            <a href="/" className="block text-white font-medium hover:text-brand-blue py-2">Home</a>
             
             {/* Services Section */}
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full text-white font-medium hover:text-brand-purple py-2"
+                className="flex items-center justify-between w-full text-white font-medium hover:text-brand-blue py-2"
               >
                 Services
                 <svg
@@ -66,40 +66,40 @@ export default function MobileNav() {
                 <div className="pl-4 space-y-2 mt-2">
                   {/* Our Services */}
                   <div>
-                    <p className="text-brand-purple text-xs uppercase tracking-widest mb-2">Our Services</p>
-                    <a href="/services/web-design" className="block text-white hover:text-brand-green py-1">Web Design & Development</a>
-                    <a href="/services/branding" className="block text-white hover:text-brand-green py-1">Logo Design & Branding</a>
-                    <a href="/services/seo" className="block text-white hover:text-brand-green py-1">SEO Services</a>
-                    <a href="/services/media-packs" className="block text-white hover:text-brand-green py-1">Custom Media Packs</a>
-                    <a href="/services/audio-branding" className="block text-white hover:text-brand-green py-1">Audio Branding</a>
-                    <a href="/services/case-studies" className="block text-white hover:text-brand-green py-1">Case Studies</a>
-                    <a href="/services/portfolio" className="block text-white hover:text-brand-green py-1">Portfolio</a>
+                    <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Our Services</p>
+                    <a href="/services/web-design" className="block text-white hover:text-brand-cyan py-1">Web Design & Development</a>
+                    <a href="/services/branding" className="block text-white hover:text-brand-cyan py-1">Logo Design & Branding</a>
+                    <a href="/services/seo" className="block text-white hover:text-brand-cyan py-1">SEO Services</a>
+                    <a href="/services/media-packs" className="block text-white hover:text-brand-cyan py-1">Custom Media Packs</a>
+                    <a href="/services/audio-branding" className="block text-white hover:text-brand-cyan py-1">Audio Branding</a>
+                    <a href="/services/case-studies" className="block text-white hover:text-brand-cyan py-1">Case Studies</a>
+                    <a href="/services/portfolio" className="block text-white hover:text-brand-cyan py-1">Portfolio</a>
                   </div>
                   
                   {/* Service Areas */}
-                  <div className="mt-4 pt-4 border-t border-brand-purple/20">
-                    <p className="text-brand-purple text-xs uppercase tracking-widest mb-2">Service Areas</p>
-                    <a href="/web-design-shelby-nc" className="block text-white hover:text-brand-green py-1">Shelby, NC</a>
-                    <a href="/web-design-charlotte-nc" className="block text-white hover:text-brand-green py-1">Charlotte, NC</a>
-                    <a href="/web-design-gastonia-nc" className="block text-white hover:text-brand-green py-1">Gastonia, NC</a>
-                    <a href="/web-design-spartanburg-sc" className="block text-white hover:text-brand-green py-1">Spartanburg, SC</a>
-                    <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-green py-1">Asheville, NC</a>
-                    <a href="/web-design-raleigh-nc" className="block text-white hover:text-brand-green py-1">Raleigh, NC</a>
+                  <div className="mt-4 pt-4 border-t border-brand-blue/20">
+                    <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Service Areas</p>
+                    <a href="/web-design-shelby-nc" className="block text-white hover:text-brand-cyan py-1">Shelby, NC</a>
+                    <a href="/web-design-charlotte-nc" className="block text-white hover:text-brand-cyan py-1">Charlotte, NC</a>
+                    <a href="/web-design-gastonia-nc" className="block text-white hover:text-brand-cyan py-1">Gastonia, NC</a>
+                    <a href="/web-design-spartanburg-sc" className="block text-white hover:text-brand-cyan py-1">Spartanburg, SC</a>
+                    <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan py-1">Asheville, NC</a>
+                    <a href="/web-design-raleigh-nc" className="block text-white hover:text-brand-cyan py-1">Raleigh, NC</a>
                   </div>
                 </div>
               )}
             </div>
             
-            <a href="/about" className="block text-white font-medium hover:text-brand-purple py-2">About</a>
-            <a href="/pricing" className="block text-white font-medium hover:text-brand-purple py-2">Pricing</a>
-            <a href="/contact" className="block text-white font-medium hover:text-brand-purple py-2">Contact</a>
-            <a href="/blog" className="block text-white font-medium hover:text-brand-purple py-2">Blog</a>
-            <a href="tel:+17044738188" className="block text-brand-green hover:text-brand-greenLight py-2">
+            <a href="/about" className="block text-white font-medium hover:text-brand-blue py-2">About</a>
+            <a href="/pricing" className="block text-white font-medium hover:text-brand-blue py-2">Pricing</a>
+            <a href="/contact" className="block text-white font-medium hover:text-brand-blue py-2">Contact</a>
+            <a href="/blog" className="block text-white font-medium hover:text-brand-blue py-2">Blog</a>
+            <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
             </a>
             <a
               href="/contact#get-in-touch"
-              className="block bg-brand-green text-white px-6 py-2.5 rounded-lg font-medium text-center mt-4"
+              className="block bg-brand-cyan text-white px-6 py-2.5 rounded-lg font-medium text-center mt-4"
             >
               Get Started
             </a>
