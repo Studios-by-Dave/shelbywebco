@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-quality-trust-357123736.webp';
-import heroImage from '../../assets/Sweb_hero1.png';
+import heroImage from '../../assets/Sweb_hero1.jpg';
 import horizontalBadge from '../../assets/Trusted badge_1.png';
 import googleStars from '../../assets/google 5 stars.png';
 ---
@@ -48,13 +48,16 @@ import googleStars from '../../assets/google 5 stars.png';
             <span class="flex h-2 w-2 rounded-full bg-brand-cyan animate-pulse"></span>
             <span class="text-white/90 text-sm font-medium tracking-wide">Trusted by 100+ Local Businesses</span>
           </div>
-          <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-            We Build More Than Just <span class="text-brand-blue">Websites</span> and <span class="text-brand-cyan">Apps</span>.
+          <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-2 leading-tight">
+            We Build More Than Just <span class="text-brand-blue">Websites</span>.
           </h1>
-          <p class="text-xl text-white/80 mb-4">
-            We build the online engine that gets your business found, trusted, and hired!
-          </p>
-          <p class="text-sm text-white/60 mb-8">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white/90 mb-4 leading-tight">
+            We build more than just <span class="text-brand-cyan">apps</span>.
+          </h2>
+          <h3 class="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] mb-6">
+            We Build Local Businesses.
+          </h3>
+          <p class="text-sm text-white/60 mb-8 max-w-lg">
             Shelby Web Company — serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh.
           </p>
           
@@ -109,11 +112,17 @@ import googleStars from '../../assets/google 5 stars.png';
           </a>
           
           <div class="relative w-full">
-            <Image 
-              src={heroImage} 
-              alt="Hero Image" 
-              class="rounded-2xl shadow-2xl w-full"
-            />
+            <!-- Subtle Wood Grain Border -->
+            <div 
+              class="relative z-10 p-[3px] rounded-2xl shadow-2xl bg-[#614532]/40"
+              style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22wood%22%3E%3CfeTurbulence type=%22fractalSum%22 baseFrequency=%220.01 0.1%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23wood)%22 opacity=%220.25%22 blend-mode=%22overlay%22/%3E%3C/svg%3E');"
+            >
+              <Image 
+                src={heroImage} 
+                alt="Hero Image" 
+                class="rounded-[13px] w-full"
+              />
+            </div>
             <div class="absolute -inset-4 bg-gradient-to-r from-brand-blue/20 to-brand-cyan/20 rounded-2xl blur-xl -z-10"></div>
           </div>
         </div>

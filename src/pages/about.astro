@@ -1,5 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import headshotPlaceholder from '../../assets/about/123_1_20260618_162545 (1) (copy).jpeg'; // Update this import later
+import aboutImg1 from '../../assets/about/20260620_195531.jpg';
+import aboutImg2 from '../../assets/about/20260620_195637.jpg';
+import aboutImg3 from '../../assets/about/20260620_195647.jpg';
+import mascot1 from '../../assets/about/mascot_1.jpg';
+import meAndMascot from '../../assets/about/meandmascot_1.jpg';
+import heroHuman from '../../assets/about/hero-human-inside.webp';
 ---
 
 <BaseLayout 
@@ -9,23 +17,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Hero Section -->
   <section class="py-20 lg:py-32 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Story</p>
-      <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-        About Shelby Web Company
-      </h1>
-      <p class="text-xl text-brand-sky/80 mb-8">
-        We're not just another web agency. We're your digital partners, committed to building online engines that actually work for your business. <span class="text-brand-cyan">Helping local business owners like YOU turn online visitors into loyal customers through strategic digital marketing and web development.</span>
-      </p>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2 text-center md:text-left">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Who We Are</p>
+        <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          About Us
+        </h1>
+        <p class="text-xl text-brand-sky/80 mb-8">
+          We're not just another web agency. We're your digital partners, committed to building online engines that actually work for your business. <span class="text-brand-cyan">Helping local business owners like YOU turn online visitors into loyal customers through strategic digital marketing and web development.</span>
+        </p>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <!-- Placeholder for main headshot image -->
+        <Image 
+          src={headshotPlaceholder} 
+          alt="Main Headshot" 
+          class="rounded-[2rem] shadow-2xl border-2 border-brand-cyan/20 w-full max-w-sm object-cover aspect-square grayscale hover:grayscale-0 transition-all duration-500" 
+        />
+      </div>
     </div>
   </section>
 
-  <!-- Mission Section -->
+  <!-- Mission Section with Images -->
   <section class="py-20 px-4 bg-brand-dark" data-animate>
     <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
-          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Mission</p>
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Story</p>
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
             Building Digital Success for Local Businesses
           </h2>
@@ -40,7 +58,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="text-brand-sky/70">This isn't just a catchy phrase — your success is our success, and we're committed to delivering results that directly impact your bottom line.</p>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20">
+        <div class="grid grid-cols-2 gap-4">
+          <Image src={aboutImg1} alt="About Us 1" class="rounded-xl shadow-lg w-full h-full object-cover" />
+          <Image src={aboutImg2} alt="About Us 2" class="rounded-xl shadow-lg w-full h-full object-cover mt-8" />
+        </div>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <Image src={aboutImg3} alt="About Us 3" class="rounded-xl shadow-lg w-full max-h-[400px] object-cover" />
+        </div>
+        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
           <div class="grid grid-cols-2 gap-6">
             <div class="text-center">
               <p class="text-4xl font-bold text-brand-cyan mb-2">100+</p>
@@ -140,25 +168,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Non-Exclusive Agency Section -->
   <section class="py-20 px-4 bg-brand-dark" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ We're a Non-Exclusive Agency</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-        Your Success Is Our Success
-      </h2>
-      <p class="text-lg text-brand-sky/80 mb-8">
-        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.
-      </p>
-      <p class="text-brand-cyan font-medium">
-        No exclusivity, just great results.
-      </p>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ We're a Non-Exclusive Agency</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+            Your Success Is Our Success
+          </h2>
+          <p class="text-lg text-brand-sky/80 mb-8">
+            At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.
+          </p>
+          <p class="text-brand-cyan font-medium mb-8">
+            No exclusivity, just great results.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="relative w-full h-[300px]">
+            <Image src={meAndMascot} alt="Me and Mascot" class="rounded-xl shadow-lg w-full h-full object-cover" />
+            <div class="absolute -bottom-6 -left-6 w-32 h-32 border-4 border-brand-dark rounded-full overflow-hidden shadow-xl">
+              <Image src={mascot1} alt="Mascot" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="py-20 px-4 relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
-    <div class="max-w-4xl mx-auto text-center relative z-10">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <Image src={heroHuman} alt="Background abstract" class="w-full h-full object-cover opacity-20 scale-105" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest/90 via-brand-dark/90 to-brand-darkest/90 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10 z-10"></div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-20">
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Ready to Build Something GREAT?
       </h2>

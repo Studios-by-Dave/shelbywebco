@@ -23,13 +23,13 @@ export default {
         nav: ['Montserrat', 'sans-serif'],
       },
       animation: {
-        'flash-subtle': 'flash-subtle 3s infinite',
+        'flash-subtle': 'flash-subtle 1s infinite',
         'shine': 'shine 6s infinite linear',
       },
       keyframes: {
         'flash-subtle': {
-          '0%, 100%': { opacity: 1 },
-          '50%': { opacity: 0.7 },
+          '0%, 100%': { opacity: 1, textShadow: '0 2px 4px rgba(0,0,0,0.8)' },
+          '50%': { opacity: 0.2, textShadow: '0 0 20px rgba(34,211,238,1)' },
         },
         shine: {
           '0%': { backgroundPosition: '200% center' },
