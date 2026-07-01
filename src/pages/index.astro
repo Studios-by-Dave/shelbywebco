@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-quality-trust-357123736.webp';
-import heroImage from '../../assets/hero-human-inside.webp';
+import heroImage from '../../assets/Sweb_hero1.png';
+import horizontalBadge from '../../assets/Trusted badge_1.png';
 ---
 
 <BaseLayout 
@@ -38,18 +39,22 @@ import heroImage from '../../assets/hero-human-inside.webp';
   </style>
 
   <!-- Hero Section -->
-  <section class="pt-4 pb-20 lg:pt-8 lg:pb-32 px-4" data-animate>
+  <section class="pt-12 pb-20 lg:pt-24 lg:pb-32 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
+          <div class="inline-flex items-center space-x-2 bg-brand-dark border border-brand-blue/30 rounded-full py-1.5 px-4 mb-8 shadow-[0_0_15px_rgba(29,78,216,0.1)]">
+            <span class="flex h-2 w-2 rounded-full bg-brand-cyan animate-pulse"></span>
+            <span class="text-white/90 text-sm font-medium tracking-wide">Trusted by 100+ Local Businesses</span>
+          </div>
           <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-            We Don't Just Build You a <span class="text-brand-blue">Website</span> or an <span class="text-brand-cyan">App</span>.
+            We Build More Than Just <span class="text-brand-blue">Websites</span> and <span class="text-brand-cyan">Apps</span>.
           </h1>
           <p class="text-xl text-white/80 mb-4">
             We build the online engine that gets your business found, trusted, and hired!
           </p>
           <p class="text-sm text-white/60 mb-8">
-            Serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh
+            Shelby Web Company — serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh.
           </p>
           
           <div class="flex flex-wrap gap-4 mb-8">
@@ -61,7 +66,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
             </a>
             <a 
               href="/about"
-              class="border border-brand-blue text-brand-blue px-8 py-3 rounded-lg font-medium hover:bg-brand-blue/10 transition-all duration-300"
+              class="border border-white bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all duration-300"
             >
               Learn About Our Story
             </a>
@@ -73,39 +78,42 @@ import heroImage from '../../assets/hero-human-inside.webp';
             <p class="text-white/70 text-sm">• Quality digital assets</p>
           </div>
 
-          <p class="text-brand-cyan text-sm font-medium mb-4">
-            Trusted by 100+ Local Businesses
-          </p>
-
           <p class="text-white/60 text-sm">
             💬 Try our ShelbyBot chat widget! Click the bubble in the bottom-right.
           </p>
-
-          <div class="mt-6">
-            <Image 
-              src={trustedBadge} 
-              alt="Trusted Company Badge" 
-              width={120} 
-              height={120}
-              class="w-28 h-auto"
-            />
-          </div>
         </div>
 
-        <div class="relative -mt-8 lg:-mt-16">
-          <Image 
-            src={heroImage} 
-            alt="Hero Image" 
-            class="rounded-2xl shadow-2xl"
-          />
-          <div class="absolute -inset-4 bg-gradient-to-r from-brand-blue/20 to-brand-cyan/20 rounded-2xl blur-xl -z-10"></div>
+        <div class="relative -mt-8 lg:-mt-16 flex flex-col items-end">
+          <!-- Floating CTA -->
+          <a 
+            href="tel:+17044738188" 
+            class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-8 py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 -translate-y-16 lg:-translate-y-32 lg:translate-x-6 mr-4 lg:mr-0 self-start md:self-end"
+          >
+            <div class="flex items-center space-x-2 mb-2">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <p class="text-white text-sm font-semibold tracking-widest">CALL US TEXT US</p>
+            </div>
+            <p class="text-brand-cyan text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2">(704) 473-8188</p>
+            <p class="text-white/60 text-base">We're here 24/7</p>
+          </a>
+          
+          <div class="relative w-full">
+            <Image 
+              src={heroImage} 
+              alt="Hero Image" 
+              class="rounded-2xl shadow-2xl w-full"
+            />
+            <div class="absolute -inset-4 bg-gradient-to-r from-brand-blue/20 to-brand-cyan/20 rounded-2xl blur-xl -z-10"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Tech/Partner Logo Marquee Strip -->
-  <section class="py-12 bg-brand-dark border-y border-brand-blue/20" data-animate>
+  <section class="py-12 border-y border-brand-blue/20" data-animate>
     <div class="max-w-7xl mx-auto px-4">
       <p class="text-center text-brand-blue text-sm uppercase tracking-widest mb-8">
         Powered by the best in the industry
@@ -127,10 +135,15 @@ import heroImage from '../../assets/hero-human-inside.webp';
   <!-- Services Section -->
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
-        Everything Your Business Needs
-      </h2>
+      <div class="mb-12">
+        <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+          Everything Your Business Needs
+        </h2>
+        <p class="text-lg text-white/80 max-w-3xl">
+          We're your local specialized web development and marketing toolkit. Our tailored approach to your business needs ensures maximum ROI for your industry. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Web Design Card -->
@@ -141,6 +154,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-3">Web Design & Development</h3>
+          <p class="text-sm text-white/70 mb-4">Custom, responsive websites that convert visitors into customers. Optimized for local contractors and service businesses.</p>
           <ul class="space-y-2 text-sm text-white/70 mb-4">
             <li>• Mobile-First Design</li>
             <li>• Lightning Fast Loading</li>
@@ -160,6 +174,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-3">Logo Design & Branding</h3>
+          <p class="text-sm text-white/70 mb-4">Professional branding packages that make your business stand out from competitors and build trust with customers.</p>
           <ul class="space-y-2 text-sm text-white/70 mb-4">
             <li>• Custom Logo Design</li>
             <li>• Brand Identity Package</li>
@@ -179,6 +194,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-3">SEO Services</h3>
+          <p class="text-sm text-white/70 mb-4">Complete search engine optimization to help your business dominate search results and attract more customers.</p>
           <ul class="space-y-2 text-sm text-white/70 mb-4">
             <li>• Technical SEO</li>
             <li>• On-Page Optimization</li>
@@ -198,6 +214,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-3">Custom Media Packs</h3>
+          <p class="text-sm text-white/70 mb-4">Custom Digital Content — Ready to Use, Ready to Convert. Get high-quality visuals tailored to your business.</p>
           <ul class="space-y-2 text-sm text-white/70 mb-4">
             <li>• Custom Visuals & Graphics</li>
             <li>• Website & Social Ready</li>
@@ -213,7 +230,7 @@ import heroImage from '../../assets/hero-human-inside.webp';
   </section>
 
   <!-- Industries Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Specialized for Your Industry</p>
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
@@ -289,17 +306,17 @@ import heroImage from '../../assets/hero-human-inside.webp';
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Your Success Is Our Success
       </h2>
-      <p class="text-lg text-white/80 mb-8">
-        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.
+      <p class="text-lg text-white/80 mb-8 font-serif">
+        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
       </p>
-      <p class="text-brand-cyan font-medium">
+      <p class="text-brand-cyan font-medium text-xl">
         No exclusivity, just great results.
       </p>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ What Our Clients Say</p>
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">

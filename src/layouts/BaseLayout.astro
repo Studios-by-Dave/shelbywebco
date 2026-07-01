@@ -48,20 +48,32 @@ const fullTitle = `${title} | Shelby Web Company`;
     <!-- Fonts (self-hosted) -->
     <link rel="stylesheet" href="/fonts/fonts.css" />
     
-    <!-- Google Fonts - Playfair Display -->
+    <!-- Google Fonts - Playfair Display & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-brand-darkest text-white font-body antialiased">
+  <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden">
+    <!-- Texture & Lighting Background -->
+    <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+      <!-- Noise Texture -->
+      <div class="absolute inset-0 opacity-[0.05] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalSum%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+      
+      <!-- Mood Lighting Glows -->
+      <div class="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-brand-blue/20 blur-[150px] rounded-full"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-cyan/15 blur-[130px] rounded-full"></div>
+      <div class="absolute top-[20%] right-[5%] w-[40%] h-[40%] bg-brand-blueLight/10 blur-[100px] rounded-full animate-pulse" style="animation-duration: 4s;"></div>
+      <div class="absolute bottom-[20%] left-[5%] w-[35%] h-[35%] bg-purple-500/5 blur-[110px] rounded-full"></div>
+    </div>
+
     <Navbar />
     <main class="min-h-screen">
       <slot />
     </main>
     <Footer />
-    <ChatWidget />
+    <ChatWidget client:load />
     
     <script>
       // Scroll animation with IntersectionObserver

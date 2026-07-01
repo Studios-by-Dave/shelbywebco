@@ -19,14 +19,14 @@ export default function DesktopNav() {
   }, []);
 
   return (
-    <div className="hidden md:flex items-center space-x-8">
-      <a href="/" className="text-white font-medium hover:text-brand-blue transition-colors">Home</a>
+    <div className="hidden md:flex items-center space-x-8 font-nav">
+      <a href="/" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
       
       {/* Services Dropdown */}
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
-          className="text-white font-medium hover:text-brand-blue transition-colors flex items-center"
+          className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
         >
           Services
           <svg
@@ -74,10 +74,10 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/about" className="text-white font-medium hover:text-brand-blue transition-colors">About</a>
-      <a href="/pricing" className="text-white font-medium hover:text-brand-blue transition-colors">Pricing</a>
-      <a href="/contact" className="text-white font-medium hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog" className="text-white font-medium hover:text-brand-blue transition-colors">Blog</a>
+      <a href="/about" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About</a>
+      <a href="/pricing" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Pricing</a>
+      <a href="/contact" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
+      <a href="/blog" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Blog</a>
     </div>
   );
 }
