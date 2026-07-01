@@ -13,6 +13,8 @@ export default {
           cyanLight: '#67E8F9',
           sky: '#38BDF8',
           glow: '#22D3EE',
+          accent: '#84CC16',
+          accentLight: '#A3E635',
         },
       },
       fontFamily: {
@@ -20,6 +22,20 @@ export default {
         body: ['Inter', 'sans-serif'],
         nav: ['Montserrat', 'sans-serif'],
       },
+      animation: {
+        'flash-subtle': 'flash-subtle 3s infinite',
+        'shine': 'shine 6s infinite linear',
+      },
+      keyframes: {
+        'flash-subtle': {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.7 },
+        },
+        shine: {
+          '0%': { backgroundPosition: '200% center' },
+          '100%': { backgroundPosition: '-200% center' },
+        }
+      }
     },
   },
   plugins: [],

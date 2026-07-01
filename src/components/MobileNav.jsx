@@ -80,11 +80,10 @@ export default function MobileNav() {
                   <div className="mt-4 pt-4 border-t border-brand-blue/20">
                     <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Service Areas</p>
                     <a href="/web-design-shelby-nc" className="block text-white hover:text-brand-cyan py-1">Shelby, NC</a>
-                    <a href="/web-design-charlotte-nc" className="block text-white hover:text-brand-cyan py-1">Charlotte, NC</a>
                     <a href="/web-design-gastonia-nc" className="block text-white hover:text-brand-cyan py-1">Gastonia, NC</a>
-                    <a href="/web-design-spartanburg-sc" className="block text-white hover:text-brand-cyan py-1">Spartanburg, SC</a>
+                    <a href="/web-design-forest-city-nc" className="block text-white hover:text-brand-cyan py-1">Forest City, NC</a>
+                    <a href="/web-design-polkville-nc" className="block text-white hover:text-brand-cyan py-1">Polkville, NC</a>
                     <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan py-1">Asheville, NC</a>
-                    <a href="/web-design-raleigh-nc" className="block text-white hover:text-brand-cyan py-1">Raleigh, NC</a>
                   </div>
                 </div>
               )}
@@ -99,7 +98,7 @@ export default function MobileNav() {
             </a>
             <a
               href="/contact#get-in-touch"
-              className="block bg-brand-cyan text-white px-6 py-2.5 rounded-lg font-normal text-center mt-4"
+              className="block bg-brand-accent text-[#0A0A0A] px-6 py-2.5 rounded-lg font-medium text-center mt-4 hover:bg-brand-accentLight transition-all duration-300 shadow-[0_0_15px_rgba(132,204,22,0.3)]"
             >
               Get Started
             </a>

@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import trustedBadge from '../../assets/trusted-company-logo-icon-badges-premium-quality-trust-357123736.webp';
 import heroImage from '../../assets/Sweb_hero1.png';
 import horizontalBadge from '../../assets/Trusted badge_1.png';
+import googleStars from '../../assets/google 5 stars.png';
 ---
 
 <BaseLayout 
@@ -60,7 +61,7 @@ import horizontalBadge from '../../assets/Trusted badge_1.png';
           <div class="flex flex-wrap gap-4 mb-8">
             <a 
               href="/contact#get-in-touch"
-              class="bg-brand-cyan text-white px-8 py-3 rounded-lg font-medium hover:bg-brand-cyanLight transition-all duration-300"
+              class="bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight transition-all duration-300 shadow-[0_0_15px_rgba(132,204,22,0.3)]"
             >
               Get Started Today
             </a>
@@ -72,13 +73,21 @@ import horizontalBadge from '../../assets/Trusted badge_1.png';
             </a>
           </div>
 
-          <div class="space-y-2 mb-8">
-            <p class="text-white/70 text-sm">• Custom websites that convert</p>
-            <p class="text-white/70 text-sm">• SEO optimization</p>
-            <p class="text-white/70 text-sm">• Quality digital assets</p>
+          <div class="space-y-3 mb-8">
+            <p class="text-white/80 text-lg">• Custom websites that convert</p>
+            <p class="text-white/80 text-lg">• SEO optimization</p>
+            <p class="text-white/80 text-lg">• Quality digital assets</p>
           </div>
 
-          <p class="text-white/60 text-sm">
+          <div class="mb-8">
+            <Image 
+              src={googleStars} 
+              alt="5 Star Google Google Reviews" 
+              class="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+
+          <p class="text-brand-accent text-base md:text-lg font-medium drop-shadow-[0_0_10px_rgba(132,204,22,0.3)] animate-pulse">
             💬 Try our ShelbyBot chat widget! Click the bubble in the bottom-right.
           </p>
         </div>
@@ -87,7 +96,7 @@ import horizontalBadge from '../../assets/Trusted badge_1.png';
           <!-- Floating CTA -->
           <a 
             href="tel:+17044738188" 
-            class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-8 py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 -translate-y-16 lg:-translate-y-32 lg:translate-x-6 mr-4 lg:mr-0 self-start md:self-end"
+            class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-8 py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 -translate-y-16 lg:-translate-y-32 lg:translate-x-6 mr-4 lg:mr-0 self-start md:self-end transform scale-100 lg:scale-105 origin-bottom-right"
           >
             <div class="flex items-center space-x-2 mb-2">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,8 +104,8 @@ import horizontalBadge from '../../assets/Trusted badge_1.png';
               </svg>
               <p class="text-white text-sm font-semibold tracking-widest">CALL US TEXT US</p>
             </div>
-            <p class="text-brand-cyan text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2">(704) 473-8188</p>
-            <p class="text-white/60 text-base">We're here 24/7</p>
+            <p class="text-brand-cyan text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2 animate-flash-subtle">(704) 473-8188</p>
+            <p class="text-white/60 text-sm">We're here 24/7</p>
           </a>
           
           <div class="relative w-full">

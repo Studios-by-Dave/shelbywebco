@@ -62,11 +62,10 @@ export default function DesktopNav() {
                 <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Service Areas</p>
                 <div className="grid grid-cols-2 gap-1">
                   <a href="/web-design-shelby-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Shelby, NC</a>
-                  <a href="/web-design-charlotte-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Charlotte, NC</a>
                   <a href="/web-design-gastonia-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Gastonia, NC</a>
-                  <a href="/web-design-spartanburg-sc" className="block text-white hover:text-brand-cyan transition-colors py-1">Spartanburg, SC</a>
+                  <a href="/web-design-forest-city-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Forest City, NC</a>
+                  <a href="/web-design-polkville-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Polkville, NC</a>
                   <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Asheville, NC</a>
-                  <a href="/web-design-raleigh-nc" className="block text-white hover:text-brand-cyan transition-colors py-1">Raleigh, NC</a>
                 </div>
               </div>
             </div>
