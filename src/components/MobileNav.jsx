@@ -67,7 +67,7 @@ export default function MobileNav() {
                   {/* Our Services */}
                   <div>
                     <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Our Services</p>
-                    <a href="/services/web-design" className="block text-white hover:text-brand-cyan py-1">Web Design & Development</a>
+                    <a href="/services/web-design" className="block text-white hover:text-brand-cyan py-1">Web Design</a>
                     <a href="/services/branding" className="block text-white hover:text-brand-cyan py-1">Logo Design & Branding</a>
                     <a href="/services/seo" className="block text-white hover:text-brand-cyan py-1">SEO Services</a>
                     <a href="/services/media-packs" className="block text-white hover:text-brand-cyan py-1">Custom Media Packs</a>
@@ -92,7 +92,7 @@ export default function MobileNav() {
             <a href="/about" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">About</a>
             <a href="/pricing" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Pricing</a>
             <a href="/contact" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
-            <a href="/blog" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Blog</a>
+            <a href="/blog" className="block text-orange-500 font-heading font-black text-xl hover:text-white py-2" style={{ WebkitTextStroke: '1px #67e8f9' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
             </a>

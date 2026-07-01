@@ -47,7 +47,7 @@ export default function DesktopNav() {
               <div className="mb-4">
                 <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Our Services</p>
                 <div className="space-y-1">
-                  <a href="/services/web-design" className="block text-white hover:text-brand-cyan transition-colors py-1">Web Design & Development</a>
+                  <a href="/services/web-design" className="block text-white hover:text-brand-cyan transition-colors py-1">Web Design</a>
                   <a href="/services/branding" className="block text-white hover:text-brand-cyan transition-colors py-1">Logo Design & Branding</a>
                   <a href="/services/seo" className="block text-white hover:text-brand-cyan transition-colors py-1">SEO Services</a>
                   <a href="/services/media-packs" className="block text-white hover:text-brand-cyan transition-colors py-1">Custom Media Packs</a>
@@ -76,7 +76,7 @@ export default function DesktopNav() {
       <a href="/about" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About</a>
       <a href="/pricing" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Pricing</a>
       <a href="/contact" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog" className="text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Blog</a>
+      <a href="/blog" className="text-orange-500 font-heading font-black text-xl hover:text-white transition-colors" style={{ WebkitTextStroke: '1px #67e8f9' }}>Blog</a>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function ChatWidget() {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-80 bg-brand-dark border border-brand-blue/40 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.15)] mb-4">
+        <div className="absolute bottom-20 right-0 w-80 bg-brand-dark border border-brand-blue/40 rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.15)] mb-4">
           <div className="bg-gradient-to-r from-brand-blue to-brand-cyan p-4 rounded-t-xl">
             <h3 className="font-heading font-bold text-white">ShelbyBot</h3>
             <p className="text-white/80 text-sm">How can I help you today?</p>
@@ -48,10 +48,10 @@ export default function ChatWidget() {
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-brand-blue hover:bg-brand-cyan text-white p-4 rounded-full shadow-[0_0_20px_rgba(29,78,216,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300"
+        className="bg-brand-blue hover:bg-brand-cyan text-white p-5 rounded-full shadow-[0_0_20px_rgba(29,78,216,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300"
         aria-label="Open chat"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
