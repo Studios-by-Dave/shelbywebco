@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import headshotPlaceholder from '../../assets/about/123_1_20260618_162545 (1) (copy).jpeg'; // Update this import later
-import aboutImg1 from '../../assets/about/20260620_195531.jpg';
-import aboutImg2 from '../../assets/about/20260620_195637.jpg';
-import aboutImg3 from '../../assets/about/20260620_195647.jpg';
+import headshotPlaceholder from '../../assets/about/Shelby_7.jpg';
+import aboutImg1 from '../../assets/about/dave and mascot_4.jpg';
+import aboutImg2 from '../../assets/about/mascot_1.jpg';
+import aboutImg3 from '../../assets/about/meandmascot_1.jpg';
 import mascot1 from '../../assets/about/mascot_1.jpg';
 import meAndMascot from '../../assets/about/meandmascot_1.jpg';
 import heroHuman from '../../assets/about/hero-human-inside.webp';
@@ -28,10 +28,10 @@ import heroHuman from '../../assets/about/hero-human-inside.webp';
         </p>
       </div>
       <div class="md:w-1/2 flex justify-center">
-        <!-- Placeholder for main headshot image -->
+        <!-- Main Shelby Hero Image -->
         <Image 
           src={headshotPlaceholder} 
-          alt="Main Headshot" 
+          alt="Shelby at Shelby Web Company" 
           class="rounded-[2rem] shadow-2xl border-2 border-brand-cyan/20 w-full max-w-sm object-cover aspect-square grayscale hover:grayscale-0 transition-all duration-500" 
         />
       </div>
@@ -59,14 +59,14 @@ import heroHuman from '../../assets/about/hero-human-inside.webp';
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <Image src={aboutImg1} alt="About Us 1" class="rounded-xl shadow-lg w-full h-full object-cover" />
-          <Image src={aboutImg2} alt="About Us 2" class="rounded-xl shadow-lg w-full h-full object-cover mt-8" />
+          <Image src={aboutImg1} alt="Dave and our mascot" class="rounded-xl shadow-lg w-full h-full object-cover" />
+          <Image src={aboutImg2} alt="Shelby Web Co mascot" class="rounded-xl shadow-lg w-full h-full object-cover mt-8" />
         </div>
       </div>
       
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="order-2 lg:order-1">
-          <Image src={aboutImg3} alt="About Us 3" class="rounded-xl shadow-lg w-full max-h-[400px] object-cover" />
+          <Image src={aboutImg3} alt="Dave and mascot planting a tree" class="rounded-xl shadow-lg w-full max-h-[400px] object-cover" />
         </div>
         <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
           <div class="grid grid-cols-2 gap-6">
@@ -103,64 +103,82 @@ import heroHuman from '../../assets/about/hero-human-inside.webp';
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">Local Focus</h3>
+            <p class="text-brand-sky/70 text-sm">We understand the local market and tailor our strategies to help your business stand out in Shelby, Charlotte, and beyond.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Local Focus</h3>
-          <p class="text-brand-sky/70 text-sm">We understand the local market and tailor our strategies to help your business stand out in Shelby, Charlotte, and beyond.</p>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">Results-Driven</h3>
+            <p class="text-brand-sky/70 text-sm">We focus on metrics that matter – leads, conversions, and ROI. Every decision we make is aimed at growing your business.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Results-Driven</h3>
-          <p class="text-brand-sky/70 text-sm">We focus on metrics that matter – leads, conversions, and ROI. Every decision we make is aimed at growing your business.</p>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">Affordable Pricing</h3>
+            <p class="text-brand-sky/70 text-sm">Quality web services shouldn't break the bank. We offer competitive pricing with transparent costs and no hidden fees.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Affordable Pricing</h3>
-          <p class="text-brand-sky/70 text-sm">Quality web services shouldn't break the bank. We offer competitive pricing with transparent costs and no hidden fees.</p>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">Fast Turnaround</h3>
+            <p class="text-brand-sky/70 text-sm">We respect your time. Our efficient processes ensure your project is delivered on time without compromising quality.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Fast Turnaround</h3>
-          <p class="text-brand-sky/70 text-sm">We respect your time. Our efficient processes ensure your project is delivered on time without compromising quality.</p>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">24/7 Support</h3>
+            <p class="text-brand-sky/70 text-sm">Your success is our priority. We're always available to answer questions, make updates, and ensure your site runs smoothly.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">24/7 Support</h3>
-          <p class="text-brand-sky/70 text-sm">Your success is our priority. We're always available to answer questions, make updates, and ensure your site runs smoothly.</p>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/50 hover:shadow-[0_20px_40px_rgba(34,211,238,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-cyan/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">Satisfaction Guaranteed</h3>
+            <p class="text-brand-sky/70 text-sm">We stand behind our work. If you're not completely satisfied, we'll make it right. Your success is our success.</p>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Satisfaction Guaranteed</h3>
-          <p class="text-brand-sky/70 text-sm">We stand behind our work. If you're not completely satisfied, we'll make it right. Your success is our success.</p>
         </div>
       </div>
     </div>
