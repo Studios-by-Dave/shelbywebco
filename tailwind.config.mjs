@@ -26,6 +26,7 @@ export default {
       animation: {
         'flash-subtle': 'flash-subtle 1s infinite',
         'shine': 'shine 6s infinite linear',
+        'marquee': 'marquee 25s linear infinite',
       },
       keyframes: {
         'flash-subtle': {
@@ -35,6 +36,10 @@ export default {
         shine: {
           '0%': { backgroundPosition: '200% center' },
           '100%': { backgroundPosition: '-200% center' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
         }
       }
     },

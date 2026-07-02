@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import { Image } from 'astro:assets';
+import comptiaBadge from '../../../assets/CompTIA_A__Digital_Badge.jpg';
 ---
 
 <BaseLayout 
@@ -27,6 +29,14 @@ import PixieDust from '../../components/PixieDust.jsx';
       >
         Get Your Free Quote
       </a>
+      
+      <div class="mt-12 flex justify-center">
+        <Image 
+          src={comptiaBadge} 
+          alt="CompTIA A+ Digital Badge" 
+          class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+      </div>
     </div>
   </section>
 

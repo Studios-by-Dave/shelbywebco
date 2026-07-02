@@ -46,8 +46,10 @@ export default function PixieDust() {
       particle.className = 'pixie-particle';
       
       // Random starting position along the left edge
+      const startX = Math.random() * 100;
       const startY = Math.random() * 100;
-      particle.style.left = '0px';
+      particle.style.left = `${startX}%`;
+      particle.style.top = `${startY}%`;
       particle.style.top = `${startY}%`;
       
       // Random size
