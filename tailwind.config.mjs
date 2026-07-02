@@ -8,6 +8,7 @@ export default {
           darkest: '#0A0A0A',
           dark: '#1A1A1A',
           blue: '#1D4ED8',
+          blueDark: '#1E3A8A',
           blueLight: '#3B82F6',
           cyan: '#22D3EE',
           cyanLight: '#67E8F9',

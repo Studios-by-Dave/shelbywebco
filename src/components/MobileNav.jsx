@@ -70,7 +70,7 @@ export default function MobileNav() {
                     <a href="/services/web-design" className="block text-white hover:text-brand-cyan py-1">Web Design</a>
                     <a href="/services/branding" className="block text-white hover:text-brand-cyan py-1">Logo Design & Branding</a>
                     <a href="/services/seo" className="block text-white hover:text-brand-cyan py-1">SEO Services</a>
-                    <a href="/services/media-packs" className="block text-white hover:text-brand-cyan py-1">Custom Media Packs</a>
+                    <a href="/services/media-packs" className="block text-white hover:text-brand-cyan py-1">Media Packs</a>
                     <a href="/services/audio-branding" className="block text-white hover:text-brand-cyan py-1">Audio Branding</a>
                     <a href="/services/case-studies" className="block text-white hover:text-brand-cyan py-1">Case Studies</a>
                     <a href="/services/portfolio" className="block text-white hover:text-brand-cyan py-1">Portfolio</a>

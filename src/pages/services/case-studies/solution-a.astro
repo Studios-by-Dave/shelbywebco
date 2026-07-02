@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Solution A: Why Google's Not Indexing Your Website | Shelby Web Company"
+  description="Case Study: How we solved severe indexing issues on a brand-new website using technical SEO and pre-rendering techniques."
+>
+  <section class="py-20 lg:py-32 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12">
+        <span class="bg-brand-accent/20 text-brand-accent text-lg font-bold uppercase tracking-widest px-6 py-2 rounded-full border border-brand-accent/30 shadow-[0_0_15px_rgba(132,204,22,0.2)]">Solution A</span>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-10 mb-6 leading-tight">
+          Why Google's Not Indexing Your Website <br/>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blueLight to-brand-sky">
+            (And How Pre-Rendering Can Solve It)
+          </span>
+        </h1>
+        <p class="text-xl text-brand-sky/80 leading-relaxed">
+          How we fixed severe indexing issues on a brand-new AI-generated website so it could finally be found by search engines.
+        </p>
+      </div>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <div class="bg-brand-darkest border border-brand-blue/20 rounded-2xl p-8 mb-12">
+          <h2 class="text-white font-heading text-2xl mb-4">The Challenge</h2>
+          <p class="text-white/80">
+            A brand new website was launched using modern JavaScript frameworks, but weeks after launch, none of the pages were appearing in Google search results. Despite submitting sitemaps and using the URL Inspection tool, the pages remained unindexed, resulting in zero organic visibility.
+          </p>
+        </div>
+
+        <h2 class="text-white font-heading text-2xl mb-4">The Solution</h2>
+        <p class="text-white/80 mb-6">
+          The primary issue was that the search engine crawlers were encountering the JavaScript-heavy site before it could fully render content. We implemented a robust <strong>Pre-Rendering</strong> strategy which serves a lightweight HTML version of the site directly to crawlers.
+        </p>
+        
+        <ul class="space-y-4 text-white/80 mb-12">
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span>Implemented server-side rendering (SSR) for critical content.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span>Optimized Core Web Vitals to ensure the crawler didn't "timeout" while waiting for assets.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span>Structured internal linking to ensure deep-crawling of all service pages.</span>
+          </li>
+        </ul>
+
+        <div class="bg-gradient-to-br from-brand-blue/10 to-brand-cyan/10 border border-brand-blue/30 rounded-2xl p-8">
+          <h2 class="text-white font-heading text-2xl mb-4">The Results</h2>
+          <div class="grid sm:grid-cols-3 gap-6 text-center">
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">100%</p>
+              <p class="text-white/60 text-sm italic">Pages Indexed in 72h</p>
+            </div>
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">240%</p>
+              <p class="text-white/60 text-sm italic">Increase in Impressions</p>
+            </div>
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">Top 5</p>
+              <p class="text-white/60 text-sm italic">Local Search Rankings</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a 
+            href="/contact#get-in-touch"
+            class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-lg font-bold hover:bg-brand-accentLight shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
+          >
+            Get Results Like This
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
