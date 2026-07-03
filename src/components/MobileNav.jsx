@@ -89,7 +89,7 @@ export default function MobileNav() {
               )}
             </div>
             
-            <a href="/about" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">About</a>
+            <a href="/about" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">About Us</a>
             <a href="/pricing" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Pricing</a>
             <a href="/contact" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
             <a href="/blog" className="block text-orange-500 font-heading font-black text-xl hover:text-white py-2" style={{ WebkitTextStroke: '1px #67e8f9' }}>Blog</a>
