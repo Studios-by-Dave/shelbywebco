@@ -84,6 +84,7 @@ export default function MobileNav() {
                     <a href="/web-design-forest-city-nc" className="block text-white hover:text-brand-cyan py-1">Forest City, NC</a>
                     <a href="/web-design-polkville-nc" className="block text-white hover:text-brand-cyan py-1">Polkville, NC</a>
                     <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan py-1">Asheville, NC</a>
+                    <a href="/web-design-boiling-springs-nc" className="block text-white hover:text-brand-cyan py-1">Boiling Springs, NC</a>
                   </div>
                 </div>
               )}
