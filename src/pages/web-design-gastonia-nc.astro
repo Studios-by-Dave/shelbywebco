@@ -1,28 +1,80 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import gastoniaLeft from '../../assets/service locations/gastonia/gastonia nc_3.jpg';
+import gastoniaRight from '../../assets/service locations/gastonia/gastonia nc_4.png';
 ---
 
 <BaseLayout 
-  title="Web Design Gastonia, NC"
-  description="Professional web design services in Gastonia, NC. Custom websites, local SEO, and digital marketing for Gastonia businesses. Get found online and grow your business."
+  title="Web Design & Local SEO Gastonia, NC | Shelby Web Co"
+  description="Professional web design and local SEO services for Gastonia, NC. We help Gaston County businesses dominate local search and grow their digital presence."
 >
 
   <!-- Hero Section -->
-  <section class="py-20 lg:py-32 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Gastonia, NC</p>
-      <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-        Web Design in Gastonia, NC
+  <section class="py-24 lg:py-40 px-4 relative bg-[#0A0A0A] overflow-hidden" data-animate>
+    <div class="absolute inset-0 z-0 opacity-20 invisible md:visible">
+      <Image src={gastoniaLeft} alt="Gastonia, NC Business Development" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-[#0A0A0A]/60 to-[#0A0A0A] z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)] z-0"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
+        ✦ Local Growth for Gastonia Businesses
+      </div>
+      <h1 class="font-heading text-6xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9]">
+        Modern Web Design <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">For Gastonia's Future.</span>
       </h1>
-      <p class="text-xl text-brand-sky/80 mb-8">
-        Professional web design services for Gastonia businesses. We build custom websites that help you succeed online.
+      <p class="text-xl md:text-2xl text-brand-sky/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+        From the historic Loray Mill to the bustling shops in Downtown Gastonia, we help Gaston County businesses <span class="text-white font-bold">rank higher and convert more customers</span>.
       </p>
-      <a 
-        href="/contact#get-in-touch"
-        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
-      >
-        Get Your Free Quote
-      </a>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a 
+          href="/contact"
+          class="group relative inline-flex items-center justify-center bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accentLight transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.4)] overflow-hidden"
+        >
+          <span class="relative z-10">Get Your Free Strategy Session</span>
+          <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem/Solution Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5" data-animate>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+          Is Your Gastonia Business <span class="text-brand-cyan">Visible Where It Matters?</span>
+        </h2>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="shrink-0 w-6 h-6 mt-1 text-red-500">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-brand-sky/70"><span class="text-white font-semibold">Missing from the Map?</span> If someone searches for your services near Crowders Mountain or Downtown Gastonia and you're not in the "Local 3-Pack," you're losing money.</p>
+          </div>
+          <div class="flex gap-4">
+            <div class="shrink-0 w-6 h-6 mt-1 text-red-500">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-brand-sky/70"><span class="text-white font-semibold">Outdated Industrial Vibe?</span> Gastonia is evolving. An old website tells potential customers that your business hasn't kept up with the times.</p>
+          </div>
+          <div class="flex gap-4">
+            <div class="shrink-0 w-6 h-6 mt-1 text-red-500">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-brand-sky/70"><span class="text-white font-semibold">Hidden by Charlotte Agencies?</span> Big city agencies charge big city prices without understanding Gastonia's unique local market. We are your Gaston County neighbors.</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative max-w-lg mx-auto lg:mr-0">
+        <Image src={gastoniaLeft} alt="Downtown Gastonia Business" class="rounded-2xl shadow-2xl w-full h-auto object-cover" />
+        <div class="absolute -bottom-6 -right-6 bg-brand-accent p-6 rounded-xl hidden md:block group-hover:scale-105 transition-transform duration-300">
+          <p class="text-[#0A0A0A] font-bold text-2xl">Gastonia Native</p>
+          <p class="text-[#0A0A0A]/80 text-sm">Gaston County Focused</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -32,7 +84,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="text-center mb-12">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Why Gastonia Businesses Choose Us</p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-          Serving Gastonia Businesses
+          Serving Gastonia & Gaston County
         </h2>
       </div>
 
@@ -44,8 +96,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Local Understanding</h3>
-          <p class="text-brand-sky/70 text-sm">We understand the Gastonia market and what local businesses need to succeed online in this community.</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Community First</h3>
+          <p class="text-brand-sky/70 text-sm">We're not just an agency; we're your neighbors. We understand Gastonia's shift from textiles to a diverse, modern economy.</p>
         </div>
 
         <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
@@ -54,8 +106,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Gastonia SEO</h3>
-          <p class="text-brand-sky/70 text-sm">Dominate local search results. We optimize your site to appear in Google Maps and local searches for Gastonia.</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Gastonia Local SEO</h3>
+          <p class="text-brand-sky/70 text-sm">We optimize specifically for Gaston County search trends, ensuring you show up when locals search for your services.</p>
         </div>
 
         <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
@@ -64,46 +116,112 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Competitive Pricing</h3>
-          <p class="text-brand-sky/70 text-sm">Quality web design at prices Gastonia businesses can afford. No hidden fees, transparent pricing.</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">High ROI Design</h3>
+          <p class="text-brand-sky/70 text-sm">Our websites aren't just pretty faces—they're built to convert visitors into loyal Gastonia customers.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="py-20 px-4" data-animate>
+  <section class="py-24 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
+      <div class="text-center mb-16">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Services</p>
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-          What We Offer Gastonia Businesses
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+          Digital Excellence in Gaston County
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-8">
-          <h3 class="font-heading text-2xl font-bold text-white mb-4">Custom Web Design</h3>
-          <p class="text-brand-sky/70 mb-4">Beautiful, responsive websites designed specifically for your Gastonia business. No templates, just custom design.</p>
-          <a href="/services/web-design" class="text-brand-cyan hover:text-brand-glow transition-colors">Learn More →</a>
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-2xl p-8 hover:bg-brand-darkest transition-colors duration-300">
+          <h3 class="font-heading text-2xl font-bold text-white mb-4">Gastonia Small Business Sites</h3>
+          <p class="text-brand-sky/70 mb-6 italic text-sm">Targeting: Downtown Gastonia & Historic Districts</p>
+          <p class="text-brand-sky/70 mb-6">Custom-built websites that capture the local feel of your Gastonia business while providing modern functionality. We ensure your site looks great on phones, tablets, and desktops.</p>
+          <a href="/services/web-design" class="inline-flex items-center text-brand-cyan hover:text-brand-glow transition-colors group">
+            Web Design Services 
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-8">
-          <h3 class="font-heading text-2xl font-bold text-white mb-4">Local SEO</h3>
-          <p class="text-brand-sky/70 mb-4">Get found by local customers searching for your services in Gastonia. We optimize for Google Maps and local search.</p>
-          <a href="/services/seo" class="text-brand-cyan hover:text-brand-glow transition-colors">Learn More →</a>
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-2xl p-8 hover:bg-brand-darkest transition-colors duration-300">
+          <h3 class="font-heading text-2xl font-bold text-white mb-4">Local Map Domination</h3>
+          <p class="text-brand-sky/70 mb-6 italic text-sm">Targeting: Belmont, Lowell, & Mt. Holly</p>
+          <p class="text-brand-sky/70 mb-6">Stay at the top of Google Maps in Gastonia and surrounding towns. We optimize your local profile for maximum visibility so customers find you first when they search "near me."</p>
+          <a href="/services/seo" class="inline-flex items-center text-brand-cyan hover:text-brand-glow transition-colors group">
+            SEO Services 
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-8">
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-2xl p-8 hover:bg-brand-darkest transition-colors duration-300">
           <h3 class="font-heading text-2xl font-bold text-white mb-4">Logo Design & Branding</h3>
-          <p class="text-brand-sky/70 mb-4">Professional branding that makes your Gastonia business stand out. Logos, business cards, and complete brand identity.</p>
-          <a href="/services/branding" class="text-brand-cyan hover:text-brand-glow transition-colors">Learn More →</a>
+          <p class="text-brand-sky/70 mb-6">Professional branding that makes your Gastonia business stand out. From modern minimalist to industrial-inspired logos that pay homage to Gaston County's roots.</p>
+          <a href="/services/branding" class="inline-flex items-center text-brand-cyan hover:text-brand-glow transition-colors group">
+            Learn More 
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
 
-        <div class="bg-brand-dark border border-brand-sky/40 rounded-xl p-8">
-          <h3 class="font-heading text-2xl font-bold text-white mb-4">Digital Marketing</h3>
-          <p class="text-brand-sky/70 mb-4">Complete digital marketing solutions to help your Gastonia business grow online and attract more customers.</p>
-          <a href="/contact#get-in-touch" class="text-brand-cyan hover:text-brand-glow transition-colors">Learn More →</a>
+        <div class="bg-brand-dark border border-brand-sky/40 rounded-2xl p-8 hover:bg-brand-darkest transition-colors duration-300">
+          <h3 class="font-heading text-2xl font-bold text-white mb-4">Digital Strategy</h3>
+          <p class="text-brand-sky/70 mb-6">Not sure where to start? We provide complete digital roadmaps for Gaston County businesses looking to transition from traditional marketing to modern digital growth.</p>
+          <a href="/contact" class="inline-flex items-center text-brand-cyan hover:text-brand-glow transition-colors group">
+            Consultation 
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Advantage Section -->
+  <section class="py-24 px-4 bg-brand-darkest overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="bg-brand-dark p-8 rounded-3xl border border-white/5 shadow-2xl">
+            <h3 class="font-heading text-3xl font-bold text-white mb-6">Why Gastonia Local Matters</h3>
+            <p class="text-brand-sky/70 mb-6">
+              Gastonia isn't just another Charlotte suburb—it's a city with its own identity, history, and community. We believe your website should reflect that. 
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-brand-cyan/20 p-1 rounded-full"><svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                <p class="text-brand-sky/80 text-sm"><span class="text-white font-bold">Gaston County Keywords:</span> We target search terms specific to your neighborhood, whether you're in Loray, Franklin, or South Gastonia.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-brand-cyan/20 p-1 rounded-full"><svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                <p class="text-brand-sky/80 text-sm"><span class="text-white font-bold">Fast-Loading Designs:</span> In a world where everyone is on the go near the National Whitewater Center, your site needs to be lightning fast.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 bg-brand-cyan/20 p-1 rounded-full"><svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                <p class="text-brand-sky/80 text-sm"><span class="text-white font-bold">Local Support:</span> Skip the call centers. When you need help, you're talking to a neighbor who knows Gaston County.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 space-y-8">
+          <div class="relative group">
+            <Image src={gastoniaRight} alt="Gaston County Business Growth" class="rounded-3xl shadow-2xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+            <div class="absolute inset-0 rounded-3xl border border-white/10 pointer-events-none"></div>
+          </div>
+          <div>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Helping Gastonia <span class="text-brand-cyan">Transition & Triumph.</span></h2>
+            <p class="text-xl text-brand-sky/70 leading-relaxed mb-8">
+              As Gastonia continues to modernize, your business shouldn't be left behind with an outdated digital presence. From Schiele Museum visitors to daily commuters on I-85, we help you capture the attention of everyone looking for your services in Gaston County.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-brand-dark border border-white/5 rounded-xl">
+                <div class="text-3xl font-black text-brand-accent mb-1">20+</div>
+                <p class="text-brand-sky/60 text-xs uppercase tracking-tighter">Gaston Clients Served</p>
+              </div>
+              <div class="p-4 bg-brand-dark border border-white/5 rounded-xl">
+                <div class="text-3xl font-black text-brand-cyan mb-1">5★</div>
+                <p class="text-brand-sky/60 text-xs uppercase tracking-tighter">Locally Trusted Reputation</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
