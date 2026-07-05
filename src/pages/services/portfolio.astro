@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import swebHero from '../../../assets/Sweb_hero1.jpg';
 ---
 
 <BaseLayout 
-  title="Portfolio"
+  title="Portfolio | Shelby Web Co"
   description="View our portfolio of web design, branding, and digital marketing projects. See our work for local businesses in Shelby, Charlotte, and surrounding areas."
 >
 
@@ -20,25 +22,177 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Coming Soon Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-12">
-        <svg class="w-16 h-16 text-brand-cyan mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <h2 class="font-heading text-3xl font-bold text-white mb-4">
-          Portfolio Coming Soon
-        </h2>
-        <p class="text-brand-sky/80 mb-8">
-          We're currently building our portfolio gallery. Check back soon to see examples of our web design, branding, and digital marketing work.
-        </p>
-        <a 
-          href="/contact#get-in-touch"
-          class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
-        >
-          Start Your Project
-        </a>
+  <!-- Portfolio Grid -->
+  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Websites Section -->
+      <div class="mb-24">
+        <div class="mb-12">
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Websites</p>
+          <h2 class="font-heading text-4xl font-bold text-white mb-6">Websites</h2>
+          <p class="text-brand-sky/70 text-lg max-w-3xl">Professional, responsive websites built for local businesses. From contractors to artisans, we create digital experiences that convert visitors into customers.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Shelby Web Company -->
+          <div class="group bg-brand-dark border border-brand-accent/50 rounded-2xl overflow-hidden hover:border-brand-accent transition-all duration-300 shadow-xl shadow-brand-accent/5">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <Image src={swebHero} alt="Shelby Web Company Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+               <div class="absolute inset-0 bg-gradient-to-t from-brand-darkest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                 <span class="text-brand-accent font-bold text-sm">Latest Project</span>
+               </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Shelby Web Company</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">High-performance digital presence built for Cleveland County businesses, featuring local SEO strategy and conversion-focused design.</p>
+            </div>
+          </div>
+
+          <!-- Studios by Dave -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Studios by Dave</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Our flagship website showcasing professional web development and digital marketing services for local businesses.</p>
+            </div>
+          </div>
+
+          <!-- F&S Expedited LLC -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">F&S Expedited LLC</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Professional interstate freight carrier specializing in reliable, fast, and customer-focused logistics solutions from Shelby, NC.</p>
+            </div>
+          </div>
+
+          <!-- Padgsteen Guitars -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Padgsteen Guitars</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Handcrafted guitars & soulful Southern music from the heart of Appalachia. A beautiful showcase for a master luthier and musician.</p>
+            </div>
+          </div>
+
+          <!-- Shades of Gray Painters -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Shades of Gray Painters</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Professional painting company website featuring interior, exterior, and specialty finishes with a texture gallery showcase.</p>
+            </div>
+          </div>
+
+          <!-- Lee Construction -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Lee Construction</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Shelby's trusted general contractor since 1982. Commercial developments to custom homes with quality craftsmanship.</p>
+            </div>
+          </div>
+
+          <!-- Odyssey Custom Renovations -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Odyssey Custom Renovations</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Home renovation specialists transforming kitchens, bathrooms, and complete home makeovers with expert craftsmanship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Applications Section -->
+      <div>
+        <div class="mb-12">
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Web Applications</p>
+          <h2 class="font-heading text-4xl font-bold text-white mb-6">Web Applications</h2>
+          <p class="text-brand-sky/70 text-lg max-w-3xl">Interactive web applications showcasing our technical expertise. From specialized tools to innovative solutions.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Big Futuristic Picture Box -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Big Futuristic Picture Box</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">AI-powered multi-layered image generator with advanced image reference and image doctor capabilities for creative professionals.</p>
+            </div>
+          </div>
+
+          <!-- Audio Notes AI -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Audio Notes AI</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">AI-powered audio notes transcriber that transforms your audio notes and snippets into visual data, graphs, and actionable plans.</p>
+            </div>
+          </div>
+
+          <!-- Musical Lock -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Auth System</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Musical Lock</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Revolutionary authentication system replacing passwords with memorable melodies for secure access.</p>
+            </div>
+          </div>
+
+          <!-- Mikes Gut Healer 5000 -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Medical Tool</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">Mikes Gut Healer 5000</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Fully comprehensive resource for gut healing, featuring earth medicines and Rife frequencies for true body, mind, and spirit healing.</p>
+            </div>
+          </div>
+
+          <!-- The Living Word -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">The Living Word</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">KJV-powered tool of spiritual life guidance with AI training based strictly on the King James Version of the Holy Bible.</p>
+            </div>
+          </div>
+
+          <!-- RIFE Frequency Generator -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Audio Tool</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">RIFE Frequency Generator</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Professional 20 MHz sweep/function generator with audio samples and frequency generation capabilities.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
