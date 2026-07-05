@@ -1,123 +1,266 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
 ---
 
 <BaseLayout 
-  title="SEO Services"
-  description="Professional SEO services in Shelby, NC. Complete search engine optimization including technical SEO, on-page optimization, local search dominance, and Google Business Profile management."
+  title="Complete SEO Services | Shelby Web Co"
+  description="Comprehensive search engine optimization services. From technical optimization to local dominance, we help your business rank higher and get more leads."
 >
 
   <!-- Hero Section -->
   <section class="py-20 lg:py-32 px-4" data-animate>
     <div class="max-w-4xl mx-auto text-center">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Search Engine Optimization</p>
-      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight whitespace-nowrap">
-        Complete <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blueLight to-brand-sky">SEO Services</span>
-      </h1>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          Complete <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blueLight to-brand-sky">SEO Services</span>
+        </h1>
+      </div>
       <p class="text-xl text-brand-sky/80 mb-8">
-        Comprehensive search engine optimization services that cover every aspect of SEO. From technical optimization to content strategy, we help local businesses dominate search results.
+        Comprehensive search engine optimization services that cover every aspect of SEO. From technical optimization to content strategy, we help businesses dominate search results.
       </p>
-      <a 
-        href="/contact#get-in-touch"
-        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
-      >
-        Get Your Free SEO Audit
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a 
+          href="/contact#get-in-touch"
+          class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
+        >
+          Start Ranking Higher
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <!-- Approach Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What We Offer</p>
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-          Comprehensive SEO Solutions
-        </h2>
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Approach</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Complete SEO Strategy</h2>
+        <p class="text-brand-sky/70 max-w-2xl mx-auto text-lg">
+          Our comprehensive approach covers all aspects of SEO to ensure maximum visibility and results.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Technical SEO</h3>
-          <p class="text-brand-sky/70 text-sm">Site speed optimization, mobile responsiveness, and technical improvements that boost your search rankings.</p>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">On-Page SEO</h3>
+          <p class="text-brand-sky/60">Content optimization, keywords, meta data, internal linking, and URL structure.</p>
         </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">On-Page Optimization</h3>
-          <p class="text-brand-sky/70 text-sm">Keyword research, meta tags, content optimization, and internal linking to improve your page rankings.</p>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">Local SEO</h3>
+          <p class="text-brand-sky/60">Google My Business, local listings, reviews, and location-based optimization.</p>
         </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Local Search Dominance</h3>
-          <p class="text-brand-sky/70 text-sm">Optimize for local search to appear in Google Maps and local pack results for your service area.</p>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">Technical SEO</h3>
+          <p class="text-brand-sky/60">Site speed, mobile optimization, indexation, accessibility, and schema markup.</p>
         </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Google Business Profile</h3>
-          <p class="text-brand-sky/70 text-sm">Setup, optimization, and management of your Google Business Profile for maximum local visibility.</p>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">Image & Video SEO</h3>
+          <p class="text-brand-sky/60">Image optimization, alt tags, video SEO, and multimedia content strategy.</p>
         </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Performance Tracking</h3>
-          <p class="text-brand-sky/70 text-sm">Regular reports on rankings, traffic, and conversions so you can see the ROI of your SEO investment.</p>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">Off-Page SEO</h3>
+          <p class="text-brand-sky/60">Link building, guest posting, social signals, and domain authority building.</p>
         </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="text-xl font-bold text-white mb-3">SEO Analytics</h3>
+          <p class="text-brand-sky/60">Performance tracking, keyword monitoring, and detailed SEO reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-brand-sky to-brand-cyan rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+  <!-- SEO Upgrade Section -->
+  <section class="py-24 px-4 bg-gradient-to-b from-brand-darkest via-brand-dark to-brand-darkest relative overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="inline-block bg-brand-purple/20 border border-brand-purple/50 text-brand-purple text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider mb-6">
+        Exclusive Add-On · SEO Upgrade
+      </div>
+      <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8">
+        We Don't Just Deploy Your Site.<br/> We Make Sure Google Can <span class="text-brand-accent">Actually Read It.</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div class="space-y-6 text-brand-sky/80 text-lg">
+          <p>
+            When a developer deploys your website, they're doing exactly that — deploying it. Your site goes live, it looks great, but <span class="text-white font-bold">Google may not be able to read a single word of it.</span>
+          </p>
+          <p>
+            Modern websites built on JavaScript frameworks deliver an empty shell to search engine crawlers — your content only appears after code executes in a browser, which Google's bot often never waits for.
+          </p>
+          <p>
+            The <span class="text-brand-accent font-bold">SEO Upgrade</span> solves this at the foundation level. We run your entire website through a professional <span class="text-white">pre-rendering and static generation pipeline</span> — converting every page into fully-resolved, content-rich HTML that Google can crawl, index, and rank the moment it visits your site.
+          </p>
+        </div>
+        
+        <div class="bg-[#0A0A0A] p-8 rounded-3xl border border-white/10 shadow-2xl">
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="bg-brand-accent text-[#0A0A0A] w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+              <div>
+                <h4 class="text-white font-bold mb-1">Audit your site's crawlability</h4>
+                <p class="text-brand-sky/60 text-sm">We analyze how Google currently sees your pages.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="bg-brand-accent text-[#0A0A0A] w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+              <div>
+                <h4 class="text-white font-bold mb-1">Run the pre-rendering pipeline</h4>
+                <p class="text-brand-sky/60 text-sm">Every page is processed into static HTML for instant indexing.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="bg-brand-accent text-[#0A0A0A] w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+              <div>
+                <h4 class="text-white font-bold mb-1">Submit to Google and verify</h4>
+                <p class="text-brand-sky/60 text-sm">Watch your pages go from invisible to ranked in real time.</p>
+              </div>
+            </div>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Competitor Analysis</h3>
-          <p class="text-brand-sky/70 text-sm">Analyze your competitors' strategies and find opportunities to outrank them in search results.</p>
+        </div>
+      </div>
+
+      <!-- Before/After Code Comparison -->
+      <div class="grid md:grid-cols-2 gap-8 mb-20">
+        <div class="space-y-4">
+          <p class="text-red-400 font-bold uppercase tracking-widest text-xs">Without Upgrade</p>
+          <div class="bg-[#1A1A1A] p-6 rounded-xl border border-red-900/30 font-mono text-xs text-red-100/60 h-full">
+            <pre class="whitespace-pre-wrap">
+&lt;!-- Googlebot sees this --&gt;
+&lt;body&gt;
+&lt;div id="root"&gt;&lt;/div&gt; 
+&lt;!-- empty — content loads
+only via JavaScript --&gt;
+&lt;script src="/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;!-- No title. No headings.
+No readable content.
+Google indexes nothing. --&gt;</pre>
+          </div>
+          <p class="text-brand-sky/40 text-sm">Standard JS deploy — crawler finds an empty shell</p>
+        </div>
+        <div class="space-y-4">
+          <p class="text-brand-accent font-bold uppercase tracking-widest text-xs">With SEO Upgrade</p>
+          <div class="bg-[#1A1A1A] p-6 rounded-xl border border-brand-accent/30 font-mono text-xs text-brand-accent/80 h-full">
+            <pre class="whitespace-pre-wrap">
+&lt;title&gt;Roofing Shelby NC | ABC Roofing&lt;/title&gt;
+&lt;meta name="description"
+content="Top-rated roofer in Shelby..."/&gt;
+&lt;body&gt;
+&lt;h1&gt;Shelby's Most Trusted Roofer&lt;/h1&gt;
+&lt;p&gt;Serving Shelby, Gastonia & Kings Mtn&lt;/p&gt;
+&lt;section&gt;Free Estimates · Licensed & Insured&lt;/section&gt;
+&lt;/body&gt;
+&lt;!-- Full HTML on first load.
+Google reads every word. --&gt;</pre>
+          </div>
+          <p class="text-brand-sky/40 text-sm">After SEO Upgrade — every word is indexed instantly</p>
+        </div>
+      </div>
+
+      <!-- Console Stats -->
+      <div class="bg-brand-darkest border border-white/5 rounded-3xl p-8 md:p-12 text-center">
+        <h3 class="font-heading text-3xl font-bold text-white mb-10">Google Search Console — Before vs. After</h3>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="text-left space-y-4">
+            <div class="bg-[#111] p-6 rounded-xl border border-white/10">
+              <p class="text-xs text-brand-sky/40 mb-2 uppercase">GSearch Console — Coverage</p>
+              <p class="text-white font-bold mb-4">yourbusiness.com</p>
+              <div class="flex items-center gap-4 text-red-500 mb-2">
+                <span class="text-2xl font-black">📭</span>
+                <div>
+                  <p class="font-bold">Only 2 pages indexed.</p>
+                  <p class="text-sm opacity-60">Homepage + Contact only.</p>
+                </div>
+              </div>
+              <div class="h-1 bg-red-900/30 rounded-full overflow-hidden">
+                <div class="h-full bg-red-500 w-[10%]"></div>
+              </div>
+              <p class="text-right text-[10px] uppercase text-red-500 mt-1 font-bold">2 Pages</p>
+            </div>
+            <p class="text-brand-sky/40 text-xs italic">Without the SEO Upgrade — nearly invisible</p>
+          </div>
+          <div class="text-left space-y-4">
+            <div class="bg-[#111] p-6 rounded-xl border border-brand-accent/20">
+              <p class="text-xs text-brand-sky/40 mb-2 uppercase">GSearch Console — Coverage</p>
+              <p class="text-white font-bold mb-4">yourbusiness.com</p>
+              <div class="grid grid-cols-2 gap-2 mb-4 text-[10px] text-brand-accent/80 font-mono">
+                <div>/services/roofing ✓</div>
+                <div>/services/siding ✓</div>
+                <div>/locations/shelby ✓</div>
+                <div>/locations/gastonia ✓</div>
+              </div>
+              <div class="h-1 bg-brand-accent/20 rounded-full overflow-hidden">
+                <div class="h-full bg-brand-accent w-full"></div>
+              </div>
+              <p class="text-right text-[10px] uppercase text-brand-accent mt-1 font-bold">18 Pages</p>
+            </div>
+            <p class="text-brand-sky/40 text-xs italic">After SEO Upgrade — every page on Google's radar</p>
+          </div>
+        </div>
+        
+        <div class="mt-16">
+          <h4 class="text-2xl font-bold text-white mb-4">Ready to stop being invisible on Google?</h4>
+          <p class="text-brand-sky/60 mb-8 max-w-2xl mx-auto">The SEO Upgrade is available as a standalone service or bundled with any new website build.</p>
+          <a href="/contact#get-in-touch" class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300">Inquire About the SEO Upgrade</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Business Section -->
+  <section class="py-24 px-4 bg-brand-darkest">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Local Ecosystem</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-8">Google Business Profile Optimization</h2>
+        <p class="text-brand-sky/70 mb-8 text-lg">
+          Your Google Business profile is often the first thing local customers see. We optimize your entire presence in the Google ecosystem to get you more calls, reviews, and customers exactly where they look first.
+        </p>
+        <ul class="space-y-4 text-brand-sky/80">
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Complete Business Profile setup and optimization
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Review monitoring and reputation management
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Local Maps ranking and visibility strategies
+          </li>
+          <li class="flex gap-3 items-center">
+            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Ongoing post integration and Q&A management
+          </li>
+        </ul>
+      </div>
+      <div class="bg-brand-dark p-12 rounded-3xl border border-white/5">
+        <div class="text-center">
+          <p class="text-brand-accent text-5xl font-black mb-4">400%</p>
+          <p class="text-white font-bold text-xl mb-2">Average Increase in Traffic</p>
+          <p class="text-brand-sky/60">Within 6 months of comprehensive SEO strategy implementation.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 px-4 relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
+  <section class="py-20 px-4 relative overflow-hidden bg-brand-dark" data-animate>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-        Ready to Boost Your Rankings?
-      </h2>
-      <p class="text-lg text-brand-sky/80 mb-8">
-        Let's optimize your website for search success. Get in touch today for a free SEO audit.
-      </p>
-      <a 
-        href="/contact#get-in-touch"
-        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accentLight shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
-      >
-        Get Started Today
-      </a>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Dominate Search Results?</h2>
+      <p class="text-lg text-brand-sky/80 mb-10">Let our SEO experts help you rank higher and get more customers from search engines.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/contact#get-in-touch"
+          class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-accentLight shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
+        >
+          Get SEO Analysis
+        </a>
+      </div>
     </div>
   </section>
 
