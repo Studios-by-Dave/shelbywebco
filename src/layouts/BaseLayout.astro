@@ -45,6 +45,49 @@ const fullTitle = `${title} | Shelby Web Company`;
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
     
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Shelby Web Company",
+        "image": "https://shelbywebco.com/og-image.jpg",
+        "@id": "https://shelbywebco.com",
+        "url": "https://shelbywebco.com",
+        "telephone": "(704) 473-8188",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shelby",
+          "addressRegion": "NC",
+          "postalCode": "28150",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.2924,
+          "longitude": -81.5356
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://www.facebook.com/shelbywebco",
+          "https://www.linkedin.com/company/shelbywebco"
+        ]
+      }
+    </script>
+    
     <!-- Fonts (self-hosted) -->
     <link rel="stylesheet" href="/fonts/fonts.css" />
     
