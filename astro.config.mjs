@@ -10,6 +10,9 @@ export default defineConfig({
   },
   integrations: [react(), sitemap()],
   output: 'static',
+  image: {
+    domains: ['www.studiosbydave.com'],
+  },
   redirects: {
     '/blog/why-choose-studios-by-dave': '/blog/why-choose-shelby-web-company',
     '/why-choose-us': '/blog/why-choose-shelby-web-company',

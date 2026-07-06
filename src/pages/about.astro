@@ -13,6 +13,8 @@ import meAndMascot from '../../assets/about/meandmascot_1.jpg';
 import heroHuman from '../../assets/about/hero-human-inside.webp';
 import spaceship from '../../assets/about/hero-human-inside.webp';
 import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
+
+const daveHeadshot = "https://www.studiosbydave.com/lovable-uploads/d08deff8-3748-4ab1-be7c-1f0aa5062b8b.png";
 ---
 
 <BaseLayout 
@@ -116,6 +118,46 @@ import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
               alt="100% Customer Satisfaction Badge" 
               class="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Dave Section -->
+  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/3">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan to-brand-glow rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <Image 
+              src={daveHeadshot} 
+              alt="David Richardson - Founder of Shelby Web Company" 
+              class="relative rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
+              width={600}
+              height={750}
+            />
+          </div>
+        </div>
+        <div class="md:w-2/3">
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Meet the Founder</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+            Meet Dave
+          </h2>
+          <div class="space-y-4 text-brand-sky/80 text-lg leading-relaxed text-left">
+            <p>
+              David "Dave" Richardson is a seasoned technology veteran with over two decades of experience. After attending UNC Charlotte and ECPI University—where he served as President of the National Vocational Technical Honor Society—Dave began his career as a Broadband Specialist right here in Shelby with Computer Connections Inc.
+            </p>
+            <p>
+              He later advanced into roles as a Network Engineer for various IT firms, spanning from local North Carolina companies to the deserts of Las Vegas, Nevada. This diverse background gives him a unique perspective on how technology can drive business growth at every scale.
+            </p>
+            <p>
+              Beyond his technical expertise, Dave is a lifelong musician and Audio Mastering Engineer with over 30 years of experience in recording and production. His passion for building websites and learning code eventually led him to transition into full-time web design and development.
+            </p>
+            <p>
+              At Shelby Web Company, Dave's mission is simple: to see your business succeed. He understands that your website isn't just a digital business card—it's a tool to grow your livelihood. When our clients are happy, everybody thrives!
+            </p>
           </div>
         </div>
       </div>
