@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://shelbywebco.com',
-  integrations: [tailwind(), react(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [react(), sitemap()],
   output: 'static',
   redirects: {
     '/blog/why-choose-studios-by-dave': '/blog/why-choose-shelby-web-company',

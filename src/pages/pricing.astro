@@ -485,15 +485,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <style>
     .investment-btn.active-investment {
-      @apply bg-brand-cyan text-brand-darkest border-brand-cyan shadow-[0_0_15px_rgba(0,255,255,0.3)];
+      background-color: #22d3ee;
+      color: #0a0a0a;
+      border-color: #22d3ee;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
     }
 
     input[type='range'] {
-      @apply h-2 bg-brand-darkest rounded-lg appearance-none cursor-pointer;
+      height: 0.5rem;
+      background-color: #0a0a0a;
+      border-radius: 0.5rem;
+      appearance: none;
+      cursor: pointer;
     }
 
     input[type='range']::-webkit-slider-thumb {
-      @apply w-6 h-6 bg-brand-cyan rounded-full appearance-none shadow-lg border-2 border-brand-dark;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #22d3ee;
+      border-radius: 9999px;
+      appearance: none;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border: 2px solid #1a1a1a;
     }
   </style>
 
