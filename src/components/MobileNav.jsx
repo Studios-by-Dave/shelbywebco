@@ -99,7 +99,7 @@ export default function MobileNav() {
             </a>
             <a
               href="/contact"
-              className="block bg-brand-accent text-[#0A0A0A] px-6 py-2.5 rounded-lg font-medium text-center mt-4 hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_15px_rgba(132,204,22,0.3)]"
+              className="cta-glow-shine block bg-brand-accent text-[#0A0A0A] px-6 py-2.5 rounded-lg font-medium text-center mt-4 hover:bg-brand-accent-light"
             >
               Get Started
             </a>

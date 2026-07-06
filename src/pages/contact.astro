@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import businessCard from '../../assets/about/Sweb_bcard_1.png';
 ---
 
 <BaseLayout 
@@ -22,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Phone Button -->
           <a 
             href="tel:+17044738188"
-            class="group block max-w-xl mx-auto bg-brand-accent hover:bg-brand-accent-light p-8 rounded-[40px] shadow-[0_0_50px_rgba(132,204,22,0.3)] transition-all duration-300 transform hover:scale-[1.02]"
+            class="cta-glow-shine group block max-w-xl mx-auto bg-brand-accent hover:bg-brand-accent-light p-8 rounded-[40px] transform hover:scale-[1.02]"
           >
             <div class="flex flex-col items-center text-center">
               <div class="flex items-center gap-2 mb-2 text-[#0A0A0A]/80">
@@ -43,7 +45,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Email Button -->
           <a 
             href="mailto:shelbywebco@gmail.com"
-            class="group block max-w-xl mx-auto bg-brand-accent hover:bg-brand-accent-light p-8 rounded-[40px] shadow-[0_0_50px_rgba(132,204,22,0.3)] transition-all duration-300 transform hover:scale-[1.02]"
+            class="cta-glow-shine group block max-w-xl mx-auto bg-brand-accent hover:bg-brand-accent-light p-8 rounded-[40px] transform hover:scale-[1.02]"
           >
             <div class="flex flex-col items-center text-center">
               <div class="flex items-center gap-2 mb-2 text-[#0A0A0A]/80">
@@ -160,7 +162,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="md:col-span-2 pt-4">
               <button 
                 type="submit"
-                class="w-full bg-brand-accent text-[#0A0A0A] px-10 py-5 rounded-2xl font-black text-lg uppercase tracking-widest hover:bg-brand-accent-light hover:scale-[1.02] shadow-[0_0_30px_rgba(132,204,22,0.3)] transition-all duration-300"
+                class="cta-glow-shine w-full bg-brand-accent text-[#0A0A0A] px-10 py-5 rounded-2xl font-black text-lg uppercase tracking-widest hover:bg-brand-accent-light hover:scale-[1.02]"
               >
                 Launch Conversation
               </button>
@@ -221,10 +223,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div class="hidden lg:block">
-            <img 
-              src="/optimized-mascot.png" 
-              alt="Shelby Web Co Mascot" 
-              class="w-full max-w-[200px] h-auto drop-shadow-[0_0_30px_rgba(132,204,22,0.2)] animate-pulse-slow mx-auto"
+            <Image 
+              src={businessCard} 
+              alt="Shelby Web Co Business Card" 
+              class="w-full h-auto drop-shadow-[0_0_30px_rgba(132,204,22,0.2)] hover:scale-110 transition-transform duration-500 rounded-xl"
             />
           </div>
 
