@@ -28,10 +28,11 @@ import PixieDust from './PixieDust.jsx';
       <div class="hidden md:flex items-center space-x-6 relative group overflow-hidden">
         <a 
           href="/contact" 
-          class="cta-shine bg-gradient-to-r from-brand-accent via-brand-accent-light to-brand-accent text-[#0A0A0A] px-5 py-2 rounded-md font-bold hover:shadow-[0_0_20px_rgba(132,204,22,0.5)] transition-all duration-300 relative z-10"
+          class="cta-shine bg-gradient-to-r from-brand-accent via-brand-accent-light to-brand-accent text-black px-5 py-2 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(132,204,22,0.5)] transition-all duration-300 relative z-10"
         >
-          <span class="text-lg">Get Started</span>
-          <div class="cta-shine-sweep absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          <span class="text-lg relative z-20">Get Started</span>
+          <div class="cta-reflection absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none z-10"></div>
+          <div class="cta-shine-sweep absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 z-10"></div>
         </a>
         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0">
           <PixieDust client:load />
@@ -78,6 +79,21 @@ import PixieDust from './PixieDust.jsx';
   .cta-shine {
     overflow: hidden;
     animation: ctaGlowPulse 2.8s ease-in-out infinite;
+  }
+
+  .cta-reflection {
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: rotate(35deg);
+    animation: ctaReflectionMove 8s linear infinite;
+  }
+
+  @keyframes ctaReflectionMove {
+    0% { transform: rotate(35deg) translateY(-20%); }
+    50% { transform: rotate(35deg) translateY(20%); }
+    100% { transform: rotate(35deg) translateY(-20%); }
   }
 
   .cta-shine-sweep {
