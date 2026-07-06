@@ -1,7 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
+import swebscreen from '../../../assets/portfolio/swebscreen_1.png';
 import swebHero from '../../../assets/Sweb_hero1.jpg';
+import studiosByDave from '../../../assets/portfolio/studiosbydave.webp';
+import fsExpedited from '../../../assets/portfolio/fs-expedited.jpg';
+import padgsteenGuitars from '../../../assets/portfolio/padgsteenguitars.png';
+import shadesOfGray from '../../../assets/portfolio/shades-of-gray.png';
+import leeConstruction from '../../../assets/portfolio/lee-construction.png';
+import odysseyRenovations from '../../../assets/portfolio/odyssey-renovations.png';
+import bigFuturisticPictureBox from '../../../assets/portfolio/big-futuristic-picture-box.png';
+import audioNotesAi from '../../../assets/portfolio/audio-notes-ai.png';
+import musicalLock from '../../../assets/portfolio/musical-lock.png';
+import mikesGutHealer from '../../../assets/portfolio/mikes-gut-healer.png';
+import theLivingWord from '../../../assets/portfolio/the-living-word.png';
+import rifeGenerator from '../../../assets/portfolio/rife-generator.png';
+import gAnalyzer from '../../../assets/portfolio/5g-analyzer.png';
 ---
 
 <BaseLayout 
@@ -38,13 +52,14 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Shelby Web Company -->
           <div class="group bg-brand-dark border border-brand-accent/50 rounded-2xl overflow-hidden hover:border-brand-accent transition-all duration-300 shadow-xl shadow-brand-accent/5">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={swebHero} alt="Shelby Web Company Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+               <Image src={swebscreen} alt="Shelby Web Company Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                <div class="absolute inset-0 bg-gradient-to-t from-brand-darkest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                  <span class="text-brand-accent font-bold text-sm">Latest Project</span>
                </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Shelby Web Company</h3>
+              <h3 class="font-heading text-2xl font-bold text-white mb-1">Shelby Web Company</h3>
+              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(formerly Studios by Dave)</p>
               <p class="text-brand-sky/70 text-sm mb-4">High-performance digital presence built for Cleveland County businesses, featuring local SEO strategy and conversion-focused design.</p>
             </div>
           </div>
@@ -52,10 +67,11 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Former Branding (Studios by Dave) -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={studiosByDave} alt="Studios by Dave Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Studios by Dave (Legacy)</h3>
+              <h3 class="font-heading text-2xl font-bold text-white mb-1">Studios by Dave (Legacy)</h3>
+              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(now Shelby Web Company)</p>
               <p class="text-brand-sky/70 text-sm mb-4">Our former flagship website which has now evolved into Shelby Web Company, continuing our mission of digital excellence.</p>
             </div>
           </div>
@@ -63,7 +79,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- F&S Expedited LLC -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={fsExpedited} alt="F&S Expedited LLC Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">F&S Expedited LLC</h3>
@@ -74,7 +90,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Padgsteen Guitars -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={padgsteenGuitars} alt="Padgsteen Guitars Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Padgsteen Guitars</h3>
@@ -85,7 +101,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Shades of Gray Painters -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={shadesOfGray} alt="Shades of Gray Painters Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Shades of Gray Painters</h3>
@@ -96,7 +112,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Lee Construction -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={leeConstruction} alt="Lee Construction Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Lee Construction</h3>
@@ -107,7 +123,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Odyssey Custom Renovations -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-sky/20 font-bold italic">Image Placeholder</div>
+               <Image src={odysseyRenovations} alt="Odyssey Custom Renovations Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Odyssey Custom Renovations</h3>
@@ -129,7 +145,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Big Futuristic Picture Box -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+               <Image src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Big Futuristic Picture Box</h3>
@@ -140,7 +156,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Audio Notes AI -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+               <Image src={audioNotesAi} alt="Audio Notes AI Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Audio Notes AI</h3>
@@ -151,7 +167,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Musical Lock -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Auth System</div>
+               <Image src={musicalLock} alt="Musical Lock Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Musical Lock</h3>
@@ -162,7 +178,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- Mikes Gut Healer 5000 -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Medical Tool</div>
+               <Image src={mikesGutHealer} alt="Mikes Gut Healer 5000 Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">Mikes Gut Healer 5000</h3>
@@ -173,7 +189,7 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- The Living Word -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">AI Tool</div>
+               <Image src={theLivingWord} alt="The Living Word Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">The Living Word</h3>
@@ -184,11 +200,22 @@ import swebHero from '../../../assets/Sweb_hero1.jpg';
           <!-- RIFE Frequency Generator -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <div class="absolute inset-0 flex items-center justify-center text-brand-purple/20 font-bold italic">Audio Tool</div>
+               <Image src={rifeGenerator} alt="RIFE Frequency Generator Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-3">RIFE Frequency Generator</h3>
               <p class="text-brand-sky/70 text-sm mb-4">Professional 20 MHz sweep/function generator with audio samples and frequency generation capabilities.</p>
+            </div>
+          </div>
+
+          <!-- 5G Spectrum Analyzer -->
+          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
+            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
+               <Image src={gAnalyzer} alt="5G Spectrum Analyzer Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl font-bold text-white mb-3">5G Spectrum Analyzer</h3>
+              <p class="text-brand-sky/70 text-sm mb-4">Professional RF spectrum analysis system for passive monitoring across multiple frequency bands.</p>
             </div>
           </div>
 
