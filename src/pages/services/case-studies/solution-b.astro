@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Solution B: Migration to Astro for SEO Performance"
+  description="Case Study: How we migrated a complex project to the Astro framework to achieve 100% HTML pre-rendering and superior search engine visibility."
+>
+  <section class="py-20 lg:py-32 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12">
+        <span class="bg-brand-blue/20 text-brand-blue text-lg font-bold uppercase tracking-widest px-6 py-2 rounded-full border border-brand-blue/30 shadow-[0_0_15px_rgba(30,144,255,0.2)]">Solution B</span>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-10 mb-6 leading-tight">
+          Astro Framework Migration:<br/>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">
+            Achieving 100% HTML Pre-Rendering
+          </span>
+        </h1>
+        <p class="text-xl text-brand-sky/80 leading-relaxed">
+          Following the indexing challenges identified in <a href="/services/case-studies/solution-a" class="text-brand-cyan hover:underline">Solution A</a>, we implemented a full-scale framework upgrade to Astro.
+        </p>
+      </div>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <div class="bg-brand-darkest border border-brand-blue/20 rounded-2xl p-8 mb-12">
+          <h2 class="text-white font-heading text-2xl mb-4">The Challenge</h2>
+          <p class="text-white/80">
+            While <a href="/services/case-studies/solution-a" class="text-brand-cyan hover:underline">Solution A</a> addressed the immediate indexing "leak," the underlying issue remained: the client's previous framework was heavily dependent on client-side JavaScript. This made every new page a potential SEO risk and slowed down mobile performance significantly. We needed a solution that would pre-render <em>every</em> URL as static HTML by default.
+          </p>
+        </div>
+
+        <h2 class="text-white font-heading text-2xl mb-4">The Solution</h2>
+        <p class="text-white/80 mb-6">
+          We selected <strong>Astro</strong> as the target framework. Its "Island Architecture" allowed us to keep the interactive features of the previous site while ensuring that the actual content was delivered as pure, pre-rendered HTML.
+        </p>
+        
+        <ul class="space-y-4 text-white/80 mb-12">
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span><strong>Framework Selection:</strong> Evaluated Next.js vs. Astro, choosing Astro for its superior zero-JS-by-default performance.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span><strong>Full HTML Pre-rendering:</strong> Configured the build process to output static HTML for all pages, including dynamic routes.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brand-cyan">✦</span>
+            <span><strong>Component Migration:</strong> Converted legacy React/Vue components into Astro components where interactivity wasn't required, slashing bundle size.</span>
+          </li>
+        </ul>
+
+        <div class="bg-gradient-to-br from-brand-blue/10 to-brand-cyan/10 border border-brand-blue/30 rounded-2xl p-8">
+          <h2 class="text-white font-heading text-2xl mb-4">The Technical Impact</h2>
+          <div class="grid sm:grid-cols-3 gap-6 text-center">
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">90%</p>
+              <p class="text-white/60 text-sm italic">Less JavaScript</p>
+            </div>
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">100/100</p>
+              <p class="text-white/60 text-sm italic">Lighthouse Performance</p>
+            </div>
+            <div>
+              <p class="text-4xl font-bold text-brand-cyan mb-2">Instant</p>
+              <p class="text-white/60 text-sm italic">Crawler Discoverability</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+          <a 
+            href="/services/case-studies/solution-a"
+            class="inline-block border border-brand-blue/50 text-white px-8 py-4 rounded-lg font-bold hover:bg-brand-blue/10 transition-all duration-300"
+          >
+            ← View Solution A
+          </a>
+          <a 
+            href="/contact#get-in-touch"
+            class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-lg font-bold hover:bg-brand-accent-light shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
+          >
+            Optimize Your Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

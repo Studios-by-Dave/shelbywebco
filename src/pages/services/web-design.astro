@@ -4,6 +4,7 @@ import PixieDust from '../../components/PixieDust.jsx';
 import { Image } from 'astro:assets';
 
 import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
+import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
 ---
 
 <BaseLayout 
@@ -33,16 +34,21 @@ import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.j
         </a>
         <a 
           href="tel:+17044738188"
-          class="text-white font-medium hover:text-brand-accent transition-colors"
+          class="text-white text-xl md:text-2xl font-bold hover:text-brand-accent transition-colors"
         >
           (704) 473-8188
         </a>
       </div>
       
-      <div class="mt-12 flex justify-center">
+      <div class="mt-12 flex justify-center items-center gap-8">
         <Image 
           src={comptiaBadge} 
           alt="CompTIA A+ Digital Badge" 
+          class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+        <Image 
+          src={projectBadge} 
+          alt="Quality Project Badge" 
           class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
@@ -61,21 +67,21 @@ import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.j
 
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
-          <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-6 text-brand-cyan">
+          <div class="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mb-6 text-yellow-400">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Lightning Fast Performance</h3>
           <p class="text-brand-sky/60">Speed is a ranking factor. Our sites are optimized for core web vitals and rapid load times on all devices.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
-          <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-6 text-brand-cyan">
+          <div class="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mb-6 text-yellow-400">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Mobile-First Response</h3>
           <p class="text-brand-sky/60">With over 60% of traffic coming from mobile, we ensure your site looks and works perfectly on every screen size.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
-          <div class="w-12 h-12 bg-brand-cyan/20 rounded-lg flex items-center justify-center mb-6 text-brand-cyan">
+          <div class="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mb-6 text-yellow-400">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">SEO Built-In</h3>
