@@ -22,17 +22,19 @@
   --animate-flash-subtle: flash-subtle 1s infinite;
   --animate-shine: shine 6s infinite linear;
   --animate-marquee: marquee 25s linear infinite;
+}
 
-  @keyframes flash-subtle {
-    0%, 100% { opacity: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-    50% { opacity: 0.2; text-shadow: 0 0 20px rgba(34,211,238,1); }
-  }
-  @keyframes shine {
-    0% { background-position: 200% center; }
-    100% { background-position: -200% center; }
-  }
-  @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-  }
+@keyframes flash-subtle {
+  0%, 100% { opacity: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+  50% { opacity: 0.2; text-shadow: 0 0 20px rgba(34,211,238,1); }
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
