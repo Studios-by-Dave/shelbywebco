@@ -25,10 +25,13 @@ import PixieDust from './PixieDust.jsx';
       <DesktopNav client:load />
 
       <!-- Navbar Get Started Button -->
-      <div class="hidden md:flex items-center space-x-6 relative group overflow-hidden">
+      <div class="hidden md:flex items-center space-x-6 relative group">
+        <!-- Aurora Glow -->
+        <div class="absolute inset-0 bg-brand-accent/30 blur-xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-aurora-sm z-0 pointer-events-none"></div>
+
         <a 
           href="/contact" 
-          class="cta-shine bg-gradient-to-r from-brand-accent via-brand-accent-light to-brand-accent text-black px-5 py-2 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(132,204,22,0.5)] transition-all duration-300 relative z-10"
+          class="cta-shine bg-gradient-to-r from-brand-accent via-brand-accent-light to-brand-accent text-black px-5 py-2 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(132,204,22,0.6)] transition-all duration-300 relative z-10"
         >
           <span class="text-lg relative z-20">Get Started</span>
           <div class="cta-reflection absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none z-10"></div>
@@ -48,6 +51,25 @@ import PixieDust from './PixieDust.jsx';
 </nav>
 
 <style>
+  @keyframes aurora-sm {
+    0%, 100% {
+      transform: translate(0, 0) scale(1.0);
+      filter: blur(12px) hue-rotate(0deg);
+    }
+    33% {
+      transform: translate(5px, -3px) scale(1.1);
+      filter: blur(16px) hue-rotate(15deg);
+    }
+    66% {
+      transform: translate(-3px, 4px) scale(0.95);
+      filter: blur(14px) hue-rotate(-15deg);
+    }
+  }
+
+  .animate-aurora-sm {
+    animation: aurora-sm 8s ease-in-out infinite;
+  }
+
   @keyframes ctaGlowPulse {
     0%,
     100% {
