@@ -24,6 +24,39 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "studiosbydave.com"
+        }
+      ],
+      "destination": "https://shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.studiosbydave.com"
+        }
+      ],
+      "destination": "https://shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.shelbywebco.com"
+        }
+      ],
+      "destination": "https://shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/blog/why-choose-studios-by-dave",
       "destination": "/blog/why-choose-shelby-web-company",
       "permanent": true
