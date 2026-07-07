@@ -39,6 +39,16 @@
       "permanent": true
     },
     {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/get-started",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
       "source": "/services/web-development",
       "destination": "/services/web-design",
       "permanent": true
@@ -46,6 +56,66 @@
     {
       "source": "/services/logo-design",
       "destination": "/services/branding",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/services/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/services/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/seo",
+      "destination": "/services/seo",
+      "permanent": true
+    },
+    {
+      "source": "/audio",
+      "destination": "/services/audio-branding",
+      "permanent": true
+    },
+    {
+      "source": "/media",
+      "destination": "/services/media-packs",
+      "permanent": true
+    },
+    {
+      "source": "/branding",
+      "destination": "/services/branding",
+      "permanent": true
+    },
+    {
+      "source": "/asheville",
+      "destination": "/web-design-asheville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/gastonia",
+      "destination": "/web-design-gastonia-nc",
+      "permanent": true
+    },
+    {
+      "source": "/shelby",
+      "destination": "/web-design-shelby-nc",
+      "permanent": true
+    },
+    {
+      "source": "/forest-city",
+      "destination": "/web-design-forest-city-nc",
+      "permanent": true
+    },
+    {
+      "source": "/boiling-springs",
+      "destination": "/web-design-boiling-springs-nc",
+      "permanent": true
+    },
+    {
+      "source": "/polkville",
+      "destination": "/web-design-polkville-nc",
       "permanent": true
     },
     {
