@@ -69,9 +69,9 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <div class="relative bg-brand-darkest border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="/assets/SWeblogo1.jpg" 
-                alt="Shelby Web Co Branding" 
+              <Image 
+                src={businessCard} 
+                alt="Shelby Web Co Business Card" 
                 class="w-full h-auto object-cover transform transition duration-500 group-hover:scale-105"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-darkest/80 via-transparent to-transparent opacity-60"></div>
@@ -91,7 +91,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
         <div class="bg-brand-darkest/50 border border-brand-sky/20 rounded-3xl p-8 md:p-12 backdrop-blur-sm shadow-2xl relative overflow-hidden group">
           <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 blur-3xl rounded-full -mr-16 -mt-16 group-hover:bg-brand-accent/10 transition-colors"></div>
           
-          <p class="text-brand-sky/80 text-lg font-medium mb-8">Or if you prefer a standard contact form...</p>
+          <p class="text-white text-xl md:text-2xl font-bold mb-8">Or if you prefer a standard contact form...</p>
 
           <form class="space-y-6 relative z-10" action="https://formspree.io/f/xvgzvqlv" method="POST">
             <div class="grid md:grid-cols-2 gap-6">
@@ -217,17 +217,9 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
           <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 mb-8 text-center">
             <h3 class="font-heading text-xl font-bold text-white mb-2">Business Hours</h3>
             <div class="py-2">
-              <span class="text-brand-accent text-3xl font-black uppercase tracking-tighter">Open 24/7</span>
+              <span class="text-brand-accent text-4xl md:text-5xl font-black uppercase tracking-tighter">Open 24/7</span>
               <p class="text-brand-sky/60 text-sm mt-1 uppercase tracking-widest">Built for the Grind</p>
             </div>
-          </div>
-
-          <div class="hidden lg:block">
-            <Image 
-              src={businessCard} 
-              alt="Shelby Web Co Business Card" 
-              class="w-full h-auto drop-shadow-[0_0_30px_rgba(132,204,22,0.2)] hover:scale-110 transition-transform duration-500 rounded-xl"
-            />
           </div>
 
           <!-- Social Links -->

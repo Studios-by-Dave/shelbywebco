@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import blogImage2 from '../../../assets/blog_image2.jpeg';
+import blogImage4 from '../../../assets/blog_image4.jpg';
+import blogImage5 from '../../../assets/blog_image5.jpeg';
+import blogImage6 from '../../../assets/blog_image6.jpeg';
 ---
 
 <BaseLayout 
@@ -27,9 +32,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 11 -->
         <a href="/blog/professional-web-design-shelby-nc-leads" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800" 
-              alt="Newspaper and coffee" 
+            <Image 
+              src={blogImage6} 
+              alt="Professional Web Design" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
@@ -55,9 +60,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 10 -->
         <a href="/blog/future-of-web-development-shelby-nc" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage5} 
+              alt="Future of Web Development" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #10</span>
+              <span class="text-brand-sky/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 group-hover:scale-110 transition-transform duration-500">Article #10</span>
             </div>
           </div>
           <div class="p-6">
@@ -78,9 +88,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 9 -->
         <a href="/blog/web-designers-near-me-vs-big-agencies" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage4} 
+              alt="Web Designers Near Me" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #9</span>
+              <span class="text-brand-sky/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 group-hover:scale-110 transition-transform duration-500">Article #9</span>
             </div>
           </div>
           <div class="p-6">
@@ -101,9 +116,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 8 -->
         <a href="/blog/web-development-2026" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage2} 
+              alt="Web Development 2026" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #8</span>
+              <span class="text-brand-sky/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 group-hover:scale-110 transition-transform duration-500">Article #8</span>
             </div>
           </div>
           <div class="p-6">
@@ -124,7 +144,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 7 (Community Spotlight) -->
         <a href="/blog/trucking-industry-challenges-2026" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage2} 
+              alt="Trucking Industry Challenges" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
             </div>
@@ -147,7 +172,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 6 -->
         <a href="/blog/ai-development-stack-2026" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage4} 
+              alt="AI Development Stack" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #6</span>
             </div>
@@ -170,7 +200,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 5 (Community Spotlight) -->
         <a href="/blog/fs-expedited-llc-spotlight" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage5} 
+              alt="F&S Expedited LLC Spotlight" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
             </div>
@@ -193,7 +228,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 4 -->
         <a href="/blog/local-seo-essentials-2026" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage6} 
+              alt="Local SEO Essentials" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #4</span>
             </div>
@@ -216,7 +256,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 3 -->
         <a href="/blog/website-mistakes-costing-customers" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage2} 
+              alt="Website Mistakes" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #3</span>
             </div>
@@ -239,7 +284,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 2 -->
         <a href="/blog/does-your-business-need-a-website-2026" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage4} 
+              alt="Does Your Business Need a Website?" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #2</span>
             </div>
@@ -262,7 +312,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <!-- Blog Post 1 -->
         <a href="/blog/why-choose-shelby-web-company" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+            <Image 
+              src={blogImage5} 
+              alt="Why Choose Shelby Web Company?" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #1</span>
             </div>

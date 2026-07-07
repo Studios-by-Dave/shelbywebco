@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
 ---
 
 <BaseLayout 
@@ -8,8 +9,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 >
 
   <!-- Hero Section -->
-  <section class="py-20 lg:py-32 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
+  <section class="py-20 lg:py-32 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <PixieDust client:load />
+    </div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Identity</p>
       <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
         Logo Design & <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Branding Solutions</span>
