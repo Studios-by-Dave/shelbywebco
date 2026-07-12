@@ -12,13 +12,5 @@ export default defineConfig({
   output: 'static',
   image: {
     domains: ['www.studiosbydave.com'],
-  },
-  redirects: {
-    '/blog/why-choose-studios-by-dave': '/blog/why-choose-shelby-web-company',
-    '/why-choose-us': '/blog/why-choose-shelby-web-company',
-    '/studios': '/about',
-    '/services/web-development': '/services/web-design',
-    '/services/logo-design': '/services/branding',
-    '/case-studies': '/services/case-studies',
   }
 });
