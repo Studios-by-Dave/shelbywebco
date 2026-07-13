@@ -13,6 +13,7 @@ import logoVscode from '../../assets/logo banner/vscode--vbwWAnL.jpeg';
 import logoChatgpt from '../../assets/logo banner/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg';
 import logoDevin from '../../assets/logo banner/devin-logo-1.png';
 import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612.png';
+import mascotOne from '../../assets/mascot_1.jpg';
 ---
 
 <BaseLayout 
@@ -107,7 +108,7 @@ import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612
           </div>
 
           <p class="text-brand-accent text-[0.85rem] sm:text-xl md:text-2xl font-bold drop-shadow-[0_0_10px_rgba(132,204,22,0.3)] animate-pulse whitespace-nowrap">
-            💬 Try our ShelbyBot chat widget! Click the bubble in the bottom-right.
+            💬 Try our live assistant chat! Click the bubble in the bottom-right.
           </p>
         </div>
 
@@ -380,7 +381,7 @@ import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612
     <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">See Why We're Different!</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Take the Shelby Web Co. Tour
       </h2>
       <a 
@@ -389,6 +390,19 @@ import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612
       >
         Learn More About Us
       </a>
+
+      <div class="mt-8 flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-3 bg-brand-cyan/20 blur-2xl rounded-full"></div>
+          <Image
+            src={mascotOne}
+            alt="Shelby Web Company mascot"
+            width={320}
+            loading="lazy"
+            class="relative w-48 sm:w-56 md:w-64 h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
