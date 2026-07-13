@@ -6,14 +6,29 @@ import googleStars from '../../assets/badge icons/google 5 stars.png';
 import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
 
 import logoClaude from '../../assets/logo banner/claude-Ekx6wd5U.png';
-import logoComptia from '../../assets/logo banner/comptia-Cm7O9_X6.png';
 import logoOllama from '../../assets/logo banner/ollama-logo1.png';
 import logoOpencode from '../../assets/logo banner/opencode-BrfWWnj4.png';
 import logoVscode from '../../assets/logo banner/vscode--vbwWAnL.jpeg';
 import logoChatgpt from '../../assets/logo banner/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg';
 import logoDevin from '../../assets/logo banner/devin-logo-1.png';
 import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612.png';
+import logoCode from '../../assets/logo banner/code.svg';
+import logoGrok from '../../assets/logo banner/grok-ai-icon.webp';
+import logoLinux from '../../assets/logo banner/linux-operating-systems-logo-whatsapp-logo.jpg';
 import mascotOne from '../../assets/mascot_1.jpg';
+
+const logoMarquee = [
+  { src: logoOpencode, alt: 'OpenCode Logo' },
+  { src: logoClaude, alt: 'Claude Logo' },
+  { src: logoVscode, alt: 'VS Code Logo' },
+  { src: logoGithub, alt: 'GitHub Logo' },
+  { src: logoChatgpt, alt: 'ChatGPT Logo' },
+  { src: logoOllama, alt: 'Ollama Logo' },
+  { src: logoDevin, alt: 'Devin Logo' },
+  { src: logoCode, alt: 'Code Icon' },
+  { src: logoGrok, alt: 'Grok AI Logo' },
+  { src: logoLinux, alt: 'Linux/WhatsApp Logo' },
+];
 ---
 
 <BaseLayout 
@@ -67,9 +82,9 @@ import mascotOne from '../../assets/mascot_1.jpg';
             We Build Local Business.
           </h3>
           <p class="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
-            Shelby Web Company — serving Shelby, Charlotte, Gastonia, Spartanburg, Asheville, and Raleigh.
+            Shelby Web Company — serving Shelby, Gastonia, Forest City, Kings Mountain, Polkville, Asheville and Boiling Springs, NC.
           </p>
-          <p class="text-brand-cyan/60 text-sm italic mb-8">
+          <p class="text-brand-cyan/60 text-base md:text-lg italic mb-8">
             Formerly Studios by Dave
           </p>
           
@@ -157,26 +172,20 @@ import mascotOne from '../../assets/mascot_1.jpg';
         Powered by the best in the industry
       </p>
       <div class="relative flex" style="width: 200%;">
-        <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-around w-1/2">
-          <Image src={logoOpencode} alt="OpenRouter Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoClaude} alt="Claude Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoVscode} alt="VS Code Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoGithub} alt="GitHub Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoChatgpt} alt="ChatGPT Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoComptia} alt="CompTIA Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoOllama} alt="Ollama Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoDevin} alt="Devin Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
+        <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-center w-1/2">
+          {logoMarquee.map((logo) => (
+            <div class="flex items-center justify-center min-w-[7rem] max-w-[10rem] px-4">
+              <Image src={logo.src} alt={logo.alt} class="max-h-24 sm:max-h-36 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
+            </div>
+          ))}
         </div>
         
-        <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-around w-1/2" aria-hidden="true">
-          <Image src={logoOpencode} alt="OpenRouter Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoClaude} alt="Claude Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoVscode} alt="VS Code Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoGithub} alt="GitHub Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoChatgpt} alt="ChatGPT Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoComptia} alt="CompTIA Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoOllama} alt="Ollama Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
-          <Image src={logoDevin} alt="Devin Logo" class="h-20 sm:h-32 w-auto mix-blend-multiply flex-shrink-0" />
+        <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-center w-1/2" aria-hidden="true">
+          {logoMarquee.map((logo) => (
+            <div class="flex items-center justify-center min-w-[7rem] max-w-[10rem] px-4">
+              <Image src={logo.src} alt={logo.alt} class="max-h-24 sm:max-h-36 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -422,45 +431,16 @@ import mascotOne from '../../assets/mascot_1.jpg';
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials Section (Coming Soon Placeholder) -->
   <section class="py-20 px-4" data-animate>
-    <div class="max-w-7xl mx-auto">
-      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ What Our Clients Say</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-12">
-        Real Results from Real Businesses
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Reviews & Testimonials</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+        Reviews & Testimonials Coming Soon
       </h2>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-brand-darkest border-l-4 border-brand-cyan rounded-r-xl p-6">
-          <p class="text-xl text-white/80 mb-4 italic">
-            "Shelby Web Co. really presented /uncovered opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully! Thanks again!"
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-full flex items-center justify-center text-white font-bold mr-4">
-              PR
-            </div>
-            <div>
-              <p class="text-white font-medium text-lg">Paul Richardson</p>
-              <p class="text-white/60 text-base">Local Guide</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-brand-darkest border-l-4 border-brand-cyan rounded-r-xl p-6">
-          <p class="text-xl text-white/80 mb-4 italic">
-            "Shelby Web Co. really knocked it out of the park. Our online presence is not only fully present, it's generating our business so many leads now! Thank You!!!"
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-full flex items-center justify-center text-white font-bold mr-4">
-              RJ
-            </div>
-            <div>
-              <p class="text-white font-medium text-lg">Ryan "Kris" Jones</p>
-              <p class="text-white/60 text-base">Verified Customer</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="text-lg text-white/70 max-w-3xl mx-auto">
+        We are updating this section with fresh client feedback and success stories. Check back shortly for testimonials from local businesses and partners.
+      </p>
     </div>
   </section>
 

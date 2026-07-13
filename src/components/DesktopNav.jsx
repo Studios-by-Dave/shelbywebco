@@ -26,8 +26,8 @@ export default function DesktopNav() {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
-          className="font-poofy font-semibold text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light transition-colors flex items-center"
-          style={{ WebkitTextStroke: '1px white' }}
+          className="font-poofy font-medium text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light transition-colors flex items-center"
+          style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}
         >
           Services
           <svg
@@ -78,7 +78,7 @@ export default function DesktopNav() {
       <a href="/about" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About Us</a>
       <a href="/pricing" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Pricing</a>
       <a href="/contact" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog" className="font-poofy font-semibold text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
+      <a href="/blog" className="font-poofy font-medium text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light transition-colors" style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}>Blog</a>
     </div>
   );
 }
