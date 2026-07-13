@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 
 import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
 import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
+import sbdChart from '../../../assets/sbd ide chart1.png';
 ---
 
 <BaseLayout 
@@ -359,6 +360,15 @@ import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
         <a href="/web-design-asheville-nc" class="hover:text-brand-cyan transition-colors">Asheville Web Dev</a>
         <a href="/web-design-forest-city-nc" class="hover:text-brand-cyan transition-colors">Forest City Marketing</a>
         <a href="/web-design-boiling-springs-nc" class="hover:text-brand-cyan transition-colors">Boiling Springs Design</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SBD Chart (large, centered) -->
+  <section class="py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="mt-12 mb-12 flex justify-center">
+        <Image src={sbdChart} alt="SBD IDE Chart — large" class="w-full max-w-4xl object-contain rounded-lg shadow-lg" />
       </div>
     </div>
   </section>

@@ -13,7 +13,11 @@ import polkville7 from '../../assets/service locations/polkville/polkville nc_7.
 >
   <!-- Hero Section -->
   <section class="py-24 lg:py-40 px-4 relative bg-[#0A0A0A] overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
+    <div class="hero-background-image absolute inset-0 z-0 opacity-40">
+      <Image src={polkville2} alt="Polkville, NC Background" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/65 via-[#0A0A0A]/70 to-[#0A0A0A] z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)] z-0"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
       <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
         ✦ Local Digital Partner for Polkville
@@ -131,4 +135,23 @@ import polkville7 from '../../assets/service locations/polkville/polkville nc_7.
       </a>
     </div>
   </section>
+  <style>
+    .hero-background-image {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+    }
+  </style>
+
 </BaseLayout>

@@ -15,10 +15,10 @@ import ash7 from '../../assets/service locations/asheville/Asheville_6.jpeg';
 
   <!-- Hero Section -->
   <section class="py-24 lg:py-40 px-4 relative bg-[#0A0A0A] overflow-hidden" data-animate>
-    <div class="absolute inset-0 z-0 opacity-20">
+    <div class="hero-background-image absolute inset-0 z-0 opacity-40">
       <Image src={ashHead} alt="Asheville, NC Background" class="w-full h-full object-cover" />
     </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-[#0A0A0A]/60 to-[#0A0A0A] z-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/65 via-[#0A0A0A]/70 to-[#0A0A0A] z-0"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)] z-0"></div>
     
     <div class="max-w-5xl mx-auto text-center relative z-10">
@@ -168,5 +168,24 @@ import ash7 from '../../assets/service locations/asheville/Asheville_6.jpeg';
       </div>
     </div>
   </section>
+
+  <style>
+    .hero-background-image {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+    }
+  </style>
 
 </BaseLayout>
