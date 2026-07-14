@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import { Image } from 'astro:assets';
+import dogMascot from '../../../assets/dogmascot_1.png';
 ---
 
 <BaseLayout 
@@ -104,8 +106,37 @@ import PixieDust from '../../components/PixieDust.jsx';
     </div>
   </section>
 
-  <!-- Pricing Section -->
+  <!-- Mascot Spotlight -->
   <section class="py-20 px-4 bg-brand-darkest" data-animate>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Personality</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+            Mascots make a brand feel memorable.
+          </h2>
+          <p class="text-brand-sky/80 text-lg leading-relaxed">
+            A playful character gives people something to remember, something to smile about, and a reason to feel connected to your business long after the first visit.
+          </p>
+        </div>
+        <div class="order-1 lg:order-2 text-center">
+          <div class="inline-block rounded-[2rem] border border-brand-cyan/20 bg-brand-dark p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+            <Image
+              src={dogMascot}
+              alt="Mascot illustration for Shelby Web Company branding"
+              class="w-full max-w-sm h-auto rounded-[1.5rem]"
+            />
+            <p class="mt-4 text-sm text-brand-sky/70 italic max-w-md mx-auto">
+              “We’re a big fan of mascots and mascotting. Really drives the brand home. I mean you gotta love this guy right here!”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-20 px-4 bg-brand-dark" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Branding Packages</p>
