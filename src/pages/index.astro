@@ -84,10 +84,7 @@ const logoMarquee = [
           <p class="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
             Shelby Web Company — serving Shelby, Gastonia, Forest City, Kings Mountain, Polkville, Asheville and Boiling Springs, NC.
           </p>
-          <p class="text-brand-cyan/60 text-base md:text-lg italic mb-8">
-            Formerly Studios by Dave
-          </p>
-          
+
           <div class="flex flex-wrap gap-4 mb-8">
             <a 
               href="/contact#get-in-touch"
@@ -139,7 +136,7 @@ const logoMarquee = [
               </svg>
               <p class="text-white text-sm font-semibold tracking-widest">CALL US TEXT US</p>
             </div>
-            <p class="text-brand-cyan text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2 animate-flash-subtle">(704) 473-8188</p>
+            <p class="text-brand-accent text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2 animate-flash-lime">(704) 473-8188</p>
             <p class="text-white/60 text-sm">We're here 24/7</p>
           </a>
           
@@ -174,16 +171,16 @@ const logoMarquee = [
       <div class="relative flex" style="width: 200%;">
         <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-center w-1/2">
           {logoMarquee.map((logo) => (
-            <div class="flex items-center justify-center min-w-[7rem] max-w-[10rem] px-4">
-              <Image src={logo.src} alt={logo.alt} class="max-h-24 sm:max-h-36 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
+            <div class="flex items-center justify-center min-w-[8rem] max-w-[12rem] px-4">
+              <Image src={logo.src} alt={logo.alt} class="max-h-28 sm:max-h-40 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
             </div>
           ))}
         </div>
         
         <div class="animate-marquee flex gap-16 sm:gap-24 items-center justify-center w-1/2" aria-hidden="true">
           {logoMarquee.map((logo) => (
-            <div class="flex items-center justify-center min-w-[7rem] max-w-[10rem] px-4">
-              <Image src={logo.src} alt={logo.alt} class="max-h-24 sm:max-h-36 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
+            <div class="flex items-center justify-center min-w-[8rem] max-w-[12rem] px-4">
+              <Image src={logo.src} alt={logo.alt} class="max-h-28 sm:max-h-40 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
             </div>
           ))}
         </div>
@@ -431,16 +428,28 @@ const logoMarquee = [
     </div>
   </section>
 
-  <!-- Testimonials Section (Coming Soon Placeholder) -->
+  <!-- Review CTA Section -->
   <section class="py-20 px-4" data-animate>
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Reviews & Testimonials</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-        Reviews & Testimonials Coming Soon
-      </h2>
-      <p class="text-lg text-white/70 max-w-3xl mx-auto">
-        We are updating this section with fresh client feedback and success stories. Check back shortly for testimonials from local businesses and partners.
-      </p>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-[minmax(0,1fr)_auto] gap-10 items-center rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-10 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Shelby Web Company delivers high-conversion websites.</h2>
+          <div class="flex flex-wrap items-center gap-1 mb-6">
+            <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+            <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+            <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+            <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+            <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          </div>
+          <p class="text-brand-sky/70 text-xl italic mb-4">“Shelby Web Company really knocked it out of the park. Our online presence is generating so many leads now!”</p>
+          <p class="font-bold text-white">Ryan “Kris” Jones</p>
+          <p class="text-brand-cyan/60 text-xs uppercase tracking-widest mt-2">Local business owner</p>
+        </div>
+
+        <a href="/contact#get-in-touch" class="inline-flex items-center justify-center rounded-full bg-brand-accent px-10 py-4 font-bold text-black hover:bg-brand-accent-light transition-all duration-300 shadow-[0_20px_40px_rgba(132,204,22,0.24)]">
+          Book Your Free Strategy Call
+        </a>
+      </div>
     </div>
   </section>
 

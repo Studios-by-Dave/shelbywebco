@@ -11,6 +11,6 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   output: 'static',
   image: {
-    domains: ['www.studiosbydave.com'],
+    domains: ['www.shelbywebco.com'],
   }
 });

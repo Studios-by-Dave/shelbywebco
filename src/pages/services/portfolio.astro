@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import swebscreen from '../../../assets/portfolio/swebscreen_1.png';
 import swebHero from '../../../assets/Sweb_hero1.jpg';
-import studiosByDave from '../../../assets/portfolio/studiosbydave.webp';
+import legacySiteScreenshot from '../../../assets/portfolio/studiosbydave.webp';
 import fsExpedited from '../../../assets/portfolio/fs-expedited.jpg';
 import padgsteenGuitars from '../../../assets/portfolio/padgsteenguitars.png';
 import shadesOfGray from '../../../assets/portfolio/shades-of-gray.png';
@@ -59,20 +59,21 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.png';
             </div>
             <div class="p-6">
               <h3 class="font-heading text-2xl font-bold text-white mb-1">Shelby Web Company</h3>
-              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(formerly Studios by Dave)</p>
+              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">Current brand showcase</p>
               <p class="text-brand-sky/70 text-sm mb-4">High-performance digital presence built for Cleveland County businesses, featuring local SEO strategy and conversion-focused design.</p>
+              <p class="text-brand-cyan/60 text-xs uppercase tracking-widest">“Shelby Web Company really knocked it out of the park.”</p>
             </div>
           </div>
 
-          <!-- Former Branding (Studios by Dave) -->
+          <!-- Legacy Website Showcase -->
           <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
             <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={studiosByDave} alt="Studios by Dave Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+               <Image src={legacySiteScreenshot} alt="Legacy Shelby Web Company homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-1">Studios by Dave (Legacy)</h3>
-              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(now Shelby Web Company)</p>
-              <p class="text-brand-sky/70 text-sm mb-4">Our former flagship website which has now evolved into Shelby Web Company, continuing our mission of digital excellence.</p>
+              <h3 class="font-heading text-2xl font-bold text-white mb-1">Legacy Website Showcase</h3>
+              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(evolved into Shelby Web Company)</p>
+              <p class="text-brand-sky/70 text-sm mb-4">Our former flagship website, now part of the Shelby Web Company evolution.</p>
             </div>
           </div>
 

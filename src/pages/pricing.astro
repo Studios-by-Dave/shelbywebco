@@ -538,14 +538,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       document.getElementById('leadsValue').innerText = `${leads} Lead${leads > 1 ? 's' : ''}`;
       
       const yearlyLeads = leads * 12;
-      const grossRevenue = yearlyLeads * avgValue;
+      const conversionRate = 0.25; // Conservative estimate: 25% of leads become paying customers
+      const customersPerYear = yearlyLeads * conversionRate;
+      const grossRevenue = customersPerYear * avgValue;
       const netReturn = grossRevenue - currentInvestment;
-      const roi = (netReturn / currentInvestment) * 100;
-      const monthsToPayback = currentInvestment / (leads * avgValue);
+      const roi = currentInvestment > 0 ? (netReturn / currentInvestment) * 100 : 0;
+      const monthlyRevenue = grossRevenue / 12;
+      const monthsToPayback = monthlyRevenue > 0 ? currentInvestment / monthlyRevenue : Infinity;
       
       // Update DOM
       document.getElementById('totalReturn').innerText = `$${grossRevenue.toLocaleString()}`;
-      document.getElementById('roiPercentage').innerText = `${roi.toLocaleString(undefined, { maximumFractionDigits: 0 })}% ROI`;
+      document.getElementById('roiPercentage').innerText = `${Math.max(0, roi).toLocaleString(undefined, { maximumFractionDigits: 0 })}% ROI`;
       document.getElementById('grossRevenue').innerText = `$${grossRevenue.toLocaleString()}`;
       
       const paybackEl = document.getElementById('paybackPeriod');
