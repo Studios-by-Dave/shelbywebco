@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "copy-favicon": "mkdir -p dist && cp public/favicon.jpg dist/favicon.jpg"
+    "copy-favicon": "mkdir -p dist && cp public/favicon.ico dist/favicon.ico && cp public/favicon.png dist/favicon.png"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
