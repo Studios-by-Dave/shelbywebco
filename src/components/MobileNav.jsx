@@ -126,7 +126,7 @@ export default function MobileNav() {
             </div>
             
             <a href="/contact" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
-            <a href="/blog" className="inline-block font-poofy font-medium text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light py-2 transition-colors" style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}>Blog</a>
+            <a href="/blog" className="inline-block font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '0.3px rgba(255,255,255,0.4)' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
             </a>

@@ -111,7 +111,7 @@ export default function DesktopNav() {
       </div>
       
       <a href="/contact" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog" className="font-poofy font-medium text-2xl text-orange-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-orange-400 transition-colors" style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}>Blog</a>
+      <a href="/blog" className="font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '0.3px rgba(255,255,255,0.4)' }}>Blog</a>
     </div>
   );
 }
