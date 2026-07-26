@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+---
+
+<BaseLayout 
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Let's get you back on track with our services."
+>
+  <!-- 404 Hero Section -->
+  <section class="py-32 lg:py-48 px-4 bg-[#0A0A0A] flex items-center justify-center min-h-screen">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8">
+        <h1 class="font-heading text-9xl md:text-9xl font-black text-brand-accent mb-4 tracking-tight">
+          404
+        </h1>
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Oops!</p>
+      </div>
+      
+      <h2 class="font-heading text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+        Page <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan">Not Found</span>
+      </h2>
+      
+      <p class="text-xl text-brand-sky/80 mb-10 max-w-2xl mx-auto">
+        Looks like this page has vanished into the digital void. Don't worry — let us help you find what you're looking for.
+      </p>
+
+      <!-- Navigation Options -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
+        <a 
+          href="/"
+          class="group relative p-6 bg-brand-dark rounded-lg border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300"
+        >
+          <div class="text-brand-cyan mb-2 text-2xl">🏠</div>
+          <h3 class="font-heading text-white font-bold mb-2 group-hover:text-brand-cyan transition-colors">Back Home</h3>
+          <p class="text-sm text-brand-sky/60">Return to the homepage</p>
+        </a>
+
+        <a 
+          href="/services/web-design"
+          class="group relative p-6 bg-brand-dark rounded-lg border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300"
+        >
+          <div class="text-brand-cyan mb-2 text-2xl">✨</div>
+          <h3 class="font-heading text-white font-bold mb-2 group-hover:text-brand-cyan transition-colors">Our Services</h3>
+          <p class="text-sm text-brand-sky/60">See what we offer</p>
+        </a>
+
+        <a 
+          href="/contact"
+          class="group relative p-6 bg-brand-dark rounded-lg border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300"
+        >
+          <div class="text-brand-cyan mb-2 text-2xl">💬</div>
+          <h3 class="font-heading text-white font-bold mb-2 group-hover:text-brand-cyan transition-colors">Get in Touch</h3>
+          <p class="text-sm text-brand-sky/60">Let's talk about your project</p>
+        </a>
+      </div>
+
+      <!-- CTA Button -->
+      <a 
+        href="/contact"
+        class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-lg font-bold text-lg hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.4)]"
+      >
+        Start Your Project Today
+      </a>
+
+      <!-- Additional Help -->
+      <div class="mt-16 pt-16 border-t border-brand-blue/20">
+        <p class="text-brand-sky/70 mb-4">Still need help? Reach out to us:</p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a 
+            href="tel:+17044738188"
+            class="text-brand-cyan hover:text-brand-glow transition-colors font-medium"
+          >
+            (704) 473-8188
+          </a>
+          <span class="text-brand-sky/40">•</span>
+          <a 
+            href="mailto:shelbywebco@gmail.com"
+            class="text-brand-cyan hover:text-brand-glow transition-colors font-medium"
+          >
+            shelbywebco@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

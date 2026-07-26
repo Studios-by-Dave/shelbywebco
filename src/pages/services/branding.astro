@@ -2,12 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
 import { Image } from 'astro:assets';
-import dogMascot from '../../../assets/mascot_1.jpg';
+import dogMascot from '../../../assets/dogmascot_1.png';
 import logo1 from '../../../assets/logo design/logo design_1.png';
 import logo2 from '../../../assets/logo design/logo design_2.png';
 import logo5 from '../../../assets/logo design/logo design_5.png';
 import logo6 from '../../../assets/logo design/logo design_6.png';
 import logo7 from '../../../assets/logo design/logo design_7.jpg';
+import logo9 from '../../../assets/logo design/more logo stuff/logo design_9.png';
 import logo10 from '../../../assets/logo design/logo design_10.png';
 import logo11 from '../../../assets/logo design/logo design_11.jpg';
 import logo13 from '../../../assets/logo design/logo design_13.jpg';
@@ -116,7 +117,7 @@ import logo13 from '../../../assets/logo design/logo design_13.jpg';
             <div class="group relative flex-shrink-0 w-40 md:w-56">
               <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-brand-cyan/50 transition-all duration-300">
                 <Image 
-                  src={logo10} 
+                  src={logo9} 
                   alt="Logo design example 6" 
                   class="w-full h-auto object-contain"
                   loading="lazy"
@@ -127,7 +128,7 @@ import logo13 from '../../../assets/logo design/logo design_13.jpg';
             <div class="group relative flex-shrink-0 w-40 md:w-56">
               <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-brand-cyan/50 transition-all duration-300">
                 <Image 
-                  src={logo11} 
+                  src={logo10} 
                   alt="Logo design example 7" 
                   class="w-full h-auto object-contain"
                   loading="lazy"
@@ -138,8 +139,19 @@ import logo13 from '../../../assets/logo design/logo design_13.jpg';
             <div class="group relative flex-shrink-0 w-40 md:w-56">
               <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-brand-cyan/50 transition-all duration-300">
                 <Image 
-                  src={logo13} 
+                  src={logo11} 
                   alt="Logo design example 8" 
+                  class="w-full h-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="group relative flex-shrink-0 w-40 md:w-56">
+              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-brand-cyan/50 transition-all duration-300">
+                <Image 
+                  src={logo13} 
+                  alt="Logo design example 9" 
                   class="w-full h-auto object-contain"
                   loading="lazy"
                 />
@@ -369,54 +381,84 @@ import logo13 from '../../../assets/logo design/logo design_13.jpg';
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
-        <div class="bg-brand-dark border border-brand-blue/20 rounded-3xl p-8 shadow-xl hover:border-brand-cyan/40 transition-all duration-300">
-          <div class="text-brand-cyan font-bold uppercase tracking-[0.3em] text-xs mb-4">Starter</div>
-          <h3 class="font-heading text-3xl font-bold text-white mb-4">Essential Brand Kit</h3>
-          <div class="text-[#f3db70] text-4xl md:text-5xl font-black font-nav drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] mb-6">$598</div>
-          <p class="text-brand-sky/70 mb-8">Perfect for new businesses that need a strong logo and brand foundation without extra bells and whistles.</p>
-          <ul class="space-y-4 mb-8 text-brand-sky/70 text-sm">
+        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0">
+          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Essential Brand Kit</h3>
+          <p class="text-white/60 text-sm mb-6 italic">Starter branding package</p>
+          
+          <div class="mb-6">
+            <div class="flex flex-col items-center justify-center">
+              <span class="text-4xl md:text-5xl font-black font-nav text-[#f3db70] drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] whitespace-nowrap">$598</span>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-sm text-white/70 mb-8">
             <li>• 3 custom logo concepts</li>
             <li>• Primary logo + simplified mark</li>
             <li>• Color palette & typography selection</li>
             <li>• Basic brand usage guide</li>
             <li>• Business card design concept</li>
           </ul>
-          <a href="/contact#get-in-touch" class="inline-flex items-center justify-center w-full bg-brand-accent text-[#0A0A0A] py-3 rounded-full font-semibold hover:bg-brand-accent-light transition-colors duration-300">
-            Start with Essentials
+
+          <a 
+            href="/contact#get-in-touch" 
+            class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center"
+          >
+            Get Started
           </a>
         </div>
 
-        <div class="bg-brand-dark border border-brand-blue/20 rounded-3xl p-8 shadow-2xl ring-2 ring-brand-cyan/20">
-          <div class="text-brand-cyan font-bold uppercase tracking-[0.3em] text-xs mb-4">Growth</div>
-          <h3 class="font-heading text-3xl font-bold text-white mb-4">Complete Brand Suite</h3>
-          <div class="text-[#f3db70] text-4xl md:text-5xl font-black font-nav drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] mb-6">$998</div>
-          <p class="text-brand-sky/70 mb-8">For businesses that want a full identity system ready to launch across digital and print channels.</p>
-          <ul class="space-y-4 mb-8 text-brand-sky/70 text-sm">
+        <div class="bg-gradient-to-br from-[#111111] via-brand-darkest to-brand-dark border border-[#f3db70]/50 rounded-2xl p-8 shadow-[inset_0_2px_2px_rgba(255,255,255,0.15),_0_20px_40px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_2px_2px_rgba(255,255,255,0.2),_0_25px_50px_rgba(0,0,0,0.7),_0_0_40px_rgba(243,219,112,0.25)] transition-all duration-300 relative z-10 scale-100 lg:scale-105">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#0A0A0A] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md">
+            Most Popular
+          </div>
+          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Complete Brand Suite</h3>
+          <p class="text-white/60 text-sm mb-6 italic">Full identity system</p>
+          
+          <div class="mb-6">
+            <div class="flex flex-col items-center justify-center">
+              <span class="text-3xl md:text-4xl font-black font-nav text-[#f3db70] drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] whitespace-nowrap">$998</span>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-sm text-white/70 mb-8">
             <li>• 5+ logo variations and layout lockups</li>
             <li>• Full brand guidelines with usage rules</li>
             <li>• Social media profile + post templates</li>
             <li>• Email signature & favicon assets</li>
             <li>• Up to 4 revision rounds</li>
           </ul>
-          <a href="/contact#get-in-touch" class="inline-flex items-center justify-center w-full bg-brand-accent text-[#0A0A0A] py-3 rounded-full font-semibold hover:bg-brand-accent-light transition-colors duration-300">
-            Choose Complete Suite
+
+          <a 
+            href="/contact#get-in-touch" 
+            class="cta-glow-shine block w-full bg-brand-accent text-[#0A0A0A] px-6 py-3 rounded-lg font-medium hover:bg-brand-accent-light text-center"
+          >
+            Get Started
           </a>
         </div>
 
-        <div class="bg-brand-dark border border-brand-blue/20 rounded-3xl p-8 shadow-xl hover:border-brand-cyan/40 transition-all duration-300">
-          <div class="text-brand-cyan font-bold uppercase tracking-[0.3em] text-xs mb-4">Premium</div>
-          <h3 class="font-heading text-3xl font-bold text-white mb-4">Brand & Wrap Package</h3>
-          <div class="text-[#f3db70] text-4xl md:text-5xl font-black font-nav drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] mb-6">$1,998</div>
-          <p class="text-brand-sky/70 mb-8">Ideal for established brands that need an elevated visual system plus fleet and vehicle branding support.</p>
-          <ul class="space-y-4 mb-8 text-brand-sky/70 text-sm">
+        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0">
+          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Brand & Wrap Package</h3>
+          <p class="text-white/60 text-sm mb-6 italic">Premium branding + vehicle graphics</p>
+          
+          <div class="mb-6">
+            <div class="flex flex-col items-center justify-center">
+              <span class="text-3xl md:text-4xl font-black font-nav text-[#f3db70] drop-shadow-[0_2px_2px_rgba(243,219,112,0.5)] whitespace-nowrap">$1,998</span>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-sm text-white/70 mb-8">
             <li>• Everything in the Complete Brand Suite</li>
-            <li class="text-brand-accent font-semibold">• Custom vehicle wrap and fleet graphics concepts</li>
+            <li>• Custom vehicle wrap and fleet graphics concepts</li>
             <li>• Exterior signage & storefront design mockups</li>
             <li>• Marketing collateral templates</li>
             <li>• Extended brand launch support</li>
           </ul>
-          <a href="/contact#get-in-touch" class="inline-flex items-center justify-center w-full bg-brand-accent text-[#0A0A0A] py-3 rounded-full font-semibold hover:bg-brand-accent-light transition-colors duration-300">
-            Build Premium Brand
+
+          <a 
+            href="/contact#get-in-touch" 
+            class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center"
+          >
+            Get Started
           </a>
         </div>
       </div>

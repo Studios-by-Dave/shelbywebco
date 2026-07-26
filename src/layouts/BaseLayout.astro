@@ -14,11 +14,12 @@ interface Props {
 const { 
   title, 
   description, 
-  image = '/og-image.jpg',
+  image = 'https://www.shelbywebco.com/og-image.jpg',
   canonical = new URL(Astro.url.pathname, Astro.site).href
 } = Astro.props;
 
 const fullTitle = `${title} | Shelby Web Company`;
+const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbywebco.com${image}`;
 ---
 
 <!DOCTYPE html>
@@ -42,14 +43,14 @@ const fullTitle = `${title} | Shelby Web Company`;
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={absoluteImageUrl} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonical} />
     <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={absoluteImageUrl} />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
@@ -76,20 +77,29 @@ const fullTitle = `${title} | Shelby Web Company`;
           "latitude": 35.2924,
           "longitude": -81.5356
         },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "14:00"
+          }
+        ],
         "sameAs": [
           "https://www.facebook.com/profile.php?id=61591509287089",
           "https://www.linkedin.com/company/shelbywebco"

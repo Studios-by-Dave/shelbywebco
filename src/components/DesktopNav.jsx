@@ -67,6 +67,7 @@ export default function DesktopNav() {
                   <a href="/web-design-polkville-nc" className="block text-white hover:text-brand-cyan transition-colors py-1 font-medium">Polkville, NC</a>
                   <a href="/web-design-asheville-nc" className="block text-white hover:text-brand-cyan transition-colors py-1 font-medium">Asheville, NC</a>
                   <a href="/web-design-boiling-springs-nc" className="block text-white hover:text-brand-cyan transition-colors py-1 font-medium">Boiling Springs, NC</a>
+                  <a href="/web-design-kings-mountain-nc" className="block text-white hover:text-brand-cyan transition-colors py-1 font-medium">Kings Mountain, NC</a>
                 </div>
               </div>
             </div>
