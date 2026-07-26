@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+---
+
+<BaseLayout 
+  title="Free Logo Design with Web Package"
+  description="Get a professional custom logo design completely free when you invest in a full web design package from Shelby Web Company."
+>
+
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-32 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offer</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          Free <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Logo Design</span>
+        </h1>
+      </div>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        Invest in a complete web design package and receive a professional custom logo design entirely free.
+      </p>
+      <a 
+        href="/contact#get-in-touch"
+        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-bold hover:bg-brand-accent-light transition-all"
+      >
+        Claim Your Free Logo
+      </a>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">What You Get</h2>
+        <p class="text-brand-sky/70 max-w-2xl mx-auto text-lg">
+          Your free logo includes everything you need to establish your brand identity.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Custom Concepts</h3>
+          <p class="text-brand-sky/60">We develop multiple unique logo concepts tailored to your brand's personality, industry, and vision.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Unlimited Revisions</h3>
+          <p class="text-brand-sky/60">Work with us to refine the design until it's perfect. No revision limits—your satisfaction is our priority.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">All File Formats</h3>
+          <p class="text-brand-sky/60">Receive your logo in all the formats you need: PNG, SVG, PDF, and high-resolution print files.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Brand Guidelines</h3>
+          <p class="text-brand-sky/60">Get a basic brand guide with color codes, usage rules, and variations to maintain consistency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">How It Works</h2>
+      
+      <div class="space-y-8">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan text-white font-bold">
+              1
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Choose Your Web Package</h3>
+            <p class="text-brand-sky/70">Select a full web design package that fits your business needs. The free logo bonus applies to all our complete web packages.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan text-white font-bold">
+              2
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Share Your Vision</h3>
+            <p class="text-brand-sky/70">Tell us about your brand, industry, competitors, and design preferences. The more details you provide, the better we can craft your logo.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan text-white font-bold">
+              3
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Receive Concepts</h3>
+            <p class="text-brand-sky/70">We'll deliver 3-5 unique logo concepts within 5 business days. Each concept represents a different creative direction.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan text-white font-bold">
+              4
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Refine & Finalize</h3>
+            <p class="text-brand-sky/70">Provide feedback and we'll refine the design. Unlimited revisions until your logo is exactly what you envision.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan text-white font-bold">
+              5
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Download & Launch</h3>
+            <p class="text-brand-sky/70">Receive all file formats and brand guidelines. Your logo is ready to use across all platforms immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-4 bg-brand-dark/50 border-y border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">Is the logo design truly free?</h3>
+          <p class="text-brand-sky/70">Yes, completely free when you invest in a full web design package. It's our way of helping you build a complete brand identity.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">What qualifies as a "full web package"?</h3>
+          <p class="text-brand-sky/70">Our web packages include website design, development, SEO optimization, and deployment. Contact us to discuss which package works best for your business.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">Can I use the logo after my website is live?</h3>
+          <p class="text-brand-sky/70">Absolutely. You own the logo and can use it anywhere—social media, print, merchandise, and beyond. No restrictions.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">How long does the logo design process take?</h3>
+          <p class="text-brand-sky/70">You'll receive initial concepts within 5 business days. Revisions are added as needed based on your feedback.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">What if I don't like any of the concepts?</h3>
+          <p class="text-brand-sky/70">We'll start over with new concepts. There's no limit to revisions—we're committed to creating something you love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Your Free Logo?</h2>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        Don't miss this limited-time offer. Combine a beautiful website with a professional logo.
+      </p>
+      <a 
+        href="/contact#get-in-touch"
+        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-bold hover:bg-brand-accent-light transition-all text-lg"
+      >
+        Start Your Project Today
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

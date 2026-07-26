@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+---
+
+<BaseLayout 
+  title="Limited-Time Offers & Promos"
+  description="Check out our current promotions: Free Logo Design with web packages, Free SEO audits, unlimited $100 Referral Bonus program, and 24/7 AI Chatbot Integration."
+>
+
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-32 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offers</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          Exclusive <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Promos</span> for Your Business
+        </h1>
+      </div>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        We're offering limited-time promotions to help your business grow. Explore what we have available right now.
+      </p>
+    </div>
+  </section>
+
+  <!-- Promos Grid -->
+  <section class="py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Promo 1: Free Logo Design -->
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white shadow-lg">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Free Logo Design</h3>
+          <p class="text-brand-sky/70 mb-6 text-sm">
+            When you invest in a full web package with us, get a custom logo design completely free.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <p class="text-brand-cyan text-sm font-bold mb-2">Includes:</p>
+            <ul class="text-brand-sky/60 text-xs space-y-1">
+              <li>✓ Custom logo concept</li>
+              <li>✓ Multiple design options</li>
+              <li>✓ Unlimited revisions</li>
+              <li>✓ All file formats</li>
+            </ul>
+          </div>
+          <a 
+            href="/promos/free-logo-design"
+            class="inline-block w-full text-center bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 relative group overflow-hidden"
+          >
+            <span class="relative z-10">Learn More</span>
+            <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          </a>
+        </div>
+
+        <!-- Promo 2: Free SEO Audit -->
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white shadow-lg">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Free SEO Audit</h3>
+          <p class="text-brand-sky/70 mb-6 text-sm">
+            Selected local businesses get a comprehensive SEO analysis to identify opportunities and fix critical issues.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <p class="text-brand-cyan text-sm font-bold mb-2">You'll Receive:</p>
+            <ul class="text-brand-sky/60 text-xs space-y-1">
+              <li>✓ Technical SEO review</li>
+              <li>✓ Keyword analysis</li>
+              <li>✓ Competitive insights</li>
+              <li>✓ Action plan</li>
+            </ul>
+          </div>
+          <a 
+            href="/promos/free-seo-audit"
+            class="inline-block w-full text-center bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 relative group overflow-hidden"
+          >
+            <span class="relative z-10">Learn More</span>
+            <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          </a>
+        </div>
+
+        <!-- Promo 3: $100 Referral Bonus -->
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white shadow-lg">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">$100 Referral Bonus</h3>
+          <p class="text-brand-sky/70 mb-6 text-sm">
+            Earn unlimited $100 bonuses every time you refer a customer to us. Build passive income by sharing Shelby Web Co.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <p class="text-brand-accent text-sm font-bold mb-2">Unlimited Earning:</p>
+            <ul class="text-brand-sky/60 text-xs space-y-1">
+              <li>✓ $100 per qualified referral</li>
+              <li>✓ No limit on earnings</li>
+              <li>✓ Fast payout process</li>
+              <li>✓ Lifetime referral link</li>
+            </ul>
+          </div>
+          <a 
+            href="/promos/referral-bonus"
+            class="inline-block w-full text-center bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 relative group overflow-hidden"
+          >
+            <span class="relative z-10">Learn More</span>
+            <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          </a>
+        </div>
+
+        <!-- Promo 4: AI Chatbot Integration -->
+        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-brand-cyan/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center mb-6 text-white shadow-lg">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5h.01M15.391 5.6l-.707.707M9.609 5.6L8.9 4.893m7.072 9.9h.01"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">AI Chatbot Integration</h3>
+          <p class="text-brand-sky/70 mb-6 text-sm">
+            A 24/7 AI agent that qualifies leads, closes deals, and works while you sleep. Not just a chatbot—a sales machine.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <p class="text-brand-cyan text-sm font-bold mb-2">Your AI Does:</p>
+            <ul class="text-brand-sky/60 text-xs space-y-1">
+              <li>✓ Instant lead qualification</li>
+              <li>✓ Answer objections 24/7</li>
+              <li>✓ Direct to right services</li>
+              <li>✓ Close deals before handoff</li>
+            </ul>
+          </div>
+          <a 
+            href="/promos/ai-chatbot-integration"
+            class="inline-block w-full text-center bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 relative group overflow-hidden"
+          >
+            <span class="relative z-10">Learn More</span>
+            <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-16 text-center">
+        <p class="text-brand-sky/70 mb-6">Ready to take advantage of these offers?</p>
+        <a 
+          href="/contact#get-in-touch"
+          class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-bold hover:bg-brand-accent-light transition-all"
+        >
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

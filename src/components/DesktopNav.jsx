@@ -2,13 +2,18 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const pricingRef = useRef(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setServicesOpen(false);
+      }
+      if (pricingRef.current && !pricingRef.current.contains(event.target)) {
+        setPricingOpen(false);
       }
     }
 
@@ -76,7 +81,35 @@ export default function DesktopNav() {
       </div>
       
       <a href="/about" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About Us</a>
-      <a href="/pricing" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Pricing</a>
+      
+      {/* Pricing Dropdown */}
+      <div className="relative" ref={pricingRef}>
+        <button
+          onClick={() => setPricingOpen(!pricingOpen)}
+          className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+        >
+          Pricing
+          <svg
+            className={`ml-1 w-4 h-4 transition-transform ${pricingOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        {/* Pricing Dropdown Menu */}
+        {pricingOpen && (
+          <div className="absolute left-0 mt-2 w-48 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 space-y-1">
+              <a href="/pricing" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Pricing Page</a>
+              <a href="/promos" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Promos</a>
+            </div>
+          </div>
+        )}
+      </div>
+      
       <a href="/contact" className="text-white font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
       <a href="/blog" className="font-poofy font-medium text-2xl text-orange-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-orange-400 transition-colors" style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}>Blog</a>
     </div>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
 
   return (
     <>
@@ -93,7 +94,37 @@ export default function MobileNav() {
             </div>
             
             <a href="/about" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">About Us</a>
-            <a href="/pricing" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Pricing</a>
+            
+            {/* Pricing Section */}
+            <div>
+              <button
+                onClick={() => setPricingOpen(!pricingOpen)}
+                className="flex items-center justify-between w-full text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
+              >
+                Pricing
+                <svg
+                  className={`w-4 h-4 transition-transform ${pricingOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              
+              {pricingOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  <a href="/pricing" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan py-1">Pricing Page</a>
+                  <a href="/promos" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan py-1">Promos</a>
+                </div>
+              )}
+            </div>
+            
             <a href="/contact" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
             <a href="/blog" className="inline-block font-poofy font-medium text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light py-2 transition-colors" style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
