@@ -76,71 +76,81 @@ const logoMarquee = [
   </style>
 
   <!-- Hero Section -->
-  <section class="pt-12 pb-20 lg:pt-10 lg:pb-32 px-4" data-animate>
+  <section class="pt-8 pb-16 px-3 sm:px-4 lg:pt-10 lg:pb-32 overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
         <div>
           <div class="inline-flex items-center space-x-2 bg-brand-dark border border-brand-blue/30 rounded-full py-1.5 px-4 mb-4 shadow-[0_0_15px_rgba(29,78,216,0.1)]">
             <span class="flex h-2 w-2 rounded-full bg-brand-cyan animate-pulse"></span>
             <span class="text-white/90 text-sm font-medium tracking-wide">Trusted by 100+ Local Businesses</span>
           </div>
-          <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-2 leading-tight">
+          <h1 class="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-[4.5rem] xl:text-[5rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
             We Build More Than Just <span class="text-brand-blue">Websites</span>.
           </h1>
-          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white/90 mb-4 leading-tight">
+          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[2.6rem] xl:text-[2.8rem] font-bold text-white/90 mb-4 leading-tight whitespace-nowrap">
             We build more than just <span class="text-brand-cyan">apps</span>.
           </h2>
-          <h3 class="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] mb-6">
+          <h3 class="font-heading text-4xl sm:text-5xl md:text-[2.65rem] lg:text-[3rem] xl:text-[3.2rem] font-extrabold text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] mb-6 leading-tight whitespace-nowrap">
             We Build Local Business.
           </h3>
-          <p class="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
+          <p class="text-base sm:text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
             Shelby Web Company — serving Shelby, Gastonia, Forest City, Kings Mountain, Polkville, Asheville and Boiling Springs, NC.
           </p>
 
-          <div class="flex flex-wrap gap-4 mb-8">
+          <div class="rounded-2xl p-1 mb-6 sm:mb-8 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20 lg:hidden">
+            <Image 
+              src={heroImage} 
+              alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
+              class="rounded-[13px] w-full h-auto"
+              width={800}
+              height={600}
+              loading="eager"
+            />
+          </div>
+
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 sm:mb-8">
             <a 
               href="/contact#get-in-touch"
-              class="cta-glow-shine bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accent-light"
+              class="cta-glow-shine bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accent-light text-center"
             >
               Get Started Today
             </a>
             <a 
               href="/about"
-              class="border border-white bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all duration-300"
+              class="border border-white bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-900 transition-all duration-300 text-center"
             >
               Learn About Our Story
             </a>
           </div>
 
           <div class="space-y-3 mb-8">
-            <p class="text-white/80 text-lg">• Custom websites that convert</p>
-            <p class="text-white/80 text-lg">• SEO optimization</p>
-            <p class="text-white/80 text-lg">• Quality digital assets</p>
+            <p class="text-white/80 text-base sm:text-lg">• Custom websites that convert</p>
+            <p class="text-white/80 text-base sm:text-lg">• SEO optimization</p>
+            <p class="text-white/80 text-base sm:text-lg">• Quality digital assets</p>
           </div>
 
-          <div class="flex items-center gap-6 mb-8">
+          <div class="flex flex-row items-center justify-center sm:justify-start gap-3 sm:gap-5 mb-6 sm:mb-8">
             <Image 
               src={googleStars} 
               alt="5 Star Google Google Reviews" 
-              class="h-24 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              class="h-20 sm:h-24 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
             <Image 
               src={comptiaBadge} 
               alt="CompTIA A+ Certified" 
-              class="h-20 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity rounded-lg"
+              class="h-16 sm:h-20 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity rounded-lg"
             />
           </div>
 
-          <p class="text-brand-accent text-[0.85rem] sm:text-xl md:text-2xl font-bold drop-shadow-[0_0_10px_rgba(132,204,22,0.3)] animate-pulse whitespace-nowrap">
+          <p class="text-brand-accent text-sm sm:text-base md:text-xl lg:text-2xl font-bold drop-shadow-[0_0_10px_rgba(132,204,22,0.3)] animate-pulse leading-relaxed sm:whitespace-nowrap mb-2">
             💬 Try our live assistant chat! Click the bubble in the bottom-right.
           </p>
         </div>
 
-        <div class="relative -mt-8 lg:-mt-24 flex flex-col items-end">
-          <!-- Floating CTA -->
+        <div class="relative mt-2 lg:-mt-24 flex flex-col items-stretch lg:items-end">
           <a 
             href="tel:+17044738188" 
-            class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-8 py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 -translate-y-16 lg:-translate-y-32 lg:translate-x-6 mr-4 lg:mr-0 self-start md:self-end transform scale-100 lg:scale-105 origin-bottom-right"
+            class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 sm:px-8 sm:py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 lg:-translate-y-16 lg:translate-x-10 mr-0 sm:mr-4 lg:mr-0 self-center sm:self-end transform scale-100 lg:scale-105 origin-bottom-right w-fit max-w-md sm:max-w-none mt-4 lg:mt-0 order-first lg:order-none mx-auto sm:mx-0"
           >
             <div class="flex items-center space-x-2 mb-2">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,26 +158,21 @@ const logoMarquee = [
               </svg>
               <p class="text-white text-sm font-semibold tracking-widest">CALL US TEXT US</p>
             </div>
-            <p class="text-brand-accent text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2 animate-flash-lime">(704) 473-8188</p>
+            <p class="text-brand-accent text-3xl sm:text-4xl lg:text-5xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-brand-cyanLight transition-colors leading-none tracking-tight py-2 animate-flash-lime">(704) 473-8188</p>
             <p class="text-white/60 text-sm">We're here 24/7</p>
           </a>
-          
-          <div class="relative w-full">
-            <!-- Subtle Wood Grain Border -->
-            <div 
-              class="relative z-10 p-[3px] rounded-2xl shadow-2xl bg-[#614532]/40"
-              style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22wood%22%3E%3CfeTurbulence type=%22fractalSum%22 baseFrequency=%220.01 0.1%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23wood)%22 opacity=%220.25%22 blend-mode=%22overlay%22/%3E%3C/svg%3E');"
-            >
+
+          <div class="hidden lg:block w-full mt-4">
+            <div class="rounded-2xl p-1 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20">
               <Image 
                 src={heroImage} 
                 alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
-                class="rounded-[13px] w-full"
+                class="rounded-[13px] w-full h-auto"
                 width={800}
                 height={600}
                 loading="eager"
               />
             </div>
-            <div class="absolute -inset-4 bg-gradient-to-r from-brand-blue/20 to-brand-cyan/20 rounded-2xl blur-xl -z-10"></div>
           </div>
         </div>
       </div>
@@ -199,14 +204,16 @@ const logoMarquee = [
           </div>
         </div>
       </div>
-      <div class="flex justify-center mb-12">
-        <Image 
-          src={handsBadge} 
-          alt="Hands Badge" 
-          class="w-32 h-auto opacity-90 hover:opacity-100 transition-opacity"
-        />
-      </div>    </div>
+    </div>
   </section>
+
+  <div class="flex justify-center pt-10 pb-8 bg-[#0f172a] border-t border-brand-blue/20">
+    <Image 
+      src={handsBadge} 
+      alt="Hands Badge" 
+      class="w-32 h-auto opacity-90 hover:opacity-100 transition-opacity"
+    />
+  </div>
 
   <!-- Services Section -->
   <section class="py-20 px-4" data-animate>
