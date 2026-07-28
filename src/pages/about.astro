@@ -16,6 +16,7 @@ import heroHuman from '../../assets/about/hero-human-inside.webp';
 import spaceship from '../../assets/about/hero-human-inside.webp';
 import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
 import daveHeadshot from '../../assets/about/Headshot_1.jpg';
+import dave20 from '../../assets/about/Sweb_dave20.png';
 ---
 
 <BaseLayout 
@@ -79,14 +80,14 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/3">
-          <div class="relative group">
+          <div class="relative group max-w-sm mx-auto md:mx-0">
             <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan to-brand-glow rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <Image 
               src={daveHeadshot} 
               alt="David Richardson - Founder of Shelby Web Company" 
               class="relative rounded-2xl shadow-2xl border border-white/10 w-full object-cover aspect-[4/5]"
-              width={600}
-              height={750}
+              width={400}
+              height={500}
             />
           </div>
         </div>
@@ -95,7 +96,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
           <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
             Meet Dave
           </h2>
-          <div class="space-y-4 text-brand-sky/80 text-lg leading-relaxed text-left">
+          <div class="space-y-4 text-brand-sky/80 text-xl leading-relaxed text-left">
             <p>
               David "Dave" Richardson is a seasoned technology veteran with over two decades of experience. After attending UNC Charlotte and ECPI University—where he served as President of the National Vocational Technical Honor Society—Dave began his career as a Broadband Specialist right here in Shelby with Computer Connections Inc.
             </p>
@@ -123,15 +124,15 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
             Building Digital Success for Local Businesses
           </h2>
-          <p class="text-brand-sky/80 mb-4">
+          <p class="text-brand-sky/80 text-xl mb-4">
             At Shelby Web Company, we specialize in empowering local businesses with cutting-edge digital solutions. We focus on local service businesses, landscaping companies, solar panel installers, and many more, helping them reach their full potential through professional web design, powerful SEO, memorable branding, and innovative digital strategies.
           </p>
-          <p class="text-brand-sky/80 mb-4">
+          <p class="text-brand-sky/80 text-xl mb-4">
             We don't just build websites – we build digital engines that get your business found, trusted, and hired. From custom branding to search engine dominance, we focus on solutions that drive real growth and measurable results.
           </p>
           <div class="mt-8">
             <h3 class="font-heading text-2xl font-bold text-white mb-4 italic">"How can we make our clients happier today?"</h3>
-            <p class="text-brand-sky/70">This isn't just a catchy phrase — your success is our success, and we're committed to delivering results that directly impact your bottom line.</p>
+            <p class="text-brand-sky/70 text-xl">This isn't just a catchy phrase — your success is our success, and we're committed to delivering results that directly impact your bottom line.</p>
           </div>
           <div class="mt-10 rounded-3xl border border-brand-cyan/20 bg-brand-darkest/85 p-8 text-left">
             <div class="flex items-center gap-1 mb-4">
@@ -141,9 +142,9 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
               <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
               <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
             </div>
-            <p class="text-brand-sky/70 text-base italic mb-4">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
-            <p class="font-bold text-white">Ryan "Kris" Jones</p>
-            <p class="text-brand-cyan/60 text-xs uppercase tracking-widest mt-2">Verified Customer</p>
+            <p class="text-brand-sky/70 text-xl italic mb-4">"Studios by Dave really knocked it out of the park. Our online presence is not only fully present, its generating our business so many leads now! Thank You!!!"</p>
+            <p class="font-bold text-white text-xl">Ryan "Kris" Jones</p>
+            <p class="text-brand-cyan/60 text-sm uppercase tracking-widest mt-2">Verified Customer</p>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
@@ -153,8 +154,13 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
       </div>
       
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1">
-          <Image src={aboutImg4} alt="Dave and mascot together" class="rounded-xl shadow-lg w-full max-h-[400px] object-cover" />
+        <div class="order-2 lg:order-1 relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <Image 
+            src={dave20} 
+            alt="Dave at Shelby Web Co" 
+            class="relative rounded-2xl shadow-2xl border border-white/10 w-full max-h-[500px] object-cover animate-float" 
+          />
         </div>
         <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
           <div class="grid grid-cols-2 gap-6">
@@ -195,7 +201,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
           Our Mission
         </h2>
-        <p class="text-lg text-brand-sky/80 max-w-3xl mx-auto">
+        <p class="text-xl text-brand-sky/80 max-w-3xl mx-auto">
           At Shelby Web Company, we specialize in empowering local businesses with cutting-edge digital solutions. We focus on roofing, landscaping, and solar panel companies, helping them reach their full potential through professional web design, powerful SEO, memorable branding, and innovative AI automation.
         </p>
         <!-- Aplus badge moved below, above Core Values -->
@@ -336,7 +342,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
           Our Core Values
         </h2>
-        <p class="text-lg text-brand-sky/80 max-w-3xl mx-auto">
+        <p class="text-xl text-brand-sky/80 max-w-3xl mx-auto">
           These fundamental principles guide everything we do at Shelby Web Company.
         </p>
       </div>
@@ -350,7 +356,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-4">Value</h3>
-          <p class="text-brand-sky/70">We deliver exceptional results that exceed your investment, ensuring every dollar spent generates meaningful returns for your business.</p>
+          <p class="text-brand-sky/70 text-lg">We deliver exceptional results that exceed your investment, ensuring every dollar spent generates meaningful returns for your business.</p>
         </div>
 
         <!-- Integrity -->
@@ -361,7 +367,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-4">Integrity</h3>
-          <p class="text-brand-sky/70">We operate with complete honesty and transparency, building trust through consistent actions and reliable communication.</p>
+          <p class="text-brand-sky/70 text-lg">We operate with complete honesty and transparency, building trust through consistent actions and reliable communication.</p>
         </div>
 
         <!-- Trust -->
@@ -372,7 +378,7 @@ import daveHeadshot from '../../assets/about/Headshot_1.jpg';
             </svg>
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-4">Trust</h3>
-          <p class="text-brand-sky/70">We earn your confidence through proven expertise, dependable service, and a commitment to your long-term success.</p>
+          <p class="text-brand-sky/70 text-lg">We earn your confidence through proven expertise, dependable service, and a commitment to your long-term success.</p>
         </div>
       </div>
     </div>
