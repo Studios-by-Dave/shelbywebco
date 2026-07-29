@@ -103,29 +103,83 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
           <p class="text-brand-sky/70 text-sm mt-6">Our team is ready to deliver the same high-touch service for your Shelby business.</p>
         </div>
 
-        <!-- Secondary Info -->
-        <div class="space-y-12 lg:sticky lg:top-32">
-          <div class="flex items-start gap-6 group">
-            <div class="w-14 h-14 bg-gradient-to-br from-brand-sky to-brand-purple rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-white font-medium mb-1">Service Area</p>
-              <p class="text-brand-sky/70">
-                Shelby, Gastonia, Forest City, Polkville, Asheville, Boiling Springs, and Kings Mountain
-              </p>
-            </div>
+        <!-- Contact Form -->
+        <div class="space-y-8 lg:sticky lg:top-32">
+          <div class="bg-brand-darkest border border-brand-sky/20 rounded-2xl p-8 shadow-2xl relative overflow-hidden group">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-accent/5 rounded-full blur-3xl group-hover:bg-brand-accent/10 transition-colors"></div>
+            
+            <h3 class="font-heading text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span class="w-8 h-px bg-brand-accent"></span>
+              Send a Message
+            </h3>
+            
+            <form action="https://formspree.io/f/mqaeapoa" method="POST" class="space-y-5">
+              <div>
+                <label for="name" class="block text-xs font-bold text-brand-sky/60 mb-2 uppercase tracking-widest">Full Name</label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  id="name" 
+                  required 
+                  placeholder="John Doe"
+                  class="w-full bg-brand-dark/50 border border-brand-sky/20 rounded-xl px-4 py-3 text-white placeholder:text-brand-sky/20 focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-bold text-brand-sky/60 mb-2 uppercase tracking-widest">Email Address</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email" 
+                  required 
+                  placeholder="john@example.com"
+                  class="w-full bg-brand-dark/50 border border-brand-sky/20 rounded-xl px-4 py-3 text-white placeholder:text-brand-sky/20 focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-bold text-brand-sky/60 mb-2 uppercase tracking-widest">Project Details</label>
+                <textarea 
+                  name="message" 
+                  id="message" 
+                  rows="4" 
+                  required 
+                  placeholder="Tell us about your vision..."
+                  class="w-full bg-brand-dark/50 border border-brand-sky/20 rounded-xl px-4 py-3 text-white placeholder:text-brand-sky/20 focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20 resize-none"
+                ></textarea>
+              </div>
+
+              <input type="text" name="_gotcha" style="display:none" />
+
+              <button 
+                type="submit" 
+                class="w-full bg-gradient-to-r from-brand-accent to-yellow-500 text-brand-darkest font-black py-4 rounded-xl uppercase tracking-[0.2em] text-sm hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] active:scale-95 transition-all"
+              >
+                Launch Project
+              </button>
+            </form>
           </div>
 
-          <!-- Business Hours -->
-          <div class="bg-brand-darkest border border-brand-sky/20 rounded-xl p-6 mb-8 text-center">
-            <h3 class="font-heading text-xl font-bold text-white mb-2">Business Hours</h3>
-            <div class="py-2">
-              <span class="text-brand-accent animate-flash-24-7 text-4xl md:text-5xl font-black uppercase tracking-tighter">Open 24/7</span>
-              <p class="text-brand-sky/60 text-sm mt-1 uppercase tracking-widest">Built for the Grind</p>
+          <!-- Quick Info Grid -->
+          <div class="grid grid-cols-1 gap-4">
+            <div class="bg-brand-darkest/40 border border-brand-sky/10 rounded-xl p-4 flex items-center gap-4">
+              <div class="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center text-brand-accent">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <p class="text-brand-sky/70 text-sm">Serving <span class="text-white font-medium">Shelby & Western NC</span></p>
+            </div>
+            
+            <div class="bg-brand-darkest/40 border border-brand-sky/10 rounded-xl p-4 flex items-center gap-4">
+              <div class="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center text-brand-accent">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="text-brand-sky/70 text-sm">Available <span class="text-white font-medium italic animate-pulse">24/7/365</span></p>
             </div>
           </div>
 
