@@ -45,8 +45,7 @@ export default function MobileNav() {
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full font-poofy font-medium text-2xl text-brand-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue-light py-2 transition-colors"
-                style={{ WebkitTextStroke: '0.5px rgba(255,255,255,0.9)' }}
+                className="flex items-center justify-between w-full text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
               >
                 Services
                 <svg

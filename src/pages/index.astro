@@ -79,12 +79,12 @@ const logoMarquee = [
   <section class="pt-8 pb-16 px-3 sm:px-4 lg:pt-10 lg:pb-32 overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
-        <div>
-          <div class="inline-flex items-center space-x-2 bg-brand-dark border border-brand-blue/30 rounded-full py-1.5 px-4 mb-4 shadow-[0_0_15px_rgba(29,78,216,0.1)]">
-            <span class="flex h-2 w-2 rounded-full bg-brand-cyan animate-pulse"></span>
-            <span class="text-white/90 text-sm font-medium tracking-wide">Trusted by 100+ Local Businesses</span>
+        <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div class="inline-flex items-center space-x-2 bg-gradient-to-br from-gray-700 via-gray-400 to-gray-800 border border-gray-400/50 rounded-full py-1.5 px-4 mb-4 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+            <span class="flex h-2 w-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
+            <span class="text-white font-bold text-sm tracking-wide drop-shadow-md">Trusted by 100+ Local Businesses</span>
           </div>
-          <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[4.5rem] xl:text-[5rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
+          <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[4rem] xl:text-[4.5rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
             We Build More Than Just <span class="text-brand-blue">Websites</span> and <span class="text-brand-cyan">Apps</span>. <span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)]">We Build Local Business.</span>
           </h1>
           <p class="text-base sm:text-lg text-white/80 mb-6 max-w-lg leading-relaxed">
@@ -94,15 +94,15 @@ const logoMarquee = [
           <div class="lg:hidden mb-6">
             <a 
               href="tel:+17044738188" 
-              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-lg w-full max-w-sm mx-auto animate-flash-lime"
+              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-lg w-fit mx-auto animate-flash-lime"
             >
               <div class="flex items-center space-x-2 mb-1">
                 <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <p class="text-white text-[10px] font-semibold tracking-[0.2em]">CALL OR TEXT 24/7</p>
+                <p class="text-white text-[10px] font-semibold tracking-[0.2em]">CALL OR TEXT <span style="-webkit-text-stroke: 0.5px red; text-stroke: 0.5px red;">24/7</span></p>
               </div>
-              <p class="text-brand-accent text-3xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-none tracking-tight">(704) 473-8188</p>
+              <p class="text-brand-accent text-3xl font-heading font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-none tracking-tight" style="-webkit-text-stroke: 0.8px #fde047; text-stroke: 0.8px #fde047;">(704) 473-8188</p>
             </a>
           </div>
 
@@ -142,12 +142,12 @@ const logoMarquee = [
             <Image 
               src={googleStars} 
               alt="5 Star Google Google Reviews" 
-              class="h-20 sm:h-24 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              class="h-28 sm:h-36 md:h-44 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
             <Image 
               src={comptiaBadge} 
               alt="CompTIA A+ Certified" 
-              class="h-16 sm:h-20 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity rounded-lg"
+              class="h-24 sm:h-32 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity rounded-lg"
             />
           </div>
 
@@ -193,11 +193,11 @@ const logoMarquee = [
   <!-- Tech/Partner Logo Marquee Strip -->
   <section class="py-12 border-y border-brand-blue/20 bg-white overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto px-4">
-      <p class="text-center text-brand-dark font-bold text-sm uppercase tracking-widest mb-8">
+      <p class="text-center font-bold text-sm uppercase tracking-widest mb-8 text-transparent" style="-webkit-text-stroke: 1px var(--color-brand-blue); text-stroke: 1px var(--color-brand-blue);">
         Powered by the best in the industry
       </p>
       <div class="overflow-hidden">
-        <div class="flex animate-marquee">
+        <div class="flex animate-marquee-fast">
           <div class="flex gap-16 sm:gap-24 items-center px-8">
             {logoMarquee.map((logo) => (
               <div class="flex items-center justify-center w-32 sm:w-48 flex-shrink-0">
@@ -206,7 +206,7 @@ const logoMarquee = [
             ))}
           </div>
           
-          <div class="flex gap-16 sm:gap-24 items-center px-8" aria-hidden="true">
+          <div class="flex gap-16 sm:gap-24 items-center px-8" aria-hidden="true" style="animation: none;">
             {logoMarquee.map((logo) => (
               <div class="flex items-center justify-center w-32 sm:w-48 flex-shrink-0">
                 <Image src={logo.src} alt={logo.alt} class="max-h-28 sm:max-h-40 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
@@ -251,15 +251,15 @@ const logoMarquee = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Web Design</h3>
-            <p class="text-lg text-white/70 mb-4">Custom, responsive websites that convert visitors into customers. Optimized for local businesses and service businesses.</p>
-            <ul class="space-y-2 text-lg text-white/70 mb-4">
+            <h3 class="font-heading text-3xl font-bold text-white mb-3">Web Design</h3>
+            <p class="text-xl text-white/70 mb-4">Custom, responsive websites that convert visitors into customers. Optimized for local businesses and service businesses.</p>
+            <ul class="space-y-2 text-xl text-white/70 mb-4">
               <li>• Mobile-First Design</li>
               <li>• Lightning Fast Loading</li>
               <li>• Lead Generation Forms</li>
               <li>• Local SEO Built-In</li>
             </ul>
-            <a href="/services/web-design" class="text-brand-cyan hover:text-brand-cyanLight text-lg font-medium transition-colors">
+            <a href="/services/web-design" class="text-brand-cyan hover:text-brand-cyanLight text-xl font-medium transition-colors">
               Learn About Web Design →
             </a>
           </div>
@@ -274,15 +274,15 @@ const logoMarquee = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
               </svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Logo Design & Branding</h3>
-            <p class="text-lg text-white/70 mb-4">Professional branding packages that make your business stand out from competitors and build trust with customers.</p>
-            <ul class="space-y-2 text-lg text-white/70 mb-4">
+            <h3 class="font-heading text-3xl font-bold text-white mb-3">Logo Design & Branding</h3>
+            <p class="text-xl text-white/70 mb-4">Professional branding packages that make your business stand out from competitors and build trust with customers.</p>
+            <ul class="space-y-2 text-xl text-white/70 mb-4">
               <li>• Custom Logo Design</li>
               <li>• Brand Identity Package</li>
               <li>• Business Card Design</li>
               <li>• Social Media Assets</li>
             </ul>
-            <a href="/services/branding" class="text-brand-cyan hover:text-brand-cyanLight text-lg font-medium transition-colors">
+            <a href="/services/branding" class="text-brand-cyan hover:text-brand-cyanLight text-xl font-medium transition-colors">
               Learn About Branding →
             </a>
           </div>
@@ -297,15 +297,15 @@ const logoMarquee = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">SEO Services</h3>
-            <p class="text-lg text-white/70 mb-4">Complete search engine optimization to help your business dominate search results and attract more customers.</p>
-            <ul class="space-y-2 text-lg text-white/70 mb-4">
+            <h3 class="font-heading text-3xl font-bold text-white mb-3">SEO Services</h3>
+            <p class="text-xl text-white/70 mb-4">Complete search engine optimization to help your business dominate search results and attract more customers.</p>
+            <ul class="space-y-2 text-xl text-white/70 mb-4">
               <li>• Technical SEO</li>
               <li>• On-Page Optimization</li>
               <li>• Local Search Dominance</li>
               <li>• Google Business Profile</li>
             </ul>
-            <a href="/services/seo" class="text-brand-cyan hover:text-brand-cyanLight text-lg font-medium transition-colors">
+            <a href="/services/seo" class="text-brand-cyan hover:text-brand-cyanLight text-xl font-medium transition-colors">
               Learn About SEO Services →
             </a>
           </div>
@@ -320,15 +320,15 @@ const logoMarquee = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Custom Media Packs</h3>
-            <p class="text-lg text-white/70 mb-4">Custom Digital Content — Ready to Use, Ready to Convert. Get high-quality visuals tailored to your business.</p>
-            <ul class="space-y-2 text-lg text-white/70 mb-4">
+            <h3 class="font-heading text-3xl font-bold text-white mb-3">Custom Media Packs</h3>
+            <p class="text-xl text-white/70 mb-4">Custom Digital Content — Ready to Use, Ready to Convert. Get high-quality visuals tailored to your business.</p>
+            <ul class="space-y-2 text-xl text-white/70 mb-4">
               <li>• Custom Visuals & Graphics</li>
               <li>• Website & Social Ready</li>
               <li>• Fast Turnaround Delivery</li>
               <li>• Conversion-Focused Design</li>
             </ul>
-            <a href="/services/media-packs" class="text-brand-cyan hover:text-brand-cyanLight text-lg font-medium transition-colors">
+            <a href="/services/media-packs" class="text-brand-cyan hover:text-brand-cyanLight text-xl font-medium transition-colors">
               Learn About Media Packs →
             </a>
           </div>

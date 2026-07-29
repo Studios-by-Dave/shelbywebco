@@ -23,6 +23,7 @@
   --animate-flash-subtle: flash-subtle 1s infinite;
   --animate-shine: shine 6s infinite linear;
   --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-fast: marquee 10s linear infinite;
 }
 
 @keyframes flash-subtle {
