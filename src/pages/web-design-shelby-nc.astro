@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import Image from '../components/OptimizedImage.astro';
+import shelby3 from '../../assets/service locations/Shelby/maps/Shelby_3.jpg';
 import shelby4 from '../../assets/service locations/Shelby/Shelby_4.jpg';
 import shelby5 from '../../assets/service locations/Shelby/Shelby_5.jpg';
 import shelby7 from '../../assets/service locations/Shelby/Shelby_7.jpg';
@@ -90,8 +91,8 @@ import shelbyDrone1 from '../../assets/service locations/Shelby/shelby_nc_drone_
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <Image src={shelby8} alt="Shelby local commerce" class="rounded-xl object-cover h-64 w-full shadow-lg" />
-        <Image src={shelby4} alt="Cleveland County business growth" class="rounded-xl object-cover h-64 w-full shadow-lg" />
-        <Image src={shelby9} alt="Shelby digital marketing" class="rounded-xl object-cover h-64 w-full shadow-lg" />
+        <Image src={shelby3} alt="Shelby service area map" class="rounded-xl object-cover h-64 w-full shadow-lg" />
+        <Image src={shelbyDrone1} alt="Aerial drone view of Shelby, NC" class="rounded-xl object-cover h-64 w-full shadow-lg" />
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -120,7 +121,7 @@ import shelbyDrone1 from '../../assets/service locations/Shelby/shelby_nc_drone_
       <div class="flex-1 order-2 lg:order-1">
         <div class="grid grid-cols-1 gap-4">
           <Image src={shelby4} alt="High quality web design Shelby" class="rounded-2xl shadow-2xl aspect-video object-cover" />
-          <Image src={shelby9} alt="SEO results for Shelby" class="rounded-2xl shadow-2xl aspect-video object-cover mt-4" />
+          <Image src={shelby3} alt="Shelby service area map" class="rounded-2xl shadow-2xl aspect-video object-cover mt-4" />
         </div>
       </div>
       <div class="flex-1 order-1 lg:order-2">

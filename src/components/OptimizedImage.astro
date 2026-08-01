@@ -1,0 +1,15 @@
+---
+// Thin wrapper around astro:assets' <Image> that defaults output to WebP.
+// Drop-in replacement: `import Image from './OptimizedImage.astro'` in place of
+// `import { Image } from 'astro:assets'` — all existing <Image ...> usages keep working,
+// but Astro's build pipeline now emits optimized .webp files instead of the original format.
+import { Image } from 'astro:assets';
+
+const props = Astro.props as Record<string, any>;
+const src = props.src;
+// SVGs can't be rasterized to webp without extra config — pass them through unchanged.
+const srcPath = typeof src === 'string' ? src : src?.src;
+const isSvg = typeof srcPath === 'string' && srcPath.toLowerCase().endsWith('.svg');
+const { format = isSvg ? 'svg' : 'webp', ...rest } = props;
+---
+<Image format={format} {...rest as any} />

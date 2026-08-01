@@ -4,22 +4,73 @@ import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.jsx';
 import '../styles/global.css';
 
+interface Breadcrumb {
+  name: string;
+  url: string;
+}
+
 interface Props {
   title: string;
   description: string;
   image?: string;
   canonical?: string;
+  breadcrumbs?: Breadcrumb[];
 }
 
 const { 
   title, 
   description, 
   image = 'https://www.shelbywebco.com/og-image.jpg',
-  canonical = new URL(Astro.url.pathname, Astro.site).href
+  canonical = new URL(Astro.url.pathname, Astro.site).href,
+  breadcrumbs
 } = Astro.props;
 
 const fullTitle = `${title} | Shelby Web Company`;
 const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbywebco.com${image}`;
+
+// Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.
+const siteOrigin = 'https://www.shelbywebco.com';
+
+function titleize(segment: string) {
+  return segment
+    .replace(/-nc$/i, ' NC')
+    .split('-')
+    .map(word => {
+      const upper = word.toUpperCase();
+      if (['seo', 'nc', 'ai', 'llc'].includes(word.toLowerCase())) return upper;
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
+
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+
+const autoBreadcrumbs: Breadcrumb[] = pathSegments.map((segment: string, index: number) => {
+  const url = `${siteOrigin}/${pathSegments.slice(0, index + 1).join('/')}`;
+  const isLast = index === pathSegments.length - 1;
+  const name = isLast ? title : titleize(segment);
+  return { name, url };
+});
+
+const finalBreadcrumbs: Breadcrumb[] = breadcrumbs ?? autoBreadcrumbs;
+
+const breadcrumbList = [
+  { name: 'Home', url: siteOrigin },
+  ...finalBreadcrumbs
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbList.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    "item": crumb.url
+  }))
+};
+
+const showBreadcrumbBar = pathSegments.length > 0;
 ---
 
 <!DOCTYPE html>
@@ -106,6 +157,9 @@ const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbyw
         ]
       }
     </script>
+
+    <!-- Breadcrumb Schema -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     
     <!-- Fonts (self-hosted) -->
     <link rel="stylesheet" href="/fonts/fonts.css" />
@@ -131,6 +185,28 @@ const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbyw
     </div>
 
     <Navbar />
+    {showBreadcrumbBar && (
+      <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-sm text-white/60">
+        <ol class="flex flex-wrap items-center gap-1">
+          <li class="flex items-center gap-1">
+            <a href="/" class="hover:text-brand-cyan transition-colors">Home</a>
+            <span aria-hidden="true" class="px-1">/</span>
+          </li>
+          {finalBreadcrumbs.map((crumb, index) => (
+            <li class="flex items-center gap-1">
+              {index === finalBreadcrumbs.length - 1 ? (
+                <span aria-current="page" class="text-white/90">{crumb.name}</span>
+              ) : (
+                <>
+                  <a href={new URL(crumb.url).pathname} class="hover:text-brand-cyan transition-colors">{crumb.name}</a>
+                  <span aria-hidden="true" class="px-1">/</span>
+                </>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
     <main class="min-h-screen">
       <slot />
     </main>

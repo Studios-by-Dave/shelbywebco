@@ -125,13 +125,13 @@ export default function MobileNav() {
             </div>
             
             <a href="/contact" className="block text-white font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
-            <a href="/blog" className="inline-block font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '0.3px rgba(255,255,255,0.4)' }}>Blog</a>
+            <a href="/blog" className="inline-block font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
             </a>
             <a
               href="/contact"
-              className="cta-glow-shine block bg-brand-accent text-[#0A0A0A] px-6 py-2.5 rounded-lg font-medium text-center mt-4 hover:bg-brand-accent-light"
+              className="cta-glow-shine block bg-brand-accent text-[#0A0A0A] px-6 py-2.5 rounded-2xl font-medium text-center mt-4 hover:bg-brand-accent-light"
             >
               Get Started
             </a>

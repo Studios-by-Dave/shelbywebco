@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import Image from '../components/OptimizedImage.astro';
 import businessCard from '../../assets/about/Sweb_bcard_1.png';
 ---
 
@@ -103,8 +103,9 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
           <p class="text-brand-sky/70 text-sm mt-6">Our team is ready to deliver the same high-touch service for your Shelby business.</p>
         </div>
 
-        <!-- Contact Form -->
+        <!-- Contact Form (Temporarily Disabled) -->
         <div class="space-y-8 lg:sticky lg:top-32">
+          <!--
           <div class="bg-brand-darkest border border-brand-sky/20 rounded-2xl p-8 shadow-2xl relative overflow-hidden group">
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-accent/5 rounded-full blur-3xl group-hover:bg-brand-accent/10 transition-colors"></div>
             
@@ -160,6 +161,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
               </button>
             </form>
           </div>
+          -->
 
           <!-- Quick Info Grid -->
           <div class="grid grid-cols-1 gap-4">

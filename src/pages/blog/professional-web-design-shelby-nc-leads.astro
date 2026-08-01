@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BurtReynoldsButton from '../../components/BurtReynoldsButton.jsx';
 ---
 
 <BaseLayout 
@@ -23,6 +24,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Local customers are actively searching for "web designers near me" — not because they want to build websites, but because they need trustworthy local service providers. Your website is often their first impression.
         </p>
       </header>
+
+      <BurtReynoldsButton client:load />
 
       <!-- Main Image Placeholder -->
       <div class="aspect-video bg-brand-dark border border-white/5 rounded-3xl mb-16 overflow-hidden shadow-2xl relative group">
