@@ -4,10 +4,8 @@ import Image from '../components/OptimizedImage.astro';
 import headshotPlaceholder from '../../assets/SWeblogo1.jpg';
 import tieDyeBg from '../../assets/tie dye_3.jpg';
 import aboutImg1 from '../../assets/about/meandmascot_1.jpg';
-import aboutImg2 from '../../assets/about/mascot_1.jpg';
 import aboutImg4 from '../../assets/about/meandmascot_2.jpg';
 import innovationImg from '../../assets/about/contractor-innovation.jpg';
-import mascot1 from '../../assets/about/mascot_1.jpg';
 import satisfactionBadge from '../../assets/badge icons/satisfaction badge.jpg';
 import projectBadge from '../../assets/badge icons/badge_2.jpeg';
 import aplusBadge from '../../assets/badge icons/aplus_2.jpg';
@@ -147,9 +145,9 @@ import dave20 from '../../assets/about/Sweb_dave20.png';
             <p class="text-brand-cyan/60 text-base uppercase tracking-widest mt-2">Verified Customer</p>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <Image src={aboutImg1} alt="Dave and our mascot" class="rounded-xl shadow-lg w-full h-full object-cover" />
-          <Image src={aboutImg2} alt="Shelby Web Co mascot" class="rounded-xl shadow-lg w-full h-full object-cover mt-8" />
+        <div class="space-y-6">
+          <Image src={aboutImg1} alt="Dave and our mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <Image src={aboutImg4} alt="Dave and mascot at Shelby Web Company" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
         </div>
       </div>
       
@@ -160,51 +158,6 @@ import dave20 from '../../assets/about/Sweb_dave20.png';
         }
       </style>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1 relative group">
-          <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-          <Image 
-            src={dave20} 
-            alt="Dave at Shelby Web Co" 
-            class="relative rounded-2xl shadow-2xl border border-white/10 w-full max-h-[500px] object-cover animate-float" 
-          />
-        </div>
-        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
-          <div class="grid grid-cols-2 gap-6">
-            <div class="text-center">
-              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
-                <span class="counter" data-target="100">0</span>%
-              </p>
-              <p class="text-brand-sky/70 text-sm">Growth Focused</p>
-            </div>
-            <div class="text-center">
-              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
-                <span class="counter" data-target="20">0</span>+
-              </p>
-              <p class="text-brand-sky/70 text-sm">Years Experience IT</p>
-            </div>
-            <div class="text-center">
-              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
-                <span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span>
-              </p>
-              <p class="text-brand-sky/70 text-sm">Support Available</p>
-            </div>
-            <div class="text-center">
-              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
-                <span class="counter" data-target="100">0</span>%
-              </p>
-              <p class="text-brand-sky/70 text-sm">Satisfaction Guaranteed</p>
-            </div>
-          </div>
-          <div class="mt-8 pt-6 border-t border-white/5 flex justify-center">
-            <Image 
-              src={satisfactionBadge} 
-              alt="100% Customer Satisfaction Badge" 
-              class="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-            />
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -447,6 +400,56 @@ import dave20 from '../../assets/about/Sweb_dave20.png';
         <div class="absolute bottom-8 left-8 right-8">
           <p class="text-white font-heading text-2xl md:text-3xl font-bold">Innovation Meets Professionalism</p>
           <p class="text-brand-sky/80 mt-2">Equipping local businesses with the digital tools needed to lead their industry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <Image 
+            src={dave20} 
+            alt="Dave at Shelby Web Co" 
+            class="relative rounded-2xl shadow-2xl border border-white/10 w-full max-h-[500px] object-cover animate-float" 
+          />
+        </div>
+        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
+                <span class="counter" data-target="100">0</span>%
+              </p>
+              <p class="text-brand-sky/70 text-sm">Growth Focused</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
+                <span class="counter" data-target="20">0</span>+
+              </p>
+              <p class="text-brand-sky/70 text-sm">Years Experience IT</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
+                <span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span>
+              </p>
+              <p class="text-brand-sky/70 text-sm">Support Available</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-brand-cyan mb-2 text-stats-outline">
+                <span class="counter" data-target="100">0</span>%
+              </p>
+              <p class="text-brand-sky/70 text-sm">Satisfaction Guaranteed</p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/5 flex justify-center">
+            <Image 
+              src={satisfactionBadge} 
+              alt="100% Customer Satisfaction Badge" 
+              class="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,14 @@
 import type { APIRoute } from 'astro';
 
 export const POST: APIRoute = async ({ request }) => {
+  const contentType = request.headers.get('content-type') || '';
+  if (!contentType.includes('multipart/form-data') && !contentType.includes('application/x-www-form-urlencoded')) {
+    return new Response(JSON.stringify({ success: false, message: 'Invalid form submission format.' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
   const formData = await request.formData();
   const name = formData.get('name')?.toString().trim() ?? '';
   const email = formData.get('email')?.toString().trim() ?? '';

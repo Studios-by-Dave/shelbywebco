@@ -8,22 +8,22 @@ export function calculateQuote({
   design
 }) {
   const baseByBudget = {
-    starter: 1800,
-    growth: 3200,
-    scale: 4800
+    starter: 900,
+    growth: 1600,
+    scale: 2400
   };
 
-  const pageCost = 225;
-  const formCost = 175;
-  const blogCost = 450;
-  const ecommerceCost = 1400;
+  const pageCost = 115;
+  const formCost = 90;
+  const blogCost = 225;
+  const ecommerceCost = 700;
   const timelineMultiplier = {
     standard: 1,
-    rush: 1.2
+    rush: 1.15
   };
   const designMultiplier = {
     template: 1,
-    custom: 1.18
+    custom: 1.1
   };
 
   const subtotal = baseByBudget[budget] + (pages - 1) * pageCost + forms * formCost + (blog ? blogCost : 0) + (ecommerce ? ecommerceCost : 0);

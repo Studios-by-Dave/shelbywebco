@@ -104,7 +104,7 @@ export default function DesktopNav() {
           <div className="absolute left-0 mt-2 w-48 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
             <div className="p-4 space-y-1">
               <a href="/pricing" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Pricing Page</a>
-              <a href="/promos" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Promos</a>
+              <a href="/promotions" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Promotions</a>
             </div>
           </div>
         )}

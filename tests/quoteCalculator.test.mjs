@@ -13,9 +13,9 @@ test('calculates a starter quote with base pages and forms', () => {
     design: 'template'
   });
 
-  assert.equal(quote.total, 2850);
-  assert.equal(quote.rangeLow, 2565);
-  assert.equal(quote.rangeHigh, 3278);
+  assert.equal(quote.total, 1350);
+  assert.equal(quote.rangeLow, 1200);
+  assert.equal(quote.rangeHigh, 1550);
   assert.equal(quote.tier, 'Starter');
 });
 
@@ -30,6 +30,6 @@ test('adds premium costs for ecommerce, custom design, and rush timeline', () =>
     design: 'custom'
   });
 
-  assert.equal(quote.total, 8700);
-  assert.equal(quote.tier, 'Growth');
+  assert.equal(quote.total, 4550);
+  assert.equal(quote.tier, 'Scale');
 });

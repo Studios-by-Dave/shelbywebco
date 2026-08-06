@@ -119,7 +119,7 @@ export default function MobileNav() {
               {pricingOpen && (
                 <div className="pl-4 space-y-2 mt-2">
                   <a href="/pricing" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan py-1">Pricing Page</a>
-                  <a href="/promos" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan py-1">Promos</a>
+                  <a href="/promotions" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan py-1">Promotions</a>
                 </div>
               )}
             </div>
