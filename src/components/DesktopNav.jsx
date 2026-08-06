@@ -25,7 +25,7 @@ export default function DesktopNav() {
 
   return (
     <div className="hidden md:flex items-center space-x-8 font-nav">
-      <a href="/" className="text-white text-[1.05rem] font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
+      <a href="/" className="text-white text-[1.1rem] leading-relaxed font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
       
       {/* Services Dropdown */}
       <div className="relative" ref={dropdownRef}>
@@ -80,7 +80,7 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/about" className="text-white text-[1.05rem] font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About Us</a>
+      <a href="/about" className="text-white text-[1.1rem] leading-relaxed font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About Us</a>
       
       {/* Pricing Dropdown */}
       <div className="relative" ref={pricingRef}>
@@ -110,7 +110,7 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/contact" className="text-white text-[1.05rem] font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
+      <a href="/contact" className="text-white text-[1.1rem] leading-relaxed font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
       <a href="/blog" className="font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>
   );
