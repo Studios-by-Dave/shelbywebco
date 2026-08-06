@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.jsx';
 import '../styles/global.css';
+import jesusWatermark from '../../assets/jesuswatermark_1.jpg';
 
 interface Breadcrumb {
   name: string;
@@ -210,6 +211,15 @@ const showBreadcrumbBar = pathSegments.length > 0;
     <main class="min-h-screen">
       <slot />
     </main>
+    <div class="fixed bottom-2 right-2 z-40 pointer-events-none select-none" aria-hidden="true">
+      <img
+        src={jesusWatermark.src}
+        alt=""
+        class="w-8 md:w-10 h-auto opacity-70"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
     <Footer />
     <ChatWidget client:load />
     

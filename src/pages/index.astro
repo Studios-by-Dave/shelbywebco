@@ -229,14 +229,26 @@ const logoMarquee = [
   <!-- Services Section -->
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <div class="mb-12">
-        <p class="text-brand-blue text-base uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
-          Everything Your Business Needs
-        </h2>
-        <p class="text-xl text-white/80 max-w-3xl leading-relaxed">
-          We're your local specialized web development and marketing toolkit. Our tailored approach to your business needs ensures maximum ROI for your industry. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
-        </p>
+      <div class="mb-12 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-10">
+        <div class="flex-1">
+          <p class="text-brand-blue text-base uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+            Everything Your Business Needs
+          </h2>
+          <p class="text-xl text-white/80 max-w-3xl leading-relaxed">
+            We're your local specialized web development and marketing toolkit. Our tailored approach to your business needs ensures maximum ROI for your industry. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
+          </p>
+        </div>
+        <div class="md:shrink-0 md:ml-auto">
+          <Image
+            src={mascotOne}
+            alt="Shelby Web Co mascot"
+            class="w-28 md:w-36 h-auto rounded-2xl border border-brand-blue/20 shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
+            width={320}
+            height={320}
+            loading="lazy"
+          />
+        </div>
       </div>
 
 
@@ -341,7 +353,7 @@ const logoMarquee = [
             <div class="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 class="font-heading text-3xl md:text-4xl font-bold text-slate-100 mb-6">
-                  We Get It. <span class="text-brand-cyan">That's one of the main reasons we are here in the first place. To build your website like it's supposed to be built.</span>
+                  We Get It. <span class="text-brand-cyan">That's one of the main reasons we're here for you. To build your website like it's supposed to be built.</span>
                 </h3>
                 <p class="text-slate-300 mb-8 text-xl">
                   We know all these really amazing AI website builders that are out there. They look incredible. Beautiful templates, fancy animations, stunning visuals. But there's a catch with these platforms:
