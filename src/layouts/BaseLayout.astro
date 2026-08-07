@@ -175,6 +175,9 @@ const showBreadcrumbBar = pathSegments.length > 0;
   <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden">
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+      <!-- Subtle Grid -->
+      <div class="absolute inset-0 opacity-[0.07]" style="background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px); background-size: 56px 56px;"></div>
+
       <!-- Noise Texture -->
       <div class="absolute inset-0 opacity-[0.05] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalSum%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
       
