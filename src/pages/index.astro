@@ -15,15 +15,18 @@ import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612
 import logoCode from '../../assets/logo banner/code.svg';
 import logoGrok from '../../assets/logo banner/grok-ai-icon.webp';
 import logoLinux from '../../assets/logo banner/linux-operating-systems-logo-whatsapp-logo.jpg';
+import logoComptia from '../../assets/logo banner/comptia-Cm7O9_X6.png';
+import webCoLogo from '../../assets/SWeblogo1.jpg';
 import mascotOne from '../../assets/mascot_1.jpg';
 import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
 
 const logoMarquee = [
   { src: logoOpencode, alt: 'OpenCode Logo' },
+  { src: logoComptia, alt: 'CompTIA Logo' },
+  { src: webCoLogo, alt: 'Shelby Web Co Logo' },
   { src: logoClaude, alt: 'Claude Logo' },
   { src: logoVscode, alt: 'VS Code Logo' },
   { src: logoGithub, alt: 'GitHub Logo' },
-  { src: logoChatgpt, alt: 'ChatGPT Logo' },
   { src: logoOllama, alt: 'Ollama Logo' },
   { src: logoDevin, alt: 'Devin Logo' },
   { src: logoCode, alt: 'Code Icon' },
@@ -68,7 +71,7 @@ const logoMarquee = [
       100% { transform: translateX(-100%); }
     }
     .animate-promo-ticker {
-      animation: promo-ticker 35s linear infinite;
+      animation: promo-ticker 50s linear infinite;
     }
   </style>
 
@@ -116,7 +119,7 @@ const logoMarquee = [
 
           <div class="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 sm:mb-8">
             <a 
-              href="/contact#get-in-touch"
+              href="/contact"
               class="cta-glow-shine bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-medium hover:bg-brand-accent-light text-center"
             >
               Get Started Today
@@ -187,30 +190,18 @@ const logoMarquee = [
     </div>
   </section>
 
-  <!-- Tech/Partner Logo Marquee Strip -->
-  <section class="py-12 border-y border-brand-blue/20 bg-white overflow-hidden" data-animate>
+  <!-- Tech/Partner Logo Strip -->
+  <section class="py-12 border-b border-brand-blue/20 bg-[#0A0B10] overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto px-4">
-      <p class="text-center font-bold text-sm uppercase tracking-widest mb-8 text-transparent" style="-webkit-text-stroke: 1px var(--color-brand-blue); text-stroke: 1px var(--color-brand-blue);">
+      <p class="text-center font-bold text-sm uppercase tracking-widest mb-10 text-brand-sky/60">
         Powered by the best in the industry
       </p>
-      <div class="overflow-hidden">
-        <div class="flex animate-marquee-fast">
-          <div class="flex gap-16 sm:gap-24 items-center px-8">
-            {logoMarquee.map((logo) => (
-              <div class="flex items-center justify-center w-32 sm:w-48 flex-shrink-0">
-                <Image src={logo.src} alt={logo.alt} class="max-h-28 sm:max-h-40 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
-              </div>
-            ))}
+      <div class="flex flex-wrap justify-center gap-12 sm:gap-20 items-center">
+        {logoMarquee.map((logo) => (
+          <div class="flex items-center justify-center w-24 sm:w-36 flex-shrink-0">
+            <Image src={logo.src} alt={logo.alt} class="max-h-20 sm:max-h-24 w-auto max-w-full object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 contrast-125" />
           </div>
-          
-          <div class="flex gap-16 sm:gap-24 items-center px-8" aria-hidden="true" style="animation: none;">
-            {logoMarquee.map((logo) => (
-              <div class="flex items-center justify-center w-32 sm:w-48 flex-shrink-0">
-                <Image src={logo.src} alt={logo.alt} class="max-h-28 sm:max-h-40 w-auto max-w-full object-contain mix-blend-multiply filter grayscale opacity-80 contrast-125" />
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -224,7 +215,7 @@ const logoMarquee = [
   </div>
 
   <!-- Services Section -->
-  <section class="py-20 px-4" data-animate>
+  <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="mb-12 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-10">
         <div class="flex-1">
@@ -344,13 +335,27 @@ const logoMarquee = [
         </a>
       </div>
 
-        <div class="mt-20">
+      </div>
+    </section>
+
+  <!-- Industries Section -->
+  <section class="py-12 md:py-16 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <p class="text-brand-blue text-base md:text-lg uppercase tracking-widest mb-4 font-semibold">✦ Specialized for Your Industry</p>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-8">
+        We're Here to Understand Your Business
+      </h2>
+      <p class="text-slate-300 text-xl max-w-5xl mb-16 leading-relaxed font-light">
+        Our unique tailored approach establishes the proper client relationship framework that is crucial to fully understand before any project actually begins. This is in order for us to implement the proper business model that meets your business needs. <span class="text-brand-cyan font-normal">Not just a website.</span> We're here to construct your <span class="text-white font-semibold">online business machine.</span>
+      </p>
+
+        <div class="mb-20">
           <!-- AI Website Builder Consideration Section -->
           <div class="mb-16 bg-slate-900/40 backdrop-blur-sm border border-brand-cyan/20 rounded-2xl p-8 md:p-12">
             <div class="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 class="font-heading text-3xl md:text-4xl font-bold text-slate-100 mb-6">
-                  We Get It. <span class="text-brand-cyan">That’s why we build websites the right way.</span>
+                <h3 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
+                  And that's why we hand code websites the right way for business.
                 </h3>
                 <p class="text-slate-300 mb-8 text-xl">
                   AI builders can look impressive, but they often miss the parts that actually matter: search visibility, reliable forms, proper integrations, and real performance.
@@ -379,7 +384,7 @@ const logoMarquee = [
               </div>
 
               <div class="bg-brand-darkest/80 backdrop-blur-md rounded-xl p-8 border border-brand-cyan/20">
-                <h4 class="font-heading text-2xl font-bold text-brand-cyan mb-8">And That's Why We're Here</h4>
+                <h4 class="font-heading text-2xl font-bold text-brand-cyan mb-8">That's Why We're Here</h4>
                 <p class="text-slate-200 mb-8 text-lg">
                   Shelby Web Company builds websites that don't just <span class="font-semibold text-brand-cyan">look</span> good — they <span class="font-semibold text-brand-accent">actually work</span>.
                 </p>
@@ -415,19 +420,6 @@ const logoMarquee = [
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-  <!-- Industries Section -->
-  <section class="py-20 px-4" data-animate>
-    <div class="max-w-7xl mx-auto">
-      <p class="text-brand-blue text-base md:text-lg uppercase tracking-widest mb-4 font-semibold">✦ Specialized for Your Industry</p>
-      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-8">
-        We're Here to Understand Your Business
-      </h2>
-      <p class="text-slate-300 text-xl max-w-5xl mb-16 leading-relaxed font-light">
-        Our unique tailored approach establishes the proper client relationship framework that is crucial to fully understand before any project actually begins. This is in order for us to implement the proper business model that meets your business needs. <span class="text-brand-cyan font-normal">Not just a website.</span> We're here to construct your <span class="text-white font-semibold">online business machine.</span>
-      </p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Roofer Icon -->
@@ -506,7 +498,7 @@ const logoMarquee = [
   </section>
 
   <!-- Video/CTA Break Section -->
-  <section class="py-20 px-4 relative overflow-hidden" data-animate>
+  <section class="py-12 md:py-16 px-4 relative overflow-hidden" data-animate>
     <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
@@ -537,7 +529,7 @@ const logoMarquee = [
   </section>
 
   <!-- Non-Exclusive Agency Section -->
-  <section class="py-24 px-4" data-animate>
+  <section class="py-16 md:py-20 px-4" data-animate>
     <div class="max-w-5xl mx-auto text-center">
       <p class="text-brand-blue text-base md:text-lg uppercase tracking-widest mb-4 font-semibold">✦ We're also a Non-Exclusive Agency</p>
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
@@ -553,7 +545,7 @@ const logoMarquee = [
   </section>
 
   <!-- Review CTA Section -->
-  <section class="py-20 px-4" data-animate>
+  <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-10 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
@@ -561,7 +553,7 @@ const logoMarquee = [
             <p class="text-brand-blue text-sm uppercase tracking-widest mb-3">Client Reviews</p>
             <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Shelby Web Company delivers high-conversion websites.</h2>
           </div>
-          <a href="/contact#get-in-touch" class="inline-flex items-center justify-center rounded-full bg-brand-accent px-10 py-4 font-bold text-black hover:bg-brand-accent-light transition-all duration-300 shadow-[0_20px_40px_rgba(132,204,22,0.24)]">
+          <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-brand-accent px-10 py-4 font-bold text-black hover:bg-brand-accent-light transition-all duration-300 shadow-[0_20px_40px_rgba(132,204,22,0.24)]">
             Book Your Free Strategy Call
           </a>
         </div>
