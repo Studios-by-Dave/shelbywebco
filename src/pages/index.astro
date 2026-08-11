@@ -38,40 +38,37 @@ const logoMarquee = [
 >
 
   <!-- Promo Ticker/Marquee Bar -->
-  <div class="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 border-b border-gray-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.5)] overflow-hidden relative z-20 py-2">
+  <div class="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 border-b border-gray-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.5)] overflow-hidden relative z-20 py-2 flex">
     <div class="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none"></div>
-    <div class="flex whitespace-nowrap animate-marquee relative z-10">
-      <div class="flex items-center space-x-12 px-4">
+    <div class="flex whitespace-nowrap animate-promo-ticker relative z-10 w-max shrink-0">
+      <div class="flex items-center space-x-12 px-6">
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
+      </div>
+    </div>
+    <div class="flex whitespace-nowrap animate-promo-ticker relative z-10 w-max shrink-0" aria-hidden="true">
+      <div class="flex items-center space-x-12 px-6">
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
+        <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free Logo Design with any Web Package!</span>
+        <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
+        <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free SEO Audit for Local Businesses!</span>
       </div>
     </div>
   </div>
 
   <style>
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    @keyframes promo-ticker {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
     }
-    .animate-marquee {
-      animation: marquee 30s linear infinite;
-    }
-    .marquee-container {
-      display: flex;
-      width: 200%;
-    }
-    .marquee-container > div:first-child {
-      animation: marquee 30s linear infinite;
-    }
-    .marquee-container > div:last-child {
-      animation: marquee 30s linear infinite;
-      animation-delay: -15s;
+    .animate-promo-ticker {
+      animation: promo-ticker 35s linear infinite;
     }
   </style>
 
@@ -408,7 +405,7 @@ const logoMarquee = [
                     <span class="text-slate-200 text-lg"><span class="font-semibold text-white">You Stay in Control</span> — Your website, your business, your growth</span>
                   </li>
                 </ul>
-                <div class="mt-8 flex justify-end">
+                <div class="mt-10 flex justify-end">
                   <a href="/contact" class="inline-flex items-center px-6 py-3 bg-brand-accent hover:bg-brand-accent-light text-brand-darkest font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(132,204,22,0.3)] cta-glow-shine text-sm md:text-base">
                     Start Your Project
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
@@ -424,12 +421,12 @@ const logoMarquee = [
   <!-- Industries Section -->
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ Specialized for Your Industry</p>
-      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">
+      <p class="text-brand-blue text-base md:text-lg uppercase tracking-widest mb-4 font-semibold">✦ Specialized for Your Industry</p>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-8">
         We're Here to Understand Your Business
       </h2>
-      <p class="text-slate-300 text-lg md:text-xl max-w-4xl mb-12 leading-relaxed">
-        Our unique tailored approach establishes the proper client relationship framework that is crucial to fully understand before any project actually begins. This is in order for us to implement the proper business model that meets your business needs. <span class="text-brand-cyan">Not just a website.</span> We're here to construct your <span class="text-white font-semibold">online business machine.</span>
+      <p class="text-slate-300 text-xl max-w-5xl mb-16 leading-relaxed font-light">
+        Our unique tailored approach establishes the proper client relationship framework that is crucial to fully understand before any project actually begins. This is in order for us to implement the proper business model that meets your business needs. <span class="text-brand-cyan font-normal">Not just a website.</span> We're here to construct your <span class="text-white font-semibold">online business machine.</span>
       </p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -540,16 +537,16 @@ const logoMarquee = [
   </section>
 
   <!-- Non-Exclusive Agency Section -->
-  <section class="py-20 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-blue text-sm uppercase tracking-widest mb-4">✦ We're also a Non-Exclusive Agency</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+  <section class="py-24 px-4" data-animate>
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-brand-blue text-base md:text-lg uppercase tracking-widest mb-4 font-semibold">✦ We're also a Non-Exclusive Agency</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
         Your Success Is Our Success
       </h2>
-      <p class="text-lg text-white/80 mb-8 font-serif">
-        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
+      <p class="text-xl md:text-xl text-white/90 mb-10 font-serif leading-relaxed font-light">
+        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic font-normal">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
       </p>
-      <p class="text-brand-cyan font-medium text-xl">
+      <p class="text-brand-cyan font-medium text-xl md:text-2xl">
         No exclusivity, just great results.
       </p>
     </div>
