@@ -5,34 +5,8 @@ import heroImage from '../../assets/Sweb_hero1.jpg';
 import googleStars from '../../assets/badge icons/google 5 stars.png';
 import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
 
-import logoClaude from '../../assets/logo banner/claude-Ekx6wd5U.png';
-import logoOllama from '../../assets/logo banner/ollama-logo1.png';
-import logoOpencode from '../../assets/logo banner/opencode-BrfWWnj4.png';
-import logoVscode from '../../assets/logo banner/vscode--vbwWAnL.jpeg';
-import logoChatgpt from '../../assets/logo banner/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg';
-import logoDevin from '../../assets/logo banner/devin-logo-1.png';
-import logoGithub from '../../assets/logo banner/github-logo-png_seeklogo-304612.png';
-import logoCode from '../../assets/logo banner/code.svg';
-import logoGrok from '../../assets/logo banner/grok-ai-icon.webp';
-import logoLinux from '../../assets/logo banner/linux-operating-systems-logo-whatsapp-logo.jpg';
-import logoComptia from '../../assets/logo banner/comptia-Cm7O9_X6.png';
-import webCoLogo from '../../assets/SWeblogo1.jpg';
 import mascotOne from '../../assets/mascot_1.jpg';
 import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
-
-const logoMarquee = [
-  { src: logoOpencode, alt: 'OpenCode Logo' },
-  { src: logoComptia, alt: 'CompTIA Logo' },
-  { src: webCoLogo, alt: 'Shelby Web Co Logo' },
-  { src: logoClaude, alt: 'Claude Logo' },
-  { src: logoVscode, alt: 'VS Code Logo' },
-  { src: logoGithub, alt: 'GitHub Logo' },
-  { src: logoOllama, alt: 'Ollama Logo' },
-  { src: logoDevin, alt: 'Devin Logo' },
-  { src: logoCode, alt: 'Code Icon' },
-  { src: logoGrok, alt: 'Grok AI Logo' },
-  { src: logoLinux, alt: 'Linux/WhatsApp Logo' },
-];
 ---
 
 <BaseLayout 
@@ -84,10 +58,10 @@ const logoMarquee = [
             <span class="flex h-2 w-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
             <span class="text-white font-bold text-sm tracking-wide drop-shadow-md">Trusted by 100+ Local Businesses</span>
           </div>
-          <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[5rem] xl:text-[5.5rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
-            We Build More Than Just <span class="inline-block text-[3.2rem] sm:text-[4.2rem] md:text-[4.8rem] lg:text-[5.25rem] xl:text-[5.8rem] leading-[0.9]"><span class="text-brand-blue">Websites</span> and <span class="text-brand-cyan">Apps</span>.</span> <span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block whitespace-nowrap text-[2rem] lg:text-[3.1rem]">We Build Local Business.</span>
+          <h1 class="font-heading text-[3.1rem] sm:text-[4.45rem] md:text-[5.7rem] lg:text-[5.55rem] xl:text-[6.05rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
+            We Build More Than Just <span class="inline-block text-[3.1rem] sm:text-[4.45rem] md:text-[5.7rem] lg:text-[5.55rem] xl:text-[6.05rem] leading-[0.9]"><span class="text-brand-blue text-[3.2rem] sm:text-[4.6rem] md:text-[5.85rem] lg:text-[5.7rem] xl:text-[6.2rem]">Websites</span> <span class="text-[3.1rem] sm:text-[4.45rem] md:text-[5.7rem] lg:text-[5.55rem] xl:text-[6.05rem]">and</span> <span class="text-brand-cyan">Apps</span>.</span> <span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block whitespace-nowrap text-[1.75rem] lg:text-[3.1rem]">We Build Local Business.</span>
           </h1>
-          <p class="text-base sm:text-lg text-white/80 mb-6 max-w-lg leading-relaxed">
+          <p class="text-sm sm:text-base text-white/80 mb-6 max-w-lg leading-relaxed">
             Shelby Web Company — serving Shelby, Gastonia, Forest City, Kings Mountain, Polkville, Asheville and Boiling Springs, NC.
           </p>
 
@@ -186,22 +160,6 @@ const logoMarquee = [
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech/Partner Logo Strip -->
-  <section class="py-12 border-b border-brand-blue/20 bg-[#0A0B10] overflow-hidden" data-animate>
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="text-center font-bold text-sm uppercase tracking-widest mb-10 text-brand-sky/60">
-        Powered by the best in the industry
-      </p>
-      <div class="flex flex-wrap justify-center gap-12 sm:gap-20 items-center">
-        {logoMarquee.map((logo) => (
-          <div class="flex items-center justify-center w-24 sm:w-36 flex-shrink-0">
-            <Image src={logo.src} alt={logo.alt} class="max-h-20 sm:max-h-24 w-auto max-w-full object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 contrast-125" />
-          </div>
-        ))}
       </div>
     </div>
   </section>
