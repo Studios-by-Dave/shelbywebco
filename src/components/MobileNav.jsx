@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
 
   return (
@@ -92,7 +93,35 @@ export default function MobileNav() {
               )}
             </div>
             
-            <a href="/about" className="block text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">About Us</a>
+            {/* About Section */}
+            <div>
+              <button
+                onClick={() => setAboutOpen(!aboutOpen)}
+                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
+              >
+                About Us
+                <svg
+                  className={`w-4 h-4 transition-transform ${aboutOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {aboutOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  <a href="/about" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan py-1">About Us</a>
+                  <a href="/about/awards" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan py-1">Awards</a>
+                </div>
+              )}
+            </div>
             
             {/* Pricing Section */}
             <div>

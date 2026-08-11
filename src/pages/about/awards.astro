@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Image from '../../components/OptimizedImage.astro';
+import comptiaLogo from '../../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
+import googleFiveStarsBadge from '../../../assets/badge icons/google 5 stars.png';
+import nthsLogo from '../../../assets/badge icons/NTHS-logo_Vertical_RGB_transparent_300dpi-01.png';
+import satisfactionBadge from '../../../assets/badge icons/satisfaction badge.jpg';
+---
+
+<BaseLayout
+  title="Awards & Accreditations"
+  description="Shelby Web Company awards and accreditations including CompTIA A+ certification, NTHS leadership, and 5-star Google reviews."
+>
+  <section class="relative overflow-hidden py-20 lg:py-28 px-4" data-animate>
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_15%_10%,rgba(34,211,238,0.15),transparent_40%),radial-gradient(circle_at_85%_20%,rgba(132,204,22,0.12),transparent_42%),radial-gradient(circle_at_50%_100%,rgba(30,64,175,0.20),transparent_52%)]"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">Awards and Accreditations</p>
+      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[0.95] mb-6">
+        <span class="text-white">Recognition</span> Built on <span class="text-brand-accent">Real Work</span>
+      </h1>
+      <p class="text-brand-sky/80 text-lg md:text-xl max-w-3xl leading-relaxed">
+        From technical certifications to customer proof, these badges represent the standards we hold for every project we deliver.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-4 pb-20" data-animate>
+    <div class="max-w-7xl mx-auto grid gap-8 lg:grid-cols-3">
+      <article class="group rounded-3xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-7 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <p class="text-red-500 text-xs uppercase tracking-[0.22em] font-bold mb-3">Technical Certification</p>
+        <h2 class="font-heading text-3xl text-white font-bold mb-4">CompTIA A+</h2>
+        <p class="text-brand-sky/75 leading-relaxed mb-6">
+          Industry-recognized credential validating core IT knowledge across hardware, software, networking, troubleshooting, and security fundamentals.
+        </p>
+
+        <div class="rounded-2xl border border-brand-cyan/30 bg-brand-darkest/70 p-4 flex items-center justify-center mb-4">
+          <Image src={comptiaLogo} alt="CompTIA logo" class="w-full h-auto object-contain max-h-24" />
+        </div>
+
+        <ul class="mt-6 space-y-2 text-brand-sky/75 text-sm">
+          <li>Demonstrates hands-on problem solving and structured diagnostics.</li>
+          <li>Supports secure, reliable systems for modern websites and business tooling.</li>
+          <li>Reflects a foundation-first approach that helps clients avoid costly technical mistakes.</li>
+        </ul>
+      </article>
+
+      <article class="group rounded-3xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-7 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <p class="text-violet-400 text-xs uppercase tracking-[0.22em] font-bold mb-3">Leadership and Honor</p>
+        <h2 class="font-heading text-3xl text-white font-bold mb-4">NTHS (President 2000-2001)</h2>
+        <p class="text-brand-sky/75 leading-relaxed mb-6">
+          Served as President of the National Technical Honor Society, representing student leadership, professional discipline, and a long-term commitment to technical excellence.
+        </p>
+
+        <div class="rounded-2xl border border-brand-cyan/30 bg-brand-darkest/70 p-5 min-h-[180px] flex items-center justify-center">
+          <Image src={nthsLogo} alt="National Technical Honor Society logo" class="w-full h-auto object-contain max-h-40" />
+        </div>
+
+        <ul class="mt-6 space-y-2 text-brand-sky/75 text-sm">
+          <li>Leadership role held during 2000-2001.</li>
+          <li>Represents trust, accountability, and consistent follow-through.</li>
+          <li>Signals a people-first mindset alongside technical depth.</li>
+        </ul>
+      </article>
+
+      <article class="group rounded-3xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-7 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <p class="text-yellow-300 text-xs uppercase tracking-[0.22em] font-bold mb-3">Client Validation</p>
+        <h2 class="font-heading text-3xl text-white font-bold mb-4">5-Star Google Reviews</h2>
+        <p class="text-brand-sky/75 leading-relaxed mb-6">
+          Ongoing 5-star feedback from business owners who trust Shelby Web Company with web design, SEO, branding, and long-term digital growth.
+        </p>
+
+        <div class="rounded-2xl border border-brand-cyan/30 bg-brand-darkest/70 p-4 flex items-center justify-center mb-4">
+          <Image src={googleFiveStarsBadge} alt="5-star Google reviews badge" class="w-full h-auto object-contain max-h-28" />
+        </div>
+
+        <div class="flex items-center gap-1 mb-4" aria-label="Five star rating">
+          <span class="text-yellow-300 text-3xl leading-none">★</span>
+          <span class="text-yellow-300 text-3xl leading-none">★</span>
+          <span class="text-yellow-300 text-3xl leading-none">★</span>
+          <span class="text-yellow-300 text-3xl leading-none">★</span>
+          <span class="text-yellow-300 text-3xl leading-none">★</span>
+        </div>
+
+        <ul class="space-y-2 text-brand-sky/75 text-sm">
+          <li>Social proof that speaks to communication quality and finished results.</li>
+          <li>Reflects consistency across launch, support, and strategy.</li>
+          <li>Built from real local business outcomes, not vanity metrics.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="px-4 pb-24" data-animate>
+    <div class="max-w-5xl mx-auto rounded-3xl border border-brand-blue/30 bg-gradient-to-r from-brand-darkest via-brand-dark to-brand-darkest p-8 md:p-10 text-center">
+      <h3 class="font-heading text-3xl md:text-4xl text-white font-bold mb-3">Want these standards behind your next build?</h3>
+      <p class="text-brand-sky/80 text-lg mb-6">Let us put certified technical skill and proven customer-first execution to work for your business.</p>
+      <div class="mx-auto mb-6 max-w-[260px] rounded-2xl border border-brand-cyan/30 bg-brand-darkest/70 p-3 flex items-center justify-center">
+        <Image src={satisfactionBadge} alt="Customer satisfaction badge" class="w-full h-auto object-contain max-h-24" />
+      </div>
+      <a href="/contact" class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-lg font-semibold hover:bg-brand-accent-light">
+        Start Your Project
+      </a>
+    </div>
+  </section>
+</BaseLayout>

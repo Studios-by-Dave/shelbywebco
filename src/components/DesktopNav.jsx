@@ -2,8 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const aboutRef = useRef(null);
   const pricingRef = useRef(null);
 
   // Close dropdown when clicking outside
@@ -11,6 +13,9 @@ export default function DesktopNav() {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setServicesOpen(false);
+      }
+      if (aboutRef.current && !aboutRef.current.contains(event.target)) {
+        setAboutOpen(false);
       }
       if (pricingRef.current && !pricingRef.current.contains(event.target)) {
         setPricingOpen(false);
@@ -80,7 +85,32 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/about" className="text-white text-[1.1rem] leading-relaxed font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">About Us</a>
+      {/* About Dropdown */}
+      <div className="relative" ref={aboutRef}>
+        <button
+          onClick={() => setAboutOpen(!aboutOpen)}
+          className="text-white text-[1.05rem] font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+        >
+          About Us
+          <svg
+            className={`ml-1 w-4 h-4 transition-transform ${aboutOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {aboutOpen && (
+          <div className="absolute left-0 mt-2 w-52 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 space-y-1">
+              <a href="/about" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">About Us</a>
+              <a href="/about/awards" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-medium">Awards</a>
+            </div>
+          </div>
+        )}
+      </div>
       
       {/* Pricing Dropdown */}
       <div className="relative" ref={pricingRef}>
