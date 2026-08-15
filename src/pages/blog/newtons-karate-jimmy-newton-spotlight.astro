@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Image from '../../components/OptimizedImage.astro';
+import newtonImage1 from '../../../assets/badge icons/newton_1.png';
+import newtonImage2 from '../../../assets/badge icons/newton_2.png';
+import newtonImage3 from '../../../assets/newton_3.jpg';
 ---
 
 <BaseLayout 
   title="From Crest High Classmates to Local Business Owners: Celebrating Jimmy Newton and Newton's Karate | Community Spotlight"
   description="From Crest High Class of 1996 to a respected Shelby martial arts leader, this Community Spotlight celebrates Jimmy Newton and Newton's Karate for shaping confidence, discipline, and character across Cleveland County."
 >
-  <article class="pt-32 pb-24 px-4 bg-[#0A0A0A]">
+  <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="mb-16 text-center">
         <div class="inline-flex items-center gap-3 mb-6 px-4 py-1.5 rounded-full border border-orange-500/20 bg-orange-500/5">
@@ -37,6 +41,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           Today, Newton's Karate has become one of Shelby's most respected martial arts schools, helping children and adults develop confidence, discipline, respect, and practical self-defense skills every single day.
         </p>
 
+        <div class="my-12 rounded-2xl overflow-hidden shadow-2xl max-w-[380px] mx-auto">
+          <Image src={newtonImage3} alt="Newton's Karate new facility in Shelby" class="w-full h-auto" />
+        </div>
+
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">Continuing a Local Legacy</h2>
         <p class="text-brand-sky/80 mb-8 leading-relaxed">
           Many longtime Shelby residents remember Sensei Willie McIntosh and the tremendous influence he had on martial arts in our community.
@@ -49,6 +57,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="text-brand-sky/80 mb-12 leading-relaxed">
           That commitment to tradition and excellence is one of the reasons Newton's Karate has become such a respected name throughout the region.
         </p>
+
+        <div class="my-12 rounded-2xl overflow-hidden shadow-2xl max-w-[150px] mx-auto">
+          <Image src={newtonImage1} alt="Jimmy Newton at Newton's Karate" class="w-full h-auto" />
+        </div>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">More Than Learning to Punch and Kick</h2>
         <p class="text-brand-sky/80 mb-8 leading-relaxed">
@@ -64,6 +76,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li class="bg-brand-dark/30 p-4 rounded-xl border border-white/5 flex items-center gap-3"><span class="text-orange-500">✦</span><span class="text-brand-sky/80">Leadership</span></li>
           <li class="bg-brand-dark/30 p-4 rounded-xl border border-white/5 flex items-center gap-3"><span class="text-orange-500">✦</span><span class="text-brand-sky/80">Physical fitness</span></li>
         </ul>
+
+        <div class="my-12 rounded-2xl overflow-hidden shadow-2xl max-w-[150px] mx-auto">
+          <Image src={newtonImage2} alt="Students training at Newton's Karate" class="w-full h-auto" />
+        </div>
 
         <p class="text-brand-sky/80 mb-12 leading-relaxed">
           These life skills often become just as valuable outside the dojo as they are during class.
@@ -92,11 +108,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">A New Chapter for Newton's Karate</h2>
         <p class="text-brand-sky/80 mb-12 leading-relaxed">
-          After years of serving the community, Newton's Karate recently moved into a beautiful new facility on South DeKalb Street in Shelby.
-        </p>
-
-        <p class="text-brand-sky/80 mb-12 leading-relaxed">
-          The expanded space allows Jimmy and his instructors to continue growing while providing an even better experience for current and future students. It represents another exciting milestone for a business that has steadily served Cleveland County for nearly two decades.
+          After years of serving the community, Newton's Karate recently moved into a beautiful new facility on South DeKalb Street in Shelby. The expanded space allows Jimmy and his instructors to continue growing while providing an even better experience for current and future students. It represents another exciting milestone for a business that has steadily served Cleveland County for nearly two decades.
         </p>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">Supporting Local Businesses Matters</h2>

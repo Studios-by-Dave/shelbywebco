@@ -40,13 +40,13 @@ export default function MobileNav() {
       {isOpen && (
         <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-blue/20 md:hidden font-nav">
           <div className="px-4 py-4 space-y-3">
-            <a href="/" className="block text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Home</a>
+            <a href="/" className="block text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Home</a>
             
             {/* Services Section */}
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
+                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
               >
                 Services
                 <svg
@@ -97,7 +97,7 @@ export default function MobileNav() {
             <div>
               <button
                 onClick={() => setAboutOpen(!aboutOpen)}
-                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
+                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
               >
                 About Us
                 <svg
@@ -127,7 +127,7 @@ export default function MobileNav() {
             <div>
               <button
                 onClick={() => setPricingOpen(!pricingOpen)}
-                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
+                className="flex items-center justify-between w-full text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2 transition-colors"
               >
                 Pricing
                 <svg
@@ -153,7 +153,7 @@ export default function MobileNav() {
               )}
             </div>
             
-            <a href="/contact" className="block text-white text-[1.1rem] leading-relaxed font-normal drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
+            <a href="/contact" className="block text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
             <a href="/blog" className="inline-block font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
