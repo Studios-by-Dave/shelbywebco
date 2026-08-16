@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Image from '../../components/OptimizedImage.astro';
+import gabeImage from '../../../assets/gabe_whisnant_1.webp';
 ---
 
 <BaseLayout 
@@ -31,6 +33,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="text-brand-sky/80 mb-12 leading-relaxed">
           Today, Gabe serves as a News Editor at <a href="https://www.newsweek.com/authors/gabe-whisnant" target="_blank" rel="noopener noreferrer" class="text-brand-cyan hover:underline decoration-brand-cyan/30 underline-offset-4">Newsweek</a>, based right here in North Carolina — a long way from where his story started, yet still rooted in the values of honest, community-focused journalism.
         </p>
+
+        <div class="my-12 rounded-2xl overflow-hidden shadow-2xl max-w-[640px] mx-auto">
+          <Image src={gabeImage} alt="Gabe Whisnant, Shelby Star and Newsweek journalist" class="w-full h-auto" />
+        </div>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">A Local Kid Who Never Left the Story</h2>
         <p class="text-brand-sky/80 mb-8 leading-relaxed">
