@@ -14,7 +14,7 @@ import heroHuman from '../../assets/about/hero-human-inside.webp';
 import spaceship from '../../assets/about/hero-human-inside.webp';
 import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
 import daveHeadshot from '../../assets/about/Headshot_1.jpg';
-import dave20 from '../../assets/about/Sweb_dave20.png';
+
 ---
 
 <BaseLayout 
@@ -352,15 +352,7 @@ import dave20 from '../../assets/about/Sweb_dave20.png';
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1 relative group">
-          <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-brand-cyan rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-          <Image 
-            src={dave20} 
-            alt="Dave at Shelby Web Co" 
-            class="relative rounded-2xl shadow-2xl border border-white/10 w-full max-h-[500px] object-cover animate-float" 
-          />
-        </div>
-        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 order-1 lg:order-2">
+        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 lg:col-span-2">
           <div class="grid grid-cols-2 gap-6">
             <div class="text-center">
               <p class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-brand-blue text-stats-outline">

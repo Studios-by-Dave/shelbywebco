@@ -7,6 +7,18 @@ import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg'
 
 import mascotOne from '../../assets/mascot_1.jpg';
 import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
+
+import chatgptLogo from '../../assets/logo banner/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg';
+import claudeLogo from '../../assets/logo banner/claude-Ekx6wd5U.png';
+import codeLogo from '../../assets/logo banner/code.svg';
+import comptiaTool from '../../assets/logo banner/comptia-Cm7O9_X6.png';
+import devinLogo from '../../assets/logo banner/devin-logo-1.png';
+import githubLogo from '../../assets/logo banner/github-logo-png_seeklogo-304612.png';
+import grokLogo from '../../assets/logo banner/grok-ai-icon.webp';
+import linuxLogo from '../../assets/logo banner/linux-operating-systems-logo-whatsapp-logo.jpg';
+import ollamaLogo from '../../assets/logo banner/ollama-logo1.png';
+import opencodeLogo from '../../assets/logo banner/opencode-BrfWWnj4.png';
+import vscodeLogo from '../../assets/logo banner/vscode--vbwWAnL.jpeg';
 ---
 
 <BaseLayout 
@@ -45,7 +57,7 @@ import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
       100% { transform: translateX(-100%); }
     }
     .animate-promo-ticker {
-      animation: promo-ticker 50s linear infinite;
+      animation: promo-ticker 75s linear infinite;
     }
   </style>
 
@@ -131,7 +143,7 @@ import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
           <div class="hidden lg:block">
             <a 
               href="tel:+17044738188" 
-              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 sm:px-8 sm:py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 lg:-translate-y-16 lg:-translate-x-12 mr-0 lg:mr-0 self-center lg:self-end transform scale-90 sm:scale-100 lg:scale-105 origin-center lg:origin-center w-full sm:w-fit max-w-sm sm:max-w-none mt-4 lg:mt-0 order-first lg:order-none mx-auto sm:mx-0"
+              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 sm:px-8 sm:py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 lg:-translate-y-16 lg:-translate-x-16 mr-0 lg:mr-0 self-center lg:self-end transform scale-90 sm:scale-100 lg:scale-105 origin-center lg:origin-center w-full sm:w-fit max-w-sm sm:max-w-none mt-4 lg:mt-0 order-first lg:order-none mx-auto sm:mx-0"
             >
               <div class="flex items-center space-x-2 mb-2">
                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -269,6 +281,26 @@ import handsBadge from '../../assets/badge icons/bluebadge_hands.jpg';
 
       </div>
     </section>
+
+  <!-- Tool Logo Showcase -->
+  <section class="py-12 md:py-16 px-4 border-t border-white/5" data-animate>
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-brand-blue text-sm uppercase tracking-widest mb-6">✦ Powered by the Best in the Industry</p>
+      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-14 opacity-80">
+        <Image src={chatgptLogo} alt="ChatGPT" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={claudeLogo} alt="Claude" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={codeLogo} alt="VS Code" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={comptiaTool} alt="CompTIA" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={devinLogo} alt="DevIn" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={githubLogo} alt="GitHub" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={grokLogo} alt="Grok" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={linuxLogo} alt="Linux" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={ollamaLogo} alt="Ollama" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={opencodeLogo} alt="OpenCode" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={vscodeLogo} alt="VS Code" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+      </div>
+    </div>
+  </section>
 
   <!-- Industries Section -->
   <section class="py-12 md:py-16 px-4" data-animate>
