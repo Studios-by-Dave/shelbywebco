@@ -1,0 +1,356 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+import Image from '../../components/OptimizedImage.astro';
+
+import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
+import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
+
+const faqItems = [
+  {
+    question: 'What is a custom SaaS platform?',
+    answer: 'A Software-as-a-Service (SaaS) platform is a web-based application your business runs on a subscription model. A custom build means it is designed and coded specifically around your workflows, your clients, and your goals — not shoehorned into a generic tool. The result is software that works exactly the way your business does.'
+  },
+  {
+    question: 'Why get custom software instead of off-the-shelf SaaS?',
+    answer: 'Off-the-shelf tools force your business to change how it works to fit the software. Custom software adapts to you: unique processes, branding, integrations, and data handling are built in from day one. You own the code, you control the roadmap, and you eliminate recurring per-seat license fees.'
+  },
+  {
+    question: 'How much does custom software and SaaS development cost?',
+    answer: 'Every custom build is scoped individually because no two are alike. Smaller internal tools and portals typically run in the mid four to low five figures, while full SaaS platforms with billing, user accounts, and complex workflows range from the low five figures up. Every project is quoted transparently after a discovery call — no surprises.'
+  },
+  {
+    question: 'How long does it take to build a custom SaaS platform?',
+    answer: 'MVP (minimum viable product) builds usually land in 4-8 weeks, while full-scale platforms with advanced features, integrations, and robust security often take 3-6 months. We work in phases so you can see progress and launch value early, then iterate.'
+  },
+  {
+    question: 'Do you build for businesses outside Shelby and Western NC?',
+    answer: 'Yes. We work remotely with clients across the country, running our custom software practice from our Shelby, NC base. Wherever you are, you get a dedicated US-based team without big-city agency overhead.'
+  },
+  {
+    question: 'Can you fix or take over an existing custom application?',
+    answer: 'Absolutely. Whether you have legacy code that needs modernizing, a buggy in-house tool, or a prototype that needs to scale into production, we can audit, maintain, refactor, and extend your existing software.'
+  }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map(item => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': { '@type': 'Answer', 'text': item.answer }
+  }))
+};
+---
+
+<BaseLayout 
+  title="Custom Software & SaaS Platform Development"
+  description="Custom software and SaaS platform development in Shelby, NC. We design and build fully custom web applications, portals, and subscription platforms entirely around your business. Own your code, own your roadmap."
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Custom Software & SaaS</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          Custom <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Software & SaaS</span> Built to Fit Your Business
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-brand-sky/80 mb-8 max-w-3xl mx-auto">
+        Off-the-shelf tools make you fit their mold. We build fully custom web applications and SaaS platforms engineered around exactly how your business works — so the software serves you, not the other way around.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a 
+          href="/contact"
+          class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+        >
+          Start a Discovery Call
+        </a>
+        <a 
+          href="tel:+17044738188"
+          class="text-white text-xl md:text-2xl font-bold hover:text-brand-accent transition-colors"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+      
+      <div class="mt-12 flex justify-center items-center gap-8">
+        <Image 
+          src={comptiaBadge} 
+          alt="CompTIA A+ Digital Badge" 
+          class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+        <Image 
+          src={projectBadge} 
+          alt="Quality Project Badge" 
+          class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Software Built Around Your Business, Not Around a Template</h2>
+        <p class="text-brand-sky/70 max-w-2xl mx-auto text-lg">
+          From internal tools that save your team hours to full subscription platforms that generate recurring revenue — if it needs custom logic and data, we can build it.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zM9 17h6"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Custom SaaS Platforms</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            Full subscription-based platforms with user accounts, billing, dashboards, and recurring-revenue architectures — built entirely from scratch for your model.
+          </p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Client & Vendor Portals</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            Secure, self-service portals where your customers, members, or vendors can log in, manage their account, view files, and interact with your business — day or night.
+          </p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM19 13l-7 4-7-4"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Internal Business Tools</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            Custom dashboards, scheduling systems, job boards, inventory trackers, and data tools that automate the busywork so your team can focus on the work that matters.
+          </p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Custom Integrations</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            We wire your tools together — payment gateways, CRMs, webhooks, and third-party APIs — so your data flows seamlessly and your systems talk to each other.
+          </p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Security & Data Solutions</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            Authentication, role-based permissions, encrypted storage, and scalable data architecture built in from day one — because the right fundamentals prevent costly rework later.
+          </p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-[0_0_15px_rgba(132,204,22,0.3)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Modernizing Legacy Code</h3>
+          <p class="text-brand-sky/70 text-lg font-light leading-relaxed">
+            Have old, fragile software running your business? We audit, refactor, and rebuild it on modern, scalable foundations — without interrupting your operations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Custom Section -->
+  <section class="py-24 px-4 bg-brand-dark" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Why Go Custom</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Why Custom Beats Off-the-Shelf Every Time</h2>
+          <div class="space-y-6 text-lg text-brand-sky/70">
+            <p>
+              Off-the-shelf SaaS is built for a generic "everyone" — so you pay per-seat forever, fight their limitations, and conform your business to their rules.
+            </p>
+            <p>
+              When we build custom, you <span class="text-white font-bold">own the code and the roadmap</span>. There are no license fees, no forced feature bloat, and no "good enough" workarounds. It does exactly what you need and nothing you don't.
+            </p>
+          </div>
+
+          <div class="mt-10 space-y-4">
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent shrink-0">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <p class="text-white font-semibold">You own the IP &amp; code</p>
+            </div>
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent shrink-0">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <p class="text-white font-semibold">No recurring per-seat fees</p>
+            </div>
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent shrink-0">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <p class="text-white font-semibold">Built around your exact workflows</p>
+            </div>
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl">
+              <div class="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent shrink-0">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <p class="text-white font-semibold">Flag on you: scale when you do</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-darkest border border-white/10 rounded-3xl p-8 shadow-2xl">
+          <div class="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <p class="text-brand-sky/50 text-xs ml-2 font-mono">pipeline.build.log</p>
+          </div>
+          <div class="space-y-3 font-mono text-sm text-brand-sky/70">
+            <div class="flex gap-3"><span class="text-brand-sky/40">✓</span><span>Requirements scoped with you</span></div>
+            <div class="flex gap-3"><span class="text-brand-sky/40">✓</span><span>Custom architecture &amp; data model</span></div>
+            <div class="flex gap-3"><span class="text-brand-sky/40">✓</span><span>Secure auth &amp; permissions</span></div>
+            <div class="flex gap-3"><span class="text-brand-sky/40">✓</span><span>Built to scale, tested, deployed</span></div>
+            <div class="flex gap-3"><span class="text-brand-accent">✓</span><span>Owned by you — code &amp; roadmap</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-24 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Process</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">From Idea to Production-Ready Software</h2>
+        <p class="text-brand-sky/70 max-w-2xl mx-auto text-lg">
+          No mystery, no surprises. We guide you through a clear, phased process so you always know what's being built — and why.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-brand-dark rounded-2xl border border-white/5 p-8">
+          <div class="text-brand-accent text-4xl font-black mb-4">01</div>
+          <h3 class="text-xl font-bold text-white mb-3">Discovery &amp; Scoping</h3>
+          <p class="text-brand-sky/70 text-lg font-light">We map your goals, workflows, and data so the build starts on the right foundation.</p>
+        </div>
+        <div class="bg-brand-dark rounded-2xl border border-white/5 p-8">
+          <div class="text-brand-cyan text-4xl font-black mb-4">02</div>
+          <h3 class="text-xl font-bold text-white mb-3">Design &amp; Architecture</h3>
+          <p class="text-brand-sky/70 text-lg font-light">We design the experience and engineer a secure, scalable architecture to support it.</p>
+        </div>
+        <div class="bg-brand-dark rounded-2xl border border-white/5 p-8">
+          <div class="text-brand-blue-light text-4xl font-black mb-4">03</div>
+          <h3 class="text-xl font-bold text-white mb-3">Build &amp; Test</h3>
+          <p class="text-brand-sky/70 text-lg font-light">We develop in phases with continuous testing, so you see working progress along the way.</p>
+        </div>
+        <div class="bg-brand-dark rounded-2xl border border-white/5 p-8">
+          <div class="text-brand-glow text-4xl font-black mb-4">04</div>
+          <h3 class="text-xl font-bold text-white mb-3">Launch &amp; Iterate</h3>
+          <p class="text-brand-sky/70 text-lg font-light">We deploy, monitor, and refine — then keep improving your software as your business grows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-24 px-4 relative overflow-hidden bg-brand-dark" data-animate>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Software That Fits Your Business — Not the Other Way Around</h2>
+      <p class="text-lg text-brand-sky/80 mb-10">Let's talk about what custom software or SaaS could do for your operation. No boilerplate, just a straight conversation about your goals.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/contact"
+          class="inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-accent-light shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
+        >
+          Start a Discovery Call
+        </a>
+        <a 
+          href="tel:+17044738188"
+          class="inline-block border-2 border-brand-accent text-brand-accent px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-accent hover:text-[#0A0A0A] transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ FAQs</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Custom Software &amp; SaaS — Questions Answered</h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqItems.map((item) => (
+            <details class="group bg-brand-dark rounded-2xl border border-white/10 overflow-hidden">
+              <summary class="flex items-center justify-between gap-4 cursor-pointer px-6 py-5 list-none font-bold text-white text-lg hover:text-brand-cyan transition-colors">
+                {item.question}
+                <span class="shrink-0 w-6 h-6 text-brand-accent transition-transform duration-300 group-open:rotate-45">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                </span>
+              </summary>
+              <div class="px-6 pb-6 text-brand-sky/70 text-lg leading-relaxed">
+                {item.answer}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Mentions for SEO -->
+  <section class="py-12 px-4 border-t border-white/5 bg-brand-darkest/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-brand-sky/40">
+        <span class="text-brand-glow/60 uppercase tracking-widest font-bold">Serving Our Community:</span>
+        <a href="/web-design-shelby-nc" class="hover:text-brand-cyan transition-colors">Shelby Custom Software</a>
+        <a href="/web-design-gastonia-nc" class="hover:text-brand-cyan transition-colors">Gastonia SaaS Development</a>
+        <a href="/web-design-asheville-nc" class="hover:text-brand-cyan transition-colors">Asheville Web Apps</a>
+        <a href="/web-design-forest-city-nc" class="hover:text-brand-cyan transition-colors">Forest City Software</a>
+        <a href="/web-design-polkville-nc" class="hover:text-brand-cyan transition-colors">Polkville Web Applications</a>
+        <a href="/web-design-boiling-springs-nc" class="hover:text-brand-cyan transition-colors">Boiling Springs Software</a>
+        <a href="/web-design-kings-mountain-nc" class="hover:text-brand-cyan transition-colors">Kings Mountain SaaS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-10">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+        </div>
+        <p class="text-brand-sky/70 text-xl italic mb-4">"Great customer service!"</p>
+        <p class="font-bold text-white text-lg">William Stephans</p>
+        <p class="text-brand-cyan/60 text-sm uppercase tracking-widest mt-2">Local Guide</p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -60,7 +60,7 @@ export default function DesktopNav() {
                   <a href="/services/web-design" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Web Design</a>
                   <a href="/services/branding" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Logo Design & Branding</a>
                   <a href="/services/seo" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">SEO Services</a>
-                  <a href="/services/media-packs" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Media Packs</a>
+                  <a href="/services/custom-software-saas" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Custom Software & SaaS</a>
                   <a href="/services/audio-branding" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Audio Branding</a>
                   <a href="/services/case-studies" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Case Studies</a>
                   <a href="/services/portfolio" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Portfolio</a>

@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+---
+
+<BaseLayout 
+  title="Free Website for 5 Asheville, NC Businesses"
+  description="Shelby Web Company is giving away 5 free, custom-designed websites to select small service businesses in Asheville, NC. Mobile-responsive design, local SEO setup, and more — completely free."
+>
+
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-32 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offer</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          A Free Website for <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">5 Asheville Businesses.</span>
+        </h1>
+      </div>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        Five select Asheville, NC small service businesses will receive a brand-new, custom-designed website — completely free. We're building it to help five local businesses get found, get booked, and get growing.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-8 py-3 rounded-xl font-bold hover:bg-white/20 hover:border-white/40 transition-all"
+      >
+        Claim Your Spot
+      </a>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">What Each Winner Receives</h2>
+        <p class="text-brand-sky/70 max-w-2xl mx-auto text-lg">
+          This isn't a stripped-down placeholder. Selected businesses get a full, professional website built to win local customers.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Custom Website Design</h3>
+          <p class="text-brand-sky/60">A bespoke design built around your business, your services, and your brand — not a template everyone else uses.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Mobile-Responsive Build</h3>
+          <p class="text-brand-sky/60">Fast, mobile-first design so you look great on every device — where most Asheville customers search from their phones.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Local SEO Setup</h3>
+          <p class="text-brand-sky/60">We configure your site to be found for the local Asheville searches that matter to your business — right out of the gate.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Launch & Handover</h3>
+          <p class="text-brand-sky/60">We build it, launch it, and hand it over ready to use — with the setup and onboarding handled for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Who Should Apply</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">Small Service Businesses in Asheville & Western NC</h3>
+          <p class="text-brand-sky/60 leading-relaxed">
+            This offer is for local service businesses — contractors, salons, cleaners, landscapers, home services, healthcare providers, and similar trades operating in or around Asheville, NC.
+          </p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">Only 5 Spots Available</h3>
+          <p class="text-brand-sky/60 leading-relaxed">
+            We're keeping this exclusive to five businesses so we can give each winner a genuinely excellent, custom-built website. Once the five spots are filled, this offer closes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-24 px-4 bg-brand-dark/50 border-y border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">How It Works</h2>
+      
+      <div class="space-y-8">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">1</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Reach Out to Claim Your Spot</h3>
+            <p class="text-brand-sky/70">Contact us and tell us you'd like to be considered for the free Asheville website offer. We'll confirm whether your business qualifies.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">2</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Share Your Business Details</h3>
+            <p class="text-brand-sky/70">Tell us about your services, customers, and goals. This helps us design a website that actually works for your business.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">3</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">We Build & Launch</h3>
+            <p class="text-brand-sky/70">Our team designs, develops, and launches your custom website, then hands it over fully ready for your customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">Is the website really completely free?</h3>
+          <p class="text-brand-sky/70">Yes. Selected businesses receive a custom-designed website at no cost. There are no hidden fees and no commitment required.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">Who qualifies as a "small service business"?</h3>
+          <p class="text-brand-sky/70">Contractors, trades, salons, cleaners, landscapers, home services, healthcare providers, and similar local service businesses operating in or around Asheville, NC.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">I'm outside Asheville but in Western NC. Do I qualify?</h3>
+          <p class="text-brand-sky/70">We prioritize Asheville, NC businesses for this offer, but we're happy to discuss custom web design for businesses throughout Western NC and beyond.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">How soon is the offer closing?</h3>
+          <p class="text-brand-sky/70">The offer is limited to five businesses and closes once those spots are filled, so we encourage interested businesses to reach out right away.</p>
+        </div>
+
+        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+          <h3 class="text-lg font-bold text-white mb-3">Are there any ongoing costs after launch?</h3>
+          <p class="text-brand-sky/70">None are required. Across the industry ongoing maintenance is common, but you get to choose if you'd like add-on support. The website itself is yours, free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Don't Miss Out — Only 5 Spots</h2>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        If your Asheville-area service business could use a fresh, high-converting website, reach out today to reserve your spot.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all text-lg"
+      >
+        Claim Your Spot Today
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
