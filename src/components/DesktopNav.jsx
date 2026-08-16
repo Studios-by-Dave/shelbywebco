@@ -30,13 +30,13 @@ export default function DesktopNav() {
 
   return (
     <div className="hidden md:flex items-center space-x-8 font-nav">
-      <a href="/" className="text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
+      <a href="/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
       
       {/* Services Dropdown */}
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
-          className="text-white text-[1.05rem] font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
         >
           Services
           <svg
@@ -89,7 +89,7 @@ export default function DesktopNav() {
       <div className="relative" ref={aboutRef}>
         <button
           onClick={() => setAboutOpen(!aboutOpen)}
-          className="text-white text-[1.05rem] font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
         >
           About Us
           <svg
@@ -106,6 +106,7 @@ export default function DesktopNav() {
           <div className="absolute left-0 mt-2 w-52 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
             <div className="p-4 space-y-1">
               <a href="/about" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">About Us</a>
+              <a href="/about/how-we-work" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">How We Work</a>
               <a href="/about/awards" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Awards</a>
             </div>
           </div>
@@ -116,7 +117,7 @@ export default function DesktopNav() {
       <div className="relative" ref={pricingRef}>
         <button
           onClick={() => setPricingOpen(!pricingOpen)}
-          className="text-white text-[1.05rem] font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
         >
           Pricing
           <svg
@@ -140,7 +141,7 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/contact" className="text-white text-[1.1rem] leading-relaxed font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
+      <a href="/contact" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
       <a href="/blog" className="font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>
   );
