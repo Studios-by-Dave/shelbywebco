@@ -164,5 +164,20 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return new Response(JSON.stringify({ success: false, message: 'Could not save entry — please try again.' }), { status: 500, headers: { 'Content-Type': 'application/json' } });
   }
 
+  // Also forward to contact form (Formspree) so raffle entries appear in the inbox
+  try {
+    const contactPayload = new URLSearchParams({
+      name: `${contactName} — Raffle: ${businessName}`,
+      email,
+      message: `Raffle entry for 5 free Asheville websites\nBusiness: ${businessName}\nContact: ${contactName}\nEmail: ${email}\nPhone: ${phone}\nWebsite: ${website}\nType: ${businessType}\nMessage: ${message}`,
+      subject: `Raffle entry: ${businessName} (${email})`,
+    });
+    await fetch('https://formspree.io/f/mqaeapoa', {
+      method: 'POST',
+      headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: contactPayload.toString(),
+    });
+  } catch {}
+
   return new Response(JSON.stringify({ success: true, message: "You're entered! We'll contact winners by email." }), { status: 200, headers: { 'Content-Type': 'application/json' } });
 };
