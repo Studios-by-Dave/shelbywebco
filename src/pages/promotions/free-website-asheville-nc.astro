@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
-import freeBadge from '../../../assets/free-offer-badge.png';
 ---
 
 <BaseLayout 
@@ -20,7 +19,9 @@ import freeBadge from '../../../assets/free-offer-badge.png';
         </h1>
       </div>
       <div class="flex justify-center mb-8">
-        <img src={freeBadge.src} alt="Free Website Offer Badge" class="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_20px_rgba(132,204,22,0.4)]" />
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent-light flex items-center justify-center shadow-[0_0_30px_rgba(132,204,22,0.5)]">
+          <span class="text-[#0A0A0A] font-heading font-black text-3xl md:text-4xl text-center leading-tight">Free<br>Site</span>
+        </div>
       </div>
       <p class="text-xl text-brand-sky/80 mb-8">
         Five select Asheville, NC small service businesses will receive a brand-new, custom-designed website — completely free. We're building it to help five local businesses get found, get booked, and get growing.
