@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Image from '../../components/OptimizedImage.astro';
+import frHero from '../../../assets/fr_hero.jpg';
+import frStats from '../../../assets/fr_stats.webp';
+import frDave from '../../../assets/fr_dave.png';
+import frPeer from '../../../assets/fr_peer_flyer.webp';
+---
+
+<BaseLayout
+  title="Standing With Our Heroes: A Community Spotlight on Supporting Local First Responders | Community Spotlight"
+  description="Meet the police, firefighters, EMTs, and ER teams who keep Shelby, NC safe — the stats behind their sacrifice, the local organizations to know, and how you can support them."
+>
+  <article class="pt-32 pb-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <header class="mb-16 text-center">
+        <div class="inline-flex items-center gap-3 mb-6 px-4 py-1.5 rounded-full border border-orange-500/20 bg-orange-500/5">
+          <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+          <span class="w-1 h-1 rounded-full bg-orange-500/30"></span>
+          <span class="text-brand-sky/60 text-xs font-medium uppercase tracking-widest">Vol #1 Article #8 • August 2026</span>
+        </div>
+        <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+          Standing With Our Heroes: <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">A Community Spotlight on Supporting Local First Responders</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-brand-sky/80 leading-relaxed max-w-3xl mx-auto italic">
+          Honoring the brave men and women who keep our communities safe in Shelby, NC and beyond
+        </p>
+      </header>
+
+      <!-- Main Image -->
+      <div class="mb-16 overflow-hidden rounded-3xl shadow-2xl border border-white/5">
+        <Image src={frHero} width={1024} height={576} alt="Support First Responders in Shelby, NC" class="w-full h-auto" />
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-lg text-brand-sky/90 mb-12">
+          Featured on <a href="/" class="text-brand-cyan hover:underline decoration-brand-cyan/30 underline-offset-4">Shelby Web Company</a> | Spotlighting <strong>the first responders of Cleveland County</strong>
+        </p>
+
+        <p class="text-brand-sky/80 mb-8 leading-relaxed">
+          Behind every safe neighborhood in Shelby, NC is a team of people most of us only think about in an emergency. Police officers, firefighters, paramedics, and ER medical staff show up long before we call — and they carry the weight of that service long after the call ends. This spotlight is our way of saying thank you, and of making it easier to know who they are and how to support them.
+        </p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
+          <span class="text-orange-500">01.</span> The Reality of First Responder Service
+        </h2>
+        <p class="text-brand-sky/80 mb-8 leading-relaxed">
+          The numbers behind first responder service are sobering. These are the daily challenges and sacrifices our local heroes face, drawn from national data:
+        </p>
+
+        <div class="mb-12 overflow-hidden rounded-2xl border border-white/5">
+          <Image src={frStats} width={2500} height={1667} alt="First responder service statistics" class="w-full h-auto" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">~60</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Officers Killed Annually</h3>
+            <p class="text-brand-sky/70 text-sm">On average, 50–60 law enforcement officers are killed in the line of duty each year in the US (FBI LEOKA data).</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">~1,500</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Officer Shootouts / Year</h3>
+            <p class="text-brand-sky/70 text-sm">Approximately 1,500 police officers are involved in shooting incidents annually.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">25–30%</div>
+            <h3 class="text-lg font-semibold text-white mb-2">PTSD Among Officers</h3>
+            <p class="text-brand-sky/70 text-sm">Studies indicate 25–30% of police officers experience symptoms of PTSD from traumatic events on duty.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">~60</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Firefighter Deaths / Year</h3>
+            <p class="text-brand-sky/70 text-sm">Approximately 60 firefighters die in the line of duty annually in the US (NFPA data).</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">~65,000</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Firefighter Injuries / Year</h3>
+            <p class="text-brand-sky/70 text-sm">Over 65,000 firefighters are injured on the job each year, many with serious injuries.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">70%</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Volunteer Firefighters</h3>
+            <p class="text-brand-sky/70 text-sm">Nearly 70% of US firefighters are volunteers serving their communities without compensation.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">12+ Hrs</div>
+            <h3 class="text-lg font-semibold text-white mb-2">ER Shifts in Crisis</h3>
+            <p class="text-brand-sky/70 text-sm">ER nurses and doctors routinely work 12+ hour shifts, often 16+ during emergencies and pandemics.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">35%</div>
+            <h3 class="text-lg font-semibold text-white mb-2">ER Nurse Burnout</h3>
+            <p class="text-brand-sky/70 text-sm">About 35% of ER nurses experience burnout syndrome from high-stress environments.</p>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="text-orange-500 text-3xl font-bold mb-2">30%</div>
+            <h3 class="text-lg font-semibold text-white mb-2">Paramedic PTSD</h3>
+            <p class="text-brand-sky/70 text-sm">Roughly 30% of paramedics and EMTs experience PTSD — higher than the general population.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
+          <span class="text-orange-500">02.</span> Shelby, NC First Responder Organizations
+        </h2>
+        <p class="text-brand-sky/80 mb-8 leading-relaxed">
+          Cleveland County is served by dedicated local agencies across every discipline. Here are the organizations protecting our community every day:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">👮</span>
+              <h3 class="text-xl font-semibold text-white">Police Departments</h3>
+            </div>
+            <div class="space-y-3 text-sm">
+              <div>
+                <h4 class="font-semibold text-brand-light">Shelby Police Department</h4>
+                <p class="text-brand-sky/70">Law enforcement for the City of Shelby. 126 W Warren St, Shelby, NC 28150 · Non-Emergency: (704) 484-4848</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-brand-light">Cleveland County Sheriff's Office</h4>
+                <p class="text-brand-sky/70">County-wide patrol, investigations & detention. 100 Justice Pl, Shelby, NC 28150 · Non-Emergency: (704) 484-4888</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🚒</span>
+              <h3 class="text-xl font-semibold text-white">Fire Departments</h3>
+            </div>
+            <div class="space-y-3 text-sm">
+              <div>
+                <h4 class="font-semibold text-brand-light">Shelby Fire Department</h4>
+                <p class="text-brand-sky/70">Professional fire protection & emergency response. 201 S Lafayette St, Shelby, NC 28150 · Non-Emergency: (704) 484-6866</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-brand-light">Cleveland County Volunteer Fire Departments</h4>
+                <p class="text-brand-sky/70">Multiple volunteer stations including Fallston, Kings Mountain, Boiling Springs & more.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🚑</span>
+              <h3 class="text-xl font-semibold text-white">Paramedics & EMS</h3>
+            </div>
+            <div class="space-y-3 text-sm">
+              <div>
+                <h4 class="font-semibold text-brand-light">Cleveland County EMS</h4>
+                <p class="text-brand-sky/70">Advanced life support & EMS countywide. Administration: (704) 484-4848</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-brand-light">Atrium Health Cleveland EMS</h4>
+                <p class="text-brand-sky/70">Hospital-based emergency medical services with rapid response.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🏥</span>
+              <h3 class="text-xl font-semibold text-white">Emergency Medical Staff</h3>
+            </div>
+            <div class="space-y-3 text-sm">
+              <div>
+                <h4 class="font-semibold text-brand-light">Atrium Health Cleveland Emergency Department</h4>
+                <p class="text-brand-sky/70">24/7 emergency care. 201 Fallston Rd, Shelby, NC 28150 · (704) 481-5000</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-brand-light">Carolinas HealthCare System Shelby</h4>
+                <p class="text-brand-sky/70">Comprehensive emergency services with trauma care for Shelby & Cleveland County.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
+          <span class="text-orange-500">03.</span> How You Can Show Your Support
+        </h2>
+
+        <div class="bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/20 p-8 my-12 rounded-3xl">
+          <p class="text-white font-medium italic mb-4 text-2xl text-center">"Support Your Local Fire Department!"</p>
+          <p class="text-brand-sky/70 text-sm text-center mb-0">— David Richardson</p>
+        </div>
+
+        <div class="mb-12 overflow-hidden rounded-2xl border border-white/5">
+          <Image src={frDave} width={1264} height={843} alt="Support your local fire department" class="w-full h-auto" />
+          <p class="text-brand-sky/60 text-sm mt-3 text-center">
+            Ok, let's be honest — this is an AI-generated image. BUT we actually have one of these planned in the very near future, and a colleague will be furnishing and building the axe from scratch. We'll be sure to take real pictures!
+          </p>
+        </div>
+
+        <div class="mb-12 overflow-hidden rounded-2xl border border-white/5">
+          <Image src={frPeer} width={1467} height={947} alt="First Responder Peer Support flyer" class="w-full h-auto" />
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <h3 class="text-xl font-semibold text-brand-light mb-6">📞 Crisis & Support Hotlines</h3>
+            <ul class="space-y-4 text-sm list-none p-0 m-0">
+              <li><h4 class="font-semibold text-white">988 Suicide & Crisis Lifeline</h4><p class="text-brand-sky/70">24/7 free and confidential support. <a href="https://988lifeline.org" target="_blank" rel="noopener" class="text-brand-cyan hover:underline">988lifeline.org</a></p></li>
+              <li><h4 class="font-semibold text-white">Safe Call Now</h4><p class="text-brand-sky/70">24/7 helpline for first responders & families. 1-206-459-3020</p></li>
+              <li><h4 class="font-semibold text-white">Frontline Helpline</h4><p class="text-brand-sky/70">24/7 support by experienced first responders. 1-866-676-7500</p></li>
+              <li><h4 class="font-semibold text-white">Responder Health Peer Advocate</h4><p class="text-brand-sky/70">Peer support for first responders. (253) 243-3701</p></li>
+            </ul>
+          </div>
+          <div class="bg-brand-dark/50 p-6 rounded-2xl border border-white/5">
+            <h3 class="text-xl font-semibold text-brand-light mb-6">🤝 Support Organizations</h3>
+            <ul class="space-y-4 text-sm list-none p-0 m-0">
+              <li><h4 class="font-semibold text-white">NC DPS Responder Assistance Initiative</h4><p class="text-brand-sky/70">Mental health & wellness for NC first responders. <a href="https://www.ncdps.gov/dps-services/responder-assistance-initiative" target="_blank" rel="noopener" class="text-brand-cyan hover:underline">Visit Website →</a></p></li>
+              <li><h4 class="font-semibold text-white">Gary Sinise Foundation</h4><p class="text-brand-sky/70">Equipment, training & grants for first responders. <a href="https://www.garysinisefoundation.org/programs/first-responder-support" target="_blank" rel="noopener" class="text-brand-cyan hover:underline">Visit Website →</a></p></li>
+              <li><h4 class="font-semibold text-white">Duty to Act Coffee Co.</h4><p class="text-brand-sky/70">Supporting first responders through community & coffee. <a href="https://dutytoact.shop/collections/support-your-local" target="_blank" rel="noopener" class="text-brand-cyan hover:underline">Visit Website →</a></p></li>
+              <li><h4 class="font-semibold text-white">ArmorUp America</h4><p class="text-brand-sky/70">Tools, research & services for frontline workers. <a href="https://www.armorupamerica.com/" target="_blank" rel="noopener" class="text-brand-cyan hover:underline">Visit Website →</a></p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-orange-600 to-brand-darkest p-12 rounded-[2rem] text-center relative overflow-hidden">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,165,0,0.1),transparent_70%)]"></div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-6 relative z-10 text-center">Know a Local Hero?</h2>
+          <p class="text-xl text-white/80 mb-10 relative z-10 max-w-2xl mx-auto">
+            If there's a first responder, organization, or story in Shelby we should spotlight next, we'd love to hear about it.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <a href="/contact/" class="bg-white text-orange-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-all">
+              Nominate a Hero
+            </a>
+            <a href="/blog/" class="bg-black/20 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-black/30 transition-all">
+              Read More Spotlights
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-24 p-8 bg-brand-dark/50 border border-white/5 rounded-2xl">
+          <p class="text-brand-sky/60 text-sm mb-0">
+            This article was written and published by <strong>Shelby Web Company</strong> as part of an ongoing series spotlighting the people and organizations that make Cleveland County stronger. To learn more about our web design and digital marketing services, visit <a href="/" class="text-brand-cyan hover:underline">www.shelbywebco.com</a> — or explore other spotlights like <a href="/blog/fs-expedited-llc-spotlight/" class="text-brand-cyan hover:underline">F&amp;S Expedited LLC</a> and <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="text-brand-cyan hover:underline">Newton's Karate</a> to see how we celebrate local businesses.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer navigation -->
+      <footer class="mt-24 pt-12 border-t border-white/5 flex flex-wrap gap-8 items-center justify-between">
+        <a href="/blog/" class="text-brand-sky/60 hover:text-white transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Back to Blog
+        </a>
+        <div class="flex gap-6">
+          <a href="/" class="text-brand-sky/60 hover:text-white transition-colors">Home</a>
+          <a href="/about/" class="text-brand-sky/60 hover:text-white transition-colors">About Us</a>
+          <a href="/contact/" class="text-brand-sky/60 hover:text-white transition-colors">Contact</a>
+        </div>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>

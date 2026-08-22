@@ -11,6 +11,7 @@ import newtonImg3 from '../../../assets/newton_3.jpg';
 import gabeWhisnantImg from '../../../assets/gabe_whisnant_1.webp';
 import fsExpeditedImg from '../../../assets/portfolio/fs-expedited.jpg';
 import fsLogoImg from '../../../assets/portfolio/FS_Logo.jpg';
+import frHeroImg from '../../../assets/fr_hero.jpg';
 ---
 
 <BaseLayout 
@@ -387,6 +388,36 @@ import fsLogoImg from '../../../assets/portfolio/FS_Logo.jpg';
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 18 (Community Spotlight) -->
+          <a href="/blog/support-first-responders-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <Image
+                src={frHeroImg}
+                alt="Support First Responders Community Spotlight"
+                width={1024}
+                height={576}
+                class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-brand-sky/40 text-xs">•</span>
+                <span class="text-brand-sky/40 text-xs">August 2026</span>
+              </div>
+              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+                Standing With Our Heroes: A Community Spotlight on Supporting Local First Responders
+              </h2>
+              <p class="text-brand-sky/60 text-sm line-clamp-3">
+                Meet the police, firefighters, EMTs, and ER teams who keep Shelby, NC safe — plus the stats, local organizations, and resources to support them.
+              </p>
+            </div>
+          </a>
+
           <!-- Blog Post 15 (Community Spotlight) -->
           <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
