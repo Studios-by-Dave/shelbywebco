@@ -31,6 +31,14 @@ const faqItems = [
   {
     question: 'How quickly will I see results from Asheville local SEO?',
     answer: 'Most clients see meaningful movement in local rankings within 60\u201390 days, with compounding growth ongoing.'
+  },
+  {
+    question: 'Are you web designers in Asheville NC or a remote team for Asheville businesses?',
+    answer: 'We are a North Carolina team based in Shelby (about 75 miles from Asheville) serving Asheville businesses remotely. You get web designers in Asheville NC market expertise \u2014 local SEO, mountain-town buyer behavior, and Buncombe County search intent \u2014 without big-city agency overhead, plus direct access to our Shelby base for strategy and support.'
+  },
+  {
+    question: 'Do you handle website development in Asheville NC, not just design?',
+    answer: 'Yes. We handle full website development in Asheville NC \u2014 custom front-end builds, e-commerce, bookings and portals, plus technical SEO, speed, schema, and analytics. Design and development are delivered together so your Asheville site both looks great and ranks.'
   }
 ];
 
@@ -64,19 +72,62 @@ const serviceSchema = {
     { '@type': 'City', 'name': 'Weaverville' },
     { '@type': 'City', 'name': 'Waynesville' },
     { '@type': 'City', 'name': 'Brevard' },
+    { '@type': 'City', 'name': 'Arden' },
+    { '@type': 'City', 'name': 'Woodfin' },
+    { '@type': 'City', 'name': 'Swannanoa' },
+    { '@type': 'City', 'name': 'Fletcher' },
+    { '@type': 'City', 'name': 'Candler' },
+    { '@type': 'City', 'name': 'Leicester' },
+    { '@type': 'City', 'name': 'Skyland' },
     { '@type': 'AdministrativeArea', 'name': 'Buncombe County' },
+    { '@type': 'AdministrativeArea', 'name': 'Henderson County' },
+    { '@type': 'AdministrativeArea', 'name': 'Haywood County' },
     { '@type': 'AdministrativeArea', 'name': 'Western North Carolina' }
   ]
+};
+
+const webpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': 'Web Design Asheville NC & Asheville SEO Company',
+  'url': 'https://www.shelbywebco.com/web-design-asheville-nc/',
+  'description': 'Asheville web design & SEO company for Buncombe County and Western NC. Custom websites, web designers in Asheville NC, and local SEO that ranks page one.',
+  'isPartOf': { '@type': 'WebSite', 'name': 'Shelby Web Company', 'url': 'https://www.shelbywebco.com' },
+  'about': { '@type': 'Service', 'name': 'Web Design and SEO', 'provider': { '@type': 'Organization', 'name': 'Shelby Web Company' } },
+  'primaryImageOfPage': { '@type': 'ImageObject', 'contentUrl': 'https://www.shelbywebco.com/og-image.jpg' },
+  'breadcrumb': { '@type': 'BreadcrumbList', 'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.shelbywebco.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Web Design Asheville NC', 'item': 'https://www.shelbywebco.com/web-design-asheville-nc/' }
+  ]}
+};
+
+const ashevilleLocalBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  'name': 'Shelby Web Company — Asheville Web Design & SEO',
+  'url': 'https://www.shelbywebco.com/web-design-asheville-nc/',
+  'telephone': '(704) 473-8188',
+  'areaServed': serviceSchema.areaServed,
+  'serviceType': ['Web Design Asheville NC', 'Website Development Asheville NC', 'SEO Company Asheville NC', 'Local SEO Asheville', 'Web Designers Asheville'],
+  'knowsAbout': ['web design asheville', 'web designers asheville', 'website development asheville nc', 'seo company asheville', 'asheville seo', 'web design asheville nc', 'asheville web design company'],
+  'address': { '@type': 'PostalAddress', 'addressLocality': 'Asheville', 'addressRegion': 'NC', 'addressCountry': 'US' }
 };
 ---
 
 <BaseLayout 
-  title="Asheville Web Design & SEO"
-  description="Local web design & SEO in Asheville, NC. Shelby Web Company builds fast, high-converting websites that rank page one locally. Free strategy session."
+  title="Web Design Asheville NC | Asheville SEO Company & Website Development | Shelby Web Company"
+  description="Asheville web design & SEO company for Buncombe County & Western NC — Hendersonville, Weaverville, Black Mountain & beyond. Custom, fast websites from web designers in Asheville NC built to rank page one. Free strategy session."
+  canonical="https://www.shelbywebco.com/web-design-asheville-nc/"
+  image="/og-image.jpg"
+  breadcrumbs={[
+    { name: 'Web Design Asheville NC', url: 'https://www.shelbywebco.com/web-design-asheville-nc/' }
+  ]}
 >
 
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(webpageSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(ashevilleLocalBusinessSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-24 lg:py-32 px-4 relative overflow-hidden" data-animate>
@@ -422,6 +473,28 @@ const serviceSchema = {
           <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-brand-sky/80 text-sm">Vacation Rentals</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Asheville LSI Keyword Cluster (SEO) -->
+  <section class="py-16 px-4 bg-brand-dark/30 border-y border-white/5">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ What Asheville customers search</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">We rank for the searches that <span class="text-brand-cyan">drive Asheville business</span></h2>
+      <p class="text-brand-sky/60 max-w-2xl mx-auto mb-8">Whether customers type "web designers asheville", "website development asheville nc", or "seo company asheville nc", we build pages that capture that intent and convert.</p>
+      <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">web design asheville</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">web designers asheville</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">website development asheville nc</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">asheville seo</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">seo company asheville nc</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">seo company asheville</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">asheville web design company</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">website design asheville nc</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">asheville website development</span>
+        <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-brand-sky/70 text-sm">web design buncombe county</span>
+      </div>
+      <p class="text-brand-sky/50 text-sm mt-8">Explore <a href="/services/web-design/" class="text-brand-cyan hover:underline">web design</a>, <a href="/services/seo/" class="text-brand-cyan hover:underline">SEO</a>, and <a href="/blog/" class="text-brand-cyan hover:underline">insights</a> — or see how we serve <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:underline">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:underline">Gastonia</a>, and <a href="/web-design-forest-city-nc/" class="text-brand-cyan hover:underline">Forest City</a>.</p>
     </div>
   </section>
 

@@ -22,10 +22,10 @@ import PixieDust from '../../components/PixieDust.jsx';
         Five select Asheville, NC small service businesses will receive a brand-new, custom-designed website — completely free. We're building it to help five local businesses get found, get booked, and get growing.
       </p>
       <a 
-        href="/contact/"
+        href="#raffle"
         class="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-8 py-3 rounded-xl font-bold hover:bg-white/20 hover:border-white/40 transition-all"
       >
-        Claim Your Spot
+        Enter the Raffle — 5 Spots
       </a>
     </div>
   </section>
@@ -191,12 +191,134 @@ import PixieDust from '../../components/PixieDust.jsx';
         If your Asheville-area service business could use a fresh, high-converting website, reach out today to reserve your spot.
       </p>
       <a 
-        href="/contact/"
+        href="#raffle"
         class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all text-lg"
       >
-        Claim Your Spot Today
+        Enter the Raffle
       </a>
     </div>
+  </section>
+
+  <!-- Raffle Entry Form -->
+  <section id="raffle" class="py-24 px-4 bg-brand-darkest border-y border-white/5 scroll-mt-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ 5 Winners • Raffle Entry</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Enter the Free Website Raffle</h2>
+        <p class="text-brand-sky/70">Asheville & Western NC small service businesses — fill this out to enter. We’ll draw 5 winners. Takes about 60 seconds.</p>
+        <p id="raffle-count" class="text-brand-accent text-sm mt-3"></p>
+      </div>
+
+      <form id="raffle-form" class="bg-brand-dark p-6 md:p-8 rounded-2xl border border-white/10 space-y-5" novalidate>
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Business name *</span>
+            <input name="businessName" required type="text" placeholder="Acme Landscaping" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Contact name *</span>
+            <input name="contactName" required type="text" placeholder="Jane Doe" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none" />
+          </label>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Email *</span>
+            <input name="email" required type="email" placeholder="you@business.com" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Phone</span>
+            <input name="phone" type="tel" placeholder="(828) 555-1234" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none" />
+          </label>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Website (if any)</span>
+            <input name="website" type="url" placeholder="https://example.com" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-white text-sm font-semibold">Business type</span>
+            <select name="businessType" class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white focus:border-brand-cyan focus:outline-none">
+              <option value="" class="bg-brand-dark">Select one</option>
+              <option value="Contractor / Trades" class="bg-brand-dark">Contractor / Trades</option>
+              <option value="Salon / Beauty" class="bg-brand-dark">Salon / Beauty</option>
+              <option value="Cleaning" class="bg-brand-dark">Cleaning</option>
+              <option value="Landscaping / Lawn" class="bg-brand-dark">Landscaping / Lawn</option>
+              <option value="Home Services" class="bg-brand-dark">Home Services</option>
+              <option value="Healthcare / Wellness" class="bg-brand-dark">Healthcare / Wellness</option>
+              <option value="Restaurant / Hospitality" class="bg-brand-dark">Restaurant / Hospitality</option>
+              <option value="Retail" class="bg-brand-dark">Retail</option>
+              <option value="Other" class="bg-brand-dark">Other</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="text-white text-sm font-semibold">Why should your business be one of the 5? (optional)</span>
+          <textarea name="message" rows="3" placeholder="A sentence or two about your business and customers." class="mt-2 w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none"></textarea>
+        </label>
+
+        <p class="text-brand-sky/50 text-xs">By entering you agree we may contact you about the raffle. Hosting/live launch not included — see details above. Max 50 entries.</p>
+
+        <button type="submit" id="raffle-submit" class="w-full bg-brand-accent text-[#0A0A0A] px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent-light transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+          Enter Raffle
+        </button>
+
+        <p id="raffle-status" class="text-sm text-center min-h-[1.5rem]" aria-live="polite"></p>
+        <p class="text-brand-sky/40 text-xs text-center">Prefer to talk first? <a href="/contact/" class="text-brand-cyan hover:underline">Contact us</a> instead.</p>
+      </form>
+    </div>
+
+    <script is:inline>
+      (function() {
+        const form = document.getElementById('raffle-form');
+        const statusEl = document.getElementById('raffle-status');
+        const submitBtn = document.getElementById('raffle-submit');
+        const countEl = document.getElementById('raffle-count');
+
+        async function refreshCount() {
+          try {
+            const r = await fetch('/api/raffle', { headers: { 'Accept': 'application/json' } });
+            if (r.ok) {
+              const j = await r.json();
+              if (typeof j.count === 'number' && countEl) countEl.textContent = j.count + ' / 50 entries so far — ' + Math.max(0, 50 - j.count) + ' spots left in the raffle pool.';
+            }
+          } catch {}
+        }
+        refreshCount();
+
+        if (form) form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          if (statusEl) { statusEl.textContent = ''; statusEl.className = 'text-sm text-center min-h-[1.5rem]'; }
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting…'; }
+          const fd = new FormData(form);
+          const payload = Object.fromEntries(fd.entries());
+          try {
+            const r = await fetch('/api/raffle', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+            const j = await r.json();
+            if (r.ok && j.success) {
+              if (statusEl) { statusEl.textContent = j.message || "You're entered — good luck!"; statusEl.className = 'text-sm text-center min-h-[1.5rem] text-lime-400'; }
+              form.reset();
+              refreshCount();
+            } else {
+              if (statusEl) { statusEl.textContent = j.message || 'Something went wrong. Please try again.'; statusEl.className = 'text-sm text-center min-h-[1.5rem] text-red-400'; }
+            }
+          } catch {
+            if (statusEl) { statusEl.textContent = 'Network error — please try again.'; statusEl.className = 'text-sm text-center min-h-[1.5rem] text-red-400'; }
+          } finally {
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Enter Raffle'; }
+          }
+        });
+      })();
+    </script>
   </section>
 
 </BaseLayout>
