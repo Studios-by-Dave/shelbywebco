@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import biltmore from '../../../assets/service locations/asheville/asheville_nc_biltmore1.jpg';
 ---
 
 <BaseLayout 
@@ -22,6 +23,9 @@ import PixieDust from '../../components/PixieDust.jsx';
         <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent-light flex items-center justify-center shadow-[0_0_30px_rgba(132,204,22,0.5)]">
           <span class="text-[#0A0A0A] font-heading font-black text-3xl md:text-4xl text-center leading-tight">Free<br>Site</span>
         </div>
+      </div>
+      <div class="flex justify-center mb-8">
+        <img src={biltmore.src} alt="Asheville, NC Biltmore area" class="rounded-2xl shadow-[0_0_30px_rgba(132,204,22,0.15)] border border-white/10 max-w-xl w-full object-cover" loading="eager" />
       </div>
       <p class="text-xl text-brand-sky/80 mb-8">
         Five lucky Asheville, NC small service businesses will receive a brand-new, custom-designed website — completely free. We're building it to help five local businesses get found, get booked, and get growing. The tally will be taken roughly 30 days from now — the 5 businesses with the most mentions win.
