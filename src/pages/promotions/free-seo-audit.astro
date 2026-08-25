@@ -22,7 +22,7 @@ import PixieDust from '../../components/PixieDust.jsx';
         Discover what's holding your website back from ranking on Google. We'll provide a detailed analysis and action plan.
       </p>
       <a 
-        href="/contact/"
+        href="#audit-form"
         class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all"
       >
         Request Your Free Audit
@@ -224,23 +224,113 @@ import PixieDust from '../../components/PixieDust.jsx';
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-24 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Discover Your SEO Potential?</h2>
-      <p class="text-xl text-brand-sky/80 mb-8">
-        Let's see what's holding your website back from ranking on Google.
-      </p>
-      <p class="text-brand-sky/60 mb-8 text-sm">
-        While you're here, learn how to <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">master local SEO</a>, see the service-area strategy that <a href="/services/case-studies/solution-c/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">multiplied organic reach by 214%</a>, or explore our full <a href="/services/seo/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">SEO services</a>.
-      </p>
-      <a 
-        href="/contact/"
-        class="inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all text-lg"
-      >
-        Request Your Free Audit
-      </a>
+  <!-- CTA / Audit Request Form -->
+  <section id="audit-form" class="py-24 px-4 bg-brand-dark/50 border-y border-white/5">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Get Your Free SEO Audit</h2>
+        <p class="text-xl text-brand-sky/80 mb-4">
+          Enter your details below and we'll start your comprehensive audit. No obligation, completely free.
+        </p>
+        <p class="text-brand-sky/60 text-sm">
+          While you're here, learn how to <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">master local SEO</a>, see the service-area strategy that <a href="/services/case-studies/solution-c/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">multiplied organic reach by 214%</a>, or explore our full <a href="/services/seo/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">SEO services</a>.
+        </p>
+      </div>
+
+      <form id="seo-audit-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+        <input type="hidden" name="access_key" value="6c43f496-301c-46c2-afe8-743b55e17bb6" />
+        <input type="hidden" name="subject" value="Free SEO Audit Request — Shelby Web Co" />
+        <input type="hidden" name="form_type" value="Free SEO Audit" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+        <div>
+          <label for="audit-name" class="block text-sm font-medium text-brand-sky/80 mb-2">Name *</label>
+          <input type="text" name="name" id="audit-name" required placeholder="John Doe" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+        </div>
+
+        <div>
+          <label for="audit-email" class="block text-sm font-medium text-brand-sky/80 mb-2">Email *</label>
+          <input type="email" name="email" id="audit-email" required placeholder="john@example.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+        </div>
+
+        <div>
+          <label for="audit-website" class="block text-sm font-medium text-brand-sky/80 mb-2">Website URL</label>
+          <input type="url" name="website" id="audit-website" placeholder="https://yourbusiness.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+        </div>
+
+        <div>
+          <label for="audit-phone" class="block text-sm font-medium text-brand-sky/80 mb-2">Phone <span class="text-brand-sky/50">(optional)</span></label>
+          <input type="tel" name="phone" id="audit-phone" placeholder="(704) 555-0123" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+        </div>
+
+        <div>
+          <label for="audit-challenge" class="block text-sm font-medium text-brand-sky/80 mb-2">Your biggest SEO challenge</label>
+          <select name="challenge" id="audit-challenge" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20">
+            <option value="">Select one...</option>
+            <option>Not showing up on Google at all</option>
+            <option>Ranking below my competitors</option>
+            <option>Getting traffic but no leads/calls</option>
+            <option>Not sure where to start with SEO</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="audit-message" class="block text-sm font-medium text-brand-sky/80 mb-2">Anything else? <span class="text-brand-sky/50">(optional)</span></label>
+          <textarea name="message" id="audit-message" rows="4" placeholder="Tell us a bit about your business or goals..." class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20 resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all text-lg">
+          Request My Free Audit
+        </button>
+
+        <div id="audit-form-status" class="min-h-6 text-sm text-brand-sky/70"></div>
+      </form>
+
+      <div id="audit-form-success" class="hidden text-center bg-brand-darkest border border-lime-400/20 rounded-2xl p-10">
+        <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.4)] text-brand-darkest mb-6">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Thanks! Your Request Is In.</h3>
+        <p class="text-brand-sky/70 text-lg max-w-md mx-auto">
+          We've received your free SEO audit request and will reach out within 5 business days with your detailed report.
+        </p>
+      </div>
     </div>
   </section>
+
+  <script>
+    const auditForm = document.getElementById('seo-audit-form') as HTMLFormElement | null;
+    const auditStatus = document.getElementById('audit-form-status');
+    if (auditForm) {
+      auditForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(auditForm);
+        if (formData.get('botcheck')) return;
+        auditStatus.textContent = 'Sending...';
+        auditStatus.className = 'min-h-6 text-sm text-brand-sky/70';
+        try {
+          const object = Object.fromEntries(formData);
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify(object)
+          });
+          const data = await res.json();
+          if (data.success) {
+            auditForm.style.display = 'none';
+            const successPanel = document.getElementById('audit-form-success');
+            if (successPanel) successPanel.classList.remove('hidden');
+          } else {
+            auditStatus.textContent = data.message || 'Something went wrong. Please try again.';
+            auditStatus.className = 'min-h-6 text-sm text-red-400';
+          }
+        } catch (err) {
+          auditStatus.textContent = 'Network error. Please try again.';
+          auditStatus.className = 'min-h-6 text-sm text-red-400';
+        }
+      });
+    }
+  </script>
 
 </BaseLayout>
