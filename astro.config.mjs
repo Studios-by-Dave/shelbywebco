@@ -6,6 +6,9 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://www.shelbywebco.com',
+  redirects: {
+    '/promotions/free-website-asheville-nc/': '/promotions/',
+  },
   vite: {
     plugins: [tailwindcss()],
   },
