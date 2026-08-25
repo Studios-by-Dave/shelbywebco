@@ -8,10 +8,10 @@ const phoneDisplay = '(704) 473-8188';
   role="region"
   aria-label="Quick contact"
 >
-  <div class="flex items-center gap-1.5 bg-gradient-to-b from-zinc-300 via-zinc-400 to-zinc-600 backdrop-blur border border-zinc-200/50 rounded-full pl-2 pr-1.5 py-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div class="flex items-center gap-1.5 bg-gradient-to-b from-zinc-200 via-zinc-400 to-zinc-600 backdrop-blur border border-white/40 rounded-full pl-2 pr-1.5 py-1.5 shadow-[0_8px_24px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.45)]">
     <a
       href={`tel:${phone}`}
-      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-green-600 to-green-700 text-white cta-glow-shine"
+      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-green-600 to-green-700 text-white border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.25),0_2px_5px_rgba(0,0,0,0.4)] cta-glow-shine"
       aria-label={`Call Shelby Web Company at ${phoneDisplay}`}
       title={`Call ${phoneDisplay}`}
     >
@@ -21,7 +21,7 @@ const phoneDisplay = '(704) 473-8188';
     </a>
     <a
       href={`sms:${phone}`}
-      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-blue-700 to-blue-800 text-white cta-glow-shine"
+      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-blue-700 to-blue-800 text-white border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.25),0_2px_5px_rgba(0,0,0,0.4)] cta-glow-shine"
       aria-label={`Text Shelby Web Company at ${phoneDisplay}`}
       title={`Text ${phoneDisplay}`}
     >
@@ -31,7 +31,7 @@ const phoneDisplay = '(704) 473-8188';
     </a>
     <a
       href="/contact/"
-      class="flex items-center justify-center px-4 h-10 rounded-lg bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest font-bold text-xs cta-glow-shine"
+      class="flex items-center justify-center px-4 h-10 rounded-lg bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest font-bold text-xs border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.5),0_2px_5px_rgba(0,0,0,0.4)] cta-glow-shine"
     >
       Free Quote
     </a>

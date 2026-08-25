@@ -29,7 +29,7 @@ export default function DesktopNav() {
   }, []);
 
   return (
-    <div className="hidden md:flex items-center space-x-8 font-nav">
+    <div className="hidden md:flex items-center space-x-8 font-body">
       <a href="/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
       
       {/* Services Dropdown */}

@@ -38,7 +38,7 @@ export default function MobileNav() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-blue/20 md:hidden font-nav">
+        <div className="absolute top-20 left-0 right-0 bg-brand-darkest border-b border-brand-blue/20 md:hidden font-body">
           <div className="px-4 py-4 space-y-3">
             <a href="/" className="block text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Home</a>
             

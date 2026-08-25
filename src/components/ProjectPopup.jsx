@@ -130,7 +130,7 @@ export default function ProjectPopup() {
             {!acknowledged ? (
               /* Welcome prompt */
               <div className="relative p-6 pt-2">
-                <p className="text-brand-sky/60 text-sm leading-relaxed mb-4">
+                <p className="text-white text-sm leading-relaxed mb-4">
                   No worries, no <span className="text-red-500 font-semibold">SPaM</span> here — we just thought we'd point you in the right direction, to save you a little time and headache.
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
