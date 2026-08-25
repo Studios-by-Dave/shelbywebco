@@ -1,0 +1,36 @@
+---
+// Mobile-only sticky bottom bar to preserve leads with quick Call / Text actions.
+const phone = '+17044738188';
+const phoneDisplay = '(704) 473-8188';
+const smsHref = `sms:${phone}`;
+const telHref = `tel:${phone}`;
+---
+
+<div
+  class="md:hidden fixed bottom-0 inset-x-0 z-[100000] safe-area-bottom"
+  role="region"
+  aria-label="Quick contact"
+>
+  <div class="grid grid-cols-2 gap-2 px-3 py-2 bg-brand-darkest/95 backdrop-blur border-t border-brand-blue/30 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+    <a
+      href={telHref}
+      class="flex items-center justify-center gap-2 bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest font-bold text-sm py-2.5 rounded-lg cta-glow-shine"
+      aria-label={`Call Shelby Web Company at ${phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      Call
+    </a>
+    <a
+      href={smsHref}
+      class="flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white font-bold text-sm py-2.5 rounded-lg cta-glow-shine"
+      aria-label={`Text Shelby Web Company at ${phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 5H7v-2h6v2zm4-6H7V6h10v2z"/>
+      </svg>
+      Text
+    </a>
+  </div>
+</div>

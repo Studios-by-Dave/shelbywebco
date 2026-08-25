@@ -92,6 +92,10 @@
 }
 
 @layer components {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
   .animate-flash-lime {
     animation: flash-lime 1.2s ease-in-out infinite;
   }
@@ -148,5 +152,13 @@
       -1px  1px 0 #fde047,
        1px  1px 0 #fde047,
        0px  2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media (max-width: 767px) {
+  .elfsight-app-fe41bcb2-9bed-4b99-ab66-5f076ba6c148,
+  .eapps-chat-widget,
+  [class*="elfsight-app-"] {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }

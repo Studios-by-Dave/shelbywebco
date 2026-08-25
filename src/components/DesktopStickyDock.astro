@@ -1,0 +1,39 @@
+---
+// Desktop-only floating lead dock (bottom-left) mirroring the mobile sticky bar.
+const phone = '+17044738188';
+const phoneDisplay = '(704) 473-8188';
+---
+<div
+  class="hidden md:flex fixed bottom-5 left-5 z-[100000] items-center"
+  role="region"
+  aria-label="Quick contact"
+>
+  <div class="flex items-center gap-1.5 bg-brand-darkest/90 backdrop-blur border border-brand-blue/30 rounded-full pl-2 pr-1.5 py-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <a
+      href={`tel:${phone}`}
+      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest cta-glow-shine"
+      aria-label={`Call Shelby Web Company at ${phoneDisplay}`}
+      title={`Call ${phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+    <a
+      href={`sms:${phone}`}
+      class="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r from-brand-blue to-brand-blue-light text-white cta-glow-shine"
+      aria-label={`Text Shelby Web Company at ${phoneDisplay}`}
+      title={`Text ${phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 5H7v-2h6v2zm4-6H7V6h10v2z"/>
+      </svg>
+    </a>
+    <a
+      href="/contact/"
+      class="flex items-center justify-center px-4 h-10 rounded-lg bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest font-bold text-xs cta-glow-shine"
+    >
+      Free Quote
+    </a>
+  </div>
+</div>

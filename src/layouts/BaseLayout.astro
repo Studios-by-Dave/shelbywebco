@@ -2,6 +2,8 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.jsx';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+import DesktopStickyDock from '../components/DesktopStickyDock.astro';
 import '../styles/global.css';
 import jesusWatermark from '../../assets/jesuswatermark_1.jpg';
 
@@ -174,7 +176,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden">
+  <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden pb-[72px] md:pb-0">
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
       <!-- Subtle Grid -->
@@ -214,7 +216,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     <main class="min-h-screen">
       <slot />
     </main>
-    <div class="fixed bottom-4 right-4 md:bottom-5 md:right-5 z-[99999] pointer-events-none select-none" aria-hidden="true">
+    <div class="fixed bottom-[76px] right-4 md:bottom-5 md:right-5 z-[99999] pointer-events-none select-none" aria-hidden="true">
       <img
         src={jesusWatermark.src}
         alt=""
@@ -225,6 +227,8 @@ const showBreadcrumbBar = pathSegments.length > 0;
     </div>
     <Footer />
     <ChatWidget client:load />
+    <MobileStickyBar />
+    <DesktopStickyDock />
     
     <script>
       // Scroll animation with IntersectionObserver
