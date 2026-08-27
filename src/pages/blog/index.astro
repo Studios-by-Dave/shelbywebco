@@ -4,6 +4,9 @@ import Image from '../../components/OptimizedImage.astro';
 import blogImage2 from '../../../assets/blog_image2.jpeg';
 import blogImage4 from '../../../assets/blog_image4.jpg';
 import blogImage5 from '../../../assets/blog_image5.jpeg';
+import nearMeImg from '../../../assets/Near-Me-Local-Search.png';
+import opencode2Img from '../../../assets/opencode_2.png';
+import websiteCostImg from '../../../assets/website_cost_1.webp';
 import blogImage6 from '../../../assets/blog_image6.jpeg';
 import reflectionsImage from '../../../assets/reflections_1.jpg';
 import boilingSpringsImg from '../../../assets/boiling springs nc_1.jpg';
@@ -43,11 +46,39 @@ import frHeroImg from '../../../assets/fr_hero.jpg';
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+        <!-- Blog Post 18 -->
+        <a href="/blog/best-web-designers-near-me/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+          <div class="aspect-video bg-gray-800 relative overflow-hidden">
+            <Image 
+              src={nearMeImg} 
+              alt="Finding the best web designers near you" 
+              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-brand-sky/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 group-hover:scale-110 transition-transform duration-500">Article #15</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Vol #2 Article #15</span>
+              <span class="text-brand-sky/40 text-xs">•</span>
+              <span class="text-brand-sky/40 text-xs">August 2026</span>
+            </div>
+            <h2 class="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-3">
+              How to Find the Best Web Designers Near Me (And What to Actually Look For)
+            </h2>
+            <p class="text-brand-sky/60 text-sm line-clamp-3">
+              If you've searched "best web designers near me," here's how to tell a genuinely local designer from a forgettable one — and the questions worth asking before you hire.
+            </p>
+          </div>
+        </a>
+
         <!-- Blog Post 17 -->
         <a href="/blog/opencode-ai-coding-tools-small-web-agencies/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
-              src={blogImage6} 
+              src={opencode2Img} 
               alt="OpenCode AI Coding Tools for Small Web Agencies" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
             />
@@ -75,8 +106,8 @@ import frHeroImg from '../../../assets/fr_hero.jpg';
         <a href="/blog/website-cost-shelby-nc-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
-              src={blogImage6} 
-              alt="How Much Does a Website Cost in Shelby NC" 
+              src={websiteCostImg} 
+              alt="Website Cost in Shelby NC 2026" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
