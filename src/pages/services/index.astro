@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+---
+
+<BaseLayout 
+  title="Web Design, SEO & Digital Services | Shelby Web Company"
+  description="Professional web design, SEO, branding, audio branding, and custom software development for local businesses in Shelby, NC and surrounding areas."
+>
+
+  <!-- Hero Section -->
+  <section class="py-14 lg:py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Services</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          Everything Your Business Needs to <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Get Found Online</span>
+        </h1>
+      </div>
+      <p class="text-xl text-brand-sky/80 mb-8 max-w-3xl mx-auto">
+        From high-converting websites to search engine dominance — we build the digital foundation your business deserves.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Web Design -->
+        <a href="/services/web-design/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Web Design</h3>
+          <p class="text-brand-sky/70 mb-6 text-base">
+            Custom, responsive websites that convert visitors into customers. Built fast, built right, built for your business.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <ul class="text-brand-sky/60 text-sm space-y-1">
+              <li>✓ Mobile-First Design</li>
+              <li>✓ Lightning Fast Loading</li>
+              <li>✓ Lead Generation Forms</li>
+              <li>✓ Local SEO Built-In</li>
+            </ul>
+          </div>
+          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
+            Learn More
+          </span>
+        </a>
+
+        <!-- SEO Services -->
+        <a href="/services/seo/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">SEO Services</h3>
+          <p class="text-brand-sky/70 mb-6 text-base">
+            Comprehensive search engine optimization to help your business rank higher, get more clicks, and attract more customers.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <ul class="text-brand-sky/60 text-sm space-y-1">
+              <li>✓ Technical SEO Audits</li>
+              <li>✓ On-Page Optimization</li>
+              <li>✓ Local Search Dominance</li>
+              <li>✓ Google Business Profile</li>
+            </ul>
+          </div>
+          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
+            Learn More
+          </span>
+        </a>
+
+        <!-- Logo Design & Branding -->
+        <a href="/services/branding/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Logo Design & Branding</h3>
+          <p class="text-brand-sky/70 mb-6 text-base">
+            Professional branding that makes your business stand out. Custom logos, identity packages, and assets that build trust.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <ul class="text-brand-sky/60 text-sm space-y-1">
+              <li>✓ Custom Logo Design</li>
+              <li>✓ Brand Identity Package</li>
+              <li>✓ Business Card Design</li>
+              <li>✓ Social Media Assets</li>
+            </ul>
+          </div>
+          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
+            Learn More
+          </span>
+        </a>
+
+        <!-- Audio Branding -->
+        <a href="/services/audio-branding/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Audio Branding</h3>
+          <p class="text-brand-sky/70 mb-6 text-base">
+            Custom sound design, voiceovers, and audio identity that makes your brand memorable across every platform.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <ul class="text-brand-sky/60 text-sm space-y-1">
+              <li>✓ Custom Jingles</li>
+              <li>✓ Voiceovers & Sound Design</li>
+              <li>✓ Podcast Production</li>
+              <li>✓ Audio Identity Systems</li>
+            </ul>
+          </div>
+          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
+            Learn More
+          </span>
+        </a>
+
+        <!-- Custom Software & SaaS -->
+        <a href="/services/custom-software-saas/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Custom Software & SaaS</h3>
+          <p class="text-brand-sky/70 mb-6 text-base">
+            Fully custom web applications, portals, and subscription platforms built entirely around your business. Own your code.
+          </p>
+          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
+            <ul class="text-brand-sky/60 text-sm space-y-1">
+              <li>✓ Custom Web Applications</li>
+              <li>✓ SaaS Platforms</li>
+              <li>✓ AI & Automation Tools</li>
+              <li>✓ Scalable & Secure</li>
+            </ul>
+          </div>
+          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
+            Learn More
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">Not Sure What You Need?</h2>
+      <p class="text-xl text-brand-sky/80 mb-8">
+        We'll tell you honestly what your business needs — and what it doesn't. No pressure, no upsells.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="inline-block bg-brand-accent text-brand-darkest px-8 py-4 rounded-xl font-bold hover:bg-brand-accent-light transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(132,204,22,0.3)] cta-glow-shine">
+          Book a Free Strategy Call
+        </a>
+        <a href="/promotions/free-seo-audit/" class="inline-block border border-brand-cyan/30 text-brand-cyan px-8 py-4 rounded-xl font-bold hover:bg-brand-cyan/10 transition-all duration-300">
+          Get a Free SEO Audit
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
