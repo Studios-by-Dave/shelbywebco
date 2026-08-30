@@ -20,6 +20,19 @@
   --font-nav: Montserrat, sans-serif;
   --font-poofy: "Fredoka", sans-serif;
 
+  /* Typography Scale */
+  --text-page-title: 3.5rem;
+  --text-page-title-md: 4.5rem;
+  --text-page-title-lg: 5.5rem;
+  --text-section-heading: 2.5rem;
+  --text-section-heading-md: 3rem;
+  --text-card-title: 1.75rem;
+  --text-card-body: 1rem;
+  --text-body-lg: 1.25rem;
+  --text-body-base: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-label: 0.75rem;
+
   --animate-flash-subtle: flash-subtle 1s infinite;
   --animate-shine: shine 6s infinite linear;
   --animate-marquee: marquee 25s linear infinite;

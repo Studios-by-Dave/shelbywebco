@@ -57,11 +57,11 @@ export default function DesktopNav() {
               <div className="mb-4">
                 <p className="text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
                 <div className="space-y-1">
+                  <a href="/services/" className="block text-brand-cyan hover:text-white transition-colors py-1 font-bold">View All Services →</a>
                   <a href="/services/web-design/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Web Design</a>
                   <a href="/services/branding/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Logo Design & Branding</a>
                   <a href="/services/seo/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">SEO Services</a>
                   <a href="/services/custom-software-saas/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Custom Software & SaaS</a>
-                  <a href="/services/audio-branding/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Audio Branding</a>
                   <a href="/services/case-studies/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Case Studies</a>
                   <a href="/services/portfolio/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Portfolio</a>
                 </div>
@@ -142,7 +142,7 @@ export default function DesktopNav() {
       </div>
       
       <a href="/contact/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog/" className="font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
+      <a href="/blog/" className="font-poofy font-bold text-2xl text-brand-cyan drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>
   );
 }

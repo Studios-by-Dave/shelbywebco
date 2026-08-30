@@ -69,11 +69,11 @@ export default function MobileNav() {
                   {/* Our Services */}
                   <div>
                     <p className="text-brand-blue text-xs uppercase tracking-widest mb-2">Our Services</p>
+                    <a href="/services/" className="block text-brand-cyan hover:text-white py-1 font-bold">View All Services →</a>
                     <a href="/services/web-design/" className="block text-white hover:text-brand-cyan py-1">Web Design</a>
                     <a href="/services/branding/" className="block text-white hover:text-brand-cyan py-1">Logo Design & Branding</a>
                     <a href="/services/seo/" className="block text-white hover:text-brand-cyan py-1">SEO Services</a>
                     <a href="/services/custom-software-saas/" className="block text-white hover:text-brand-cyan py-1">Custom Software & SaaS</a>
-                    <a href="/services/audio-branding/" className="block text-white hover:text-brand-cyan py-1">Audio Branding</a>
                     <a href="/services/case-studies/" className="block text-white hover:text-brand-cyan py-1">Case Studies</a>
                     <a href="/services/portfolio/" className="block text-white hover:text-brand-cyan py-1">Portfolio</a>
                   </div>
@@ -155,7 +155,7 @@ export default function MobileNav() {
             </div>
             
             <a href="/contact/" className="block text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue py-2">Contact</a>
-            <a href="/blog/" className="inline-block font-poofy font-bold text-2xl animate-color-cycle-blue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
+            <a href="/blog/" className="inline-block font-poofy font-bold text-2xl text-brand-cyan drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] py-2 transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
             <a href="tel:+17044738188" className="block text-brand-cyan hover:text-brand-cyanLight py-2">
               (704) 473-8188
             </a>
