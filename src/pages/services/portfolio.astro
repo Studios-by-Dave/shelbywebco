@@ -1,20 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
-import swebscreen from '../../../assets/portfolio/swebscreen_1.png';
-import legacySiteScreenshot from '../../../assets/portfolio/studiosbydave.webp';
-import fsExpedited from '../../../assets/portfolio/fs-expedited.jpg';
-import padgsteenGuitars from '../../../assets/portfolio/padgsteenguitars.png';
-import shadesOfGray from '../../../assets/portfolio/shades-of-gray.png';
-import leeConstruction from '../../../assets/portfolio/lee-construction.png';
-import odysseyRenovations from '../../../assets/portfolio/odyssey-renovations.png';
-import bigFuturisticPictureBox from '../../../assets/portfolio/big-futuristic-picture-box.png';
-import audioNotesAi from '../../../assets/portfolio/audio-notes-ai.png';
-import musicalLock from '../../../assets/portfolio/musical-lock.png';
-import mikesGutHealer from '../../../assets/portfolio/mikes-gut-healer.png';
-import theLivingWord from '../../../assets/portfolio/the-living-word.png';
-import rifeGenerator from '../../../assets/portfolio/rife-generator.png';
-import gAnalyzer from '../../../assets/portfolio/5g-analyzer.png';
+import swebscreen from '../../../assets/portfolio/Sweb_portfolio_screenshot_3.webp';
+import fsExpedited from '../../../assets/portfolio/fs-expeditedllc_screenshot_1.webp';
+import padgsteenGuitars from '../../../assets/portfolio/padgsteenguitars.webp';
+import shadesOfGray from '../../../assets/portfolio/shades-of-gray.webp';
+import leeConstruction from '../../../assets/portfolio/lee-construction.webp';
+import odysseyRenovations from '../../../assets/portfolio/odyssey-renovations.webp';
+import bigFuturisticPictureBox from '../../../assets/portfolio/big-futuristic-picture-box.webp';
+import audioNotesAi from '../../../assets/portfolio/audio-notes-ai.webp';
+import musicalLock from '../../../assets/portfolio/musical-lock.webp';
+import mikesGutHealer from '../../../assets/portfolio/mikes-gut-healer.webp';
+import theLivingWord from '../../../assets/portfolio/the-living-word.webp';
+import rifeGenerator from '../../../assets/portfolio/rife-generator.webp';
+import gAnalyzer from '../../../assets/portfolio/5g-analyzer.webp';
 ---
 
 <BaseLayout 
@@ -25,205 +24,212 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.png';
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
     <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
-    <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Portfolio</p>
       <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
         Our Work
       </h1>
       <p class="text-xl text-brand-sky/80 mb-8">
-        Browse our portfolio of websites, branding projects, and digital marketing campaigns for local businesses.
+        Websites, branding, and digital solutions for local businesses.
       </p>
     </div>
   </section>
 
   <!-- Portfolio Grid -->
-  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+  <section class="py-16 px-4 bg-brand-darkest" data-animate>
     <div class="max-w-7xl mx-auto">
       
       <!-- Websites Section -->
-      <div class="mb-24">
-        <div class="mb-12">
+      <div class="mb-16">
+        <div class="mb-10">
           <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Websites</p>
-          <h2 class="font-heading text-4xl font-bold text-white mb-6">Websites</h2>
-          <p class="text-brand-sky/70 text-lg max-w-3xl">Professional, responsive websites built for local businesses. From service providers to artisans, we create digital experiences that convert visitors into customers.</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Websites</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Shelby Web Company -->
-          <div class="group bg-brand-dark border border-brand-accent/50 rounded-2xl overflow-hidden hover:border-brand-accent transition-all duration-300 shadow-xl shadow-brand-accent/5">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={swebscreen} alt="Shelby Web Company Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-               <div class="absolute inset-0 bg-gradient-to-t from-brand-darkest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                 <span class="text-brand-accent font-bold text-sm">Latest Project</span>
-               </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Lee Construction -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={leeConstruction} alt="Lee Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-1">Shelby Web Company</h3>
-              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">Current brand showcase</p>
-              <p class="text-brand-sky/70 text-sm mb-4">High-performance digital presence built for Cleveland County businesses, featuring local SEO strategy and conversion-focused design.</p>
-              <p class="text-brand-cyan/60 text-xs uppercase tracking-widest">“Shelby Web Company really knocked it out of the park.”</p>
-            </div>
-          </div>
-
-          <!-- Legacy Website Showcase -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={legacySiteScreenshot} alt="Legacy Shelby Web Company homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-1">Legacy Website Showcase</h3>
-              <p class="text-brand-glow text-xs uppercase tracking-widest mb-3">(evolved into Shelby Web Company)</p>
-              <p class="text-brand-sky/70 text-sm mb-4">Our former flagship website, now part of the Shelby Web Company evolution.</p>
-            </div>
-          </div>
-
-          <!-- F&S Expedited LLC -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={fsExpedited} alt="F&S Expedited LLC Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">F&S Expedited LLC</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Professional interstate freight carrier specializing in reliable, fast, and customer-focused logistics solutions from Shelby, NC.</p>
-            </div>
-          </div>
-
-          <!-- Padgsteen Guitars -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={padgsteenGuitars} alt="Padgsteen Guitars Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Padgsteen Guitars</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Handcrafted guitars & soulful Southern music from the heart of Appalachia. A beautiful showcase for a master luthier and musician.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Lee Construction</h3>
+              <p class="text-brand-sky/60 text-xs">Shelby, NC</p>
             </div>
           </div>
 
           <!-- Shades of Gray Painters -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={shadesOfGray} alt="Shades of Gray Painters Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={shadesOfGray} alt="Shades of Gray Painters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Shades of Gray Painters</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Professional painting company website featuring interior, exterior, and specialty finishes with a texture gallery showcase.</p>
-            </div>
-          </div>
-
-          <!-- Lee Construction -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={leeConstruction} alt="Lee Construction Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Lee Construction</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Shelby's trusted building expert since 1982. Commercial developments to custom homes with quality craftsmanship.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Shades of Gray Painters</h3>
+              <p class="text-brand-sky/60 text-xs">Shelby, NC</p>
             </div>
           </div>
 
-          <!-- Odyssey Custom Renovations -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={odysseyRenovations} alt="Odyssey Custom Renovations Homepage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <!-- Padgsteen Guitars -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={padgsteenGuitars} alt="Padgsteen Guitars" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Odyssey Custom Renovations</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Home renovation specialists transforming kitchens, bathrooms, and complete home makeovers with expert craftsmanship.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Padgsteen Guitars</h3>
+              <p class="text-brand-sky/60 text-xs">Appalachia</p>
             </div>
           </div>
+
+          <!-- F&S Expedited -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={fsExpedited} alt="F&S Expedited LLC" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">F&S Expedited LLC</h3>
+              <p class="text-brand-sky/60 text-xs">Shelby, NC</p>
+            </div>
+          </div>
+
+          <!-- Odyssey Renovations -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={odysseyRenovations} alt="Odyssey Custom Renovations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Odyssey Custom Renovations</h3>
+              <p class="text-brand-sky/60 text-xs">Cleveland County</p>
+            </div>
+          </div>
+
+          <!-- Shelby Web Company -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-brand-accent/30 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={swebscreen} alt="Shelby Web Company" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Shelby Web Company</h3>
+              <p class="text-brand-sky/60 text-xs">Our Site</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <!-- Web Applications Section -->
       <div>
-        <div class="mb-12">
+        <div class="mb-10">
           <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Web Applications</p>
-          <h2 class="font-heading text-4xl font-bold text-white mb-6">Web Applications</h2>
-          <p class="text-brand-sky/70 text-lg max-w-3xl">Interactive web applications showcasing our technical expertise. From specialized tools to innovative solutions.</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Web Applications</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <!-- Big Futuristic Picture Box -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Big Futuristic Picture Box</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">AI-powered multi-layered image generator with advanced image reference and image doctor capabilities for creative professionals.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Big Futuristic Picture Box</h3>
+              <p class="text-brand-sky/60 text-xs">AI Image Generator</p>
             </div>
           </div>
 
           <!-- Audio Notes AI -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={audioNotesAi} alt="Audio Notes AI Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={audioNotesAi} alt="Audio Notes AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Audio Notes AI</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">AI-powered audio notes transcriber that transforms your audio notes and snippets into visual data, graphs, and actionable plans.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Audio Notes AI</h3>
+              <p class="text-brand-sky/60 text-xs">Audio Transcriber</p>
             </div>
           </div>
 
           <!-- Musical Lock -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={musicalLock} alt="Musical Lock Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={musicalLock} alt="Musical Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Musical Lock</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Revolutionary authentication system replacing passwords with memorable melodies for secure access.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Musical Lock</h3>
+              <p class="text-brand-sky/60 text-xs">Auth System</p>
             </div>
           </div>
 
-          <!-- Mikes Gut Healer 5000 -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={mikesGutHealer} alt="Mikes Gut Healer 5000 Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <!-- Mikes Gut Healer -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={mikesGutHealer} alt="Mikes Gut Healer 5000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">Mikes Gut Healer 5000</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Fully comprehensive resource for gut healing, featuring earth medicines and Rife frequencies for true body, mind, and spirit healing.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Mikes Gut Healer 5000</h3>
+              <p class="text-brand-sky/60 text-xs">Health Resource</p>
             </div>
           </div>
 
           <!-- The Living Word -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={theLivingWord} alt="The Living Word Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={theLivingWord} alt="The Living Word" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">The Living Word</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">KJV-powered tool of spiritual life guidance with AI training based strictly on the King James Version of the Holy Bible.</p>
-            </div>
-          </div>
-
-          <!-- RIFE Frequency Generator -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={rifeGenerator} alt="RIFE Frequency Generator Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">RIFE Frequency Generator</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Professional 20 MHz sweep/function generator with audio samples and frequency generation capabilities.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">The Living Word</h3>
+              <p class="text-brand-sky/60 text-xs">Spiritual Guide</p>
             </div>
           </div>
 
-          <!-- 5G Spectrum Analyzer -->
-          <div class="group bg-brand-dark border border-white/10 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-all duration-300 shadow-xl">
-            <div class="aspect-video bg-brand-darkest relative overflow-hidden">
-               <Image src={gAnalyzer} alt="5G Spectrum Analyzer Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <!-- RIFE Generator -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={rifeGenerator} alt="RIFE Frequency Generator" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="font-heading text-2xl font-bold text-white mb-3">5G Spectrum Analyzer</h3>
-              <p class="text-brand-sky/70 text-sm mb-4">Professional RF spectrum analysis system for passive monitoring across multiple frequency bands.</p>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">RIFE Frequency Generator</h3>
+              <p class="text-brand-sky/60 text-xs">Frequency Tool</p>
+            </div>
+          </div>
+
+          <!-- 5G Analyzer -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={gAnalyzer} alt="5G Spectrum Analyzer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">5G Spectrum Analyzer</h3>
+              <p class="text-brand-sky/60 text-xs">RF Spectrum</p>
             </div>
           </div>
 
         </div>
       </div>
+
     </div>
   </section>
 
@@ -237,9 +243,6 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.png';
       </h2>
       <p class="text-lg text-brand-sky/80 mb-8">
         Let's create something amazing together. Get in touch today to discuss your project.
-      </p>
-      <p class="text-brand-sky/60 mb-8 text-sm">
-        See how we approach projects end-to-end in our <a href="/services/case-studies/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">case studies</a> and learn how we build sites that rank with <a href="/services/web-design/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">web design</a> and <a href="/services/seo/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">local SEO</a>.
       </p>
       <a 
         href="/contact/"
