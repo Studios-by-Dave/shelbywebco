@@ -18,6 +18,7 @@ import frHeroImg from '../../../assets/fr_hero.jpg';
 import webredesignImg from '../../../assets/webredesign_1.webp';
 import blog3Img from '../../../assets/blog3.webp';
 import blog4Img from '../../../assets/blog4.webp';
+import dbaImg from '../../../assets/blog_image2.jpeg';
 ---
 
 <BaseLayout 
@@ -55,7 +56,31 @@ import blog4Img from '../../../assets/blog4.webp';
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Blog Post 19 - NEW -->
+        <!-- Blog Post 17 -->
+        <a href="/blog/when-your-business-name-is-lost-dba-seo-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+          <div class="aspect-video bg-gray-800 relative overflow-hidden">
+            <Image src={dbaImg} alt="When Your Business Name Is Lost in a Sea of Duplicates" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #17</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Vol #2 Article #17</span>
+              <span class="text-brand-sky/40 text-xs">•</span>
+              <span class="text-brand-sky/40 text-xs">September 2026</span>
+            </div>
+            <h2 class="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-3">
+              When Your Business Name Is Lost in a Sea of Duplicates: How a DBA Can Save Your SEO
+            </h2>
+            <p class="text-brand-sky/60 text-sm line-clamp-3">
+              Fifteen businesses share your name and Google can't tell them apart. Learn how filing a DBA consolidates your brand identity, stops SEO signal splitting, and restores local search visibility.
+            </p>
+          </div>
+        </a>
+
+        <!-- Blog Post 16 -->
         <a href="/blog/new-web-design-redesign-vs-refresh-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image src={webredesignImg} alt="Web Redesign vs Refresh Shelby NC" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
