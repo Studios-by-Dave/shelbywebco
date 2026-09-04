@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const faqItems = [
+  { q: "Can a customer book/buy/call within 10 seconds of landing?", a: "If visitors can't take action quickly, your layout or calls-to-action need a redesign." },
+  { q: "Can you update your own site without calling someone?", a: "If every text change requires a developer, your platform is holding you back." },
+  { q: "Does your site reflect where your business is now — and is it built to grow with you?", a: "If your services, branding, or audience have evolved but your site hasn't, it's time to rebuild on a flexible, hand-coded foundation." },
+];
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Is It Time for a New Web Design? Redesign vs. Refresh for Shelby, NC Businesses",
+  "description": "Not sure if your Shelby business website needs a full web design overhaul or just a refresh? Here's how Cleveland County owners can decide — and why hand-coded Astro sites outperform templates.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/new-web-design-redesign-vs-refresh-shelby-nc/",
+  "datePublished": "2026-09-04",
+  "dateModified": "2026-09-04"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(i => ({ "@type": "Question", "name": i.q, "acceptedAnswer": { "@type": "Answer", "text": i.a } }))
+};
+---
+
+<BaseLayout
+  title="Is It Time for a New Web Design? Redesign vs. Refresh for Shelby, NC Businesses"
+  description="Not sure if your Shelby business website needs a full web design overhaul or just a refresh? Here's how Cleveland County owners can decide — and why hand-coded Astro sites outperform templates."
+>
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
+
+  <article class="pt-32 pb-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <header class="mb-16 text-center">
+        <div class="inline-flex items-center gap-3 mb-6 px-4 py-1.5 rounded-full border border-brand-cyan/20 bg-brand-cyan/5">
+          <span class="text-brand-cyan text-xs font-bold uppercase tracking-widest">Web Design</span>
+          <span class="w-1 h-1 rounded-full bg-brand-cyan/30"></span>
+          <span class="text-brand-sky/60 text-xs font-medium uppercase tracking-widest">September 2026</span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+          Is It Time for a New Web Design? <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Redesign vs. Refresh for Shelby, NC Businesses</span>
+        </h1>
+        <p class="text-lg text-brand-sky/80 max-w-3xl mx-auto">
+          Not sure if your site needs a full overhaul or just a tune-up? Here's how to decide — and why how your site is built matters more than how it looks.
+        </p>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6 flex items-center gap-4"><span class="text-brand-accent">01.</span> The Question Every Shelby Business Owner Faces Eventually</h2>
+        <p class="text-brand-sky/80 mb-6">Your site is 3–5 years old. It looks “fine.” But something feels off — leads are slower, competitors look sharper, and updating anything feels like a chore.</p>
+        <p class="text-brand-sky/80 mb-6">A full redesign sounds expensive and time-consuming, so you put it off. What if the real question isn't <em>how it looks</em> — but <em>how it was built</em> in the first place?</p>
+        <div class="bg-brand-dark/50 border-l-4 border-brand-cyan p-6 mb-8 rounded-r-xl">
+          <p class="text-white font-bold mb-1">Tease:</p>
+          <p class="text-brand-sky/80 m-0">What if your next site wasn't built on a bloated template — but <a href="/about/how-we-work/" class="text-brand-cyan hover:underline">hand-coded from scratch</a> for speed and results?</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6 flex items-center gap-4"><span class="text-brand-accent">02.</span> What's the Difference? Redesign vs. Refresh</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-brand-dark/50 border border-white/10 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Refresh</h3>
+            <p class="text-brand-sky/80 m-0">Update visuals, content, speed, and SEO — structure stays the same. New photos, modern fonts, updated colors, and performance tune-ups.</p>
+          </div>
+          <div class="bg-brand-dark/50 border border-white/10 rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Redesign</h3>
+            <p class="text-brand-sky/80 m-0">New structure, new strategy, new platform if needed — start from scratch. Evaluate how your site is built, not just how it looks.</p>
+          </div>
+        </div>
+        <p class="text-brand-sky/80 mb-6"><strong class="text-white">Key point:</strong> A true redesign means evaluating how your site is built, not just how it looks.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6 flex items-center gap-4"><span class="text-brand-accent">03.</span> 5 Signs Your Shelby Business Website Just Needs a Refresh</h2>
+        <ul class="space-y-4 text-brand-sky/80 mb-8 list-none pl-0">
+          <li class="flex gap-3"><span class="text-brand-cyan font-bold">1.</span> It looks dated but functions well — new photos, modern fonts, updated colors.</li>
+          <li class="flex gap-3"><span class="text-brand-cyan font-bold">2.</span> Your content is stale — services changed, team grew, old blog posts need updating.</li>
+          <li class="flex gap-3"><span class="text-brand-cyan font-bold">3.</span> It's slow but not broken — image optimization, caching, and hosting upgrades can fix it.</li>
+          <li class="flex gap-3"><span class="text-brand-cyan font-bold">4.</span> Mobile works but isn't great — responsive tweaks, not a full rebuild.</li>
+          <li class="flex gap-3"><span class="text-brand-cyan font-bold">5.</span> You're not ranking but the structure is sound — local SEO tune-up, schema, and <a href="/services/seo/" class="text-brand-cyan hover:underline">Google Business Profile optimization</a>.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6 flex items-center gap-4"><span class="text-brand-accent">04.</span> 5 Signs You Need a Full Web Design Overhaul</h2>
+        <ul class="space-y-4 text-brand-sky/80 mb-8 list-none pl-0">
+          <li class="flex gap-3"><span class="text-red-400 font-bold">1.</span> Your site isn't mobile-friendly at all — Google penalizes, customers bounce.</li>
+          <li class="flex gap-3"><span class="text-red-400 font-bold">2.</span> You can't update content yourself — stuck calling a developer for every change.</li>
+          <li class="flex gap-3"><span class="text-red-400 font-bold">3.</span> The user journey is confusing — visitors can't find what they need in 3 clicks.</li>
+          <li class="flex gap-3"><span class="text-red-400 font-bold">4.</span> Your business has evolved — new services, new audience, or a full rebrand.</li>
+          <li class="flex gap-3"><span class="text-red-400 font-bold">5.</span> It was built on a bloated template or page builder — slow load times, plugin conflicts, security risks.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">Why How Your Site Is Built Matters More Than How It Looks</h2>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">The template trap:</strong> WordPress themes, Wix, Squarespace — easy to set up, heavy under the hood.</p>
+        <p class="text-brand-sky/80 mb-4">Page builders load unnecessary scripts, slowing your site and hurting rankings.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">Hand-coded from scratch:</strong> Clean, minimal code that loads exactly what your visitor needs — nothing more.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white"><a href="/blog/what-is-a-smart-talking-website/" class="text-brand-cyan hover:underline">Astro framework</a>:</strong> Zero JavaScript by default, loads content instantly, excellent for static business sites. Google indexes all built URLs instantly.</p>
+        <div class="bg-gradient-to-br from-brand-cyan/10 to-transparent border border-brand-cyan/20 p-6 rounded-2xl mb-8">
+          <p class="text-white font-bold m-0">The Shelby advantage: Faster sites = better Google rankings = more local customers finding you first.</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">What Is Astro — And Why Shelby Web Co Uses It?</h2>
+        <p class="text-brand-sky/80 mb-4">Astro is a modern web framework built for speed: it ships zero JavaScript to the browser unless you specifically need it.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">What that means for your business:</strong> Near-instant page loads, perfect Lighthouse scores, better SEO.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">Why templates can't compete:</strong> They load jQuery, Bootstrap, and 20 plugins whether you use them or not.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">Shelby Web Co's approach:</strong> We always have the new <a href="/about/how-we-work/" class="text-brand-cyan hover:underline">Astro framework</a> at the top of our list to build from — no templates, no page builders, no bloat.</p>
+        <p class="text-brand-sky/80 mb-8"><strong class="text-white">The result:</strong> A site that's faster, more secure, easier to maintain, and built exactly for your business goals.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">Hand-Coded vs. Template: A Real Comparison</h2>
+        <div class="overflow-x-auto mb-12 rounded-2xl border border-white/10">
+          <table class="w-full text-sm">
+            <thead class="bg-brand-dark">
+              <tr><th class="text-left p-4 text-white"></th><th class="text-left p-4 text-white">Template / Page Builder</th><th class="text-left p-4 text-brand-cyan">Hand-Coded Astro (Shelby Web Co)</th></tr>
+            </thead>
+            <tbody class="text-brand-sky/80">
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">Load speed</td><td class="p-4">3–6 seconds</td><td class="p-4 text-brand-cyan font-bold">Under 1 second</td></tr>
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">Code bloat</td><td class="p-4">Heavy, unnecessary scripts</td><td class="p-4 text-brand-cyan font-bold">Only what's needed</td></tr>
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">Security</td><td class="p-4">Plugin vulnerabilities</td><td class="p-4 text-brand-cyan font-bold">Minimal attack surface</td></tr>
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">Customization</td><td class="p-4">Limited by template</td><td class="p-4 text-brand-cyan font-bold">Fully custom, unique to you</td></tr>
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">SEO foundation</td><td class="p-4">Generic</td><td class="p-4 text-brand-cyan font-bold">Optimized from first line of code</td></tr>
+              <tr class="border-t border-white/5"><td class="p-4 font-semibold text-white">Long-term maintenance</td><td class="p-4">Plugin updates, conflicts</td><td class="p-4 text-brand-cyan font-bold">Clean, stable, future-proof</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">The Shelby, NC Reality Check</h2>
+        <p class="text-brand-sky/80 mb-4">Local customers compare you to Charlotte businesses in seconds — your site has to load before they bounce.</p>
+        <p class="text-brand-sky/80 mb-4">Cleveland County businesses often keep sites 5+ years — the gap between “fine” and “competitive” widens fast.</p>
+        <p class="text-brand-sky/80 mb-4">A refresh might get you through another year, but a hand-coded Astro redesign positions you for the next 5.</p>
+        <p class="text-brand-sky/80 mb-8"><strong class="text-white">Bottom line:</strong> In a small market like Shelby, speed and professionalism are your competitive edge.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">What Does Each Path Actually Cost?</h2>
+        <p class="text-brand-sky/80 mb-4">A refresh is a smaller investment with a shorter timeline — it works on your existing platform to extend its life.</p>
+        <p class="text-brand-sky/80 mb-4">A redesign is a bigger investment — a <a href="/" class="text-brand-cyan hover:underline">hand-coded Astro build</a> built for performance and growth. See <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:underline">how much a website costs</a> for realistic ranges.</p>
+        <p class="text-brand-sky/80 mb-4"><strong class="text-white">The hidden cost of templates:</strong> Ongoing plugin subscriptions, security patches, and slow load times that cost you leads.</p>
+        <p class="text-brand-sky/80 mb-8"><strong class="text-white">The hidden cost of waiting:</strong> Lost leads, lower Google ranking, and competitor advantage every month you delay.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">How to Decide: The 3-Question Test</h2>
+        <div class="bg-brand-dark/50 border border-white/10 rounded-2xl p-8 mb-6">
+          <ol class="space-y-4 text-brand-sky/80 list-decimal pl-6">
+            <li><strong class="text-white">Can a customer book/buy/call within 10 seconds of landing?</strong></li>
+            <li><strong class="text-white">Can you update your own site without calling someone?</strong></li>
+            <li><strong class="text-white">Does your site reflect where your business is now — and is it built to grow with you?</strong></li>
+          </ol>
+          <div class="mt-6 bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl p-4">
+            <p class="text-white font-bold m-0">Score it: 3 yes = refresh; 1–2 yes = redesign; 0 yes = urgent redesign.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">What a Successful Shelby Web Design Project Looks Like</h2>
+        <p class="text-brand-sky/80 mb-4">Our process: <a href="/about/how-we-work/" class="text-brand-cyan hover:underline">discovery → wireframes → hand-coded Astro build → launch → training</a>.</p>
+        <p class="text-brand-sky/80 mb-4">You own the code — no platform lock-in, no recurring template fees.</p>
+        <p class="text-brand-sky/80 mb-8">One local service business saw sub-second load times and page-one local rankings within 60 days after switching from a bloated WordPress template to a hand-coded Astro site.</p>
+
+        <h2 class="text-3xl font-bold text-white mt-16 mb-6">Ready for a Hand-Coded Site Built for Shelby?</h2>
+        <p class="text-brand-sky/80 mb-8">Get a <a href="/contact/" class="text-brand-cyan hover:underline">free 15-minute website audit</a> for Shelby & Cleveland County businesses. We'll honestly tell you if you need a refresh or a full hand-coded Astro redesign.</p>
+
+        <div class="bg-gradient-to-br from-brand-blue to-brand-darkest p-12 rounded-[2rem] text-center relative overflow-hidden mb-12">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_70%)]"></div>
+          <h3 class="text-3xl md:text-4xl font-black text-white mb-6 relative z-10">Free 15-Minute Website Audit</h3>
+          <p class="text-lg text-white/80 mb-8 relative z-10 max-w-2xl mx-auto">We'll tell you honestly — refresh or full redesign — and show you what a hand-coded Astro site can do for your Shelby business.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <a href="/contact/" class="bg-white text-brand-darkest px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-sky transition-all">Get My Free Audit</a>
+            <a href="/pricing/" class="bg-black/20 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-black/30 transition-all">View Pricing</a>
+          </div>
+        </div>
+
+        <div class="mt-12 p-8 bg-brand-dark/50 border border-white/5 rounded-2xl text-center">
+          <p class="text-brand-sky/60 text-sm">Written by <strong>Shelby Web Company</strong> — <a href="/" class="text-brand-cyan hover:underline">web design Shelby, NC</a> hand-coded from scratch in the Astro framework.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 mb-16 p-6 bg-brand-dark/50 border border-white/5 rounded-2xl text-brand-sky/70 text-sm">
+        <strong class="text-white">Keep reading:</strong> <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:underline">how much a website costs</a>, <a href="/blog/website-mistakes-costing-customers/" class="text-brand-cyan hover:underline">5 website mistakes</a>, and <a href="/services/web-design/" class="text-brand-cyan hover:underline">our web design services</a>.
+      </div>
+
+      <footer class="mt-12 pt-12 border-t border-white/5 flex flex-wrap gap-8 items-center justify-between">
+        <a href="/blog/" class="text-brand-sky/60 hover:text-white transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Back to Blog
+        </a>
+        <div class="flex gap-6">
+          <a href="/" class="text-brand-sky/60 hover:text-white transition-colors">Home</a>
+          <a href="/contact/" class="text-brand-sky/60 hover:text-white transition-colors">Contact</a>
+        </div>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
