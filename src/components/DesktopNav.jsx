@@ -29,14 +29,14 @@ export default function DesktopNav() {
   }, []);
 
   return (
-    <div className="hidden md:flex items-center space-x-8 font-body">
-      <a href="/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Home</a>
+    <div className="hidden md:flex items-center space-x-4 font-body">
+      <a href="/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Home</a>
       
       {/* Services Dropdown */}
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
-          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           Services
           <svg
@@ -89,7 +89,7 @@ export default function DesktopNav() {
       <div className="relative" ref={aboutRef}>
         <button
           onClick={() => setAboutOpen(!aboutOpen)}
-          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           About Us
           <svg
@@ -117,7 +117,7 @@ export default function DesktopNav() {
       <div className="relative" ref={pricingRef}>
         <button
           onClick={() => setPricingOpen(!pricingOpen)}
-          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors flex items-center"
+          className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           Pricing
           <svg
@@ -141,8 +141,8 @@ export default function DesktopNav() {
         )}
       </div>
       
-      <a href="/contact/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-blue transition-colors">Contact</a>
-      <a href="/blog/" className="font-poofy font-bold text-2xl text-brand-cyan drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-colors" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
+      <a href="/contact/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Contact</a>
+      <a href="/blog/" className="font-poofy font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue-dark drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>
   );
 }
