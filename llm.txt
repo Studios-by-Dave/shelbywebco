@@ -1,0 +1,241 @@
+# Shelby Web Company — llm.txt
+# https://www.shelbywebco.com/
+# Last updated: 2026-09-04
+# This file helps LLMs understand Shelby Web Company's business, services, and context.
+
+---
+
+## OVERVIEW
+
+Shelby Web Company is a local web design, SEO, branding, and digital marketing agency based in Shelby, North Carolina. We build custom websites, local SEO strategies, and digital solutions specifically for local service businesses. We are a non-exclusive agency — we serve any business that needs our help.
+
+- **Website:** https://www.shelbywebco.com/
+- **Phone:** (704) 473-8188 (Call or Text 24/7)
+- **Email:** shelbywebco@gmail.com
+- **Google Rating:** 5.0 stars
+- **Clients Served:** 100+ local businesses
+- **Location:** Shelby, NC (also serving Gastonia, Forest City, Boiling Springs, Polkville, Asheville, Kings Mountain, and surrounding areas)
+
+---
+
+## FOUNDER
+
+**David "Dave" Richardson** — Founder / Lead Developer
+
+- Creativity founded in 1978
+- 20+ years of IT and network engineering experience
+- CompTIA A+ Certified
+- Formerly "Studios by Dave"
+- Education: UNC Charlotte and ECPI University (President of the National Vocational Technical Honor Society)
+- Career start: Broadband Specialist at Computer Connections Inc. in Shelby, NC
+- Also a lifelong musician and Audio Mastering Engineer with 30+ years of recording and production experience
+- Mission: "To see your business succeed. Your website isn't just a digital business card — it's a tool to grow your livelihood."
+
+---
+
+## CORE SERVICES
+
+### 1. Web Design
+- Custom, hand-coded websites (no cookie-cutter templates)
+- Mobile-responsive design
+- Fast, clean, modern code
+- SEO architecture built in from day one
+- Forms & integrations that work
+- Built for performance, search visibility, and reliability
+
+### 2. SEO (Search Engine Optimization)
+- Local SEO optimization
+- Keyword and competitor research
+- Content and page structure built to win local search
+- Analytics and performance tracking
+- SEO foundations included with every build
+
+### 3. Branding
+- Professional logo design
+- Brand consistency across website and online platforms
+- Visual identity that builds credibility
+- Brand strategy and refresh
+
+### 4. Custom Software / Digital Marketing
+- Custom Business Machines (digital engines that convert)
+- AI automation and integration
+- CRM & app integrations
+- Advanced booking and e-commerce
+- Digital marketing strategies
+
+---
+
+## PRICING PACKAGES
+
+### Starter Website — $598 (was $698)
+- 1-5 page brochure site
+- Mobile-responsive design
+- Contact form included
+- Basic SEO setup
+- 1 revision round
+- Does NOT include web hosting
+
+### Professional Business — $998 to $1,998
+- 5-10 page custom site
+- Custom UI/UX design
+- Advanced form architecture
+- Local SEO optimization
+- 2 revision rounds
+- Full analytics dashboard
+- Speed optimization
+
+### Scale Business Package — $2,000 to $3,998
+- 10-20 page business engine
+- Full blog integration & SEO strategy
+- Advanced CRM & app integrations
+- High-performance hosting included
+- Advanced booking or e-commerce
+- Enterprise scaling capability
+- 1-on-1 strategy consulting
+
+### Enterprise Custom — Call for Quote
+- 20+ pages fully custom enterprise solution
+- Fully custom web applications
+- Membership & vendor portals
+- Advanced CRM & API workflows
+- High-performance data handling
+- Unlimited technical support
+- Dedicated growth partner
+
+### Additional Pricing Notes
+- Additional pages: $75–$150 per page (depending on complexity)
+- Web hosting: $10–$30/month (client responsibility unless included)
+- Maintenance plans: Starting at $49/month (security updates, backups, uptime monitoring, content updates, priority support)
+- Website Care Plans: Basic ($75/mo) covers hosting, backups, core code updates; Premium ($149/mo) adds more frequent revisions
+- Payment terms: 50% down to start, 50% due upon completion; flexible payment plans available for larger projects
+- Limited-time offer: Free logo design + $100 referral bonus with any website package
+
+---
+
+## INDUSTRY SPECIALIZATIONS
+
+We build tailored digital solutions for these industries:
+
+- **Concrete / Construction** — Project galleries and estimate request systems
+- **Home Remodelers** — Before/after galleries and booking systems
+- **Roofers & External Trades** — Lead generation systems that convert homeowners
+- **Landscaping Companies** — Seasonal promotions and project portfolios
+- **Solar Panel Installers** — ROI calculators and educational content
+- **Tree Specialists** — Emergency services and seasonal care programs
+- **Expedited Trucking** — Real-time tracking and logistics platforms
+- **Plumbers** — Emergency dispatch and testimonial systems
+
+---
+
+## OUR PROCESS ("No Red Tape. Just Process.")
+
+### Step 1: The Friendly Pre-Discovery
+- Casual conversation about your business — no jargon, no pressure
+- Learn what makes you unique and what you need online
+- Understand your goals, customers, service area, and search terms
+
+### Step 2: The Strategy Map
+- Research becomes a plan
+- Keyword and competitor research grounded in your actual market
+- Content and page structure built to win local search
+- Clear milestones, timelines, and deliverables before any code is written
+
+### Step 3: The Build
+- Design, copy, and build follow the agreed strategy
+- Review rounds keep you in control
+- Launch with SEO foundations, analytics, and performance checks already in place
+
+---
+
+## WHY BUSINESSES CHOOSE SHELBY WEB CO
+
+- **Local Focus:** Part of the Shelby, NC community. We understand the local market, how customers search, and what local competitors are doing online.
+- **Direct Service:** No outsourcing. Dave handles everything directly.
+- **Proven Results:** Track record of growth. Trusted by 100+ local businesses.
+- **Complete Solutions:** Design, SEO, Branding, Custom Software — all in one place.
+- **Non-Exclusive Agency:** We welcome and cater to anyone in need of our services. No exclusivity, just great results.
+- **Hand-Coded Quality:** Every site is hand-coded for performance, search visibility, and reliability.
+- **Long-Term Partnership:** We work with clients to improve and update their sites over time, adjust SEO strategies as competition changes, and grow alongside their business goals.
+
+---
+
+## CORE VALUES
+
+1. **Value** — We deliver exceptional results that exceed your investment, ensuring every dollar spent generates meaningful returns.
+2. **Integrity** — We operate with complete honesty and transparency, building trust through consistent actions and reliable communication.
+3. **Trust** — We earn your confidence through proven expertise, dependable service, and a commitment to your long-term success.
+
+---
+
+## TESTIMONIALS
+
+- **Michelle Bryan** (Local Guide): "The BEST experience!!" ★★★★★
+- **Ryan "Kris" Jones** (Verified Customer): "Shelby Web Company really knocked it out of the park. Our online presence is not only fully present, it's generating our business so many leads now! Thank You!!!"
+
+---
+
+## BLOG / CONTENT
+
+We publish articles on web design, SEO, and digital growth for local businesses. Topics include:
+- Website cost and pricing guides for Shelby, NC
+- Local SEO strategies
+- Web design trends and best practices
+- AI tools in web development (e.g., OpenCode)
+- Industry-specific digital marketing tips
+- DBA and brand identity for SEO
+- Redesign vs. refresh decisions
+- Smart "Talking" Websites (lead qualification, objection handling)
+
+---
+
+## TECHNICAL APPROACH
+
+- Hand-coded sites (not template-based)
+- Modern, fast, clean code
+- Mobile-first design
+- Performance and speed optimization
+- SEO architecture built from the ground up
+- Scalable foundation for future growth
+- AI-assisted development where it improves efficiency and quality
+
+---
+
+## CONTACT
+
+- **Phone:** (704) 473-8188 (Available 24/7 — Call or Text)
+- **Email:** shelbywebco@gmail.com
+- **Service Area:** Shelby, Gastonia, Forest City, Boiling Springs, Polkville, Asheville, Kings Mountain, and surrounding areas in North Carolina
+- **Free Offer:** Free SEO Audit available
+- **Free Consultation:** Schedule a no-pressure discovery call
+
+---
+
+## LEGAL
+
+- **Privacy Policy:** Effective July 3, 2026. We respect your privacy. We do not sell personal information.
+- **Terms of Service:** Projects may require an upfront deposit. Invoices due by date listed. Late payments may pause work. Third-party costs (domains, hosting, plugins, ad spend) are client responsibility unless included in writing. Clients retain ownership of pre-existing brand materials and approved final deliverables after full payment. Shelby Web Company retains ownership of internal processes, frameworks, code libraries, and non-exclusive know-how. We may display completed work in our portfolio unless a separate confidentiality agreement prohibits it. We do not guarantee specific rankings, lead counts, revenue outcomes, or business performance.
+
+---
+
+## KEY PHRASES / BRAND VOICE
+
+- "Custom Websites. Local SEO. Business Machines. Built for Local Business."
+- "Your success is our success — no exclusivity, just great results."
+- "We don't just build websites — we build digital engines that get your business found, trusted, and hired."
+- "How can we make our clients happier today?"
+- "No Red Tape. Just Process."
+- "Not just a website. We're here to construct your online business machine."
+- Professional, friendly, local, transparent, results-driven, no-pressure approach.
+
+---
+
+## COMPETITIVE DIFFERENTIATORS
+
+- Local to Shelby, NC — not an out-of-town agency
+- Direct, personal service from the founder (no account managers or outsourcing)
+- 20+ years of IT/engineering background = technical depth most designers lack
+- Transparent, upfront pricing with no hidden fees
+- Hand-coded, performance-first approach
+- Non-exclusive — we serve any business, any industry
+- Long-term partnership mindset, not one-and-done projects
+- Free SEO audit and consultation to start
