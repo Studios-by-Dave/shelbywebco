@@ -187,7 +187,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden pb-[72px] md:pb-0">
+  <body class:list={[bgVariant === 'charcoal' ? 'bg-[#111214]' : 'bg-brand-darkest', 'text-white font-body antialiased relative overflow-x-hidden pb-[72px] md:pb-0']}>
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
       {bgVariant === 'charcoal' ? (
