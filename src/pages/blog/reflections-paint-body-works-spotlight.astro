@@ -2,12 +2,23 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
 import reflectionsImage from '../../../assets/reflections_1.jpg';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Reflections Paint & Body Works: Small Town Feel, Big Service | Shelby Web Company",
+  "description": "Community Spotlight on Reflections Paint & Body Works — a small-town auto body shop delivering big-time service in Shelby, NC.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/reflections-paint-body-works-spotlight/"
+};
 ---
 
 <BaseLayout 
   title="Reflections Paint & Body Works: Small Town Feel, Big Service | Shelby Web Company"
   description="Community Spotlight on Reflections Paint & Body Works — a small-town auto body shop delivering big-time service in Shelby, NC."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="mb-16 text-center">

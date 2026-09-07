@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Web Development 2026: Shelby Business Guide",
+  "description": "Stay ahead of the curve with our guide on the state of web development in 2026. Learn about AI, mobile-only design, and security for local Shelby businesses.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/web-development-2026/"
+};
 ---
 
 <BaseLayout 
   title="Web Development 2026: Shelby Business Guide"
   description="Stay ahead of the curve with our guide on the state of web development in 2026. Learn about AI, mobile-only design, and security for local Shelby businesses."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->

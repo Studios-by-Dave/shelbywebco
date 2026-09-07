@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Website Cost 2026: Complete Shelby NC Pricing Guide",
+  "description": "Complete 2026 pricing guide for web design in Shelby, NC. Learn what actually drives website costs, realistic price ranges, and questions to ask before hiring.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/website-cost-shelby-nc-2026/"
+};
 ---
 
 <BaseLayout 
   title="Website Cost 2026: Complete Shelby NC Pricing Guide"
   description="Complete 2026 pricing guide for web design in Shelby, NC. Learn what actually drives website costs, realistic price ranges, and questions to ask before hiring."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->

@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Choose Shelby Web Company",
+  "description": "Discover what sets Shelby Web Company apart. We provide professional web design, branding, and SEO tailored for local businesses in Shelby, NC.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/why-choose-shelby-web-company/"
+};
 ---
 
 <BaseLayout 
   title="Why Choose Shelby Web Company"
   description="Discover what sets Shelby Web Company apart. We provide professional web design, branding, and SEO tailored for local businesses in Shelby, NC."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->

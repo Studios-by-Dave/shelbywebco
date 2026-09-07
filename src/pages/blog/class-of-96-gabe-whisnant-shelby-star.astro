@@ -2,12 +2,23 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
 import gabeImage from '../../../assets/gabe_whisnant_1.webp';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Class of '96: Gabe Whisnant Shelby Star Spotlight | Shelby Web Company",
+  "description": "From Crest High Class of '96 to The Shelby Star and Newsweek — meet Gabe Whisnant, a dedicated journalist keeping stories alive.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/class-of-96-gabe-whisnant-shelby-star/"
+};
 ---
 
 <BaseLayout 
   title="Class of '96: Gabe Whisnant Shelby Star Spotlight | Shelby Web Company"
   description="From Crest High Class of '96 to The Shelby Star and Newsweek — meet Gabe Whisnant, a dedicated journalist keeping stories alive."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="mb-16 text-center">

@@ -5,12 +5,23 @@ import frHero from '../../../assets/fr_hero.jpg';
 import frStats from '../../../assets/fr_stats.webp';
 import frDave from '../../../assets/fr_dave.png';
 import frPeer from '../../../assets/fr_peer_flyer.webp';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Support First Responders: Community Spotlight | Shelby Web Company",
+  "description": "Meet the police, firefighters, and EMS workers who protect Cleveland County every day — and how you can support them.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/support-first-responders-spotlight/"
+};
 ---
 
 <BaseLayout
   title="Support First Responders: Community Spotlight | Shelby Web Company"
   description="Meet the police, firefighters, and EMS workers who protect Cleveland County every day — and how you can support them."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->

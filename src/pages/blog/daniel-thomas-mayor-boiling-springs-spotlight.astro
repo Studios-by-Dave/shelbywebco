@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Daniel Thomas: Mayor of Boiling Springs Spotlight | Shelby Web Company",
+  "description": "Community Spotlight on Daniel Thomas — former Mayor of Boiling Springs, NC. Small-town leadership, community pride, and Cleveland County.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/daniel-thomas-mayor-boiling-springs-spotlight/"
+};
 ---
 
 <BaseLayout 
   title="Daniel Thomas: Mayor of Boiling Springs Spotlight | Shelby Web Company"
   description="Community Spotlight on Daniel Thomas — former Mayor of Boiling Springs, NC. Small-town leadership, community pride, and Cleveland County."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="mb-16 text-center">

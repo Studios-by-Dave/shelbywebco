@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Is a Smart \"Talking\" Website?",
+  "description": "Learn what a Smart \"Talking\" Website is, how it helps local businesses capture more leads, and where to find pricing.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/what-is-a-smart-talking-website/"
+};
 ---
 
 <BaseLayout 
   title='What Is a Smart "Talking" Website?'
   description='Learn what a Smart "Talking" Website is, how it helps local businesses capture more leads, and where to find pricing.'
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="mb-16 text-center">

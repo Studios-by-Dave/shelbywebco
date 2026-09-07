@@ -2,12 +2,23 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
 import nearMeImg from '../../../assets/Near-Me-Local-Search.png';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Best Web Designers Near Me: What to Look For | Shelby Web Company",
+  "description": "If you've searched 'best web designers near me,' here's how to tell a genuinely local designer from a forgettable one.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/best-web-designers-near-me/"
+};
 ---
 
 <BaseLayout 
   title="Best Web Designers Near Me: What to Look For | Shelby Web Company"
   description="If you've searched 'best web designers near me,' here's how to tell a genuinely local designer from a forgettable one."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
 
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">

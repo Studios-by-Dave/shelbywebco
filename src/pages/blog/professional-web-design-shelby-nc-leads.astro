@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Professional Web Design Shelby NC: Lead Generation",
+  "description": "Learn how professional web design and local SEO work together to drive more leads for Shelby, NC businesses in 2026.",
+  "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
+  "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://www.shelbywebco.com/blog/professional-web-design-shelby-nc-leads/"
+};
 ---
 
 <BaseLayout 
   title="Professional Web Design Shelby NC: Lead Generation"
   description="Learn how professional web design and local SEO work together to drive more leads for Shelby, NC businesses in 2026."
 >
+  <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-32 pb-24 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->
