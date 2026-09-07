@@ -18,6 +18,7 @@ interface Props {
   image?: string;
   canonical?: string;
   breadcrumbs?: Breadcrumb[];
+  bgVariant?: 'legacy' | 'charcoal';
 }
 
 const { 
@@ -25,7 +26,8 @@ const {
   description, 
   image = 'https://www.shelbywebco.com/og-image.jpg',
   canonical = new URL(Astro.url.pathname, Astro.site).href,
-  breadcrumbs
+  breadcrumbs,
+  bgVariant = 'legacy'
 } = Astro.props;
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
@@ -188,8 +190,19 @@ const showBreadcrumbBar = pathSegments.length > 0;
   <body class="bg-brand-darkest text-white font-body antialiased relative overflow-x-hidden pb-[72px] md:pb-0">
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-      <!-- Subtle Grid -->
-      <div class="absolute inset-0 opacity-[0.20]" style="background-image: linear-gradient(rgba(29, 78, 216, 0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.7) 1px, transparent 1px); background-size: 40px 40px;"></div>
+      {bgVariant === 'charcoal' ? (
+        <>
+          <!-- Charcoal base -->
+          <div class="absolute inset-0 bg-[#111214]"></div>
+          <!-- Faded white grid -->
+          <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </>
+      ) : (
+        <>
+          <!-- Subtle Grid -->
+          <div class="absolute inset-0 opacity-[0.20]" style="background-image: linear-gradient(rgba(29, 78, 216, 0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.7) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </>
+      )}
 
       <!-- Noise Texture -->
       <div class="absolute inset-0 opacity-[0.05] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalSum%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
