@@ -14,12 +14,23 @@ import logo11 from '../../../assets/logo design/logo design_11.jpg';
 import logo13 from '../../../assets/logo design/logo design_13.jpg';
 import fountainImg from '../../../assets/fountain_1.jpg';
 import newBadges25 from '../../../assets/NewBadges25.png';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Logo Design & Branding",
+  "description": "Professional logo design and branding in Shelby, NC. Custom logos, brand identity, and assets that build trust.",
+  "url": "https://www.shelbywebco.com/services/branding/",
+  "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
+  "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC", "Asheville, NC"]
+};
 ---
 
 <BaseLayout 
   title="Logo Design & Branding"
   description="Professional logo design and branding in Shelby, NC. Custom logos, brand identity, and assets that build trust."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>

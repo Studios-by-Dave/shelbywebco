@@ -42,6 +42,16 @@ const faqSchema = {
     'acceptedAnswer': { '@type': 'Answer', 'text': item.answer }
   }))
 };
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Software & SaaS Platform Development",
+  "description": "Custom web applications, portals, and subscription platforms built around your business. Own your code, own your roadmap.",
+  "url": "https://www.shelbywebco.com/services/custom-software-saas/",
+  "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
+  "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC", "Asheville, NC"]
+};
 ---
 
 <BaseLayout 
@@ -50,6 +60,7 @@ const faqSchema = {
 >
 
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden bg-brand-darkest" data-animate>

@@ -7,12 +7,23 @@ import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.j
 import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
 import sbdChart from '../../../assets/sbd ide chart1.png';
 import webFlyer from '../../../assets/Sweb_flyer_new.jpg';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Professional Web Design Services",
+  "description": "High-performance, conversion-focused web design services. We build fast, mobile-responsive websites with built-in SEO to help your business grow.",
+  "url": "https://www.shelbywebco.com/services/web-design/",
+  "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
+  "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC", "Asheville, NC"]
+};
 ---
 
 <BaseLayout 
   title="Professional Web Design Services"
   description="High-performance, conversion-focused web design services. We build fast, mobile-responsive websites with built-in SEO to help your business grow."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>

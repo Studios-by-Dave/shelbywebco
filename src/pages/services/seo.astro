@@ -1,12 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Complete SEO Services",
+  "description": "Comprehensive SEO services for Shelby, NC businesses. Technical optimization, local search, and more leads.",
+  "url": "https://www.shelbywebco.com/services/seo/",
+  "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
+  "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC", "Asheville, NC"]
+};
 ---
 
 <BaseLayout 
   title="Complete SEO Services"
   description="Comprehensive SEO services for Shelby, NC businesses. Technical optimization, local search, and more leads."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
