@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
 import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
+import psprings2Img from '../../../assets/blog/psprings_2.jpeg';
+import psprings3Img from '../../../assets/blog/psprings_3.jpeg';
 
 const blogPostingSchema = {
   "@context": "https://schema.org",
@@ -59,6 +61,15 @@ const blogPostingSchema = {
         <p class="text-brand-sky/80 mb-8 leading-relaxed">
           My dad has always said it's not about the buildings — it's about the people. He didn't just grow a church; he built a family out of a congregation, one relationship, one visit, one Sunday sermon at a time. That distinction says everything about who he is.
         </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-10">
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={psprings2Img} alt="Poplar Springs Baptist Church - Shelby NC" width={600} height={400} class="w-full h-auto object-cover" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <Image src={psprings3Img} alt="Poplar Springs Baptist Church community" width={600} height={400} class="w-full h-auto object-cover" />
+          </div>
+        </div>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8">Still Serving, Decades Later</h2>
         <p class="text-white mb-8 leading-relaxed">
