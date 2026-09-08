@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import Image from '../../components/OptimizedImage.astro';
+import sisConsole from '../../../assets/seo service page/SIS console.jpg';
+import sisConsole1 from '../../../assets/seo service page/sis_console_1.png';
+import sisConsole2 from '../../../assets/seo service page/sis_console_2.png';
+import sisConsole3 from '../../../assets/seo service page/sis_console_3.png';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -11,6 +16,53 @@ const serviceSchema = {
   "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
   "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC", "Asheville, NC"]
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to see SEO results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most local businesses start seeing measurable improvements in search rankings and organic traffic within 3-6 months. Technical SEO fixes (like the SEO Upgrade) can show results within weeks, while content and authority building compounds over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in your SEO services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our SEO services include on-page optimization, local SEO (Google Business Profile), technical SEO audits, content strategy, image/video SEO, off-page link building, and full analytics reporting. We also offer our proprietary SEO Intelligence Suite (SIS Console) for ongoing rank tracking and competitor monitoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free SEO audits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer a free SEO audit for Shelby-area businesses. It covers your site's crawlability, on-page optimization, local search presence, and competitor positioning. Request yours at shelbywebco.com/promotions/free-seo-audit/."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the SEO Intelligence Suite (SIS Console)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The SIS Console is our proprietary all-in-one SEO platform built for deep auditing, keyword analysis, competitor research, crawl/re-crawl capabilities, and full export functions to branded PDF reports. It's available to all SEO clients for transparent, real-time performance tracking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with businesses outside Shelby?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. While Shelby is home base, we serve businesses across Cleveland County, Gaston County, Rutherford County, and the greater Western NC region including Gastonia, Kings Mountain, Forest City, Boiling Springs, Polkville, and Asheville."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout 
@@ -18,30 +70,147 @@ const serviceSchema = {
   description="Comprehensive SEO services for Shelby, NC businesses. Technical optimization, local search, and more leads."
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
-  <!-- Hero Section -->
-  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+  <!-- Hero Section: What Is SEO? -->
+  <section class="py-16 lg:py-20 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
     <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
     <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
     <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
-    <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Search Engine Optimization</p>
-      <div class="relative inline-block">
-        <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-          Complete <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">SEO Services</span>
-        </h1>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Search Engine Optimization</p>
+        <div class="relative inline-block">
+          <PixieDust client:load />
+          <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            So What Is <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">SEO</span>?
+          </h1>
+        </div>
+        <p class="text-xl text-brand-sky/80 mb-8 max-w-3xl mx-auto">
+          Search Engine Optimization is the practice of configuring every layer of your website so that Google, Bing, and other search engines can find it, understand it, trust it, and rank it above your competitors when potential customers search for what you offer.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a 
+            href="/contact/"
+            class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+          >
+            Start Ranking Higher
+          </a>
+          <a 
+            href="/promotions/free-seo-audit/"
+            class="inline-block border border-white/20 text-white px-8 py-3 rounded-xl font-medium hover:bg-white/10 transition-all duration-300"
+          >
+            Free SEO Audit →
+          </a>
+        </div>
       </div>
-      <p class="text-xl text-brand-sky/80 mb-8">
-        Comprehensive search engine optimization services that cover every aspect of SEO. From technical optimization to content strategy, we help businesses dominate search results.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a 
-          href="/contact/"
-          class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
-        >
-          Start Ranking Higher
-        </a>
+
+      <!-- The SEO Variables -->
+      <div class="bg-brand-dark/80 border border-white/5 rounded-3xl p-8 md:p-12 mb-12">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6 text-center">The Variables Behind Every Ranking</h2>
+        <p class="text-brand-sky/70 text-center mb-10 max-w-3xl mx-auto">
+          SEO isn't one thing — it's dozens of interconnected systems working together. Missing any single layer can hold your entire site back. Here's what goes into a proper SEO strategy:
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">01</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Page Indexing & Crawlability</h4>
+              <p class="text-white/80 text-sm">Google must be able to discover, crawl, and index every important page on your site. If pages aren't indexed, they don't exist in search results — no matter how good your content is.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">02</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Canonicalization</h4>
+              <p class="text-white/80 text-sm">When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">03</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">XML Sitemap Implementation</h4>
+              <p class="text-white/80 text-sm">A properly structured sitemap acts as a roadmap for search engines — listing every page, its update frequency, and relative importance so crawlers prioritize what matters most.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">04</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Robots.txt Configuration</h4>
+              <p class="text-white/80 text-sm">This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">05</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">LLMs.txt — AI Visibility</h4>
+              <p class="text-white/80 text-sm">The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">06</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Redirect Management</h4>
+              <p class="text-white/80 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve link equity when URLs change, pages move, or domains are consolidated — without losing authority.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">07</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">On-Page Optimization</h4>
+              <p class="text-white/80 text-sm">Title tags, meta descriptions, header hierarchy, internal linking, keyword placement, content quality, and structured data — every element on every page sends signals to search engines.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">08</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Technical Performance</h4>
+              <p class="text-white/80 text-sm">Core Web Vitals, mobile responsiveness, page speed, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">09</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Local SEO & Google Business</h4>
+              <p class="text-white/80 text-sm">For service-area businesses, local SEO is everything — Google Business Profile optimization, NAP consistency, local citations, review management, and map pack positioning.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-brand-accent font-bold text-sm">10</span>
+            </div>
+            <div>
+              <h4 class="text-brand-cyan font-bold mb-1">Content Strategy & Authority</h4>
+              <p class="text-white/80 text-sm">Keyword research, topic clustering, content freshness, E-E-A-T signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Reality Check -->
+      <div class="bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10 border border-brand-blue/20 rounded-2xl p-8 md:p-10 text-center">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">It's a Lot. Even With AI.</h3>
+        <p class="text-brand-sky/70 max-w-3xl mx-auto text-lg leading-relaxed">
+          To be clear — we're not here to bash AI. We love AI. It's a game-changer for research, content, and speed. It's definitely all in how you use it. But even with AI tools accelerating the work, SEO still requires a capable human to properly audit, configure, monitor, and adapt all of these variables together. AI can assist — but it can't replace the judgment needed to decide <em class="text-white">which</em> fixes matter most for <em class="text-white">your</em> specific site, <em class="text-white">your</em> market, and <em class="text-white">your</em> customers. That's where we come in.
+        </p>
       </div>
     </div>
   </section>
@@ -63,36 +232,42 @@ const serviceSchema = {
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">On-Page SEO</h3>
-          <p class="text-brand-sky/60">Content optimization, keywords, meta data, internal linking, and URL structure.</p>
+          <p class="text-brand-sky/60">Strategic content optimization, keyword targeting, meta data refinement, internal linking architecture, and clean URL structure — every element tuned for maximum crawlability and ranking potential.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10a2 2 0 100-4 2 2 0 000 4z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Local SEO</h3>
-          <p class="text-brand-sky/60">Google My Business, local listings, reviews, and location-based optimization.</p>
+          <p class="text-brand-sky/60">Google Business Profile optimization, local citation building, review management, and location-based strategies that put your business on the map — literally — for nearby customers.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l-3 3 3 3m8-6l3 3-3 3M14 5l-4 14"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Technical SEO</h3>
-          <p class="text-brand-sky/60">Site speed, mobile optimization, indexation, accessibility, and schema markup.</p>
+          <p class="text-brand-sky/60">Site speed optimization, mobile-first compliance, crawlability audits, indexation control, accessibility standards, and structured data markup — the technical foundation Google rewards.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.6-4.6a2 2 0 012.8 0L14 14l1.6-1.6a2 2 0 012.8 0L20 16m-9-7h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Image & Video SEO</h3>
-          <p class="text-brand-sky/60">Image optimization, alt tags, video SEO, and multimedia content strategy.</p>
+          <p class="text-brand-sky/60">Image compression, alt tag strategy, video transcription, and multimedia schema — so visual content ranks in Google Images and video carousels, not just standard search.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+          </div>
           <h3 class="text-xl font-bold text-white mb-3">Off-Page SEO</h3>
-          <p class="text-brand-sky/60">Link building, guest posting, social signals, and domain authority building.</p>
+          <p class="text-brand-sky/60">Strategic link building, guest posting, social signal amplification, and domain authority growth — the external credibility signals that push your site above competitors.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
           <h3 class="text-xl font-bold text-white mb-3">SEO Analytics</h3>
-          <p class="text-brand-sky/60">Performance tracking, keyword monitoring, and detailed SEO reporting.</p>
+          <p class="text-brand-sky/60">Real-time performance tracking, keyword rank monitoring, competitor benchmarking, and detailed reporting through our proprietary SIS Console — so you always know what's working.</p>
         </div>
       </div>
     </div>
@@ -218,7 +393,7 @@ Google reads every word. --&gt;</pre>
                 <div>/locations/shelby ✓</div>
                 <div>/locations/gastonia ✓</div>
               </div>
-              <div class="h-1 bg-brand-accent/20 rounded-full overflow-hidden">
+              <div class="h-1 bg-brand-blue/20 rounded-full overflow-hidden">
                 <div class="h-full bg-brand-accent w-full"></div>
               </div>
               <p class="text-right text-[10px] uppercase text-brand-accent mt-1 font-bold">18 Pages</p>
@@ -231,6 +406,111 @@ Google reads every word. --&gt;</pre>
           <h4 class="text-2xl font-bold text-white mb-4">Ready to stop being invisible on Google?</h4>
           <p class="text-brand-sky/60 mb-8 max-w-2xl mx-auto">The SEO Upgrade is available as a standalone service or bundled with any new website build.</p>
           <a href="/contact/" class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-black text-xl hover:scale-105">Inquire About the SEO Upgrade</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIS Console Showcase -->
+  <section class="py-24 px-4 bg-brand-darkest relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-blue/5 via-transparent to-brand-cyan/5 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider mb-6">
+          Proprietary Tooling
+        </div>
+        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+          SEO Intelligence Suite
+        </h2>
+        <p class="text-brand-sky/70 max-w-3xl mx-auto text-lg">
+          Our proprietary all-in-one SEO platform — built for deep auditing, real-time monitoring, and transparent reporting. Every Shelby Web Company SEO client gets full access.
+        </p>
+      </div>
+
+      <!-- Hero screenshot -->
+      <div class="mb-16 max-w-2xl mx-auto">
+        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <Image 
+            src={sisConsole} 
+            alt="SIS Console - SEO Intelligence Suite dashboard showing deep audit capabilities" 
+            class="w-full h-auto"
+            width={400}
+            height={225}
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Feature grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-brand-dark/80 p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-lg flex items-center justify-center mb-6">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Deep Site Auditing</h3>
+          <p class="text-brand-sky/60">Full crawl analysis, technical issue detection, on-page scoring, and actionable fix prioritization — every weakness identified before it costs you rankings.</p>
+        </div>
+        <div class="bg-brand-dark/80 p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-lg flex items-center justify-center mb-6">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Keyword & Competitor Analysis</h3>
+          <p class="text-brand-sky/60">Track keyword positions, analyze competitor strategies, discover gaps in your market, and monitor ranking movements across your entire search portfolio.</p>
+        </div>
+        <div class="bg-brand-dark/80 p-8 rounded-2xl border border-white/5">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan to-brand-blue rounded-lg flex items-center justify-center mb-6">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Branded PDF Exports</h3>
+          <p class="text-brand-sky/60">Generate professional, client-ready reports with your branding — full data exports, visual dashboards, and executive summaries at the click of a button.</p>
+        </div>
+      </div>
+
+      <!-- Screenshot gallery -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+          <Image 
+            src={sisConsole1} 
+            alt="SIS Console - Keyword analysis and rank tracking dashboard" 
+            class="w-full h-auto"
+            width={1200}
+            height={750}
+            loading="lazy"
+          />
+        </div>
+        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+          <Image 
+            src={sisConsole2} 
+            alt="SIS Console - Crawl analysis and technical SEO audit results" 
+            class="w-full h-auto"
+            width={1200}
+            height={750}
+            loading="lazy"
+          />
+        </div>
+        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+          <Image 
+            src={sisConsole3} 
+            alt="SIS Console - Competitor analysis and reporting interface" 
+            class="w-full h-auto"
+            width={1200}
+            height={750}
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-white mb-4">See Your SEO Data in Action</h3>
+        <p class="text-brand-sky/60 mb-8 max-w-2xl mx-auto">Get hands-on with the SIS Console through a free SEO audit — or request a live walkthrough of the full platform.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/promotions/free-seo-audit/" class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light">
+            Claim Free SEO Audit
+          </a>
+          <a href="/contact/" class="inline-block border border-brand-cyan/40 text-brand-cyan px-8 py-3 rounded-xl font-bold hover:bg-brand-cyan/10 transition-all duration-300">
+            Request a Live Demo
+          </a>
         </div>
       </div>
     </div>
@@ -266,7 +546,7 @@ Google reads every word. --&gt;</pre>
       </div>
       <div class="bg-brand-dark p-12 rounded-3xl border border-white/5">
         <div class="text-center">
-          <p class="text-brand-accent text-5xl font-black mb-4">400%</p>
+          <p class="text-brand-blue text-5xl font-black mb-4">400%</p>
           <p class="text-white font-bold text-xl mb-2">Average Increase in Traffic</p>
           <p class="text-brand-sky/60">Within 6 months of comprehensive SEO strategy implementation.</p>
         </div>
@@ -274,19 +554,60 @@ Google reads every word. --&gt;</pre>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="py-24 px-4 bg-brand-dark border-y border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Common Questions</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">SEO Questions Answered</h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">How long does it take to see SEO results?</h3>
+          <p class="text-brand-sky/70">Most local businesses start seeing measurable improvements in search rankings and organic traffic within 3–6 months. Technical SEO fixes (like the SEO Upgrade) can show results within weeks, while content and authority building compounds over time.</p>
+        </div>
+        <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">What's included in your SEO services?</h3>
+          <p class="text-brand-sky/70">Our SEO services include on-page optimization, local SEO (Google Business Profile), technical SEO audits, content strategy, image/video SEO, off-page link building, and full analytics reporting. We also offer our proprietary SEO Intelligence Suite (SIS Console) for ongoing rank tracking and competitor monitoring.</p>
+        </div>
+        <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">Do you offer free SEO audits?</h3>
+          <p class="text-brand-sky/70">Yes. We offer a free SEO audit for Shelby-area businesses. It covers your site's crawlability, on-page optimization, local search presence, and competitor positioning. <a href="/promotions/free-seo-audit/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Request yours here</a>.</p>
+        </div>
+        <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">What is the SEO Intelligence Suite (SIS Console)?</h3>
+          <p class="text-brand-sky/70">The SIS Console is our proprietary all-in-one SEO platform built for deep auditing, keyword analysis, competitor research, crawl/re-crawl capabilities, and full export functions to branded PDF reports. It's available to all SEO clients for transparent, real-time performance tracking.</p>
+        </div>
+        <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-3">Do you work with businesses outside Shelby?</h3>
+          <p class="text-brand-sky/70">Absolutely. While Shelby is home base, we serve businesses across Cleveland County, Gaston County, Rutherford County, and the greater Western NC region including Gastonia, Kings Mountain, Forest City, Boiling Springs, Polkville, and Asheville.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="py-20 px-4 relative overflow-hidden bg-brand-dark" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/5 via-transparent to-brand-accent/5 pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Dominate Search Results?</h2>
       <p class="text-lg text-brand-sky/80 mb-10">Let our SEO experts help you rank higher and get more customers from search engines. We serve businesses across <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Gastonia</a>, <a href="/web-design-asheville-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Asheville</a>, and all of Western NC. New to SEO? Start with our <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">local SEO essentials guide</a>.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a 
-          href="/contact/"
+          href="/promotions/free-seo-audit/"
           class="cta-glow-shine inline-block bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-accent-light"
         >
-          Get SEO Analysis
+          Claim Free SEO Audit
+        </a>
+        <a 
+          href="/contact/"
+          class="inline-block border border-white/20 text-white px-10 py-4 rounded-xl font-black text-xl hover:bg-white/10 transition-all duration-300"
+        >
+          Talk to an Expert
         </a>
       </div>
+      <p class="text-brand-sky/40 text-sm mt-6">★★★★★ 5.0 on Google · 100+ local businesses served · Transparent pricing</p>
     </div>
   </section>
 
