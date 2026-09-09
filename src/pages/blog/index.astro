@@ -26,7 +26,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
   title="Web Design & SEO Blog | Shelby Web Company"
   description="Stay up to date with the latest web design, SEO, and digital marketing tips for local businesses in Shelby, NC."
 >
-  <section class="py-24 lg:py-40 px-4 relative overflow-hidden" data-animate>
+  <section class="py-16 lg:py-28 px-4 relative overflow-hidden" data-animate>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
     <div class="absolute left-4 lg:left-12 top-8 w-20 h-20 lg:w-28 lg:h-28 rounded-2xl overflow-hidden border border-white/10 shadow-xl opacity-80 hidden md:block">
       <Image src={blog3Img} alt="" class="w-full h-full object-cover" />
@@ -49,13 +49,81 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
 
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
     <div class="max-w-7xl mx-auto">
-      <div id="shelby-web-official" class="mb-16 scroll-mt-28">
-        <div class="mb-8">
-          <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Section 1</p>
-          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Shelby Web Official</h2>
-        </div>
+      <!-- Section Picker: two square preview cards -->
+      <div id="section-picker" class="block">
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Shelby Web Official preview square -->
+          <button onclick="selectSection('official')" class="group text-left bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Shelby Web Official</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Section 1</span>
+              </div>
+              <h2 class="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-3">
+                Shelby Web Official
+              </h2>
+              <p class="text-brand-sky/60 text-sm line-clamp-3">
+                Web design, SEO, and digital marketing tips for Shelby-area businesses. Click to browse all official articles.
+              </p>
+            </div>
+          </button>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Community Spotlight preview square -->
+          <button onclick="selectSection('spotlight')" class="group text-left bg-brand-dark border border-[#c9a86a]/20 rounded-2xl overflow-hidden hover:border-[#c9a86a]/40 transition-all duration-300">
+            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-[#c9a86a]/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Community Spotlight</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Section 2</span>
+              </div>
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
+                Community Spotlight
+              </h2>
+              <p class="text-brand-sky/60 text-sm line-clamp-3">
+                Stories of the people and businesses keeping Cleveland County strong. Click to browse all spotlights.
+              </p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <script is:inline>
+        function selectSection(tab) {
+          document.getElementById('section-picker').className = 'hidden';
+          document.getElementById('section-official').className = tab === 'official' ? 'block' : 'hidden';
+          document.getElementById('section-spotlight').className = tab === 'spotlight' ? 'block' : 'hidden';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function showPicker() {
+          document.getElementById('section-picker').className = 'block';
+          document.getElementById('section-official').className = 'hidden';
+          document.getElementById('section-spotlight').className = 'hidden';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      </script>
+
+      <!-- Shelby Web Official Section -->
+      <div id="section-official" class="hidden">
+        <button onclick="showPicker()" class="mb-8 text-brand-sky/60 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          All Sections
+        </button>
+        <div id="shelby-web-official" class="mb-16 scroll-mt-28">
+          <div class="mb-8">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Section 1</p>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Shelby Web Official</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Blog Post 17 -->
         <a href="/blog/when-your-business-name-is-lost-dba-seo-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
@@ -465,18 +533,25 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
             </p>
           </div>
         </a>
+</div>
         </div>
       </div>
 
-      <div id="community-spotlight" class="scroll-mt-28">
+      <!-- Community Spotlight Section -->
+      <div id="section-spotlight" class="hidden">
+        <button onclick="showPicker()" class="mb-8 text-brand-sky/60 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          All Sections
+        </button>
+        <div id="community-spotlight" class="scroll-mt-28">
         <div class="mb-8">
-          <p class="text-orange-400 text-xs font-bold uppercase tracking-widest mb-2">Section 2</p>
+          <p class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest mb-2">Section 2</p>
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Community Spotlight</h2>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Post 19 (Community Spotlight) - James Richardson -->
-          <a href="/blog/building-people-not-just-buildings-james-richardson-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/building-people-not-just-buildings-james-richardson-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={richardsonImg}
@@ -487,16 +562,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">September 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 Building People, Not Just Buildings: A Community Spotlight on My Father, James Brinson Richardson
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -506,7 +581,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 18 (Community Spotlight) -->
-          <a href="/blog/support-first-responders-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/support-first-responders-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={frHeroImg}
@@ -517,16 +592,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">August 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 Standing With Our Heroes: A Community Spotlight on Supporting Local First Responders
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -536,7 +611,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 15 (Community Spotlight) -->
-          <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={reflectionsImage} 
@@ -545,16 +620,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">August 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 Small Town Feel, Big Time Service: A Community Spotlight on Reflections Paint &amp; Body Works Shelby
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -564,7 +639,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 14 (Community Spotlight) -->
-          <a href="/blog/daniel-thomas-mayor-boiling-springs-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/daniel-thomas-mayor-boiling-springs-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={boilingSpringsImg} 
@@ -573,16 +648,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">August 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 What Was It Like to Be Mayor? A Community Spotlight on Daniel Thomas, Former Mayor of Boiling Springs, NC
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -592,7 +667,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 13 (Community Spotlight) -->
-          <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={newtonImg3} 
@@ -601,16 +676,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">August 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 From Crest High Classmates to Local Business Owners: Celebrating Jimmy Newton and Newton's Karate
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -620,7 +695,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 12 (Community Spotlight) -->
-          <a href="/blog/class-of-96-gabe-whisnant-shelby-star/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/class-of-96-gabe-whisnant-shelby-star/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={gabeWhisnantImg} 
@@ -629,16 +704,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">August 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 Class of '96 Spotlight: How Gabe Whisnant is Keeping Shelby Sports Alive at The Shelby Star
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -648,7 +723,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 7 (Community Spotlight) -->
-          <a href="/blog/trucking-industry-challenges-2026/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/trucking-industry-challenges-2026/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={fsExpeditedImg} 
@@ -657,16 +732,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">May 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 The Road Gets Harder: Trucking Industry Challenges in 2026
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -676,7 +751,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           </a>
 
           <!-- Blog Post 5 (Community Spotlight) -->
-          <a href="/blog/fs-expedited-llc-spotlight/" class="group bg-brand-dark border border-orange-500/10 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
+          <a href="/blog/fs-expedited-llc-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={fsLogoImg} 
@@ -685,16 +760,16 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-orange-500/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+                <span class="text-[#c9a86a]/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
                 <span class="text-brand-sky/40 text-xs">•</span>
                 <span class="text-brand-sky/40 text-xs">March 2026</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors mb-3">
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
                 Driving Efficiency Forward: Spotlight on F&S Expedited LLC
               </h2>
               <p class="text-brand-sky/60 text-sm line-clamp-3">
@@ -703,6 +778,7 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
             </div>
           </a>
         </div>
+      </div>
       </div>
     </div>
   </section>
