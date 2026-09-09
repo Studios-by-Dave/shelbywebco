@@ -79,7 +79,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
 
           <div class="relative flex items-center justify-center my-12">
             <div class="absolute inset-x-0 h-px bg-brand-sky/20"></div>
-            <span class="relative bg-brand-darkest px-6 text-brand-sky/60 font-bold uppercase tracking-[0.2em] text-sm">Or</span>
+            <span class="relative bg-brand-darkest px-6 text-white/90 font-bold uppercase tracking-[0.2em] text-sm">Or</span>
           </div>
 
           <div class="max-w-xl mx-auto w-full space-y-6">
@@ -108,7 +108,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
 
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <input type="hidden" name="subject" value="New Contact Form Submission from Shelby Web Co" />
-                <div id="form-status" class="min-h-6 text-sm text-brand-sky/70"></div>
+                <div id="form-status" class="min-h-6 text-sm text-white"></div>
 
                 <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accent-light text-brand-darkest font-black py-4 rounded-xl uppercase tracking-[0.2em] text-sm transition-all duration-300 active:scale-95">
                   Send / Launch
@@ -117,7 +117,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
             </div>
 
             <div class="rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-8">
-              <p class="text-brand-sky/80 text-sm uppercase tracking-widest mb-3">Client Reviews</p>
+              <p class="text-white text-sm uppercase tracking-widest mb-3">Client Reviews</p>
               <div class="space-y-4">
                 <div class="rounded-2xl border border-white/10 bg-brand-dark/70 p-5">
                   <div class="flex items-center gap-1 mb-3">
@@ -127,7 +127,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
                   <p class="text-brand-cyan/60 uppercase tracking-widest text-xs">Michelle Bryan</p>
                 </div>
               </div>
-              <p class="text-brand-sky/70 text-sm mt-6">Our team is ready to deliver the same high-touch service for your Shelby business.</p>
+              <p class="text-white text-sm mt-6">Our team is ready to deliver the same high-touch service for your Shelby business.</p>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ import businessCard from '../../assets/about/Sweb_bcard_1.png';
       const formData = new FormData(form);
 
       status.textContent = 'Sending your message...';
-      status.className = 'min-h-6 text-sm text-brand-sky/70';
+      status.className = 'min-h-6 text-sm text-white';
 
       try {
         const response = await fetch('https://api.web3forms.com/submit', {

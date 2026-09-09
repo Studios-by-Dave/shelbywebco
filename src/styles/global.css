@@ -55,6 +55,11 @@
   100% { transform: translateX(-100%); }
 }
 
+@keyframes portfolio-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
 @keyframes flash-lime {
   0%, 100% {
     color: var(--color-brand-accent);
@@ -173,5 +178,11 @@
   .eapps-chat-widget,
   [class*="elfsight-app-"] {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-whisping > div:first-child {
+    animation-play-state: paused !important;
   }
 }

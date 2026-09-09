@@ -23,14 +23,26 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.webp';
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
+    <!-- Whisping portfolio preview backdrop -->
+    <div class="portfolio-whisping absolute inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
+      <div class="flex gap-8 items-center h-full w-max animate-[portfolio-scroll_35s_linear_infinite] opacity-[0.58] will-change-transform">
+        {[swebscreen, fsExpedited, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
+          .flatMap(img => [img, img])
+          .map(img => (
+            <img src={img.src} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
+          ))}
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-darkest/70 via-transparent to-brand-darkest/70 z-10 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-darkest/60 via-transparent to-brand-darkest/60 z-10 pointer-events-none"></div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/20 via-brand-darkest/30 to-black/20 pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Portfolio</p>
-      <h1 class="font-heading text-page-title md:text-page-title-lg font-bold text-white mb-4 leading-tight">
+      <h1 class="font-heading text-page-title md:text-page-title-lg font-bold mb-4 leading-tight bg-gradient-to-r from-white to-brand-blue bg-clip-text text-transparent">
         Our Work
       </h1>
       <p class="text-body-lg text-white mb-8">
-        Websites, branding, and digital solutions for local businesses.
+        Check out some of our Web projects and custom web applications that we have built. More coming!
       </p>
     </div>
   </section>
@@ -43,7 +55,7 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.webp';
       <div class="mb-16">
         <div class="mb-10">
           <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Websites</p>
-          <h2 class="font-heading text-section-heading font-bold text-white">Websites</h2>
+          <h2 class="font-heading text-3xl md:text-5xl font-bold text-white">Websites</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -132,7 +144,7 @@ import gAnalyzer from '../../../assets/portfolio/5g-analyzer.webp';
       <div>
         <div class="mb-10">
           <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Web Applications</p>
-          <h2 class="font-heading text-section-heading font-bold text-white">Web Applications</h2>
+          <h2 class="font-heading text-3xl md:text-5xl font-bold text-white">Web Applications</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

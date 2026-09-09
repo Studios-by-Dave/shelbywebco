@@ -83,7 +83,7 @@ export default function ProjectPopup() {
         {acknowledged && !open ? (
           /* Acknowledged micro-panel */
           <div className="relative p-6">
-            <p className="text-brand-sky/80 text-sm leading-relaxed">
+            <p className="text-white text-sm leading-relaxed">
               No problem! If you change your mind, just hit the button below anytime.
             </p>
             <button
@@ -100,7 +100,7 @@ export default function ProjectPopup() {
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
             </div>
             <h3 className="font-heading text-2xl font-bold text-white mb-3">Thanks! We'll be in touch.</h3>
-            <p className="text-brand-sky/70 mb-6">Your project info is on its way to the Shelby Web Company team.</p>
+            <p className="text-white/90 mb-6">Your project info is on its way to the Shelby Web Company team.</p>
             <button
               onClick={close}
               className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all"
@@ -136,7 +136,7 @@ export default function ProjectPopup() {
                 <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
                   Ready to start your project today?
                 </h3>
-                <p className="text-brand-sky/80 text-lg leading-relaxed mb-6">
+                <p className="text-white text-lg leading-relaxed mb-6">
                   Start your website, SEO, branding or Custom SaaS project in under a minute.
                 </p>
                 <button
@@ -179,7 +179,7 @@ export default function ProjectPopup() {
                 {step === 1 && (
                   <div className="pb-4">
                     <h3 className="font-heading text-2xl font-bold text-white mb-2">Which one of our services would be of service to you and your business?</h3>
-                    <p className="text-brand-sky/70 mb-5">Pick the closest match — you can change it later.</p>
+                    <p className="text-white/90 mb-5">Pick the closest match — you can change it later.</p>
                     {[
                       { value: 'Website design', label: 'Website design' },
                       { value: 'SEO / Google Business Profile', label: 'SEO / Google Business Profile' },
@@ -212,7 +212,7 @@ export default function ProjectPopup() {
                 {step === 2 && (
                   <div className="pb-4">
                     <h3 className="font-heading text-2xl font-bold text-white mb-2">What type of business do you run?</h3>
-                    <p className="text-brand-sky/70 mb-5">This helps us tailor our recommendation to you.</p>
+                    <p className="text-white/90 mb-5">This helps us tailor our recommendation to you.</p>
                     <input
                       type="text"
                       value={form.businessType}
@@ -226,7 +226,7 @@ export default function ProjectPopup() {
                 {step === 3 && (
                   <div className="pb-4">
                     <h3 className="font-heading text-2xl font-bold text-white mb-2">Do you have a website?</h3>
-                    <p className="text-brand-sky/70 mb-5">Optional, but it helps us assess your current presence.</p>
+                    <p className="text-white/90 mb-5">Optional, but it helps us assess your current presence.</p>
                     <input
                       type="text"
                       value={form.website}
@@ -240,7 +240,7 @@ export default function ProjectPopup() {
                 {step === 4 && (
                   <div className="pb-4 space-y-4">
                     <h3 className="font-heading text-2xl font-bold text-white mb-1">Your contact info</h3>
-                    <p className="text-brand-sky/70">We'll send a personalized recommendation.</p>
+                    <p className="text-white/90">We'll send a personalized recommendation.</p>
                     <input
                       type="text"
                       required
