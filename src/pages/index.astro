@@ -66,7 +66,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   </style>
 
   <!-- Hero Section -->
-  <section class="pt-8 pb-16 px-3 sm:px-4 lg:pt-10 lg:pb-32 overflow-hidden" data-animate>
+  <section class="pt-8 pb-16 px-3 sm:px-4 lg:pt-10 lg:pb-16 overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
         <div class="flex min-w-0 w-full flex-col items-center lg:items-start text-center lg:text-left">
@@ -158,11 +158,11 @@ import hsCross from '../../assets/logo banner/hscross.webp';
 
         </div>
 
-        <div class="relative mt-2 lg:-mt-24 flex flex-col items-center lg:items-end">
+        <div class="relative mt-2 lg:mt-0 lg:self-start flex flex-col items-center lg:items-end gap-6">
           <div class="hidden lg:block">
             <a 
               href="tel:+17044738188" 
-              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 sm:px-8 sm:py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 lg:-translate-y-16 lg:-translate-x-16 mr-0 lg:mr-0 self-center lg:self-end transform scale-90 sm:scale-100 lg:scale-105 origin-center lg:origin-center w-full sm:w-fit max-w-sm sm:max-w-none mt-4 lg:mt-0 order-first lg:order-none mx-auto sm:mx-0"
+              class="bg-brand-dark/95 backdrop-blur-md border border-brand-blue/30 rounded-2xl px-6 py-4 sm:px-8 sm:py-5 flex flex-col items-center justify-center hover:border-brand-cyan/50 transition-all duration-300 group shadow-2xl relative z-10 mr-0 self-center lg:self-end transform scale-90 sm:scale-100 lg:scale-105 origin-center w-full sm:w-fit max-w-sm sm:max-w-none mt-4 lg:mt-0 order-first lg:order-none mx-auto sm:mx-0"
             >
               <div class="flex items-center space-x-2 mb-2">
                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +175,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             </a>
           </div>
 
-          <div class="hidden lg:block w-full mt-4">
+          <div class="hidden lg:block w-full">
             <div class="rounded-2xl p-1 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20">
               <Image 
                 src={heroImage} 
@@ -327,17 +327,17 @@ import hsCross from '../../assets/logo banner/hscross.webp';
     <div class="max-w-7xl mx-auto text-center">
       <p class="text-brand-blue text-body-base uppercase tracking-widest mb-6">✦ Powered by the Best in the Industry</p>
       <div class="flex flex-wrap items-center justify-center gap-10 md:gap-14 opacity-80">
-        <Image src={chatgptLogo} alt="ChatGPT" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={claudeLogo} alt="Claude" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={comptiaTool} alt="CompTIA" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={devinLogo} alt="DevIn" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={githubLogo} alt="GitHub" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={grokLogo} alt="Grok" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={linuxLogo} alt="Linux" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={ollamaLogo} alt="Ollama" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={opencodeLogo} alt="OpenCode" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={vscodeLogo} alt="VS Code" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
-        <Image src={hsCross} alt="Holy Spirit Cross" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" />
+        <Image src={chatgptLogo} alt="ChatGPT" class="h-20 w-auto object-contain rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={claudeLogo} alt="Claude" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
+        <Image src={comptiaTool} alt="CompTIA" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
+        <Image src={devinLogo} alt="DevIn" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={githubLogo} alt="GitHub" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
+        <Image src={grokLogo} alt="Grok" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
+        <Image src={linuxLogo} alt="Linux" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={ollamaLogo} alt="Ollama" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={opencodeLogo} alt="OpenCode" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={vscodeLogo} alt="VS Code" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
+        <Image src={hsCross} alt="Holy Spirit Cross" class="h-20 w-auto object-contain rounded-lg transition-all duration-300" loading="lazy" />
       </div>
     </div>
   </section>

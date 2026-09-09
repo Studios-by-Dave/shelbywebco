@@ -20,13 +20,14 @@ import blog3Img from '../../../assets/blog3.webp';
 import blog4Img from '../../../assets/blog4.webp';
 import dbaImg from '../../../assets/blog_image2.jpeg';
 import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
+import willGroomImg from '../../../assets/blog/Will_5.jpg';
 ---
 
 <BaseLayout 
   title="Web Design & SEO Blog | Shelby Web Company"
   description="Stay up to date with the latest web design, SEO, and digital marketing tips for local businesses in Shelby, NC."
 >
-  <section class="py-16 lg:py-28 px-4 relative overflow-hidden" data-animate>
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-blog-hero>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
     <div class="absolute left-4 lg:left-12 top-8 w-20 h-20 lg:w-28 lg:h-28 rounded-2xl overflow-hidden border border-white/10 shadow-xl opacity-80 hidden md:block">
       <Image src={blog3Img} alt="" class="w-full h-full object-cover" />
@@ -35,13 +36,13 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
       <Image src={blog4Img} alt="" class="w-full h-full object-cover" />
     </div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
+      <div class="blog-hero-badge inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
         ✦ The Shelby Web Co Blog
       </div>
-      <h1 class="font-heading text-6xl md:text-8xl font-black text-white mb-8 tracking-tight leading-[0.9]">
+      <h1 class="blog-hero-title font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
         Insights & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Growth Tips.</span>
       </h1>
-      <p class="text-xl md:text-2xl text-brand-sky/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+      <p class="blog-hero-sub text-lg md:text-xl text-brand-sky/80 max-w-3xl mx-auto leading-relaxed">
         Helping Shelby businesses dominate the digital landscape, one article at a time.
       </p>
     </div>
@@ -51,13 +52,18 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
     <div class="max-w-7xl mx-auto">
       <!-- Section Picker: two square preview cards -->
       <div id="section-picker" class="block">
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <!-- Shelby Web Official preview square -->
           <button onclick="selectSection('official')" class="group text-left bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <Image
+                src={webredesignImg}
+                alt="Shelby Web Official articles"
+                class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+              />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Shelby Web Official</span>
+                <span class="text-brand-sky/10 font-heading text-3xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Shelby Web Official</span>
               </div>
             </div>
             <div class="p-6">
@@ -76,9 +82,14 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           <!-- Community Spotlight preview square -->
           <button onclick="selectSection('spotlight')" class="group text-left bg-brand-dark border border-[#c9a86a]/20 rounded-2xl overflow-hidden hover:border-[#c9a86a]/40 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <Image
+                src={gabeWhisnantImg}
+                alt="Community Spotlight articles - The Shelby Star"
+                class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+              />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-[#c9a86a]/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Community Spotlight</span>
+                <span class="text-[#c9a86a]/20 font-heading text-3xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Community Spotlight</span>
               </div>
             </div>
             <div class="p-6">
@@ -102,12 +113,64 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
           document.getElementById('section-official').className = tab === 'official' ? 'block' : 'hidden';
           document.getElementById('section-spotlight').className = tab === 'spotlight' ? 'block' : 'hidden';
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (window.animateBlogGrid) window.animateBlogGrid(tab === 'official' ? 'section-official' : 'section-spotlight');
         }
         function showPicker() {
           document.getElementById('section-picker').className = 'block';
           document.getElementById('section-official').className = 'hidden';
           document.getElementById('section-spotlight').className = 'hidden';
           window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      </script>
+      <script>
+        import { animate, stagger, createTimeline } from 'animejs';
+
+        declare global {
+          interface Window {
+            animateBlogGrid?: (sectionId: string) => void;
+          }
+        }
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          // 1. Hero entrance: badge -> title -> subtext, sequenced on load
+          createTimeline({ defaults: { ease: 'outExpo' } })
+            .add('.blog-hero-badge', { opacity: [0, 1], y: [16, 0], duration: 600 })
+            .add('.blog-hero-title', { opacity: [0, 1], y: [32, 0], duration: 800 }, '-=400')
+            .add('.blog-hero-sub', { opacity: [0, 1], y: [24, 0], duration: 700 }, '-=500');
+
+          // 2. Picker squares entrance when scrolled into view (below the hero)
+          const picker = document.getElementById('section-picker');
+          const pickerObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  animate('#section-picker > div > button', {
+                    opacity: [0, 1],
+                    y: [24, 0],
+                    duration: 700,
+                    ease: 'outExpo',
+                    delay: stagger(150),
+                  });
+                  pickerObserver.disconnect();
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+          pickerObserver.observe(picker);
+
+          // 3. Article card cascade when a section grid is revealed.
+          // The stagger starts after the smooth scroll-to-top settles,
+          // otherwise the motion plays off-screen and looks instant.
+          window.animateBlogGrid = (sectionId) => {
+            animate(`#${sectionId} .grid > a`, {
+              opacity: [0, 1],
+              y: [24, 0],
+              duration: 600,
+              ease: 'outExpo',
+              delay: stagger(60, { start: 500 }),
+            });
+          };
         }
       </script>
 
@@ -550,6 +613,34 @@ import richardsonImg from '../../../assets/blog/Sweb_dad_1.jpg';
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 20 (Community Spotlight) - Minister Will Groom -->
+          <a href="/blog/minister-will-groom-keep-god-first-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+              <Image
+                src={willGroomImg}
+                alt="Minister Will Groom Community Spotlight"
+                class="absolute inset-0 w-full h-full object-cover object-[50%_18%] opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-[#c9a86a]/20 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4">Community Spotlight</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Community Spotlight</span>
+                <span class="text-brand-sky/40 text-xs">•</span>
+                <span class="text-brand-sky/40 text-xs">September 2026</span>
+              </div>
+              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
+                Community Spotlight: Minister Will Groom — "Keep God First"
+              </h2>
+              <p class="text-brand-sky/60 text-sm line-clamp-3">
+                Shot over 24 times on December 14, 1993 — and survived. Meet the Shelby neighbor living proof that faith carries you through.
+              </p>
+            </div>
+          </a>
+
           <!-- Blog Post 19 (Community Spotlight) - James Richardson -->
           <a href="/blog/building-people-not-just-buildings-james-richardson-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">

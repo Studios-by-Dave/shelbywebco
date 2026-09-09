@@ -275,6 +275,30 @@ const showBreadcrumbBar = pathSegments.length > 0;
           observer.observe(el);
         });
 
+        // Hide sticky contact bars while the hero CTA is on screen (they're
+        // redundant there and can cover it); reveal once scrolled past.
+        const mobileBar = document.getElementById('sticky-mobile-bar');
+        const desktopDock = document.getElementById('sticky-desktop-dock');
+        const HERO_ZONE = 480;
+        let ticking = false;
+        const updateStickyBars = () => {
+          const inHero = window.scrollY < HERO_ZONE;
+          mobileBar?.classList.toggle('translate-y-full', inHero);
+          mobileBar?.classList.toggle('opacity-0', inHero);
+          mobileBar?.classList.toggle('pointer-events-none', inHero);
+          desktopDock?.classList.toggle('translate-y-24', inHero);
+          desktopDock?.classList.toggle('opacity-0', inHero);
+          desktopDock?.classList.toggle('pointer-events-none', inHero);
+          ticking = false;
+        };
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateStickyBars);
+            ticking = true;
+          }
+        }, { passive: true });
+        updateStickyBars();
+
         // Add CSS for animation
         const style = document.createElement('style');
         style.textContent = `
