@@ -3,9 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
 import Image from '../../components/OptimizedImage.astro';
 import stratImg from '../../../assets/Sweb_STRAT_1.png';
-import sisConsole1 from '../../../assets/seo service page/sis_console_1.png';
-import sisConsole2 from '../../../assets/seo service page/sis_console_2.png';
-import sisConsole3 from '../../../assets/seo service page/sis_console_3.png';
+import strat2 from '../../../assets/STRAT-2.png';
+import strat3 from '../../../assets/STRAT-3.png';
+import strat4 from '../../../assets/STRAT-4.png';
+import strat5 from '../../../assets/STRAT-5.png';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -397,12 +398,12 @@ const faqSchema = {
         </div>
       </div>
 
-<!-- Screenshot gallery -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+<!-- Screenshot gallery — 4 new STRAT previews -->
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
         <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
           <Image 
-            src={sisConsole1} 
-            alt="STRAT Console - Keyword analysis and rank tracking dashboard" 
+            src={strat2} 
+            alt="STRAT preview 2" 
             class="w-full h-auto"
             width={1200}
             height={750}
@@ -411,8 +412,8 @@ const faqSchema = {
         </div>
         <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
           <Image 
-            src={sisConsole2} 
-            alt="STRAT Console - Crawl analysis and technical SEO audit results" 
+            src={strat3} 
+            alt="STRAT preview 3" 
             class="w-full h-auto"
             width={1200}
             height={750}
@@ -421,8 +422,18 @@ const faqSchema = {
         </div>
         <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
           <Image 
-            src={sisConsole3} 
-            alt="STRAT Console - Competitor analysis and reporting interface" 
+            src={strat4} 
+            alt="STRAT preview 4" 
+            class="w-full h-auto"
+            width={1200}
+            height={750}
+            loading="lazy"
+          />
+        </div>
+        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+          <Image 
+            src={strat5} 
+            alt="STRAT preview 5" 
             class="w-full h-auto"
             width={1200}
             height={750}
