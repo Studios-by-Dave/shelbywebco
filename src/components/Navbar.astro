@@ -4,6 +4,7 @@ import logo from '../../assets/SWeblogo1.jpg';
 import MobileNav from './MobileNav.jsx';
 import DesktopNav from './DesktopNav.jsx';
 import PixieDust from './PixieDust.jsx';
+import GlobalSearch from './GlobalSearch.jsx';
 ---
 
 <nav class="sticky top-0 z-50 bg-brand-darkest/80 backdrop-blur-md border-b border-brand-blue/20">
@@ -38,6 +39,10 @@ import PixieDust from './PixieDust.jsx';
       <!-- Desktop Navigation -->
       <DesktopNav client:load />
 
+      <div class="hidden md:flex items-center">
+        <GlobalSearch client:idle />
+      </div>
+
       <!-- Navbar Get Started Button -->
       <div class="hidden md:flex items-center space-x-6 relative group">
         <!-- Aurora Glow -->
@@ -56,8 +61,9 @@ import PixieDust from './PixieDust.jsx';
         </div>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
+      <!-- Mobile Menu Button + Search -->
+      <div class="md:hidden flex items-center gap-2">
+        <GlobalSearch client:idle />
         <MobileNav client:load />
       </div>
     </div>

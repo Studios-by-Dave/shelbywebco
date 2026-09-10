@@ -7,6 +7,7 @@ import strat2 from '../../../assets/STRAT-2.png';
 import strat3 from '../../../assets/STRAT-3.png';
 import strat4 from '../../../assets/STRAT-4.png';
 import strat5 from '../../../assets/STRAT-5.png';
+import GlossaryTooltip from '../../components/GlossaryTooltip.jsx';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -127,7 +128,7 @@ const faqSchema = {
               <span class="text-brand-accent font-bold text-sm">02</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Canonicalization</h4>
+              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="Canonicalization" plain="Tells Google which page is the real one when you have duplicates." slug="canonical-tag" /></h4>
               <p class="text-white/80 text-sm">When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.</p>
             </div>
           </div>
@@ -145,7 +146,7 @@ const faqSchema = {
               <span class="text-brand-accent font-bold text-sm">04</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Robots.txt Configuration</h4>
+              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="Robots.txt" plain="A small file that tells crawlers which pages to skip or allow." slug="robots-txt" /> Configuration</h4>
               <p class="text-white/80 text-sm">This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.</p>
             </div>
           </div>
@@ -154,7 +155,7 @@ const faqSchema = {
               <span class="text-brand-accent font-bold text-sm">05</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">LLMs.txt — AI Visibility</h4>
+              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="LLMs.txt" plain="Helps AI like ChatGPT and Perplexity understand and surface your site." slug="llms-txt" /> — AI Visibility</h4>
               <p class="text-white/80 text-sm">The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.</p>
             </div>
           </div>
@@ -164,7 +165,7 @@ const faqSchema = {
             </div>
             <div>
               <h4 class="text-brand-cyan font-bold mb-1">Redirect Management</h4>
-              <p class="text-white/80 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve link equity when URLs change, pages move, or domains are consolidated — without losing authority.</p>
+              <p class="text-white/80 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve <GlossaryTooltip client:load term="Link Equity" plain="The ranking power a link passes from one page to another." slug="link-equity" /> when URLs change, pages move, or domains are consolidated — without losing authority.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
@@ -200,7 +201,7 @@ const faqSchema = {
             </div>
             <div>
               <h4 class="text-brand-cyan font-bold mb-1">Content Strategy & Authority</h4>
-              <p class="text-white/80 text-sm">Keyword research, topic clustering, content freshness, E-E-A-T signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</p>
+              <p class="text-white/80 text-sm">Keyword research, topic clustering, content freshness, <GlossaryTooltip client:load term="E-E-A-T" plain="Google's trust check: Experience, Expertise, Authority, Trust." slug="e-e-a-t" /> signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</p>
             </div>
           </div>
         </div>
@@ -398,49 +399,70 @@ const faqSchema = {
         </div>
       </div>
 
-<!-- Screenshot gallery — 4 new STRAT previews -->
-      <div class="grid md:grid-cols-2 gap-6 mb-16">
-        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+<!-- Screenshot gallery — 4 new STRAT previews (click to enlarge) -->
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-10 mb-20">
+        <button type="button" data-strat-src={strat2.src} aria-label="Enlarge STRAT preview 2" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat2} 
             alt="STRAT preview 2" 
-            class="w-full h-auto"
+            class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
             width={1200}
             height={750}
             loading="lazy"
           />
-        </div>
-        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+        </button>
+        <button type="button" data-strat-src={strat3.src} aria-label="Enlarge STRAT preview 3" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat3} 
             alt="STRAT preview 3" 
-            class="w-full h-auto"
+            class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
             width={1200}
             height={750}
             loading="lazy"
           />
-        </div>
-        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+        </button>
+        <button type="button" data-strat-src={strat4.src} aria-label="Enlarge STRAT preview 4" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat4} 
             alt="STRAT preview 4" 
-            class="w-full h-auto"
+            class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
             width={1200}
             height={750}
             loading="lazy"
           />
-        </div>
-        <div class="rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300">
+        </button>
+        <button type="button" data-strat-src={strat5.src} aria-label="Enlarge STRAT preview 5" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat5} 
             alt="STRAT preview 5" 
-            class="w-full h-auto"
+            class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
             width={1200}
             height={750}
             loading="lazy"
           />
-        </div>
+        </button>
       </div>
+      <!-- Lightbox -->
+      <div id="strat-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-4 md:p-8 bg-black/85 backdrop-blur-sm">
+        <button type="button" id="strat-lightbox-close" class="absolute inset-0 w-full h-full" aria-label="Close"></button>
+        <img id="strat-lightbox-img" src="" alt="" class="relative z-10 max-w-[95vw] max-h-[90vh] w-auto h-auto rounded-xl shadow-2xl border border-white/10" />
+        <button type="button" id="strat-lightbox-x" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center" aria-label="Close">✕</button>
+      </div>
+      <script is:inline>
+        (() => {
+          const box = document.getElementById('strat-lightbox');
+          const img = document.getElementById('strat-lightbox-img');
+          if (!box || !img) return;
+          const open = (src, alt) => { img.src = src; img.alt = alt || ''; box.classList.remove('hidden'); box.classList.add('flex'); document.body.style.overflow = 'hidden'; };
+          const close = () => { box.classList.add('hidden'); box.classList.remove('flex'); img.src = ''; document.body.style.overflow = ''; };
+          document.querySelectorAll('.strat-thumb').forEach(btn => {
+            btn.addEventListener('click', () => open(btn.getAttribute('data-strat-src'), btn.querySelector('img')?.alt || ''));
+          });
+          document.getElementById('strat-lightbox-close')?.addEventListener('click', close);
+          document.getElementById('strat-lightbox-x')?.addEventListener('click', close);
+          document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.classList.contains('hidden')) close(); });
+        })();
+      </script>
 
       <!-- CTA -->
       <div class="text-center">

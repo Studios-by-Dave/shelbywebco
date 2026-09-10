@@ -171,6 +171,14 @@
        1px  1px 0 #fde047,
        0px  2px 4px rgba(0,0,0,0.5);
   }
+
+  .glossary-term {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba(34,211,238,0.6);
+    text-underline-offset: 4px;
+    cursor: help;
+  }
 }
 
 @media (max-width: 767px) {

@@ -141,6 +141,7 @@ export default function DesktopNav() {
         )}
       </div>
       
+      <a href="/glossary/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Glossary</a>
       <a href="/contact/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Contact</a>
       <a href="/blog/" className="font-poofy font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue-dark drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>

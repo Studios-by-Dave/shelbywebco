@@ -1,0 +1,177 @@
+[
+  {
+    "term": "Crawlability",
+    "slug": "crawlability",
+    "plain": "Whether Google can find and walk through every page on your site.",
+    "long": "If Google's crawler can't discover or access a page, it won't appear in search — no matter how good the content is. We make every important URL discoverable and index-ready.",
+    "category": "SEO"
+  },
+  {
+    "term": "Canonical Tag",
+    "slug": "canonical-tag",
+    "plain": "Tells Google which page is the real one when you have duplicates.",
+    "long": "When two URLs show similar content, the canonical tag points to the authoritative version so ranking power isn't split and duplicate-content issues are avoided.",
+    "category": "SEO"
+  },
+  {
+    "term": "XML Sitemap",
+    "slug": "xml-sitemap",
+    "plain": "A roadmap file that lists every important page for Google.",
+    "long": "A properly structured sitemap tells crawlers which pages exist, how often they change, and which matter most — so the right pages get prioritized.",
+    "category": "SEO"
+  },
+  {
+    "term": "Robots.txt",
+    "slug": "robots-txt",
+    "plain": "A small file that tells crawlers which pages to skip or allow.",
+    "long": "Misconfigure it and you can block your whole site from Google — or expose pages you meant to hide. We set it to allow what matters and protect what doesn't.",
+    "category": "SEO"
+  },
+  {
+    "term": "LLMs.txt",
+    "slug": "llms-txt",
+    "plain": "Helps AI like ChatGPT and Perplexity understand and surface your site.",
+    "long": "An emerging standard that gives large language models a clean summary of your content. Optional today, but increasingly how AI assistants choose what to recommend.",
+    "category": "SEO"
+  },
+  {
+    "term": "301 Redirect",
+    "slug": "301-redirect",
+    "plain": "Permanently sends visitors and Google from an old URL to a new one.",
+    "long": "When a page moves, a 301 redirect preserves link equity and authority so you don't lose rankings — unlike a broken 404.",
+    "category": "SEO"
+  },
+  {
+    "term": "Link Equity",
+    "slug": "link-equity",
+    "plain": "The ranking power a link passes from one page to another.",
+    "long": "Not all links are equal. High-authority backlinks and clean internal links pass equity that lifts the linked page in search results.",
+    "category": "SEO"
+  },
+  {
+    "term": "On-Page SEO",
+    "slug": "on-page-seo",
+    "plain": "Everything you optimize on the page itself — titles, headings, and content.",
+    "long": "Title tags, meta descriptions, header hierarchy, internal links, keyword placement, and structured data all send signals to search engines about what the page is for.",
+    "category": "SEO"
+  },
+  {
+    "term": "Technical SEO",
+    "slug": "technical-seo",
+    "plain": "The behind-the-scenes setup that lets Google read and rank your site.",
+    "long": "Speed, mobile responsiveness, crawlability, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.",
+    "category": "SEO"
+  },
+  {
+    "term": "Core Web Vitals",
+    "slug": "core-web-vitals",
+    "plain": "Google's speed and experience scores — how fast your site feels.",
+    "long": "Metrics like Largest Contentful Paint (LCP) measure load speed and stability. Faster sites rank higher and convert better, especially on mobile.",
+    "category": "SEO"
+  },
+  {
+    "term": "E-E-A-T",
+    "slug": "e-e-a-t",
+    "plain": "Google's trust check: Experience, Expertise, Authority, Trust.",
+    "long": "Content that shows real experience and credible expertise earns trust — and higher rankings — especially for local service businesses where reputation matters.",
+    "category": "SEO"
+  },
+  {
+    "term": "Schema / Structured Data",
+    "slug": "schema-structured-data",
+    "plain": "Hidden code that helps Google understand your content and show rich results.",
+    "long": "Schema markup describes your business, services, and FAQs in a machine-readable format so Google can show stars, FAQs, and map details in results.",
+    "category": "SEO"
+  },
+  {
+    "term": "NAP Consistency",
+    "slug": "nap-consistency",
+    "plain": "Keeping your Name, Address, Phone identical everywhere online.",
+    "long": "Mismatched NAP data across directories confuses Google and hurts map rankings. We keep your listings consistent for stronger local visibility.",
+    "category": "SEO"
+  },
+  {
+    "term": "Google Business Profile",
+    "slug": "google-business-profile",
+    "plain": "Your free Google listing that shows calls, reviews, hours, and map position.",
+    "long": "Often the first thing customers see. We optimize your GBP — photos, posts, Q&A, reviews — so you appear in the top 3 map results where most clicks happen.",
+    "category": "SEO"
+  },
+  {
+    "term": "Map Pack",
+    "slug": "map-pack",
+    "plain": "The top 3 map results Google shows for local searches.",
+    "long": "For 'near me' queries, the Map Pack gets the majority of clicks and calls. Local SEO is the work that gets you into those three spots.",
+    "category": "SEO"
+  },
+  {
+    "term": "Keyword Research",
+    "slug": "keyword-research",
+    "plain": "Finding the exact words customers type when they need you.",
+    "long": "We map high-intent search terms, group them by topic and intent, and build pages and content that match what real customers are searching for.",
+    "category": "SEO"
+  },
+  {
+    "term": "Alt Tag",
+    "slug": "alt-tag",
+    "plain": "Text that describes an image for Google and screen readers.",
+    "long": "Alt tags help images rank in Google Images, improve accessibility, and give search engines context when they can't 'see' the picture.",
+    "category": "SEO"
+  },
+  {
+    "term": "Pre-rendering / Static HTML",
+    "slug": "pre-rendering-static-html",
+    "plain": "Saves your pages as plain HTML so Google can read them instantly.",
+    "long": "Many modern sites hide content behind JavaScript that crawlers skip. We output every URL as clean static HTML so every page is crawlable on first load — the core of the SEO Upgrade.",
+    "category": "Dev"
+  },
+  {
+    "term": "Astro",
+    "slug": "astro",
+    "plain": "The fast framework we build sites on — built for SEO.",
+    "long": "Astro ships zero JavaScript by default and renders every page to static HTML at build time. That means faster loads and full indexability without the JS empty-shell problem.",
+    "category": "Dev"
+  },
+  {
+    "term": "Domain",
+    "slug": "domain",
+    "plain": "Your web address — e.g., shelbywebco.com.",
+    "long": "The domain is the name people type to find you. We help secure it, keep it renewed, and point it correctly to your hosting.",
+    "category": "Hosting"
+  },
+  {
+    "term": "Hosting",
+    "slug": "hosting",
+    "plain": "Where your website lives on the internet — the server that serves it.",
+    "long": "Good hosting keeps your site fast, secure, and online. Cheap hosting slows you down and hurts rankings when the server is sluggish or down.",
+    "category": "Hosting"
+  },
+  {
+    "term": "SSL / HTTPS",
+    "slug": "ssl-https",
+    "plain": "The padlock that makes your site secure — required by Google.",
+    "long": "SSL encrypts data between visitor and server. Sites without HTTPS show 'Not Secure' warnings and rank lower. We provision and renew it for you.",
+    "category": "Hosting"
+  },
+  {
+    "term": "CMS",
+    "slug": "cms",
+    "plain": "The system you use to edit your site — without touching code.",
+    "long": "A content management system lets you update text, photos, and posts yourself. We build on lean, secure setups so you can edit without breaking SEO.",
+    "category": "Dev"
+  },
+  {
+    "term": "CTA / Conversion",
+    "slug": "cta-conversion",
+    "plain": "A clear next step that turns a visitor into a lead — Call, Book, Request Quote.",
+    "long": "A conversion happens when someone takes action. We design prominent calls-to-action and remove friction so more visitors become customers.",
+    "category": "Design"
+  },
+  {
+    "term": "URL Structure",
+    "slug": "url-structure",
+    "plain": "How your page addresses are organized — short, clean, and descriptive.",
+    "long": "Clean URLs like /services/roofing/ are easier for people and Google to understand than long parameter strings. They also help with crawlability and sharing.",
+    "category": "SEO"
+  }
+]
