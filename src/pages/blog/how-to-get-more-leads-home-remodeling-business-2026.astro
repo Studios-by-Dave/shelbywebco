@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Image from '../../components/OptimizedImage.astro';
+import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
 
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "How to Get More Leads for a Home Remodeling Business in 2026",
+  "headline": "How to Get More Leads for Your Home Remodeling Business in 2026",
   "description": "Consistent lead system for home remodelers in 2026 — fix your Google Business Profile, turn your site into a converter, own local search, systematize referrals, and use paid channels wisely.",
   "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
   "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
@@ -13,7 +15,7 @@ const blogPostingSchema = {
 ---
 
 <BaseLayout 
-  title="How to Get More Leads for a Home Remodeling Business in 2026"
+  title="How to Get More Leads for Your Home Remodeling Business in 2026"
   description="Stop the feast-or-famine cycle. Six proven systems for home remodelers to generate steady, higher-quality leads in 2026 — from GBP to referrals and local SEO."
 >
   <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
@@ -26,7 +28,7 @@ const blogPostingSchema = {
           <span class="text-white/90 text-xs font-medium uppercase tracking-widest">September 2026</span>
         </div>
         <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
-          How to Get More Leads for a <br />
+          How to Get More Leads for Your <br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Home Remodeling Business in 2026</span>
         </h1>
         <p class="text-xl md:text-2xl text-white leading-relaxed max-w-3xl mx-auto">
@@ -34,19 +36,16 @@ const blogPostingSchema = {
         </p>
       </header>
 
-      <div class="aspect-video bg-brand-dark border border-white/5 rounded-3xl mb-16 overflow-hidden shadow-2xl relative group">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-           <span class="text-brand-sky/20 font-heading text-4xl font-bold uppercase tracking-[0.2em] transform -rotate-12">Shelby Web Company Official</span>
-        </div>
-      </div>
-
       <div class="prose prose-invert prose-2xl max-w-none">
         <p class="text-lg text-white mb-12">
           If you run a home remodeling business, you already know the work is solid. The craftsmanship is there. The reviews are good. The projects turn out beautifully. Yet the phone still goes quiet for stretches. Referrals slow down. One busy season is followed by a dry stretch that forces you to scramble. You're left wondering where the next kitchen or bath remodel is coming from.
         </p>
         <p class="text-white mb-8">You're not alone. Most remodelers hit this wall. The difference between the companies that stay feast-or-famine and the ones that grow steadily is simple: they stop waiting for leads and start building <strong class="text-white">systems that generate them on purpose</strong>.</p>
         <p class="text-white mb-12">Here's what actually works in 2026 for home remodelers who want consistent, higher-quality leads — without relying only on word-of-mouth or expensive shared lead services.</p>
+
+        <div class="aspect-video bg-brand-dark border border-white/5 rounded-3xl mb-12 overflow-hidden shadow-2xl relative group">
+          <Image src={remodelersLeadsImg} alt="How to Get More Leads for Your Home Remodeling Business in 2026" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+        </div>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
           <span class="text-brand-accent">01.</span> Fix the Foundation: Your Google Business Profile
