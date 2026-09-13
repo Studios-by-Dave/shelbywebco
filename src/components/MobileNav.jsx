@@ -65,13 +65,13 @@ export default function MobileNav() {
 
       {/* Full-screen overlay */}
       <div
-        className={`fixed inset-0 bg-black z-40 transition-all duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 bg-brand-darkest z-40 transition-all duration-300 ease-in-out md:hidden ${
           isOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="flex flex-col justify-center items-center h-full px-6 font-body overflow-y-auto">
+        <div className="flex flex-col justify-center items-center h-full px-6 font-body">
           <nav className="w-full max-w-lg" aria-label="Main navigation">
             <ul className="space-y-1 text-center">
               <li>
