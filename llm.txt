@@ -22,7 +22,7 @@ Shelby Web Company is a local web design, SEO, branding, and digital marketing a
 
 **David "Dave" Richardson** — Founder / Lead Developer
 
-- Creativity founded in 1978
+
 - 20+ years of IT and network engineering experience
 - CompTIA A+ Certified
 - Formerly "Studios by Dave"
@@ -103,9 +103,9 @@ Shelby Web Company is a local web design, SEO, branding, and digital marketing a
 - Dedicated growth partner
 
 ### Additional Pricing Notes
-- Additional pages: $75–$150 per page (depending on complexity)
-- Web hosting: $10–$30/month (client responsibility unless included)
-- Maintenance plans: Starting at $49/month (security updates, backups, uptime monitoring, content updates, priority support)
+
+
+- 
 - Website Care Plans: Basic ($75/mo) covers hosting, backups, core code updates; Premium ($149/mo) adds more frequent revisions
 - Payment terms: 50% down to start, 50% due upon completion; flexible payment plans available for larger projects
 - Limited-time offer: Free logo design + $100 referral bonus with any website package
