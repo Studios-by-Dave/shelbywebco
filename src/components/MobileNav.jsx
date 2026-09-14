@@ -1,19 +1,55 @@
 import { useEffect, useMemo, useState } from 'react';
 
-const links = [
+const topLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services/', label: 'Services' },
   { href: '/about/', label: 'About' },
   { href: '/pricing/', label: 'Pricing' },
   { href: '/contact/', label: 'Contact' },
-  { href: '/promotions/', label: 'Promotions' },
   { href: '/blog/', label: 'Blog' },
   { href: '/glossary/', label: 'Glossary' },
   { href: 'tel:+17044738188', label: '(704) 473-8188' },
 ];
 
+const serviceLinks = [
+  { href: '/services/web-design/', label: 'Web Design' },
+  { href: '/services/branding/', label: 'Logo Design & Branding' },
+  { href: '/services/seo/', label: 'SEO Services' },
+  { href: '/services/custom-software-saas/', label: 'Custom Software & SaaS' },
+  { href: '/services/case-studies/', label: 'Case Studies' },
+  { href: '/services/portfolio/', label: 'Portfolio' },
+];
+
+const serviceAreaLinks = [
+  { href: '/web-design-shelby-nc/', label: 'Service Area: Shelby, NC' },
+  { href: '/web-design-gastonia-nc/', label: 'Service Area: Gastonia, NC' },
+  { href: '/web-design-forest-city-nc/', label: 'Service Area: Forest City, NC' },
+  { href: '/web-design-polkville-nc/', label: 'Service Area: Polkville, NC' },
+  { href: '/web-design-asheville-nc/', label: 'Service Area: Asheville, NC' },
+  { href: '/web-design-boiling-springs-nc/', label: 'Service Area: Boiling Springs, NC' },
+  { href: '/web-design-kings-mountain-nc/', label: 'Service Area: Kings Mountain, NC' },
+];
+
+const aboutLinks = [
+  { href: '/about/how-we-work/', label: 'How We Work' },
+  { href: '/about/awards/', label: 'Awards' },
+];
+
+const promotionLinks = [
+  { href: '/promotions/', label: 'Promotions' },
+  { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
+  { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
+  { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
+];
+
+const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...aboutLinks, ...promotionLinks];
+
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
+  const [promotionsOpen, setPromotionsOpen] = useState(false);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -39,9 +75,9 @@ export default function MobileNav() {
   const filteredLinks = useMemo(() => {
     const needle = query.trim().toLowerCase();
 
-    if (!needle) return links;
+    if (!needle) return allLinks;
 
-    return links.filter((link) => {
+    return allLinks.filter((link) => {
       return (
         link.label.toLowerCase().includes(needle) ||
         link.href.toLowerCase().includes(needle)
@@ -53,6 +89,35 @@ export default function MobileNav() {
     setIsOpen(false);
     setQuery('');
   };
+
+  const renderLink = (link, nested = false) => (
+    <a
+      href={link.href}
+      onClick={closeMenu}
+      className={`block px-4 py-3 text-base font-semibold transition-colors ${
+        nested ? 'pl-10 text-white/85 hover:bg-white/5' : 'text-white hover:bg-white/5'
+      } ${link.href.startsWith('tel:') ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15' : ''}`}
+    >
+      {link.label}
+    </a>
+  );
+
+  const renderDisclosure = (label, open, setOpen, children) => (
+    <li>
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between px-4 py-4 text-lg font-semibold text-white transition-colors hover:bg-white/5"
+      >
+        {label}
+        <svg className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && <ul className="border-t border-white/10">{children}</ul>}
+    </li>
+  );
 
   return (
     <>
@@ -148,28 +213,38 @@ export default function MobileNav() {
           </div>
 
           <nav aria-label="Mobile navigation" className="mt-3">
-            {filteredLinks.length > 0 ? (
+            {query.trim() ? (
+              filteredLinks.length > 0 ? (
               <ul className="divide-y divide-white/10">
                 {filteredLinks.map((link) => (
                   <li key={link.href}>
-                    <a
-                      href={link.href}
-                      onClick={closeMenu}
-                      className={`block px-4 py-4 text-lg font-semibold transition-colors ${
-                        link.href.startsWith('tel:')
-                          ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15'
-                          : 'text-white hover:bg-white/5'
-                      }`}
-                    >
-                      {link.label}
-                    </a>
+                    {renderLink(link)}
                   </li>
                 ))}
               </ul>
-            ) : (
+              ) : (
               <div className="px-4 py-8 text-center text-sm text-white/60">
                 No results found.
               </div>
+              )
+            ) : (
+              <ul className="divide-y divide-white/10">
+                {topLinks.slice(0, 1).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
+                {renderDisclosure('Services', servicesOpen, setServicesOpen, <>
+                  <li>{renderLink({ href: '/services/', label: 'All Services' }, true)}</li>
+                  {serviceLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
+                  {renderDisclosure('Service Areas', serviceAreasOpen, setServiceAreasOpen, serviceAreaLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
+                </>)}
+                {renderDisclosure('About', aboutOpen, setAboutOpen, <>
+                  <li>{renderLink({ href: '/about/', label: 'About Us' }, true)}</li>
+                  {aboutLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
+                </>)}
+                {renderDisclosure('Pricing', pricingOpen, setPricingOpen, <>
+                  {renderLink({ href: '/pricing/', label: 'Pricing Page' }, true)}
+                  {renderDisclosure('Promotions', promotionsOpen, setPromotionsOpen, promotionLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
+                </>)}
+                {topLinks.slice(3).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
+              </ul>
             )}
           </nav>
 

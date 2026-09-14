@@ -2,8 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
+  const [promotionsOpen, setPromotionsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const aboutRef = useRef(null);
   const pricingRef = useRef(null);
@@ -68,17 +70,28 @@ export default function DesktopNav() {
               </div>
               
               {/* Service Areas */}
-              <div className="border-t border-brand-blue/20 pt-4">
-                <p className="text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold">Service Areas</p>
-                <div className="grid grid-cols-2 gap-1">
-                  <a href="/web-design-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Shelby, NC</a>
-                  <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Gastonia, NC</a>
-                  <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Forest City, NC</a>
-                  <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Polkville, NC</a>
-                  <a href="/web-design-asheville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Asheville, NC</a>
-                  <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Boiling Springs, NC</a>
-                  <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Kings Mountain, NC</a>
-                </div>
+              <div className="border-t border-brand-blue/20 pt-3">
+                <button
+                  onClick={() => setServiceAreasOpen(!serviceAreasOpen)}
+                  className="flex w-full items-center justify-between text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold"
+                  aria-expanded={serviceAreasOpen}
+                >
+                  Service Areas
+                  <svg className={`h-4 w-4 transition-transform ${serviceAreasOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {serviceAreasOpen && (
+                  <div className="grid grid-cols-2 gap-1">
+                    <a href="/web-design-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Shelby, NC</a>
+                    <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Gastonia, NC</a>
+                    <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Forest City, NC</a>
+                    <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Polkville, NC</a>
+                    <a href="/web-design-asheville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Asheville, NC</a>
+                    <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Boiling Springs, NC</a>
+                    <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Kings Mountain, NC</a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -135,7 +148,24 @@ export default function DesktopNav() {
           <div className="absolute left-0 mt-2 w-48 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
             <div className="p-4 space-y-1">
               <a href="/pricing/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Pricing Page</a>
-              <a href="/promotions/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Promotions</a>
+              <button
+                onClick={() => setPromotionsOpen(!promotionsOpen)}
+                className="flex w-full items-center justify-between text-white hover:text-brand-cyan transition-colors py-2 font-semibold"
+                aria-expanded={promotionsOpen}
+              >
+                Promotions
+                <svg className={`h-4 w-4 transition-transform ${promotionsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {promotionsOpen && (
+                <div className="border-l border-brand-blue/30 pl-3">
+                  <a href="/promotions/" onClick={() => setPricingOpen(false)} className="block text-brand-cyan hover:text-white transition-colors py-1 font-semibold">All Promotions</a>
+                  <a href="/promotions/free-seo-audit/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free SEO Audit</a>
+                  <a href="/promotions/free-logo-design/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free Logo Design</a>
+                  <a href="/promotions/referral-bonus/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Referral Bonus</a>
+                </div>
+              )}
             </div>
           </div>
         )}
