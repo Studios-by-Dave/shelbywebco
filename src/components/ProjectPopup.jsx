@@ -65,7 +65,7 @@ export default function ProjectPopup() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-[40] flex items-end sm:items-center justify-center p-4 sm:p-6">
       {/* Backdrop */}
       {(!acknowledged || open) && (
         <div
