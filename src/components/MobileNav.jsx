@@ -94,7 +94,7 @@ export default function MobileNav() {
     <a
       href={link.href}
       onClick={closeMenu}
-      className={`block px-4 py-3 text-base font-semibold transition-colors ${
+      className={`block px-4 py-3 text-lg font-semibold transition-colors ${
         nested ? 'pl-10 text-white/85 hover:bg-white/5' : 'text-white hover:bg-white/5'
       } ${link.href.startsWith('tel:') ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15' : ''}`}
     >
