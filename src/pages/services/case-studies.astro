@@ -1,12 +1,49 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': 'https://www.shelbywebco.com/services/case-studies/',
+  'name': 'Client Case Studies & Results',
+  'description': 'Case studies showing how Shelby Web Company helped local businesses grow online — real results from real clients.',
+  'url': 'https://www.shelbywebco.com/services/case-studies/',
+  'about': {
+    '@type': 'Thing',
+    'name': 'Web design and SEO case studies for local service businesses'
+  },
+  'hasPart': [
+    { '@id': 'https://www.shelbywebco.com/services/case-studies/solution-a/' },
+    { '@id': 'https://www.shelbywebco.com/services/case-studies/solution-b/' },
+    { '@id': 'https://www.shelbywebco.com/services/case-studies/solution-c/' },
+    { '@id': 'https://www.shelbywebco.com/services/case-studies/solution-d/' }
+  ]
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & SEO Case Studies',
+  'name': 'Client Case Studies & Results',
+  'description': 'See how Shelby Web Company helped local businesses grow online with custom web design and local SEO.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Shelby, NC' },
+  'url': 'https://www.shelbywebco.com/services/case-studies/'
+};
 ---
 
 <BaseLayout 
   title="Client Case Studies & Results | Shelby Web Company"
   description="View our case studies and see how we've helped local businesses grow online. Real results from real clients."
 >
+  <script is:inline set:html={JSON.stringify(collectionSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
