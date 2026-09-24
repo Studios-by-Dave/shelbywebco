@@ -29,6 +29,10 @@ const serviceAreaLinks = [
   { href: '/web-design-kings-mountain-nc/', label: 'Service Area: Kings Mountain, NC' },
 ];
 
+const industryLinks = [
+  { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofing Contractors' },
+];
+
 const aboutLinks = [
   { href: '/about/how-we-work/', label: 'How We Work' },
   { href: '/about/awards/', label: 'Awards' },
@@ -41,12 +45,13 @@ const promotionLinks = [
   { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
 ];
 
-const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...aboutLinks, ...promotionLinks];
+const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industryLinks, ...aboutLinks, ...promotionLinks];
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
   const [promotionsOpen, setPromotionsOpen] = useState(false);
@@ -234,6 +239,7 @@ export default function MobileNav() {
                   <li>{renderLink({ href: '/services/', label: 'All Services' }, true)}</li>
                   {serviceLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
                   {renderDisclosure('Service Areas', serviceAreasOpen, setServiceAreasOpen, serviceAreaLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
+                  {renderDisclosure('Industries', industriesOpen, setIndustriesOpen, industryLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
                 </>)}
                 {renderDisclosure('About', aboutOpen, setAboutOpen, <>
                   <li>{renderLink({ href: '/about/', label: 'About Us' }, true)}</li>

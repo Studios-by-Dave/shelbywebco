@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 export default function DesktopNav() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
   const [promotionsOpen, setPromotionsOpen] = useState(false);
@@ -91,6 +92,23 @@ export default function DesktopNav() {
                     <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Boiling Springs, NC</a>
                     <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Kings Mountain, NC</a>
                   </div>
+                )}
+              </div>
+
+              {/* Industries */}
+              <div className="border-t border-brand-blue/20 pt-3">
+                <button
+                  onClick={() => setIndustriesOpen(!industriesOpen)}
+                  className="flex w-full items-center justify-between text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold"
+                  aria-expanded={industriesOpen}
+                >
+                  Industries
+                  <svg className={`h-4 w-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {industriesOpen && (
+                  <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Roofing Contractors</a>
                 )}
               </div>
             </div>

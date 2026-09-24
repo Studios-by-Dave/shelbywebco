@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from '../components/OptimizedImage.astro';
+import roofing1 from '../../assets/roofers_1.jpeg';
+import roofers2 from '../../assets/roofers_2.jpg';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design for Roofing Contractors',
+  'name': 'Web Design for Roofing Contractors in Shelby, NC',
+  'description': 'Lead-generating websites built specifically for roofing contractors in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. Custom design, local SEO, and quote-capture systems.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Shelby, NC' },
+    { '@type': 'City', 'name': 'Gastonia, NC' },
+    { '@type': 'City', 'name': 'Kings Mountain, NC' },
+    { '@type': 'City', 'name': 'Forest City, NC' },
+    { '@type': 'City', 'name': 'Boiling Springs, NC' },
+    { '@type': 'City', 'name': 'Polkville, NC' }
+  ],
+  'url': 'https://www.shelbywebco.com/web-design-for-roofers-shelby-nc/'
+};
+---
+
+<BaseLayout
+  title="Web Design for Roofing Contractors | Shelby, NC"
+  description="Lead-generating websites for roofing contractors in Shelby, Gastonia, and Western NC. Custom design, local SEO, and storm-season quote capture. (704) 473-8188."
+>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-darkest to-brand-darkest z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+        ✦ Built for Roofing Contractors
+      </div>
+      <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
+        Websites That Keep Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue">Phone Ringing.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Storm season doesn't wait for a slow website. We build fast, quote-ready sites for roofing companies across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> — engineered to turn homeowners into booked inspections.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a
+          href="/contact/"
+          class="group relative inline-flex items-center justify-center bg-brand-accent text-brand-darkest px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.4)] overflow-hidden"
+        >
+          <span class="relative z-10">Get Your Free Quote</span>
+          <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
+        </a>
+        <a
+          href="tel:+17044738188"
+          class="inline-flex items-center justify-center border border-brand-cyan/40 text-brand-cyan px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-cyan/10 transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Solution Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 leading-tight text-center">
+        Why Roofing Companies Lose Jobs to <span class="text-brand-cyan">Slow Websites</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-accent text-4xl font-black mb-2">72 hrs</div>
+          <div class="text-white font-bold text-lg mb-2">Storm Calls Go to the Fastest Searcher</div>
+          <p class="text-white/80 text-sm">After a hail storm, homeowners Google "roofers near me" within hours. If your site is 5 seconds slower than the competitor's, the inspection — and the job — goes to them.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-4xl font-black mb-2">1 call</div>
+          <div class="text-white font-bold text-lg mb-2">Worth $8,000+ in Roof Revenue</div>
+          <p class="text-white/80 text-sm">The average residential roof replacement tops $8,000. A website that converts even one extra lead a week pays for itself a hundred times over.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
+          <div class="text-white font-bold text-lg mb-2">Map Pack = Roofing Highway</div>
+          <p class="text-white/80 text-sm">Most roofing jobs start at the local Google Map Pack. We optimize your <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">Google Business Profile</a> and site so you're the first name homeowners see.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get Section -->
+  <section class="py-24 px-4 bg-brand-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Roofers</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Roofing Website That Works for You</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Every project includes the systems roofing companies actually need — not features you'll never touch.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Quote Request Engine</h3>
+          <p class="text-white/80">Roof type, pitch, and square footage pickers that let homeowners request an estimate without leaving the page. Every form routes straight to your phone or inbox.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Storm-Season Landing Pages</h3>
+          <p class="text-white/80">Dedicated pages like "Hail Damage Inspection Shelby NC" that rank the moment a storm hits — the fastest way to own the local emergency market.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Before/After Galleries</h3>
+          <p class="text-white/80">Show off your cleanest installs in a blazing-fast gallery. Homeowners buy confidence before they buy shingles.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Reviews &amp; Map Pack Optimization</h3>
+          <p class="text-white/80">We wire review widgets and Google Business Profile signals together so your 5-star history works for you right where homeowners search.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Licensing &amp; Trust Badges</h3>
+          <p class="text-white/80">Insurance, manufacturer certification, and warranty info front-and-center. Trust is a roof's best salesperson.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Local SEO Built In</h3>
+          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">on-page SEO</a> targeting your exact service area — Shelby, Gastonia, Kings Mountain, Forest City, and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Work Section (images pending) -->
+  <section class="py-24 px-4 bg-brand-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Recent Roofing Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Proof We've Handled</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Completed roofing projects built and optimized for local lead generation across the area.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <Image src={roofing1} alt="Roofing project completed by a Shelby NC roofing contractor" class="rounded-2xl aspect-video object-cover w-full h-full" />
+        <Image src={roofers2} alt="New roof installation by a local Western NC roofing contractor" class="rounded-2xl aspect-video object-cover w-full h-full" />
+        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl flex items-center justify-center">
+          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas / Proof Section -->
+  <section class="py-24 px-4 bg-brand-darkest">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Trusted by Local Trades Across Western NC</h2>
+          <p class="text-white/80 text-lg mb-8">We build lead-generation websites for construction, home services, and the trades — from <a href="/web-design-shelby-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Polkville</a>.</p>
+          <a href="/services/case-studies/" class="inline-block bg-brand-accent text-brand-darkest px-8 py-4 rounded-xl font-bold hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.3)]">
+            See Our Case Studies
+          </a>
+        </div>
+        <div class="grid gap-4">
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-accent text-3xl font-black mb-1">100%</div>
+            <div class="text-white font-bold mb-1">Google Indexing Guarantee</div>
+            <p class="text-white/70 text-sm">We get local trade sites fully indexed in as little as 72 hours.</p>
+          </div>
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-cyan text-3xl font-black mb-1">240%</div>
+            <div class="text-white font-bold mb-1">Avg. Traffic Growth</div>
+            <p class="text-white/70 text-sm">Our local SEO strategies more than double impressions for area service businesses.</p>
+          </div>
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-blue text-3xl font-black mb-1">Top 5</div>
+            <div class="text-white font-bold mb-1">Map Pack Results</div>
+            <p class="text-white/70 text-sm">We specialize in moving local businesses to the front page of Google Maps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 px-4 relative overflow-hidden bg-brand-accent/90" data-animate>
+    <div class="max-w-4xl mx-auto text-center relative z-10 text-brand-darkest">
+      <h2 class="font-heading text-5xl md:text-6xl font-black mb-8 leading-tight">
+        Ready for a Roofing Website <br />That Actually Picks Up the Phone?
+      </h2>
+      <p class="text-xl md:text-2xl font-medium mb-10 opacity-90 text-balance">
+        Free strategy call. No pressure, no upsells — just an honest plan for owning your service area online.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact/"
+          class="inline-block bg-brand-darkest text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+        >
+          Book a Free Chat
+        </a>
+        <a
+          href="tel:+17044738188"
+          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-darkest hover:text-white transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
