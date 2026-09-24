@@ -1,0 +1,30 @@
+Here's your full brand color palette, defined in src/styles/global.css:
+
+Primary Brand Colors
+Token	Hex	Role
+brand-accent	#84cc16	Lime green — primary CTA color, phone numbers, glow
+brand-accent-light	#a3e635	Lighter lime — hover states, gradients
+Cyan / Sky Family
+Token	Hex	Role
+brand-cyan	#22d3ee	Bright cyan — links, accents, glow
+brand-cyan-light	#67e8f9	Light cyan — gradients, hover
+brand-sky	#38bdf8	Sky blue — secondary accent, buttons
+brand-glow	#22d3ee	Same as cyan — glow effects
+Blue Family
+Token	Hex	Role
+brand-blue	#1d4ed8	Royal blue — brand blue, stats
+brand-blue-light	#3b82f6	Light blue — gradients
+brand-blue-dark	#1e3a8a	Dark blue — gradients
+brand-blue-darkest	#1e3a8a	Same as dark
+brand-blue-lightest	#3b82f6	Same as light
+Neutral / Background
+Token	Hex	Role
+brand-darkest	#0a0a0a	Near-black — page backgrounds, dark sections
+brand-dark	#1a1a1a	Dark gray — cards, section backgrounds
+Other Colors in Use (not in theme)
+Color	Hex	Used For
+#0A0A0A	#0a0a0a	Text on light backgrounds (same as darkest)
+#ef4444	red	Pricing strikethrough outline
+#fde047	yellow	Phone number outline
+#84cc16	lime	CTA glow shadows
+Key takeaway: Your visual identity is built around lime green (#84cc16) as the hero accent, paired with cyan (#22d3ee) for highlights, a blue family (#1d4ed8) for depth, and near-black (#0a0a0a) for backgrounds.
