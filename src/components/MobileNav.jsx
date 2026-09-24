@@ -98,17 +98,21 @@ export default function MobileNav() {
     setQuery('');
   };
 
-  const renderLink = (link, nested = false) => (
-    <a
-      href={link.href}
-      onClick={closeMenu}
-      className={`block px-4 py-3 text-lg font-semibold transition-colors ${
-        nested ? 'pl-10 text-white/85 hover:bg-white/5' : 'text-white hover:bg-white/5'
-      } ${link.href.startsWith('tel:') ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15' : ''}`}
-    >
-      {link.label}
-    </a>
-  );
+  const renderLink = (link, nested = false) => {
+    const isBlog = link.label === 'Blog';
+    return (
+      <a
+        href={link.href}
+        onClick={closeMenu}
+        className={`block px-4 py-3 text-lg font-semibold transition-colors ${
+          nested ? 'pl-10 text-white/85 hover:bg-white/5' : 'text-white hover:bg-white/5'
+        } ${link.href.startsWith('tel:') ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15' : ''} ${isBlog ? 'animate-blog-stream font-poofy text-xl' : ''}`}
+        style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
+      >
+        {link.label}
+      </a>
+    );
+  };
 
   const renderDisclosure = (label, open, setOpen, children) => (
     <li>

@@ -175,6 +175,21 @@
     animation: color-cycle-blue 4s ease-in-out infinite;
   }
 
+  @keyframes blog-brand-stream {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-blog-stream {
+    background: linear-gradient(90deg, #1e3a8a, #22d3ee, #84cc16, #22d3ee, #1e3a8a);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blog-brand-stream 3.5s ease-in-out infinite;
+  }
+
   /* Pricing Red Outline */
   .text-highlight-outline {
     text-shadow: 
