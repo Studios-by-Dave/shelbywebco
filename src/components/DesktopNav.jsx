@@ -58,9 +58,9 @@ export default function DesktopNav() {
             <div className="p-4">
               {/* Service Pages */}
               <div className="mb-4">
-                <p className="text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
+                <p className="text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
                 <div className="space-y-1">
-                  <a href="/services/" className="block text-brand-cyan hover:text-white transition-colors py-1 font-bold">View All Services →</a>
+                  <a href="/services/" className="block text-brand-blue hover:text-white transition-colors py-1 font-bold">View All Services →</a>
                   <a href="/services/web-design/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Web Design</a>
                   <a href="/services/branding/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Logo Design & Branding</a>
                   <a href="/services/seo/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">SEO Services</a>
@@ -74,7 +74,7 @@ export default function DesktopNav() {
               <div className="border-t border-brand-blue/20 pt-3">
                 <button
                   onClick={() => setServiceAreasOpen(!serviceAreasOpen)}
-                  className="flex w-full items-center justify-between text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold"
+                  className="flex w-full items-center justify-between text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold"
                   aria-expanded={serviceAreasOpen}
                 >
                   Service Areas
@@ -84,13 +84,13 @@ export default function DesktopNav() {
                 </button>
                 {serviceAreasOpen && (
                   <div className="grid grid-cols-2 gap-1">
-                    <a href="/web-design-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Shelby, NC</a>
-                    <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Gastonia, NC</a>
-                    <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Forest City, NC</a>
-                    <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Polkville, NC</a>
-                    <a href="/web-design-asheville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Asheville, NC</a>
-                    <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Boiling Springs, NC</a>
-                    <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Kings Mountain, NC</a>
+                    <a href="/web-design-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Shelby, NC</a>
+                    <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Gastonia, NC</a>
+                    <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Forest City, NC</a>
+                    <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Polkville, NC</a>
+                    <a href="/web-design-asheville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Asheville, NC</a>
+                    <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Boiling Springs, NC</a>
+                    <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Kings Mountain, NC</a>
                   </div>
                 )}
               </div>
@@ -99,7 +99,7 @@ export default function DesktopNav() {
               <div className="border-t border-brand-blue/20 pt-3">
                 <button
                   onClick={() => setIndustriesOpen(!industriesOpen)}
-                  className="flex w-full items-center justify-between text-brand-blue text-xs uppercase tracking-widest mb-2 font-bold"
+                  className="flex w-full items-center justify-between text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold"
                   aria-expanded={industriesOpen}
                 >
                   Industries
@@ -109,11 +109,11 @@ export default function DesktopNav() {
                 </button>
                 {industriesOpen && (
                   <div className="grid grid-cols-2 gap-1">
-                    <a href="/web-design-for-home-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Home Remodelers</a>
-                    <a href="/web-design-for-construction-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Construction Trades</a>
-                    <a href="/web-design-for-landscapers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Landscapers</a>
-                    <a href="/web-design-for-tree-specialists-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Tree Specialists</a>
-                    <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Roofers</a>
+                    <a href="/web-design-for-home-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Home Remodelers</a>
+                    <a href="/web-design-for-construction-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Construction Trades</a>
+                    <a href="/web-design-for-landscapers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Landscapers</a>
+                    <a href="/web-design-for-tree-specialists-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Tree Specialists</a>
+                    <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Roofers</a>
                   </div>
                 )}
               </div>
@@ -197,7 +197,6 @@ export default function DesktopNav() {
       
       <a href="/contact/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Contact</a>
       <a href="/blog/" className="font-poofy font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue-dark drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
-      <a href="/glossary/" className="text-white text-[1.1rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Glossary</a>
     </div>
   );
 }

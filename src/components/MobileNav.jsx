@@ -6,7 +6,6 @@ const topLinks = [
   { href: '/pricing/', label: 'Pricing' },
   { href: '/contact/', label: 'Contact' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/glossary/', label: 'Glossary' },
   { href: 'tel:+17044738188', label: '(704) 473-8188' },
 ];
 
