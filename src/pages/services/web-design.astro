@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
 import Image from '../../components/OptimizedImage.astro';
+import BuildPricingSection from '../../components/BuildPricingSection.astro';
 import SEOPricingSection from '../../components/SEOPricingSection.astro';
 import ManagedGrowthSection from '../../components/ManagedGrowthSection.astro';
 
@@ -193,127 +194,7 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section class="py-24 px-4 bg-brand-darkest/50" data-animate>
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">✦ Transparent Pricing</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Investment Options</h2>
-        <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-          Clear price ranges for every project. No hidden fees, no surprises — just <span class="text-brand-cyan font-semibold">honest pricing</span> that scales with your needs.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Starter Package -->
-        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0 flex flex-col">
-          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-1">Starter Website</h3>
-          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">Brochure — No Monthly</p>
-          <p class="text-white/70 text-sm md:text-base mb-6 italic">Perfect for a clean, professional online presence</p>
-          <div class="mb-6">
-            <div class="flex flex-col items-center justify-center">
-              <span class="text-white/40 text-xs font-bold uppercase tracking-wider mb-1 line-through">Was $698</span>
-              <span class="text-amber-400 text-sm font-bold uppercase tracking-wider mb-1 animate-pulse">Now</span>
-              <span class="text-4xl md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$598</span>
-              <span class="text-white/40 text-xs uppercase tracking-widest mt-1">one-time build</span>
-            </div>
-          </div>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
-            <li>• 1-5 page brochure site</li>
-            <li>• Mobile-responsive design</li>
-            <li>• Contact form included</li>
-            <li>• Basic SEO setup</li>
-            <li>• 1 revision round</li>
-            <li class="text-brand-cyan/80 font-medium">• Not a full Web Package — no hosting, no monthly SEO included.</li>
-          </ul>
-          <a href="/contact/" class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center mt-auto">Get Started</a>
-        </div>
-
-        <!-- Growth Engine -->
-        <div class="bg-gradient-to-br from-[#111111] via-brand-darkest to-brand-dark border border-[#f3db70]/50 rounded-2xl p-8 shadow-[inset_0_2px_2px_rgba(255,255,255,0.15),_0_20px_40px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_2px_2px_rgba(255,255,255,0.2),_0_25px_50px_rgba(0,0,0,0.7),_0_0_40px_rgba(243,219,112,0.25)] transition-all duration-300 relative z-10 scale-100 lg:scale-105 flex flex-col">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#0A0A0A] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md whitespace-nowrap">High Growth Choice</div>
-          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-1">Growth Engine</h3>
-          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">Build + Monthly SEO</p>
-          <p class="text-white/70 text-sm md:text-base mb-6 italic">Most popular — stronger lead flow with ongoing SEO</p>
-          <div class="mb-6">
-            <div class="flex flex-col items-center justify-center">
-              <span class="text-2xl md:text-3xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$798 - $1,498</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">one-time build</span>
-              <div class="mt-3 w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                <span class="text-brand-cyan font-black text-xl">+ $497<span class="text-sm font-bold">/mo</span></span>
-                <span class="text-white/70 text-xs block">Growth SEO Engine included</span>
-              </div>
-              <span class="text-white/40 text-xs mt-2">Milestone audits — no endless retainer</span>
-            </div>
-          </div>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
-            <li>• 5-10 page custom site + custom UI/UX</li>
-            <li>• Advanced form architecture + analytics</li>
-            <li>• Full technical SEO + GEO (sitemap/robots/llms.txt)</li>
-            <li>• Local SEO (citations, GBP, map-pack)</li>
-            <li>• 2 revision rounds + speed optimization</li>
-          </ul>
-          <a href="/contact/" class="block w-full bg-brand-accent text-[#0A0A0A] px-6 py-3 rounded-xl font-medium hover:bg-brand-accent-light transition-all duration-300 text-center shadow-[0_0_15px_rgba(132,204,22,0.3)] mt-auto">Get Started</a>
-        </div>
-
-        <!-- Authority Builder -->
-        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0 flex flex-col">
-          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Authority Builder</h3>
-          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">Build + Monthly Content SEO</p>
-          <p class="text-white/70 text-sm md:text-base mb-6 italic">For brands ready to build topical authority</p>
-          <div class="mb-6">
-            <div class="flex flex-col items-center justify-center">
-              <span class="text-2xl md:text-3xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$1,498 - $2,498</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">one-time build</span>
-              <div class="mt-3 w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                <span class="text-brand-cyan font-black text-xl">+ $679<span class="text-sm font-bold">/mo</span></span>
-                <span class="text-white/70 text-xs block">Authority SEO included</span>
-              </div>
-              <span class="text-white/40 text-xs mt-2">Content systems + topic clustering</span>
-            </div>
-          </div>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
-            <li>• 10-20 page business engine + blog integration</li>
-            <li>• Content strategy + article implementation</li>
-            <li>• Expanded competitive research + service-area pages</li>
-            <li>• High-performance hosting + CRM integrations</li>
-            <li>• Advanced booking/e-commerce + strategy consulting</li>
-          </ul>
-          <a href="/contact/" class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center mt-auto">Get Started</a>
-        </div>
-
-        <!-- Scale & Dominate -->
-        <div class="bg-gradient-to-br from-[#111111] via-brand-darkest to-brand-dark border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0 flex flex-col">
-          <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Scale & Dominate</h3>
-          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">Build + Aggressive SEO/GEO</p>
-          <p class="text-white/70 text-sm md:text-base mb-6 italic">Full domination for competitive / multi-location</p>
-          <div class="mb-6">
-            <div class="text-center flex flex-col items-center justify-center">
-              <span class="text-2xl md:text-3xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$2,498 - $3,998</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">one-time build</span>
-              <div class="mt-3 w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                <span class="text-brand-cyan font-black text-xl">+ $998 – $1,998<span class="text-sm font-bold">/mo</span></span>
-                <span class="text-white/70 text-xs block">Scale & Dominate SEO included</span>
-              </div>
-              <span class="text-white/40 text-xs mt-2">Or custom enterprise scope available</span>
-            </div>
-          </div>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
-            <li>• 20+ pages fully custom enterprise solution</li>
-            <li>• Advanced GEO/AI visibility + link-building</li>
-            <li>• Multi-location / competitive market focus</li>
-            <li>• Priority strategy + growth roadmap</li>
-            <li>• Membership/vendor portals + API workflows</li>
-          </ul>
-          <a href="/contact/" class="block w-full border-2 border-brand-purple text-brand-purple px-6 py-3 rounded-lg font-medium hover:bg-brand-purple hover:text-white transition-all duration-300 text-center mt-auto">Book Discovery Call</a>
-        </div>
-
-      </div>
-      <p class="text-center text-white/80 text-body-base md:text-body-lg max-w-5xl mx-auto mt-10 leading-relaxed px-4">
-        *** These pricing examples are not set in stone — they’re here to provide true transparency. Your project’s <span class="text-white font-bold">actual cost is determined by a custom quote</span> based on your project’s specific details and scope. Initial build costs and monthly SEO rates can also be <span class="text-white font-bold">more or less interchangeable</span> depending on your business’s unique online needs — we’ll tailor the balance that makes the most sense for you. <a href="/contact/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30 font-semibold">Get your custom quote →</a>
-      </p>
-    </div>
-  </section>
+  <BuildPricingSection />
 
   <SEOPricingSection />
   <ManagedGrowthSection />
