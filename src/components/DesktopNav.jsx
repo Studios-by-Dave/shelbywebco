@@ -108,7 +108,13 @@ export default function DesktopNav() {
                   </svg>
                 </button>
                 {industriesOpen && (
-                  <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Roofing Contractors</a>
+                  <div className="grid grid-cols-2 gap-1">
+                    <a href="/web-design-for-home-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Home Remodelers</a>
+                    <a href="/web-design-for-construction-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Construction Trades</a>
+                    <a href="/web-design-for-landscapers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Landscapers</a>
+                    <a href="/web-design-for-tree-specialists-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Tree Specialists</a>
+                    <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Roofers</a>
+                  </div>
                 )}
               </div>
             </div>

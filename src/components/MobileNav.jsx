@@ -30,7 +30,11 @@ const serviceAreaLinks = [
 ];
 
 const industryLinks = [
-  { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofing Contractors' },
+  { href: '/web-design-for-home-remodelers-shelby-nc/', label: 'Home Remodelers' },
+  { href: '/web-design-for-construction-shelby-nc/', label: 'Construction Trades' },
+  { href: '/web-design-for-landscapers-shelby-nc/', label: 'Landscapers' },
+  { href: '/web-design-for-tree-specialists-shelby-nc/', label: 'Tree Specialists' },
+  { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofers' },
 ];
 
 const aboutLinks = [

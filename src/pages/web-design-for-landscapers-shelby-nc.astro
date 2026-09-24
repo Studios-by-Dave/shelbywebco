@@ -1,15 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Image from '../components/OptimizedImage.astro';
-import roofing1 from '../../assets/roofers_1.jpeg';
-import roofers2 from '../../assets/roofers_2.jpg';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  'serviceType': 'Web Design for Roofers',
-  'name': 'Web Design for Roofers in Shelby, NC',
-  'description': 'Lead-generating websites built specifically for roofers in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. Custom design, local SEO, and quote-capture systems.',
+  'serviceType': 'Web Design for Landscapers',
+  'name': 'Web Design for Landscapers in Shelby, NC',
+  'description': 'Lead-generating websites built specifically for landscaping companies in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. Custom design, local SEO, and seasonal promo systems.',
   'provider': {
     '@type': 'LocalBusiness',
     'name': 'Shelby Web Company',
@@ -24,13 +21,13 @@ const serviceSchema = {
     { '@type': 'City', 'name': 'Boiling Springs, NC' },
     { '@type': 'City', 'name': 'Polkville, NC' }
   ],
-  'url': 'https://www.shelbywebco.com/web-design-for-roofers-shelby-nc/'
+  'url': 'https://www.shelbywebco.com/web-design-for-landscapers-shelby-nc/'
 };
 ---
 
 <BaseLayout
-  title="Web Design for Roofers | Shelby, NC"
-  description="Lead-generating websites for roofers in Shelby, Gastonia, and Western NC. Custom design, local SEO, and storm-season quote capture. (704) 473-8188."
+  title="Web Design for Landscapers | Shelby, NC"
+  description="Lead-generating websites for landscaping companies in Shelby, Gastonia, and Western NC. Custom design, local SEO, and seasonal promo systems. (704) 473-8188."
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
@@ -40,13 +37,13 @@ const serviceSchema = {
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
       <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
-        ✦ Built for Roofers
+        ✦ Built for Landscapers
       </div>
       <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
-        Websites That Keep Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue">Phone Ringing.</span>
+        Websites That Turn <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue">Seasonal Demand</span> Into Booked Work.
       </h1>
       <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Storm season doesn't wait for a slow website. We build fast, quote-ready sites for roofing companies across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> — engineered to turn homeowners into booked inspections.
+        Spring and fall don't wait for a slow website. We build fast, quote-ready sites for landscaping companies across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> — engineered to turn homeowners into booked projects.
       </p>
       <div class="flex flex-col sm:flex-row gap-5 justify-center">
         <a
@@ -70,23 +67,23 @@ const serviceSchema = {
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
     <div class="max-w-7xl mx-auto">
       <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 leading-tight text-center">
-        Why Roofing Companies Lose Jobs to <span class="text-brand-cyan">Slow Websites</span>
+        Why Landscapers Lose Jobs to <span class="text-brand-cyan">Slow Websites</span>
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
-          <div class="text-brand-accent text-4xl font-black mb-2">72 hrs</div>
-          <div class="text-white font-bold text-lg mb-2">Storm Calls Go to the Fastest Searcher</div>
-          <p class="text-white/80 text-sm">After a hail storm, homeowners Google "roofers near me" within hours. If your site is 5 seconds slower than the competitor's, the inspection — and the job — goes to them.</p>
+          <div class="text-brand-accent text-4xl font-black mb-2">1 week</div>
+          <div class="text-white font-bold text-lg mb-2">Seasonal Searches Spike and the Fastest Wins</div>
+          <p class="text-white/80 text-sm">Spring and fall bring a flood of homeowners ready to hire. If your site is slow or hard to book from, the next landscaper in the search results gets the call.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
-          <div class="text-brand-cyan text-4xl font-black mb-2">1 call</div>
-          <div class="text-white font-bold text-lg mb-2">Worth $8,000+ in Roof Revenue</div>
-          <p class="text-white/80 text-sm">The average residential roof replacement tops $8,000. A website that converts even one extra lead a week pays for itself a hundred times over.</p>
+          <div class="text-brand-cyan text-4xl font-black mb-2">$3k+</div>
+          <div class="text-white font-bold text-lg mb-2">Per Project</div>
+          <p class="text-white/80 text-sm">The average landscape project tops $3,000. A website that converts even one extra project a month pays for itself many times over.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
           <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
-          <div class="text-white font-bold text-lg mb-2">Map Pack = Roofing Highway</div>
-          <p class="text-white/80 text-sm">Most roofing jobs start at the local Google Map Pack. We optimize your <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">Google Business Profile</a> and site so you're the first name homeowners see.</p>
+          <div class="text-white font-bold text-lg mb-2">Map Pack = Landscape Highway</div>
+          <p class="text-white/80 text-sm">Most landscaping jobs start at the local Google Map Pack. We optimize your <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">Google Business Profile</a> and site so you're the first name homeowners see.</p>
         </div>
       </div>
     </div>
@@ -96,22 +93,22 @@ const serviceSchema = {
   <section class="py-24 px-4 bg-brand-dark">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Roofers</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Roofing Website That Works for You</h2>
-        <p class="text-white/70 max-w-2xl mx-auto">Every project includes the systems roofing companies actually need — not features you'll never touch.</p>
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Landscapers</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Landscaping Website That Works for You</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Every project includes the systems landscaping companies actually need — not features you'll never touch.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Quote Request Engine</h3>
-          <p class="text-white/80">Roof type, pitch, and square footage pickers that let homeowners request an estimate without leaving the page. Every form routes straight to your phone or inbox.</p>
-        </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Storm-Season Landing Pages</h3>
-          <p class="text-white/80">Dedicated pages like "Hail Damage Inspection Shelby NC" that rank the moment a storm hits — the fastest way to own the local emergency market.</p>
-        </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
           <h3 class="text-card-title font-bold text-brand-cyan mb-3">Before/After Galleries</h3>
-          <p class="text-white/80">Show off your cleanest installs in a blazing-fast gallery. Homeowners buy confidence before they buy shingles.</p>
+          <p class="text-white/80">Showcase your cleanest transformations in a blazing-fast gallery. Homeowners buy confidence before they buy a landscape — and your portfolio is the proof.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Quote Request Engine</h3>
+          <p class="text-white/80">Project type, scope, and budget pickers that let homeowners request an estimate without leaving the page. Every form routes straight to your phone or inbox.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Seasonal Promo Pages</h3>
+          <p class="text-white/80">Dedicated pages like "Spring Landscaping Shelby NC" that rank the moment the season starts — the fastest way to own the local market.</p>
         </div>
         <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
           <h3 class="text-card-title font-bold text-brand-cyan mb-3">Reviews &amp; Map Pack Optimization</h3>
@@ -119,7 +116,7 @@ const serviceSchema = {
         </div>
         <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
           <h3 class="text-card-title font-bold text-brand-cyan mb-3">Licensing &amp; Trust Badges</h3>
-          <p class="text-white/80">Insurance, manufacturer certification, and warranty info front-and-center. Trust is a roof's best salesperson.</p>
+          <p class="text-white/80">Insurance, certifications, and warranty info front-and-center. Trust is a landscaper's best salesperson.</p>
         </div>
         <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
           <h3 class="text-card-title font-bold text-brand-cyan mb-3">Local SEO Built In</h3>
@@ -133,14 +130,18 @@ const serviceSchema = {
   <section class="py-24 px-4 bg-brand-dark">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Recent Roofing Work</p>
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Recent Landscaping Work</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Proof We've Handled</h2>
-        <p class="text-white/70 max-w-2xl mx-auto">Completed roofing projects built and optimized for local lead generation across the area.</p>
+        <p class="text-white/70 max-w-2xl mx-auto">Completed landscaping projects built and optimized for local lead generation across the area.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <Image src={roofing1} alt="Roofing project completed by a Shelby NC roofer" class="rounded-2xl aspect-video object-cover w-full h-full" />
-        <Image src={roofers2} alt="New roof installation by a local Western NC roofer" class="rounded-2xl aspect-video object-cover w-full h-full" />
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl flex items-center justify-center">
+        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
+          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
+        </div>
+        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
+          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
+        </div>
+        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
           <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
         </div>
       </div>
@@ -183,7 +184,7 @@ const serviceSchema = {
   <section class="py-32 px-4 relative overflow-hidden bg-brand-accent/90" data-animate>
     <div class="max-w-4xl mx-auto text-center relative z-10 text-brand-darkest">
       <h2 class="font-heading text-5xl md:text-6xl font-black mb-8 leading-tight">
-        Ready for a Roofing Website <br />That Actually Picks Up the Phone?
+        Ready for a Landscaping Website <br />That Actually Picks Up the Phone?
       </h2>
       <p class="text-xl md:text-2xl font-medium mb-10 opacity-90 text-balance">
         Free strategy call. No pressure, no upsells — just an honest plan for owning your service area online.
