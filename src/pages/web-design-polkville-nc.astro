@@ -5,12 +5,29 @@ import polkville1 from '../../assets/service locations/polkville/Polkville nc_1.
 import polkville2 from '../../assets/service locations/polkville/Polkville nc_2.jpeg';
 import polkville4 from '../../assets/service locations/polkville/polkville nc_4.jpeg';
 import polkville7 from '../../assets/service locations/polkville/polkville nc_7.jpeg';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Web Design & Local SEO in Polkville, NC',
+  'description': 'Elevate your Polkville business with custom web design and local SEO. We build fast, high-converting websites for small businesses in Polkville and Cleveland County.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Polkville, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-polkville-nc/'
+};
 ---
 
 <BaseLayout 
   title="Web Design & Local SEO in Polkville, NC"
   description="Elevate your Polkville business with custom web design and local SEO. We build fast, high-converting websites for small businesses in Polkville and Cleveland County."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
     <div class="hero-background-image absolute inset-0 z-0 opacity-40">

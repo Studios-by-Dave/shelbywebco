@@ -4,12 +4,29 @@ import Image from '../components/OptimizedImage.astro';
 import km1 from '../../assets/service locations/kings mountain/kings mountain nc_1.jpeg';
 import km2 from '../../assets/service locations/kings mountain/kings mountain nc_2.jpg';
 import km3 from '../../assets/service locations/kings mountain/kings mountain nc_3.jpg';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Web Design & Local SEO in Kings Mountain, NC',
+  'description': 'Professional web design and local SEO for Kings Mountain, NC businesses.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Kings Mountain, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-kings-mountain-nc/'
+};
 ---
 
 <BaseLayout 
   title="Web Design & Local SEO in Kings Mountain, NC"
   description="Professional web design and local SEO for Kings Mountain, NC businesses."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
     <div class="absolute inset-0 z-0 opacity-25">

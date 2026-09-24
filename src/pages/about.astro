@@ -16,12 +16,64 @@ import steepleImage from '../../assets/steeple_1.jpg';
 import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
 import daveHeadshot from '../../assets/about/Headshot_1.jpg';
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.shelbywebco.com/about/",
+  "name": "David \"Dave\" Richardson",
+  "jobTitle": "Founder & Lead Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Shelby Web Company",
+    "url": "https://www.shelbywebco.com"
+  },
+  "image": "https://www.shelbywebco.com/assets/about/Headshot_1.jpg",
+  "description": "Dave Richardson is the founder of Shelby Web Company. A CompTIA A+ certified technology veteran with 20+ years of IT and network engineering experience, he builds hand-coded, performance-first websites for local service businesses in Shelby, NC.",
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "UNC Charlotte" },
+    { "@type": "EducationalOrganization", "name": "ECPI University" }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialName": "CompTIA A+ Certification",
+    "educationalOccupationalCredentialLevel": "Professional Certification"
+  },
+  "sameAs": "https://www.facebook.com/profile.php?id=61591509287089"
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.shelbywebco.com",
+  "name": "Shelby Web Company",
+  "url": "https://www.shelbywebco.com",
+  "logo": "https://www.shelbywebco.com/og-image.jpg",
+  "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.",
+  "founder": {
+    "@type": "Person",
+    "name": "David \"Dave\" Richardson",
+    "jobTitle": "Founder & Lead Developer"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "David \"Dave\" Richardson",
+      "jobTitle": "Founder & Lead Developer"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61591509287089",
+    "https://www.linkedin.com/company/shelbywebco"
+  ]
+};
 ---
 
 <BaseLayout 
   title="About Shelby Web Company | NC Web Designers"
   description="20+ years of IT and network engineering behind a fresh web design and digital marketing agency in Shelby, NC."
 >
+  <script is:inline set:html={JSON.stringify(personSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(orgSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>

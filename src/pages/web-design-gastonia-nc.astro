@@ -3,12 +3,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
 import gastoniaLeft from '../../assets/service locations/gastonia/gastonia nc_3.jpg';
 import gastoniaRight from '../../assets/service locations/gastonia/gastonia nc_4.png';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Web Design & Local SEO in Gastonia, NC',
+  'description': 'Professional web design and local SEO services for Gastonia, NC. We help Gaston County businesses dominate local search and grow their digital presence.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Gastonia, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-gastonia-nc/'
+};
 ---
 
 <BaseLayout 
   title="Web Design & Local SEO Gastonia, NC"
   description="Professional web design and local SEO services for Gastonia, NC. We help Gaston County businesses dominate local search and grow their digital presence."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>

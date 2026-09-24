@@ -1,11 +1,83 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's included in the price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every package includes custom design, mobile responsiveness, basic SEO setup, and a contact form. Higher-tier packages add advanced functionality like booking systems, e-commerce, analytics integration, and more. All packages include web hosting setup assistance and a domain consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer payment plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer flexible payment plans for most packages. Typically we require 50% upfront to begin the project, with the remaining balance due upon completion. For larger projects, we can arrange monthly installments — just ask during your consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most projects are completed within 2–4 weeks, depending on the scope. A simple 1–2 page site can be ready in as little as 1–2 weeks, while more complex builds (e-commerce, custom portals) typically take 4–6 weeks. We'll give you a clear timeline during the proposal phase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need more pages than my package includes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No problem! Additional pages beyond the package limit are billed at a flat rate of $75–$150 per page, depending on complexity. We can also help you prioritize which pages to launch with and add more later as your business grows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle web hosting and domain setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we handle the full setup. We'll help you choose a domain, configure web hosting (or recommend the best provider for your needs), and get everything deployed. Web hosting fees are separate and typically range from $10–$30/month depending on your provider and plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upgrade my package later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Your site is built on a scalable foundation, so upgrading is smooth. Whether you need to add e-commerce, a booking system, or more pages down the road, we can handle it. We'll simply quote the additional work based on your current package rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I'm not satisfied with the design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your satisfaction matters. Every package includes 1–3 revision rounds (depending on the tier) where you can request changes. We work iteratively, sharing progress along the way so there are no surprises. For Enterprise clients, we offer unlimited revisions until everything is perfect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing maintenance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer optional maintenance plans starting at $49/month for smaller sites. This includes security updates, regular backups, uptime monitoring, content updates, and priority support. It's a great way to keep your site running smoothly without worrying about the technical details."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout 
-  title="Web Design Pricing | Shelby Web Company"
+  title="Web Design Pricing"
   description="Transparent web design pricing with clear ranges. From simple brochure sites to enterprise solutions — know what to expect."
 >
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-6 lg:py-10 px-4" data-animate>
@@ -54,7 +126,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <a 
             href="/contact/" 
-            class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center"
+            class="block w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-accent-light transition-all duration-300 text-center"
           >
             Get Started
           </a>
@@ -115,7 +187,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <a 
             href="/contact/" 
-            class="block w-full bg-brand-green text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300 text-center"
+            class="block w-full bg-brand-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-accent-light transition-all duration-300 text-center"
           >
             Get Started
           </a>
@@ -214,7 +286,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-darkest border border-brand-purple/20 rounded-xl p-6">
-          <h3 class="text-brand-green font-bold mb-2">Lower End of Range</h3>
+          <h3 class="text-brand-accent font-bold mb-2">Lower End of Range</h3>
           <p class="text-white/70 text-body-sm">
             Simple layouts, existing branding/content ready, standard features, no custom integrations, flexible timeline.
           </p>
@@ -456,7 +528,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <a 
         href="/contact/" 
-        class="inline-block bg-brand-green text-white px-8 py-3 rounded-lg font-medium hover:bg-brand-greenLight transition-all duration-300"
+        class="inline-block bg-brand-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-brand-accent-light transition-all duration-300"
       >
         Schedule a Free Consultation
       </a>

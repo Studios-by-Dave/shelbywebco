@@ -9,12 +9,67 @@ import shelby8 from '../../assets/service locations/Shelby/Shelby_8.jpg';
 import shelby9 from '../../assets/service locations/Shelby/Shelby_9.jpg';
 import shelbyDrone1 from '../../assets/service locations/Shelby/shelby_nc_drone_1.webp';
 import shelbyCafe2 from '../../assets/service locations/Shelby/shelby-cafe_2.jpg';
+
+const localSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.shelbywebco.com',
+  'name': 'Shelby Web Company',
+  'image': 'https://www.shelbywebco.com/og-image.jpg',
+  'url': 'https://www.shelbywebco.com',
+  'telephone': '(704) 473-8188',
+  'email': 'shelbywebco@gmail.com',
+  'priceRange': '$598+',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Shelby',
+    'addressRegion': 'NC',
+    'postalCode': '28150',
+    'addressCountry': 'US'
+  },
+  'geo': {
+    '@type': 'GeoCoordinates',
+    'latitude': 35.2924,
+    'longitude': -81.5356
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Shelby, NC' },
+    { '@type': 'City', 'name': 'Kings Mountain, NC' },
+    { '@type': 'City', 'name': 'Gastonia, NC' },
+    { '@type': 'City', 'name': 'Forest City, NC' },
+    { '@type': 'City', 'name': 'Boiling Springs, NC' },
+    { '@type': 'City', 'name': 'Polkville, NC' },
+    { '@type': 'City', 'name': 'Asheville, NC' }
+  ],
+  'sameAs': [
+    'https://www.facebook.com/profile.php?id=61591509287089',
+    'https://www.linkedin.com/company/shelbywebco'
+  ]
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Web Design & Local SEO in Shelby, NC',
+  'description': 'Local web design and SEO in Shelby, NC. Shelby Web Company builds fast, custom websites that turn local browsers into customers.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Shelby, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-shelby-nc/'
+};
 ---
 
 <BaseLayout 
   title="Local Web Design & Local SEO in Shelby, NC"
   description="Local web design & SEO in Shelby, NC. Shelby Web Company builds fast, custom websites that turn local browsers into customers. Free logo design + $100 referral rewards."
 >
+  <script is:inline set:html={JSON.stringify(localSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>

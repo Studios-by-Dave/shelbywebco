@@ -5,12 +5,29 @@ import bs1 from '../../assets/service locations/boiling springs nc/boiling sprin
 import bs2 from '../../assets/service locations/boiling springs nc/boiling springs nc_2.jpg';
 import bs10 from '../../assets/service locations/boiling springs nc/boiling springs nc_10.jpeg';
 import bsCommunity from '../../assets/service locations/boiling springs nc/BoilingSpringLakesNC-Community.png';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Web Design & Local SEO in Boiling Springs, NC',
+  'description': 'Local web design and SEO for Boiling Springs, NC businesses. Professional websites that drive results.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Boiling Springs, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-boiling-springs-nc/'
+};
 ---
 
 <BaseLayout 
   title="Web Design & Local SEO in Boiling Springs, NC"
   description="Local web design and SEO for Boiling Springs, NC businesses. Professional websites that drive results."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>

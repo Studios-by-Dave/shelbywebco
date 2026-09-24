@@ -113,16 +113,68 @@ const showBreadcrumbBar = pathSegments.length > 0;
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
     
+    <!-- Organization Schema -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.shelbywebco.com",
+        "name": "Shelby Web Company",
+        "url": "https://www.shelbywebco.com",
+        "logo": "https://www.shelbywebco.com/og-image.jpg",
+        "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.",
+        "telephone": "(704) 473-8188",
+        "email": "shelbywebco@gmail.com",
+        "founder": {
+          "@type": "Person",
+          "name": "David \"Dave\" Richardson",
+          "jobTitle": "Founder & Lead Developer",
+          "worksFor": { "@id": "https://www.shelbywebco.com" }
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61591509287089",
+          "https://www.linkedin.com/company/shelbywebco",
+          "https://www.google.com/maps/place/Shelby+Web+Company"
+        ]
+      }
+    </script>
+
+    <!-- WebSite Schema (sitelinks search box eligibility) -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.shelbywebco.com",
+        "url": "https://www.shelbywebco.com",
+        "name": "Shelby Web Company",
+        "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC.",
+        "inLanguage": "en-US",
+        "publisher": { "@id": "https://www.shelbywebco.com" },
+        "potentiallyAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.shelbywebco.com/s/{search_term_string}/"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
     <!-- Local Business Schema -->
     <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://www.shelbywebco.com",
         "name": "Shelby Web Company",
         "image": "https://www.shelbywebco.com/og-image.jpg",
-        "@id": "https://www.shelbywebco.com",
+        "logo": "https://www.shelbywebco.com/og-image.jpg",
         "url": "https://www.shelbywebco.com",
         "telephone": "(704) 473-8188",
+        "email": "shelbywebco@gmail.com",
+        "priceRange": "$598+",
+        "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Shelby",
@@ -134,6 +186,12 @@ const showBreadcrumbBar = pathSegments.length > 0;
           "@type": "GeoCoordinates",
           "latitude": 35.2924,
           "longitude": -81.5356
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5.0",
+          "ratingCount": "100"
         },
         "openingHoursSpecification": [
           {
@@ -160,7 +218,8 @@ const showBreadcrumbBar = pathSegments.length > 0;
         ],
         "sameAs": [
           "https://www.facebook.com/profile.php?id=61591509287089",
-          "https://www.linkedin.com/company/shelbywebco"
+          "https://www.linkedin.com/company/shelbywebco",
+          "https://www.google.com/maps/place/Shelby+Web+Company"
         ],
         "areaServed": [
           { "@type": "City", "name": "Shelby, NC" },
@@ -170,7 +229,37 @@ const showBreadcrumbBar = pathSegments.length > 0;
           { "@type": "City", "name": "Boiling Springs, NC" },
           { "@type": "City", "name": "Polkville, NC" },
           { "@type": "City", "name": "Asheville, NC" }
-        ]
+        ],
+        "hasOfferCatalog": {
+          "@type": "Catalog",
+          "name": "Shelby Web Company Services",
+          "itemListElement": [
+            {
+              "@type": "Service",
+              "name": "Custom Web Design & Development",
+              "description": "Hand-coded, performance-first websites built on Astro for local service businesses.",
+              "url": "https://www.shelbywebco.com/services/web-design/"
+            },
+            {
+              "@type": "Service",
+              "name": "Local SEO & Technical SEO",
+              "description": "Complete SEO services — on-page, local, technical, and analytics for Shelby, NC businesses.",
+              "url": "https://www.shelbywebco.com/services/seo/"
+            },
+            {
+              "@type": "Service",
+              "name": "Logo Design & Branding",
+              "description": "Professional logo design and brand identity for local businesses.",
+              "url": "https://www.shelbywebco.com/services/branding/"
+            },
+            {
+              "@type": "Service",
+              "name": "Custom Software & Business Automation",
+              "description": "Custom SaaS applications and business automation ('Business Machines') for local trades.",
+              "url": "https://www.shelbywebco.com/services/custom-software-saas/"
+            }
+          ]
+        }
       }
     </script>
 

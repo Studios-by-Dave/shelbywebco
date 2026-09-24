@@ -6,12 +6,29 @@ import fc3 from '../../assets/service locations/forest city/Forest City nc_3.jpe
 import fc6 from '../../assets/service locations/forest city/forest city nc_6.jpeg';
 import fc9 from '../../assets/service locations/forest city/forest city nc_9.jpeg';
 import fc10 from '../../assets/service locations/forest city/forest city nc_10.jpg';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design & Local SEO',
+  'name': 'Local Web Design & Local SEO in Forest City, NC',
+  'description': 'Helping Forest City businesses grow with custom websites and honest local SEO. We build digital foundations that connect you with your neighbors and your community.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': { '@type': 'City', 'name': 'Forest City, NC' },
+  'url': 'https://www.shelbywebco.com/web-design-forest-city-nc/'
+};
 ---
 
 <BaseLayout 
   title="Local Web Design & Local SEO in Forest City, NC"
   description="Helping Forest City businesses grow with custom websites and honest local SEO. We build digital foundations that connect you with your neighbors and your community."
 >
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
