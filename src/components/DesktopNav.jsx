@@ -142,9 +142,10 @@ export default function DesktopNav() {
         {aboutOpen && (
           <div className="absolute left-0 mt-2 w-52 bg-brand-darkest border border-brand-blue/20 rounded-lg shadow-xl z-50">
             <div className="p-4 space-y-1">
-              <a href="/about/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">About Us</a>
-              <a href="/about/how-we-work/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">How We Work</a>
-              <a href="/about/awards/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Awards</a>
+               <a href="/about/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">About Us</a>
+               <a href="/about/how-we-work/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">How We Work</a>
+               <a href="/about/awards/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Awards</a>
+               <a href="/about/causes-we-support/" onClick={() => setAboutOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-2 font-semibold">Causes We Support</a>
             </div>
           </div>
         )}

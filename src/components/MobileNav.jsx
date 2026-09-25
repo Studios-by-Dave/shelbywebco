@@ -36,9 +36,10 @@ const industryLinks = [
   { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofers' },
 ];
 
-const aboutLinks = [
+ const aboutLinks = [
   { href: '/about/how-we-work/', label: 'How We Work' },
   { href: '/about/awards/', label: 'Awards' },
+  { href: '/about/causes-we-support/', label: 'Causes We Support' },
 ];
 
 const promotionLinks = [
