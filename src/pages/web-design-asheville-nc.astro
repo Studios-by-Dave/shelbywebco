@@ -148,13 +148,13 @@ const ashevilleLocalBusinessSchema = {
         From downtown to the Blue Ridge valleys, we specialize in high-performance <span class="text-white font-bold">Asheville web design</span> and local SEO campaigns tailored for <span class="text-white font-bold">local impact</span>.
       </p>
       <div class="flex flex-col sm:flex-row gap-5 justify-center">
-        <a 
-          href="/contact/"
-          class="group relative inline-flex items-center justify-center bg-brand-accent text-[#0A0A0A] px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.4)] overflow-hidden"
-        >
-          <span class="relative z-10">Get Your Free Strategy Session</span>
-          <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
-        </a>
+<a 
+           href="/contact/"
+           class="group relative inline-flex items-center justify-center cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-10 py-4 rounded-xl font-bold text-lg hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 overflow-hidden border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)]"
+         >
+           <span class="relative z-10">Get Your Free Strategy Session</span>
+           <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
+         </a>
       </div>
     </div>
   </section>
@@ -169,23 +169,32 @@ const ashevilleLocalBusinessSchema = {
         </h2>
       </div>
       <div class="grid lg:grid-cols-2 gap-10">
-        <div class="space-y-5 text-white leading-relaxed text-lg">
-          <p>
-            Your website is your hardest-working salesperson — and in Asheville, it has to compete for attention every single day. Shelby Web Company designs custom websites for Asheville businesses that are fast, mobile-first, and built to convert visitors into paying customers. We pair every site with strategic local SEO so that when someone searches <span class="text-white font-semibold">"web design Asheville"</span> or <span class="text-white font-semibold">"website design Asheville NC,"</span> your business is the one they find.
-          </p>
-          <p>
-            Based in the heart of Western NC and serving Asheville remotely, we understand the mountain market: the tourism traffic, the seasonal ebb and flow, and the customers who expect a personal, trustworthy online experience before they pick up the phone. You get a dedicated North Carolina team — without big-city agency overhead.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          <Image src={ash6} alt="Asheville web design projects" class="rounded-2xl shadow-2xl aspect-square object-cover" />
-          <Image src={ash5} alt="Asheville local business web design" class="rounded-2xl shadow-2xl aspect-square object-cover mt-8" />
-        </div>
-      </div>
-    </div>
-  </section>
+         <div class="space-y-5 text-white leading-relaxed text-lg">
+           <p>
+             Your website is your hardest-working salesperson — and in Asheville, it has to compete for attention every single day. Shelby Web Company designs custom websites for Asheville businesses that are fast, mobile-first, and built to convert visitors into paying customers. We pair every site with strategic local SEO so that when someone searches <span class="text-white font-semibold">"web design Asheville"</span> or <span class="text-white font-semibold">"website design Asheville NC,"</span> your business is the one they find.
+           </p>
+           <p>
+             Based in the heart of Western NC and serving Asheville remotely, we understand the mountain market: the tourism traffic, the seasonal ebb and flow, and the customers who expect a personal, trustworthy online experience before they pick up the phone. You get a dedicated North Carolina team — without big-city agency overhead.
+           </p>
+         </div>
+         <div class="grid grid-cols-2 gap-4">
+           <Image src={ash6} alt="Asheville web design projects" class="rounded-2xl shadow-2xl aspect-square object-cover" />
+           <Image src={ash5} alt="Asheville local business web design" class="rounded-2xl shadow-2xl aspect-square object-cover mt-8" />
+         </div>
+       </div>
+     </div>
+   </section>
 
-  <!-- Problem/Solution Section -->
+   <!-- CTA after Intro -->
+   <section class="py-20 px-4 bg-brand-dark border-y border-white/5" data-animate>
+     <div class="max-w-4xl mx-auto text-center">
+       <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Ready to Grow Your Asheville Business Online?</h3>
+       <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Let's turn your mountain presence into a lead-generating machine. Book a free strategy session today.</p>
+       <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Get Your Free Strategy Session</a>
+     </div>
+   </section>
+
+   <!-- Problem/Solution Section -->
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
       <div>
@@ -271,7 +280,7 @@ const ashevilleLocalBusinessSchema = {
       </div>
 
       <div class="text-center">
-        <a href="/services/web-design/" class="inline-block text-brand-cyan font-bold hover:text-white transition-colors">Explore our full Asheville web design services →</a>
+        <a href="/services/web-design/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Explore our full Asheville web design services →</a>
       </div>
     </div>
   </section>
@@ -330,7 +339,7 @@ const ashevilleLocalBusinessSchema = {
       </div>
 
       <div class="text-center">
-        <a href="/services/seo/" class="inline-block text-brand-cyan font-bold hover:text-white transition-colors">See all Asheville SEO services →</a>
+        <a href="/services/seo/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">See all Asheville SEO services →</a>
       </div>
     </div>
   </section>
@@ -401,11 +410,20 @@ const ashevilleLocalBusinessSchema = {
           <p class="text-white text-sm">Ongoing local SEO that compounds month over month — keeping you at the top of Asheville search.</p>
         </div>
       </div>
-    </div>
-  </section>
+     </div>
+   </section>
 
-  <!-- Areas We Serve -->
-  <section class="py-24 px-4 relative overflow-hidden">
+   <!-- CTA after Process -->
+   <section class="py-20 px-4 bg-brand-dark border-y border-white/5" data-animate>
+     <div class="max-w-4xl mx-auto text-center">
+       <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Your Asheville Site Deserves a Professional Launch.</h3>
+       <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">From strategy to launch, we've got the process to get you ranking in Asheville. Let's get started.</p>
+       <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Schedule Your Free Strategy Session</a>
+     </div>
+   </section>
+
+   <!-- Areas We Serve -->
+   <section class="py-24 px-4 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ Service Areas</p>
@@ -472,11 +490,20 @@ const ashevilleLocalBusinessSchema = {
           <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Retail & Boutiques</span>
           <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Vacation Rentals</span>
         </div>
-      </div>
-    </div>
-  </section>
+       </div>
+     </div>
+   </section>
 
-  <!-- Asheville LSI Keyword Cluster (SEO) -->
+   <!-- CTA after Areas We Serve -->
+   <section class="py-20 px-4 bg-brand-dark border-y border-white/5" data-animate>
+     <div class="max-w-4xl mx-auto text-center">
+       <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Serving Every Corner of Western NC.</h3>
+       <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">From Hendersonville to Black Mountain, Weaverville to Waynesville — we build websites that make local businesses stand out.</p>
+       <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Get Your Free Quote Today</a>
+     </div>
+   </section>
+
+   <!-- Asheville LSI Keyword Cluster (SEO) -->
   <section class="py-16 px-4 bg-brand-dark/30 border-y border-white/5">
     <div class="max-w-7xl mx-auto text-center">
       <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ What Asheville customers search</p>
@@ -494,11 +521,23 @@ const ashevilleLocalBusinessSchema = {
         <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-white text-sm">asheville website development</span>
         <span class="px-4 py-2 bg-brand-dark border border-white/10 rounded-full text-white text-sm">web design buncombe county</span>
       </div>
-      <p class="text-white/90 text-sm mt-8">Explore <a href="/services/web-design/" class="text-brand-cyan hover:underline">web design</a>, <a href="/services/seo/" class="text-brand-cyan hover:underline">SEO</a>, and <a href="/blog/" class="text-brand-cyan hover:underline">insights</a> — or see how we serve <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:underline">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:underline">Gastonia</a>, and <a href="/web-design-forest-city-nc/" class="text-brand-cyan hover:underline">Forest City</a>.</p>
-    </div>
-  </section>
+<p class="text-white/90 text-sm mt-8">Explore <a href="/services/web-design/" class="text-brand-cyan hover:underline">web design</a>, <a href="/services/seo/" class="text-brand-cyan hover:underline">SEO</a>, and <a href="/blog/" class="text-brand-cyan hover:underline">insights</a> — or see how we serve <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:underline">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:underline">Gastonia</a>, and <a href="/web-design-forest-city-nc/" class="text-brand-cyan hover:underline">Forest City</a>.</p>
+     </div>
+   </section>
 
-  <!-- FAQ Section -->
+   <!-- CTA after LSI Keywords -->
+   <section class="py-20 px-4 bg-brand-dark border-y border-white/5" data-animate>
+     <div class="max-w-4xl mx-auto text-center">
+       <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Ready to Rank on Page One in Asheville?</h3>
+       <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Stop searching for yourself on Google and let us handle it. Your competitors aren't waiting — neither should you.</p>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center">
+         <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Book a Free Chat</a>
+         <a href="tel:+17044738188" class="inline-block border border-white/20 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-all duration-300">(704) 473-8188</a>
+       </div>
+     </div>
+   </section>
+
+   <!-- FAQ Section -->
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-16">
