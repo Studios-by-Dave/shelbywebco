@@ -12,10 +12,10 @@ const telHref = `tel:${phone}`;
   role="region"
   aria-label="Quick contact"
 >
-  <div class="grid grid-cols-2 gap-2 px-3 py-2 bg-brand-darkest/70 backdrop-blur-md border-t border-brand-blue/30 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+  <div class="grid grid-cols-2 gap-2 px-3 py-2 bg-brand-darkest/35 backdrop-blur-sm border-t border-brand-blue/20 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
     <a
       href={telHref}
-      class="flex items-center justify-center gap-2 bg-gradient-to-r from-brand-accent to-brand-accent-light text-brand-darkest font-bold text-sm py-2.5 rounded-lg cta-glow-shine"
+      class="flex items-center justify-center gap-2 bg-transparent text-brand-accent font-bold text-sm py-2.5 rounded-lg border border-brand-accent/50 cta-glow-shine"
       aria-label={`Call Shelby Web Company at ${phoneDisplay}`}
     >
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -25,7 +25,7 @@ const telHref = `tel:${phone}`;
     </a>
     <a
       href={smsHref}
-      class="flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue to-brand-blue-light text-white font-bold text-sm py-2.5 rounded-lg cta-glow-shine"
+      class="flex items-center justify-center gap-2 bg-transparent text-brand-blue font-bold text-sm py-2.5 rounded-lg border border-brand-blue/50 cta-glow-shine"
       aria-label={`Text Shelby Web Company at ${phoneDisplay}`}
     >
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

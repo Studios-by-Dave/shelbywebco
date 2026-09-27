@@ -3,8 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
 import headshotPlaceholder from '../../assets/SWeblogo1.jpg';
 import tieDyeBg from '../../assets/tie dye_3.jpg';
-import aboutImg1 from '../../assets/about/meandmascot_1.jpg';
-import aboutImg4 from '../../assets/about/meandmascot_2.jpg';
 import innovationImg from '../../assets/about/contractor-innovation.jpg';
 import satisfactionBadge from '../../assets/badge icons/satisfaction badge.jpg';
 import projectBadge from '../../assets/badge icons/badge_2.jpeg';
@@ -13,8 +11,10 @@ import crystalBadges from '../../assets/badge icons/crystal badges_1.png';
 import heroHuman from '../../assets/about/hero-human-inside.webp';
 import spaceship from '../../assets/about/hero-human-inside.webp';
 import steepleImage from '../../assets/steeple_1.jpg';
-import daveMascotBottom from '../../assets/about/dave and mascot_2.jpg';
 import daveHeadshot from '../../assets/about/Headshot_1.jpg';
+import mascotImg from '../../assets/about/mascot_1.jpg';
+import meandmascotImg from '../../assets/about/meandmascot_2.jpg';
+import dave1Img from '../../assets/about/Sweb_dave45.png';
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -94,8 +94,7 @@ const orgSchema = {
           Shelby Web Company
         </h1>
         <p class="text-white/90 text-base mb-6">
-          Dave Richardson — Founder / Lead Developer<br />
-          Creativity founded in 1978
+Dave Richardson — Founder / Lead Developer
         </p>
         <p class="text-xl text-white/80 mb-8">
           20+ years of IT and network engineering, now focused on one thing: building modern websites and digital marketing that turn local business owners like YOU into the go-to choice in your community.
@@ -151,9 +150,9 @@ const orgSchema = {
         </div>
         <div class="md:w-2/3">
           <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Meet the Founder</p>
-          <h2 class="font-heading text-4xl font-bold text-white mb-6">
-            Meet the Founder
-          </h2>
+          <h2 class="font-heading text-4xl font-bold text-white mb-2">Dave Richardson</h2>
+          <p class="text-white text-lg font-semibold mb-2">Founder / Lead Developer / Network Engineer / Audio Engineer</p>
+          <p class="text-white/60 text-sm italic mb-6">"Developer by trade. Musician by birth. Healer by necessity."</p>
           <div class="space-y-4 text-white/80 text-lg leading-relaxed text-left">
             <p>
               Dave Richardson is a <span class="text-brand-cyan font-semibold">seasoned technology veteran</span> with over two decades of experience. After attending UNC Charlotte and ECPI University—where he served as President of the National Vocational Technical Honor Society—Dave began his career as a Broadband Specialist right here in Shelby with Computer Connections Inc.
@@ -206,8 +205,10 @@ const orgSchema = {
           </div>
         </div>
         <div class="space-y-6">
-          <Image src={aboutImg1} alt="Dave and our mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
-          <Image src={aboutImg4} alt="Dave and mascot at Shelby Web Company" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <Image src={mascotImg} alt="Mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <Image src={meandmascotImg} alt="Dave and mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <Image src={dave1Img} alt="Dave Richardson" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <p class="text-white/60 text-sm italic mt-2 text-center">Ok yes this is an AI generated image and we figured you deserved to know this. But it never hurts to dream! lol</p>
         </div>
       </div>
       
@@ -261,11 +262,14 @@ const orgSchema = {
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Mission</p>
-        <h2 class="font-heading text-3xl font-bold text-white mb-6">
+        <h2 class="font-heading text-4xl font-bold text-white mb-6">
           Our Mission
         </h2>
         <p class="text-xl text-white/80 max-w-3xl mx-auto">
-          At Shelby Web Company, we specialize in <span class="text-brand-cyan font-semibold">empowering local businesses</span> with cutting-edge digital solutions. We focus on roofing, landscaping, and solar panel companies, helping them reach their full potential through <span class="text-white font-semibold">professional web design, powerful SEO, memorable branding</span>, and innovative AI automation.
+          At Shelby Web Company, we specialize in empowering local businesses with today's latest cutting-edge digital tools and solutions. We mainly focus on service based industries and we <span class="text-brand-cyan font-semibold">LOVE serving our local community</span>. We are here for anyone that is in need of the services we provide. We are here to help you and your business reach its full potential through professional services including <span class="text-white font-semibold">web design and development</span>, <span class="text-white font-semibold">SEO</span>, <span class="text-white font-semibold">GEO</span>, <span class="text-white font-semibold">Branding</span> that you can remember, and innovative <span class="text-white font-semibold">AI recommendations</span> that we specifically specialize to fully optimize your existing team.
+        </p>
+        <p class="text-lg text-white/70 max-w-3xl mx-auto mt-4">
+          Our approach with AI is a bit different in that we are here to provide the AI tools for your business and for your team to fully engage their leverage in today's new world of AI. <em>We are not here to "replace jobs" by any means.</em> And personally, as the founder of Shelby Web Company I will and have turned down actual work in the scope that it would replace anybody's existing job. <span class="text-brand-cyan font-semibold">Bc that's just wrong to do in the first place.</span> This is/and can be a misconception with AI. But <span class="text-brand-cyan font-semibold">this is our approach with it and how we serve AI to local business.</span>
         </p>
         <!-- Aplus badge moved below, above Core Values -->
       </div>
@@ -494,19 +498,6 @@ const orgSchema = {
       >
         START BUILDING TOGETHER
       </a>
-
-      <!-- Dave and Mascot Image -->
-      <div class="mt-16 mb-12 flex justify-center">
-        <div class="relative group max-w-2xl mx-auto px-4">
-          <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan/40 to-brand-glow/40 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-          <Image 
-            src={daveMascotBottom} 
-            alt="Dave and our mascot working together" 
-            class="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover"
-          />
-          <p class="mt-4 text-white/90 font-medium italic">"Casual Monday lol"</p>
-        </div>
-      </div>
 
       <!-- Bottom Featured Badges -->
       <div class="mt-8 flex justify-center">
