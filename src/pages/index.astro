@@ -113,20 +113,20 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             />
           </div>
 
-          <div class="flex flex-row gap-3 mb-4 sm:mb-6">
-            <a 
-              href="/contact/"
-              class="cta-glow-shine flex-1 whitespace-nowrap rounded-2xl bg-brand-accent px-2 py-3 text-center text-base font-medium text-[#0A0A0A] hover:bg-brand-accent-light"
-             >
-              Start a Project
-            </a>
+<div class="flex flex-row gap-3 mb-4 sm:mb-6">
              <a 
-               href="/services/portfolio/"
-              class="flex-1 whitespace-nowrap rounded-2xl border border-white bg-black px-2 py-3 text-center text-base font-medium text-white transition-all duration-300 hover:bg-gray-900"
-            >
-              See Our Work
-            </a>
-          </div>
+               href="/contact/"
+               class="cta-glow-shine whitespace-nowrap rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 text-base"
+              >
+               Start a Project
+             </a>
+              <a 
+                href="/services/portfolio/"
+               class="whitespace-nowrap rounded-xl border border-white bg-black px-6 py-3 text-center text-base font-medium text-white transition-all duration-300 hover:bg-gray-900"
+             >
+               See Our Work
+             </a>
+           </div>
           <p class="text-white/70 text-sm flex items-center gap-1.5 mb-6 sm:mb-8">
             <span class="text-brand-accent leading-none">★★★★★</span>
             5.0 on Google
@@ -176,47 +176,42 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             </a>
           </div>
 
-          <div class="hidden lg:block w-full">
-            <div class="rounded-2xl p-1 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20">
-              <Image 
-                src={heroImage} 
-                alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
-                class="rounded-[13px] w-full h-auto"
-                width={800}
-                height={600}
-                loading="eager"
-              />
-            </div>
-          </div>
+<div class="hidden lg:block w-full">
+             <Image 
+               src={heroImage} 
+               alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
+               class="rounded-[13px] w-[110%] ml-auto h-auto"
+               width={800}
+               height={600}
+               loading="eager"
+             />
+           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="py-12 md:py-16 px-4" data-animate>
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-12 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-10">
-        <div class="flex-1">
-          <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
-          <h2 class="font-heading text-page-title md:text-page-title-md font-bold text-white mb-6">
-            Web Design &bull; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">SEO</span> &bull; <span class="text-brand-accent">Branding</span> &bull; Custom Software
-          </h2>
-          <p class="text-body-lg text-white/80 max-w-3xl leading-relaxed">
-            We're your local specialized web development and marketing toolkit. Our tailored approach to your business needs ensures maximum ROI for your industry. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
-          </p>
-        </div>
-        <div class="md:shrink-0 md:ml-auto">
-          <Image
-            src={heroHumanInside}
-            alt="Person working inside Shelby Web Company"
-            class="w-28 md:w-36 h-auto rounded-2xl border border-brand-blue/20 shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
-            width={320}
-            height={320}
-            loading="lazy"
-          />
-        </div>
-      </div>
+<!-- Services Section -->
+   <section class="py-8 md:py-12 px-4" data-animate>
+     <div class="max-w-7xl mx-auto">
+       <div class="mb-8 flex flex-col items-center">
+         <Image
+           src={heroHumanInside}
+           alt="Person working inside Shelby Web Company"
+           class="w-48 md:w-56 h-auto rounded-2xl border border-brand-blue/20 shadow-[0_12px_30px_rgba(0,0,0,0.35)] mb-6"
+           width={320}
+           height={320}
+           loading="lazy"
+         />
+         <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-4">✦ Professional Web Design Keeping You In Mind</p>
+         <h2 class="font-heading text-[3rem] md:text-[3.5rem] font-bold text-white mb-4 text-center">
+           Web Design &bull; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">SEO / GEO</span> &bull; <span class="text-white">Branding</span> &bull; Custom Software
+         </h2>
+         <p class="text-body-lg text-white/80 max-w-3xl leading-relaxed text-center">
+           We're your local specialized web development and marketing toolkit. Our tailored approach to your business needs ensures maximum ROI for your industry. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
+         </p>
+         <p class="text-white/60 text-base mt-4 mb-2">Trusted by local businesses across Western North Carolina for results-driven digital solutions.</p>
+       </div>
 
 
 
@@ -422,10 +417,10 @@ import hsCross from '../../assets/logo banner/hscross.webp';
                 <span class="text-white/80 text-body-lg">Fast, clean, modern code</span>
               </div>
             </div>
-            <a href="/promotions/free-seo-audit/" class="inline-flex items-center text-brand-accent hover:text-brand-accent-light font-semibold transition-colors">
-              Get My Free SEO Audit
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-            </a>
+<a href="/promotions/free-seo-audit/" class="cta-glow-shine inline-flex items-center bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-2.5 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">
+               Get My Free SEO Audit
+               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+             </a>
           </div>
         </div>
 
