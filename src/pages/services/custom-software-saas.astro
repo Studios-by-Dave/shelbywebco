@@ -396,7 +396,7 @@ const serviceSchema = {
       const masterTl = createTimeline({ defaults: { ease: 'outExpo' } });
 
       // Act 1: Chaos Reveal (0-15%)
-      masterTl.add('.chaos-item', { opacity: [0, 0.8], scale: [0.5, 1], delay: stagger(80), duration: 800, rotate: stagger([5, -5, 3, -3, 4, -4], { direction: 'alternate' }) });
+      masterTl.add('.chaos-item', { opacity: [0, 0.8], scale: [0.5, 1], delay: stagger(80), duration: 800, rotate: [0, 10, -10, 5, -5, 3] });
 
       // Act 2: The Scan (15-40%)
       masterTl.add('#scanLine', { opacity: [0, 1], duration: 400 }, '-=200')
@@ -420,6 +420,8 @@ const serviceSchema = {
       }
 
       window.addEventListener('scroll', updateScroll, { passive: true });
+      masterTl.play();
+      updateScroll();
 
       // URL parameter focus
       if (focusModule) {
