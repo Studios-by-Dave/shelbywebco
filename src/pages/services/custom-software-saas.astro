@@ -393,7 +393,7 @@ const serviceSchema = {
       }
 
       // Build master timeline
-      const masterTl = createTimeline({ defaults: { ease: 'outExpo' } });
+      const masterTl = createTimeline({ autoplay: false, defaults: { ease: 'outExpo' } });
 
       // Act 1: Chaos Reveal (0-15%)
       masterTl.add('.chaos-item', { opacity: [0, 0.8], scale: [0.5, 1], duration: 800 });
@@ -413,11 +413,15 @@ const serviceSchema = {
         .add('.machine-status', { opacity: [0, 1], duration: 400 }, '-=400')
         .add('.service-label', { opacity: [0, 1], translateY: [20, 0], duration: 600 }, '-=400');
 
+      const dur = masterTl.duration;
+      masterTl.update();
+      const finalDur = masterTl.duration;
+
       // Scroll binding
       function updateScroll() {
-        const progress = getScrollProgress();
-        if (masterTl.duration > 0) {
-          masterTl.seek(masterTl.duration * progress);
+        const progress = Math.min(Math.max(getScrollProgress(), 0), 1);
+        if (dur > 0) {
+          masterTl.seek(dur * progress);
         }
       }
 
