@@ -38,9 +38,12 @@ const serviceSchema = {
     <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Custom Software &amp; SaaS</p>
-      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-        Your Business Machine
-      </h1>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          Your Business Machine
+        </h1>
+      </div>
       <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
         Watch us scan your business, identify what's broken, and assemble it into a custom dashboard built around your exact needs. Six modules. One system. Total clarity.
       </p>
@@ -259,6 +262,61 @@ const serviceSchema = {
           <p class="text-white/60 text-sm">See what's actually profitable, cut waste, and maximize margins.</p>
           <a href="/services/branding/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / CTA Section -->
+  <section class="py-24 px-4 bg-brand-darkest/50" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Investment Options</p>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Built to Scale With You</h2>
+      <p class="text-lg text-white/80 mb-12 max-w-2xl mx-auto">MVP in 4-8 weeks. Full platform in 3-6 months. Every project quoted transparently — no hidden fees, no surprises.</p>
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-8 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">MVP Build</h3>
+          <p class="text-brand-cyan text-2xl font-bold mb-1">Starting at $1,498</p>
+          <p class="text-white/60 text-sm mb-4">Working prototype with core modules</p>
+          <ul class="text-left text-white/70 text-sm space-y-2 mb-6">
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> 2 core modules</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> Custom dashboard</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> 4-8 week delivery</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> Basic integrations</li>
+          </ul>
+          <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-medium border border-white/20 text-sm">Get Your Free Quote</a>
+        </div>
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-8 hover:border-brand-cyan/30 transition-all duration-300">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Full Platform</h3>
+          <p class="text-brand-cyan text-2xl font-bold mb-1">Starting at $2,498</p>
+          <p class="text-white/60 text-sm mb-4">Complete SaaS with all six modules</p>
+          <ul class="text-left text-white/70 text-sm space-y-2 mb-6">
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> All 6 modules</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> Full dashboard</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> 3-6 month delivery</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> Advanced integrations</li>
+            <li class="flex items-start gap-2"><span class="text-brand-cyan">✓</span> Analytics & reporting</li>
+          </ul>
+          <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-medium border border-white/20 text-sm">Schedule Free Consultation</a>
+        </div>
+      </div>
+      <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-medium border border-white/20 text-base hover:-translate-y-[1px] transition-all duration-300">Talk to an Expert →</a>
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-10 text-center">
+        <div class="flex items-center justify-center gap-1 mb-4">
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+        </div>
+        <p class="text-white text-xl italic mb-4">"They built our entire business platform from scratch. Six months later it runs like a dream."</p>
+        <p class="font-bold text-white text-lg">Satisfied Client</p>
+        <p class="text-brand-cyan/60 text-sm uppercase tracking-widest mt-2">Custom Software Development</p>
       </div>
     </div>
   </section>
