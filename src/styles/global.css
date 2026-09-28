@@ -267,7 +267,6 @@
 
 .chaos-item {
   position: absolute;
-  opacity: 0;
   filter: grayscale(1) brightness(0.5);
   color: #ff4757;
   cursor: default;
@@ -319,7 +318,6 @@
   background: linear-gradient(180deg, #0f1520, #151b26);
   border: 1px solid #2a3548;
   border-radius: 20px;
-  opacity: 0;
   transform: scale(0.85);
   z-index: 20;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -349,7 +347,6 @@
   font-weight: 600;
   color: #2ed573;
   letter-spacing: 0.15em;
-  opacity: 0;
   text-transform: uppercase;
 }
 
@@ -366,8 +363,7 @@
   background: linear-gradient(135deg, #1e2532, #181e28);
   border: 1px solid #2a3548;
   border-radius: 14px;
-  opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(0);
   cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s;
   display: flex;
@@ -385,7 +381,7 @@
 }
 
 .module-content {
-  opacity: 0;
+  opacity: 1;
   color: #e8ecf1;
   transition: opacity 0.5s;
 }
@@ -423,7 +419,6 @@
   left: var(--label-x);
   top: var(--label-y);
   transform: translate(-50%, -50%);
-  opacity: 0;
   pointer-events: auto;
   cursor: pointer;
   text-align: center;
