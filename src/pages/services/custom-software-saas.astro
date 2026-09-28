@@ -32,6 +32,41 @@ const serviceSchema = {
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-14 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-brand-darkest/50 to-black/40 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Custom Software &amp; SaaS</p>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+        Your Business Machine
+      </h1>
+      <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Watch us scan your business, identify what's broken, and assemble it into a custom dashboard built around your exact needs. Six modules. One system. Total clarity.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <a 
+          href="/contact/"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-medium border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+        >
+          Get Your Free Quote
+        </a>
+        <a 
+          href="#diagnostic-scan"
+          class="inline-block text-white text-xl md:text-2xl font-bold hover:text-brand-cyan transition-colors"
+        >
+          See How It Works ↓
+        </a>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-white/70">
+        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> Custom-built for your business</span>
+        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> 6 core modules</span>
+        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> Scalable SaaS architecture</span>
+        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> MVP in 4-8 weeks</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Diagnostic Scan Animation Section -->
   <section id="diagnostic-scan" class="scan-section" data-animate>
     <div class="scan-sticky-container">
@@ -130,6 +165,99 @@ const serviceSchema = {
             <span class="label-text">Profit Lens</span>
             <span class="label-service">/services/branding/</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Overview -->
+  <section class="py-20 px-4 bg-brand-darkest border-y border-white/5" data-animate>
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ How It Works</p>
+        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">From Chaos to Clarity</h2>
+        <p class="text-lg text-white/80 max-w-3xl mx-auto">Every business has disconnected tools and hidden gaps. Our Diagnostic Scan identifies exactly what's broken, then builds your machine module by module.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Step 1 -->
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-8 text-center hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-brand-cyan/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-heading text-2xl font-bold text-brand-cyan">1</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Scan & Diagnose</h3>
+          <p class="text-white/70 text-sm leading-relaxed">We analyze your current tech stack, workflows, and revenue gaps. Every business has blind spots — our scan finds them before they cost you.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-8 text-center hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-brand-cyan/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-heading text-2xl font-bold text-brand-cyan">2</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Build Your Machine</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Six modules are assembled into a unified dashboard. Each module targets a specific business function — leads, revenue, workflow, alerts, forecasting, profit.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-8 text-center hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-brand-cyan/10 flex items-center justify-center mx-auto mb-6">
+            <span class="font-heading text-2xl font-bold text-brand-cyan">3</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Launch & Optimize</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Your MVP ships in 4-8 weeks. We iterate based on real data, scale what works, and refine what doesn't. Your machine runs 24/7.</p>
+        </div>
+      </div>
+
+      <!-- What We Build -->
+      <div class="text-center mb-12">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ The Six Modules</p>
+        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">One System, Six Engines</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4757" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Lead Tracker</h3>
+          <p class="text-white/60 text-sm">Capture, organize, and nurture every lead so nothing falls through the cracks.</p>
+          <a href="/services/web-design/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
+        </div>
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-4 group-hover:bg-green-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2ed573" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Revenue Radar</h3>
+          <p class="text-white/60 text-sm">Track income streams, forecast revenue, and identify growth opportunities.</p>
+          <a href="/services/seo/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
+        </div>
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5b9cf5" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Workflow Engine</h3>
+          <p class="text-white/60 text-sm">Automate repetitive tasks and build custom processes that run themselves.</p>
+          <a href="/services/custom-software-saas/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
+        </div>
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffa502" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Alert Center</h3>
+          <p class="text-white/60 text-sm">Real-time notifications for issues, opportunities, and key milestones.</p>
+          <a href="/services/case-studies/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
+        </div>
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Forecast Hub</h3>
+          <p class="text-white/60 text-sm">Predict trends, plan budgets, and make data-driven decisions with confidence.</p>
+          <a href="/services/portfolio/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
+        </div>
+        <div class="group bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/40 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">Profit Lens</h3>
+          <p class="text-white/60 text-sm">See what's actually profitable, cut waste, and maximize margins.</p>
+          <a href="/services/branding/" class="text-brand-cyan text-sm font-bold mt-3 inline-block hover:underline">View →</a>
         </div>
       </div>
     </div>
