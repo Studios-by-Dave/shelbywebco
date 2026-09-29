@@ -1,0 +1,174 @@
+---
+interface Props {
+  focus?: 'website' | 'seo' | 'leads';
+  id?: string;
+}
+
+const { focus = '', id = 'growth-pricing' } = Astro.props;
+
+const tiers = [
+  {
+    key: 'website',
+    name: 'Website Growth',
+    launch: '$497',
+    monthly: '$297',
+    term: '12 months',
+    badge: null,
+    description: 'A professionally managed website for $297/month — without a $3,000 to $8,000 upfront project bill.',
+    features: [
+      '4–5 page mobile-first website',
+      'Hosting, SSL, backups & security',
+      'Contact forms & lead notifications',
+      'Google Analytics & Search Console',
+      'Foundational on-page & local SEO',
+      'One small monthly edit request',
+      'Monthly performance snapshot',
+      'Quarterly growth review',
+    ],
+    bestFor: 'Small local businesses that want a professional web presence without a large upfront invoice',
+  },
+  {
+    key: 'seo',
+    name: 'Local SEO Growth',
+    launch: '$798 – $998',
+    monthly: '$597',
+    term: '6–12 months',
+    badge: 'Most Popular',
+    description: 'Active local SEO, content, Google Business Profile support, and reporting for real visibility growth.',
+    features: [
+      'Everything in Website Growth',
+      'Keyword & competitor research',
+      'Search Console analysis & fixes',
+      'New service/location content',
+      'Google Business Profile optimization',
+      'Review-generation system',
+      'Local citation cleanup/buildout',
+      'Conversion-rate improvements',
+    ],
+    bestFor: 'Businesses ready to invest in meaningful local search visibility and lead generation',
+  },
+  {
+    key: 'leads',
+    name: 'Lead Generation Growth',
+    launch: '$998 – $1,498',
+    monthly: '$797',
+    term: '12 months',
+    badge: null,
+    description: 'SEO plus conversion optimization, lead tracking, follow-up workflows, and priority support.',
+    features: [
+      'Everything in Local SEO Growth',
+      'Conversion-rate optimization',
+      'Lead tracking & attribution',
+      'Follow-up workflows & automation',
+      'Priority support & strategy',
+      'Advanced analytics & reporting',
+      'A/B testing & page optimization',
+      'Dedicated growth manager',
+    ],
+    bestFor: 'Businesses that want a full growth system — SEO, leads, and conversion optimization under one roof',
+  },
+];
+
+const addons = [
+  {
+    name: 'AI Lead Capture / Chatbot',
+    price: '$199 – $249/mo',
+    description: 'AI-powered chatbot that captures leads, answers questions, and books appointments 24/7.',
+  },
+  {
+    name: 'Review Growth System',
+    price: '$149 – $299/mo',
+    description: 'Automated review requests, reputation monitoring, and response management.',
+  },
+  {
+    name: 'Missed-Call Text-Back',
+    price: '$149 – $299/mo',
+    description: 'Instant text-back when you miss a call, plus CRM automation and lead follow-up sequences.',
+  },
+];
+---
+
+<section id={id} class="py-24 px-4 bg-brand-darkest/50" data-animate>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">✦ Website Growth Plans</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">One Simple Monthly Plan</h2>
+      <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+        A professionally managed website for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      {tiers.map((tier) => (
+        <div
+          class:list={[
+            'bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0 flex flex-col',
+            tier.badge ? 'border-[#f3db70]/50 z-10 scale-100 lg:scale-105' : 'border-white/10',
+            focus === tier.key ? 'ring-2 ring-brand-cyan ring-offset-2 ring-offset-brand-darkest' : '',
+          ]}
+        >
+          {tier.badge && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#0A0A0A] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md whitespace-nowrap">
+              {tier.badge}
+            </div>
+          )}
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-1">{tier.name}</h3>
+          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">{tier.term} initial term</p>
+          <p class="text-white/70 text-sm mb-6 italic">{tier.description}</p>
+          <div class="mb-6">
+            <div class="flex flex-col items-center justify-center">
+              <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
+              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">
+                {tier.launch}
+              </span>
+              <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">+</span>
+              <div class="w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
+                <span class="text-brand-cyan font-black text-xl">{tier.monthly}<span class="text-sm font-bold">/mo</span></span>
+                <span class="text-white/70 text-xs block">Ongoing management</span>
+              </div>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
+            {tier.features.map((feature) => (
+              <li>• {feature}</li>
+            ))}
+          </ul>
+          <p class="text-brand-cyan/80 text-xs font-semibold mb-4">Best for: {tier.bestFor}</p>
+          <a
+            href="/contact/"
+            class:list={[
+              'block w-full px-6 py-3 rounded-xl font-bold text-center mt-auto transition-all duration-300',
+              tier.badge
+                ? 'cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px]'
+                : 'bg-brand-green text-white hover:bg-brand-greenLight',
+            ]}
+          >
+            Get Started
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mb-12">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Optional Add-Ons</p>
+      <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Grow Faster With Add-Ons</h3>
+      <p class="text-white/70 max-w-2xl mx-auto">Add these to any plan for additional lead capture, reputation management, and automation.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      {addons.map((addon) => (
+        <div class="bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/30 transition-all duration-300">
+          <h4 class="font-heading text-lg font-bold text-white mb-2">{addon.name}</h4>
+          <p class="text-brand-cyan text-xl font-black mb-2">{addon.price}</p>
+          <p class="text-white/60 text-sm">{addon.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center">
+      <p class="text-white/80 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+        After your initial term, plans continue month-to-month. Cancel with 30 days' written notice. Site ownership is earned after completing your initial term.
+      </p>
+    </div>
+  </div>
+</section>
