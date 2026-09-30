@@ -8,9 +8,7 @@ import strat3 from '../../../assets/STRAT-3.png';
 import strat4 from '../../../assets/STRAT-4.png';
 import strat5 from '../../../assets/STRAT-5.png';
 import GlossaryTooltip from '../../components/GlossaryTooltip.jsx';
-import BuildPricingSection from '../../components/BuildPricingSection.astro';
-import SEOPricingSection from '../../components/SEOPricingSection.astro';
-import ManagedGrowthSection from '../../components/ManagedGrowthSection.astro';
+import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -317,9 +315,12 @@ const faqSchema = {
     </div>
   </section>
 
-  <BuildPricingSection />
-  <SEOPricingSection />
-  <ManagedGrowthSection />
+  <GrowthPlanPricingSection
+    focus="seo"
+    variant="monthly-first"
+    title="SEO Growth That Compounds"
+    subtitle={`Foundational SEO starts with your website. Three plans at <span class="text-brand-cyan font-semibold">$297, $597, and $797/month</span> — keyword research, content, Google Business Profile optimization, and review generation.`}
+  />
 
   <!-- STRAT Console Showcase -->
   <section class="py-24 px-4 bg-brand-darkest relative overflow-hidden">

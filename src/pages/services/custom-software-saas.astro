@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -33,136 +34,33 @@ const serviceSchema = {
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-10 lg:py-14 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-black/40 via-brand-darkest/50 to-black/40 pointer-events-none"></div>
-    <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
+  <section class="py-8 lg:py-10 px-4 relative overflow-hidden" data-animate style="background: linear-gradient(135deg, #3f6212 0%, #4d7c0f 30%, #65a30d 60%, #84cc16 85%, #a3e635 100%);">
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.2) 35%, transparent 70%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.7) 0%, transparent 30%);"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Custom Software &amp; SaaS</p>
+      <p class="text-black/70 text-sm uppercase tracking-widest mb-4 font-bold">✦ Custom Software &amp; SaaS</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
           Your Business Machine
         </h1>
       </div>
-      <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      <p class="text-lg md:text-xl text-black/80 mb-8 max-w-2xl mx-auto font-medium">
         Watch us scan your business, identify what's broken, and assemble it into a custom dashboard built around your exact needs. Six modules. One system. Total clarity.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-        <a 
+        <a
           href="/contact/"
-          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-medium border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+          class="inline-block bg-black text-white px-8 py-3 rounded-xl font-bold border border-black/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_0_20px_rgba(0,0,0,0.2)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300"
         >
           Get Your Free Quote
         </a>
       </div>
-      <div class="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-white/70">
-        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> Custom-built for your business</span>
-        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> 6 core modules</span>
-        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> Scalable SaaS architecture</span>
-        <span class="flex items-center gap-2"><span class="text-brand-cyan">✓</span> MVP in 4-8 weeks</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Diagnostic Scan Animation Section -->
-  <section id="diagnostic-scan" class="scan-section" data-animate>
-    <div class="scan-sticky-container">
-      <div class="relative w-full max-w-[1400px] mx-auto aspect-[16/10]" id="scanContainer">
-        
-        <!-- Stage 1: Chaos Field -->
-        <div class="chaos-field" id="chaosField">
-          <div class="chaos-item" data-pain="leads" data-module="lead-tracker" data-service="/services/web-design/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
-          <div class="chaos-item" data-pain="revenue" data-module="revenue-radar" data-service="/services/seo/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-          <div class="chaos-item" data-pain="workflow" data-module="workflow-engine" data-service="/services/custom-software-saas/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
-          <div class="chaos-item" data-pain="alerts" data-module="alert-center" data-service="/services/case-studies/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
-          <div class="chaos-item" data-pain="forecast" data-module="forecast-hub" data-service="/services/portfolio/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <div class="chaos-item" data-pain="profit" data-module="profit-lens" data-service="/services/branding/">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        </div>
-
-        <!-- Stage 2: Scanner -->
-        <div class="scanner-beam" id="scannerBeam"></div>
-        <div class="scan-line" id="scanLine"></div>
-        <div class="scan-reticle" id="scanReticle"></div>
-
-        <!-- Stage 3: The Machine -->
-        <div class="machine-frame" id="machineFrame">
-          <div class="machine-header">
-            <span class="machine-title">BUSINESS OS</span>
-            <span class="machine-status">OPTIMIZED</span>
-          </div>
-          <div class="machine-grid">
-            <div class="module-slot" id="lead-tracker" data-service="/services/web-design/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
-              <div class="module-label">Lead Tracker</div>
-            </div>
-            <div class="module-slot" id="revenue-radar" data-service="/services/seo/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-              <div class="module-label">Revenue Radar</div>
-            </div>
-            <div class="module-slot" id="workflow-engine" data-service="/services/custom-software-saas/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
-              <div class="module-label">Workflow Engine</div>
-            </div>
-            <div class="module-slot" id="alert-center" data-service="/services/case-studies/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
-              <div class="module-label">Alert Center</div>
-            </div>
-            <div class="module-slot" id="forecast-hub" data-service="/services/portfolio/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-              <div class="module-label">Forecast Hub</div>
-            </div>
-            <div class="module-slot" id="profit-lens" data-service="/services/branding/">
-              <div class="module-content"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-              <div class="module-label">Profit Lens</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Stage 4: Connection Lines -->
-        <svg class="connection-layer" id="connectionLayer" width="100%" height="100%">
-          <defs>
-            <linearGradient id="connGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3"/>
-              <stop offset="100%" style="stop-color:#2ed573;stop-opacity:0.3"/>
-            </linearGradient>
-          </defs>
-          <path class="conn-line" d="" stroke="url(#connGrad)" stroke-width="2" fill="none" stroke-dasharray="8 4"/>
-          <circle class="conn-pulse" r="3" fill="#00d4ff" opacity="0"/>
-        </svg>
-
-        <!-- Stage 5: Service Labels -->
-        <div class="service-labels" id="serviceLabels">
-          <div class="service-label" data-for="lead-tracker" data-service="/services/web-design/" style="--label-x: 15%; --label-y: 25%;">
-            <span class="label-text">Lead Tracker</span>
-            <span class="label-service">/services/web-design/</span>
-          </div>
-          <div class="service-label" data-for="revenue-radar" data-service="/services/seo/" style="--label-x: 50%; --label-y: 15%;">
-            <span class="label-text">Revenue Radar</span>
-            <span class="label-service">/services/seo/</span>
-          </div>
-          <div class="service-label" data-for="workflow-engine" data-service="/services/custom-software-saas/" style="--label-x: 80%; --label-y: 35%;">
-            <span class="label-text">Workflow Engine</span>
-            <span class="label-service">/services/custom-software-saas/</span>
-          </div>
-          <div class="service-label" data-for="alert-center" data-service="/services/case-studies/" style="--label-x: 30%; --label-y: 65%;">
-            <span class="label-text">Alert Center</span>
-            <span class="label-service">/services/case-studies/</span>
-          </div>
-          <div class="service-label" data-for="forecast-hub" data-service="/services/portfolio/" style="--label-x: 65%; --label-y: 60%;">
-            <span class="label-text">Forecast Hub</span>
-            <span class="label-service">/services/portfolio/</span>
-          </div>
-          <div class="service-label" data-for="profit-lens" data-service="/services/branding/" style="--label-x: 85%; --label-y: 75%;">
-            <span class="label-text">Profit Lens</span>
-            <span class="label-service">/services/branding/</span>
-          </div>
-        </div>
+      <div class="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-black/70 font-medium">
+        <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> Custom-built for your business</span>
+        <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> 6 core modules</span>
+        <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> Scalable SaaS architecture</span>
+        <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> MVP in 4-8 weeks</span>
       </div>
     </div>
   </section>
@@ -259,6 +157,12 @@ const serviceSchema = {
       </div>
     </div>
   </section>
+
+  <GrowthPlanPricingSection
+    focus="leads"
+    title="Custom Software Priced for Growth"
+    subtitle={`Launch with a <span class="text-brand-cyan font-semibold">Lead Generation Growth</span> plan at $797/month — SEO, conversion optimization, lead tracking, and follow-up workflows in one system. Custom modules scoped on top.`}
+  />
 
   <!-- Review Section -->
   <section class="py-20 px-4" data-animate>

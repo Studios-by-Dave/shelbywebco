@@ -2,9 +2,18 @@
 interface Props {
   focus?: 'website' | 'seo' | 'leads';
   id?: string;
+  title?: string;
+  subtitle?: string;
+  variant?: 'launch-first' | 'monthly-first';
 }
 
-const { focus = '', id = 'growth-pricing' } = Astro.props;
+const {
+  focus = '',
+  id = 'growth-pricing',
+  title = 'One Simple Monthly Plan',
+  subtitle = 'A professionally managed website for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
+  variant = 'launch-first',
+} = Astro.props;
 
 const tiers = [
   {
@@ -92,10 +101,8 @@ const addons = [
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">✦ Website Growth Plans</p>
-      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">One Simple Monthly Plan</h2>
-      <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-        A professionally managed website for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.
-      </p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">{title}</h2>
+      <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 mb-16">
@@ -117,15 +124,30 @@ const addons = [
           <p class="text-white/70 text-sm mb-6 italic">{tier.description}</p>
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
-              <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
-              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">
-                {tier.launch}
-              </span>
-              <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">+</span>
-              <div class="w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                <span class="text-brand-cyan font-black text-xl">{tier.monthly}<span class="text-sm font-bold">/mo</span></span>
-                <span class="text-white/70 text-xs block">Ongoing management</span>
-              </div>
+              {variant === 'monthly-first' ? (
+                <>
+                  <span class="text-white/60 text-xs uppercase tracking-widest">Per Month</span>
+                  <span class="text-4xl md:text-5xl font-black font-nav text-brand-cyan drop-shadow-[0_0_12px_rgba(0,212,255,0.4)] whitespace-nowrap">
+                    {tier.monthly}<span class="text-xl">/mo</span>
+                  </span>
+                  <div class="mt-2 w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
+                    <span class="text-[#f3db70] font-black text-sm">{tier.launch} launch</span>
+                    <span class="text-white/70 text-xs block">{tier.term} initial term</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
+                  <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">
+                    {tier.launch}
+                  </span>
+                  <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">+</span>
+                  <div class="w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
+                    <span class="text-brand-cyan font-black text-xl">{tier.monthly}<span class="text-sm font-bold">/mo</span></span>
+                    <span class="text-white/70 text-xs block">Ongoing management</span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
           <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
