@@ -1,8 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BuildPricingSection from '../components/BuildPricingSection.astro';
-import SEOPricingSection from '../components/SEOPricingSection.astro';
-import ManagedGrowthSection from '../components/ManagedGrowthSection.astro';
 import GrowthPlanPricingSection from '../components/GrowthPlanPricingSection.astro';
 
 const faqSchema = {
@@ -22,7 +19,7 @@ const faqSchema = {
       "name": "Do you offer payment plans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! We offer flexible payment plans for most packages. Typically we require 50% upfront to begin the project, with the remaining balance due upon completion. For larger projects, we can arrange monthly installments — just ask during your consultation."
+        "text": "Yes. Growth Plans use a launch fee followed by one simple monthly payment for a 12-month initial term — Website Growth is $497 to launch then $297/month, Local SEO Growth is $798–$998 to launch then $597/month, and Lead Generation Growth is $998–$1,498 to launch then $797/month. After the initial term, plans continue month-to-month with 30 days' written notice to cancel."
       }
     },
     {
@@ -46,7 +43,7 @@ const faqSchema = {
       "name": "Do you handle web hosting and domain setup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we handle the full setup. We'll help you choose a domain, configure web hosting (or recommend the best provider for your needs), and get everything deployed. Web hosting fees are separate and typically range from $10–$30/month depending on your provider and plan."
+        "text": "Yes, we handle the full setup. We'll help you choose a domain and get everything deployed. Web hosting, SSL, backups, security monitoring, and software updates are included with every Growth Plan while your plan is active — there are no separate hosting fees."
       }
     },
     {
@@ -62,7 +59,7 @@ const faqSchema = {
       "name": "What if I'm not satisfied with the design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your satisfaction matters. Every package includes 1–3 revision rounds (depending on the tier) where you can request changes. We work iteratively, sharing progress along the way so there are no surprises. For Enterprise clients, we offer unlimited revisions until everything is perfect."
+        "text": "Your satisfaction matters. Every Growth Plan includes one small edit request per month (up to about 30 minutes of work) plus collaborative revision rounds during the initial build. We work iteratively, sharing progress along the way so there are no surprises. Larger redesigns, new pages, and major feature work are project-priced — just ask during your consultation."
       }
     },
     {
@@ -70,7 +67,7 @@ const faqSchema = {
       "name": "Do you offer ongoing maintenance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Our monthly SEO plans are Foundation $297, Growth SEO Engine $497 (most popular), Authority SEO $497-$697, and Scale & Dominate $997-$1,497. All include technical SEO, sitemap/robots.txt/llms.txt, service-page optimization, Core Web Vitals care, and milestone audits. Smaller brochure sites can also use a lighter maintenance snapshot — ask during consultation. See /services/seo/#seo-pricing for full details."
+        "text": "Yes! Every Growth Plan is ongoing by design — that is the whole point. Our plans are Website Growth ($497 launch + $297/month), Local SEO Growth ($798–$998 launch + $597/month), and Lead Generation Growth ($998–$1,498 launch + $797/month). All include hosting, security, updates, foundational SEO, and monthly reporting. See /services/seo/#growth-pricing for full details."
       }
     },
     {
@@ -86,7 +83,7 @@ const faqSchema = {
       "name": "Do website packages include SEO?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Monthly SEO is already built into Growth Engine ($297), Authority Builder ($497-$697), and Scale & Dominate ($997-$1,497) packages — no double-charging. If you already have a site, start on any standalone SEO tier at /services/seo/#seo-pricing."
+        "text": "Yes. Foundational on-page and local SEO is included with every plan, so there is no double-charging. If you already have a site and want active local visibility work, our Local SEO Growth plan at $597/month covers keyword research, content, Google Business Profile optimization, and review generation — see /services/seo/#growth-pricing."
       }
     }
   ]
@@ -94,8 +91,8 @@ const faqSchema = {
 ---
 
 <BaseLayout 
-  title="Shelby Web Total Pricing"
-  description="Total Transparency — clear build + monthly pricing from Shelby Web Company. No hidden fees, just honest ranges."
+  title="Web Design & SEO Pricing in Shelby, NC"
+  description="Transparent Growth Plan pricing from Shelby Web Company — website plans from $497 to launch and $297/month, plus local SEO and lead generation plans. No hidden fees."
 >
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
@@ -143,11 +140,11 @@ const faqSchema = {
               <ul class="space-y-3 mt-4">
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold">1</div>
-                  <span class="text-white"><span class="font-bold text-brand-accent">50% Down</span> upon project start</span>
+                  <span class="text-white"><span class="font-bold text-brand-accent">Launch Fee</span> to start discovery and build</span>
                 </li>
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-cyan/20 flex items-center justify-center text-brand-cyan font-bold">2</div>
-                  <span class="text-white"><span class="font-bold text-brand-cyan">50% Due</span> upon project completion</span>
+                  <span class="text-white"><span class="font-bold text-brand-cyan">Monthly Plan</span> for the 12-month initial term</span>
                 </li>
               </ul>
             </div>
@@ -249,21 +246,21 @@ const faqSchema = {
             </div>
 
             <div class="space-y-4 pt-4">
-              <label class="block text-white font-bold text-body-lg mb-2">Project Investment</label>
+              <label class="block text-white font-bold text-body-lg mb-2">First-Year Investment</label>
               <div class="grid grid-cols-2 gap-4">
                 <button 
-                  onclick="setInvestment(998)" 
+                  onclick="setInvestment(4061)" 
                   class="investment-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-darkest text-white hover:border-brand-cyan transition-all text-label font-bold active-investment"
-                  data-value="998"
+                  data-value="4061"
                 >
-                  $998 (Standard)
+                  $4,061 (Website Growth)
                 </button>
                 <button 
-                  onclick="setInvestment(1998)" 
+                  onclick="setInvestment(7662)" 
                   class="investment-btn py-3 px-4 rounded-xl border border-white/10 bg-brand-darkest text-white hover:border-brand-cyan transition-all text-label font-bold"
-                  data-value="1998"
+                  data-value="7662"
                 >
-                  $1,998+ (Premium)
+                  $7,662 (Local SEO Growth)
                 </button>
               </div>
             </div>
@@ -326,7 +323,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes! We offer flexible payment plans for most packages. Typically we require 50% upfront to begin the project, with the remaining balance due upon completion. For larger projects, we can arrange monthly installments — just ask during your consultation.
+              Growth Plans use a launch fee followed by one simple monthly payment for a 12-month initial term — <strong class="text-white">Website Growth is $497 to launch then $297/month</strong>, <strong class="text-white">Local SEO Growth is $798–$998 to launch then $597/month</strong>, and <strong class="text-white">Lead Generation Growth is $998–$1,498 to launch then $797/month</strong>. After the initial term, plans continue month-to-month with 30 days' written notice to cancel.
             </div>
           </div>
         </div>
@@ -365,7 +362,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes, we handle the full setup. We'll help you choose a domain, configure web hosting (or recommend the best provider for your needs), and get everything deployed. Web hosting fees are separate and typically range from $10–$30/month depending on your provider and plan.
+              Yes, we handle the full setup. We'll help you choose a domain and get everything deployed. Web hosting, SSL, backups, security monitoring, and software updates are included with every Growth Plan while your plan is active — there are no separate hosting fees.
             </div>
           </div>
         </div>
@@ -391,7 +388,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Your satisfaction matters. Every package includes 1–3 revision rounds (depending on the tier) where you can request changes. We work iteratively, sharing progress along the way so there are no surprises. For Enterprise clients, we offer unlimited revisions until everything is perfect.
+              Your satisfaction matters. Every Growth Plan includes <strong class="text-white">one small edit request per month</strong> (up to about 30 minutes of work) plus collaborative revision rounds during the initial build. We work iteratively, sharing progress along the way so there are no surprises. Larger redesigns, new pages, and major feature work are project-priced — just ask during your consultation.
             </div>
           </div>
         </div>
@@ -404,7 +401,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes! Our monthly SEO plans are <strong class="text-white">Foundation $297</strong>, <strong class="text-white">Growth SEO Engine $497</strong> (most popular), <strong class="text-white">Authority SEO $497–$697</strong>, and <strong class="text-white">Scale & Dominate $997–$1,497</strong>. All include technical SEO, sitemap/robots.txt/llms.txt, service-page optimization, Core Web Vitals care, and milestone audits. Smaller brochure sites can also use lighter maintenance — ask during consultation. See <a href="/services/seo/#seo-pricing" class="text-brand-cyan underline">full SEO pricing</a>.
+              Yes! Every Growth Plan is ongoing by design — that is the whole point. Our plans are <strong class="text-white">Website Growth ($497 launch + $297/month)</strong>, <strong class="text-white">Local SEO Growth ($798–$998 launch + $597/month)</strong>, and <strong class="text-white">Lead Generation Growth ($998–$1,498 launch + $797/month)</strong>. All include hosting, security, updates, foundational SEO, and monthly reporting. See <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">full SEO pricing</a>.
             </div>
           </div>
         </div>
@@ -430,7 +427,7 @@ const faqSchema = {
           </button>
           <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes. Monthly SEO is already built into Growth Engine ($297), Authority Builder ($497–$697), and Scale & Dominate ($997–$1,497) packages — no double-charging. If you already have a site, start on any standalone SEO tier at <a href="/services/seo/#seo-pricing" class="text-brand-cyan underline">/services/seo/#seo-pricing</a>.
+              Yes. Foundational on-page and local SEO is included with every plan, so there is no double-charging. If you already have a site and want active local visibility work, our Local SEO Growth plan at $597/month covers keyword research, content, Google Business Profile optimization, and review generation — see <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">/services/seo/#growth-pricing</a>.
             </div>
           </div>
         </div>
@@ -493,7 +490,7 @@ const faqSchema = {
   </style>
 
   <script type="module">
-    let currentInvestment = 998;
+    let currentInvestment = 4061;
 
     window.setInvestment = (value) => {
       currentInvestment = value;
