@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from '../components/OptimizedImage.astro';
+import remodelers1 from '../../assets/remodelers_1.webp';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -126,23 +128,29 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- Recent Work Section (images pending) -->
+  <!-- Recent Work Section -->
   <section class="py-24 px-4 bg-brand-dark">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Recent Remodeling Work</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Proof We've Handled</h2>
-        <p class="text-white/70 max-w-2xl mx-auto">Completed remodeling projects built and optimized for local lead generation across the area.</p>
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Remodeling Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Sites Built to Book High-End Remodels</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Portfolio galleries and project pages that show the quality of your finish work — and turn "kitchen remodel" searches into booked consultations.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
-        </div>
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
-        </div>
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
+      <div class="grid md:grid-cols-2 gap-8">
+        <a href="/contact/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+          <div class="aspect-video overflow-hidden">
+            <Image src={remodelers1} alt="Custom luxury kitchen remodel with wood cabinetry, quartz island, and professional range" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Kitchens &amp; Whole-Home</p>
+            <p class="text-white text-sm leading-relaxed">Before/after galleries, finish and material details, and per-project CTIs so high-ticket work gets the attention it needs.</p>
+          </div>
+        </a>
+        <div class="bg-brand-darkest border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
+          <span class="text-brand-cyan text-3xl mb-4" aria-hidden="true">✦</span>
+          <p class="text-white font-bold text-lg mb-2">Your project here</p>
+          <p class="text-white/70 text-sm mb-6">Get a free quote for a remodeling website built to win higher-value projects.</p>
+          <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-bold text-sm border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get Your Free Quote</a>
         </div>
       </div>
     </div>

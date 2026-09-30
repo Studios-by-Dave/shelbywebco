@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from '../components/OptimizedImage.astro';
+import treeSpecialist1 from '../../assets/tree_specialist_1.jpeg';
+import treeSpecialist2 from '../../assets/tree_specialist_2.jpg';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -126,23 +129,38 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- Recent Work Section (images pending) -->
+  <!-- Recent Work Section -->
   <section class="py-24 px-4 bg-brand-dark">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Recent Tree Work</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Proof We've Handled</h2>
-        <p class="text-white/70 max-w-2xl mx-auto">Completed tree service projects built and optimized for local lead generation across the area.</p>
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Tree Service Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Sites Built to Book Emergency Tree Work</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Storm-damage and removal pages built to capture urgent calls — plus service areas for stump grinding and lot clearing.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
-        </div>
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
-        </div>
-        <div class="bg-brand-darkest border border-dashed border-white/15 rounded-2xl aspect-video flex items-center justify-center">
-          <span class="text-white/40 text-sm uppercase tracking-widest">Photo Slot</span>
+        <a href="/contact/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+          <div class="aspect-video overflow-hidden">
+            <Image src={treeSpecialist1} alt="Certified arborist climbing a tree with a chainsaw to remove storm-damaged limbs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Removal &amp; Storm Damage</p>
+            <p class="text-white text-sm leading-relaxed">Urgent-call landing pages with clear phone CTAs, service area coverage, and before/after galleries.</p>
+          </div>
+        </a>
+        <a href="/contact/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+          <div class="aspect-video overflow-hidden">
+            <Image src={treeSpecialist2} alt="Arborist pruning a leafy tree from an aerial bucket truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Pruning &amp; Canopy Care</p>
+            <p class="text-white text-sm leading-relaxed">Recurring maintenance plans, tree health assessments, and seasonal pruning offers explained clearly.</p>
+          </div>
+        </a>
+        <div class="bg-brand-darkest border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
+          <span class="text-brand-cyan text-3xl mb-4" aria-hidden="true">✦</span>
+          <p class="text-white font-bold text-lg mb-2">Your project here</p>
+          <p class="text-white/70 text-sm mb-6">Get a free quote for a tree service website built to answer emergency calls.</p>
+          <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-bold text-sm border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get Your Free Quote</a>
         </div>
       </div>
     </div>
