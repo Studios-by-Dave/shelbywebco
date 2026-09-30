@@ -26,41 +26,47 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- Causes Section -->
   <section class="py-24 px-4 bg-brand-darkest">
     <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="space-y-6">
         <!-- Cause 1 -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/30 transition-all duration-300" data-animate>
-          <div class="w-14 h-14 rounded-2xl bg-brand-cyan/20 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan text-2xl font-black mb-6">
-            🏘
+        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6 md:p-8 hover:border-brand-cyan/30 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6" data-animate>
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-red-500/20 border border-red-500/30 flex items-center justify-center text-2xl font-black">
+            🛡
           </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Local Community Support</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            We actively support local organizations and events in Shelby, NC and the surrounding Western NC area. From sponsoring community events to donating web services to local nonprofits, we invest in the communities that shaped us.
-          </p>
-          <a href="/contact/" class="inline-block text-brand-cyan font-semibold text-sm hover:underline">Learn more →</a>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Our Rescue — Join the Fight</h3>
+            <p class="text-white/80 text-sm leading-relaxed">
+              We stand with Our Rescue against human trafficking and child exploitation. Join the Fight is a call to action we all share: empowering those on the frontlines and fighting for the freedom and safety of every survivor.
+            </p>
+          </div>
+          <a href="https://ourrescue.org/" target="_blank" rel="noopener" class="shrink-0 inline-block text-brand-cyan font-semibold text-sm hover:underline md:text-right">Visit ourrescue.org →</a>
         </div>
 
         <!-- Cause 2 -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/30 transition-all duration-300" data-animate>
-          <div class="w-14 h-14 rounded-2xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl font-black mb-6">
-            💻
+        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6 md:p-8 hover:border-brand-cyan/30 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6" data-animate>
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-2xl font-black">
+            🧩
           </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Tech Education & Literacy</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            We believe everyone deserves access to digital skills. We volunteer time and expertise to help local schools, libraries, and community centers bridge the digital divide and build tech literacy for the next generation.
-          </p>
-          <a href="/contact/" class="inline-block text-brand-cyan font-semibold text-sm hover:underline">Learn more →</a>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Autism Society of America</h3>
+            <p class="text-white/80 text-sm leading-relaxed">
+              We support the Autism Society of America. The Autism Society strives to empower individuals with Autism and their families to make informed decisions in the planning and delivery of individualized, evidence-based services and support. Each individual and family has the right to choose the services that best meet their individual needs.
+            </p>
+          </div>
+          <a href="https://autismsociety.org/" target="_blank" rel="noopener" class="shrink-0 inline-block text-brand-cyan font-semibold text-sm hover:underline md:text-right">Visit autismsociety.org →</a>
         </div>
 
         <!-- Cause 3 -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-brand-cyan/30 transition-all duration-300" data-animate>
-          <div class="w-14 h-14 rounded-2xl bg-brand-accent/20 border border-brand-accent/30 flex items-center justify-center text-brand-accent text-2xl font-black mb-6">
-            🌱
+        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6 md:p-8 hover:border-brand-cyan/30 transition-all duration-300 flex flex-col md:flex-row md:items-center gap-6" data-animate>
+          <div class="w-14 h-14 shrink-0 rounded-2xl bg-brand-cyan/20 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan text-2xl font-black">
+            🏘
           </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Environmental Stewardship</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            As a digital-first company, we minimize our environmental footprint. We support sustainability initiatives, reduce waste in our operations, and partner with organizations working to protect Western NC's natural beauty.
-          </p>
-          <a href="/contact/" class="inline-block text-brand-cyan font-semibold text-sm hover:underline">Learn more →</a>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Local Community Support</h3>
+            <p class="text-white/80 text-sm leading-relaxed">
+              We actively support local organizations and events in Shelby, NC and the surrounding Western NC area. From sponsoring community events to donating web services to local nonprofits, we invest in the communities that shaped us.
+            </p>
+          </div>
+          <a href="/contact/" class="shrink-0 inline-block text-brand-cyan font-semibold text-sm hover:underline md:text-right">Learn more →</a>
         </div>
       </div>
     </div>
