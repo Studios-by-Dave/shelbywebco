@@ -109,7 +109,7 @@ const addons = [
       {tiers.map((tier) => (
         <div
           class:list={[
-            'bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0 flex flex-col',
+            'bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_24px_50px_rgba(0,0,0,0.6)] relative transition-all duration-300',
             tier.badge ? 'border-[#f3db70]/50 z-10 scale-100 lg:scale-105' : 'border-white/10',
             focus === tier.key ? 'ring-2 ring-brand-cyan ring-offset-2 ring-offset-brand-darkest' : '',
           ]}
@@ -130,15 +130,11 @@ const addons = [
                   <span class="text-4xl md:text-5xl font-black font-nav text-brand-cyan drop-shadow-[0_0_12px_rgba(0,212,255,0.4)] whitespace-nowrap">
                     {tier.monthly}<span class="text-xl">/mo</span>
                   </span>
-                  <div class="mt-2 w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                    <span class="text-[#f3db70] font-black text-sm">{tier.launch} launch</span>
-                    <span class="text-white/70 text-xs block">{tier.term} initial term</span>
-                  </div>
                 </>
               ) : (
                 <>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
-                  <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">
+                  <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
                     {tier.launch}
                   </span>
                   <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">+</span>
@@ -161,7 +157,7 @@ const addons = [
             class:list={[
               'block w-full px-6 py-3 rounded-xl font-bold text-center mt-auto transition-all duration-300',
               tier.badge
-                ? 'cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px]'
+                ? 'cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25)] hover:brightness-110'
                 : 'bg-brand-green text-white hover:bg-brand-greenLight',
             ]}
           >
