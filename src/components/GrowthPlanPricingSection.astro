@@ -11,7 +11,7 @@ const {
   focus = '',
   id = 'growth-pricing',
   title = 'One Simple Monthly Plan',
-  subtitle = 'A professionally managed website for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
+  subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
   variant = 'launch-first',
 } = Astro.props;
 
@@ -109,8 +109,8 @@ const addons = [
     </div>
 
     <div class="text-center mb-8">
-      <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-        Every website build is bundled with ongoing SEO — because a site without visibility is pointless. Standalone builds available on request, but we don't recommend them.
+      <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
+        Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Standalone builds available on request.
       </p>
     </div>
 
@@ -169,7 +169,7 @@ const addons = [
               'block w-full px-6 py-3 rounded-xl font-bold text-center mt-auto transition-all duration-300',
               tier.badge
                 ? 'cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25)] hover:brightness-110'
-                : 'bg-brand-green text-white hover:bg-brand-greenLight',
+                : 'bg-brand-green text-white border border-white/20 hover:bg-brand-greenLight',
             ]}
           >
             Get Started
