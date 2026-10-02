@@ -90,7 +90,7 @@ export default function ProjectPopup() {
               onClick={() => { setAcknowledged(false); setVisible(true); }}
               className="mt-4 w-full text-center bg-white/10 border border-white/20 text-white text-lg font-bold px-6 py-3 rounded-xl hover:bg-white/20 transition-all"
             >
-              Start My Project
+              Start a Project
             </button>
           </div>
         ) : done ? (
@@ -143,7 +143,7 @@ export default function ProjectPopup() {
                   onClick={() => { setAcknowledged(true); setOpen(true); }}
                   className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all mb-3"
                 >
-                  Start My Project
+                  Start a Project
                 </button>
                 <div className="grid grid-cols-2 gap-3">
                   <a

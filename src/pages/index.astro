@@ -32,7 +32,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <!-- Promo Ticker/Marquee Bar -->
   <div class="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 border-b border-gray-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.5)] overflow-hidden relative z-20 py-2 flex">
     <div class="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none"></div>
-    <div class="flex whitespace-nowrap animate-promo-ticker relative z-10 w-max shrink-0">
+    <div class="flex whitespace-nowrap animate-promo-ticker relative z-10 w-max shrink-0" aria-hidden="true">
       <div class="flex items-center space-x-12 px-6">
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ Free Logo Design with any Growth Plan!</span>
         <span class="text-gray-900 text-xl font-heading drop-shadow-sm">✦ $100 Unlimited Referral Bonus!</span>
@@ -74,7 +74,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             <span class="text-white font-bold text-sm tracking-wide drop-shadow-md">Shelby Web Design for Local Businesses</span>
           </div>
           <h1 class="font-heading text-[3.1rem] sm:text-[4.45rem] md:text-[5.7rem] lg:text-[5.1rem] xl:text-[5.55rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
-            Custom Websites. Local SEO. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Business Machines.</span><span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block text-[2.2rem] sm:text-[2.8rem] md:text-[3.1rem] lg:text-[3.2rem] xl:text-[3.4rem]"> Built for Local Business.</span>
+            Custom Websites & Local SEO in Shelby, NC. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Business Machines.</span><span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block text-[2.2rem] sm:text-[2.8rem] md:text-[3.1rem] lg:text-[3.2rem] xl:text-[3.4rem]"> Built for Local Business.</span>
           </h1>
           <p class="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-xl leading-relaxed">
             Local Web Design Backed by 20+ Years of I.T. Experience.
@@ -307,7 +307,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <!-- Tool Logo Showcase -->
   <section class="py-12 md:py-16 px-4 border-t border-white/5" data-animate>
     <div class="max-w-7xl mx-auto text-center">
-      <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-6">✦ Powered by the Best in the Industry</p>
+      <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-6">✦ Tools We Use</p>
       <div class="flex flex-wrap items-center justify-center gap-10 md:gap-14 opacity-80">
         <Image src={chatgptLogo} alt="ChatGPT" class="h-20 w-auto object-contain rounded-lg transition-all duration-300" loading="lazy" />
         <Image src={claudeLogo} alt="Claude" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
@@ -420,40 +420,40 @@ import hsCross from '../../assets/logo banner/hscross.webp';
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Concrete Construction Icon -->
-        <div class="bg-brand-darkest border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/50 transition-colors group">
+        <a href="/web-design-for-construction-shelby-nc/" class="bg-brand-darkest border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/50 transition-colors group block">
           <div class="w-14 h-14 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4 text-cyan-500 group-hover:bg-cyan-500/20 transition-colors">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-6l-2-2H5a2 2 0 0 0-2 2Z"/><path d="M3 7h18"/></svg>
           </div>
           <h3 class="font-heading text-card-title font-bold text-white mb-2">Concrete / Construction</h3>
           <p class="text-card-body text-white/70">Local Concrete and Construction businesses built to scale.</p>
-        </div>
+        </a>
 
         <!-- Remodelers Icon -->
-        <div class="bg-brand-darkest border border-amber-500/30 rounded-xl p-8 hover:border-amber-500/50 transition-colors group">
+        <a href="/web-design-for-home-remodelers-shelby-nc/" class="bg-brand-darkest border border-amber-500/30 rounded-xl p-8 hover:border-amber-500/50 transition-colors group block">
           <div class="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-500 group-hover:bg-amber-500/20 transition-colors">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"/><path d="m14.5 12.5 2-2"/></svg>
           </div>
           <h3 class="font-heading text-card-title font-bold text-white mb-2">Home Remodelers</h3>
           <p class="text-card-body text-white/70">Local Home Remodeling businesses built to scale.</p>
-        </div>
+        </a>
 
         <!-- Roofer Icon -->
-        <div class="bg-brand-darkest border border-red-500/30 rounded-xl p-8 hover:border-red-500/50 transition-colors group">
+        <a href="/web-design-for-roofers-shelby-nc/" class="bg-brand-darkest border border-red-500/30 rounded-xl p-8 hover:border-red-500/50 transition-colors group block">
           <div class="w-14 h-14 bg-red-500/10 rounded-lg flex items-center justify-center mb-4 text-red-500 group-hover:bg-red-500/20 transition-colors">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <h3 class="font-heading text-card-title font-bold text-white mb-2">Roofers & External Trades</h3>
           <p class="text-card-body text-white/70">Lead generation systems that convert homeowners.</p>
-        </div>
+        </a>
 
         <!-- Landscaping Icon -->
-        <div class="bg-brand-darkest border border-brand-blue/20 rounded-xl p-8 hover:border-brand-cyan/50 transition-colors group">
+        <a href="/web-design-for-landscapers-shelby-nc/" class="bg-brand-darkest border border-brand-blue/20 rounded-xl p-8 hover:border-brand-cyan/50 transition-colors group block">
           <div class="w-14 h-14 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4 text-emerald-500 group-hover:bg-emerald-500/20 transition-colors">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-7 7"/><path d="M7 21c-4.3-1.47-6-6.44-6-10a5.1 5.1 0 0 1 5.1-4c2.8 0 5.1 2 5.1 5.9a13.3 13.3 0 0 1-4.2 8.1Z"/></svg>
           </div>
           <h3 class="font-heading text-card-title font-bold text-white mb-2">Landscaping Companies</h3>
           <p class="text-card-body text-white/70">Local Landscaping businesses built to scale.</p>
-        </div>
+        </a>
 
         <!-- Solar Icon -->
         <div class="bg-brand-darkest border border-blue-500/30 rounded-xl p-8 hover:border-blue-500/50 transition-colors group">
@@ -465,13 +465,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
         </div>
 
         <!-- Tree Specialists Icon -->
-        <div class="bg-brand-darkest border border-green-500/30 rounded-xl p-8 hover:border-green-500/50 transition-colors group">
+        <a href="/web-design-for-tree-specialists-shelby-nc/" class="bg-brand-darkest border border-green-500/30 rounded-xl p-8 hover:border-green-500/50 transition-colors group block">
           <div class="w-14 h-14 bg-green-500/10 rounded-lg flex items-center justify-center mb-4 text-green-500 group-hover:bg-green-500/20 transition-colors">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M17 20h.01"/><path d="M12 20h.01"/><path d="M7 20h.01"/><path d="M18 9.5a5 5 0 0 0-8-4.09A5 5 0 0 0 2 9.5a5 5 0 0 0 2 4l3 3h10l3-3a5 5 0 0 0 0-7Z"/><path d="M12 13V5"/></svg>
           </div>
           <h3 class="font-heading text-card-title font-bold text-white mb-2">Tree Specialists</h3>
           <p class="text-card-body text-white/70">Local Tree Service businesses built to scale.</p>
-        </div>
+        </a>
 
         <!-- Trucking Icon -->
         <div class="bg-brand-darkest border border-yellow-400/30 rounded-xl p-8 hover:border-yellow-400/50 transition-colors group">
