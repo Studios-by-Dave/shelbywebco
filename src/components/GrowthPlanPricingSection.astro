@@ -33,6 +33,7 @@ const tiers = [
       'One small monthly edit request',
       'Monthly performance snapshot',
       'Quarterly growth review',
+      'Milestone audits every 90 days — pause or reduce if no meaningful work remains',
     ],
     bestFor: 'Small local businesses that want a professional web presence without a large upfront invoice',
   },
@@ -53,6 +54,7 @@ const tiers = [
       'Review-generation system',
       'Local citation cleanup/buildout',
       'Conversion-rate improvements',
+      'Milestone audits every 90 days — pause or reduce if no meaningful work remains',
     ],
     bestFor: 'Businesses ready to invest in meaningful local search visibility and lead generation',
   },
@@ -71,8 +73,8 @@ const tiers = [
       'Follow-up workflows & automation',
       'Priority support & strategy',
       'Advanced analytics & reporting',
-      'A/B testing & page optimization',
       'Dedicated growth manager',
+      'Milestone audits every 90 days — pause or reduce if no meaningful work remains',
     ],
     bestFor: 'Businesses that want a full growth system — SEO, leads, and conversion optimization under one roof',
   },
@@ -149,6 +151,7 @@ const addons = [
                     <span class="text-brand-cyan font-black text-xl">{tier.monthly}<span class="text-sm font-bold">/mo</span></span>
                     <span class="text-white/70 text-xs block">Ongoing management</span>
                   </div>
+                  <p class="text-white/50 text-xs text-center mt-3">12-month total: {tier.key === 'website' ? '$4,061' : tier.key === 'seo' ? '$7,962' : '$10,562'}</p>
                 </>
               )}
             </div>
@@ -172,6 +175,75 @@ const addons = [
           </a>
         </div>
       ))}
+    </div>
+
+    <div class="mb-16 overflow-x-auto">
+      <table class="w-full text-sm text-white/80 border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 pr-4 font-bold text-white">Feature</th>
+            <th class="text-center py-3 px-4 font-bold text-white">Core</th>
+            <th class="text-center py-3 px-4 font-bold text-white">Plus</th>
+            <th class="text-center py-3 px-4 font-bold text-white">Ultra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Launch fee</td>
+            <td class="text-center py-3 px-4">$497</td>
+            <td class="text-center py-3 px-4">$798–$998</td>
+            <td class="text-center py-3 px-4">$998–$1,498</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Monthly</td>
+            <td class="text-center py-3 px-4">$297</td>
+            <td class="text-center py-3 px-4">$597</td>
+            <td class="text-center py-3 px-4">$797</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">12-month total</td>
+            <td class="text-center py-3 px-4">$4,061</td>
+            <td class="text-center py-3 px-4">$7,962</td>
+            <td class="text-center py-3 px-4">$10,562</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Website pages</td>
+            <td class="text-center py-3 px-4">4–5</td>
+            <td class="text-center py-3 px-4">5–10</td>
+            <td class="text-center py-3 px-4">10+</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Local SEO</td>
+            <td class="text-center py-3 px-4">Foundational</td>
+            <td class="text-center py-3 px-4">Active</td>
+            <td class="text-center py-3 px-4">Active + CRO</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Content creation</td>
+            <td class="text-center py-3 px-4">—</td>
+            <td class="text-center py-3 px-4">Monthly</td>
+            <td class="text-center py-3 px-4">Monthly</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Lead tracking</td>
+            <td class="text-center py-3 px-4">—</td>
+            <td class="text-center py-3 px-4">—</td>
+            <td class="text-center py-3 px-4">✓</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Dedicated manager</td>
+            <td class="text-center py-3 px-4">—</td>
+            <td class="text-center py-3 px-4">—</td>
+            <td class="text-center py-3 px-4">✓</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="py-3 pr-4">Milestone audits</td>
+            <td class="text-center py-3 px-4">Quarterly</td>
+            <td class="text-center py-3 px-4">Every 90 days</td>
+            <td class="text-center py-3 px-4">Every 90 days</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="text-center mb-12">
