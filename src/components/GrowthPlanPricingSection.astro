@@ -18,7 +18,7 @@ const {
 const tiers = [
   {
     key: 'website',
-    name: 'Spark',
+    name: 'Core',
     launch: '$497',
     monthly: '$297',
     term: '12 months',
@@ -38,14 +38,14 @@ const tiers = [
   },
   {
     key: 'seo',
-    name: 'Signal',
+    name: 'Plus',
     launch: '$798 – $998',
     monthly: '$597',
     term: '6–12 months',
     badge: 'Most Popular',
     description: 'Active local SEO, content, Google Business Profile support, and reporting for real visibility growth.',
     features: [
-      'Everything in Spark',
+      'Everything in Core',
       'Keyword & competitor research',
       'Search Console analysis & fixes',
       'New service/location content',
@@ -58,14 +58,14 @@ const tiers = [
   },
   {
     key: 'leads',
-    name: 'Surge',
+    name: 'Ultra',
     launch: '$998 – $1,498',
     monthly: '$797',
     term: '12 months',
     badge: null,
     description: 'SEO plus conversion optimization, lead tracking, follow-up workflows, and priority support.',
     features: [
-      'Everything in Signal',
+      'Everything in Plus',
       'Conversion-rate optimization',
       'Lead tracking & attribution',
       'Follow-up workflows & automation',
@@ -105,6 +105,12 @@ const addons = [
       <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
     </div>
 
+    <div class="text-center mb-8">
+      <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+        Every website build is bundled with ongoing SEO — because a site without visibility is pointless. Standalone builds available on request, but we don't recommend them.
+      </p>
+    </div>
+
     <div class="grid md:grid-cols-3 gap-8 mb-16">
       {tiers.map((tier) => (
         <div
@@ -119,8 +125,8 @@ const addons = [
               {tier.badge}
             </div>
           )}
-          <h3 class="font-heading text-3xl md:text-4xl font-black text-center mb-1 bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)]">{tier.name}</h3>
-          <p class="text-white/50 text-xs uppercase tracking-widest mb-1">{tier.term} initial term</p>
+          <h3 class="font-heading text-4xl md:text-5xl font-black text-center mb-1 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">{tier.name}</h3>
+          <p class="text-xs uppercase tracking-widest text-center mb-1 bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent">{tier.term} initial term</p>
           <p class="text-white/70 text-sm mb-6 italic">{tier.description}</p>
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
@@ -133,6 +139,7 @@ const addons = [
                 </>
               ) : (
                 <>
+                  <span class="inline-block bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Bundle</span>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
                   <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
                     {tier.launch}
