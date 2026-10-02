@@ -22,12 +22,11 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. W
 
 
 ## Pricing (transparent)
-- Starter Website: from $598
-- Growth Engine: $798–$1,498 build + $297/mo SEO included
-- Authority Builder: $1,498–$2,498 build + $679/mo SEO included
-- Scale & Dominate: $2,498–$3,998 build + $997–$1,497/mo SEO included
-- Standalone Monthly SEO: Foundation $297/mo, Growth SEO Engine $497/mo (most popular), Authority SEO $497-$697/mo, Scale & Dominate $997–$1,497/mo (or custom) — milestone audits every 90 days, no endless retainer; monthly SEO already included in Growth/Authority/Scale website builds (no double-charging)
-- Managed Growth System (GoHighLevel-equivalent, fully done-for-you via custom platform — we are fans of GHL, not competing): Essentials $197–$297/mo, Full $397–$497/mo, Scale $697+/mo
+- Core: $497 launch + $297/month (12-month initial term) — 4–5 page website, hosting, SSL, backups, security, foundational SEO, monthly edits
+- Plus: $798–$998 launch + $597/month (6–12 month initial term) — everything in Core plus active local SEO, content, Google Business Profile, review generation
+- Ultra: $998–$1,498 launch + $797/month (12-month initial term) — everything in Plus plus conversion optimization, lead tracking, follow-up workflows, priority support, dedicated growth manager
+- Every website build is bundled with ongoing SEO — standalone builds available on request but not recommended
+- After initial term, plans continue month-to-month with 30 days' written notice to cancel
 - Free logo design with any full web package
 - Free SEO audit for selected local businesses
 - $100 unlimited referral bonus
