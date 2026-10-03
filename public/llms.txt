@@ -23,7 +23,7 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. W
 
 ## Pricing (transparent)
 - Core: $497 launch + $297/month (12-month initial term) — 4–5 page website, hosting, SSL, backups, security, foundational SEO, monthly edits
-- Plus: $798–$998 launch + $597/month (6–12 month initial term) — everything in Core plus active local SEO, content, Google Business Profile, review generation
+- Plus: $798–$998 launch + $597/month (6–12 month initial term) — everything in Core plus active local SEO, content, Google Business Profile, review generation, AI-visibility tracking & schema markup
 - Ultra: $998–$1,498 launch + $797/month (12-month initial term) — everything in Plus plus conversion optimization, lead tracking, follow-up workflows, priority support, dedicated growth manager
 - Every website build is bundled with ongoing SEO — standalone builds available on request but not recommended
 - After initial term, plans continue month-to-month with 30 days' written notice to cancel
@@ -41,20 +41,29 @@ Local service businesses including roofing, landscaping, solar installers, home 
 - Services: https://www.shelbywebco.com/services/
 - Web Design: https://www.shelbywebco.com/services/web-design/
 - SEO Services: https://www.shelbywebco.com/services/seo/
+- Logo Design & Branding: https://www.shelbywebco.com/services/branding/
+- Custom Software & SaaS: https://www.shelbywebco.com/services/custom-software-saas/
+- Case Studies: https://www.shelbywebco.com/services/case-studies/
+- Portfolio: https://www.shelbywebco.com/services/portfolio/
 - Pricing: https://www.shelbywebco.com/pricing/
 - About / Founder: https://www.shelbywebco.com/about/
+- Causes We Support: https://www.shelbywebco.com/about/causes-we-support/
 - Blog: https://www.shelbywebco.com/blog/
 - Glossary: https://www.shelbywebco.com/glossary/
 - Contact: https://www.shelbywebco.com/contact/
 - Free SEO Audit: https://www.shelbywebco.com/promotions/free-seo-audit/
+- Free Logo Design: https://www.shelbywebco.com/promotions/free-logo-design/
+- Referral Bonus: https://www.shelbywebco.com/promotions/referral-bonus/
 
 
 ## Location-Specific Pages
 - Web Design Shelby NC: https://www.shelbywebco.com/web-design-shelby-nc/
 - Web Design Gastonia NC: https://www.shelbywebco.com/web-design-gastonia-nc/
 - Web Design Kings Mountain NC: https://www.shelbywebco.com/web-design-kings-mountain-nc/
+- Web Design Forest City NC: https://www.shelbywebco.com/web-design-forest-city-nc/
+- Web Design Boiling Springs NC: https://www.shelbywebco.com/web-design-boiling-springs-nc/
+- Web Design Polkville NC: https://www.shelbywebco.com/web-design-polkville-nc/
 - Web Design Asheville NC: https://www.shelbywebco.com/web-design-asheville-nc/
-- (plus Forest City, Boiling Springs, Polkville)
 
 
 ## Industry-Specific Pages

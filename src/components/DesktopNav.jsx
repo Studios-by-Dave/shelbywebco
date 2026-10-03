@@ -58,7 +58,7 @@ export default function DesktopNav() {
             <div className="p-4">
               {/* Service Pages */}
               <div className="mb-4">
-                <p className="text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
+                <p className="text-[#f3db70] text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
                 <div className="space-y-1">
                   <a href="/services/" className="block text-brand-blue hover:text-white transition-colors py-1 font-bold">View All Services →</a>
                   <a href="/services/web-design/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Web Design</a>
@@ -74,7 +74,7 @@ export default function DesktopNav() {
               <div className="border-t border-brand-blue/20 pt-3">
                 <button
                   onClick={() => setServiceAreasOpen(!serviceAreasOpen)}
-                  className="flex w-full items-center justify-between text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold"
+                  className="flex w-full items-center justify-between text-[#f3db70] text-xs uppercase tracking-widest mb-2 font-bold"
                   aria-expanded={serviceAreasOpen}
                 >
                   Service Areas
@@ -99,7 +99,7 @@ export default function DesktopNav() {
               <div className="border-t border-brand-blue/20 pt-3">
                 <button
                   onClick={() => setIndustriesOpen(!industriesOpen)}
-                  className="flex w-full items-center justify-between text-silver-shimmer text-xs uppercase tracking-widest mb-2 font-bold"
+                  className="flex w-full items-center justify-between text-[#f3db70] text-xs uppercase tracking-widest mb-2 font-bold"
                   aria-expanded={industriesOpen}
                 >
                   Industries
