@@ -101,13 +101,19 @@ export default function MobileNav() {
 
   const renderLink = (link, nested = false) => {
     const isBlog = link.label === 'Blog';
+    const isTel = link.href.startsWith('tel:');
+    const topLevel = isTel
+      ? 'py-3 text-2xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
+      : isBlog
+        ? 'py-3 animate-blog-stream font-poofy text-4xl text-white hover:text-brand-cyan hover:bg-white/5'
+        : 'py-3 text-4xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
     return (
       <a
         href={link.href}
         onClick={closeMenu}
-        className={`block px-4 py-3 text-lg font-semibold transition-colors ${
-          nested ? 'pl-10 text-white/85 hover:bg-white/5' : 'text-white hover:bg-white/5'
-        } ${link.href.startsWith('tel:') ? 'bg-lime-400/10 text-lime-300 hover:bg-lime-400/15' : ''} ${isBlog ? 'animate-blog-stream font-poofy text-xl' : ''}`}
+        className={`block px-4 text-center transition-colors ${
+          nested ? 'pl-10 py-2.5 text-left text-lg font-semibold text-white/85 hover:text-brand-cyan hover:bg-white/5' : topLevel
+        }`}
         style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
       >
         {link.label}
@@ -115,13 +121,17 @@ export default function MobileNav() {
     );
   };
 
-  const renderDisclosure = (label, open, setOpen, children) => (
+  const renderDisclosure = (label, open, setOpen, children, nested = false) => (
     <li>
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between px-4 py-4 text-lg font-semibold text-white transition-colors hover:bg-white/5"
+        className={`flex w-full items-center transition-colors hover:text-brand-cyan hover:bg-white/5 ${
+          nested
+            ? 'justify-between px-4 py-3 text-lg font-semibold text-white'
+            : 'justify-center gap-2 px-4 py-3 text-4xl font-bold text-white'
+        }`}
       >
         {label}
         <svg className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,13 +251,13 @@ export default function MobileNav() {
               </div>
               )
             ) : (
-              <ul className="divide-y divide-white/10">
+              <ul className="py-2">
                 {topLinks.slice(0, 1).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
                 {renderDisclosure('Services', servicesOpen, setServicesOpen, <>
                   <li>{renderLink({ href: '/services/', label: 'All Services' }, true)}</li>
                   {serviceLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
-                  {renderDisclosure('Service Areas', serviceAreasOpen, setServiceAreasOpen, serviceAreaLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
-                  {renderDisclosure('Industries', industriesOpen, setIndustriesOpen, industryLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
+                  {renderDisclosure('Service Areas', serviceAreasOpen, setServiceAreasOpen, serviceAreaLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
+                  {renderDisclosure('Industries', industriesOpen, setIndustriesOpen, industryLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
                 </>)}
                 {renderDisclosure('About', aboutOpen, setAboutOpen, <>
                   <li>{renderLink({ href: '/about/', label: 'About Us' }, true)}</li>
@@ -255,7 +265,7 @@ export default function MobileNav() {
                 </>)}
                 {renderDisclosure('Pricing', pricingOpen, setPricingOpen, <>
                   {renderLink({ href: '/pricing/', label: 'Pricing Page' }, true)}
-                  {renderDisclosure('Promotions', promotionsOpen, setPromotionsOpen, promotionLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>))}
+                  {renderDisclosure('Promotions', promotionsOpen, setPromotionsOpen, promotionLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
                 </>)}
                 {topLinks.slice(3).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
               </ul>
