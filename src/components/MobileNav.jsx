@@ -179,7 +179,7 @@ export default function MobileNav() {
         />
 
         <div
-          className={`absolute inset-0 h-full w-full overflow-y-auto bg-[#07121f] text-white transition-transform duration-300 ${
+          className={`absolute inset-0 h-full w-full overflow-y-auto bg-[#1c2026] text-white transition-transform duration-300 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -267,7 +267,7 @@ export default function MobileNav() {
               <a
                 href="/contact/"
                 onClick={closeMenu}
-                className="inline-flex w-full items-center justify-center rounded-xl border border-lime-400 bg-[#09111c] px-4 py-3 text-base font-bold text-lime-300 transition-colors hover:border-lime-300 hover:text-lime-200"
+                className="inline-flex w-full items-center justify-center rounded-xl border border-lime-400 bg-[#161b23] px-4 py-3 text-base font-bold text-lime-300 transition-colors hover:border-lime-300 hover:text-lime-200"
               >
                 Start a Project
               </a>

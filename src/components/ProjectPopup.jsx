@@ -103,7 +103,7 @@ export default function ProjectPopup() {
             <p className="text-white/90 mb-6">Your project info is on its way to the Shelby Web Company team.</p>
             <button
               onClick={close}
-              className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all"
+              className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#1c1c1c] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all"
             >
               Done
             </button>
@@ -141,7 +141,7 @@ export default function ProjectPopup() {
                 </p>
                 <button
                   onClick={() => { setAcknowledged(true); setOpen(true); }}
-                  className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all mb-3"
+                  className="w-full bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#1c1c1c] text-lg font-bold px-6 py-3 rounded-xl hover:opacity-90 transition-all mb-3"
                 >
                   Start a Project
                 </button>
@@ -288,7 +288,7 @@ export default function ProjectPopup() {
                       type="button"
                       onClick={() => setStep(step + 1)}
                       disabled={step === 1 && !form.service}
-                      className="bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] font-bold px-4 py-3 rounded-xl hover:opacity-90 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                      className="bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#1c1c1c] font-bold px-4 py-3 rounded-xl hover:opacity-90 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                       Continue
                     </button>
@@ -296,7 +296,7 @@ export default function ProjectPopup() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#0A0A0A] font-bold px-4 py-3 rounded-xl hover:opacity-90 transition-all disabled:opacity-60"
+                      className="bg-gradient-to-r from-brand-accent to-brand-accent-light text-[#1c1c1c] font-bold px-4 py-3 rounded-xl hover:opacity-90 transition-all disabled:opacity-60"
                     >
                       {submitting ? 'Sending…' : 'Send My Project'}
                     </button>

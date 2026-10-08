@@ -79,25 +79,7 @@ const tiers = [
     ],
     bestFor: 'Businesses that want a full growth system — SEO, leads, and conversion optimization under one roof',
   },
-];
-
-const addons = [
-  {
-    name: 'AI Lead Capture / Chatbot',
-    price: '$199 – $249/mo',
-    description: 'AI-powered chatbot that captures leads, answers questions, and books appointments 24/7.',
-  },
-  {
-    name: 'Review Growth System',
-    price: '$149 – $299/mo',
-    description: 'Automated review requests, reputation monitoring, and response management.',
-  },
-  {
-    name: 'Missed-Call Text-Back',
-    price: '$149 – $299/mo',
-    description: 'Instant text-back when you miss a call, plus CRM automation and lead follow-up sequences.',
-  },
-];
+ ];
 ---
 
 <section id={id} class="py-24 px-4 bg-brand-darkest/50" data-animate>
@@ -124,7 +106,7 @@ const addons = [
           ]}
         >
           {tier.badge && (
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#0A0A0A] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md whitespace-nowrap">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#1c1c1c] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md whitespace-nowrap">
               {tier.badge}
             </div>
           )}
@@ -136,15 +118,15 @@ const addons = [
               {variant === 'monthly-first' ? (
                 <>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Per Month</span>
-                  <span class="text-4xl md:text-5xl font-black font-nav text-brand-cyan drop-shadow-[0_0_12px_rgba(0,212,255,0.4)] whitespace-nowrap">
-                    {tier.monthly}<span class="text-xl">/mo</span>
+                  <span class="text-5xl md:text-6xl font-black font-nav text-brand-cyan drop-shadow-[0_0_12px_rgba(0,212,255,0.4)] whitespace-nowrap">
+                    {tier.monthly}<span class="text-2xl">/mo</span>
                   </span>
                 </>
               ) : (
                 <>
                   <span class="inline-block bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Bundle</span>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
-                  <span class="text-4xl md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
+                  <span class="text-[2.75rem] md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
                     {tier.launch}
                   </span>
                   <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">AND/OR</span>
@@ -174,91 +156,6 @@ const addons = [
           >
             Get Started
           </a>
-        </div>
-      ))}
-    </div>
-
-    <div class="mb-16 overflow-x-auto">
-      <table class="w-full text-sm text-white/80 border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 pr-4 font-bold text-white">Feature</th>
-            <th class="text-center py-3 px-4 font-bold text-white">Core</th>
-            <th class="text-center py-3 px-4 font-bold text-white">Plus</th>
-            <th class="text-center py-3 px-4 font-bold text-white">Ultra</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Launch fee</td>
-            <td class="text-center py-3 px-4">$497</td>
-            <td class="text-center py-3 px-4">$798–$998</td>
-            <td class="text-center py-3 px-4">$998–$1,498</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Monthly</td>
-            <td class="text-center py-3 px-4">$297</td>
-            <td class="text-center py-3 px-4">$597</td>
-            <td class="text-center py-3 px-4">$797</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">12-month total</td>
-            <td class="text-center py-3 px-4">$4,061</td>
-            <td class="text-center py-3 px-4">$7,962</td>
-            <td class="text-center py-3 px-4">$10,562</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Website pages</td>
-            <td class="text-center py-3 px-4">4–5</td>
-            <td class="text-center py-3 px-4">5–10</td>
-            <td class="text-center py-3 px-4">10+</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Local SEO</td>
-            <td class="text-center py-3 px-4">Foundational</td>
-            <td class="text-center py-3 px-4">Active</td>
-            <td class="text-center py-3 px-4">Active + CRO</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Content creation</td>
-            <td class="text-center py-3 px-4">—</td>
-            <td class="text-center py-3 px-4">Monthly</td>
-            <td class="text-center py-3 px-4">Monthly</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Lead tracking</td>
-            <td class="text-center py-3 px-4">—</td>
-            <td class="text-center py-3 px-4">—</td>
-            <td class="text-center py-3 px-4">✓</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Dedicated manager</td>
-            <td class="text-center py-3 px-4">—</td>
-            <td class="text-center py-3 px-4">—</td>
-            <td class="text-center py-3 px-4">✓</td>
-          </tr>
-          <tr class="border-b border-white/5">
-            <td class="py-3 pr-4">Milestone audits</td>
-            <td class="text-center py-3 px-4">Quarterly</td>
-            <td class="text-center py-3 px-4">Every 90 days</td>
-            <td class="text-center py-3 px-4">Every 90 days</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="text-center mb-12">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Optional Add-Ons</p>
-      <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Grow Faster With Add-Ons</h3>
-      <p class="text-white/70 max-w-2xl mx-auto">Add these to any plan for additional lead capture, reputation management, and automation.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-      {addons.map((addon) => (
-        <div class="bg-brand-dark rounded-2xl border border-white/10 p-6 hover:border-brand-cyan/30 transition-all duration-300">
-          <h4 class="font-heading text-lg font-bold text-white mb-2">{addon.name}</h4>
-          <p class="text-brand-cyan text-xl font-black mb-2">{addon.price}</p>
-          <p class="text-white/60 text-sm">{addon.description}</p>
         </div>
       ))}
     </div>
