@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
 ---
 
 <BaseLayout
@@ -10,14 +11,22 @@ import PixieDust from '../../components/PixieDust.jsx';
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-5xl mx-auto text-center">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ The Golden Ticket — Class of 2026</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-3 leading-tight">
           The <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(110deg, #fef08a 0%, #fbbf24 20%, #fff7d6 38%, #f59e0b 55%, #fde68a 72%, #b45309 88%, #fbbf24 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 0 24px rgba(251,191,36,0.35);">Golden Ticket</span>
         </h1>
       </div>
+
+      <div class="relative flex justify-center -mt-1 mb-6">
+        <div class="gold-ticket-hero-wrap">
+          <div class="gold-ticket-hero-sheen" aria-hidden="true"></div>
+          <img src={goldenTicket.src} alt="The Golden Ticket" class="gold-ticket-hero-image" />
+        </div>
+      </div>
+
       <p class="text-lg md:text-xl text-white mb-6">
         We're choosing <span class="text-brand-cyan font-semibold">3 local businesses</span> and building them a brand-new website —
         we cover the full <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>, the same build work we previously
@@ -26,12 +35,17 @@ import PixieDust from '../../components/PixieDust.jsx';
       <p class="text-white/90 mb-8 font-semibold">
         Applications close December 15, 2026 at 11:59 PM ET — only 3 spots for the Class of 2026.
       </p>
-      <a
-        href="#apply-form"
-        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
-      >
-        Apply for Your Golden Ticket
-      </a>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="#apply-form"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+        >
+          Apply for Your Golden Ticket
+        </a>
+        <span class="inline-flex items-center rounded-full border border-[#f8d66d]/40 bg-[#fbbf24]/10 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#f8d66d] shadow-[0_0_18px_rgba(251,191,36,0.2)]">
+          3 winners • 1 cohort
+        </span>
+      </div>
     </div>
   </section>
 
@@ -407,5 +421,67 @@ import PixieDust from '../../components/PixieDust.jsx';
       });
     }
   </script>
+
+  <style>
+    .gold-ticket-hero-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 28rem);
+      padding: 1rem;
+      border-radius: 2rem;
+      background: radial-gradient(circle at top, rgba(254, 240, 138, 0.28), rgba(255, 255, 255, 0.02) 38%, rgba(0, 0, 0, 0) 72%);
+      filter: drop-shadow(0 0 22px rgba(251, 191, 36, 0.22));
+    }
+
+    .gold-ticket-hero-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 12% 8% 8%;
+      border-radius: 1.5rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(120,53,15,0.1), rgba(255,255,255,0.05));
+      border: 1px solid rgba(252, 211, 77, 0.35);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -10px 20px rgba(121, 86, 16, 0.18);
+      z-index: 0;
+    }
+
+    .gold-ticket-hero-sheen {
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+      background: linear-gradient(115deg, transparent 15%, rgba(255,255,255,0.5) 28%, transparent 35%, transparent 62%, rgba(255,255,255,0.2) 68%, transparent 78%);
+      transform: translateX(-10%);
+      filter: blur(10px);
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 1;
+      animation: gold-ticket-sheen 6s ease-in-out infinite;
+    }
+
+    .gold-ticket-hero-image {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: min(100%, 28rem);
+      max-width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      transform: rotate(-4deg) scale(1.02);
+      filter: drop-shadow(0 20px 40px rgba(120, 53, 15, 0.38)) drop-shadow(0 0 20px rgba(250, 204, 21, 0.28));
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -10px 18px rgba(120,53,15,0.22);
+    }
+
+    @keyframes gold-ticket-sheen {
+      0%, 100% { transform: translateX(-12%) skewX(-10deg); opacity: 0.45; }
+      50% { transform: translateX(12%) skewX(-10deg); opacity: 0.9; }
+    }
+
+    @media (max-width: 1023px) {
+      .gold-ticket-hero-wrap {
+        width: min(100%, 24rem);
+      }
+    }
+  </style>
 
 </BaseLayout>
