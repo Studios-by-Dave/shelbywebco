@@ -3,136 +3,172 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
 ---
 
-<BaseLayout 
-  title="Limited-Time Offers & Promotions"
-  description="Limited-time offers from Shelby Web Co — free website Launchpad, free logo design, free SEO audit, and referral bonuses."
+<BaseLayout
+  title="Promotions, Referral Bonus & Current Offers | Shelby Web Company"
+  description="Explore Shelby Web Company offers for local businesses, including the 2026 Golden Ticket, a free SEO audit, free logo design with a web package, and $100 referral rewards."
 >
-
   <!-- Hero Section -->
-  <section class="py-14 lg:py-20 px-4" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offers</p>
+  <section class="relative isolate overflow-hidden bg-brand-darkest px-4 py-14 md:py-20" data-animate>
+    <div class="absolute inset-0 -z-10 bg-mesh-gradient"></div>
+    <div class="absolute inset-0 -z-10 bg-noise opacity-[0.03]"></div>
+    <div class="absolute inset-0 -z-10 bg-dot-pattern opacity-20"></div>
+    <div class="mx-auto max-w-5xl text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-cyan">
+        ✦ Offers &amp; Opportunities
+      </p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-          Exclusive <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Promotions</span> for Your Business
+        <h1 class="mb-6 font-heading text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+          Shelby Web Company <span class="bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-cyan bg-clip-text text-transparent">2026 Promos &amp; Offers</span>
         </h1>
       </div>
-      <p class="text-xl text-white mb-8">
-        We're offering limited-time promotions to help your business grow. Explore what we have available right now.
+      <p class="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-white/80 md:text-xl">
+        Explore current ways to get started, grow your visibility, and share the word about Shelby Web Company. Each offer's details page covers what is included and how to take part.
       </p>
-    </div>
-  </section>
-
-  <!-- Promotions Grid -->
-  <section class="py-24 px-4">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Promo 1: Free Logo Design -->
-        <a href="/promotions/free-logo-design/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] cursor-pointer">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
-          </div>
-          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Free Logo Design</h3>
-          <p class="text-white mb-6 text-base">
-            When you invest in a full web package with us, get a custom logo design completely free.
-          </p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <p class="text-brand-cyan text-base font-bold mb-2">Includes:</p>
-            <ul class="text-white/90 text-sm space-y-1">
-              <li>✓ Custom logo concept</li>
-              <li>✓ Multiple design options</li>
-              <li>✓ Unlimited revisions</li>
-              <li>✓ All file formats</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-        <!-- Promo 2: Free SEO Audit -->
-        <a href="/promotions/free-seo-audit/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] cursor-pointer">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path></svg>
-          </div>
-          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Free SEO Audit</h3>
-          <p class="text-white mb-6 text-base">
-            Selected local businesses get a comprehensive SEO analysis to identify opportunities and fix critical issues.
-          </p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <p class="text-brand-cyan text-base font-bold mb-2">You'll Receive:</p>
-            <ul class="text-white/90 text-sm space-y-1">
-              <li>✓ Technical SEO review</li>
-              <li>✓ Keyword analysis</li>
-              <li>✓ Competitive insights</li>
-              <li>✓ Action plan</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-        <!-- Promo 3: $100 Referral Bonus -->
-        <a href="/promotions/referral-bonus/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] cursor-pointer">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          </div>
-          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">$100 Referral Bonus</h3>
-          <p class="text-white mb-6 text-base">
-            Earn unlimited $100 bonuses every time you refer a customer to us. Build passive income by sharing Shelby Web Co.
-          </p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <p class="text-brand-accent text-base font-bold mb-2">Unlimited Earning:</p>
-            <ul class="text-white/90 text-sm space-y-1">
-              <li>✓ $100 per qualified referral</li>
-              <li>✓ No limit on earnings</li>
-              <li>✓ Fast payout process</li>
-              <li>✓ Lifetime referral link</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-        <!-- Promo 4: The Golden Ticket -->
-        <a href="/promotions/the-golden-ticket/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] cursor-pointer">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-          </div>
-          <h3 class="text-3xl font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">The Golden Ticket</h3>
-          <p class="text-white mb-6 text-base">
-            3 local businesses win a brand-new website — we waive the full $497 build &amp; launch fee for the Class of 2026.
-          </p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <p class="text-brand-cyan text-base font-bold mb-2">Includes:</p>
-            <ul class="text-white/90 text-sm space-y-1">
-              <li>✓ $497 launch fee waived</li>
-              <li>✓ 4–5 page mobile-first site</li>
-              <li>✓ 30/60/90-day results tracking</li>
-              <li>✓ Only 3 spots — closes Dec 15</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="mt-16 text-center">
-        <p class="text-white mb-6">Ready to take advantage of these offers?</p>
-<a 
-           href="/contact/"
-           class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
-         >
-           Get Started Today
-         </a>
+      <a
+        href="#promotions"
+        class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-bold text-white transition-colors hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest"
+      >
+        Explore Current Offers
+      </a>
+      <div class="mt-10 flex flex-wrap justify-center gap-2 text-sm font-medium text-white/70">
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Local business offers</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Growth opportunities</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2">Referral rewards</span>
       </div>
     </div>
   </section>
 
+  <!-- Current Promotions -->
+  <section id="promotions" class="scroll-mt-24 border-y border-white/5 bg-brand-darkest px-4 py-16 md:py-20" aria-labelledby="promotions-heading">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
+        <p class="mb-3 text-label uppercase tracking-widest text-brand-glow">✦ Explore What's Available</p>
+        <h2 id="promotions-heading" class="mb-4 font-heading text-section-heading font-bold text-white md:text-section-heading-md">Current promotions</h2>
+        <p class="text-white/70">Start with the opportunity that fits where your business is today.</p>
+      </div>
+
+      <!-- Featured Golden Ticket -->
+      <article class="relative mb-6 overflow-hidden rounded-3xl border border-amber-300/25 bg-gradient-to-br from-amber-300/10 via-brand-dark to-brand-darkest p-6 md:p-9" aria-labelledby="golden-ticket-heading">
+        <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl"></div>
+        <div class="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <div class="mb-5 flex flex-wrap items-center gap-3">
+              <span class="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-amber-200">Featured · Class of 2026</span>
+              <span class="text-sm font-semibold text-white/70">3 local businesses</span>
+            </div>
+            <h3 id="golden-ticket-heading" class="mb-4 font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
+              The <span class="bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 bg-clip-text text-transparent">Golden Ticket</span>
+            </h3>
+            <p class="mb-6 max-w-2xl leading-relaxed text-white/75">
+              Three selected local businesses can have the <span class="font-semibold text-white">$497 website build and launch fee waived</span>. Winners continue on the Core plan at $297/month for a 12-month term. See the full details and eligibility before applying.
+            </p>
+            <a
+              href="/promotions/the-golden-ticket/"
+              class="cta-glow-shine inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] px-6 py-3 font-bold text-black transition-all duration-300 hover:-translate-y-0.5 hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest"
+            >
+              View Golden Ticket Details <span class="ml-2" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-5 md:p-6">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-amber-200">Application deadline</p>
+            <p class="mb-2 font-heading text-2xl font-bold text-white">December 15, 2026</p>
+            <p class="text-sm leading-relaxed text-white/65">Applications close at 11:59 PM ET. Only three spots are available for the Class of 2026.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <!-- Free SEO Audit -->
+        <a
+          href="/promotions/free-seo-audit/"
+          aria-label="Learn more about the free SEO audit"
+          class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/50 hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest md:p-7"
+        >
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 text-brand-darkest shadow-lg shadow-lime-500/20">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-cyan">Complimentary review</p>
+          <h3 class="mb-3 font-heading text-2xl font-bold text-white transition-colors group-hover:text-brand-cyan-light">Free SEO Audit</h3>
+          <p class="mb-5 leading-relaxed text-white/70">
+            Request a review of your website's search visibility and get practical next steps for improving it.
+          </p>
+          <ul class="mb-7 space-y-2 text-sm text-white/80">
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Technical and on-page review</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Keyword and competitor insights</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Prioritized action plan</li>
+          </ul>
+          <span class="mt-auto inline-flex items-center gap-2 font-bold text-brand-cyan transition-transform group-hover:translate-x-1">
+            Request an audit <span aria-hidden="true">→</span>
+          </span>
+        </a>
+
+        <!-- Free Logo Design -->
+        <a
+          href="/promotions/free-logo-design/"
+          aria-label="Learn more about free logo design with a web package"
+          class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/50 hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest md:p-7"
+        >
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 text-brand-darkest shadow-lg shadow-lime-500/20">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+          </div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-cyan">With a full web package</p>
+          <h3 class="mb-3 font-heading text-2xl font-bold text-white transition-colors group-hover:text-brand-cyan-light">Free Logo Design</h3>
+          <p class="mb-5 leading-relaxed text-white/70">
+            Invest in a full web design package and receive a custom logo design at no additional charge.
+          </p>
+          <ul class="mb-7 space-y-2 text-sm text-white/80">
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Custom logo concepts</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Revisions to refine the design</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Files for digital and print use</li>
+          </ul>
+          <span class="mt-auto inline-flex items-center gap-2 font-bold text-brand-cyan transition-transform group-hover:translate-x-1">
+            See offer details <span aria-hidden="true">→</span>
+          </span>
+        </a>
+
+        <!-- Referral Bonus -->
+        <a
+          href="/promotions/referral-bonus/"
+          aria-label="Learn more about the $100 referral bonus"
+          class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-brand-dark to-brand-darkest p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/50 hover:shadow-[0_18px_40px_rgba(0,0,0,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest md:p-7"
+        >
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 text-brand-darkest shadow-lg shadow-lime-500/20">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-cyan">Share the word</p>
+          <h3 class="mb-3 font-heading text-2xl font-bold text-white transition-colors group-hover:text-brand-cyan-light">$100 Referral Bonus</h3>
+          <p class="mb-5 leading-relaxed text-white/70">
+            Earn $100 for each successful referral. There's no stated limit, and payment is sent after the referred project is completed.
+          </p>
+          <ul class="mb-7 space-y-2 text-sm text-white/80">
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>$100 per successful referral</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>No cap on referrals</li>
+            <li><span class="mr-2 text-brand-accent" aria-hidden="true">✓</span>Paid after project completion</li>
+          </ul>
+          <span class="mt-auto inline-flex items-center gap-2 font-bold text-brand-cyan transition-transform group-hover:translate-x-1">
+            Explore the referral program <span aria-hidden="true">→</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="px-4 py-16 md:py-20">
+    <div class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-brand-cyan/20 bg-gradient-to-br from-brand-dark via-brand-darkest to-brand-dark p-8 text-center md:p-12">
+      <div class="pointer-events-none absolute -right-20 -top-28 h-64 w-64 rounded-full bg-brand-cyan/10 blur-3xl"></div>
+      <div class="relative">
+        <p class="mb-3 text-label uppercase tracking-widest text-brand-glow">✦ Questions About an Offer?</p>
+        <h2 class="mb-3 font-heading text-section-heading font-bold text-white md:text-section-heading-md">We're Just a Phone Call Away</h2>
+        <p class="mb-4 text-lg font-semibold text-brand-cyan">Texting is Welcome as well!</p>
+        <p class="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-white/75">
+          Get in touch and we'll walk you through the details, eligibility, and what makes sense for your business.
+        </p>
+        <a href="/contact/" class="cta-glow-shine inline-flex min-h-12 items-center justify-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] px-7 py-3 font-bold text-black transition-all duration-300 hover:-translate-y-0.5 hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest">
+          Contact Shelby Web Company
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
