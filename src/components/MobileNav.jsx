@@ -45,6 +45,7 @@ const industryLinks = [
 ];
 
 const promotionLinks = [
+  { href: '/promotions/local-business-launchpad/', label: 'Local Business Launchpad' },
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
   { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
