@@ -14,8 +14,8 @@ import PixieDust from '../../components/PixieDust.jsx';
       <p class="text-silver-shimmer text-label uppercase tracking-widest mb-4">✦ Our Services</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-[2.8rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.2rem] font-black text-white mb-4 leading-[0.9] tracking-tight">
-          Everything Your Business Needs to <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Get Found Online</span>
+        <h1 class="font-heading text-[3.2rem] sm:text-[4.5rem] md:text-[5.8rem] lg:text-[7rem] font-black text-white mb-4 leading-[0.9] tracking-tight">
+          Shelby Web Company 2026 <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Complete Set of Services</span>
         </h1>
       </div>
       <p class="text-body-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -28,148 +28,93 @@ import PixieDust from '../../components/PixieDust.jsx';
   <section class="py-24 px-4" aria-labelledby="services-grid-heading">
     <div class="max-w-7xl mx-auto">
       <h2 id="services-grid-heading" class="sr-only">Our core services</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Web Design Card -->
+          <a href="/services/web-design/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Web Design</h3>
+              <p class="text-[1.07rem] text-white/70 mb-4">Custom, responsive websites that convert visitors into customers. Optimized for local businesses and service businesses.</p>
+              <ul class="space-y-2 text-[1.07rem] text-white/70 mb-4">
+                <li>• Mobile-First Design</li>
+                <li>• Lightning Fast Loading</li>
+                <li>• Lead Generation Forms</li>
+                <li>• Local SEO Built-In</li>
+              </ul>
+              <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+                Learn About Web Design →
+              </span>
+            </div>
+          </a>
 
-        <!-- Web Design and Development -->
-        <a href="/services/web-design/" aria-label="Learn more about Web Design and Development" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          </div>
-          <h3 class="text-card-title font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Web Design and Development</h3>
-          <p class="text-white/80 mb-4 text-card-body leading-relaxed">
-            Hand-coded Astro sites built for Core Web Vitals — not templates. Every site is a “Business Machine” engineered to turn visitors into booked work.
-          </p>
-          <p class="text-white/60 text-body-sm mb-4">See how we build for <a href="#industries" class="text-brand-cyan hover:underline decoration-brand-cyan/30">your trade</a>.</p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <ul class="text-white/90 text-body-sm space-y-1">
-              <li>✓ Mobile-First Design</li>
-              <li>✓ Lightning Fast Loading</li>
-              <li>✓ Lead Generation Forms</li>
-              <li>✓ Local SEO Built-In</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
+          <!-- Branding Card -->
+          <a href="/services/branding/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+              </div>
+              <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Logo Design & Branding</h3>
+              <p class="text-[1.07rem] text-white/70 mb-4">Professional branding packages that make your business stand out from competitors and build trust with customers.</p>
+              <ul class="space-y-2 text-[1.07rem] text-white/70 mb-4">
+                <li>• Custom Logo Design</li>
+                <li>• Brand Identity Package</li>
+                <li>• Business Card Design</li>
+                <li>• Social Media Assets</li>
+              </ul>
+              <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+                Learn About Branding →
+              </span>
+            </div>
+          </a>
 
-        <!-- Branding -->
-        <a href="/services/branding/" aria-label="Learn more about Branding" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
-          </div>
-          <h3 class="text-card-title font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Branding</h3>
-          <p class="text-white/80 mb-4 text-card-body leading-relaxed">
-            More than a logo — a full identity system that builds trust across your site, cards, trucks, and socials.
-          </p>
-          <p class="text-white/60 text-body-sm mb-4">Pair with <a href="/services/web-design/" class="text-brand-cyan hover:underline decoration-brand-cyan/30">Web Design and Development</a> for a consistent launch.</p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <ul class="text-white/90 text-body-sm space-y-1">
-              <li>✓ Custom Logo Design</li>
-              <li>✓ Brand Identity Package</li>
-              <li>✓ Business Card Design</li>
-              <li>✓ Social Media Assets</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
+          <!-- SEO Card -->
+          <a href="/services/seo/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">SEO Services</h3>
+              <p class="text-[1.07rem] text-white/70 mb-4">Complete search engine optimization to help your business dominate search results and attract more customers.</p>
+              <ul class="space-y-2 text-[1.07rem] text-white/70 mb-4">
+                <li>• Technical SEO</li>
+                <li>• On-Page Optimization</li>
+                <li>• Local Search Dominance</li>
+                <li>• Google Business Profile</li>
+              </ul>
+              <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+                Learn About SEO Services →
+              </span>
+            </div>
+          </a>
 
-        <!-- SEO / GEO -->
-        <a href="/services/seo/" aria-label="Learn more about SEO and GEO" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-          </div>
-          <h3 class="text-card-title font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">SEO / GEO</h3>
-          <p class="text-white/80 mb-4 text-card-body leading-relaxed">
-            Technical SEO plus GEO — built for rankings and AI citations. 72-hour indexing, Map Pack, and GBP wired from day one.
-          </p>
-          <p class="text-white/60 text-body-sm mb-4">Explore <a href="#industries" class="text-brand-cyan hover:underline decoration-brand-cyan/30">trade-specific SEO</a> in Industries below.</p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <ul class="text-white/90 text-body-sm space-y-1">
-              <li>✓ Technical SEO Audits</li>
-              <li>✓ On-Page &amp; GEO Optimization</li>
-              <li>✓ Local Search &amp; Map Pack</li>
-              <li>✓ Google Business Profile</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-        <!-- Custom Software “Business Machines” -->
-        <a href="/services/custom-software-saas/" aria-label="Learn more about Custom Software Business Machines" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest p-8 rounded-2xl border border-brand-blue/20 hover:border-lime-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-brand-darkest">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-200 via-lime-400 to-lime-600 rounded-lg flex items-center justify-center mb-6 text-brand-darkest shadow-lg shadow-lime-500/30">
-            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-          </div>
-          <h3 class="text-card-title font-bold text-white group-hover:text-lime-400 transition-colors duration-300 mb-3">Custom Software “Business Machines”</h3>
-          <p class="text-white/80 mb-4 text-card-body leading-relaxed">
-            STRAT and custom builds — portals, SaaS, and automations tailored to your business. You own the code.
-          </p>
-          <p class="text-white/60 text-body-sm mb-4">See <a href="/services/case-studies/" class="text-brand-cyan hover:underline decoration-brand-cyan/30">case studies</a> for real builds.</p>
-          <div class="bg-brand-darkest/50 border border-brand-blue/20 rounded-lg p-4 mb-6">
-            <ul class="text-white/90 text-body-sm space-y-1">
-              <li>✓ Custom Web Applications</li>
-              <li>✓ SaaS Platforms</li>
-              <li>✓ AI &amp; Automation Tools</li>
-              <li>✓ Scalable &amp; Secure</li>
-            </ul>
-          </div>
-          <span class="inline-block w-full text-center bg-white/10 backdrop-blur-md border border-white/20 text-brand-cyan-light px-6 py-3 rounded-lg font-bold group-hover:bg-white/20 group-hover:border-white/40 transition-all duration-300">
-            Learn More
-          </span>
-        </a>
-
-      </div>
+          <!-- Custom Software & SaaS Card -->
+          <a href="/services/custom-software-saas/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              </div>
+              <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Custom Software & SaaS (Business Machines)</h3>
+              <p class="text-[1.07rem] text-white/70 mb-4">Custom-built software and business machines engineered to automate, streamline, and give your business a powerful edge.</p>
+              <ul class="space-y-2 text-[1.07rem] text-white/70 mb-4">
+                <li>• Custom Business Machines</li>
+                <li>• SaaS Applications</li>
+                <li>• API Integrations</li>
+                <li>• Business Automation</li>
+              </ul>
+              <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+                Learn About Custom Software →
+              </span>
+            </div>
+          </a>
+        </div>
     </div>
   </section>
-
-  <!-- Service Areas -->
-  <section class="py-20 px-4 bg-brand-dark border-y border-white/5">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Where We Work</p>
-        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">Serving Western North Carolina</h2>
-        <p class="text-white/70 max-w-2xl mx-auto">We build websites and SEO systems for local service businesses across Cleveland, Gaston, and Rutherford counties — and beyond.</p>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        <a href="/web-design-shelby-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Shelby, NC</p>
-          <p class="text-white/50 text-sm">Home base · Cleveland County</p>
-        </a>
-        <a href="/web-design-gastonia-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Gastonia, NC</p>
-          <p class="text-white/50 text-sm">Gaston County</p>
-        </a>
-        <a href="/web-design-kings-mountain-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Kings Mountain, NC</p>
-          <p class="text-white/50 text-sm">Cleveland County</p>
-        </a>
-        <a href="/web-design-forest-city-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Forest City, NC</p>
-          <p class="text-white/50 text-sm">Rutherford County</p>
-        </a>
-        <a href="/web-design-boiling-springs-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Boiling Springs, NC</p>
-          <p class="text-white/50 text-sm">Cleveland County</p>
-        </a>
-        <a href="/web-design-polkville-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Polkville, NC</p>
-          <p class="text-white/50 text-sm">Cleveland County</p>
-        </a>
-        <a href="/web-design-asheville-nc/" class="group bg-brand-darkest border border-white/10 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-          <p class="text-white font-semibold group-hover:text-brand-cyan">Asheville, NC</p>
-          <p class="text-white/50 text-sm">Buncombe County</p>
-        </a>
-<a href="/services/case-studies/" class="group bg-brand-darkest border border-brand-purple/20 rounded-xl p-5 hover:border-brand-cyan/50 hover:-translate-y-1 transition-all duration-300">
-           <p class="text-white font-semibold group-hover:text-brand-cyan">See Real Results →</p>
-           <p class="text-white/50 text-sm">Case studies &amp; proof</p>
-         </a>
-       </div>
-     </div>
-   </section>
 
     <!-- Industries We Serve -->
    <section id="industries" class="py-20 px-4 bg-brand-dark border-y border-white/5" aria-labelledby="industries-heading">
