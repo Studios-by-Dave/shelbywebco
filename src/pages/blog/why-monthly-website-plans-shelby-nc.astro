@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "The 2026 Year of the Big Web Development Shift - Our New Pricing Structure",
+  "headline": "Shelby Web Company 2026 New Pricing Structure",
   "description": "A professional website for $297/month instead of a $3,000-$8,000 upfront bill. See how Shelby Web Company's new pricing works, what's included, and which plan fits your business.",
   "author": { "@type": "Organization", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com" },
   "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
@@ -13,8 +13,8 @@ const blogPostingSchema = {
 ---
 
 <BaseLayout 
-  title="The 2026 Year of the Big Web Development Shift - Our New Pricing Structure"
-  description="A professional website for $297/month instead of a $3,000-$8,000 upfront bill. See how Shelby Web Company's new pricing works, what's included, and which plan fits your business."
+  title="Shelby Web Company 2026 New Pricing Structure"
+  description="Shelby Web Company's 2026 pricing structure: three growth plans with modest launch fees and simple monthly pricing. See what's included at each tier."
 >
   <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>
   <article class="pt-24 pb-16 px-4">
@@ -27,20 +27,70 @@ const blogPostingSchema = {
           <span class="text-white/90 text-xs font-medium uppercase tracking-widest">September 2026</span>
         </div>
         <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1]">
-          Why We Moved to <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Monthly Website Plans</span>
+          Shelby Web Company <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">2026 New Pricing Structure</span>
         </h1>
         <p class="text-xl md:text-2xl text-white leading-relaxed max-w-3xl mx-auto">
-          A professional website for $297/month instead of a $3,000–$8,000 upfront bill. See how the shift to monthly plans works, what's included, and which tier fits your Shelby business.
+          A professional website for $297/month instead of a $3,000–$8,000 upfront bill. Here's how the 2026 pricing structure works, what's included at each tier, and which plan fits your Shelby business.
         </p>
       </header>
 
-      <!-- Main Image Placeholder -->
-      <div class="aspect-video bg-brand-dark border border-white/5 rounded-3xl mb-16 overflow-hidden shadow-2xl relative group">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-           <span class="text-brand-sky/20 font-heading text-4xl font-bold uppercase tracking-[0.2em] transform -rotate-12">Shelby Web Company Official</span>
+      <!-- 2026 Pricing Tiers -->
+      <div class="mb-16" data-animate>
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4 text-center">✦ 2026 Growth Plans</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Core -->
+          <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-6 text-center relative">
+            <h3 class="font-heading text-3xl font-black text-white mb-1">Core</h3>
+            <p class="text-[#f3db70] text-[10px] uppercase tracking-widest mb-3">12 months initial term</p>
+            <p class="text-white/70 text-xs mb-4 italic">A professionally managed website — without a $3,000 to $8,000 upfront bill.</p>
+            <div class="bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 mb-3">
+              <span class="text-brand-cyan font-black text-2xl">$297<span class="text-sm font-bold">/mo</span></span>
+            </div>
+            <p class="text-white/50 text-xs mb-4">Launch fee: $497</p>
+            <ul class="text-left text-sm text-white/70 space-y-2">
+              <li>• 4–5 page mobile-first website</li>
+              <li>• Hosting, SSL, backups &amp; security</li>
+              <li>• Foundational on-page &amp; local SEO</li>
+            </ul>
+          </div>
+
+          <!-- Plus -->
+          <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-[#f3db70]/50 rounded-2xl p-6 text-center relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#1c1c1c] text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap">Most Popular</div>
+            <h3 class="font-heading text-3xl font-black text-white mb-1">Plus</h3>
+            <p class="text-[#f3db70] text-[10px] uppercase tracking-widest mb-3">6–12 months initial term</p>
+            <p class="text-white/70 text-xs mb-4 italic">Active local SEO, content, and reporting for real visibility growth.</p>
+            <div class="bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 mb-3">
+              <span class="text-brand-cyan font-black text-2xl">$597<span class="text-sm font-bold">/mo</span></span>
+            </div>
+            <p class="text-white/50 text-xs mb-4">Launch fee: $798 – $998</p>
+            <ul class="text-left text-sm text-white/70 space-y-2">
+              <li>• Everything in Core</li>
+              <li>• Keyword &amp; competitor research</li>
+              <li>• Google Business Profile optimization</li>
+              <li>• Review-generation system</li>
+            </ul>
+          </div>
+
+          <!-- Ultra -->
+          <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-6 text-center relative">
+            <h3 class="font-heading text-3xl font-black text-white mb-1">Ultra</h3>
+            <p class="text-[#f3db70] text-[10px] uppercase tracking-widest mb-3">12 months initial term</p>
+            <p class="text-white/70 text-xs mb-4 italic">SEO plus conversion optimization, lead tracking, and priority support.</p>
+            <div class="bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 mb-3">
+              <span class="text-brand-cyan font-black text-2xl">$797<span class="text-sm font-bold">/mo</span></span>
+            </div>
+            <p class="text-white/50 text-xs mb-4">Launch fee: $998 – $1,498</p>
+            <ul class="text-left text-sm text-white/70 space-y-2">
+              <li>• Everything in Plus</li>
+              <li>• Conversion-rate optimization</li>
+              <li>• Lead tracking &amp; attribution</li>
+              <li>• Priority support &amp; strategy</li>
+            </ul>
+          </div>
         </div>
+        <p class="text-white/50 text-xs text-center mt-4">Plans continue month-to-month after the initial term. <a href="/pricing/" class="text-brand-cyan hover:underline">View full pricing details →</a></p>
       </div>
 
       <!-- Content -->
