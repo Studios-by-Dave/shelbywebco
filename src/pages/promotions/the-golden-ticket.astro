@@ -4,9 +4,32 @@ import PixieDust from '../../components/PixieDust.jsx';
 import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
 ---
 
+<style>
+  .brand-gradient-one {
+    background: linear-gradient(90deg, #dff7ff 0%, #7dd3fc 26%, #5eead4 52%, #d9f99d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .brand-gradient-two {
+    background: linear-gradient(90deg, #ecfeff 0%, #a5f3fc 24%, #bef264 58%, #fef3c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .brand-gradient-three {
+    background: linear-gradient(90deg, #fef3c7 0%, #f7cc76 28%, #fbbf24 52%, #7dd3fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+</style>
+
 <BaseLayout
-  title="The Golden Ticket — Free Website for 3 Local Businesses"
-  description="Shelby Web Co is choosing 3 local businesses for the Class of 2026. We waive the full $497 build & launch fee on a brand-new website. Applications close December 15, 2026."
+  title="The Golden Ticket — Free Website for 5 Local Businesses"
+  description="Shelby Web Co is choosing 5 local businesses for the Class of 2026. We waive the full $497 build & launch fee on a brand-new website. Applications close December 15, 2026."
 >
 
   <!-- Hero Section -->
@@ -15,7 +38,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
       <p class="text-brand-glow text-[0.7rem] uppercase tracking-[0.2em] mb-4">✦ Class of 2026</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-7xl font-bold mb-3 leading-tight" style="color: #f8d66d; text-shadow: 0 0 10px rgba(251,191,36,0.28), 0 0 18px rgba(251,191,36,0.18);">
+        <h1 class="font-heading text-[3.2rem] md:text-[5.2rem] font-bold mb-3 leading-tight" style="color: #f8d66d; text-shadow: 0 0 10px rgba(251,191,36,0.28), 0 0 18px rgba(251,191,36,0.18);">
           The <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(110deg, #fff7d6 0%, #fbbf24 18%, #fef3c7 33%, #f59e0b 52%, #fde68a 68%, #facc15 82%, #fff7d6 100%); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 0 12px rgba(251,191,36,0.45));">Golden Ticket</span>
         </h1>
       </div>
@@ -27,13 +50,13 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
         </div>
       </div>
 
-      <p class="text-lg md:text-xl text-white mb-6">
-        We're choosing <span class="text-brand-cyan font-semibold">3 local businesses</span> and building them a brand-new website —
-        we cover the full <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>, the same build work we previously
-        priced at <span class="text-brand-cyan font-semibold">$1,000–$1,200 per website</span>.
+      <p class="text-lg md:text-xl text-white mb-6 italic">
+        We're choosing <span class="text-brand-cyan font-semibold not-italic">5 local businesses</span> and building them a brand-new website —
+        we cover the full <span class="text-brand-cyan font-semibold not-italic">$497 build and launch fee</span>, the same build work we previously
+        priced at <span class="text-brand-cyan font-semibold not-italic">$1,000–$1,200 per website</span>.
       </p>
-      <p class="text-white/90 mb-8 font-semibold">
-        Applications close December 15, 2026 at 11:59 PM ET — only 3 spots for the Class of 2026.
+      <p class="text-white/90 mb-8 font-semibold text-sm md:text-base">
+        Applications close December 15, 2026 at 11:59 PM ET — only 5 spots for the Class of 2026.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a
@@ -43,7 +66,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
           Apply for Your Golden Ticket
         </a>
         <span class="inline-flex items-center rounded-full border border-[#f8d66d]/40 bg-[#fbbf24]/10 px-3 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#f8d66d] shadow-[0_0_18px_rgba(251,191,36,0.2)]">
-          3 winners • 1 cohort
+          5 winners • 1 cohort
         </span>
       </div>
     </div>
@@ -51,10 +74,10 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
 
   <section class="py-10 px-4 bg-brand-darkest border-t border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why We Do This</h2>
-      <div class="space-y-4 text-white/90 text-lg">
-        <p><span class="text-brand-cyan font-semibold">1.</span> This is simply good business. Being fully honest and transparent creates immediate value for the client and builds trust before the first invoice ever exists. When people see clear value, they feel confident in the relationship — and confidence is what turns a website into a real opportunity.</p>
-        <p><span class="text-brand-cyan font-semibold">2.</span> Shelby Web Company is still in the early, growing stages of the business. In a new agency, giving a little upfront value is smart strategy: it creates momentum, earns credibility fast, and generates real case studies, proof, and organic SEO traction that strengthens the brand across the local business community.</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 text-center" style="background: linear-gradient(90deg, #dff7ff 0%, #7dd3fc 25%, #60a5fa 52%, #dfe7ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Why We Do This</h2>
+      <div class="space-y-4 text-white/90 text-lg italic">
+        <p><span class="text-brand-cyan font-semibold not-italic">1.</span> This is simply good business. Being fully honest and transparent creates immediate value for the client and builds trust before the first invoice ever exists. When people see clear value, they feel confident in the relationship — and confidence is what turns a website into a real opportunity.</p>
+        <p><span class="text-brand-cyan font-semibold not-italic">2.</span> Shelby Web Company is still in the early, growing stages of the business. In a new agency, giving a little upfront value is smart strategy: it creates momentum, earns credibility fast, and generates real case studies, proof, and organic SEO traction that strengthens the brand across the local business community.</p>
       </div>
     </div>
   </section>
@@ -63,7 +86,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">What the 3 Winners Receive</h2>
+        <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-6 brand-gradient-one">What the 5 Winners Receive</h2>
         <p class="text-white max-w-2xl mx-auto text-lg">
           Every winner gets our Core growth plan with the launch fee fully covered by us — a direct giveback to the
           community that built this company.
@@ -75,7 +98,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
           <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan to-brand-blue shadow-[0_0_15px_rgba(34,211,238,0.25)] rounded-lg flex items-center justify-center mb-6 text-white">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Your Very Own Fully Custom Website Build, Setup, Fully Hosted &amp; Deployed — 100% FREE</h3>
+          <h3 class="text-[1.8rem] md:text-[2.1rem] font-bold mb-3 text-[#f3d77f]">Your Very Own Fully Custom Website Build, Setup, Fully Hosted &amp; Deployed — 100% FREE</h3>
           <p class="text-white/90 mb-4">
             We cover the entire <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>. That's the phase of the project where the real work happens — design, build, content setup, and launch — equivalent to our previous standard web pricing of <span class="text-brand-cyan font-semibold">$1,000–$1,200 per build</span>.
           </p>
@@ -89,7 +112,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Everything in Our Core Plan</h3>
+          <h3 class="text-[1.8rem] md:text-[2.1rem] font-bold mb-3 text-[#bfe3ff]">Everything in Our Core Plan</h3>
           <ul class="text-white/90 space-y-2">
             <li>✓ 4–5 page mobile-first website</li>
             <li>✓ Hosting, SSL, backups &amp; security</li>
@@ -104,7 +127,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
       </div>
 
       <div class="mt-8 bg-brand-dark p-8 rounded-2xl border border-white/5">
-        <h3 class="text-xl font-bold text-white mb-3">The Honest Details</h3>
+        <h3 class="text-[1.6rem] md:text-[1.9rem] font-bold mb-3 text-[#d7f9b5]">The Honest Details</h3>
         <p class="text-white/90">
           Winners continue on the Core plan at <span class="text-brand-cyan font-semibold">$297/month</span> for a standard
           12-month term — the same plan any Core client signs. That monthly fee covers ongoing hosting, maintenance, edits,
@@ -120,7 +143,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <!-- How It Works -->
   <section class="py-24 px-4" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">How the Golden Ticket Works</h2>
+      <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-16 text-center brand-gradient-one">How the Golden Ticket Works</h2>
 
       <div class="space-y-8">
         <div class="flex gap-6">
@@ -130,8 +153,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">Tell Your Story</h3>
-            <p class="text-white">Fill out the short application below. No pitch decks, no jargon — just tell us what you do, who you serve, and why a modern website would change your next 12 months.</p>
+            <h3 class="text-[1.45rem] md:text-[1.7rem] font-bold text-white mb-2">Tell Your Story</h3>
+            <p class="text-white italic">Fill out the short application below. No pitch decks, no jargon — just tell us what you do, who you serve, and why a modern website would change your next 12 months.</p>
           </div>
         </div>
 
@@ -142,8 +165,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">We Review Every Application</h3>
-            <p class="text-white">A human reviews every submission. We're looking for local businesses with real stories, real customers, and a clear reason a better website matters right now.</p>
+            <h3 class="text-[1.45rem] md:text-[1.7rem] font-bold text-white mb-2">We Review Every Application</h3>
+            <p class="text-white italic">A human reviews every submission. We're looking for local businesses with real stories, real customers, and a clear reason a better website matters right now.</p>
           </div>
         </div>
 
@@ -154,8 +177,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">3 Winners Announced — Class of 2026</h3>
-            <p class="text-white">We choose exactly 3 businesses as a one-time cohort. This isn't a rolling giveaway — the Class of 2026 closes when applications close on December 15, 2026.</p>
+            <h3 class="text-[1.45rem] md:text-[1.7rem] font-bold text-white mb-2">5 Winners Announced — Class of 2026</h3>
+            <p class="text-white italic">We choose exactly 5 businesses as a one-time cohort. This isn't a rolling giveaway — the Class of 2026 closes when applications close on December 15, 2026.</p>
           </div>
         </div>
 
@@ -166,8 +189,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">We Build &amp; Launch</h3>
-            <p class="text-white">Winners kick off with a friendly pre-discovery call, then we design, build, and launch — weeks, not months. Your $497 build and launch fee is fully covered by us.</p>
+            <h3 class="text-[1.45rem] md:text-[1.7rem] font-bold text-white mb-2">We Build &amp; Launch</h3>
+            <p class="text-white italic">Winners kick off with a friendly pre-discovery call, then we design, build, and launch — weeks, not months. Your $497 build and launch fee is fully covered by us.</p>
           </div>
         </div>
 
@@ -178,8 +201,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white mb-2">We Measure the Results</h3>
-            <p class="text-white">At 30, 60, and 90 days we track the numbers together — traffic, calls, form fills, and rankings — so your story comes with proof, not promises.</p>
+            <h3 class="text-[1.45rem] md:text-[1.7rem] font-bold text-white mb-2">We Measure the Results</h3>
+            <p class="text-white italic">At 30, 60, and 90 days we track the numbers together — traffic, calls, form fills, and rankings — so your story comes with proof, not promises.</p>
           </div>
         </div>
       </div>
@@ -190,8 +213,8 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <section class="py-24 px-4 bg-brand-dark/50 border-y border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-14">
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">What We Ask in Return</h2>
-        <p class="text-white text-lg">
+        <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-6 brand-gradient-two">All We Ask in Return</h2>
+        <p class="text-white text-lg italic">
           This program costs us real money — we cover the $497 build and launch fee, equivalent to our previous standard
           web pricing of <span class="text-brand-cyan font-semibold">$1,000–$1,200 per build</span>. It only works for a small
           local shop like ours if it produces real proof and real relationships. Four simple asks:
@@ -202,32 +225,32 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
         <div class="flex gap-4">
           <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
           <div>
-            <h3 class="text-lg font-bold text-white mb-2">An Honest Testimonial</h3>
-            <p class="text-white">After launch, tell the truth about working with us — the good and the nitpicks. We'll use it as a case study alongside your 30/60/90-day results.</p>
+            <h3 class="text-[1.3rem] md:text-[1.55rem] font-bold text-white mb-2">An Honest Testimonial</h3>
+            <p class="text-white italic">After launch, tell the truth about working with us — the good and the nitpicks. We'll use it as a case study alongside your 30/60/90-day results.</p>
           </div>
         </div>
 
         <div class="flex gap-4">
           <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
           <div>
-            <h3 class="text-lg font-bold text-white mb-2">A Google Review</h3>
-            <p class="text-white">Once your site is live and you're happy with it, leave us a review on Google. Reviews are the lifeblood of local businesses — including ours.</p>
+            <h3 class="text-[1.3rem] md:text-[1.55rem] font-bold text-white mb-2">A Google Review</h3>
+            <p class="text-white italic">Once your site is live and you're happy with it, leave us a review on Google. Reviews are the lifeblood of local businesses — including ours.</p>
           </div>
         </div>
 
         <div class="flex gap-4">
           <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
           <div>
-            <h3 class="text-lg font-bold text-white mb-2">Permission to Feature You — 6 Months</h3>
-            <p class="text-white">We'd love to show off your site and results in our portfolio, social posts, and marketing for 6 months. You approve everything before it goes out.</p>
+            <h3 class="text-[1.3rem] md:text-[1.55rem] font-bold text-white mb-2">Permission to Feature You — 6 Months</h3>
+            <p class="text-white italic">We'd love to show off your site and results in our portfolio, social posts, and marketing for 6 months. You approve everything before it goes out.</p>
           </div>
         </div>
 
         <div class="flex gap-4">
           <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
           <div>
-            <h3 class="text-lg font-bold text-white mb-2">One Warm Intro</h3>
-            <p class="text-white">If you know one other business owner who deserves a better website, pass along their name. That's it — one introduction.</p>
+            <h3 class="text-[1.3rem] md:text-[1.55rem] font-bold text-white mb-2">One Warm Intro</h3>
+            <p class="text-white italic">If you know one other business owner who deserves a better website, pass along their name. That's it — one introduction.</p>
           </div>
         </div>
       </div>
@@ -238,7 +261,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <section class="py-24 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">The 30 / 60 / 90-Day Case Study</h2>
+        <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-6 brand-gradient-three">The 30 / 60 / 90-Day Case Study</h2>
         <p class="text-white max-w-2xl mx-auto text-lg">
           Every Golden Ticket site becomes a living case study. We track what matters from day one so your giveback fuels the
           next business's chance.
@@ -248,18 +271,18 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 text-center">
           <p class="text-brand-cyan font-bold text-sm uppercase tracking-widest mb-3">Day 30</p>
-          <h3 class="text-2xl font-bold text-white mb-3">Foundation Live</h3>
-          <p class="text-white/90">Site launched, Analytics and Search Console running, contact forms delivering leads, foundational local SEO in place.</p>
+          <h3 class="text-[1.65rem] md:text-[1.9rem] font-bold text-white mb-3">Foundation Live</h3>
+          <p class="text-white/90 italic">Site launched, Analytics and Search Console running, contact forms delivering leads, foundational local SEO in place.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 text-center">
           <p class="text-brand-cyan font-bold text-sm uppercase tracking-widest mb-3">Day 60</p>
-          <h3 class="text-2xl font-bold text-white mb-3">First Signals</h3>
-          <p class="text-white/90">First organic impressions, calls, and form fills rolling in. We tune pages and content around what's actually working.</p>
+          <h3 class="text-[1.65rem] md:text-[1.9rem] font-bold text-white mb-3">First Signals</h3>
+          <p class="text-white/90 italic">First organic impressions, calls, and form fills rolling in. We tune pages and content around what's actually working.</p>
         </div>
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 text-center">
           <p class="text-brand-cyan font-bold text-sm uppercase tracking-widest mb-3">Day 90</p>
-          <h3 class="text-2xl font-bold text-white mb-3">Proof on Paper</h3>
-          <p class="text-white/90">A clean results snapshot — traffic, leads, and rankings — that becomes your case study and our receipts for the program.</p>
+          <h3 class="text-[1.65rem] md:text-[1.9rem] font-bold text-white mb-3">Proof on Paper</h3>
+          <p class="text-white/90 italic">A clean results snapshot — traffic, leads, and rankings — that becomes your case study and our receipts for the program.</p>
         </div>
       </div>
     </div>
@@ -268,50 +291,114 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <!-- FAQ Section -->
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Frequently Asked Questions</h2>
+      <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-16 text-center brand-gradient-one">Frequently Asked Questions</h2>
 
-      <div class="space-y-6">
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">Is it really free?</h3>
-          <p class="text-white">Yes — we cover the full $497 build and launch fee, which includes the actual design, build, content setup, and launch work we previously priced at $1,000–$1,200 per website. The ongoing website investment is then $297/month for a standard 12-month term, and that includes hosting, maintenance, edits, and ongoing SEO and AI improvements to build organic ranking, authority, and long-term ROI. No upfront project invoice, no surprise charges.</p>
+      <div class="space-y-3">
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">Is it really free?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">Yes — we cover the full $497 build and launch fee, which includes the actual design, build, content setup, and launch work we previously priced at $1,000–$1,200 per website. The ongoing website investment is then $297/month for a standard 12-month term, and that includes hosting, maintenance, edits, and ongoing SEO and AI improvements to build organic ranking, authority, and long-term ROI. No upfront project invoice, no surprise charges.</p>
+          </div>
         </div>
 
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">Who can apply?</h3>
-          <p class="text-white">Local businesses in the areas we serve — whether you're a solo operator or a small team. You don't need a website today; old, outdated, or nonexistent all qualify. You do need to be open for business and ready to launch within the program window.</p>
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">Who can apply?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">Local businesses in the areas we serve — whether you're a solo operator or a small team. You don't need a website today; old, outdated, or nonexistent all qualify. You do need to be open for business and ready to launch within the program window.</p>
+          </div>
         </div>
 
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">How are the 3 winners chosen?</h3>
-          <p class="text-white">By story and need. We're looking for businesses where a modern website would genuinely change the next 12 months — and where the partnership makes sense both ways. Every application is read by a human.</p>
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">How are the 5 winners chosen?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">By story and need. We're looking for businesses where a modern website would genuinely change the next 12 months — and where the partnership makes sense both ways. Every application is read by a human.</p>
+          </div>
         </div>
 
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">What's the deadline?</h3>
-          <p class="text-white">December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 3 businesses — once applications close, this page closes with it.</p>
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">What's the deadline?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 5 businesses — once applications close, this page closes with it.</p>
+          </div>
         </div>
 
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">I already have a website. Can I still apply?</h3>
-          <p class="text-white">Absolutely. If your current site is dated, slow, or invisible on Google, that's exactly the situation this program exists for. Tell us about it in the application.</p>
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">I already have a website. Can I still apply?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">Absolutely. If your current site is dated, slow, or invisible on Google, that's exactly the situation this program exists for. Tell us about it in the application.</p>
+          </div>
         </div>
 
-        <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
-          <h3 class="text-lg font-bold text-white mb-3">What's the catch?</h3>
-          <p class="text-white">No catch — just the four asks: an honest testimonial, a Google review, permission to feature your results in our marketing for 6 months (with your approval), and one warm intro to another business owner. We can afford the $497 waiver because those results help us win the next round of real clients.</p>
+        <div class="faq-item bg-brand-dark/80 border border-white/5 rounded-xl px-5 py-4 transition-all duration-300">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-[1.05rem] md:text-[1.2rem] font-bold text-white leading-snug">What's the catch?</h3>
+            <button type="button" class="faq-toggle shrink-0 text-sm font-semibold text-brand-cyan hover:text-white transition-colors" aria-expanded="false">Read more</button>
+          </div>
+          <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-3 text-sm md:text-base text-white/90 leading-relaxed italic">No catch — just the four asks: an honest testimonial, a Google review, permission to feature your results in our marketing for 6 months (with your approval), and one warm intro to another business owner. We can afford the $497 waiver because those results help us win the next round of real clients.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.faq-item').forEach((item) => {
+      const toggle = item.querySelector('.faq-toggle');
+      const answer = item.querySelector('.faq-answer');
+
+      if (!toggle || !answer) return;
+
+      const setOpen = () => {
+        item.classList.add('ring-1', 'ring-brand-cyan/30', 'bg-brand-dark');
+        answer.classList.remove('max-h-0', 'opacity-0');
+        answer.classList.add('max-h-[360px]', 'opacity-100');
+        toggle.textContent = 'Read less';
+        toggle.setAttribute('aria-expanded', 'true');
+      };
+
+      const setClosed = () => {
+        item.classList.remove('ring-1', 'ring-brand-cyan/30', 'bg-brand-dark');
+        answer.classList.add('max-h-0', 'opacity-0');
+        answer.classList.remove('max-h-[360px]', 'opacity-100');
+        toggle.textContent = 'Read more';
+        toggle.setAttribute('aria-expanded', 'false');
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        if (isOpen) {
+          setClosed();
+        } else {
+          setOpen();
+        }
+      });
+    });
+  </script>
 
   <!-- Application Form -->
   <section id="apply-form" class="py-24 px-4 bg-brand-dark/50 border-y border-white/5" data-animate>
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-10">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications Close December 15, 2026</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Apply for the Golden Ticket</h2>
+        <h2 class="font-heading text-[2.5rem] md:text-[3.2rem] font-bold mb-6 brand-gradient-two">Apply for the Golden Ticket</h2>
         <p class="text-xl text-white mb-4">
-          Tell your story — that's the whole application. 3 spots for the Class of 2026.
+          Tell your story — that's the whole application. 5 spots for the Class of 2026.
         </p>
         <p class="text-white/90 text-sm">
           Curious how the program fits with our standard plans? See full <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">pricing</a>
@@ -394,7 +481,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
         </div>
         <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Application Received!</h3>
         <p class="text-white text-lg max-w-md mx-auto">
-          Your story is in. We read every application personally — if you're one of the 3 winners for the Class of 2026,
+          Your story is in. We read every application personally — if you're one of the 5 winners for the Class of 2026,
           we'll reach out directly.
         </p>
       </div>

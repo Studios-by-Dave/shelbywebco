@@ -133,6 +133,110 @@
   background-size: 32px 32px;
 }
 
+@keyframes golden-ticket-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-12deg) scale(0.92);
+    opacity: 0;
+    visibility: hidden;
+  }
+  8% {
+    opacity: 0.88;
+    visibility: visible;
+  }
+  15% {
+    transform: translate3d(calc(35vw + 35px), calc(var(--drift-y) * -0.45), 0) rotate(9deg) scale(1);
+    opacity: 0.9;
+  }
+  24% {
+    transform: translate3d(calc(100vw + 120px), var(--drift-y), 0) rotate(18deg) scale(0.96);
+    opacity: 0.84;
+    visibility: visible;
+  }
+  28%, 100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.golden-ticket-easter-egg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+  filter: drop-shadow(0 10px 18px rgba(251, 191, 36, 0.12));
+}
+
+.golden-ticket-float {
+  position: absolute;
+  display: block;
+  width: 82px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 243, 183, 0.8);
+  background: linear-gradient(135deg, rgba(255, 248, 200, 0.95) 0%, rgba(251, 191, 36, 0.95) 24%, rgba(245, 158, 11, 0.95) 52%, rgba(255, 236, 164, 0.9) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 0 18px rgba(251,191,36,0.3), 0 0 26px rgba(245,158,11,0.22);
+  transform-origin: center;
+  animation: golden-ticket-float 18s linear infinite backwards;
+  opacity: 0;
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.golden-ticket-float:hover {
+  filter: brightness(1.12);
+}
+
+.golden-ticket-float:focus-visible {
+  outline: 3px solid #fff7d6;
+  outline-offset: 4px;
+}
+
+.golden-ticket-float::before,
+.golden-ticket-float::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(28, 28, 28, 0.82);
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+.golden-ticket-float::before {
+  left: -6px;
+}
+
+.golden-ticket-float::after {
+  right: -6px;
+}
+
+.golden-ticket-float span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(32, 20, 0, 0.78);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.36rem;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.golden-ticket-float .ticket-rim {
+  position: absolute;
+  inset: 5px 7px;
+  border-radius: 7px;
+  border: 1px solid rgba(120, 80, 2, 0.35);
+  pointer-events: none;
+}
+
 @layer components {
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -167,6 +271,11 @@
     .animate-mobile-golden-ticket-glow {
       animation: none;
       text-shadow: 0 0 14px rgba(251, 191, 36, 0.6), 0 0 26px rgba(251, 191, 36, 0.32);
+    }
+
+    .golden-ticket-float {
+      animation: none;
+      opacity: 0.5;
     }
   }
 

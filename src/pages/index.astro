@@ -54,6 +54,8 @@ import hsCross from '../../assets/logo banner/hscross.webp';
     </div>
   </div>
 
+  <div id="golden-ticket-easter-egg" class="golden-ticket-easter-egg" aria-hidden="true"></div>
+
   <style>
     @keyframes promo-ticker {
       0% { transform: translateX(0%); }
@@ -73,8 +75,8 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
             <span class="text-white font-bold text-sm tracking-wide drop-shadow-md">Shelby Web Design for Local Businesses</span>
           </div>
-          <h1 class="font-heading text-[3.1rem] sm:text-[4.45rem] md:text-[5.7rem] lg:text-[5.1rem] xl:text-[5.55rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
-            Custom Websites. Local SEO. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Business Machines.</span><span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block text-[2.2rem] sm:text-[2.8rem] md:text-[3.1rem] lg:text-[3.2rem] xl:text-[3.4rem]"> Built for Local Business.</span>
+          <h1 class="font-heading text-[3.2rem] sm:text-[4.6rem] md:text-[5.95rem] lg:text-[5.4rem] xl:text-[5.8rem] font-black text-white mb-2 leading-[0.9] max-w-full break-words tracking-tight">
+            Custom Websites. Local SEO. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Business Machines.</span><span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block text-[2.4rem] sm:text-[3rem] md:text-[3.3rem] lg:text-[3.5rem] xl:text-[3.8rem]"> Built for Local Business.</span>
           </h1>
           <p class="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-xl leading-relaxed">
             Local Web Design Backed by 20+ Years of I.T. Experience.
@@ -195,6 +197,50 @@ import hsCross from '../../assets/logo banner/hscross.webp';
       </div>
     </div>
   </section>
+
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const tray = document.getElementById('golden-ticket-easter-egg');
+
+      if (!tray || prefersReducedMotion) return;
+
+      const ticketCount = 1;
+
+      for (let i = 0; i < ticketCount; i += 1) {
+        const ticket = document.createElement('a');
+        ticket.className = 'golden-ticket-float';
+        ticket.href = '/promotions/the-golden-ticket/';
+        ticket.setAttribute('aria-label', 'Visit the Golden Ticket promotion');
+
+        const duration = (14 + Math.random() * 10).toFixed(2);
+        const delay = (1 + Math.random() * 8).toFixed(2);
+        const randomizeFlightPath = () => {
+          const driftY = (Math.random() * 180 - 90).toFixed(0);
+          const startY = (12 + Math.random() * 68).toFixed(2);
+
+          ticket.style.top = `${startY}%`;
+          ticket.style.setProperty('--drift-y', `${driftY}px`);
+        };
+
+        ticket.style.left = '-100px';
+        ticket.style.animationDuration = `${duration}s`;
+        ticket.style.animationDelay = `${delay}s`;
+        randomizeFlightPath();
+        ticket.addEventListener('animationiteration', randomizeFlightPath);
+
+        const label = document.createElement('span');
+        label.textContent = 'Golden Ticket';
+
+        const rim = document.createElement('div');
+        rim.className = 'ticket-rim';
+
+        ticket.appendChild(label);
+        ticket.appendChild(rim);
+        tray.appendChild(ticket);
+      }
+    })();
+  </script>
 
 <!-- Services Section -->
    <section class="py-8 md:py-12 px-4 -mt-16 md:-mt-20 relative z-20" data-animate>
