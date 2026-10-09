@@ -2,8 +2,10 @@ import { useEffect, useMemo, useState } from 'react';
 
 const topLinks = [
   { href: '/', label: 'Home' },
+  { href: '/services/', label: 'Services' },
   { href: '/about/', label: 'About' },
   { href: '/pricing/', label: 'Pricing' },
+  { href: '/promotions/', label: 'Promotions' },
   { href: '/contact/', label: 'Contact' },
   { href: '/blog/', label: 'Blog' },
   { href: 'tel:+17044738188', label: '(704) 473-8188' },
@@ -43,7 +45,6 @@ const industryLinks = [
 ];
 
 const promotionLinks = [
-  { href: '/promotions/', label: 'Promotions' },
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
   { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
@@ -53,12 +54,6 @@ const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industry
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
-  const [pricingOpen, setPricingOpen] = useState(false);
-  const [promotionsOpen, setPromotionsOpen] = useState(false);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -99,7 +94,7 @@ export default function MobileNav() {
     setQuery('');
   };
 
-  const renderLink = (link, nested = false) => {
+  const renderLink = (link) => {
     const isBlog = link.label === 'Blog';
     const isTel = link.href.startsWith('tel:');
     const topLevel = isTel
@@ -111,36 +106,13 @@ export default function MobileNav() {
       <a
         href={link.href}
         onClick={closeMenu}
-        className={`block px-4 text-center transition-colors ${
-          nested ? 'pl-10 py-2.5 text-left text-lg font-semibold text-white/85 hover:text-brand-cyan hover:bg-white/5' : topLevel
-        }`}
+        className={`block px-4 text-center transition-colors ${topLevel}`}
         style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
       >
         {link.label}
       </a>
     );
   };
-
-  const renderDisclosure = (label, open, setOpen, children, nested = false) => (
-    <li>
-      <button
-        type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        className={`flex w-full items-center transition-colors hover:text-brand-cyan hover:bg-white/5 ${
-          nested
-            ? 'justify-between px-4 py-3 text-lg font-semibold text-white'
-            : 'justify-center gap-2 px-4 py-3 text-4xl font-bold text-white'
-        }`}
-      >
-        {label}
-        <svg className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      {open && <ul className="border-t border-white/10">{children}</ul>}
-    </li>
-  );
 
   return (
     <>
@@ -252,22 +224,7 @@ export default function MobileNav() {
               )
             ) : (
               <ul className="py-2">
-                {topLinks.slice(0, 1).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
-                {renderDisclosure('Services', servicesOpen, setServicesOpen, <>
-                  <li>{renderLink({ href: '/services/', label: 'All Services' }, true)}</li>
-                  {serviceLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
-                  {renderDisclosure('Service Areas', serviceAreasOpen, setServiceAreasOpen, serviceAreaLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
-                  {renderDisclosure('Industries', industriesOpen, setIndustriesOpen, industryLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
-                </>)}
-                {renderDisclosure('About', aboutOpen, setAboutOpen, <>
-                  <li>{renderLink({ href: '/about/', label: 'About Us' }, true)}</li>
-                  {aboutLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>)}
-                </>)}
-                {renderDisclosure('Pricing', pricingOpen, setPricingOpen, <>
-                  {renderLink({ href: '/pricing/', label: 'Pricing Page' }, true)}
-                  {renderDisclosure('Promotions', promotionsOpen, setPromotionsOpen, promotionLinks.map((link) => <li key={link.href}>{renderLink(link, true)}</li>), true)}
-                </>)}
-                {topLinks.slice(3).map((link) => <li key={link.href}>{renderLink(link)}</li>)}
+                {topLinks.map((link) => <li key={link.href}>{renderLink(link)}</li>)}
               </ul>
             )}
           </nav>
