@@ -12,11 +12,11 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4" data-animate>
     <div class="max-w-5xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Class of 2026</p>
+      <p class="text-brand-glow text-[0.7rem] uppercase tracking-[0.2em] mb-4">✦ Class of 2026</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-3 leading-tight">
-          The <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(110deg, #fef08a 0%, #fbbf24 20%, #fff7d6 38%, #f59e0b 55%, #fde68a 72%, #b45309 88%, #fbbf24 100%); -webkit-background-clip: text; background-clip: text; text-shadow: 0 0 24px rgba(251,191,36,0.35);">Golden Ticket</span>
+        <h1 class="font-heading text-5xl md:text-7xl font-bold mb-3 leading-tight" style="color: #f8d66d; text-shadow: 0 0 10px rgba(251,191,36,0.28), 0 0 18px rgba(251,191,36,0.18);">
+          The <span class="bg-clip-text text-transparent" style="background-image: linear-gradient(110deg, #fff7d6 0%, #fbbf24 18%, #fef3c7 33%, #f59e0b 52%, #fde68a 68%, #facc15 82%, #fff7d6 100%); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 0 12px rgba(251,191,36,0.45));">Golden Ticket</span>
         </h1>
       </div>
 
@@ -49,6 +49,16 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
     </div>
   </section>
 
+  <section class="py-10 px-4 bg-brand-darkest border-t border-white/5" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why We Do This</h2>
+      <div class="space-y-4 text-white/90 text-lg">
+        <p><span class="text-brand-cyan font-semibold">1.</span> This is simply good business. Being fully honest and transparent creates immediate value for the client and builds trust before the first invoice ever exists. When people see clear value, they feel confident in the relationship — and confidence is what turns a website into a real opportunity.</p>
+        <p><span class="text-brand-cyan font-semibold">2.</span> Shelby Web Company is still in the early, growing stages of the business. In a new agency, giving a little upfront value is smart strategy: it creates momentum, earns credibility fast, and generates real case studies, proof, and organic SEO traction that strengthens the brand across the local business community.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- What Winners Receive -->
   <section class="py-24 px-4 bg-brand-darkest border-y border-white/5" data-animate>
     <div class="max-w-7xl mx-auto">
@@ -61,17 +71,18 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-gradient-to-br from-lime-400/10 to-transparent p-8 rounded-2xl border border-lime-500/30">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+        <div class="bg-gradient-to-br from-brand-cyan/10 via-brand-blue/10 to-transparent p-8 rounded-2xl border border-brand-cyan/30">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan to-brand-blue shadow-[0_0_15px_rgba(34,211,238,0.25)] rounded-lg flex items-center justify-center mb-6 text-white">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-3">$497 Build &amp; Launch Fee — Waived</h3>
+          <h3 class="text-2xl font-bold text-white mb-3">Your Very Own Fully Custom Website Build, Setup, Fully Hosted &amp; Deployed — 100% FREE</h3>
           <p class="text-white/90 mb-4">
-            We cover the entire $497 build and launch fee. That's the phase of the project where the real work happens —
-            design, build, content setup, and launch — equivalent to our previous standard web pricing of
-            <span class="text-brand-cyan font-semibold">$1,000–$1,200 per build</span>.
+            We cover the entire <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>. That's the phase of the project where the real work happens — design, build, content setup, and launch — equivalent to our previous standard web pricing of <span class="text-brand-cyan font-semibold">$1,000–$1,200 per build</span>.
           </p>
-          <p class="text-lime-400 font-bold text-xl">Value: $497 waived, $1,000–$1,200 of build work covered</p>
+          <p class="text-white/90 mb-4">
+            To build the organic ranking and authority your website needs over time, the monthly investment is just <span class="text-brand-cyan font-semibold">$297/month</span>. That ongoing fee includes SEO and AI improvements that help extend the website's lifespan and maximize its value and ROI.
+          </p>
+          <p class="text-brand-cyan-light font-bold text-xl">Build/Launch Fee Waived • Value: $497 covered, $1,000–$1,200 of build work included</p>
         </div>
 
         <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
@@ -96,8 +107,9 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
         <h3 class="text-xl font-bold text-white mb-3">The Honest Details</h3>
         <p class="text-white/90">
           Winners continue on the Core plan at <span class="text-brand-cyan font-semibold">$297/month</span> for a standard
-          12-month term — the same plan any Core client signs. Hosting, maintenance, edits, and growth reviews are included
-          in that rate. What we're giving away is the <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>:
+          12-month term — the same plan any Core client signs. That monthly fee covers ongoing hosting, maintenance, edits,
+          and performance support, and it also includes the ongoing SEO and AI improvements needed to build organic ranking,
+          authority, and long-term ROI over time. What we're giving away is the <span class="text-brand-cyan font-semibold">$497 build and launch fee</span>:
           the design, construction, and launch of your new site, which we previously charged at $1,000–$1,200 per build.
           No surprise charges, no upsells, no fine print.
         </p>
@@ -261,7 +273,7 @@ import goldenTicket from '../../../assets/golden-ticket_1.jpeg';
       <div class="space-y-6">
         <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
           <h3 class="text-lg font-bold text-white mb-3">Is it really free?</h3>
-          <p class="text-white">Yes — we cover the full $497 build and launch fee, the same build work we previously priced at $1,000–$1,200 per website. Winners continue on the Core plan at $297/month for a standard 12-month term (hosting, maintenance, edits, and growth reviews included). No upfront project invoice, no surprise charges.</p>
+          <p class="text-white">Yes — we cover the full $497 build and launch fee, which includes the actual design, build, content setup, and launch work we previously priced at $1,000–$1,200 per website. The ongoing website investment is then $297/month for a standard 12-month term, and that includes hosting, maintenance, edits, and ongoing SEO and AI improvements to build organic ranking, authority, and long-term ROI. No upfront project invoice, no surprise charges.</p>
         </div>
 
         <div class="bg-brand-dark p-6 rounded-xl border border-white/5">

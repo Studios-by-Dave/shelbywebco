@@ -105,12 +105,12 @@ export default function MobileNav() {
     const isTel = link.href.startsWith('tel:');
     const isGold = 'gold' in link && link.gold;
     const topLevel = isTel
-      ? 'py-3 text-3xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
+      ? 'py-3 text-2xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
       : isBlog
-        ? 'py-3 animate-blog-stream font-poofy text-4xl text-white hover:text-brand-cyan hover:bg-white/5'
+        ? 'py-3 animate-blog-stream font-poofy text-3xl text-white hover:text-brand-cyan hover:bg-white/5'
         : isGold
-          ? 'py-3 text-4xl font-bold text-[#fbbf24] hover:text-[#f8d66d] bg-[#fbbf24]/5 hover:bg-[#fbbf24]/10'
-          : 'py-3 text-4xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
+          ? 'py-3 text-3xl font-bold text-[#fbbf24] hover:text-[#f8d66d] bg-[#fbbf24]/5 hover:bg-[#fbbf24]/10'
+          : 'py-3 text-3xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
     return (
       <a
         href={link.href}
@@ -242,7 +242,7 @@ export default function MobileNav() {
                           onClick={() => setServicesOpen((open) => !open)}
                           aria-expanded={servicesOpen}
                           aria-controls="mobile-service-links"
-                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-4xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
                         >
                           Services
                           <svg
@@ -262,7 +262,7 @@ export default function MobileNav() {
                                 <a
                                   href={service.href}
                                   onClick={closeMenu}
-                                  className="block px-8 py-2 text-left text-xl font-semibold text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                                  className="block px-8 py-2 text-left text-lg font-semibold text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
                                 >
                                   {service.label}
                                 </a>
@@ -278,7 +278,7 @@ export default function MobileNav() {
                           onClick={() => setPromotionsOpen((open) => !open)}
                           aria-expanded={promotionsOpen}
                           aria-controls="mobile-promotion-links"
-                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-4xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
                         >
                           Promotions
                           <svg
@@ -298,7 +298,7 @@ export default function MobileNav() {
                                 <a
                                   href={promotion.href}
                                   onClick={closeMenu}
-                                  className={`block px-8 py-2 text-left text-xl font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
+                                  className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
                                 >
                                   {promotion.label}
                                 </a>
