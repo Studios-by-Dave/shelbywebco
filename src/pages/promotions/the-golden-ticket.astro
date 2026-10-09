@@ -293,8 +293,7 @@ import PixieDust from '../../components/PixieDust.jsx';
         </p>
       </div>
 
-      <form id="golden-ticket-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-        <input type="hidden" name="access_key" value="6c43f496-301c-46c2-afe8-743b55e17bb6" />
+      <form id="golden-ticket-form" action="/api/contact" method="POST" class="space-y-5">
         <input type="hidden" name="subject" value="The Golden Ticket Application — Shelby Web Co" />
         <input type="hidden" name="form_type" value="The Golden Ticket" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
@@ -387,11 +386,10 @@ import PixieDust from '../../components/PixieDust.jsx';
         if (goldenTicketStatus) goldenTicketStatus.textContent = 'Sending...';
         if (goldenTicketStatus) goldenTicketStatus.className = 'min-h-6 text-sm text-white';
         try {
-          const object = Object.fromEntries(formData);
-          const res = await fetch('https://api.web3forms.com/submit', {
+          formData.set('form_type', 'The Golden Ticket');
+          const res = await fetch('/api/contact', {
             method: 'POST',
-            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify(object)
+            body: formData
           });
           const data = await res.json();
           if (data.success) {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const WEB3FORMS_KEY = '6c43f496-301c-46c2-afe8-743b55e17bb6';
 const SESSION_KEY = 'sweb_project_popup_seen';
 
 export default function ProjectPopup() {
@@ -40,14 +39,16 @@ export default function ProjectPopup() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const payload = {
+        subject: 'Start My Project — Website Intake',
+        form_type: 'Project Popup',
+        ...form,
+      };
+
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: 'Start My Project — Website Intake',
-          ...form,
-        }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (data.success) {

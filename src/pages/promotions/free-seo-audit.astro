@@ -247,8 +247,7 @@ import auditFlyer from '../../../assets/Sweb_audit_1.jpg';
         </p>
       </div>
 
-      <form id="seo-audit-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-        <input type="hidden" name="access_key" value="6c43f496-301c-46c2-afe8-743b55e17bb6" />
+      <form id="seo-audit-form" action="/api/contact" method="POST" class="space-y-5">
         <input type="hidden" name="subject" value="Free SEO Audit Request — Shelby Web Co" />
         <input type="hidden" name="form_type" value="Free SEO Audit" />
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
@@ -320,11 +319,10 @@ import auditFlyer from '../../../assets/Sweb_audit_1.jpg';
         auditStatus.textContent = 'Sending...';
         auditStatus.className = 'min-h-6 text-sm text-white';
         try {
-          const object = Object.fromEntries(formData);
-          const res = await fetch('https://api.web3forms.com/submit', {
+          formData.set('form_type', 'Free SEO Audit');
+          const res = await fetch('/api/contact', {
             method: 'POST',
-            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify(object)
+            body: formData
           });
           const data = await res.json();
           if (data.success) {

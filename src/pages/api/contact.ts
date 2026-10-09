@@ -1,26 +1,28 @@
 import type { APIRoute } from 'astro';
+import { buildFormspreePayload, normalizeContactSubmission } from '../../utils/contactSubmission.js';
 
 export const POST: APIRoute = async ({ request }) => {
   const contentType = request.headers.get('content-type') || '';
-  if (!contentType.includes('multipart/form-data') && !contentType.includes('application/x-www-form-urlencoded')) {
+  const isFormSubmission = contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded') || contentType.includes('application/json');
+
+  if (!isFormSubmission) {
     return new Response(JSON.stringify({ success: false, message: 'Invalid form submission format.' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     });
   }
 
-  const formData = await request.formData();
-  const name = formData.get('name')?.toString().trim() ?? '';
-  const email = formData.get('email')?.toString().trim() ?? '';
-  const message = formData.get('message')?.toString().trim() ?? '';
-  const gotcha = formData.get('_gotcha')?.toString().trim() ?? '';
+  let rawData: Record<string, unknown> = {};
 
-  if (!name || !email || !message) {
-    return new Response(JSON.stringify({ success: false, message: 'Please complete all required fields.' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' }
-    });
+  if (contentType.includes('application/json')) {
+    rawData = (await request.json().catch(() => ({}))) as Record<string, unknown>;
+  } else {
+    const formData = await request.formData();
+    rawData = Object.fromEntries(formData.entries());
   }
+
+  const submission = normalizeContactSubmission(rawData);
+  const gotcha = String(rawData._gotcha ?? rawData.botcheck ?? '').trim();
 
   if (gotcha) {
     return new Response(JSON.stringify({ success: false, message: 'Spam detected.' }), {
@@ -29,12 +31,14 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  const payload = new URLSearchParams({
-    name,
-    email,
-    message,
-    subject: `New contact form submission from ${name}`
-  });
+  if (!submission.name || !submission.email || !submission.message) {
+    return new Response(JSON.stringify({ success: false, message: 'Please complete all required fields.' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
+  const payload = buildFormspreePayload(submission);
 
   try {
     const response = await fetch('https://formspree.io/f/mqaeapoa', {
