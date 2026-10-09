@@ -26,7 +26,7 @@ const serviceAreaLinks = [
   { href: '/web-design-western-nc/', label: 'Service Area: Western NC' },
   { href: '/web-design-forest-city-nc/', label: 'Service Area: Forest City, NC' },
   { href: '/web-design-polkville-nc/', label: 'Service Area: Polkville, NC' },
-  { href: '/web-design-asheville-nc/', label: 'Service Area: Asheville, NC' },
+  { href: '/web-design-western-nc/', label: 'Service Area: Western NC' },
   { href: '/web-design-boiling-springs-nc/', label: 'Service Area: Boiling Springs, NC' },
   { href: '/web-design-kings-mountain-nc/', label: 'Service Area: Kings Mountain, NC' },
 ];
@@ -46,7 +46,7 @@ const industryLinks = [
 ];
 
 const promotionLinks = [
-  { href: '/promotions/local-business-launchpad/', label: 'Local Business Launchpad' },
+  { href: '/promotions/the-golden-ticket/', label: 'The Golden Ticket' },
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
   { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },

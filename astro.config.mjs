@@ -13,6 +13,7 @@ export default defineConfig({
     '/promos/referral-bonus/': '/promotions/referral-bonus/',
     '/blog/why-choose-studios-by-dave/': '/blog/why-choose-shelby-web-company/',
     '/web-design-asheville-nc/': '/web-design-western-nc/',
+    '/promotions/local-business-launchpad/': '/promotions/the-golden-ticket/',
   },
   vite: {
     plugins: [tailwindcss()],

@@ -88,7 +88,7 @@ export default function DesktopNav() {
                     <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Gastonia, NC</a>
                     <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Forest City, NC</a>
                     <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Polkville, NC</a>
-                    <a href="/web-design-asheville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Asheville, NC</a>
+                    <a href="/web-design-western-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Western NC</a>
                     <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Boiling Springs, NC</a>
                     <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Kings Mountain, NC</a>
                   </div>
@@ -186,7 +186,7 @@ export default function DesktopNav() {
               {promotionsOpen && (
                 <div className="border-l border-brand-blue/30 pl-3">
                   <a href="/promotions/" onClick={() => setPricingOpen(false)} className="block text-brand-cyan hover:text-white transition-colors py-1 font-semibold">All Promotions</a>
-                  <a href="/promotions/local-business-launchpad/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Local Business Launchpad</a>
+                  <a href="/promotions/the-golden-ticket/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">The Golden Ticket</a>
                   <a href="/promotions/free-seo-audit/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free SEO Audit</a>
                   <a href="/promotions/free-logo-design/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free Logo Design</a>
                   <a href="/promotions/referral-bonus/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Referral Bonus</a>
