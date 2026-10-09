@@ -137,26 +137,21 @@ const faqSchema = {
         <ellipse cx="600" cy="470" rx="520" ry="270" fill="url(#pgh-glow)"/>
 
         <!-- tier panels (extend below the frame so cropping reads as "continuing") -->
-        <g>
+        <!-- left panel -->
+        <g class="pgh-panel pgh-panel-left">
           <rect x="60" y="176" width="320" height="440" rx="20" fill="url(#pgh-card)" stroke="#3b82f6" stroke-opacity="0.15" stroke-width="1.5"/>
           <rect x="60" y="176" width="320" height="3" rx="1.5" fill="url(#pgh-edge)"/>
-
-          <rect x="440" y="140" width="320" height="476" rx="20" fill="url(#pgh-card-featured)" stroke="#60a5fa" stroke-opacity="0.24" stroke-width="1.5"/>
-          <rect x="440" y="140" width="320" height="3" rx="1.5" fill="url(#pgh-edge)"/>
-
-          <rect x="820" y="176" width="320" height="440" rx="20" fill="url(#pgh-card)" stroke="#3b82f6" stroke-opacity="0.15" stroke-width="1.5"/>
-          <rect x="820" y="176" width="320" height="3" rx="1.5" fill="url(#pgh-edge)"/>
-        </g>
-
-
-        <!-- suggested price blocks -->
-        <g>
           <rect x="88" y="204" width="132" height="12" rx="6" fill="#93c5fd" fill-opacity="0.20"/>
           <rect x="88" y="236" width="180" height="30" rx="8" fill="url(#pgh-bar)"/>
           <rect x="88" y="290" width="244" height="9" rx="4.5" fill="#bfdbfe" fill-opacity="0.13"/>
           <rect x="88" y="310" width="222" height="9" rx="4.5" fill="#bfdbfe" fill-opacity="0.10"/>
           <rect x="88" y="330" width="236" height="9" rx="4.5" fill="#bfdbfe" fill-opacity="0.08"/>
+        </g>
 
+        <!-- featured (center) panel -->
+        <g class="pgh-panel pgh-panel-center">
+          <rect x="440" y="140" width="320" height="476" rx="20" fill="url(#pgh-card-featured)" stroke="#60a5fa" stroke-opacity="0.24" stroke-width="1.5"/>
+          <rect x="440" y="140" width="320" height="3" rx="1.5" fill="url(#pgh-edge)"/>
           <rect x="468" y="168" width="152" height="12" rx="6" fill="#bfdbfe" fill-opacity="0.13"/>
           <rect x="468" y="200" width="206" height="34" rx="8" fill="url(#pgh-bar)"/>
           <rect x="468" y="258" width="264" height="9" rx="4.5" fill="#dbeafe" fill-opacity="0.08"/>
@@ -164,7 +159,12 @@ const faqSchema = {
           <rect x="468" y="298" width="256" height="9" rx="4.5" fill="#dbeafe" fill-opacity="0.10"/>
           <rect x="468" y="318" width="228" height="9" rx="4.5" fill="#dbeafe" fill-opacity="0.08"/>
           <rect x="468" y="338" width="240" height="9" rx="4.5" fill="#dbeafe" fill-opacity="0.07"/>
+        </g>
 
+        <!-- right panel -->
+        <g class="pgh-panel pgh-panel-right">
+          <rect x="820" y="176" width="320" height="440" rx="20" fill="url(#pgh-card)" stroke="#3b82f6" stroke-opacity="0.15" stroke-width="1.5"/>
+          <rect x="820" y="176" width="320" height="3" rx="1.5" fill="url(#pgh-edge)"/>
           <rect x="848" y="204" width="146" height="12" rx="6" fill="#93c5fd" fill-opacity="0.20"/>
           <rect x="848" y="236" width="192" height="30" rx="8" fill="url(#pgh-bar)"/>
           <rect x="848" y="290" width="240" height="9" rx="4.5" fill="#bfdbfe" fill-opacity="0.13"/>
@@ -172,6 +172,24 @@ const faqSchema = {
           <rect x="848" y="330" width="244" height="9" rx="4.5" fill="#bfdbfe" fill-opacity="0.08"/>
         </g>
       </svg>
+
+      <style is:inline>
+        @keyframes pgh-slide-ltr {
+          0%, 100% { transform: translateX(-20px); }
+          50% { transform: translateX(20px); }
+        }
+        @keyframes pgh-slide-rtl {
+          0%, 100% { transform: translateX(20px); }
+          50% { transform: translateX(-20px); }
+        }
+        .pgh-panel { will-change: transform; }
+        .pgh-panel-left   { animation: pgh-slide-ltr 5s ease-in-out infinite; }
+        .pgh-panel-center { animation: pgh-slide-rtl 6.5s ease-in-out infinite; animation-delay: -2s; }
+        .pgh-panel-right  { animation: pgh-slide-ltr 5s ease-in-out infinite; animation-delay: -3s; }
+        @media (prefers-reduced-motion: reduce) {
+          .pgh-panel { animation: none; }
+        }
+      </style>
     </div>
 
     <!-- centre vignette keeps the headline legible over the artwork -->
@@ -179,7 +197,7 @@ const faqSchema = {
 
     <div class="max-w-7xl mx-auto text-center relative z-10">
       <p class="text-brand-purple text-label uppercase tracking-widest mb-4">✦ Transparent Pricing</p>
-      <div class="inline-block px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 mb-4">
+      <div class="block w-full max-w-3xl mx-auto px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 mb-4">
         <h1 class="font-heading text-page-title md:text-page-title-lg font-bold text-white leading-tight">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-blue-light to-brand-sky">Shelby Web</span>
           <span class="block text-white">Total Pricing</span>
@@ -392,8 +410,8 @@ const faqSchema = {
 
       <div class="space-y-4" id="pricing-faq">
         <!-- Question 1 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What's included in the price?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -405,8 +423,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 2 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do you offer payment plans?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -418,8 +436,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 3 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">How long does a typical project take?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -431,8 +449,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 4 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What if I need more pages than my package includes?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -444,8 +462,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 5 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do you handle web hosting and domain setup?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -457,8 +475,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 6 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Can I upgrade my package later?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -470,8 +488,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 7 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What if I'm not satisfied with the design?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -483,8 +501,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 8 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do you offer ongoing maintenance?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -496,8 +514,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 9 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What is a milestone audit?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -509,8 +527,8 @@ const faqSchema = {
         </div>
 
         <!-- Question 10 -->
-        <div class="faq-item bg-brand-darkest border border-brand-purple/20 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do website packages include SEO?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
