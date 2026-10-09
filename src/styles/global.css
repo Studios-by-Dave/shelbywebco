@@ -146,6 +146,30 @@
     animation: flash-24-7 1.6s ease-in-out infinite;
   }
 
+  @keyframes mobile-golden-ticket-glow {
+    0%, 100% {
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.6), 0 0 26px rgba(251, 191, 36, 0.32);
+    }
+    50% {
+      text-shadow: 0 0 22px rgba(251, 191, 36, 1), 0 0 44px rgba(251, 191, 36, 0.65);
+    }
+  }
+
+  .animate-mobile-golden-ticket-glow {
+    animation: mobile-golden-ticket-glow 1.8s ease-in-out infinite;
+  }
+
+  .mobile-nav-subtle-italic {
+    font-style: oblique 8deg;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-mobile-golden-ticket-glow {
+      animation: none;
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.6), 0 0 26px rgba(251, 191, 36, 0.32);
+    }
+  }
+
   .cta-glow-shine {
     @apply relative overflow-hidden transition-all duration-300;
   }

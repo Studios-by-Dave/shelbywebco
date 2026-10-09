@@ -56,6 +56,8 @@ const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industry
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [promotionsOpen, setPromotionsOpen] = useState(false);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -93,6 +95,8 @@ export default function MobileNav() {
 
   const closeMenu = () => {
     setIsOpen(false);
+    setServicesOpen(false);
+    setPromotionsOpen(false);
     setQuery('');
   };
 
@@ -111,8 +115,8 @@ export default function MobileNav() {
       <a
         href={link.href}
         onClick={closeMenu}
-        className={`block px-4 text-center transition-colors ${topLevel}`}
-        style={isBlog ? { WebkitTextStroke: '0.6px white' } : isGold ? { textShadow: '0 0 12px rgba(251, 191, 36, 0.28)' } : undefined}
+        className={`block px-4 text-center mobile-nav-subtle-italic transition-colors ${topLevel} ${isGold ? 'animate-mobile-golden-ticket-glow' : ''}`}
+        style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
       >
         {link.label}
       </a>
@@ -229,7 +233,83 @@ export default function MobileNav() {
               )
             ) : (
               <ul className="py-2">
-                {topLinks.map((link) => <li key={link.href}>{renderLink(link)}</li>)}
+                {topLinks.map((link) => (
+                  <li key={link.href}>
+                    {link.label === 'Services' ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => setServicesOpen((open) => !open)}
+                          aria-expanded={servicesOpen}
+                          aria-controls="mobile-service-links"
+                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-4xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                        >
+                          Services
+                          <svg
+                            className={`h-5 w-5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {servicesOpen && (
+                          <ul id="mobile-service-links" className="border-y border-white/10 bg-white/5 py-2">
+                            {[{ href: '/services/', label: 'All Services' }, ...serviceLinks].map((service) => (
+                              <li key={service.href}>
+                                <a
+                                  href={service.href}
+                                  onClick={closeMenu}
+                                  className="block px-8 py-2 text-left text-xl font-semibold text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                                >
+                                  {service.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
+                    ) : link.label === 'Promotions' ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => setPromotionsOpen((open) => !open)}
+                          aria-expanded={promotionsOpen}
+                          aria-controls="mobile-promotion-links"
+                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-4xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                        >
+                          Promotions
+                          <svg
+                            className={`h-5 w-5 transition-transform ${promotionsOpen ? 'rotate-180' : ''}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {promotionsOpen && (
+                          <ul id="mobile-promotion-links" className="border-y border-white/10 bg-white/5 py-2">
+                            {promotionLinks.map((promotion) => (
+                              <li key={promotion.href}>
+                                <a
+                                  href={promotion.href}
+                                  onClick={closeMenu}
+                                  className={`block px-8 py-2 text-left text-xl font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
+                                >
+                                  {promotion.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
+                    ) : renderLink(link)}
+                  </li>
+                ))}
               </ul>
             )}
           </nav>

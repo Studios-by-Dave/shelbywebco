@@ -28,14 +28,15 @@ const serviceSchema = {
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-10 lg:py-12 px-4 relative overflow-hidden" data-animate style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url(${heroBackdrop.src}) center/cover no-repeat;`}>
-    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(34,211,238,0.5) 0%, rgba(34,211,238,0.18) 35%, transparent 70%);"></div>
-    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.85) 0%, rgba(165,243,252,0.5) 40%, transparent 65%);"></div>
+  <section class="py-10 lg:py-12 px-4 relative overflow-hidden" data-animate>
+    <div class="web-design-hero-backdrop absolute inset-[-12px] pointer-events-none" style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url("${heroBackdrop.src}") center/cover no-repeat;`}></div>
+    <div class="web-design-hero-glow web-design-hero-glow-cyan absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(34,211,238,0.5) 0%, rgba(34,211,238,0.18) 35%, transparent 70%);"></div>
+    <div class="web-design-hero-glow web-design-hero-glow-white absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.85) 0%, rgba(165,243,252,0.5) 40%, transparent 65%);"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4 font-bold">✦ Web Design & Development</p>
       <div class="relative inline-block">
         <PixieDust client:load side="right" />
-        <h1 class="font-heading text-[3.6rem] md:text-[4.3rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
+        <h1 class="font-heading text-[3.8rem] md:text-[4.5rem] lg:text-[5rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
           Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Web Design</span> with You in Mind
         </h1>
       </div>
@@ -354,3 +355,47 @@ const serviceSchema = {
   </section>
 
 </BaseLayout>
+
+<style>
+  .web-design-hero-backdrop {
+    animation: web-design-backdrop-drift 28s ease-in-out infinite alternate;
+  }
+
+  .web-design-hero-glow-cyan {
+    animation: web-design-glow-drift 24s ease-in-out infinite alternate;
+  }
+
+  .web-design-hero-glow-white {
+    animation: web-design-glow-drift 30s ease-in-out infinite alternate-reverse;
+  }
+
+  @keyframes web-design-backdrop-drift {
+    from {
+      transform: translate3d(-6px, 4px, 0) scale(1.02);
+    }
+    to {
+      transform: translate3d(6px, -4px, 0) scale(1.06);
+    }
+  }
+
+  @keyframes web-design-glow-drift {
+    from {
+      transform: translate3d(-6px, -4px, 0) scale(1);
+    }
+    to {
+      transform: translate3d(8px, 6px, 0) scale(1.035);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .web-design-hero-backdrop {
+      animation: none;
+      transform: scale(1.04);
+    }
+
+    .web-design-hero-glow-cyan,
+    .web-design-hero-glow-white {
+      animation: none;
+    }
+  }
+</style>
