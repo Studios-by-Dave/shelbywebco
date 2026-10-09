@@ -1,15 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function PixieDust() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Add CSS styles dynamically
-    const style = document.createElement('style');
-    style.textContent = `
+const LEFT_STYLE = `
       .pixie-particle {
         position: absolute;
         background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
@@ -39,30 +30,74 @@ export default function PixieDust() {
         }
       }
     `;
+
+const RIGHT_STYLE = `
+      .pixie-particle-right {
+        position: absolute;
+        background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
+        border-radius: 50%;
+        opacity: 0;
+        animation: pixieFloatRight 2s ease-out forwards;
+        box-shadow: 0 0 6px #00d4ff, 0 0 12px #00d4ff;
+        pointer-events: none;
+      }
+
+      @keyframes pixieFloatRight {
+        0% {
+          opacity: 0;
+          transform: translateX(0) translateY(0) scale(0);
+        }
+        10% {
+          opacity: 1;
+          transform: translateX(-10px) translateY(-5px) scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: translateX(-40px) translateY(-15px) scale(0.8);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-80px) translateY(-25px) scale(0);
+        }
+      }
+    `;
+
+export default function PixieDust({ side = 'left' }) {
+  const containerRef = useRef(null);
+  const isRight = side === 'right';
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Add CSS styles dynamically
+    const style = document.createElement('style');
+    style.textContent = isRight ? RIGHT_STYLE : LEFT_STYLE;
     document.head.appendChild(style);
+
+    const particleClass = isRight ? 'pixie-particle-right' : 'pixie-particle';
 
     const createParticle = () => {
       const particle = document.createElement('div');
-      particle.className = 'pixie-particle';
-      
-      // Random starting position along the left edge
+      particle.className = particleClass;
+
+      // Random starting position within the strip
       const startX = Math.random() * 100;
       const startY = Math.random() * 100;
       particle.style.left = `${startX}%`;
       particle.style.top = `${startY}%`;
-      particle.style.top = `${startY}%`;
-      
+
       // Random size
       const size = Math.random() * 4 + 2;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
-      
+
       // Random animation duration
       const duration = Math.random() * 2 + 1;
       particle.style.animationDuration = `${duration}s`;
-      
+
       container.appendChild(particle);
-      
+
       // Remove particle after animation
       setTimeout(() => {
         particle.remove();
@@ -76,17 +111,17 @@ export default function PixieDust() {
       clearInterval(interval);
       style.remove();
     };
-  }, []);
+  }, [isRight]);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="absolute inset-0 overflow-hidden"
-      style={{
-        left: '-20px',
-        right: 'auto',
-        width: '100px',
-      }}
+      style={
+        isRight
+          ? { left: 'auto', right: '-20px', width: '100px' }
+          : { left: '-20px', right: 'auto', width: '100px' }
+      }
     />
   );
 }

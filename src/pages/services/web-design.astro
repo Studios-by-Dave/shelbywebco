@@ -6,7 +6,6 @@ import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.
 
 import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
 import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
-import sbdChart from '../../../assets/sbd ide chart1.png';
 import webFlyer from '../../../assets/Sweb_flyer_new.jpg';
 import heroBackdrop from '../../../assets/sweb_25.png';
 
@@ -35,8 +34,8 @@ const serviceSchema = {
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <p class="text-brand-glow text-sm uppercase tracking-widest mb-4 font-bold">✦ Web Design & Development</p>
       <div class="relative inline-block">
-        <PixieDust client:load />
-        <h1 class="font-heading text-[3.4rem] md:text-[4.1rem] lg:text-[4.6rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
+        <PixieDust client:load side="right" />
+        <h1 class="font-heading text-[3.6rem] md:text-[4.3rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
           Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Web Design</span> with You in Mind
         </h1>
       </div>
@@ -114,6 +113,56 @@ const serviceSchema = {
     title="Web Design Built Into One Plan"
     subtitle={`No $3,000–$8,000 upfront website bill. Your site is designed, launched, hosted, and maintained as part of a <span class="text-brand-cyan font-semibold">12-month Core plan</span> starting at $297/month.`}
   />
+
+  <!-- Payment Terms & Onboarding Section -->
+  <section class="py-12 px-4" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-gradient-to-r from-brand-darkest to-brand-dark border border-brand-cyan/20 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+
+        <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6 leading-tight">
+              We EASE Our Clients Onboard
+            </h2>
+            <div class="space-y-4 text-body-lg text-slate-300">
+              <p>
+                At Shelby Web we believe the start of a partnership should be exciting, not stressful. That's why we remove the friction of difficult financial entry by providing <span class="text-brand-cyan font-semibold">flexible payment plans</span> (if necessary) that work specifically for your business.
+              </p>
+              <p>
+                Our standard process is designed to keep things clear and concise for both sides:
+              </p>
+              <ul class="space-y-3 mt-4">
+                <li class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold">1</div>
+                  <span class="text-white"><span class="font-bold text-brand-accent">Launch Fee</span> to start discovery and build</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-brand-cyan/20 flex items-center justify-center text-brand-cyan font-bold">2</div>
+                  <span class="text-white"><span class="font-bold text-brand-cyan">Monthly Plan</span> for the 12-month initial term</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-brand-darkest/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8">
+            <h3 class="text-body-lg font-bold text-white mb-4">Why we do this:</h3>
+            <p class="text-slate-400 mb-6 italic">
+              "A modest launch fee gets your project started, and the monthly plan keeps everything improving — hosting, security, SEO, and ongoing care all handled for you."
+            </p>
+            <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+              <div class="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center text-brand-darkest font-bold text-xl">✓</div>
+              <div>
+                <p class="text-white font-bold leading-none">Clean &amp; Concise</p>
+                <p class="text-white/90 text-label mt-1 uppercase tracking-tighter font-bold">The Shelby Web Co Way</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Technical Indexing Section -->
   <section class="py-24 px-4 bg-[#f8f9fc] text-slate-900 relative overflow-hidden" style="background-image: linear-gradient(rgba(148,163,184,0.18) 1px, transparent 1px); background-size: 100% 1.75rem;">
@@ -285,15 +334,6 @@ const serviceSchema = {
           <p class="text-white font-semibold group-hover:text-brand-cyan">Home Remodelers</p>
           <p class="text-white/50 text-sm">Before/after &amp; booking</p>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SBD Chart (large, centered) -->
-  <section class="py-12 px-4">
-    <div class="max-w-7xl mx-auto">
-      <div class="mt-12 mb-12 flex justify-center">
-        <Image src={sbdChart} alt="SBD IDE Chart — large" class="w-full max-w-4xl object-contain rounded-lg shadow-lg" />
       </div>
     </div>
   </section>

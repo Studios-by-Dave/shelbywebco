@@ -103,7 +103,7 @@ export default function MobileNav() {
     const isBlog = link.label === 'Blog';
     const isTel = link.href.startsWith('tel:');
     const topLevel = isTel
-      ? 'py-3 text-2xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
+      ? 'py-3 text-3xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
       : isBlog
         ? 'py-3 animate-blog-stream font-poofy text-4xl text-white hover:text-brand-cyan hover:bg-white/5'
         : 'py-3 text-4xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
