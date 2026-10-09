@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+---
+
+<BaseLayout 
+  title="Audio Branding & Sound Identity | Shelby Web Company"
+  description="Custom audio branding, sonic logos, and voice identity for Shelby & Western NC businesses. Coming soon from Shelby Web Company."
+>
+  <!-- Coming Soon Banner -->
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden bg-brand-darkest">
+    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-3 bg-brand-accent/15 border border-brand-accent/40 text-brand-accent px-6 py-2.5 rounded-full font-bold text-sm uppercase tracking-[0.2em] mb-8">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
+        </span>
+        Coming Soon
+      </div>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          Audio Branding & <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Sound Identity</span>
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
+        Your brand has a voice — let's give it a sound. We're crafting custom audio branding for Shelby and Western NC businesses: sonic logos, brand anthems, podcast intros, and voice identity that makes your business instantly recognizable.
+      </p>
+      <a 
+        href="/contact/"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px 14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px 4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Get Notified at Launch
+      </a>
+    </div>
+  </section>
+
+  <!-- What's Coming -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What's in the Works</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">A Full Sonic Toolkit for Your Brand</h2>
+        <p class="text-white max-w-2xl mx-auto text-lg">
+          Audio branding is the next frontier of local business identity. Here's what we're building for our clients.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Sonic Logos</h3>
+          <p class="text-white/90">A short, memorable sound signature that plays with your brand — on hold messages, videos, podcasts, and ads. The audio equivalent of your logo.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Brand Anthems</h3>
+          <p class="text-white/90">A custom musical identity for your business — used across radio spots, social videos, your website, and anywhere your brand shows up.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Podcast & Video Intros</h3>
+          <p class="text-white/90">Professional intro and outro music for your podcast, YouTube channel, or video content — so every piece of media reinforces your brand.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Hold & On-Hold Messaging</h3>
+          <p class="text-white/90">Turn dead air into brand reinforcement. Custom on-hold music and messaging that keeps callers engaged and informed while they wait.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Audio Brand Guidelines</h3>
+          <p class="text-white/90">A complete guide to how your sound identity is used — tone, tempo, usage rules, and file formats — so your audio brand stays consistent everywhere.</p>
+        </div>
+
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Fast Turnaround</h3>
+          <p class="text-white/90">True to everything we do — no endless timelines. Most audio branding packages are delivered in days, not months, with revisions included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Audio Branding -->
+  <section class="py-24 px-4 bg-brand-dark/50 border-y border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Why Audio Branding Matters</h2>
+      
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Recognition Beyond the Visual</h3>
+            <p class="text-white">Customers see dozens of logos a day — but a distinctive sound cuts through. Audio branding makes your business recognizable before they even read your name.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Trust Through Professionalism</h3>
+            <p class="text-white">A polished sonic identity signals that you're established and trustworthy — especially for local businesses competing against bigger names.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">Every Touchpoint Covered</h3>
+            <p class="text-white">From your website and social videos to phone calls and in-person events — audio branding ties every customer interaction together under one identity.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-brand-cyan text-2xl flex-shrink-0">✓</div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-2">A Local Advantage</h3>
+            <p class="text-white">Most small businesses ignore audio entirely. Owning your sound in Shelby and Western NC sets you apart from competitors who only think visually.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Be First in Line</h2>
+      <p class="text-xl text-white mb-8">
+        We're taking on a small number of audio branding clients at launch. Reach out and we'll save you a spot.
+      </p>
+      <a 
+        href="/contact/"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Get Notified at Launch
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

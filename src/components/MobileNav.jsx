@@ -23,6 +23,7 @@ const serviceLinks = [
 const serviceAreaLinks = [
   { href: '/web-design-shelby-nc/', label: 'Service Area: Shelby, NC' },
   { href: '/web-design-gastonia-nc/', label: 'Service Area: Gastonia, NC' },
+  { href: '/web-design-western-nc/', label: 'Service Area: Western NC' },
   { href: '/web-design-forest-city-nc/', label: 'Service Area: Forest City, NC' },
   { href: '/web-design-polkville-nc/', label: 'Service Area: Polkville, NC' },
   { href: '/web-design-asheville-nc/', label: 'Service Area: Asheville, NC' },

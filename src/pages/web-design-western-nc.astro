@@ -1,0 +1,519 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from '../components/OptimizedImage.astro';
+import ashHead from '../../assets/service locations/asheville/Asheville nc_header1.jpg';
+import ash2 from '../../assets/service locations/asheville/Asheville nc_2.jpeg';
+import ash5 from '../../assets/service locations/asheville/Asheville nc_5.jpg';
+import ash6 from '../../assets/service locations/asheville/asheville nc_6.jpeg';
+import ash7 from '../../assets/service locations/asheville/Asheville_6.jpeg';
+
+const faqItems = [
+  {
+    question: 'How much does web design cost in Western NC?',
+    answer: 'Western NC custom web design runs from $598 for a starter site up to $3,998 for a full-scale build. Most growing businesses land in the $998–$1,998 range (average ~$1,298), with local SEO and lead-focused features built in. Every project is quoted transparently — no hidden fees, no surprise add-ons.'
+  },
+  {
+    question: 'How long does it take to design and launch a website in Western NC?',
+    answer: 'Most Western NC web design projects launch in 2–4 weeks. A simple 1–2 page site can be ready in 1–2 weeks, while complex builds (e-commerce, custom portals) typically take 4–6 weeks. We\'ll give you a clear timeline during the proposal phase.'
+  },
+  {
+    question: 'Do you offer SEO for existing Western NC websites, or only new builds?',
+    answer: 'Both. We can optimize a site we built for you — or rescue an existing site that\'s underperforming in Western NC search results across Asheville, Hendersonville, Waynesville, and beyond.'
+  },
+  {
+    question: 'What makes Shelby Web Company different from other Western NC web design companies?',
+    answer: 'We combine custom design, local SEO, and a long-term partnership approach — built for mountain businesses that want to own their local market. Based in Shelby, we serve Western NC remotely with dedicated support and big-agency capability without the overhead.'
+  },
+  {
+    question: 'Do you serve businesses outside Asheville?',
+    answer: 'Yes — we serve Western NC businesses remotely from our Shelby, NC base, so we work with companies across Buncombe, Henderson, Haywood, Madison, Transylvania, and Jackson counties, including Hendersonville, Weaverville, Black Mountain, Waynesville, and Brevard.'
+  },
+  {
+    question: 'How quickly will I see results from Western NC local SEO?',
+    answer: 'Most clients see meaningful movement in local rankings within 60–90 days, with compounding growth ongoing. Technical SEO fixes can show results within weeks, while content and authority building compound over time.'
+  },
+  {
+    question: 'Are you web designers in Western NC or a remote team?',
+    answer: 'We are a North Carolina team based in Shelby, serving Western NC businesses remotely. You get web designers with Western NC market expertise — local SEO, mountain-town buyer behavior, and regional search intent — without big-city agency overhead, plus direct access to our Shelby base for strategy and support.'
+  },
+  {
+    question: 'Do you handle website development in Western NC, not just design?',
+    answer: 'Yes. We handle full website development in Western NC — custom front-end builds, e-commerce, bookings and portals, plus technical SEO, speed, schema, and analytics. Design and development are delivered together so your site both looks great and ranks.'
+  }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map(item => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': item.answer
+    }
+  }))
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'Web Design & SEO in Western NC',
+  'description': 'Custom web design and local SEO for Western NC businesses. Fast, mobile-first websites that convert visitors into customers across Asheville, Hendersonville, Waynesville, and beyond.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Asheville, NC' },
+    { '@type': 'City', 'name': 'Hendersonville, NC' },
+    { '@type': 'City', 'name': 'Waynesville, NC' },
+    { '@type': 'City', 'name': 'Black Mountain, NC' },
+    { '@type': 'City', 'name': 'Weaverville, NC' },
+    { '@type': 'City', 'name': 'Brevard, NC' }
+  ],
+  'url': 'https://www.shelbywebco.com/web-design-western-nc/'
+};
+
+const webpageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': 'Web Design & SEO in Western NC | Shelby Web Company',
+  'description': 'Custom web design and local SEO for Western NC businesses. Serving Asheville, Hendersonville, Waynesville, Black Mountain, Weaverville, Brevard and surrounding areas.',
+  'url': 'https://www.shelbywebco.com/web-design-western-nc/',
+  'isPartOf': { '@type': 'WebSite', 'name': 'Shelby Web Company', 'url': 'https://www.shelbywebco.com' },
+  'about': { '@type': 'Service', 'name': 'Web Design and SEO', 'provider': { '@type': 'Organization', 'name': 'Shelby Web Company' } },
+  'primaryImageOfPage': { '@type': 'ImageObject', 'contentUrl': 'https://www.shelbywebco.com/og-image.jpg' },
+  'breadcrumb': { '@type': 'BreadcrumbList', 'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.shelbywebco.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Web Design Western NC', 'item': 'https://www.shelbywebco.com/web-design-western-nc/' }
+  ]}
+};
+
+const westernNcLocalBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  'name': 'Shelby Web Company — Western NC Web Design & SEO',
+  'url': 'https://www.shelbywebco.com/web-design-western-nc/',
+  'telephone': '(704) 473-8188',
+  'areaServed': serviceSchema.areaServed,
+  'serviceType': ['Web Design Western NC', 'Website Development Western NC', 'SEO Company Western NC', 'Local SEO Western NC', 'Web Designers Asheville', 'Web Designers Hendersonville', 'Web Design Waynesville NC'],
+  'knowsAbout': ['web design western nc', 'web designers western nc', 'website development western nc', 'seo company western nc', 'asheville web design', 'hendersonville web design', 'waynesville seo', 'western nc seo'],
+  'address': { '@type': 'PostalAddress', 'addressLocality': 'Shelby', 'addressRegion': 'NC', 'addressCountry': 'US' }
+};
+---
+
+<BaseLayout 
+  title="Web Design & SEO in Western NC | Shelby Web Company"
+  description="Custom web design and local SEO for Western NC businesses. Serving Asheville, Hendersonville, Waynesville, Black Mountain, Weaverville, Brevard and surrounding areas."
+  canonical="https://www.shelbywebco.com/web-design-western-nc/"
+  image="/og-image.jpg"
+  breadcrumbs={[
+    { name: 'Web Design Western NC', url: 'https://www.shelbywebco.com/web-design-western-nc/' }
+  ]}
+>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(webpageSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(westernNcLocalBusinessSchema)} type="application/ld+json"></script>
+
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden">
+    <div class="hero-background-image absolute inset-0 z-0 opacity-40">
+      <Image src={ashHead} alt="Western North Carolina mountains" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#1c1c1c]/65 via-[#1c1c1c]/70 to-[#1c1c1c] z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)] z-0"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
+        ✦ Web Design & SEO for Western NC
+      </div>
+      <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
+        Elevating Mountain Brands <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Across Western NC.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        From Asheville to Hendersonville, Waynesville to Brevard — we build high-performance <span class="text-white font-bold">Western NC web design</span> and local SEO campaigns tailored for <span class="text-white font-bold">mountain businesses</span>.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a 
+           href="/contact/"
+           class="group relative inline-flex items-center justify-center cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-10 py-4 rounded-xl font-bold text-lg hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 overflow-hidden border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)]"
+         >
+           <span class="relative z-10">Get Your Free Strategy Session</span>
+           <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
+         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ Western NC Web Design & Local SEO</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          Western NC Web Design Built for <span class="text-brand-cyan">Local Growth</span>
+        </h2>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div class="space-y-5 text-white leading-relaxed text-lg">
+          <p>
+            Your website is your hardest-working salesperson — and across Western NC, it has to compete for attention every single day. Shelby Web Company designs custom websites for mountain businesses that are fast, mobile-first, and built to convert visitors into paying customers. We pair every site with strategic local SEO so that when someone searches <span class="text-white font-semibold">"web design Asheville"</span>, <span class="text-white font-semibold">"website design Hendersonville NC,"</span> or <span class="text-white font-semibold">"web design Waynesville,"</span> your business is the one they find.
+          </p>
+          <p>
+            Based in Shelby, NC and serving Western NC remotely, we understand the mountain market: the tourism traffic, the seasonal ebb and flow, and the customers who expect a personal, trustworthy online experience before they pick up the phone. You get a dedicated North Carolina team — without big-city agency overhead.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <Image src={ash6} alt="Western NC web design projects" class="rounded-2xl shadow-2xl aspect-square object-cover" />
+          <Image src={ash5} alt="Western NC local business web design" class="rounded-2xl shadow-2xl aspect-square object-cover mt-8" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem/Solution Section -->
+  <section class="py-24 px-4 bg-brand-dark border-y border-white/5">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+          Is Your Western NC Presence <span class="text-brand-cyan">Falling Behind?</span>
+        </h2>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="shrink-0 w-9 h-9 mt-0.5 bg-white rounded-md flex items-center justify-center text-red-600 shadow-[0_4px_12px_rgba(255,255,255,0.25)]">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-white"><span class="text-white font-semibold">Spending too much on directory leads?</span> Break free from shared platforms and start generating your own exclusive inquiries across Western NC.</p>
+          </div>
+          <div class="flex gap-4">
+            <div class="shrink-0 w-9 h-9 mt-0.5 bg-white rounded-md flex items-center justify-center text-red-600 shadow-[0_4px_12px_rgba(255,255,255,0.25)]">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-white"><span class="text-white font-semibold">Missing from local map searches?</span> When Western NC customers look for services nearby, your business needs to appear at the absolute top.</p>
+          </div>
+          <div class="flex gap-4">
+            <div class="shrink-0 w-9 h-9 mt-0.5 bg-white rounded-md flex items-center justify-center text-red-600 shadow-[0_4px_12px_rgba(255,255,255,0.25)]">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <p class="text-white"><span class="text-white font-semibold">Outdated digital storefront?</span> A clunky, slow website makes it harder for customers to trust your brand before they even reach out.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <Image src={ash2} alt="Western NC business district" class="rounded-2xl shadow-2xl aspect-square object-cover" />
+        <Image src={ash7} alt="Local results in Western NC" class="rounded-2xl shadow-2xl aspect-square object-cover mt-8" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Design Services -->
+  <section class="py-24 px-4 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ Web Design Western NC</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Custom Strategies for <span class="text-brand-cyan">Western NC Businesses</span></h2>
+        <p class="text-white max-w-2xl mx-auto text-lg">
+          From brand-new launches to full redesigns, our Western NC web design process is built around one outcome: websites that rank, convert, and keep working.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Modern, High-Converting Website Design in Western NC</h3>
+          <p class="text-white leading-relaxed">We design streamlined, fast-loading websites for Western NC businesses that elevate your brand's perceived value from the first click. Every layout is mobile-responsive and optimized for the way mountain customers actually browse — often from their phones.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">SEO-First Foundation</h3>
+          <p class="text-white leading-relaxed">Your site is built on a clean, crawlable technical foundation from day one — fast core web vitals, proper schema, and keyword-mapped pages. That's how "web design Asheville NC" and "web design Hendersonville" searches convert into ranked pages, not just pretty graphics.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Local SEO That Puts You on the Map</h3>
+          <p class="text-white leading-relaxed">We align your Google Business Profile, directories, and citations so you win the local map pack for "seo company asheville", "hendersonville seo", and "waynesville seo company" style searches — the visible, local-intent traffic that actually books appointments.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-cyan/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Ongoing Partnerships, Not Throwaway Projects</h3>
+          <p class="text-white leading-relaxed">As Western NC's digital landscape evolves, we continually refine your site and campaigns to keep your operations scaling — long-term partners for sustainable, compounding growth.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/services/web-design/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">Explore our full web design services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Services -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ Western NC SEO</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Western NC SEO Services That Rank on <span class="text-brand-blue">Page One</span></h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-14">
+        <p class="text-white leading-relaxed text-lg">
+          Ranking on page one for "asheville seo", "hendersonville seo", and "waynesville seo" searches means showing up where buyers already are. Shelby Web Company is a Western NC SEO company focused on one result: putting your business in front of local customers at the exact moment they're ready to buy.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-blue/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Local SEO & Map Pack Dominance</h3>
+          <p class="text-white leading-relaxed">We optimize your Google Business Profile, local citations, and on-page signals so your business wins the Western NC map pack — the visible, high-intent slot locals actually click.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-blue/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Content & Keyword Strategy</h3>
+          <p class="text-white leading-relaxed">We map every keyword from "asheville web design" to "seo company hendersonville nc" onto pages built to rank — then create content that answers exactly what Western NC searchers ask.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-blue/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Technical SEO & Site Speed</h3>
+          <p class="text-white leading-relaxed">Fast core web vitals, clean schema, crawlable architecture. Your Western NC site loads in a blink and Google can read every page — the foundation every ranking needs.</p>
+        </div>
+        <div class="relative group bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-brand-blue/40 transition-colors">
+          <div class="absolute top-4 right-4 w-9 h-9 bg-brand-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_12px_rgba(132,204,22,0.5)]">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-[#1c1c1c]">
+              <path class="check-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Conversion-Focused Optimization</h3>
+          <p class="text-white leading-relaxed">Ranking is only step one. We optimize every page to turn Western NC searchers into calls, form fills, and booked appointments.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/services/seo/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">See all SEO services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-24 px-4 bg-brand-dark border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ How We Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Our Western NC Web Design & SEO <span class="text-brand-cyan">Process</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-5xl font-black mb-4">1</div>
+          <h3 class="text-xl font-bold text-white mb-3">Strategy Session</h3>
+          <p class="text-white text-sm">We map your goals, market, and competition — then build a custom plan around your Western NC customers.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-5xl font-black mb-4">2</div>
+          <h3 class="text-xl font-bold text-white mb-3">Design & Build</h3>
+          <p class="text-white text-sm">Custom, on-brand, conversion-focused design with SEO baked into the foundation from day one.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-5xl font-black mb-4">3</div>
+          <h3 class="text-xl font-bold text-white mb-3">Launch & Optimize</h3>
+          <p class="text-white text-sm">Go live with clean technical SEO, fast load times, and everything aligned to start ranking.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-5xl font-black mb-4">4</div>
+          <h3 class="text-xl font-bold text-white mb-3">Grow</h3>
+          <p class="text-white text-sm">Ongoing local SEO that compounds month over month — keeping you at the top of Western NC search.</p>
+        </div>
+      </div>
+     </div>
+  </section>
+
+  <!-- Areas We Serve -->
+  <section class="py-24 px-4 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ Service Areas</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Web Design & SEO Across <span class="text-brand-blue">Western NC</span></h2>
+        <p class="text-white max-w-2xl mx-auto text-lg">
+          We proudly serve businesses throughout Western NC and the surrounding mountain region — remotely, with dedicated support from our Shelby, NC base.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-4">Asheville Area</h3>
+          <ul class="space-y-2 text-white text-sm">
+            <li>Downtown Asheville</li>
+            <li>River Arts District</li>
+            <li>West Asheville</li>
+            <li>North Asheville & Montford</li>
+            <li>Biltmore Village & Kenilworth</li>
+            <li>East Asheville & Beaverdam</li>
+            <li>Woodfin, Swannanoa & Fairview</li>
+            <li>Leicester, Candler & Oakley</li>
+            <li>Skyland & Arden</li>
+          </ul>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-4">Surrounding Towns</h3>
+          <ul class="space-y-2 text-white text-sm">
+            <li>Hendersonville</li>
+            <li>Black Mountain</li>
+            <li>Weaverville</li>
+            <li>Fletcher</li>
+            <li>Waynesville</li>
+            <li>Marshall</li>
+            <li>Brevard & Canton</li>
+            <li>Mills River & Mars Hill</li>
+            <li>Burnsville, Sylva & Franklin</li>
+          </ul>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <h3 class="text-xl font-bold text-white mb-4">Counties & Beyond</h3>
+          <ul class="space-y-2 text-white text-sm">
+            <li><a href="/web-design-shelby-nc/" class="hover:text-brand-cyan transition-colors">Cleveland County (Shelby)</a></li>
+            <li><a href="/web-design-gastonia-nc/" class="hover:text-brand-cyan transition-colors">Gaston County (Gastonia)</a></li>
+            <li><a href="/web-design-forest-city-nc/" class="hover:text-brand-cyan transition-colors">Rutherford County (Forest City)</a></li>
+            <li><a href="/web-design-kings-mountain-nc/" class="hover:text-brand-cyan transition-colors">Kings Mountain</a></li>
+            <li>Buncombe County</li>
+            <li>Henderson County</li>
+            <li>Haywood County</li>
+            <li>Madison County</li>
+            <li>Transylvania & Jackson Counties</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 text-center">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">Web Design & SEO for Western NC's Leading Industries</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Restaurants & Hospitality</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Real Estate & Property Management</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Healthcare & Wellness</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Construction & Trades</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Outdoor & Tourism</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Professional Services</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Retail & Boutiques</span>
+          <span class="px-5 py-2.5 bg-brand-dark border border-white/10 rounded-full text-white text-sm">Vacation Rentals</span>
+        </div>
+       </div>
+      </div>
+    </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-cyan text-sm uppercase tracking-widest mb-4">✦ FAQ</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+          Western NC Web Design & SEO <span class="text-brand-cyan">FAQ</span>
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {faqItems.map((item) => (
+          <details class="group bg-brand-dark border border-white/10 rounded-xl overflow-hidden hover:border-brand-cyan/40 transition-colors">
+            <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-white list-none">
+              {item.question}
+              <svg class="w-5 h-5 shrink-0 text-brand-cyan transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </summary>
+            <p class="px-6 pb-6 text-white text-sm leading-relaxed">
+              {item.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 px-4 relative overflow-hidden bg-brand-accent/90" data-animate>
+    <div class="max-w-4xl mx-auto text-center relative z-10 text-[#1c1c1c]">
+      <h2 class="font-heading text-5xl md:text-6xl font-black mb-8 leading-tight">
+        Secure Your Space <br />At The Top of Western NC Search.
+      </h2>
+      <p class="text-xl md:text-2xl font-medium mb-10 opacity-90 text-balance">
+        Start dominating local traffic across Western NC today. Schedule a brief consultation to explore the right strategy for your goals.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/contact/"
+          class="inline-block bg-[#1c1c1c] text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+        >
+          Book a Free Chat
+        </a>
+        <a 
+          href="tel:+17044738188"
+          class="inline-block border-2 border-[#1c1c1c] text-[#1c1c1c] px-10 py-4 rounded-xl font-black text-xl hover:bg-[#1c1c1c] hover:text-white transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero-background-image {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.8) 68%,
+        transparent 100%
+      );
+    }
+
+    .check-draw {
+      stroke-dasharray: 22;
+      stroke-dashoffset: 22;
+    }
+
+    .group:hover .check-draw {
+      animation: check-draw 1s ease-out forwards;
+    }
+
+    @keyframes check-draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+</BaseLayout>
