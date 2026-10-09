@@ -46,10 +46,10 @@ const industryLinks = [
 ];
 
 const promotionLinks = [
-  { href: '/promotions/the-golden-ticket/', label: 'The Golden Ticket' },
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
   { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
+  { href: '/promotions/the-golden-ticket/', label: 'The Golden Ticket', gold: true },
 ];
 
 const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industryLinks, ...aboutLinks, ...promotionLinks];
@@ -99,17 +99,20 @@ export default function MobileNav() {
   const renderLink = (link) => {
     const isBlog = link.label === 'Blog';
     const isTel = link.href.startsWith('tel:');
+    const isGold = 'gold' in link && link.gold;
     const topLevel = isTel
       ? 'py-3 text-3xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
       : isBlog
         ? 'py-3 animate-blog-stream font-poofy text-4xl text-white hover:text-brand-cyan hover:bg-white/5'
-        : 'py-3 text-4xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
+        : isGold
+          ? 'py-3 text-4xl font-bold text-[#fbbf24] hover:text-[#f8d66d] bg-[#fbbf24]/5 hover:bg-[#fbbf24]/10'
+          : 'py-3 text-4xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
     return (
       <a
         href={link.href}
         onClick={closeMenu}
         className={`block px-4 text-center transition-colors ${topLevel}`}
-        style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
+        style={isBlog ? { WebkitTextStroke: '0.6px white' } : isGold ? { textShadow: '0 0 12px rgba(251, 191, 36, 0.28)' } : undefined}
       >
         {link.label}
       </a>

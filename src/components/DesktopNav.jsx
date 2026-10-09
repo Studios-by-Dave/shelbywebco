@@ -186,10 +186,10 @@ export default function DesktopNav() {
               {promotionsOpen && (
                 <div className="border-l border-brand-blue/30 pl-3">
                   <a href="/promotions/" onClick={() => setPricingOpen(false)} className="block text-brand-cyan hover:text-white transition-colors py-1 font-semibold">All Promotions</a>
-                  <a href="/promotions/the-golden-ticket/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">The Golden Ticket</a>
                   <a href="/promotions/free-seo-audit/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free SEO Audit</a>
                   <a href="/promotions/free-logo-design/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Free Logo Design</a>
                   <a href="/promotions/referral-bonus/" onClick={() => setPricingOpen(false)} className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Referral Bonus</a>
+                  <a href="/promotions/the-golden-ticket/" onClick={() => setPricingOpen(false)} className="block text-[#fbbf24] hover:text-[#f8d66d] transition-colors py-1 font-bold tracking-wide" style={{ textShadow: '0 0 12px rgba(251, 191, 36, 0.28)' }}>The Golden Ticket</a>
                 </div>
               )}
             </div>
