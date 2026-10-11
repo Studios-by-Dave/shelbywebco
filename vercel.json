@@ -1,6 +1,76 @@
 {
   "redirects": [
     {
+      "source": "/booking",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/booking/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/services/google-optimization",
+      "destination": "/services/seo/",
+      "permanent": true
+    },
+    {
+      "source": "/services/google-optimization/",
+      "destination": "/services/seo/",
+      "permanent": true
+    },
+    {
+      "source": "/promos/referral-bonus",
+      "destination": "/promotions/referral-bonus/",
+      "permanent": true
+    },
+    {
+      "source": "/promos/referral-bonus/",
+      "destination": "/promotions/referral-bonus/",
+      "permanent": true
+    },
+    {
+      "source": "/promotions/free-website-asheville-nc",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/promotions/free-website-asheville-nc/",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-choose-studios-by-dave",
+      "destination": "/blog/why-choose-shelby-web-company/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-choose-studios-by-dave/",
+      "destination": "/blog/why-choose-shelby-web-company/",
+      "permanent": true
+    },
+    {
+      "source": "/web-design-asheville-nc",
+      "destination": "/web-design-western-nc/",
+      "permanent": true
+    },
+    {
+      "source": "/web-design-asheville-nc/",
+      "destination": "/web-design-western-nc/",
+      "permanent": true
+    },
+    {
+      "source": "/promotions/local-business-launchpad",
+      "destination": "/promotions/the-golden-ticket/",
+      "permanent": true
+    },
+    {
+      "source": "/promotions/local-business-launchpad/",
+      "destination": "/promotions/the-golden-ticket/",
+      "permanent": true
+    },
+    {
       "source": "/:path((?:[^/]+/)*[^/.]+)",
       "destination": "/:path/",
       "permanent": true

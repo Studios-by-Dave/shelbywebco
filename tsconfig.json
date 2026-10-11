@@ -1,4 +1,4 @@
 {
   "extends": "astro/tsconfigs/base",
-  "exclude": ["_removed pages", "dist", "node_modules"]
+  "exclude": ["_archive", "_removed pages", "dist", "node_modules"]
 }
