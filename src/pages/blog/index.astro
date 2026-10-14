@@ -53,10 +53,10 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
     <div class="max-w-7xl mx-auto">
       <!-- Section Picker: two square preview cards -->
       <div id="section-picker" class="block">
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <!-- Shelby Web Official preview square -->
           <button onclick="selectSection('official')" class="group text-left bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
-            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+            <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
               <Image
                 src={webredesignImg}
                 alt="Shelby Web Official articles"
@@ -64,17 +64,17 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-brand-sky/25 font-heading text-3xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Shelby Web Official</span>
+                <span class="text-brand-sky/25 font-heading text-xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Shelby Web Official</span>
               </div>
             </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-4">
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-2">
                 <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Section 1</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-3">
+              <h2 class="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors mb-1">
                 Shelby Web Official
               </h2>
-              <p class="text-white/90 text-sm line-clamp-3">
+              <p class="text-white/90 text-sm line-clamp-2">
                 Web design, SEO, and digital marketing tips for Shelby-area businesses. Click to browse all official articles.
               </p>
             </div>
@@ -82,7 +82,7 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
 
           <!-- Community Spotlight preview square -->
           <button onclick="selectSection('spotlight')" class="group text-left bg-brand-dark border border-[#c9a86a]/20 rounded-2xl overflow-hidden hover:border-[#c9a86a]/40 transition-all duration-300">
-            <div class="aspect-video bg-gray-800 relative overflow-hidden">
+            <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
               <Image
                 src={gabeWhisnantImg}
                 alt="Community Spotlight articles - The Shelby Star"
@@ -90,17 +90,17 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
               />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-[#c9a86a]/40 font-heading text-3xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Community Spotlight</span>
+                <span class="text-[#c9a86a]/40 font-heading text-xl font-bold uppercase tracking-widest transform -rotate-12 text-center px-4 group-hover:scale-110 transition-transform duration-500">Community Spotlight</span>
               </div>
             </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-4">
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-2">
                 <span class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest">Section 2</span>
               </div>
-              <h2 class="text-xl font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-3">
+              <h2 class="text-lg font-bold text-white group-hover:text-[#c9a86a] transition-colors mb-1">
                 Community Spotlight
               </h2>
-              <p class="text-white/90 text-sm line-clamp-3">
+              <p class="text-white/90 text-sm line-clamp-2">
                 Stories of the people and businesses keeping Cleveland County strong. Click to browse all spotlights.
               </p>
             </div>
@@ -189,23 +189,23 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
 
           <!-- Cluster pillar guides -->
           <div class="mb-10 p-6 bg-brand-darkest border border-white/10 rounded-2xl">
-            <p class="text-white font-bold mb-1">Start with a pillar guide</p>
-            <p class="text-white/70 text-sm mb-5">Three hubs organize the practical content — pick the one that matches what you're trying to fix.</p>
+            <p class="text-white font-bold mb-1">Start with a topic</p>
+            <p class="text-white/70 text-sm mb-5">Three topics organize the practical content — pick the one that matches what you're trying to fix.</p>
             <div class="grid sm:grid-cols-3 gap-4">
-              <a href="/blog/local-seo-essentials-2026/" class="group block p-4 bg-brand-dark border border-white/5 rounded-xl hover:border-brand-cyan/40 transition-all">
-                <span class="text-brand-cyan text-xs font-bold uppercase tracking-widest">Cluster 1</span>
-                <h3 class="text-white font-bold group-hover:text-brand-cyan transition-colors mt-1">Local SEO</h3>
-                <p class="text-white/70 text-sm mt-1">Get found by nearby customers — GBP, reviews, on-page basics.</p>
+              <a href="/blog/topics/local-seo/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
+                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 1</span>
+                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">Local SEO</h3>
+                <p class="text-neutral-600 text-sm mt-1">Get found by nearby customers — GBP, reviews, on-page basics.</p>
               </a>
-              <a href="/blog/website-cost-shelby-nc-2026/" class="group block p-4 bg-brand-dark border border-white/5 rounded-xl hover:border-brand-cyan/40 transition-all">
-                <span class="text-brand-cyan text-xs font-bold uppercase tracking-widest">Cluster 2</span>
-                <h3 class="text-white font-bold group-hover:text-brand-cyan transition-colors mt-1">Website Cost</h3>
-                <p class="text-white/70 text-sm mt-1">Real ranges, plan comparisons, and what actually drives price.</p>
+              <a href="/blog/topics/website-cost/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
+                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 2</span>
+                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">Website Cost</h3>
+                <p class="text-neutral-600 text-sm mt-1">Real ranges, plan comparisons, and what actually drives price.</p>
               </a>
-              <a href="/blog/ai-search-2026/" class="group block p-4 bg-brand-dark border border-white/5 rounded-xl hover:border-brand-cyan/40 transition-all">
-                <span class="text-brand-cyan text-xs font-bold uppercase tracking-widest">Cluster 3</span>
-                <h3 class="text-white font-bold group-hover:text-brand-cyan transition-colors mt-1">AI Search &amp; GEO</h3>
-                <p class="text-white/70 text-sm mt-1">How AI assistants pick sources — and how to be one of them.</p>
+              <a href="/blog/topics/ai-search/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
+                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 3</span>
+                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">AI Search &amp; GEO</h3>
+                <p class="text-neutral-600 text-sm mt-1">How AI assistants pick sources — and how to be one of them.</p>
               </a>
             </div>
           </div>

@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Image from '../../../components/OptimizedImage.astro';
+import JsonLd from '../../../components/JsonLd.astro';
+import { breadcrumbSchema, SITE_URL } from '../../../lib/schema';
+import nearMeImg from '../../../../assets/Near-Me-Local-Search.png';
+import websiteCostImg from '../../../../assets/website_cost_1.webp';
+import opencodeImg from '../../../../assets/opencode_2.png';
+
+export async function getStaticPaths() {
+  return [
+    { params: { cluster: 'local-seo' } },
+    { params: { cluster: 'website-cost' } },
+    { params: { cluster: 'ai-search' } },
+  ];
+}
+
+const { cluster } = Astro.params;
+
+const meta = {
+  'local-seo': {
+    title: 'Local SEO Guides for Shelby & Cleveland County',
+    description:
+      'Practical local SEO guides for Shelby, Gastonia, Kings Mountain and greater Cleveland County businesses — Google Business Profile, reviews, service pages and more.',
+    image: nearMeImg,
+  },
+  'website-cost': {
+    title: 'Website Cost Guides for the Shelby Area',
+    description:
+      'Honest website cost ranges, plan comparisons and rebuild checklists for Shelby, NC and Cleveland County businesses.',
+    image: websiteCostImg,
+  },
+  'ai-search': {
+    title: 'AI Search & GEO Guides',
+    description:
+      'How AI assistants find and cite local businesses — GEO, structured data, and practical checklists for getting recommended in ChatGPT and AI answers.',
+    image: opencodeImg,
+  },
+}[cluster];
+
+const posts = (await getCollection('blog', ({ data }) => data.cluster === cluster && data.draft !== true)).sort(
+  (a, b) => b.data.datePublished.localeCompare(a.data.datePublished)
+);
+
+const pageUrl = `${SITE_URL}blog/topics/${cluster}/`;
+
+const formatDate = (iso: string) =>
+  new Date(`${iso}T12:00:00`).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+
+<BaseLayout title={meta.title} description={meta.description} breadcrumbs={[{ name: meta.title, url: pageUrl }]}>
+  <JsonLd data={[breadcrumbSchema([{ name: meta.title, url: pageUrl }])]} />
+
+  <section class="pt-14 pb-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-3">Blog topic</p>
+      <h1 class="font-heading text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">{meta.title}</h1>
+      <p class="text-white/75 text-lg mb-10">{meta.description}</p>
+
+      <div class="flex flex-col gap-6">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}/`} class="group flex flex-col sm:flex-row bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-cyan/40 transition-all">
+            <div class="sm:w-48 sm:shrink-0 aspect-[16/8] sm:aspect-square bg-gray-800 relative overflow-hidden">
+              <Image
+                src={post.data.image || meta.image}
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-brand-dark/60 to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-center min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-2 text-xs uppercase tracking-widest text-white/50">
+                <time datetime={post.data.datePublished}>{formatDate(post.data.datePublished)}</time>
+                <span aria-hidden="true">·</span>
+                <time datetime={post.data.dateModified}>Updated {formatDate(post.data.dateModified)}</time>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-2">{post.data.title}</h2>
+              <p class="text-white/70 text-sm leading-relaxed line-clamp-2">{post.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-white/60">No posts in this topic yet.</p>
+      )}
+
+      <p class="mt-10">
+        <a href="/blog/" class="text-white/80 hover:text-white">← Back to Blog</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

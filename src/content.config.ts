@@ -9,6 +9,7 @@ const blog = defineCollection({
     cluster: z.enum(['local-seo', 'website-cost', 'ai-search', 'spotlight', 'official']),
     datePublished: z.string(),
     dateModified: z.string(),
+    image: z.string().optional(),
     draft: z.boolean().default(false),
     authorName: z.string().default('Dave Richardson'),
     pillar: z.object({ label: z.string(), href: z.string() }).optional(),
