@@ -4,7 +4,7 @@ description: "A transparent look at how a Cleveland County service business impr
 cluster: spotlight
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
 serviceLink: { label: "Case studies", href: "/services/case-studies/solution-d/" }
 related:

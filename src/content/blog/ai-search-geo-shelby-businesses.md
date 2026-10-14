@@ -4,7 +4,7 @@ description: "Generative engine optimization explained for Shelby businesses —
 cluster: ai-search
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "AI search guide (2026)", href: "/blog/ai-search-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:

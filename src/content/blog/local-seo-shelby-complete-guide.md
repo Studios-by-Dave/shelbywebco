@@ -4,7 +4,7 @@ description: "A plain-English local SEO guide for Shelby, NC businesses — Goog
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "Local SEO essentials (existing guide)", href: "/blog/local-seo-essentials-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:

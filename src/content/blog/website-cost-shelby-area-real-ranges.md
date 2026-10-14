@@ -4,7 +4,7 @@ description: "Honest website cost ranges for Shelby, NC and Cleveland County bus
 cluster: website-cost
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "Website cost guide (Shelby 2026)", href: "/blog/website-cost-shelby-nc-2026/" }
 serviceLink: { label: "Web design services", href: "/services/web-design/" }
 related:
