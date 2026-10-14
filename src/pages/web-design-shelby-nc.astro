@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
+import JsonLd from '../components/JsonLd.astro';
+import FaqSection from '../components/FaqSection.astro';
+import TestimonialSlot from '../components/TestimonialSlot.astro';
+import { faqSchema, serviceSchema, breadcrumbSchema, SITE_URL } from '../lib/schema';
 import shelby3 from '../../assets/service locations/Shelby/maps/Shelby_3.jpg';
 import shelby4 from '../../assets/service locations/Shelby/Shelby_4.jpg';
 import shelby5 from '../../assets/service locations/Shelby/Shelby_5.jpg';
@@ -10,66 +14,57 @@ import shelby9 from '../../assets/service locations/Shelby/Shelby_9.jpg';
 import shelbyDrone1 from '../../assets/service locations/Shelby/shelby_nc_drone_1.webp';
 import shelbyCafe2 from '../../assets/service locations/Shelby/shelby-cafe_2.jpg';
 
-const localSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.shelbywebco.com',
-  'name': 'Shelby Web Company',
-  'image': 'https://www.shelbywebco.com/og-image.jpg',
-  'url': 'https://www.shelbywebco.com',
-  'telephone': '(704) 473-8188',
-  'email': 'dave@shelbywebco.com',
-  'priceRange': '$497+',
-  'address': {
-    '@type': 'PostalAddress',
-    'addressLocality': 'Shelby',
-    'addressRegion': 'NC',
-    'postalCode': '28150',
-    'addressCountry': 'US'
-  },
-  'geo': {
-    '@type': 'GeoCoordinates',
-    'latitude': 35.2924,
-    'longitude': -81.5356
-  },
-  'areaServed': [
-    { '@type': 'City', 'name': 'Shelby, NC' },
-    { '@type': 'City', 'name': 'Kings Mountain, NC' },
-    { '@type': 'City', 'name': 'Gastonia, NC' },
-    { '@type': 'City', 'name': 'Forest City, NC' },
-    { '@type': 'City', 'name': 'Boiling Springs, NC' },
-    { '@type': 'City', 'name': 'Polkville, NC' },
-    { '@type': 'City', 'name': 'Asheville, NC' }
-  ],
-  'sameAs': [
-    'https://www.facebook.com/profile.php?id=61591509287089',
-    'https://www.linkedin.com/in/dave-richardson-57615329b'
-  ]
-};
+const pageUrl = `${SITE_URL}web-design-shelby-nc/`;
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  'serviceType': 'Web Design & Local SEO',
-  'name': 'Web Design & Local SEO in Shelby, NC',
-  'description': 'Local web design and SEO in Shelby, NC. Shelby Web Company builds fast, custom websites that turn local browsers into customers.',
-  'provider': {
-    '@type': 'LocalBusiness',
-    'name': 'Shelby Web Company',
-    'url': 'https://www.shelbywebco.com',
-    'telephone': '(704) 473-8188'
+const faqs = [
+  {
+    question: 'How much does a website cost in Shelby, NC?',
+    answer:
+      'Core is $497 to launch, then $297/month for 12 months — 4–5 page site, hosting, security, foundational SEO, and monthly edits. See /pricing/ for Plus and Ultra ranges.',
   },
-  'areaServed': { '@type': 'City', 'name': 'Shelby, NC' },
-  'url': 'https://www.shelbywebco.com/web-design-shelby-nc/'
-};
+  {
+    question: 'How long does a Shelby web design project take?',
+    answer:
+      'Most Shelby sites launch in 2–4 weeks. Simple builds can be ready in 1–2 weeks; complex builds take 4–6 weeks.',
+  },
+  {
+    question: 'Do you only work with Shelby businesses?',
+    answer:
+      'No — we’re based in Shelby and serve all of Cleveland County plus Gastonia, Kings Mountain, Forest City, Boiling Springs, Polkville, and Western NC.',
+  },
+  {
+    question: 'Is SEO included with a new Shelby website?',
+    answer:
+      'Yes. Foundational on-page and local SEO ship with every plan. Active monthly SEO and Google Business Profile work are on Plus.',
+  },
+  {
+    question: 'Can you redesign my existing Shelby site?',
+    answer:
+      'Yes. We redesign dated or slow sites, keep what works, and rebuild the foundation for speed, mobile, and local search.',
+  },
+];
+
+const localSchema = serviceSchema({
+  name: 'Web Design & Local SEO in Shelby, NC',
+  description:
+    'Local web design and SEO in Shelby, NC. Shelby Web Company builds fast, custom websites that turn local browsers into customers.',
+  areaName: 'Shelby, NC',
+  url: pageUrl,
+});
+
+const schemaList = [
+  localSchema,
+  faqSchema(faqs),
+  breadcrumbSchema([{ name: 'Web Design Shelby NC', url: pageUrl }]),
+];
 ---
 
 <BaseLayout 
-  title="Local Web Design & Local SEO in Shelby, NC"
-  description="Local web design & SEO in Shelby, NC. Shelby Web Company builds fast, custom websites that turn local browsers into customers. Free logo design + $100 referral rewards."
+  title="Web Design Shelby NC: Local Websites & SEO"
+  description="Web design Shelby NC — fast, hand-coded sites and local SEO for Shelby businesses. $497 launch + $297/mo Core. Free strategy call: (704) 473-8188."
+  breadcrumbs={[{ name: 'Web Design Shelby NC', url: pageUrl }]}
 >
-  <script is:inline set:html={JSON.stringify(localSchema)} type="application/ld+json"></script>
-  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <JsonLd data={schemaList} />
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
@@ -202,6 +197,24 @@ const serviceSchema = {
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialSlot town="Shelby" />
+
+  <FaqSection items={faqs} />
+
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-3xl mx-auto bg-brand-dark border border-white/10 rounded-2xl p-8 text-center">
+      <h2 class="font-heading text-2xl font-bold text-white mb-4">Shelby resources</h2>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Website cost guide</a>
+        <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Local SEO essentials</a>
+        <a href="/blog/professional-web-design-shelby-nc-leads/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Web design & leads</a>
+        <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Pricing</a>
+        <a href="/web-design-cleveland-county-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Cleveland County</a>
+        <a href="/promotions/the-golden-ticket/" class="text-[#f6c744] hover:text-white underline decoration-[#f6c744]/40">Golden Ticket</a>
       </div>
     </div>
   </section>

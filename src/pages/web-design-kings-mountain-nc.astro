@@ -1,32 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
+import JsonLd from '../components/JsonLd.astro';
+import FaqSection from '../components/FaqSection.astro';
+import TestimonialSlot from '../components/TestimonialSlot.astro';
+import { faqSchema, serviceSchema, breadcrumbSchema, SITE_URL } from '../lib/schema';
 import km1 from '../../assets/service locations/kings mountain/kings mountain nc_1.jpeg';
 import km2 from '../../assets/service locations/kings mountain/kings mountain nc_2.jpg';
 import km3 from '../../assets/service locations/kings mountain/kings mountain nc_3.jpg';
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  'serviceType': 'Web Design & Local SEO',
-  'name': 'Web Design & Local SEO in Kings Mountain, NC',
-  'description': 'Professional web design and local SEO for Kings Mountain, NC businesses.',
-  'provider': {
-    '@type': 'LocalBusiness',
-    'name': 'Shelby Web Company',
-    'url': 'https://www.shelbywebco.com',
-    'telephone': '(704) 473-8188'
+const pageUrl = `${SITE_URL}web-design-kings-mountain-nc/`;
+
+const faqs = [
+  {
+    question: 'How much does a website cost in Kings Mountain, NC?',
+    answer:
+      'Core is $497 to launch, then $297/month for 12 months — site, hosting, security, foundational SEO, and monthly edits. Full plan details are on the pricing page.',
   },
-  'areaServed': { '@type': 'City', 'name': 'Kings Mountain, NC' },
-  'url': 'https://www.shelbywebco.com/web-design-kings-mountain-nc/'
-};
+  {
+    question: 'Do you build sites for Kings Mountain contractors and shops?',
+    answer:
+      'Yes. Home services, retail, professional services, and trades across Kings Mountain and southern Cleveland County are a core part of our work.',
+  },
+  {
+    question: 'How long does a Kings Mountain website take?',
+    answer:
+      'Most projects launch in 2–4 weeks from kickoff, depending on scope and content readiness.',
+  },
+  {
+    question: 'Will my site show up in local Kings Mountain searches?',
+    answer:
+      'We build for local intent from day one — service pages, schema, speed, and Google Business Profile foundations. Rankings compound with ongoing SEO on Plus.',
+  },
+  {
+    question: 'Can you redesign my current Kings Mountain site?',
+    answer:
+      'Yes. We redesign dated sites, keep what works, and rebuild for mobile speed and local search.',
+  },
+];
+
+const schemaList = [
+  serviceSchema({
+    name: 'Web Design & Local SEO in Kings Mountain, NC',
+    description: 'Professional web design and local SEO for Kings Mountain, NC businesses.',
+    areaName: 'Kings Mountain, NC',
+    url: pageUrl,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([{ name: 'Web Design Kings Mountain NC', url: pageUrl }]),
+];
 ---
 
 <BaseLayout 
-  title="Web Design & Local SEO in Kings Mountain, NC"
-  description="Professional web design and local SEO for Kings Mountain, NC businesses."
+  title="Web Design Kings Mountain NC: Websites & SEO"
+  description="Web design Kings Mountain NC — modern websites and local SEO for Cleveland County businesses. $497 launch + $297/mo Core. Free strategy call: (704) 473-8188."
+  breadcrumbs={[{ name: 'Web Design Kings Mountain NC', url: pageUrl }]}
 >
-  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <JsonLd data={schemaList} />
 
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
     <div class="absolute inset-0 z-0 opacity-25">
@@ -149,6 +179,24 @@ const serviceSchema = {
             <p class="text-white leading-relaxed">Your website is only the start. We support ongoing updates, local SEO, and site care so your web presence keeps working as your business grows.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialSlot town="Kings Mountain" />
+
+  <FaqSection items={faqs} />
+
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-3xl mx-auto bg-brand-dark border border-white/10 rounded-2xl p-8 text-center">
+      <h2 class="font-heading text-2xl font-bold text-white mb-4">Kings Mountain resources</h2>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Website cost guide</a>
+        <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Local SEO essentials</a>
+        <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Pricing</a>
+        <a href="/web-design-cleveland-county-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Cleveland County</a>
+        <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Shelby</a>
+        <a href="/promotions/the-golden-ticket/" class="text-[#f6c744] hover:text-white underline decoration-[#f6c744]/40">Golden Ticket</a>
       </div>
     </div>
   </section>

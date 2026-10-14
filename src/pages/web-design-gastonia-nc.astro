@@ -1,31 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
+import JsonLd from '../components/JsonLd.astro';
+import FaqSection from '../components/FaqSection.astro';
+import TestimonialSlot from '../components/TestimonialSlot.astro';
+import { faqSchema, serviceSchema, breadcrumbSchema, SITE_URL } from '../lib/schema';
 import gastoniaLeft from '../../assets/service locations/gastonia/gastonia nc_3.jpg';
 import gastoniaRight from '../../assets/service locations/gastonia/gastonia nc_4.png';
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  'serviceType': 'Web Design & Local SEO',
-  'name': 'Web Design & Local SEO in Gastonia, NC',
-  'description': 'Professional web design and local SEO services for Gastonia, NC. We help Gaston County businesses dominate local search and grow their digital presence.',
-  'provider': {
-    '@type': 'LocalBusiness',
-    'name': 'Shelby Web Company',
-    'url': 'https://www.shelbywebco.com',
-    'telephone': '(704) 473-8188'
+const pageUrl = `${SITE_URL}web-design-gastonia-nc/`;
+
+const faqs = [
+  {
+    question: 'How much does a website cost in Gastonia, NC?',
+    answer:
+      'Core is $497 to launch, then $297/month for 12 months. Plus and Ultra add active local SEO and growth work. Full ranges are on the pricing page.',
   },
-  'areaServed': { '@type': 'City', 'name': 'Gastonia, NC' },
-  'url': 'https://www.shelbywebco.com/web-design-gastonia-nc/'
-};
+  {
+    question: 'Do you actually work with Gastonia businesses?',
+    answer:
+      'Yes. Gastonia and greater Gaston County are a primary service area — same process, same transparent pricing as our Shelby clients.',
+  },
+  {
+    question: 'How long does a Gastonia website take?',
+    answer:
+      'Typically 2–4 weeks from kickoff to launch, depending on scope and how fast content and photos come in.',
+  },
+  {
+    question: 'Can you help with Google Business Profile in Gastonia?',
+    answer:
+      'Yes. Foundational setup is included with Core; active GBP optimization and review generation are on Plus.',
+  },
+  {
+    question: 'What makes you different from a Charlotte agency?',
+    answer:
+      'We’re local to Cleveland and Gaston counties, hand-code every site, and publish our prices up front — no big-city retainers or surprise fees.',
+  },
+];
+
+const schemaList = [
+  serviceSchema({
+    name: 'Web Design & Local SEO in Gastonia, NC',
+    description:
+      'Professional web design and local SEO for Gastonia, NC businesses. We help Gaston County businesses dominate local search.',
+    areaName: 'Gastonia, NC',
+    url: pageUrl,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([{ name: 'Web Design Gastonia NC', url: pageUrl }]),
+];
 ---
 
 <BaseLayout 
-  title="Web Design & Local SEO Gastonia, NC"
-  description="Professional web design and local SEO services for Gastonia, NC. We help Gaston County businesses dominate local search and grow their digital presence."
+  title="Web Design Gastonia NC: Local SEO & Websites"
+  description="Web design Gastonia NC for local businesses — custom sites and Gaston County SEO that turn searchers into customers. $497 launch + $297/mo. Call (704) 473-8188."
+  breadcrumbs={[{ name: 'Web Design Gastonia NC', url: pageUrl }]}
 >
-  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <JsonLd data={schemaList} />
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
@@ -230,16 +261,33 @@ const serviceSchema = {
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="p-4 bg-brand-dark border border-white/5 rounded-xl">
-                <div class="text-3xl font-black text-brand-accent mb-1">20+</div>
-                <p class="text-white/90 text-xs uppercase tracking-tighter">Gaston Clients Served</p>
+                <div class="text-3xl font-black text-brand-accent mb-1">$497</div>
+                <p class="text-white/90 text-xs uppercase tracking-tighter">Launch fee, Core plan</p>
               </div>
               <div class="p-4 bg-brand-dark border border-white/5 rounded-xl">
-                <div class="text-3xl font-black text-brand-cyan mb-1">5★</div>
-                <p class="text-white/90 text-xs uppercase tracking-tighter">Locally Trusted Reputation</p>
+                <div class="text-3xl font-black text-brand-cyan mb-1">$297</div>
+                <p class="text-white/90 text-xs uppercase tracking-tighter">Per month, 12-month term</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialSlot town="Gastonia" />
+
+  <FaqSection items={faqs} />
+
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-3xl mx-auto bg-brand-dark border border-white/10 rounded-2xl p-8 text-center">
+      <h2 class="font-heading text-2xl font-bold text-white mb-4">Gastonia resources</h2>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Local SEO essentials</a>
+        <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Website cost guide</a>
+        <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Pricing</a>
+        <a href="/web-design-cleveland-county-nc/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Cleveland County</a>
+        <a href="/promotions/the-golden-ticket/" class="text-[#f6c744] hover:text-white underline decoration-[#f6c744]/40">Golden Ticket</a>
       </div>
     </div>
   </section>

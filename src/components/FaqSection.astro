@@ -1,0 +1,30 @@
+---
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FaqItem[];
+  heading?: string;
+}
+
+const { items, heading = 'Frequently Asked Questions' } = Astro.props;
+---
+
+<section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" aria-labelledby="faq-heading" data-animate>
+  <div class="max-w-3xl mx-auto">
+    <h2 id="faq-heading" class="font-heading font-bold text-3xl md:text-4xl text-white mb-8 text-center">{heading}</h2>
+    <div class="space-y-0">
+      {items.map((item) => (
+        <details class="border-b border-white/10 group">
+          <summary class="py-5 font-heading font-semibold text-lg text-white cursor-pointer list-none flex justify-between items-center gap-3">
+            <span>{item.question}</span>
+            <span aria-hidden="true" class="text-brand-cyan text-xl shrink-0 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-white/70 pb-5 leading-relaxed">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

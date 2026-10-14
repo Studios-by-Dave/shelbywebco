@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
+import FaqSection from '../components/FaqSection.astro';
+import TestimonialSlot from '../components/TestimonialSlot.astro';
+import Image from '../components/OptimizedImage.astro';
+import { faqSchema, serviceSchema, breadcrumbSchema, SITE_URL } from '../lib/schema';
+import shelbyDrone from '../../assets/service locations/Shelby/shelby_nc_drone_1.webp';
+import shelbyCafe from '../../assets/service locations/Shelby/shelby-cafe_2.jpg';
+
+const pageTitle = 'Web Design Cleveland County NC: Local Websites & SEO';
+const pageDescription =
+  'Web design and local SEO for Cleveland County, NC — Shelby, Kings Mountain, Boiling Springs, and beyond. Fast sites that help local customers find you. Call (704) 473-8188.';
+const pageUrl = `${SITE_URL}web-design-cleveland-county-nc/`;
+
+const faqs = [
+  {
+    question: 'How much does a website cost for a Cleveland County business?',
+    answer:
+      'Our Core plan is $497 to launch, then $297/month for 12 months — hosting, security, foundational SEO, and monthly edits included. See full pricing on the pricing page.',
+  },
+  {
+    question: 'Do you work with businesses outside Shelby?',
+    answer:
+      'Yes. We serve all of Cleveland County — Shelby, Kings Mountain, Boiling Springs, Polkville, Fallston, Lawndale, and surrounding communities — plus Gaston and Rutherford counties.',
+  },
+  {
+    question: 'How long does a Cleveland County website project take?',
+    answer:
+      'Most sites launch in 2–4 weeks. Simple builds can be ready in 1–2 weeks; more complex projects take 4–6 weeks. You get a clear timeline before we start.',
+  },
+  {
+    question: 'Can you fix an existing website that isn’t ranking?',
+    answer:
+      'Yes. We audit technical SEO, speed, content, and Google Business Profile, then fix what is holding you back — whether we built the site or not.',
+  },
+  {
+    question: 'Do you also handle Google Business Profile and reviews?',
+    answer:
+      'Foundational profile setup is included with Core. Active review generation and ongoing GBP optimization are part of the Plus plan.',
+  },
+];
+
+const schemaList = [
+  serviceSchema({
+    name: 'Web Design & Local SEO in Cleveland County, NC',
+    description:
+      'Custom web design and local SEO for Cleveland County, NC businesses — Shelby, Kings Mountain, Boiling Springs, and surrounding communities.',
+    areaName: 'Cleveland County, NC',
+    url: pageUrl,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([{ name: 'Web Design Cleveland County', url: pageUrl }]),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} breadcrumbs={[{ name: 'Web Design Cleveland County', url: pageUrl }]}>
+  <JsonLd data={schemaList} />
+
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 z-0 opacity-30">
+      <Image src={shelbyDrone} alt="Cleveland County NC aerial view" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#1c1c1c]/70 via-[#1c1c1c]/75 to-[#1c1c1c]"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+        ✦ Cleveland County, NC
+      </div>
+      <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[0.95]">
+        Web Design for <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Cleveland County Businesses.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        Shelby Web Company builds fast, hand-coded websites and local SEO systems for businesses across Cleveland County — from Uptown Shelby to Kings Mountain and Boiling Springs — so nearby customers find you first.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="/contact/" class="bg-brand-accent text-[#1c1c1c] px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent-light transition-all duration-300 shadow-[0_0_20px_rgba(132,204,22,0.4)]">
+          Get a Free Strategy Session
+        </a>
+        <a href="/pricing/" class="border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
+          View Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-brand-darkest border-y border-white/5" data-animate>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">Why Cleveland County businesses choose a local web partner</h2>
+        <p class="text-white/80 mb-4 leading-relaxed">
+          Big-city agencies charge big-city prices. We live and work here. Your site is built for how people in Cleveland County actually search — service + town, map pack, and mobile.
+        </p>
+        <ul class="space-y-3 text-white/80">
+          <li class="flex gap-3"><span class="text-brand-accent font-bold">✓</span> Hand-coded for speed (no bloated templates)</li>
+          <li class="flex gap-3"><span class="text-brand-accent font-bold">✓</span> Local SEO foundations on every launch</li>
+          <li class="flex gap-3"><span class="text-brand-accent font-bold">✓</span> Transparent pricing — $497 launch + $297/mo Core</li>
+          <li class="flex gap-3"><span class="text-brand-accent font-bold">✓</span> Direct access to the founder, not a ticket queue</li>
+        </ul>
+      </div>
+      <Image src={shelbyCafe} alt="Local Cleveland County business district" class="rounded-2xl shadow-2xl w-full h-auto object-cover" />
+    </div>
+  </section>
+
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl font-bold text-white mb-6 text-center">Towns we serve in Cleveland County</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/web-design-shelby-nc/" class="bg-brand-dark border border-white/10 rounded-xl p-5 hover:border-brand-cyan/40 transition-colors">
+          <p class="font-bold text-white">Shelby, NC</p>
+          <p class="text-white/50 text-sm">County seat · Uptown & beyond</p>
+        </a>
+        <a href="/web-design-kings-mountain-nc/" class="bg-brand-dark border border-white/10 rounded-xl p-5 hover:border-brand-cyan/40 transition-colors">
+          <p class="font-bold text-white">Kings Mountain, NC</p>
+          <p class="text-white/50 text-sm">I-85 corridor</p>
+        </a>
+        <a href="/web-design-boiling-springs-nc/" class="bg-brand-dark border border-white/10 rounded-xl p-5 hover:border-brand-cyan/40 transition-colors">
+          <p class="font-bold text-white">Boiling Springs, NC</p>
+          <p class="text-white/50 text-sm">Growing bedroom community</p>
+        </a>
+        <a href="/web-design-polkville-nc/" class="bg-brand-dark border border-white/10 rounded-xl p-5 hover:border-brand-cyan/40 transition-colors">
+          <p class="font-bold text-white">Polkville, NC</p>
+          <p class="text-white/50 text-sm">Rural & service-area businesses</p>
+        </a>
+        <div class="bg-brand-dark border border-white/5 rounded-xl p-5 opacity-70">
+          <p class="font-bold text-white">Fallston, Lawndale & rural Cleveland</p>
+          <p class="text-white/50 text-sm">Serving the whole county remotely</p>
+        </div>
+        <a href="/web-design-gastonia-nc/" class="bg-brand-dark border border-white/10 rounded-xl p-5 hover:border-brand-cyan/40 transition-colors">
+          <p class="font-bold text-white">Gastonia (Gaston County)</p>
+          <p class="text-white/50 text-sm">Neighboring market we also serve</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialSlot town="Cleveland County" />
+
+  <FaqSection items={faqs} />
+
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-3xl mx-auto bg-brand-dark border border-white/10 rounded-2xl p-8 text-center">
+      <h2 class="font-heading text-2xl font-bold text-white mb-4">Helpful guides for Cleveland County owners</h2>
+      <p class="text-white/70 mb-6">Straight answers on cost, local SEO, and whether a new site is worth it.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/blog/website-cost-shelby-nc-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Website cost guide</a>
+        <a href="/blog/local-seo-essentials-2026/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Local SEO essentials</a>
+        <a href="/blog/best-web-designers-near-me/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Choosing a local designer</a>
+        <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Full pricing</a>
+        <a href="/promotions/the-golden-ticket/" class="text-[#f6c744] hover:text-white underline decoration-[#f6c744]/40">Golden Ticket promo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 relative overflow-hidden bg-brand-accent/90" data-animate>
+    <div class="max-w-4xl mx-auto text-center relative z-10 text-[#1c1c1c]">
+      <h2 class="font-heading text-4xl md:text-5xl font-black mb-6 leading-tight">Ready to grow in Cleveland County?</h2>
+      <p class="text-xl font-medium mb-8 opacity-90">Free strategy call. No pressure. Clear next steps.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="inline-block bg-[#1c1c1c] text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl">Book a Free Chat</a>
+        <a href="tel:+17044738188" class="inline-block border-2 border-[#1c1c1c] text-[#1c1c1c] px-10 py-4 rounded-xl font-black text-xl hover:bg-[#1c1c1c] hover:text-white transition-all duration-300">(704) 473-8188</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
