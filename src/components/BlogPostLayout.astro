@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from './JsonLd.astro';
+import FaqSection from './FaqSection.astro';
+import { articleSchema, breadcrumbSchema, faqSchema, absoluteUrl } from '../lib/schema';
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  cluster?: string;
+  faqs?: FaqItem[];
+  pillar?: { label: string; href: string };
+  serviceLink?: { label: string; href: string };
+  related?: { label: string; href: string }[];
+  authorName?: string;
+}
+
+const {
+  title,
+  description,
+  datePublished,
+  dateModified,
+  cluster = 'Shelby Web Official',
+  faqs = [],
+  pillar,
+  serviceLink,
+  related = [],
+  authorName = 'Dave Richardson',
+} = Astro.props;
+
+const url = absoluteUrl(Astro.url.pathname);
+const publishedLabel = new Date(`${datePublished}T12:00:00`).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const modifiedLabel = new Date(`${dateModified}T12:00:00`).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const schemas = [
+  articleSchema({
+    headline: title,
+    description,
+    url,
+    datePublished,
+    dateModified,
+  }),
+  breadcrumbSchema([{ name: title, url }]),
+];
+if (faqs.length) schemas.push(faqSchema(faqs));
+---
+
+<BaseLayout title={title} description={description} breadcrumbs={[{ name: title, url }]}>
+  <JsonLd data={schemas} />
+
+  <article class="pt-16 pb-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <header class="mb-10">
+        <div class="flex flex-wrap items-center gap-2 mb-4 text-xs uppercase tracking-widest text-white/60">
+          <span class="text-brand-cyan font-bold">{cluster}</span>
+          <span aria-hidden="true">·</span>
+          <time datetime={datePublished}>Published {publishedLabel}</time>
+          <span aria-hidden="true">·</span>
+          <time datetime={dateModified}>Updated {modifiedLabel}</time>
+        </div>
+        <h1 class="font-heading text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+          {title}
+        </h1>
+        <p class="text-white/80 text-lg leading-relaxed">{description}</p>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <slot />
+      </div>
+
+      {faqs.length > 0 && <FaqSection items={faqs} />}
+
+      <aside class="mt-12 p-6 bg-brand-dark border border-white/10 rounded-2xl">
+        <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-3">About the author</p>
+        <p class="text-white/85 mb-2">
+          <strong class="text-white">{authorName}</strong> — Founder / Lead Developer, Shelby Web Company. Building hand-coded websites and local SEO systems for Cleveland and Gaston County businesses.
+        </p>
+        <a href="/about/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30 text-sm">More about Dave</a>
+      </aside>
+
+      {(pillar || serviceLink || related.length > 0) && (
+        <nav class="mt-10 p-6 bg-brand-darkest border border-white/5 rounded-2xl" aria-label="Related reading">
+          <p class="text-white font-bold mb-3">Keep reading</p>
+          <ul class="space-y-2 text-sm">
+            {pillar && (
+              <li>
+                <a href={pillar.href} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">{pillar.label}</a>
+                <span class="text-white/40"> (pillar guide)</span>
+              </li>
+            )}
+            {serviceLink && (
+              <li>
+                <a href={serviceLink.href} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">{serviceLink.label}</a>
+                <span class="text-white/40"> (service)</span>
+              </li>
+            )}
+            {related.map((item) => (
+              <li>
+                <a href={item.href} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      <p class="mt-10">
+        <a href="/blog/" class="text-white/80 hover:text-white">← Back to Blog</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>
