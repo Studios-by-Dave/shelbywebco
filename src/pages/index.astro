@@ -104,7 +104,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             </a>
           </div>
 
-          <div class="rounded-2xl p-1 mb-6 sm:mb-8 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20 lg:hidden">
+          <div class="rounded-2xl p-1 mb-6 sm:mb-8 bg-gradient-to-br from-brand-blue/20 to-brand-cyan/20 lg:hidden relative">
             <Image 
               src={heroImage} 
               alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
@@ -113,6 +113,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               height={600}
               loading="eager"
             />
+            <div class="handshake-anchor absolute pointer-events-none" style="left:48%;top:78%;" aria-hidden="true"></div>
           </div>
 
 <div class="flex flex-row gap-3 mb-4 sm:mb-6">
@@ -180,7 +181,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             </a>
           </div>
 
-<div class="hidden lg:block w-full">
+<div class="hidden lg:block w-full relative">
              <Image 
                src={heroImage} 
                alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
@@ -189,6 +190,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
                height={600}
                loading="eager"
              />
+             <div class="handshake-anchor absolute pointer-events-none" style="left:48%;top:78%;" aria-hidden="true"></div>
            </div>
         </div>
       </div>
@@ -199,32 +201,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
     (() => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const tray = document.getElementById('golden-ticket-easter-egg');
+      if (!tray) return;
 
-      if (!tray || prefersReducedMotion) return;
-
-      const ticketCount = 1;
-
-      for (let i = 0; i < ticketCount; i += 1) {
+      const makeTicket = () => {
         const ticket = document.createElement('a');
         ticket.className = 'golden-ticket-float';
         ticket.href = '/promotions/the-golden-ticket/';
         ticket.setAttribute('aria-label', 'Visit the Golden Ticket promotion');
-
-        const duration = (14 + Math.random() * 10).toFixed(2);
-        const delay = (1 + Math.random() * 8).toFixed(2);
-        const randomizeFlightPath = () => {
-          const driftY = (Math.random() * 180 - 90).toFixed(0);
-          const startY = (12 + Math.random() * 68).toFixed(2);
-
-          ticket.style.top = `${startY}%`;
-          ticket.style.setProperty('--drift-y', `${driftY}px`);
-        };
-
-        ticket.style.left = '-100px';
-        ticket.style.animationDuration = `${duration}s`;
-        ticket.style.animationDelay = `${delay}s`;
-        randomizeFlightPath();
-        ticket.addEventListener('animationiteration', randomizeFlightPath);
 
         const label = document.createElement('span');
         label.textContent = 'Golden Ticket';
@@ -234,7 +217,165 @@ import hsCross from '../../assets/logo banner/hscross.webp';
 
         ticket.appendChild(label);
         ticket.appendChild(rim);
-        tray.appendChild(ticket);
+        return ticket;
+      };
+
+      const findHandshakeAnchor = () => {
+        const anchors = Array.from(document.querySelectorAll<HTMLElement>('.handshake-anchor'));
+        return anchors.find((el) => el.offsetParent !== null) || null;
+      };
+
+      const startAmbientFloat = () => {
+        if (prefersReducedMotion) return;
+
+        const ticketCount = 1;
+        for (let i = 0; i < ticketCount; i += 1) {
+          const ticket = makeTicket();
+
+          const duration = (14 + Math.random() * 10).toFixed(2);
+          const delay = (1 + Math.random() * 8).toFixed(2);
+          const randomizeFlightPath = () => {
+            const driftY = (Math.random() * 180 - 90).toFixed(0);
+            const startY = (12 + Math.random() * 68).toFixed(2);
+
+            ticket.style.top = `${startY}%`;
+            ticket.style.setProperty('--drift-y', `${driftY}px`);
+          };
+
+          ticket.style.left = '-100px';
+          ticket.style.animationDuration = `${duration}s`;
+          ticket.style.animationDelay = `${delay}s`;
+          randomizeFlightPath();
+          ticket.addEventListener('animationiteration', randomizeFlightPath);
+
+          tray.appendChild(ticket);
+        }
+      };
+
+      const placeParkedTicket = () => {
+        const anchor = findHandshakeAnchor();
+        if (!anchor) return;
+
+        const ticket = makeTicket();
+        ticket.classList.add('ticket-parked');
+        ticket.style.left = '-32px';
+        ticket.style.top = '-17px';
+        anchor.appendChild(ticket);
+      };
+
+      const shakeScreen = () => {
+        document.body.classList.add('gt-nose-shake');
+        window.setTimeout(() => document.body.classList.remove('gt-nose-shake'), 260);
+      };
+
+      const removeParkedTickets = () => {
+        document.querySelectorAll('.ticket-parked').forEach((el) => el.remove());
+      };
+
+      const playIntro = async () => {
+        removeParkedTickets();
+
+        // Ticket 1: flies in, scales up to the "nose" at screen center, then exits
+        const t1 = makeTicket();
+        t1.classList.add('gt-intro');
+        t1.setAttribute('aria-hidden', 'true');
+        t1.removeAttribute('href');
+        t1.tabIndex = -1;
+        t1.style.left = '0px';
+        t1.style.top = '30vh';
+        tray.appendChild(t1);
+
+        const t1Anim = t1.animate(
+          [
+            { transform: 'translate3d(-140px, 0, 0) rotate(-14deg) scale(0.8)', opacity: 0 },
+            { transform: 'translate3d(28vw, 0, 0) rotate(-4deg) scale(2.2)', opacity: 1, offset: 0.35 },
+            { transform: 'translate3d(50vw, -8px, 0) rotate(2deg) scale(3.6)', opacity: 1, offset: 0.5 },
+            { transform: 'translate3d(72vw, 30px, 0) rotate(10deg) scale(1.8)', opacity: 0.95, offset: 0.75 },
+            { transform: 'translate3d(115vw, 90px, 0) rotate(20deg) scale(0.8)', opacity: 0 },
+          ],
+          { duration: 2600, easing: 'cubic-bezier(0.3, 0, 0.6, 1)', fill: 'forwards' }
+        );
+        window.setTimeout(shakeScreen, 1300);
+
+        // Ticket 2: flies by, then curves into the handshake and parks
+        const t2Intro = (async () => {
+          await new Promise((r) => window.setTimeout(r, 1850));
+
+          const t2 = makeTicket();
+          t2.classList.add('gt-intro');
+          t2.style.left = '0px';
+          t2.style.top = '38vh';
+          tray.appendChild(t2);
+
+          await t2.animate(
+            [
+              { transform: 'translate3d(-120px, 0, 0) rotate(-12deg) scale(0.9)', opacity: 0 },
+              { transform: 'translate3d(10vw, 10px, 0) rotate(-6deg) scale(1)', opacity: 1, offset: 0.15 },
+              { transform: 'translate3d(52vw, -20px, 0) rotate(8deg) scale(1)', opacity: 1, offset: 0.7 },
+              { transform: 'translate3d(58vw, -10px, 0) rotate(10deg) scale(1)', opacity: 1 },
+            ],
+            { duration: 1600, easing: 'cubic-bezier(0.25, 0.6, 0.4, 1)', fill: 'forwards' }
+          ).finished;
+
+          const anchor = findHandshakeAnchor();
+          if (!anchor) {
+            t2.remove();
+            return;
+          }
+
+          const rect = anchor.getBoundingClientRect();
+          const tx = rect.left - 32;
+          const ty = rect.top - 17;
+
+          await t2.animate(
+            [
+              { transform: 'translate3d(58vw, -10px, 0) rotate(10deg) scale(1)' },
+              { transform: `translate3d(${tx}px, ${ty}px, 0) rotate(-8deg) scale(0.62)` },
+            ],
+            { duration: 1200, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)', fill: 'forwards' }
+          ).finished;
+
+          await t2.animate(
+            [
+              { transform: `translate3d(${tx}px, ${ty}px, 0) rotate(-8deg) scale(0.62)` },
+              { transform: `translate3d(${tx}px, ${ty - 10}px, 0) rotate(-6deg) scale(0.66)`, offset: 0.4 },
+              { transform: `translate3d(${tx}px, ${ty}px, 0) rotate(-7deg) scale(0.64)` },
+            ],
+            { duration: 420, easing: 'ease-out', fill: 'forwards' }
+          ).finished;
+
+          t2.getAnimations().forEach((a) => a.cancel());
+          t2.classList.remove('gt-intro');
+          t2.classList.add('ticket-parked');
+          t2.style.left = '-32px';
+          t2.style.top = '-17px';
+          anchor.appendChild(t2);
+        })();
+
+        await Promise.all([
+          t1Anim.finished.then(() => t1.remove()),
+          t2Intro,
+        ]);
+      };
+
+      if (prefersReducedMotion) {
+        placeParkedTicket();
+      } else {
+        const REPLAY_INTERVAL_MS = 60_000;
+        let introRunning = false;
+
+        const runIntro = async () => {
+          if (introRunning) return;
+          introRunning = true;
+          try {
+            await playIntro();
+          } finally {
+            introRunning = false;
+          }
+        };
+
+        runIntro().then(startAmbientFloat);
+        window.setInterval(runIntro, REPLAY_INTERVAL_MS);
       }
     })();
   </script>
