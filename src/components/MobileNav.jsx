@@ -2,16 +2,16 @@ import { useEffect, useMemo, useState } from 'react';
 
 const topLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services/', label: 'Services' },
   { href: '/about/', label: 'About' },
   { href: '/pricing/', label: 'Pricing' },
-  { href: '/promotions/', label: 'Promotions' },
   { href: '/contact/', label: 'Contact' },
   { href: '/blog/', label: 'Blog' },
-  { href: 'tel:+17044738188', label: '(704) 473-8188' },
 ];
 
+const phoneLink = { href: 'tel:+17044738188', label: '(704) 473-8188' };
+
 const serviceLinks = [
+  { href: '/services/', label: 'All Services' },
   { href: '/services/web-design/', label: 'Web Design' },
   { href: '/services/branding/', label: 'Logo Design & Branding' },
   { href: '/services/seo/', label: 'SEO Services' },
@@ -21,14 +21,14 @@ const serviceLinks = [
 ];
 
 const serviceAreaLinks = [
-  { href: '/web-design-shelby-nc/', label: 'Service Area: Shelby, NC' },
-  { href: '/web-design-gastonia-nc/', label: 'Service Area: Gastonia, NC' },
-  { href: '/web-design-western-nc/', label: 'Service Area: Western NC' },
-  { href: '/web-design-forest-city-nc/', label: 'Service Area: Forest City, NC' },
-  { href: '/web-design-polkville-nc/', label: 'Service Area: Polkville, NC' },
-  { href: '/web-design-western-nc/', label: 'Service Area: Western NC' },
-  { href: '/web-design-boiling-springs-nc/', label: 'Service Area: Boiling Springs, NC' },
-  { href: '/web-design-kings-mountain-nc/', label: 'Service Area: Kings Mountain, NC' },
+  { href: '/web-design-shelby-nc/', label: 'Shelby, NC' },
+  { href: '/web-design-kings-mountain-nc/', label: 'Kings Mountain, NC' },
+  { href: '/web-design-boiling-springs-nc/', label: 'Boiling Springs, NC' },
+  { href: '/web-design-cleveland-county-nc/', label: 'Cleveland County, NC' },
+  { href: '/web-design-gastonia-nc/', label: 'Gastonia, NC' },
+  { href: '/web-design-forest-city-nc/', label: 'Forest City, NC' },
+  { href: '/web-design-polkville-nc/', label: 'Polkville, NC' },
+  { href: '/web-design-western-nc/', label: 'Western NC' },
 ];
 
 const industryLinks = [
@@ -39,7 +39,7 @@ const industryLinks = [
   { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofers' },
 ];
 
- const aboutLinks = [
+const aboutLinks = [
   { href: '/about/how-we-work/', label: 'How We Work' },
   { href: '/about/awards/', label: 'Awards' },
   { href: '/about/causes-we-support/', label: 'Causes We Support' },
@@ -57,6 +57,8 @@ const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industry
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [promotionsOpen, setPromotionsOpen] = useState(false);
   const [query, setQuery] = useState('');
 
@@ -96,9 +98,19 @@ export default function MobileNav() {
   const closeMenu = () => {
     setIsOpen(false);
     setServicesOpen(false);
+    setAreasOpen(false);
+    setIndustriesOpen(false);
     setPromotionsOpen(false);
     setQuery('');
   };
+
+  const groupButtonClass =
+    'flex w-full items-center justify-center gap-2 px-4 py-3 text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan';
+
+  const subLinkClass =
+    'block px-8 py-2 text-left text-lg font-semibold text-white transition-colors hover:bg-white/5 hover:text-brand-cyan';
+
+  const subListClass = 'border-y border-white/10 bg-white/5 py-2';
 
   const renderLink = (link) => {
     const isBlog = link.label === 'Blog';
@@ -122,6 +134,18 @@ export default function MobileNav() {
       </a>
     );
   };
+
+  const Chevron = ({ open }) => (
+    <svg
+      className={`h-5 w-5 transition-transform ${open ? 'rotate-180' : ''}`}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
 
   return (
     <>
@@ -163,14 +187,14 @@ export default function MobileNav() {
         aria-hidden={!isOpen}
       >
         <div
-          className={`absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,24,36,0.78),_rgba(2,4,9,0.96)_40%,_rgba(0,0,0,1)_100%)] transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(10,12,17,0.78),_rgba(2,3,6,0.96)_40%,_rgba(0,0,0,1)_100%)] transition-opacity duration-300 ${
             isOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={closeMenu}
         />
 
         <div
-          className={`absolute inset-0 h-full w-full overflow-y-auto bg-[#1c2026] text-white transition-transform duration-300 ${
+          className={`absolute inset-0 h-full w-full overflow-y-auto bg-[#101319] text-white transition-transform duration-300 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -200,11 +224,10 @@ export default function MobileNav() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth={2}
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-
               <input
                 type="search"
                 value={query}
@@ -219,97 +242,172 @@ export default function MobileNav() {
           <nav aria-label="Mobile navigation" className="mt-3">
             {query.trim() ? (
               filteredLinks.length > 0 ? (
-              <ul className="divide-y divide-white/10">
-                {filteredLinks.map((link) => (
-                  <li key={link.href}>
-                    {renderLink(link)}
-                  </li>
-                ))}
-              </ul>
+                <ul className="divide-y divide-white/10">
+                  {filteredLinks.map((link) => (
+                    <li key={link.href}>
+                      {renderLink(link)}
+                    </li>
+                  ))}
+                </ul>
               ) : (
-              <div className="px-4 py-8 text-center text-sm text-white/60">
-                No results found.
-              </div>
+                <div className="px-4 py-8 text-center text-sm text-white/60">
+                  No results found.
+                </div>
               )
             ) : (
               <ul className="py-2">
-                {topLinks.map((link) => (
-                  <li key={link.href}>
-                    {link.label === 'Services' ? (
-                      <>
-                        <button
-                          type="button"
-                          onClick={() => setServicesOpen((open) => !open)}
-                          aria-expanded={servicesOpen}
-                          aria-controls="mobile-service-links"
-                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
-                        >
-                          Services
-                          <svg
-                            className={`h-5 w-5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
+                <li>
+                  <a
+                    href="/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setServicesOpen((open) => !open);
+                      setAreasOpen(false);
+                    }}
+                    aria-expanded={servicesOpen}
+                    aria-controls="mobile-service-links"
+                    className={groupButtonClass}
+                  >
+                    Services
+                    <Chevron open={servicesOpen} />
+                  </button>
+                  {servicesOpen && (
+                    <div id="mobile-service-links">
+                      <ul className={subListClass}>
+                        {serviceLinks.map((service) => (
+                          <li key={service.href}>
+                            <a href={service.href} onClick={closeMenu} className={subLinkClass}>
+                              {service.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                      <button
+                        type="button"
+                        onClick={() => setAreasOpen((open) => !open)}
+                        aria-expanded={areasOpen}
+                        aria-controls="mobile-service-area-links"
+                        className="flex w-full items-center justify-between gap-2 px-8 py-2.5 text-left text-lg font-bold text-white/85 transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                      >
+                        Service Areas
+                        <Chevron open={areasOpen} />
+                      </button>
+                      {areasOpen && (
+                        <ul id="mobile-service-area-links" className="bg-white/5 py-2">
+                          {serviceAreaLinks.map((area) => (
+                            <li key={area.href}>
+                              <a
+                                href={area.href}
+                                onClick={closeMenu}
+                                className="block py-2 pl-14 pr-8 text-left text-base font-semibold text-white/80 transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                              >
+                                {area.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setIndustriesOpen((open) => !open)}
+                    aria-expanded={industriesOpen}
+                    aria-controls="mobile-industry-links"
+                    className={groupButtonClass}
+                  >
+                    Industries
+                    <Chevron open={industriesOpen} />
+                  </button>
+                  {industriesOpen && (
+                    <ul id="mobile-industry-links" className={subListClass}>
+                      {industryLinks.map((industry) => (
+                        <li key={industry.href}>
+                          <a href={industry.href} onClick={closeMenu} className={subLinkClass}>
+                            {industry.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <a
+                    href="/about/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pricing/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  {renderLink(phoneLink)}
+                </li>
+                <li>
+                  <a
+                    href="/blog/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 animate-blog-stream text-center font-poofy text-3xl text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
+                    style={{ WebkitTextStroke: '0.6px white' }}
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setPromotionsOpen((open) => !open)}
+                    aria-expanded={promotionsOpen}
+                    aria-controls="mobile-promotion-links"
+                    className={groupButtonClass}
+                  >
+                    Promotions
+                    <Chevron open={promotionsOpen} />
+                  </button>
+                  {promotionsOpen && (
+                    <ul id="mobile-promotion-links" className={subListClass}>
+                      {promotionLinks.map((promotion) => (
+                        <li key={promotion.href}>
+                          <a
+                            href={promotion.href}
+                            onClick={closeMenu}
+                            className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
                           >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                        {servicesOpen && (
-                          <ul id="mobile-service-links" className="border-y border-white/10 bg-white/5 py-2">
-                            {[{ href: '/services/', label: 'All Services' }, ...serviceLinks].map((service) => (
-                              <li key={service.href}>
-                                <a
-                                  href={service.href}
-                                  onClick={closeMenu}
-                                  className="block px-8 py-2 text-left text-lg font-semibold text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
-                                >
-                                  {service.label}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </>
-                    ) : link.label === 'Promotions' ? (
-                      <>
-                        <button
-                          type="button"
-                          onClick={() => setPromotionsOpen((open) => !open)}
-                          aria-expanded={promotionsOpen}
-                          aria-controls="mobile-promotion-links"
-                          className="flex w-full items-center justify-center gap-2 px-4 py-3 text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
-                        >
-                          Promotions
-                          <svg
-                            className={`h-5 w-5 transition-transform ${promotionsOpen ? 'rotate-180' : ''}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                        {promotionsOpen && (
-                          <ul id="mobile-promotion-links" className="border-y border-white/10 bg-white/5 py-2">
-                            {promotionLinks.map((promotion) => (
-                              <li key={promotion.href}>
-                                <a
-                                  href={promotion.href}
-                                  onClick={closeMenu}
-                                  className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
-                                >
-                                  {promotion.label}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </>
-                    ) : renderLink(link)}
-                  </li>
-                ))}
+                            {promotion.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
               </ul>
             )}
           </nav>
