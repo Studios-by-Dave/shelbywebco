@@ -46,7 +46,7 @@ const serviceSchema = {
         {[swebscreen, fsExpedited, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
           .flatMap(img => [img, img])
           .map(img => (
-            <img src={img.src} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
+            <Image src={img} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
           ))}
       </div>
       <div class="absolute inset-0 bg-gradient-to-r from-brand-darkest/70 via-transparent to-brand-darkest/70 z-10 pointer-events-none"></div>

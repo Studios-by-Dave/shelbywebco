@@ -7,6 +7,13 @@ import strat2 from '../../../assets/STRAT-2.png';
 import strat3 from '../../../assets/STRAT-3.png';
 import strat4 from '../../../assets/STRAT-4.png';
 import strat5 from '../../../assets/STRAT-5.png';
+import { getImage } from 'astro:assets';
+
+const stratLightbox = await Promise.all(
+  [strat2, strat3, strat4, strat5].map((src) =>
+    getImage({ src, width: 1600, format: 'webp', quality: 80 })
+  )
+);
 import GlossaryTooltip from '../../components/GlossaryTooltip.jsx';
 import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
@@ -450,7 +457,7 @@ const faqSchema = {
 
 <!-- Screenshot gallery — 4 new STRAT previews (click to enlarge) -->
       <div class="grid md:grid-cols-2 gap-8 lg:gap-10 mb-20">
-        <button type="button" data-strat-src={strat2.src} aria-label="Enlarge STRAT preview 2" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
+        <button type="button" data-strat-src={stratLightbox[0].src} aria-label="Enlarge STRAT preview 2" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat2} 
             alt="STRAT preview 2" 
@@ -460,7 +467,7 @@ const faqSchema = {
             loading="lazy"
           />
         </button>
-        <button type="button" data-strat-src={strat3.src} aria-label="Enlarge STRAT preview 3" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
+        <button type="button" data-strat-src={stratLightbox[1].src} aria-label="Enlarge STRAT preview 3" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat3} 
             alt="STRAT preview 3" 
@@ -470,7 +477,7 @@ const faqSchema = {
             loading="lazy"
           />
         </button>
-        <button type="button" data-strat-src={strat4.src} aria-label="Enlarge STRAT preview 4" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
+        <button type="button" data-strat-src={stratLightbox[2].src} aria-label="Enlarge STRAT preview 4" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat4} 
             alt="STRAT preview 4" 
@@ -480,7 +487,7 @@ const faqSchema = {
             loading="lazy"
           />
         </button>
-        <button type="button" data-strat-src={strat5.src} aria-label="Enlarge STRAT preview 5" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
+        <button type="button" data-strat-src={stratLightbox[3].src} aria-label="Enlarge STRAT preview 5" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/30 transition-all duration-300 cursor-zoom-in text-left">
           <Image 
             src={strat5} 
             alt="STRAT preview 5" 
