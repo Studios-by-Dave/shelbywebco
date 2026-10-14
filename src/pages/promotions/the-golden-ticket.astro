@@ -112,6 +112,59 @@ const faqs = [
     }
   }
 
+  /* 3D gold-bar headline: metallic face + extruded edge + floor shadow */
+  .gold-bar-title {
+    background: linear-gradient(180deg,
+      #fffbe8 0%,
+      #fef3c7 16%,
+      #fde68a 30%,
+      #fff7d6 42%,
+      #f59e0b 50%,
+      #92400e 54%,
+      #fbbf24 62%,
+      #fde68a 78%,
+      #fff7d6 100%);
+    background-size: 100% 220%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(122, 77, 6, 0.55);
+    filter:
+      drop-shadow(0 1px 0 #8a5a00)
+      drop-shadow(0 2px 0 #744a00)
+      drop-shadow(0 3px 0 #5e3c00)
+      drop-shadow(0 4px 0 #482e00)
+      drop-shadow(0 5px 0 #332100)
+      drop-shadow(0 6px 0 #1f1400)
+      drop-shadow(0 10px 14px rgba(0, 0, 0, 0.55))
+      drop-shadow(0 0 26px rgba(253, 211, 77, 0.35));
+    animation: gold-bar-shimmer 7s ease-in-out infinite;
+  }
+
+  @keyframes gold-bar-shimmer {
+    0%, 100% { background-position: 50% 0%; }
+    50% { background-position: 50% 60%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gold-bar-title { animation: none; }
+  }
+
+  /* Arched headline: letters ride a half-circle, middle highest */
+  .gold-arch {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 0.7em;
+    overflow: visible;
+  }
+  .gold-arch .arch-letter {
+    display: inline-block;
+    transform: rotate(var(--r, 0deg)) translateY(var(--y, 0em));
+    transform-origin: 50% 85%;
+  }
+  .gold-arch .arch-space { width: 0.32em; }
+
   .gt-steps { counter-reset: gt; }
   .gt-steps > li { counter-increment: gt; }
   .gt-steps > li::before {
@@ -145,7 +198,16 @@ const faqs = [
   <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap bg-gradient-to-b from-[#fff8d6] via-[#fcd34d] to-[#e0a92e] bg-clip-text text-transparent" style="filter: drop-shadow(0 4px 18px rgba(253,211,77,0.35));">The Golden Ticket</h1>
+      <h1 aria-label="The Golden Ticket" class="gold-arch font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mt-2 mb-10 lg:mb-14 whitespace-nowrap">{Array.from('The Golden Ticket').map((ch, i) => {
+        const t = (i - 8) / 8;
+        const r = (t * 22).toFixed(2);
+        const lift = ((1 - t * t) * 0.5).toFixed(3);
+        return ch === ' ' ? (
+          <span aria-hidden="true" class="arch-space" />
+        ) : (
+          <span aria-hidden="true" class="arch-letter gold-bar-title" style={`--r:${r}deg;--y:-${lift}em`}>{ch}</span>
+        );
+      })}</h1>
       <div class="relative flex justify-center mb-6">
         <div class="gold-ticket-hero-wrap">
           <div class="gold-ticket-hero-sheen" aria-hidden="true"></div>
@@ -169,7 +231,7 @@ const faqs = [
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">The deal, <em class="not-italic">plainly</em></h2>
-      <p class="text-white/60 text-center mb-10">No surprises. Here is exactly what we cover and what you continue with.</p>
+      <p class="text-white/60 text-center mb-10 italic">No surprises. Here is exactly what we cover and what you continue with.</p>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-dark border border-[#fcd34d] rounded-2xl p-8 shadow-[0_0_0_1px_rgba(252,211,77,.45),0_18px_50px_rgba(253,211,77,.1)]">
           <p class="font-heading font-extrabold text-6xl text-[#fcd34d] leading-none">$0 <small class="font-body font-medium text-base text-white/50">build &amp; launch</small></p>
@@ -203,7 +265,7 @@ const faqs = [
   <section class="py-16 lg:py-20 px-4" data-animate>
     <div class="max-w-4xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">What's included in Core</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto">Every winner gets our Core growth plan with the launch fee covered by us — a direct giveback to the community that built this company.</p>
+      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">Every winner gets our Core growth plan with the launch fee covered by us — a direct giveback to the community that built this company.</p>
       <ul class="grid md:grid-cols-2 gap-x-7 max-w-3xl mx-auto list-none p-0">
         {['4–5 page mobile-first website','Hosting, SSL, backups & security','Contact forms & lead alerts','Google Analytics & Search Console','Foundational on-page & local SEO','One small monthly edit request','Monthly performance snapshot','Quarterly growth review'].map((item) => (
           <li class="py-3.5 pl-8 border-b border-white/10 relative text-white/85"><span class="absolute left-0 text-lime-400 font-bold">✓</span>{item}</li>
@@ -216,7 +278,7 @@ const faqs = [
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-6xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-brand-accent mb-2 text-center">How it works</h2>
-      <p class="text-white/60 text-center mb-10">From application to live site in weeks, not months.</p>
+      <p class="text-white/60 text-center mb-10 italic">From application to live site in weeks, not months.</p>
       <ol class="gt-steps grid md:grid-cols-3 lg:grid-cols-5 gap-8 list-none p-0 text-center">
         <li><h3 class="text-lg font-bold text-white">Tell your story</h3><p class="text-sm text-white/60 mt-2">Short application — what you do, who you serve, why a new site changes your next 12 months.</p></li>
         <li><h3 class="text-lg font-bold text-white">We review</h3><p class="text-sm text-white/60 mt-2">A human reads every submission. Real stories, real customers, real need.</p></li>
@@ -231,7 +293,7 @@ const faqs = [
   <section class="py-16 lg:py-20 px-4" data-animate>
     <div class="max-w-6xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">What we ask in return</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto">This program costs us real money. Four simple asks:</p>
+      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">This program costs us real money. Four simple asks:</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">💬</div><h3 class="text-lg font-bold text-white">An honest testimonial</h3><p class="text-sm text-white/60 mt-1">Tell the truth — good and nitpicks. Becomes your case study.</p></div>
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">⭐</div><h3 class="text-lg font-bold text-white">A Google review</h3><p class="text-sm text-white/60 mt-1">Once your site is live and you're happy — leave us a review.</p></div>
@@ -245,7 +307,7 @@ const faqs = [
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-6xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-brand-accent mb-2 text-center">The 30 / 60 / 90-day case study</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto">Every Golden Ticket site becomes a living case study — tracked from day one.</p>
+      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">Every Golden Ticket site becomes a living case study — tracked from day one.</p>
       <div class="grid md:grid-cols-3 gap-4">
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><h3 class="text-brand-accent">Day 30 · Foundation live</h3><p class="text-sm text-white/60 mt-1">Site live, Analytics running, lead forms delivering, local SEO in place.</p></div>
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><h3 class="text-brand-accent">Day 60 · First signals</h3><p class="text-sm text-white/60 mt-1">First calls and form fills arrive. We tune pages around what's working.</p></div>
@@ -261,7 +323,7 @@ const faqs = [
       <div class="text-center mb-8">
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications Close December 15, 2026</p>
         <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-4">Apply for the Golden Ticket</h2>
-        <p class="text-lg text-white">Tell your story. That's the whole application. 5 spots for the Class of 2026.</p>
+        <p class="text-lg text-white italic">Tell your story. That's the whole application. 5 spots for the Class of 2026.</p>
         <p class="text-white/60 text-sm mt-2">Curious how this fits our standard plans? See <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">pricing</a>.</p>
       </div>
 

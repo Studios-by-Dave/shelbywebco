@@ -78,7 +78,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
           <h1 class="font-heading text-[3.2rem] sm:text-[4.6rem] md:text-[5.2rem] lg:text-[4.6rem] xl:text-[5.1rem] font-black text-white mb-2 leading-[0.95] max-w-full break-words tracking-tight">
             Custom Websites. Local SEO. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">Business Machines.</span><span class="text-brand-accent drop-shadow-[0_0_8px_rgba(132,204,22,0.5)] inline-block text-[2.4rem] sm:text-[3rem] md:text-[3rem] lg:text-[2.6rem] xl:text-[2.9rem]"> Built for Local Business.</span>
           </h1>
-          <p class="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-xl leading-relaxed">
+          <p class="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-xl leading-relaxed italic">
             Local Web Design Backed by 20+ Years of I.T. Experience.
           </p>
           <div class="flex flex-wrap gap-2 mb-6">
@@ -222,18 +222,32 @@ import hsCross from '../../assets/logo banner/hscross.webp';
 
       const findHandshakeAnchor = () => {
         const anchors = Array.from(document.querySelectorAll<HTMLElement>('.handshake-anchor'));
-        return anchors.find((el) => el.offsetParent !== null) || null;
+        // offsetParent is null for fixed-position ancestors and can misfire on
+        // mobile — check rendered size + visibility instead.
+        return anchors.find((el) => {
+          const rect = el.getBoundingClientRect();
+          const style = window.getComputedStyle(el);
+          return rect.width >= 0 && rect.height >= 0 && style.display !== 'none' && style.visibility !== 'hidden' && el.getClientRects().length > 0;
+        }) || anchors.find((el) => el.offsetParent !== null) || null;
       };
+
+      const isMobileView = () => window.matchMedia('(max-width: 768px)').matches;
 
       const startAmbientFloat = () => {
         if (prefersReducedMotion) return;
 
-        const ticketCount = 1;
+        // Mobile: 2 tickets, short delay + shorter loop so something is
+        // almost always visible on a small screen. Desktop keeps 1 ticket.
+        const ticketCount = isMobileView() ? 2 : 1;
         for (let i = 0; i < ticketCount; i += 1) {
           const ticket = makeTicket();
 
-          const duration = (14 + Math.random() * 10).toFixed(2);
-          const delay = (1 + Math.random() * 8).toFixed(2);
+          const duration = isMobileView()
+            ? (9 + Math.random() * 5).toFixed(2)
+            : (14 + Math.random() * 10).toFixed(2);
+          const delay = isMobileView()
+            ? (0.4 + i * 3 + Math.random() * 2).toFixed(2)
+            : (1 + Math.random() * 8).toFixed(2);
           const randomizeFlightPath = () => {
             const driftY = (Math.random() * 180 - 90).toFixed(0);
             const startY = (12 + Math.random() * 68).toFixed(2);
@@ -320,6 +334,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
           const anchor = findHandshakeAnchor();
           if (!anchor) {
             t2.remove();
+            placeParkedTicket();
             return;
           }
 
@@ -374,7 +389,10 @@ import hsCross from '../../assets/logo banner/hscross.webp';
           }
         };
 
-        runIntro().then(startAmbientFloat);
+        // Start ambient floats immediately so mobile sees a ticket within
+        // ~1s even while the intro sequence is still playing.
+        startAmbientFloat();
+        runIntro();
         window.setInterval(runIntro, REPLAY_INTERVAL_MS);
       }
     })();
@@ -405,13 +423,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
             <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Web Design</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4">
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
               <li>Custom, responsive websites that turn visitors into customers</li>
               <li>Optimized for local service businesses</li>
               <li>Mobile-first, lightning-fast performance</li>
               <li>Lead forms and local SEO built in</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
               Learn About Web Design →
             </span>
           </div>
@@ -425,13 +443,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
             </div>
             <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Logo Design & Branding</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4">
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
               <li>Branding that stands out from competitors</li>
               <li>Builds trust with your customers</li>
               <li>Custom logo and complete brand identity</li>
               <li>Business cards and social media assets</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
               Learn About Branding →
             </span>
           </div>
@@ -445,13 +463,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
             <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">SEO Services</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4">
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
               <li>Improve search visibility and attract more customers</li>
               <li>Technical and on-page optimization</li>
               <li>Local search strategy</li>
               <li>Google Business Profile optimization</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
               Learn About SEO Services →
             </span>
           </div>
@@ -465,13 +483,13 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </div>
             <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Custom Software & SaaS (Business Machines)</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4">
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
               <li>Custom software built around your workflows</li>
               <li>Automate and streamline business operations</li>
               <li>SaaS applications and API integrations</li>
               <li>Purpose-built tools that give your business an edge</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
               Learn About Custom Software →
             </span>
           </div>
@@ -514,7 +532,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <section class="py-12 md:py-16 px-4 border-t border-white/5" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-4">✦ How We Work</p>
+        <p class="text-silver-shimmer text-body-base uppercase tracking-widest mb-4 italic">✦ How We Work</p>
         <h2 class="font-heading text-section-heading-md lg:text-5xl font-bold text-white mb-4">
           3 Simple Steps. No Red Tape. <span class="text-brand-accent">Just Process.</span>
         </h2>
@@ -569,7 +587,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <!-- Industries Section -->
   <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <p class="text-silver-shimmer text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold">✦ Specialized for Your Industry</p>
+      <p class="text-silver-shimmer text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold italic">✦ Specialized for Your Industry</p>
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8">
         We're Here to Understand Your Business
 </h2>
@@ -657,14 +675,14 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <!-- Non-Exclusive Agency Section -->
   <section class="py-16 md:py-20 px-4" data-animate>
     <div class="max-w-5xl mx-auto text-center">
-      <p class="text-silver-shimmer text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold">✦ We're also a Non-Exclusive Agency</p>
+      <p class="text-silver-shimmer text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold italic">✦ We're also a Non-Exclusive Agency</p>
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8">
         Your Success Is Our Success
       </h2>
       <p class="text-body-lg md:text-body-lg text-white/90 mb-10 font-serif leading-relaxed font-light">
         At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic font-normal">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
       </p>
-      <p class="text-brand-cyan font-medium text-body-lg md:text-card-title">
+      <p class="text-brand-cyan font-medium italic text-body-lg md:text-card-title">
         No exclusivity, just great results.
       </p>
       <a href="/contact/" class="cta-glow-shine mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 text-base">
@@ -678,7 +696,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
     <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-silver-shimmer text-label uppercase tracking-widest mb-4">See Why We're Different!</p>
+      <p class="text-silver-shimmer text-label uppercase tracking-widest mb-4 italic">See Why We're Different!</p>
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6">
         Take the Shelby Web Co. Tour
       </h2>

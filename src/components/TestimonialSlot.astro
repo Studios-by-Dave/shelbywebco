@@ -27,7 +27,7 @@ const hasQuote = Boolean(quote && author);
         <p class="text-lg text-white/90 italic leading-relaxed mb-4">“{quote}”</p>
         <footer class="text-white/60 text-sm">
           <cite class="not-italic font-semibold text-white">{author}</cite>
-          {role ? <span> — {role}</span> : null}
+          {role ? <span class="italic text-white/50"> — {role}</span> : null}
         </footer>
       </blockquote>
     ) : (

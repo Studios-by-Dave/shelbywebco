@@ -69,9 +69,9 @@ if (faqs.length) schemas.push(faqSchema(faqs));
         <div class="flex flex-wrap items-center gap-2 mb-4 text-xs uppercase tracking-widest text-white/60">
           <span class="text-brand-cyan font-bold">{cluster}</span>
           <span aria-hidden="true">·</span>
-          <time datetime={datePublished}>Published {publishedLabel}</time>
+          <time datetime={datePublished} class="italic">Published {publishedLabel}</time>
           <span aria-hidden="true">·</span>
-          <time datetime={dateModified}>Updated {modifiedLabel}</time>
+          <time datetime={dateModified} class="italic">Updated {modifiedLabel}</time>
         </div>
         <h1 class="font-heading text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
           {title}
@@ -100,13 +100,13 @@ if (faqs.length) schemas.push(faqSchema(faqs));
             {pillar && (
               <li>
                 <a href={pillar.href} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">{pillar.label}</a>
-                <span class="text-white/40"> (pillar guide)</span>
+                <span class="text-white/40 italic"> (pillar guide)</span>
               </li>
             )}
             {serviceLink && (
               <li>
                 <a href={serviceLink.href} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">{serviceLink.label}</a>
-                <span class="text-white/40"> (service)</span>
+                <span class="text-white/40 italic"> (service)</span>
               </li>
             )}
             {related.map((item) => (
