@@ -47,7 +47,7 @@ const modifiedLabel = new Date(`${dateModified}T12:00:00`).toLocaleDateString('e
   day: 'numeric',
 });
 
-const schemas = [
+const schemas: Record<string, unknown>[] = [
   articleSchema({
     headline: title,
     description,

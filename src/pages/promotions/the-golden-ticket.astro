@@ -1,6 +1,53 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { faqSchema, breadcrumbSchema, SITE_URL } from '../../lib/schema';
 import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
+
+// Flip to 'closed' after Dec 15, 2026 winners are announced — the page stays live
+// (never 404s) and swaps the application form for the Class of 2026 results.
+const PROMO_STATE = 'open' as 'open' | 'closed';
+
+// [TODO: real data] Replace with the 5 actual winners + their case-study links
+// before flipping PROMO_STATE to 'closed'.
+const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [
+  // { name: 'Example Co', town: 'Shelby, NC', caseStudy: '/blog/...' },
+];
+
+const pageUrl = `${SITE_URL}promotions/the-golden-ticket/`;
+
+const faqs = [
+  {
+    question: 'Is it really free?',
+    answer:
+      "The $497 build & launch (avg. $1,200 of work) is on us. After launch it's $297/mo × 12 months for hosting, care, edits, and ongoing SEO. No upfront invoice, no surprises.",
+  },
+  {
+    question: 'Who can apply?',
+    answer:
+      'Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.',
+  },
+  {
+    question: 'How are the 5 winners chosen?',
+    answer:
+      'Judged by story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human; it is not a random drawing. Each applicant has an equal chance — selection is discretionary.',
+  },
+  {
+    question: "What's the deadline?",
+    answer:
+      'December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 5 businesses — once applications close, this page stays up with the Class of 2026 results.',
+  },
+  {
+    question: 'I already have a website. Can I still apply?',
+    answer:
+      'Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.',
+  },
+  {
+    question: "What's the catch?",
+    answer:
+      'No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.',
+  },
+];
 ---
 
 <style>
@@ -92,6 +139,7 @@ import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
   title="The Golden Ticket — Free Website Build for 5 Local Businesses"
   description="We're choosing 5 local businesses and building them a brand-new custom website for FREE. We cover the $497 build & launch fee — winners continue on the $297/month Core plan for 12 months. Applications close December 15, 2026."
 >
+  <JsonLd data={[faqSchema(faqs), breadcrumbSchema([{ name: 'The Golden Ticket', url: pageUrl }])]} />
 
   <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
@@ -104,11 +152,12 @@ import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
         </div>
       </div>
       <p class="text-xl md:text-2xl text-white max-w-xl mx-auto">We're choosing 5 lucky local businesses and building them a brand-new, fully custom website, <b class="text-[#f6c744]">for FREE!</b></p>
+      <p class="text-xl md:text-2xl text-white/90 max-w-xl mx-auto mt-3"><b class="text-[#f6c744]">$0 build</b>, then <b class="text-brand-cyan">$297/mo</b> for 12 months if selected.</p>
       <p class="text-white/70 mt-4 max-w-2xl mx-auto">We cover the full <b class="text-brand-cyan">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b class="text-brand-cyan">$1,200</b> per website. After launch, winners continue on our <b class="text-brand-cyan">$297/month</b> Core plan for 12 months.</p>
       <div class="flex flex-wrap gap-2 justify-center my-7">
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60"><b class="text-[#f6c744]">5</b> winners</span>
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Closes <b class="text-[#f6c744]">Dec 15</b>, 11:59 PM ET</span>
-        <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Reviewed by a real person</span>
+        <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Judged on story &amp; need — read by a real person</span>
       </div>
       <a href="#apply" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-lg">Apply for your Golden Ticket</a>
       <p class="text-sm text-white/50 mt-4">Takes about 5 minutes. No pitch deck needed.</p>
@@ -204,7 +253,8 @@ import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
     </div>
   </section>
 
-  <!-- Apply form -->
+  <!-- Apply form (open) / Class of 2026 results (closed) -->
+  {PROMO_STATE === 'open' && (
   <section id="apply" class="py-16 lg:py-20 px-4" data-animate>
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-8">
@@ -250,6 +300,21 @@ import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
         </div>
 
         <div>
+          <label for="gt-town" class="block text-sm font-medium text-white mb-2">Town *</label>
+          <select name="town" id="gt-town" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20">
+            <option value="">Select one...</option>
+            <option>Shelby</option>
+            <option>Kings Mountain</option>
+            <option>Boiling Springs</option>
+            <option>Polkville</option>
+            <option>Gastonia</option>
+            <option>Forest City</option>
+            <option>Other — Cleveland County</option>
+            <option>Other — Western NC</option>
+          </select>
+        </div>
+
+        <div>
           <label for="gt-website" class="block text-sm font-medium text-white mb-2">Current Website <span class="text-white/50">(optional)</span></label>
           <input type="url" name="website" id="gt-website" placeholder="https://yourbusiness.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
         </div>
@@ -281,17 +346,46 @@ import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
       </div>
     </div>
   </section>
+  )}
+
+  {PROMO_STATE === 'closed' && (
+  <section id="class-of-2026" class="py-16 lg:py-20 px-4" data-animate>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications are closed</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#f6c744] mb-4">The Class of 2026</h2>
+      <p class="text-white/70 max-w-2xl mx-auto">Applications closed December 15, 2026. Our 5 winners:</p>
+      <ul class="mt-8 space-y-4 text-left">
+        {CLASS_OF_2026.map((winner) => (
+          <li class="bg-brand-dark border border-white/10 rounded-2xl p-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p class="font-bold text-white">{winner.name}</p>
+              <p class="text-white/60 text-sm">{winner.town}</p>
+            </div>
+            {winner.caseStudy && (
+              <a href={winner.caseStudy} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30 text-sm">Read the case study</a>
+            )}
+          </li>
+        ))}
+        {CLASS_OF_2026.length === 0 && (
+          <li class="text-white/50 text-sm">[TODO: real data — winners announced]</li>
+        )}
+      </ul>
+      <p class="mt-8 text-white/60">Want to work with us anyway? <a href="/contact/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Get in touch</a> — standard <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">plans</a> are always open.</p>
+    </div>
+  </section>
+  )}
 
   <!-- FAQ -->
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-3xl mx-auto gt-faq">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#f6c744] mb-8 text-center">Frequently asked questions</h2>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">Is it really free?</summary><p class="text-white/60 pb-5">The $497 build &amp; launch (avg. $1,200 of work) is on us. After launch it's $297/mo × 12 months for hosting, care, edits, and ongoing SEO. No upfront invoice, no surprises.</p></details>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">Who can apply?</summary><p class="text-white/60 pb-5">Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.</p></details>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">How are the 5 winners chosen?</summary><p class="text-white/60 pb-5">By story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human.</p></details>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">What's the deadline?</summary><p class="text-white/60 pb-5">December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 5 businesses — once applications close, this page closes with it.</p></details>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">I already have a website. Can I still apply?</summary><p class="text-white/60 pb-5">Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.</p></details>
-      <details class="border-b border-white/10"><summary class="py-5 font-heading font-semibold text-lg text-white">What's the catch?</summary><p class="text-white/60 pb-5">No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.</p></details>
+      {faqs.map((faq) => (
+        <details class="border-b border-white/10">
+          <summary class="py-5 font-heading font-semibold text-lg text-white">{faq.question}</summary>
+          <p class="text-white/60 pb-5">{faq.answer}</p>
+        </details>
+      ))}
+      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Official Rules</a>.</p>
     </div>
   </section>
 

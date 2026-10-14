@@ -18,6 +18,7 @@ function buildMessage(data) {
   const phone = sanitizeText(data.phone);
   const business = sanitizeText(data.business);
   const industry = sanitizeText(data.industry);
+  const town = sanitizeText(data.town);
   const website = sanitizeText(data.website);
   const challenge = sanitizeText(data.challenge);
   const budget = sanitizeText(data.budget);
@@ -30,6 +31,7 @@ function buildMessage(data) {
   if (phone) lines.push(`Phone: ${phone}`);
   if (business) lines.push(`Business: ${business}`);
   if (industry) lines.push(`Industry: ${industry}`);
+  if (town) lines.push(`Town: ${town}`);
   if (website) lines.push(`Website: ${website}`);
   if (challenge) lines.push(`SEO challenge: ${challenge}`);
   if (budget) lines.push(`Budget: ${budget}`);
@@ -55,6 +57,7 @@ export function normalizeContactSubmission(raw = {}) {
     phone: sanitizeText(raw.phone),
     business: sanitizeText(raw.business),
     industry: sanitizeText(raw.industry),
+    town: sanitizeText(raw.town),
     website: sanitizeText(raw.website),
     challenge: sanitizeText(raw.challenge),
     budget: sanitizeText(raw.budget),
@@ -80,6 +83,7 @@ export function buildFormspreePayload(raw = {}) {
   if (submission.phone) params.set('phone', submission.phone);
   if (submission.website) params.set('website', submission.website);
   if (submission.industry) params.set('industry', submission.industry);
+  if (submission.town) params.set('town', submission.town);
   if (submission.challenge) params.set('challenge', submission.challenge);
   if (submission.budget) params.set('budget', submission.budget);
   if (submission.form_type) params.set('form_type', submission.form_type);
