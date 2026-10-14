@@ -22,11 +22,20 @@ interface Props {
   noindex?: boolean;
 }
 
+function normalizeCanonical(pathname: string) {
+  const siteOrigin = 'https://www.shelbywebco.com';
+  let path = pathname || '/';
+  if (!path.startsWith('/')) path = `/${path}`;
+  if (!path.endsWith('/')) path = `${path}/`;
+  path = path.replace(/\/{2,}/g, '/');
+  return `${siteOrigin}${path}`;
+}
+
 const { 
   title, 
   description, 
   image = 'https://www.shelbywebco.com/og-image.jpg',
-  canonical = new URL(Astro.url.pathname, Astro.site).href,
+  canonical = normalizeCanonical(Astro.url.pathname),
   breadcrumbs,
   bgVariant = 'legacy',
   noindex = false
@@ -34,7 +43,7 @@ const {
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
-const fullTitle = `${title} | Shelby Web Company`;
+const fullTitle = isHomepage ? 'Shelby Web Company | Web Design, SEO & Branding in Shelby, NC' : `${title} | Shelby Web Company`;
 const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbywebco.com${image}`;
 
 // Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.
@@ -64,7 +73,7 @@ const autoBreadcrumbs: Breadcrumb[] = pathSegments.map((segment: string, index: 
 const finalBreadcrumbs: Breadcrumb[] = breadcrumbs ?? autoBreadcrumbs;
 
 const breadcrumbList = [
-  { name: 'Home', url: `${siteOrigin}/` },
+  { name: 'Home', url: 'https://www.shelbywebco.com/' },
   ...finalBreadcrumbs
 ];
 
@@ -122,9 +131,9 @@ const showBreadcrumbBar = pathSegments.length > 0;
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "@id": "https://www.shelbywebco.com",
+        "@id": "https://www.shelbywebco.com/#organization",
         "name": "Shelby Web Company",
-        "url": "https://www.shelbywebco.com",
+        "url": "https://www.shelbywebco.com/",
         "logo": "https://www.shelbywebco.com/og-image.jpg",
         "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.",
         "telephone": "(704) 473-8188",
@@ -133,7 +142,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
           "@type": "Person",
           "name": "Dave Richardson",
           "jobTitle": "Founder & Lead Developer",
-          "worksFor": { "@id": "https://www.shelbywebco.com" }
+          "worksFor": { "@id": "https://www.shelbywebco.com/#organization" }
         },
         "sameAs": [
           "https://www.facebook.com/profile.php?id=61591509287089",
@@ -148,20 +157,12 @@ const showBreadcrumbBar = pathSegments.length > 0;
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "@id": "https://www.shelbywebco.com",
-        "url": "https://www.shelbywebco.com",
+        "@id": "https://www.shelbywebco.com/#website",
+        "url": "https://www.shelbywebco.com/",
         "name": "Shelby Web Company",
         "description": "Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC.",
         "inLanguage": "en-US",
-        "publisher": { "@id": "https://www.shelbywebco.com" },
-        "potentiallyAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://www.shelbywebco.com/s/{search_term_string}/"
-          },
-          "query-input": "required name=search_term_string"
-        }
+        "publisher": { "@id": "https://www.shelbywebco.com/#organization" }
       }
     </script>
 
@@ -170,13 +171,13 @@ const showBreadcrumbBar = pathSegments.length > 0;
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://www.shelbywebco.com",
+        "@id": "https://www.shelbywebco.com/#localbusiness",
         "name": "Shelby Web Company",
         "alternateName": "Studios by Dave",
         "foundingDate": "2004",
         "image": "https://www.shelbywebco.com/og-image.jpg",
         "logo": "https://www.shelbywebco.com/og-image.jpg",
-        "url": "https://www.shelbywebco.com",
+        "url": "https://www.shelbywebco.com/",
         "telephone": "(704) 473-8188",
         "email": "dave@shelbywebco.com",
         "priceRange": "$497+",

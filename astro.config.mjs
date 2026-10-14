@@ -6,10 +6,18 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://www.shelbywebco.com',
+  trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) =>
+        page !== 'https://www.shelbywebco.com/api/contact' &&
+        !page.includes('/api/'),
+    }),
+  ],
   output: 'static',
   adapter: vercel(),
   image: {

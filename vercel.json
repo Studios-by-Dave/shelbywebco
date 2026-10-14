@@ -1,6 +1,40 @@
 {
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-forwarded-proto",
+          "value": "http"
+        }
+      ],
+      "destination": "https://www.shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "shelbywebco.com"
+        }
+      ],
+      "destination": "https://www.shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "shelbywebco.vercel.app"
+        }
+      ],
+      "destination": "https://www.shelbywebco.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/booking",
       "destination": "/contact/",
       "permanent": true
@@ -71,19 +105,63 @@
       "permanent": true
     },
     {
-      "source": "/:path((?:[^/]+/)*[^/.]+)",
-      "destination": "/:path/",
+      "source": "/ai-chatbot-integration",
+      "destination": "/services/custom-software-saas/",
       "permanent": true
     },
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "shelbywebco.vercel.app"
-        }
-      ],
-      "destination": "https://www.shelbywebco.com/$1",
+      "source": "/ai-chatbot-integration/",
+      "destination": "/services/custom-software-saas/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-chatbot-integration",
+      "destination": "/services/custom-software-saas/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-chatbot-integration/",
+      "destination": "/services/custom-software-saas/",
+      "permanent": true
+    },
+    {
+      "source": "/media-packs",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/media-packs/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/raffle",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/raffle/",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/api/raffle",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/api/raffle/",
+      "destination": "/promotions/",
+      "permanent": true
+    },
+    {
+      "source": "/llm.txt",
+      "destination": "/llms.txt",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!api(?:/|$)|_astro(?:/|$))(?:[^/]+/)*[^/.]+)",
+      "destination": "/:path/",
       "permanent": true
     }
   ],
