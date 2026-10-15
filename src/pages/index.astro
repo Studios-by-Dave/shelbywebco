@@ -70,7 +70,8 @@ import hsCross from '../../assets/logo banner/hscross.webp';
   <section class="pt-8 pb-16 px-3 sm:px-4 lg:pt-10 lg:pb-16 overflow-hidden" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
-        <div class="flex min-w-0 w-full flex-col items-center lg:items-start text-center lg:text-left">
+        <div class="flex min-w-0 w-full flex-col items-center lg:items-start text-center lg:text-left relative">
+          <span class="handshake-anchor absolute lg:hidden" style="top:0;right:6px;" aria-hidden="true"></span>
           <div class="inline-flex items-center space-x-2 bg-gradient-to-br from-gray-700 via-gray-400 to-gray-800 border border-gray-400/50 rounded-full py-1.5 px-4 mb-4 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
             <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
             <span class="text-white font-bold text-sm tracking-wide drop-shadow-md">Shelby Web Design for Local Businesses</span>
@@ -220,16 +221,20 @@ import hsCross from '../../assets/logo banner/hscross.webp';
         return ticket;
       };
 
-      const findHandshakeAnchor = () => {
+      const findHandshakeAnchors = () => {
         const anchors = Array.from(document.querySelectorAll<HTMLElement>('.handshake-anchor'));
         // offsetParent is null for fixed-position ancestors and can misfire on
         // mobile — check rendered size + visibility instead.
-        return anchors.find((el) => {
+        const visible = anchors.filter((el) => {
           const rect = el.getBoundingClientRect();
           const style = window.getComputedStyle(el);
           return rect.width >= 0 && rect.height >= 0 && style.display !== 'none' && style.visibility !== 'hidden' && el.getClientRects().length > 0;
-        }) || anchors.find((el) => el.offsetParent !== null) || null;
+        });
+        if (visible.length) return visible;
+        return anchors.filter((el) => el.offsetParent !== null);
       };
+
+      const findHandshakeAnchor = () => findHandshakeAnchors()[0] || null;
 
       const isMobileView = () => window.matchMedia('(max-width: 768px)').matches;
 
@@ -267,14 +272,16 @@ import hsCross from '../../assets/logo banner/hscross.webp';
       };
 
       const placeParkedTicket = () => {
-        const anchor = findHandshakeAnchor();
-        if (!anchor) return;
-
-        const ticket = makeTicket();
-        ticket.classList.add('ticket-parked');
-        ticket.style.left = '-32px';
-        ticket.style.top = '-17px';
-        anchor.appendChild(ticket);
+        // Park on EVERY visible anchor (mobile headline + hero handshake) so
+        // there's always a bobbing ticket on screen, skipping spots taken.
+        for (const anchor of findHandshakeAnchors()) {
+          if (anchor.querySelector('.ticket-parked')) continue;
+          const ticket = makeTicket();
+          ticket.classList.add('ticket-parked');
+          ticket.style.left = '-32px';
+          ticket.style.top = '-17px';
+          anchor.appendChild(ticket);
+        }
       };
 
       const shakeScreen = () => {
@@ -368,7 +375,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
         })();
 
         await Promise.all([
-          t1Anim.finished.then(() => t1.remove()),
+          t1Anim.finished.then(() => t1.remove()).catch(() => t1.remove()),
           t2Intro,
         ]);
       };
@@ -384,6 +391,10 @@ import hsCross from '../../assets/logo banner/hscross.webp';
           introRunning = true;
           try {
             await playIntro();
+          } catch {
+            // WAAPI can reject on backgrounded mobile tabs — fall back to a
+            // parked ticket so mobile is never left empty.
+            placeParkedTicket();
           } finally {
             introRunning = false;
           }
