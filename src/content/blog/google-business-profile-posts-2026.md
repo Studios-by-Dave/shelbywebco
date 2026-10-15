@@ -4,7 +4,7 @@ description: "Whether GBP posts move the needle for Shelby businesses, what to p
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: false
+draft: true
 pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:

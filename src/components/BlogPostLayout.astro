@@ -47,6 +47,14 @@ const modifiedLabel = new Date(`${dateModified}T12:00:00`).toLocaleDateString('e
   day: 'numeric',
 });
 
+// Title accent gradient per topic cluster — white-rooted, brand-tinted tail.
+const titleGradient =
+  cluster === 'local-seo'
+    ? 'from-white via-[#dbeafe] to-brand-cyan'
+    : cluster === 'website-cost'
+      ? 'from-white via-[#dbeafe] to-brand-blue-light'
+      : 'from-white via-[#ecfccb] to-brand-accent-light';
+
 const schemas: Record<string, unknown>[] = [
   articleSchema({
     headline: title,
@@ -73,7 +81,7 @@ if (faqs.length) schemas.push(faqSchema(faqs));
           <span aria-hidden="true">·</span>
           <time datetime={dateModified} class="italic">Updated {modifiedLabel}</time>
         </div>
-        <h1 class="font-heading text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+        <h1 class={`font-heading text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight bg-gradient-to-br ${titleGradient} bg-clip-text text-transparent`}>
           {title}
         </h1>
         <p class="text-white/80 text-lg leading-relaxed">{description}</p>

@@ -65,6 +65,15 @@
   font-family: "Playfair Display", serif;
 }
 
+.prose h2 {
+  font-size: 1.75em;
+}
+
+/* Minimal lime accent on tertiary subheaders only — h2s stay white */
+.prose h3 {
+  color: #a3e635;
+}
+
 .prose a {
   text-decoration-color: rgba(34, 211, 238, 0.3);
 }
