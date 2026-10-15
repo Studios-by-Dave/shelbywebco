@@ -296,7 +296,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
       const playIntro = async () => {
         removeParkedTickets();
 
-        // Ticket 1: flies in, scales up to the "nose" at screen center, then exits
+        // Phase 1 — exactly one ticket: it flies out and brushes the nose.
         const t1 = makeTicket();
         t1.classList.add('gt-intro');
         t1.setAttribute('aria-hidden', 'true');
@@ -318,10 +318,12 @@ import hsCross from '../../assets/logo banner/hscross.webp';
         );
         window.setTimeout(shakeScreen, 1300);
 
-        // Ticket 2: flies by, then curves into the handshake and parks
-        const t2Intro = (async () => {
-          await new Promise((r) => window.setTimeout(r, 1850));
+        await t1Anim.finished.catch(() => {});
+        t1.remove();
 
+        // Phase 2 — two tickets launch together: one curves into the
+        // handshake and parks, the other keeps going and flies out.
+        const parkInHandshake = (async () => {
           const t2 = makeTicket();
           t2.classList.add('gt-intro');
           t2.style.left = '0px';
@@ -336,7 +338,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               { transform: 'translate3d(58vw, -10px, 0) rotate(10deg) scale(1)', opacity: 1 },
             ],
             { duration: 1600, easing: 'cubic-bezier(0.25, 0.6, 0.4, 1)', fill: 'forwards' }
-          ).finished;
+          ).finished.catch(() => {});
 
           const anchor = findHandshakeAnchor();
           if (!anchor) {
@@ -355,7 +357,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               { transform: `translate3d(${tx}px, ${ty}px, 0) rotate(-8deg) scale(0.62)` },
             ],
             { duration: 1200, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)', fill: 'forwards' }
-          ).finished;
+          ).finished.catch(() => {});
 
           await t2.animate(
             [
@@ -364,7 +366,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
               { transform: `translate3d(${tx}px, ${ty}px, 0) rotate(-7deg) scale(0.64)` },
             ],
             { duration: 420, easing: 'ease-out', fill: 'forwards' }
-          ).finished;
+          ).finished.catch(() => {});
 
           t2.getAnimations().forEach((a) => a.cancel());
           t2.classList.remove('gt-intro');
@@ -374,10 +376,30 @@ import hsCross from '../../assets/logo banner/hscross.webp';
           anchor.appendChild(t2);
         })();
 
-        await Promise.all([
-          t1Anim.finished.then(() => t1.remove()).catch(() => t1.remove()),
-          t2Intro,
-        ]);
+        const flyOnThrough = (async () => {
+          const t3 = makeTicket();
+          t3.classList.add('gt-intro');
+          t3.setAttribute('aria-hidden', 'true');
+          t3.removeAttribute('href');
+          t3.tabIndex = -1;
+          t3.style.left = '0px';
+          t3.style.top = '52vh';
+          tray.appendChild(t3);
+
+          await t3.animate(
+            [
+              { transform: 'translate3d(-130px, 0, 0) rotate(-13deg) scale(0.85)', opacity: 0 },
+              { transform: 'translate3d(30vw, -34px, 0) rotate(-3deg) scale(1.15)', opacity: 1, offset: 0.4 },
+              { transform: 'translate3d(72vw, 24px, 0) rotate(10deg) scale(1)', opacity: 1, offset: 0.78 },
+              { transform: 'translate3d(120vw, 96px, 0) rotate(24deg) scale(0.8)', opacity: 0 },
+            ],
+            { duration: 3000, easing: 'cubic-bezier(0.3, 0, 0.6, 1)', fill: 'forwards' }
+          ).finished.catch(() => {});
+
+          t3.remove();
+        })();
+
+        await Promise.all([parkInHandshake, flyOnThrough]);
       };
 
       if (prefersReducedMotion) {
@@ -385,6 +407,7 @@ import hsCross from '../../assets/logo banner/hscross.webp';
       } else {
         const REPLAY_INTERVAL_MS = 60_000;
         let introRunning = false;
+        let ambientStarted = false;
 
         const runIntro = async () => {
           if (introRunning) return;
@@ -397,12 +420,18 @@ import hsCross from '../../assets/logo banner/hscross.webp';
             placeParkedTicket();
           } finally {
             introRunning = false;
+            // Start the ambient loops once the two-phase intro has played
+            // out (or failed) so the page is never left without tickets.
+            // Guarded: runIntro also fires on the 60s replay timer.
+            if (!ambientStarted) {
+              ambientStarted = true;
+              startAmbientFloat();
+            }
           }
         };
 
-        // Start ambient floats immediately so mobile sees a ticket within
-        // ~1s even while the intro sequence is still playing.
-        startAmbientFloat();
+        // Ambient floats wait for the intro so the opening reads as one
+        // ticket, then a pair — not a burst of tickets all at once.
         runIntro();
         window.setInterval(runIntro, REPLAY_INTERVAL_MS);
       }
