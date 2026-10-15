@@ -113,6 +113,9 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
           document.getElementById('section-picker').className = 'hidden';
           document.getElementById('section-official').className = tab === 'official' ? 'block' : 'hidden';
           document.getElementById('section-spotlight').className = tab === 'spotlight' ? 'block' : 'hidden';
+          // Hide the blog hero so selected section content appears at top
+          const hero = document.querySelector('[data-blog-hero]');
+          if (hero) hero.className = 'hidden';
           window.scrollTo({ top: 0, behavior: 'smooth' });
           if (window.animateBlogGrid) window.animateBlogGrid(tab === 'official' ? 'section-official' : 'section-spotlight');
         }
@@ -120,6 +123,9 @@ import remodelersLeadsImg from '../../../assets/home-remodelers-leads.png';
           document.getElementById('section-picker').className = 'block';
           document.getElementById('section-official').className = 'hidden';
           document.getElementById('section-spotlight').className = 'hidden';
+          // Show the blog hero again when returning to picker
+          const hero = document.querySelector('[data-blog-hero]');
+          if (hero) hero.className = '';
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       </script>
