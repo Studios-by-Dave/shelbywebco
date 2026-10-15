@@ -7,6 +7,21 @@ import { breadcrumbSchema, SITE_URL } from '../../../lib/schema';
 import nearMeImg from '../../../../assets/Near-Me-Local-Search.png';
 import websiteCostImg from '../../../../assets/website_cost_1.webp';
 import opencodeImg from '../../../../assets/opencode_2.png';
+import googleStarsImg from '../../../../assets/badge icons/google 5 stars.png';
+import sisConsoleImg from '../../../../assets/seo service page/sis_console_1.png';
+import shelbyImg from '../../../../assets/shelby nc_6.jpg';
+import auditImg from '../../../../assets/Sweb_audit_1.jpg';
+import redesignImg from '../../../../assets/webredesign_1.webp';
+
+// Per-post thumbnails so hub cards don't all share one fallback image.
+const postThumbs: Record<string, typeof nearMeImg> = {
+  'get-more-google-reviews': googleStarsImg,
+  'google-business-profile-posts-2026': sisConsoleImg,
+  'google-business-profile-shelby-contractors': nearMeImg,
+  'local-seo-shelby-complete-guide': shelbyImg,
+  'seo-in-gastonia-gaston-county-checklist': auditImg,
+  'service-pages-that-rank-cleveland-county': redesignImg,
+};
 
 export async function getStaticPaths() {
   return [
@@ -63,7 +78,7 @@ const formatDate = (iso: string) =>
           <a href={`/blog/${post.id}/`} class="group flex flex-col sm:flex-row bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-cyan/40 transition-all">
             <div class="sm:w-48 sm:shrink-0 aspect-[16/8] sm:aspect-square bg-gray-800 relative overflow-hidden">
               <Image
-                src={post.data.image || meta.image}
+                src={postThumbs[post.id] || meta.image}
                 alt=""
                 class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
               />

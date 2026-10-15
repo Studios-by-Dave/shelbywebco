@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-brand-darkest: #1c1c1c;
@@ -39,6 +40,41 @@
   --animate-marquee: marquee 25s linear infinite;
   --animate-marquee-fast: marquee 15s linear infinite;
   --animate-marquee-medium: marquee 35s linear infinite;
+}
+
+/* Article typography — pairs with .prose.prose-invert in BlogPostLayout */
+.prose {
+  --tw-prose-body: rgba(255, 255, 255, 0.8);
+  --tw-prose-headings: #ffffff;
+  --tw-prose-links: #22d3ee;
+  --tw-prose-bold: #ffffff;
+  --tw-prose-quotes: rgba(255, 255, 255, 0.9);
+  --tw-prose-quote-borders: #22d3ee;
+  --tw-prose-code: #fcd34d;
+  --tw-prose-pre-bg: #1c1c1c;
+  --tw-prose-hr: rgba(255, 255, 255, 0.1);
+  --tw-prose-th-borders: rgba(255, 255, 255, 0.15);
+  --tw-prose-td-borders: rgba(255, 255, 255, 0.1);
+  font-family: Inter, sans-serif;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: "Playfair Display", serif;
+}
+
+.prose a {
+  text-decoration-color: rgba(34, 211, 238, 0.3);
+}
+
+.prose a:hover {
+  color: #ffffff;
+}
+
+.prose img {
+  border-radius: 1rem;
 }
 
 @keyframes flash-subtle {
