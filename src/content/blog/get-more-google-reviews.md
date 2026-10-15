@@ -4,12 +4,12 @@ description: "A practical, Google-compliant review strategy for Cleveland County
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: false
+draft: true
 pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:
-  - { label: "GBP setup for contractors", href: "/blog/google-business-profile-shelby-contractors/" }
   - { label: "AI search & GEO", href: "/blog/ai-search-geo-shelby-businesses/" }
+  - { label: "Local SEO essentials", href: "/blog/local-seo-essentials-2026/" }
 faqs:
   - question: "Is it against Google rules to ask for reviews?"
     answer: "No. Asking is fine. What Google prohibits is paid, gated, incentivized, or fake reviews."
@@ -48,9 +48,9 @@ Keep it optional and neutral. Never condition the review on a reward.
 - Review gates ("rate us 5 stars or tell us privately first")
 - Paid review services
 - Review swaps with other businesses
-- [TODO: real data — review velocity results for a client]
+- Sudden spikes of 20 reviews in a week — natural growth is steady, not a burst
 
 ## Related
 
 - [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)
-- [GBP for contractors](/blog/google-business-profile-shelby-contractors/)
+- [Local SEO essentials guide](/blog/local-seo-essentials-2026/)

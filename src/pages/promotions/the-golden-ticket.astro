@@ -4,6 +4,7 @@ import Image from '../../components/OptimizedImage.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import { faqSchema, breadcrumbSchema, SITE_URL } from '../../lib/schema';
 import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
+import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
 // Flip to 'closed' after Dec 15, 2026 winners are announced — the page stays live
 // (never 404s) and swaps the application form for the Class of 2026 results.
@@ -104,16 +105,26 @@ const faqs = [
     }
   }
 
-  /* 3D gold-bar headline — static gradient + 3 cheap drop-shadows.
-     No animation, no per-letter filters: paints once, zero per-frame cost. */
+  /* 3D gold-bar headline — static gold gradient + 3 cheap drop-shadows,
+     with a single white lens-flare band sweeping through the glyphs.
+     Only background-position animates: no per-letter filters, one paint
+     per frame on one element. */
   .gold-bar-title {
-    background: linear-gradient(180deg,
-      #fffbe8 0%,
-      #fde68a 32%,
-      #fff7d6 46%,
-      #f59e0b 54%,
-      #fbbf24 64%,
-      #fff7d6 100%);
+    background-image:
+      linear-gradient(105deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.9) 50%,
+        rgba(255, 255, 255, 0) 60%),
+      linear-gradient(180deg,
+        #fffbe8 0%,
+        #fde68a 32%,
+        #fff7d6 46%,
+        #f59e0b 54%,
+        #fbbf24 64%,
+        #fff7d6 100%);
+    background-size: 250% 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 150% 0, 0 0;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -121,6 +132,66 @@ const faqs = [
       drop-shadow(0 2px 0 #5e3c00)
       drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5))
       drop-shadow(0 0 22px rgba(253, 211, 77, 0.3));
+    animation: gt-lens-flare 4s ease-in-out infinite;
+  }
+
+  @keyframes gt-lens-flare {
+    0%, 35% { background-position: 150% 0, 0 0; }
+    70%, 100% { background-position: -150% 0, 0 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gold-bar-title { animation: none; background-position: 150% 0, 0 0; }
+  }
+
+  /* Dark brand blue outline on a light fill — white digits, #1d4ed8 ring. */
+  .gt-blue-glow {
+    color: #fffdf5;
+    text-shadow:
+      -1px -1px 0 var(--color-brand-blue),
+       1px -1px 0 var(--color-brand-blue),
+      -1px  1px 0 var(--color-brand-blue),
+       1px  1px 0 var(--color-brand-blue),
+      -2px  0   0 var(--color-brand-blue),
+       2px  0   0 var(--color-brand-blue),
+       0   -2px 0 var(--color-brand-blue),
+       0    2px 0 var(--color-brand-blue),
+      0 0 22px rgba(59, 130, 246, 0.45);
+  }
+
+  /* Gold outline on a light fill — same ring treatment as .gt-blue-glow.
+     Yellow-gold, not amber: #eab308 reads gold on the dark card. */
+  .gt-gold-glow {
+    color: #fffdf5;
+    text-shadow:
+      -1px -1px 0 #eab308,
+       1px -1px 0 #eab308,
+      -1px  1px 0 #eab308,
+       1px  1px 0 #eab308,
+      -2px  0   0 #eab308,
+       2px  0   0 #eab308,
+       0   -2px 0 #eab308,
+       0    2px 0 #eab308,
+      0 0 22px rgba(250, 204, 21, 0.45);
+  }
+
+  /* text-shadow inherits — keep the small caption solid gold, not outlined. */
+  .gt-gold-glow > small {
+    color: #fcd34d;
+    text-shadow: none;
+  }
+
+  /* Same inheritance, but the blue card's caption stays legible on dark. */
+  .gt-blue-glow > small {
+    color: var(--color-brand-blue-light);
+    text-shadow: none;
+  }
+
+  /* Hero/body highlights — lighter blue so small bold copy stays legible
+     on the dark background. */
+  .gt-blue {
+    color: var(--color-brand-blue-light);
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.45);
   }
 
   .gt-steps { counter-reset: gt; }
@@ -156,7 +227,7 @@ const faqs = [
   <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h1 class="gold-bar-title font-heading font-bold leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap text-[clamp(1.9rem,8.5vw,4.5rem)]">The Golden Ticket</h1>
+      <h1 class="gold-bar-title font-heading font-bold leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap text-[clamp(1.9rem,9vw,5rem)]">The Golden Ticket</h1>
       <div class="relative flex justify-center mb-6">
         <div class="gold-ticket-hero-wrap">
           <div class="gold-ticket-hero-sheen" aria-hidden="true"></div>
@@ -164,8 +235,8 @@ const faqs = [
         </div>
       </div>
       <p class="italic text-xl md:text-2xl text-white max-w-xl mx-auto">We're choosing 5 lucky local businesses and building them a brand-new, fully custom website, <b class="italic text-[#fcd34d]">for FREE!</b></p>
-      <p class="italic text-xl md:text-2xl text-white/90 max-w-xl mx-auto mt-3"><b class="italic text-[#fcd34d]">$0 build</b>, then <b class="italic text-brand-cyan">$297/mo</b> for 12 months if selected.</p>
-      <p class="text-white/70 mt-4 max-w-2xl mx-auto">We cover the full <b class="text-brand-cyan">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b class="text-brand-cyan">$1,200</b> per website. After launch, winners continue on our <b class="text-brand-cyan">$297/month</b> Core plan <em class="not-italic text-white/90">for 12 months</em>.</p>
+      <p class="italic text-xl md:text-2xl text-white/90 max-w-xl mx-auto mt-3"><b class="italic text-[#fcd34d]">$0 build</b>, then <b class="italic gt-blue">$297/mo</b> for 12 months if selected.</p>
+      <p class="text-white/70 mt-4 max-w-2xl mx-auto">We cover the full <b class="text-[#fcd34d]">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b class="text-[#fcd34d]">$1,200</b> per website. After launch, winners continue on our <b class="gt-blue">$297/month</b> Core plan <em class="not-italic text-white/90">for 12 months</em>.</p>
       <div class="flex flex-wrap gap-2 justify-center my-7">
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60"><b class="text-[#fcd34d]">5</b> winners</span>
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Closes <b class="text-[#fcd34d]">Dec 15</b>, 11:59 PM ET</span>
@@ -183,7 +254,7 @@ const faqs = [
       <p class="text-white/60 text-center mb-10 italic">No surprises. Here is exactly what we cover and what you continue with.</p>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-dark border border-[#fcd34d] rounded-2xl p-8 shadow-[0_0_0_1px_rgba(252,211,77,.45),0_18px_50px_rgba(253,211,77,.1)]">
-          <p class="font-heading font-extrabold text-6xl text-[#fcd34d] leading-none">$0 <small class="font-body font-medium text-base text-white/50">build &amp; launch</small></p>
+          <p class="font-heading font-extrabold text-6xl leading-none gt-gold-glow">$0 <small class="font-body font-medium text-base text-white/50">build &amp; launch</small></p>
           <h3 class="text-xl font-bold text-white mt-3 mb-3">We cover the $497 fee</h3>
           <ul class="list-disc pl-5 text-white/60 space-y-1">
             <li>Custom 4–5 page site, designed and built for you</li>
@@ -192,7 +263,7 @@ const faqs = [
           </ul>
         </div>
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-8">
-          <p class="font-heading font-extrabold text-6xl text-brand-cyan leading-none">$297 <small class="font-body font-medium text-base text-white/50">/month, 12 months</small></p>
+          <p class="font-heading font-extrabold text-6xl leading-none gt-blue-glow">$297 <small class="font-body font-medium text-base text-white/50">/month, 12 months</small></p>
           <h3 class="text-xl font-bold text-white mt-3 mb-3">You continue on Core</h3>
           <ul class="list-disc pl-5 text-white/60 space-y-1">
             <li>Hosting, security, backups, and edits</li>
@@ -202,7 +273,7 @@ const faqs = [
           <p class="mt-4 text-sm text-white/50">Same plan every Core client signs.</p>
         </div>
       </div>
-      <div class="max-w-3xl mx-auto mt-7 p-6 md:p-7 border-l-4 border-brand-cyan bg-brand-dark rounded-r-2xl">
+      <div class="max-w-3xl mx-auto mt-7 p-6 md:p-7 border-l-4 border-brand-blue-light bg-brand-dark rounded-r-2xl">
         <h3 class="text-xl font-bold text-white">This isn't an ordinary care plan</h3>
         <p class="text-white/60 mt-2">Most website care plans run around $150/month for hosting and maintenance. At the heart of the $297 Core plan is <b class="text-white">ongoing SEO and AI improvements plus continued content creation</b>, which build search visibility and authority over time. Your website keeps getting better.</p>
         <p class="text-white/60 mt-2"><b class="text-white">No surprise charges, no upsells, no fine print.</b></p>
@@ -220,6 +291,16 @@ const faqs = [
           <li class="py-3.5 pl-8 border-b border-white/10 relative text-white/85"><span class="absolute left-0 text-lime-400 font-bold">✓</span>{item}</li>
         ))}
       </ul>
+
+      <div class="mt-12">
+        <GrowthPlanPricingSection
+          bare
+          only="website"
+          variant="monthly-first"
+          ctaHref="#apply"
+          ctaLabel="Apply for your Golden Ticket"
+        />
+      </div>
     </div>
   </section>
 
@@ -273,7 +354,7 @@ const faqs = [
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications Close December 15, 2026</p>
         <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-4">Apply for the Golden Ticket</h2>
         <p class="text-lg text-white italic">Tell your story. That's the whole application. 5 spots for the Class of 2026.</p>
-        <p class="text-white/60 text-sm mt-2">Curious how this fits our standard plans? See <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">pricing</a>.</p>
+        <p class="text-white/60 text-sm mt-2">Curious how this fits our standard plans? See <a href="/pricing/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">pricing</a>.</p>
       </div>
 
       <form id="golden-ticket-form" action="/api/contact" method="POST" class="space-y-5 bg-brand-dark border border-[#fcd34d]/60 rounded-2xl p-6 md:p-8">
@@ -374,7 +455,7 @@ const faqs = [
               <p class="text-white/60 text-sm">{winner.town}</p>
             </div>
             {winner.caseStudy && (
-              <a href={winner.caseStudy} class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30 text-sm">Read the case study</a>
+              <a href={winner.caseStudy} class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40 text-sm">Read the case study</a>
             )}
           </li>
         ))}
@@ -382,7 +463,7 @@ const faqs = [
           <li class="text-white/50 text-sm">[TODO: real data — winners announced]</li>
         )}
       </ul>
-      <p class="mt-8 text-white/60">Want to work with us anyway? <a href="/contact/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Get in touch</a> — standard <a href="/pricing/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">plans</a> are always open.</p>
+      <p class="mt-8 text-white/60">Want to work with us anyway? <a href="/contact/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Get in touch</a> — standard <a href="/pricing/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">plans</a> are always open.</p>
     </div>
   </section>
   )}
@@ -397,7 +478,7 @@ const faqs = [
           <p class="text-white/60 pb-5">{faq.answer}</p>
         </details>
       ))}
-      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">Official Rules</a>.</p>
+      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Official Rules</a>.</p>
     </div>
   </section>
 
@@ -409,7 +490,7 @@ const faqs = [
         <h2 class="font-heading font-bold text-3xl text-[#fcd34d] mb-3 !text-left">Why we're doing this</h2>
         <p class="text-white/60 mb-2"><b class="text-white">It's simply good business.</b> Honest value up front builds trust before the first invoice — and confidence turns a website into opportunity.</p>
         <p class="text-white/60 mb-2"><b class="text-white">We're a growing agency.</b> Upfront value earns credibility fast and generates real case studies and proof across the local business community.</p>
-        <p class="text-white/60"><b class="text-white">Dave Richardson</b>, Founder / Lead Developer · <a href="tel:+17044738188" class="text-brand-cyan hover:text-white">(704) 473-8188</a> · <a href="mailto:dave@shelbywebco.com" class="text-brand-cyan hover:text-white">dave@shelbywebco.com</a></p>
+        <p class="text-white/60"><b class="text-white">Dave Richardson</b>, Founder / Lead Developer · <a href="tel:+17044738188" class="text-brand-blue-light hover:text-white">(704) 473-8188</a> · <a href="mailto:dave@shelbywebco.com" class="text-brand-blue-light hover:text-white">dave@shelbywebco.com</a></p>
       </div>
     </div>
   </section>

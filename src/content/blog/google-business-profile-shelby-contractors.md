@@ -40,7 +40,7 @@ For Shelby contractors: claim the profile, pick one accurate primary category, l
 - Answer Q&A on the profile.
 - Reply to reviews within a few days.
 - Update hours for holidays.
-- [TODO: real data — GBP-driven calls for a contractor client over 90 days]
+- Track calls and direction requests monthly so you know which months the profile earned its keep.
 
 ## Related reading
 

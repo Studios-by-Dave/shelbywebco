@@ -1,6 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
+import Image from '../../components/OptimizedImage.astro';
+import stratImg from '../../../assets/Sweb_STRAT_1.png';
+import strat2 from '../../../assets/STRAT-2.png';
+import strat3 from '../../../assets/STRAT-3.png';
+import strat4 from '../../../assets/STRAT-4.png';
+import strat5 from '../../../assets/STRAT-5.png';
+import { getImage } from 'astro:assets';
+
+const stratLightbox = await Promise.all(
+  [stratImg, strat2, strat3, strat4, strat5].map((src) =>
+    getImage({ src, width: 1600, format: 'webp', quality: 80 })
+  )
+);
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -33,22 +46,22 @@ const serviceSchema = {
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-8 lg:py-10 px-4 relative overflow-hidden" data-animate style="background: linear-gradient(135deg, #3f6212 0%, #4d7c0f 30%, #65a30d 60%, #84cc16 85%, #a3e635 100%);">
+  <section class="py-6 lg:py-7 px-4 relative overflow-hidden" data-animate style="background: linear-gradient(135deg, #3f6212 0%, #4d7c0f 30%, #65a30d 60%, #84cc16 85%, #a3e635 100%);">
     <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.2) 35%, transparent 70%);"></div>
     <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.7) 0%, transparent 30%);"></div>
     <div class="absolute bottom-0 left-0 w-[500px] h-[500px] pointer-events-none" style="background: radial-gradient(ellipse 300px 200px at 0% 100%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 40%, transparent 70%);"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-black/70 text-sm uppercase tracking-widest mb-4 font-bold" style="-webkit-text-stroke: 0.5px rgba(0,0,0,0.35);">✦ Custom Software &amp; SaaS</p>
+      <p class="text-black/70 text-sm uppercase tracking-widest mb-3 font-bold" style="-webkit-text-stroke: 0.5px rgba(0,0,0,0.35);">✦ Custom Software &amp; SaaS</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight" style="-webkit-text-stroke: 1px rgba(0,0,0,0.4); text-stroke: 1px rgba(0,0,0,0.4); text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-3 leading-tight" style="-webkit-text-stroke: 1px rgba(0,0,0,0.4); text-stroke: 1px rgba(0,0,0,0.4); text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
           Your Business Machine
         </h1>
       </div>
-      <p class="text-xl md:text-2xl text-black/80 mb-8 max-w-2xl mx-auto font-medium" style="-webkit-text-stroke: 0.5px rgba(0,0,0,0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+      <p class="text-xl md:text-2xl text-black/80 mb-6 max-w-2xl mx-auto font-medium" style="-webkit-text-stroke: 0.5px rgba(0,0,0,0.3); text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
         Let us scan your business, identify what's broken, identify and uncover the very things that keep you up at night, then compile all of that into a custom assembly dashboard built around your exact needs. Six modules. One system. Total clarity.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
         <a
           href="/contact/"
           class="inline-block bg-[#1c1c1c] text-white px-8 py-3 rounded-xl font-bold border border-black/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_0_20px_rgba(0,0,0,0.2)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300"
@@ -56,7 +69,7 @@ const serviceSchema = {
           Get Your Free Quote
         </a>
       </div>
-      <div class="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-black/70 font-medium">
+      <div class="mt-6 flex flex-wrap justify-center items-center gap-6 text-sm text-black/70 font-medium">
         <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> Custom-built for your business</span>
         <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> 6 core modules</span>
         <span class="flex items-center gap-2"><span class="text-black font-bold">✓</span> Scalable SaaS architecture</span>
@@ -156,6 +169,144 @@ const serviceSchema = {
           <a href="/services/branding/" class="text-brand-cyan text-base font-bold mt-3 inline-block hover:underline">View →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- STRAT Console Showcase -->
+  <section class="py-24 px-4 bg-brand-darkest relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-blue/5 via-transparent to-brand-cyan/5 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider mb-6">
+          Proprietary Project Showcase
+        </div>
+        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-brand-cyan mb-3">
+          STRAT Console
+        </h2>
+        <p class="text-brand-cyan font-bold tracking-wide mb-4">Search Tracking, Research & Action Tool — Built by Us, For Us</p>
+        <p class="text-white max-w-3xl mx-auto text-lg">
+          STRAT is our internal SEO intelligence platform — a custom SaaS we built to centralize keyword research, competitor analysis, search visibility data, and website optimization opportunities. It's not a third-party tool we resell; it's software we designed, coded, and iterate on daily to power every SEO engagement we run.
+        </p>
+      </div>
+
+      <!-- STRAT hero image with lightbox -->
+      <div class="mb-12 max-w-4xl mx-auto">
+        <button type="button" data-strat-index="0" data-strat-src={stratLightbox[0].src} class="w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] cursor-zoom-in block group">
+          <Image
+            src={stratImg}
+            alt="STRAT Console - Search Tracking, Research & Action Tool Dashboard"
+            class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </button>
+        <p class="text-center text-white/50 text-sm mt-3">Click any screenshot to view full-size</p>
+      </div>
+
+      <!-- What STRAT Does - Custom Software Perspective -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan shadow-[0_0_15px_rgba(34,211,238,0.3)] rounded-lg flex items-center justify-center mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Unified Research</h3>
+          <p class="text-white/80 text-base">Keywords, competitors, SERP features, and content gaps — all in one view instead of five browser tabs.</p>
+        </div>
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan shadow-[0_0_15px_rgba(34,211,238,0.3)] rounded-lg flex items-center justify-center mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Visibility Scoring</h3>
+          <p class="text-white/80 text-base">Proprietary scoring algorithm tracks search visibility across local packs, organic, and AI citations — not just rankings.</p>
+        </div>
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan shadow-[0_0_15px_rgba(34,211,238,0.3)] rounded-lg flex items-center justify-center mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Action Queue</h3>
+          <p class="text-white/80 text-base">Auto-prioritized task list: technical fixes, content gaps, schema opportunities — ordered by impact, not alphabetically.</p>
+        </div>
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-brand-cyan/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-cyan shadow-[0_0_15px_rgba(34,211,238,0.3)] rounded-lg flex items-center justify-center mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Client Reporting</h3>
+          <p class="text-white/80 text-base">White-label dashboards clients can log into — they see progress; we see the data behind it.</p>
+        </div>
+      </div>
+
+      <!-- Screenshot thumbnails -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <button type="button" data-strat-index="1" data-strat-src={stratLightbox[1].src} aria-label="Enlarge STRAT screenshot 1" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 cursor-zoom-in">
+          <Image src={strat2} alt="STRAT Console - Keyword Research View" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        </button>
+        <button type="button" data-strat-index="2" data-strat-src={stratLightbox[2].src} aria-label="Enlarge STRAT screenshot 2" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 cursor-zoom-in">
+          <Image src={strat3} alt="STRAT Console - Competitor Analysis" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        </button>
+        <button type="button" data-strat-index="3" data-strat-src={stratLightbox[3].src} aria-label="Enlarge STRAT screenshot 3" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 cursor-zoom-in">
+          <Image src={strat4} alt="STRAT Console - Visibility Scoring" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        </button>
+        <button type="button" data-strat-index="4" data-strat-src={stratLightbox[4].src} aria-label="Enlarge STRAT screenshot 4" class="strat-thumb group rounded-xl overflow-hidden border border-white/10 hover:border-brand-cyan/40 transition-all duration-300 cursor-zoom-in">
+          <Image src={strat5} alt="STRAT Console - Action Queue" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        </button>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="strat-lightbox" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/95 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="STRAT Console screenshot viewer">
+        <button type="button" aria-label="Close" class="absolute inset-0 w-full h-full cursor-default" tabindex="-1"></button>
+        <button type="button" aria-label="Close" class="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-2xl transition-colors">×</button>
+        <button type="button" aria-label="Previous" class="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-3xl transition-colors">‹</button>
+        <button type="button" aria-label="Next" class="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-3xl transition-colors">›</button>
+        <img id="strat-lightbox-img" src="" alt="" class="relative z-10 max-h-[85vh] max-w-[90vw] object-contain rounded-xl drop-shadow-[0_0_40px_rgba(34,211,238,0.3)]" />
+      </div>
+
+      <script>
+        const lightbox = document.getElementById('strat-lightbox') as HTMLDivElement | null;
+        const lightboxImg = document.getElementById('strat-lightbox-img') as HTMLImageElement | null;
+        const triggers = Array.from(document.querySelectorAll('[data-strat-index]')) as HTMLElement[];
+        const images = triggers
+          .map((el) => ({ index: Number(el.getAttribute('data-strat-index')), src: el.getAttribute('data-strat-src') || '', alt: el.querySelector('img')?.alt || '' }))
+          .sort((a, b) => a.index - b.index)
+          .map((item) => ({ src: item.src, alt: item.alt }));
+        let currentIndex = 0;
+
+        function showAt(index: number) {
+          if (!lightbox || !lightboxImg || !images.length) return;
+          currentIndex = (index + images.length) % images.length;
+          lightboxImg.src = images[currentIndex].src;
+          lightboxImg.alt = images[currentIndex].alt;
+        }
+
+        function openLightbox(index: number) {
+          if (!lightbox) return;
+          showAt(index);
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+          if (!lightbox || !lightboxImg) return;
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          lightboxImg.src = '';
+          document.body.style.overflow = '';
+        }
+
+        triggers.forEach((el) => {
+          el.addEventListener('click', () => openLightbox(Number(el.getAttribute('data-strat-index')) || 0));
+        });
+
+        lightbox?.querySelectorAll('[aria-label="Close"]').forEach((btn) => btn.addEventListener('click', closeLightbox));
+        lightbox?.querySelector('[aria-label="Previous"]')?.addEventListener('click', () => showAt(currentIndex - 1));
+        lightbox?.querySelector('[aria-label="Next"]')?.addEventListener('click', () => showAt(currentIndex + 1));
+
+        document.addEventListener('keydown', (e: KeyboardEvent) => {
+          if (lightbox?.classList.contains('flex')) {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showAt(currentIndex - 1);
+            if (e.key === 'ArrowRight') showAt(currentIndex + 1);
+          }
+        });
+      </script>
     </div>
   </section>
 

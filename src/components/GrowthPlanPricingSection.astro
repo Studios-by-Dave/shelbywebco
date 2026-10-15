@@ -6,6 +6,10 @@ interface Props {
   titleClass?: string;
   subtitle?: string;
   variant?: 'launch-first' | 'monthly-first';
+  only?: 'website' | 'seo' | 'leads';
+  bare?: boolean;
+  ctaHref?: string;
+  ctaLabel?: string;
 }
 
 const {
@@ -15,6 +19,10 @@ const {
   titleClass = 'font-heading text-4xl md:text-5xl font-bold text-white mb-6',
   subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
   variant = 'launch-first',
+  only = '',
+  bare = false,
+  ctaHref = '/contact/',
+  ctaLabel = 'Get Started',
 } = Astro.props;
 
 const tiers = [
@@ -81,25 +89,37 @@ const tiers = [
     ],
     bestFor: 'Businesses that want a full growth system — SEO, leads, and conversion optimization under one roof',
   },
- ];
+];
+
+// Single-tier "bare" mode: drop the section shell/eyebrow/notes so the card
+// can be embedded inside another page section (e.g. the Golden Ticket page).
+const visibleTiers = only ? tiers.filter((tier) => tier.key === only) : tiers;
+const gridClass = only ? 'max-w-md mx-auto grid gap-8 mb-0' : 'grid md:grid-cols-3 gap-8 mb-16';
+const Shell: any = bare ? 'div' : 'section';
+const shellProps = bare ? {} : { id, 'data-animate': '' };
+const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
 ---
 
-<section id={id} class="py-24 px-4 bg-brand-darkest/50" data-animate>
+<Shell {...shellProps} class={shellClass}>
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">✦ Our Growth Plans</p>
-      <h2 class={titleClass}>{title}</h2>
-      <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
-    </div>
+    {!bare && (
+      <>
+        <div class="text-center mb-16">
+          <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">&#10022; Our Growth Plans</p>
+          <h2 class={titleClass}>{title}</h2>
+          <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
+        </div>
 
-    <div class="text-center mb-8">
-      <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
-        Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Standalone builds available on request.
-      </p>
-    </div>
+        <div class="text-center mb-8">
+          <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
+            Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Standalone builds available on request.
+          </p>
+        </div>
+      </>
+    )}
 
-    <div class="grid md:grid-cols-3 gap-8 mb-16">
-      {tiers.map((tier) => (
+    <div class={gridClass}>
+      {visibleTiers.map((tier) => (
         <div
           class:list={[
             'bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_24px_50px_rgba(0,0,0,0.6)] relative transition-all duration-300',
@@ -148,7 +168,7 @@ const tiers = [
           </ul>
           <p class="text-brand-cyan/80 text-xs font-semibold mb-4">Best for: {tier.bestFor}</p>
           <a
-            href="/contact/"
+            href={ctaHref}
             class:list={[
               'block w-full px-6 py-3 rounded-xl font-bold text-center mt-auto transition-all duration-300',
               tier.badge
@@ -156,16 +176,18 @@ const tiers = [
                 : 'bg-brand-green text-white border border-white/20 hover:bg-brand-greenLight',
             ]}
           >
-            Get Started
+            {ctaLabel}
           </a>
         </div>
       ))}
     </div>
 
-    <div class="text-center">
-      <p class="text-white/80 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
-        After your initial term, plans continue month-to-month. Cancel with 30 days' written notice. Your domain and content are always yours — website files and design are handed off to you upon completion of your initial term, or available for buyout if you cancel early.
-      </p>
-    </div>
+    {!bare && (
+      <div class="text-center">
+        <p class="text-white/80 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+          After your initial term, plans continue month-to-month. Cancel with 30 days' written notice. Your domain and content are always yours — website files and design are handed off to you upon completion of your initial term, or available for buyout if you cancel early.
+        </p>
+      </div>
+    )}
   </div>
-</section>
+</Shell>
