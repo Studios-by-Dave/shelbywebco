@@ -389,6 +389,19 @@
     animation: mobile-golden-ticket-glow 1.8s ease-in-out infinite;
   }
 
+  @keyframes golden-ticket-nav-glow {
+    0%, 100% {
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.35), 0 0 20px rgba(251, 191, 36, 0.15);
+    }
+    50% {
+      text-shadow: 0 0 16px rgba(251, 191, 36, 0.8), 0 0 34px rgba(251, 191, 36, 0.4);
+    }
+  }
+
+  .animate-golden-ticket-nav {
+    animation: golden-ticket-nav-glow 2.2s ease-in-out infinite;
+  }
+
   .mobile-nav-subtle-italic {
     font-style: oblique 8deg;
   }

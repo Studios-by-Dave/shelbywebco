@@ -399,7 +399,7 @@ export default function MobileNav() {
                           <a
                             href={promotion.href}
                             onClick={closeMenu}
-                            className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
+                            className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 whitespace-nowrap ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
                           >
                             {promotion.label}
                           </a>

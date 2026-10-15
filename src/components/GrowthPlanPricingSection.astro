@@ -3,6 +3,7 @@ interface Props {
   focus?: 'website' | 'seo' | 'leads';
   id?: string;
   title?: string;
+  titleClass?: string;
   subtitle?: string;
   variant?: 'launch-first' | 'monthly-first';
 }
@@ -11,6 +12,7 @@ const {
   focus = '',
   id = 'growth-pricing',
   title = 'One Simple Monthly Plan',
+  titleClass = 'font-heading text-4xl md:text-5xl font-bold text-white mb-6',
   subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
   variant = 'launch-first',
 } = Astro.props;
@@ -86,7 +88,7 @@ const tiers = [
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">✦ Our Growth Plans</p>
-      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">{title}</h2>
+      <h2 class={titleClass}>{title}</h2>
       <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
     </div>
 

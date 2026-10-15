@@ -7,6 +7,7 @@ import strat2 from '../../../assets/STRAT-2.png';
 import strat3 from '../../../assets/STRAT-3.png';
 import strat4 from '../../../assets/STRAT-4.png';
 import strat5 from '../../../assets/STRAT-5.png';
+import seoBg from '../../../assets/seo service page/sis_console_1.png';
 import { getImage } from 'astro:assets';
 
 const stratLightbox = await Promise.all(
@@ -107,6 +108,16 @@ const faqSchema = {
 };
 ---
 
+<style>
+  /* Darken glossary terms for contrast on the light Variables panel */
+  .variables-light .glossary-term {
+    color: #0e7490;
+  }
+  .variables-light .glossary-term:hover {
+    color: #155e75;
+  }
+</style>
+
 <BaseLayout 
   title="SEO Services in Shelby, NC | Plus Plans"
   description="Comprehensive local SEO services for Shelby, NC businesses. Technical optimization, Google Business Profile, content, and ongoing growth plans from $297/month."
@@ -115,7 +126,8 @@ const faqSchema = {
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section: What Is SEO? -->
-  <section class="py-16 lg:py-20 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+  <section class="py-20 lg:py-28 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+    <Image src={seoBg} alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-20 pointer-events-none" />
     <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
     <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
     <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
@@ -124,14 +136,14 @@ const faqSchema = {
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Shelby Web Company</p>
         <div class="relative inline-block">
           <PixieDust client:load />
-          <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight">
             Complete <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">SEO Services</span>
           </h1>
           <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-brand-cyan/90 mt-2">
             Includes GEO — Generative Engine Optimization for AI Visibility
           </p>
         </div>
-        <p class="text-xl text-white mb-8 max-w-3xl mx-auto">
+        <p class="text-lg text-white/90 italic mb-8 max-w-3xl mx-auto">
           Search Engine Optimization is the practice of configuring every layer of your website so that Google, Bing, and other search engines can find it, understand it, trust it, and rank it above your competitors when potential customers search for what you offer.
         </p>
         <div class="max-w-3xl mx-auto text-left p-5 bg-brand-dark/80 border border-white/10 rounded-2xl mb-8">
@@ -157,100 +169,100 @@ const faqSchema = {
       </div>
 
       <!-- The SEO Variables -->
-      <div class="bg-brand-dark/80 border border-white/5 rounded-3xl p-8 md:p-12 mb-12">
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 text-center">The Variables Behind Every Ranking</h2>
-        <p class="text-white text-center mb-10 max-w-3xl mx-auto">
+      <div class="variables-light bg-[#edf1f7] border border-white/60 rounded-3xl p-8 md:p-12 mb-12 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6 text-center">The Variables Behind Every Ranking</h2>
+        <p class="text-slate-600 text-center mb-10 max-w-3xl mx-auto">
           SEO isn't one thing — it's dozens of interconnected systems working together. Missing any single layer can hold your entire site back. Here's what goes into a proper SEO strategy:
         </p>
         <div class="grid md:grid-cols-2 gap-6">
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">01</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">01</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Page Indexing & Crawlability</h4>
-              <p class="text-white/80 text-sm">Google must be able to discover, crawl, and index every important page on your site. If pages aren't indexed, they don't exist in search results — no matter how good your content is.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">Page Indexing & Crawlability</h4>
+              <p class="text-slate-600 text-sm">Google must be able to discover, crawl, and index every important page on your site. If pages aren't indexed, they don't exist in search results — no matter how good your content is.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">02</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">02</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="Canonicalization" plain="Tells Google which page is the real one when you have duplicates." slug="canonical-tag" /></h4>
-              <p class="text-white/80 text-sm">When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1"><GlossaryTooltip client:load term="Canonicalization" plain="Tells Google which page is the real one when you have duplicates." slug="canonical-tag" /></h4>
+              <p class="text-slate-600 text-sm">When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">03</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">03</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">XML Sitemap Implementation</h4>
-              <p class="text-white/80 text-sm">A properly structured sitemap acts as a roadmap for search engines — listing every page, its update frequency, and relative importance so crawlers prioritize what matters most.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">XML Sitemap Implementation</h4>
+              <p class="text-slate-600 text-sm">A properly structured sitemap acts as a roadmap for search engines — listing every page, its update frequency, and relative importance so crawlers prioritize what matters most.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">04</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">04</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="Robots.txt" plain="A small file that tells crawlers which pages to skip or allow." slug="robots-txt" /> Configuration</h4>
-              <p class="text-white/80 text-sm">This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1"><GlossaryTooltip client:load term="Robots.txt" plain="A small file that tells crawlers which pages to skip or allow." slug="robots-txt" /> Configuration</h4>
+              <p class="text-slate-600 text-sm">This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">05</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">05</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1"><GlossaryTooltip client:load term="LLMs.txt" plain="Helps AI like ChatGPT and Perplexity understand and surface your site." slug="llms-txt" /> — AI Visibility</h4>
-              <p class="text-white/80 text-sm">The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1"><GlossaryTooltip client:load term="LLMs.txt" plain="Helps AI like ChatGPT and Perplexity understand and surface your site." slug="llms-txt" /> — AI Visibility</h4>
+              <p class="text-slate-600 text-sm">The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">06</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">06</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Redirect Management</h4>
-              <p class="text-white/80 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve <GlossaryTooltip client:load term="Link Equity" plain="The ranking power a link passes from one page to another." slug="link-equity" /> when URLs change, pages move, or domains are consolidated — without losing authority.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">Redirect Management</h4>
+              <p class="text-slate-600 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve <GlossaryTooltip client:load term="Link Equity" plain="The ranking power a link passes from one page to another." slug="link-equity" /> when URLs change, pages move, or domains are consolidated — without losing authority.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">07</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">07</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">On-Page Optimization</h4>
-              <p class="text-white/80 text-sm">Title tags, meta descriptions, header hierarchy, internal linking, keyword placement, content quality, and structured data — every element on every page sends signals to search engines.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">On-Page Optimization</h4>
+              <p class="text-slate-600 text-sm">Title tags, meta descriptions, header hierarchy, internal linking, keyword placement, content quality, and structured data — every element on every page sends signals to search engines.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">08</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">08</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Technical Performance</h4>
-              <p class="text-white/80 text-sm">Core Web Vitals, mobile responsiveness, page speed, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">Technical Performance</h4>
+              <p class="text-slate-600 text-sm">Core Web Vitals, mobile responsiveness, page speed, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">09</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">09</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Local SEO & Google Business</h4>
-              <p class="text-white/80 text-sm">For service-area businesses, local SEO is everything — Google Business Profile optimization, NAP consistency, local citations, review management, and map pack positioning.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">Local SEO & Google Business</h4>
+              <p class="text-slate-600 text-sm">For service-area businesses, local SEO is everything — Google Business Profile optimization, NAP consistency, local citations, review management, and map pack positioning.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="w-8 h-8 bg-brand-accent/20 rounded-lg flex items-center justify-center shrink-0 mt-1">
-              <span class="text-brand-accent font-bold text-sm">10</span>
+            <div class="w-8 h-8 bg-lime-200 rounded-lg flex items-center justify-center shrink-0 mt-1">
+              <span class="text-lime-700 font-bold text-sm">10</span>
             </div>
             <div>
-              <h4 class="text-brand-cyan font-bold mb-1">Content Strategy & Authority</h4>
-              <p class="text-white/80 text-sm">Keyword research, topic clustering, content freshness, <GlossaryTooltip client:load term="E-E-A-T" plain="Google's trust check: Experience, Expertise, Authority, Trust." slug="e-e-a-t" /> signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</p>
+              <h4 class="text-brand-blue-dark font-bold mb-1">Content Strategy & Authority</h4>
+              <p class="text-slate-600 text-sm">Keyword research, topic clustering, content freshness, <GlossaryTooltip client:load term="E-E-A-T" plain="Google's trust check: Experience, Expertise, Authority, Trust." slug="e-e-a-t" /> signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</p>
             </div>
           </div>
         </div>
@@ -277,55 +289,55 @@ const faqSchema = {
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">On-Page SEO</h3>
-          <p class="text-white/90 text-lg">Strategic content optimization, keyword targeting, meta data refinement, internal linking architecture, and clean URL structure — every element tuned for maximum crawlability and ranking potential.</p>
+          <p class="text-white/90 text-base">Strategic content optimization, keyword targeting, meta data refinement, internal linking architecture, and clean URL structure — every element tuned for maximum crawlability and ranking potential.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10a2 2 0 100-4 2 2 0 000 4z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Local SEO</h3>
-          <p class="text-white/90 text-lg"><span class="text-brand-cyan font-semibold">Google Business Profile</span> optimization, local citation building, review management, and location-based strategies that put your business on the map — literally — for nearby customers.</p>
+          <p class="text-white/90 text-base"><span class="text-brand-cyan font-semibold">Google Business Profile</span> optimization, local citation building, review management, and location-based strategies that put your business on the map — literally — for nearby customers.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l-3 3 3 3m8-6l3 3-3 3M14 5l-4 14"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Technical SEO</h3>
-          <p class="text-white/90 text-lg">Site speed optimization, mobile-first compliance, crawlability audits, indexation control, accessibility standards, and structured data markup — the technical foundation Google rewards.</p>
+          <p class="text-white/90 text-base">Site speed optimization, mobile-first compliance, crawlability audits, indexation control, accessibility standards, and structured data markup — the technical foundation Google rewards.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.6-4.6a2 2 0 012.8 0L14 14l1.6-1.6a2 2 0 012.8 0L20 16m-9-7h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Image & Video SEO</h3>
-          <p class="text-white/90 text-lg">Image compression, alt tag strategy, video transcription, and multimedia schema — so visual content ranks in Google Images and video carousels, not just standard search.</p>
+          <p class="text-white/90 text-base">Image compression, alt tag strategy, video transcription, and multimedia schema — so visual content ranks in Google Images and video carousels, not just standard search.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Off-Page SEO</h3>
-          <p class="text-white/90 text-lg">Strategic link building, guest posting, social signal amplification, and domain authority growth — the external credibility signals that push your site above competitors.</p>
+          <p class="text-white/90 text-base">Strategic link building, guest posting, social signal amplification, and domain authority growth — the external credibility signals that push your site above competitors.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">SEO Analytics</h3>
-          <p class="text-white/90 text-lg">Real-time performance tracking, keyword rank monitoring, competitor benchmarking, and detailed reporting through our proprietary <span class="text-brand-cyan font-semibold">STRAT Console</span> — so you always know what's working.</p>
+          <p class="text-white/90 text-base">Real-time performance tracking, keyword rank monitoring, competitor benchmarking, and detailed reporting through our proprietary <span class="text-brand-cyan font-semibold">STRAT Console</span> — so you always know what's working.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-brand-dark p-6 rounded-2xl border border-white/5 hover:border-lime-500/50 transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Google Business Profile</h3>
-          <p class="text-white/90 text-lg">Complete profile setup, review monitoring, local Maps ranking, and ongoing post integration — get found by customers in your area exactly when they're searching.</p>
+          <p class="text-white/90 text-base">Complete profile setup, review monitoring, local Maps ranking, and ongoing post integration — get found by customers in your area exactly when they're searching.</p>
         </div>
       </div>
     </div>
@@ -335,6 +347,7 @@ const faqSchema = {
     focus="seo"
     variant="monthly-first"
     title="SEO Growth That Compounds"
+    titleClass="font-heading text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-white via-[#dbeafe] to-brand-blue bg-clip-text text-transparent"
     subtitle={`Foundational SEO starts with your website. Three plans at <span class="text-brand-cyan font-semibold">$297, $597, and $797/month</span> — keyword research, content, Google Business Profile optimization, and review generation.`}
   />
 
