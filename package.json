@@ -39,6 +39,7 @@
     "globals": "^17.11.0"
   },
   "overrides": {
-    "path-to-regexp": "6.3.0"
+    "path-to-regexp": "6.3.0",
+    "postcss-selector-parser": "7.1.6"
   }
 }
