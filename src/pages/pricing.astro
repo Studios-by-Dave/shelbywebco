@@ -24,6 +24,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "Is there a discount if I pay upfront?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you pay your entire build fee plus your first month of SEO service upfront in a single payment, we apply an instant $50 discount to your total. It's the same plan and the same work — just one payment instead of two."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How long does a typical project take?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -263,6 +271,19 @@ const faqSchema = {
             </div>
           </div>
         </div>
+
+        <!-- Upfront payment discount -->
+        <div class="relative z-10 mt-10 bg-gradient-to-r from-brand-accent/12 via-brand-accent/5 to-transparent border border-brand-accent/30 rounded-2xl p-6 md:p-7 flex flex-col sm:flex-row sm:items-center gap-5">
+          <div class="shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-[#a3e635] via-brand-accent to-[#65a30d] flex items-center justify-center shadow-[0_0_22px_rgba(132,204,22,0.35)]">
+            <span class="text-brand-darkest font-black text-xl leading-none text-center">$50<br /><span class="text-[11px] font-bold tracking-wider">OFF</span></span>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-1">Pay upfront &amp; save instantly</h3>
+            <p class="text-white/75 text-sm md:text-body-sm leading-relaxed">
+              Cover your <span class="text-brand-accent font-semibold">entire build fee</span> plus your <span class="text-brand-accent font-semibold">first month of SEO service</span> in a single payment, and we'll apply an <span class="text-white font-semibold">instant $50 discount</span> to your total. Same plan, same work — just one payment instead of two.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -438,6 +459,19 @@ const faqSchema = {
         <!-- Question 3 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
+            <span class="text-white font-semibold pr-4">Is there a discount if I pay upfront?</span>
+            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
+              Yes. If you pay your <strong class="text-white">entire build fee plus your first month of SEO service</strong> upfront in a single payment, we apply an <strong class="text-white">instant $50 discount</strong> to your total. It's the same plan and the same work — just one payment instead of two.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">How long does a typical project take?</span>
             <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
           </button>
@@ -448,7 +482,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 4 -->
+        <!-- Question 5 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What if I need more pages than my package includes?</span>
@@ -461,7 +495,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 5 -->
+        <!-- Question 6 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do you handle web hosting and domain setup?</span>
@@ -474,7 +508,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 6 -->
+        <!-- Question 7 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Can I upgrade my package later?</span>
@@ -487,7 +521,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 7 -->
+        <!-- Question 8 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What if I'm not satisfied with the design?</span>
@@ -500,7 +534,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 8 -->
+        <!-- Question 9 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do you offer ongoing maintenance?</span>
@@ -513,7 +547,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 9 -->
+        <!-- Question 10 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">What is a milestone audit?</span>
@@ -526,7 +560,7 @@ const faqSchema = {
           </div>
         </div>
 
-        <!-- Question 10 -->
+        <!-- Question 11 -->
         <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
           <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
             <span class="text-white font-semibold pr-4">Do website packages include SEO?</span>
