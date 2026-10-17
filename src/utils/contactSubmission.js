@@ -12,6 +12,19 @@ function buildSubject(data) {
   return 'New Contact Form Submission from Shelby Web Co';
 }
 
+const SERVICE_LABELS = {
+  'website-seo': 'Website + SEO',
+  'website': 'Website only',
+  'unsure': 'Not sure yet',
+};
+
+// Maps the fixed set of allowed values to labels. Anything else is ignored
+// rather than echoed, since this endpoint also accepts arbitrary JSON.
+function normalizeService(value) {
+  const key = sanitizeText(value).toLowerCase();
+  return SERVICE_LABELS[key] ? key : '';
+}
+
 function buildMessage(data) {
   const name = sanitizeText(data.name);
   const email = sanitizeText(data.email);
@@ -22,6 +35,7 @@ function buildMessage(data) {
   const website = sanitizeText(data.website);
   const challenge = sanitizeText(data.challenge);
   const budget = sanitizeText(data.budget);
+  const service = normalizeService(data.service);
   const story = sanitizeText(data.story || data.message || data.details);
 
   const lines = [];
@@ -33,6 +47,7 @@ function buildMessage(data) {
   if (industry) lines.push(`Industry: ${industry}`);
   if (town) lines.push(`Town: ${town}`);
   if (website) lines.push(`Website: ${website}`);
+  if (service) lines.push(`Interested in: ${SERVICE_LABELS[service]}`);
   if (challenge) lines.push(`SEO challenge: ${challenge}`);
   if (budget) lines.push(`Budget: ${budget}`);
   if (story) lines.push(`Details:\n${story}`);
@@ -59,6 +74,7 @@ export function normalizeContactSubmission(raw = {}) {
     industry: sanitizeText(raw.industry),
     town: sanitizeText(raw.town),
     website: sanitizeText(raw.website),
+    service: normalizeService(raw.service),
     challenge: sanitizeText(raw.challenge),
     budget: sanitizeText(raw.budget),
     form_type: formType,
@@ -82,6 +98,7 @@ export function buildFormspreePayload(raw = {}) {
   if (submission.business) params.set('business', submission.business);
   if (submission.phone) params.set('phone', submission.phone);
   if (submission.website) params.set('website', submission.website);
+  if (submission.service) params.set('service', SERVICE_LABELS[submission.service]);
   if (submission.industry) params.set('industry', submission.industry);
   if (submission.town) params.set('town', submission.town);
   if (submission.challenge) params.set('challenge', submission.challenge);
