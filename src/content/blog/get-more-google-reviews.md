@@ -4,7 +4,7 @@ description: "A practical, Google-compliant review strategy for Cleveland County
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:

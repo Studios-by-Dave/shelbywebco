@@ -13,7 +13,7 @@ related:
   - { label: "Free SEO Audit", href: "/promotions/free-seo-audit/" }
 faqs:
   - question: "Is the Golden Ticket really free?"
-    answer: "I'm covering the $497 build and launch fee. After launch, winners pay $297 per month for 12 months for hosting, care, edits and ongoing SEO. There's no upfront invoice."
+    answer: "I'm covering the $497 build and launch fee. After launch, winners pay $297 per month for 12 months for hosting, care, edits and ongoing SEO — and you can cancel at any time. There's no upfront invoice."
   - question: "I already have a website. Can I still apply?"
     answer: "Yes. A dated, slow or invisible website is exactly what this program is for."
   - question: "How many businesses will win?"
@@ -24,7 +24,7 @@ faqs:
     answer: "No hidden fees. In return I ask for a testimonial, a Google review, permission to feature your business for 6 months (you approve everything) and one warm introduction."
 ---
 
-I'm giving 5 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan for 12 months, which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
+I'm giving 5 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan for 12 months — cancel at any time — which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
 
 [Apply for your Golden Ticket today!](/promotions/the-golden-ticket/)
 
@@ -39,7 +39,7 @@ So this fall, I'm doing something about it. Five businesses across Cleveland and
 No surprises, so here is exactly how it works:
 
 - I cover the **$497** build and launch fee. That's the design, build and launch of a custom 4 to 5 page website. It's work I've previously priced at about $1,200 on average.
-- You continue on our Core plan at **$297/month for 12 months** after launch. That's a total commitment of $3,564 over the year, and I want you to know that before you apply. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
+- You continue on our Core plan at **$297/month for 12 months** after launch — cancel at any time. That's a total commitment of $3,564 over the year, and I want you to know that before you apply. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
 - Core isn't a basic care plan. Most website care plans run around $150 a month for hosting and maintenance. Core adds ongoing SEO and AI improvements plus continued content creation.
 
 ## What's included in Core

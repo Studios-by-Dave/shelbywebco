@@ -4,7 +4,7 @@ description: "How to structure service pages for local search and conversions â€
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
-draft: true
+draft: false
 pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
 serviceLink: { label: "Web design services", href: "/services/web-design/" }
 related:

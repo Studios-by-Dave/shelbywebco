@@ -28,7 +28,6 @@ const serviceAreaLinks = [
   { href: '/web-design-gastonia-nc/', label: 'Gastonia, NC' },
   { href: '/web-design-forest-city-nc/', label: 'Forest City, NC' },
   { href: '/web-design-polkville-nc/', label: 'Polkville, NC' },
-  { href: '/web-design-western-nc/', label: 'Western NC' },
 ];
 
 const industryLinks = [

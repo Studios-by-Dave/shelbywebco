@@ -88,7 +88,6 @@ export default function DesktopNav() {
                     <a href="/web-design-gastonia-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Gastonia, NC</a>
                     <a href="/web-design-forest-city-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Forest City, NC</a>
                     <a href="/web-design-polkville-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Polkville, NC</a>
-                    <a href="/web-design-western-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Western NC</a>
                     <a href="/web-design-boiling-springs-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Boiling Springs, NC</a>
                     <a href="/web-design-kings-mountain-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Kings Mountain, NC</a>
                   </div>
