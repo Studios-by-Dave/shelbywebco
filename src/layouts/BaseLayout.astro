@@ -43,7 +43,7 @@ const {
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
-const fullTitle = isHomepage ? 'Shelby Web Company | Web Design, SEO & Branding in Shelby, NC' : `${title} | Shelby Web Company`;
+const fullTitle = isHomepage ? 'Shelby Web Company | Web Design & SEO in Shelby, NC' : `${title} | Shelby Web Company`;
 const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbywebco.com${image}`;
 
 // Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.
@@ -95,7 +95,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-JWQC4HHQNQ"></script>
@@ -292,7 +292,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     
     <title>{fullTitle}</title>
   </head>
-  <body class:list={[bgVariant === 'charcoal' ? 'bg-[#111214]' : 'bg-brand-darkest', 'text-white font-body antialiased relative overflow-x-hidden pb-[72px] md:pb-0']}>
+  <body class:list={[bgVariant === 'charcoal' ? 'bg-[#111214]' : 'bg-brand-darkest', 'text-white font-body antialiased relative overflow-x-hidden pb-[60px] md:pb-0']}>
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
       {bgVariant === 'charcoal' ? (
