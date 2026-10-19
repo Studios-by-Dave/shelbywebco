@@ -8,11 +8,11 @@ const telHref = `tel:${phone}`;
 
 <div
   id="sticky-mobile-bar"
-  class="md:hidden fixed bottom-0 inset-x-0 z-[100000] safe-area-bottom transition-all duration-300"
+  class="md:hidden fixed bottom-0 inset-x-0 z-[100000] transition-all duration-300"
   role="region"
   aria-label="Quick contact"
 >
-  <div class="grid grid-cols-2 gap-2 px-3 py-2 bg-brand-darkest/35 backdrop-blur-sm border-t border-brand-blue/20 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+  <div class="safe-area-bottom grid grid-cols-2 gap-2 px-3 py-2 bg-brand-darkest/35 backdrop-blur-sm border-t border-brand-blue/20 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
     <a
       href={telHref}
       class="flex items-center justify-center gap-2 bg-transparent text-brand-accent font-bold text-sm py-2.5 rounded-lg border border-brand-accent/50 cta-glow-shine"

@@ -379,6 +379,12 @@
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
+  /* Needed now that the viewport meta sets viewport-fit=cover: without it
+     the sticky navbar sits under the notch in portrait on notched iPhones. */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
   .animate-flash-lime {
     animation: flash-lime 1.2s ease-in-out infinite;
   }
