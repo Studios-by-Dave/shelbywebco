@@ -1,7 +1,24 @@
 # CTA Funnel Strategy — Homepage & Site-Wide
 
-> Saved planning doc for the "better marketing / CTA system" initiative on shelbywebco.com.
-> Resume by opening a new session and saying: *"Read docs/cta-funnel-plan.md and implement the CTA funnel."*
+> ## ⛔ SUPERSEDED — DO NOT IMPLEMENT
+>
+> **Archived.** This plan was never implemented and its central recommendation is now
+> **contrary to the live site**. It proposed making "Get My Free SEO Audit" the hero
+> primary CTA. The homepage now uses a different funnel:
+>
+> | Location | Current CTA | Destination |
+> |---|---|---|
+> | Hero primary | Explore Website + SEO | `/contact/?service=website-seo` |
+> | Hero secondary | Get Started With a Website | `/contact/?service=website` |
+> | Recommended offer | Get Started With Website + SEO | `/contact/?service=website-seo` |
+> | /services/ | Explore Website + SEO · Get Started With a Website | `/contact/?service=…` |
+>
+> The free SEO audit is still a live offer at `/promotions/free-seo-audit/` and is
+> still linked from the navbar, footer, homepage ticker, promotions hub and the SEO
+> service page — it is simply no longer the primary hero CTA.
+>
+> Everything below is preserved for historical context only. Implementing any of it
+> would undo completed pricing and funnel work.
 
 ## Goal
 Replace the current flat set of 5 near-identical "contact us" CTAs with a **3-tier CTA funnel** that guides visitors by intent and matches promise → destination.
