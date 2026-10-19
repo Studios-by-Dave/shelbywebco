@@ -54,7 +54,7 @@ No surprises, so here is exactly how it works:
 
 ## Who should apply
 
-The program is for local businesses in the areas we serve, solo operators and small teams alike. [TODO: confirm and list the 5 winning towns, for example Shelby, Gastonia, Kings Mountain, Boiling Springs and Forest City.] You qualify if your website is old, slow, hard to find on Google, or doesn't exist yet. You need to be open for business and ready to launch during the program window.
+The program is for local businesses in the areas we serve, solo operators and small teams alike — Shelby, Gastonia, Kings Mountain, Boiling Springs, Forest City and the surrounding area. You qualify if your website is old, slow, hard to find on Google, or doesn't exist yet. You need to be open for business and ready to launch during the program window.
 
 Home service companies, contractors, restaurants, boutiques, health and wellness businesses, professional services and nonprofits are all welcome.
 

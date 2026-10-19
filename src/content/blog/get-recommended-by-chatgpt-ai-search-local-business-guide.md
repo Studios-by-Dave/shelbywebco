@@ -30,7 +30,7 @@ AI assistants recommend local businesses they can clearly identify, verify and q
 
 More people are asking tools like ChatGPT, Google's AI answers and Perplexity questions such as "who's a good plumber in Gastonia?" instead of scrolling through search results. If your business isn't clear and easy to verify online, those tools have little to work with, and they'll mention someone else.
 
-I build websites and run SEO for local businesses across Cleveland and Gaston County, and I've been paying close attention to how this changes things. The good news is that most of what helps is the same good local SEO you should be doing anyway. [TODO: add one real example, such as a test where you asked an AI tool about a local service and what it showed, or a before-and-after for your own site. Only include results you actually saw.]
+I build websites and run SEO for local businesses across Cleveland and Gaston County, and I've been paying close attention to how this changes things. The good news is that most of what helps is the same good local SEO you should be doing anyway.
 
 ## How AI tools find local businesses
 
