@@ -39,6 +39,8 @@ Rebuild (or seriously fix) when: the site is slow on phones, forms fail, content
 - Loads fast, works on phones, form works, content accurate.
 - In that case, invest in content and SEO before a redesign.
 
+I turn work down when I get here. A site that is merely unpretty is not broken, and a redesign is the easiest way I know to spend a client's money without fixing what is actually costing them calls.
+
 ## Cost perspective
 
 See [cost ranges](/blog/website-cost-shelby-area-real-ranges/) and [monthly vs one-time](/blog/monthly-website-plan-vs-one-time-build/) before deciding. Patching an obsolete stack forever usually costs more than a clean rebuild.

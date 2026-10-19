@@ -36,7 +36,7 @@ People search with town names, landmarks, and "near me." A page that ranks for a
 - Correct primary category (and only relevant secondary categories).
 - Real photos of the business, team, and work.
 - Services listed the way customers search.
-- [TODO: real data — current GBP health for a sample Shelby client]
+- Contractor-specific setup is covered in [Google Business Profile for Shelby contractors](/blog/google-business-profile-shelby-contractors/), and ongoing posting in [GBP posts that are actually worth it](/blog/google-business-profile-posts-2026/).
 
 ### 2. Website foundations
 - One clear service page per primary service.
@@ -47,7 +47,7 @@ People search with town names, landmarks, and "near me." A page that ranks for a
 ### 3. Reviews
 - Ask happy customers while the job is fresh.
 - Reply to every review — good and bad.
-- Never buy reviews or gate reviews with incentives that violate Google rules. See our guide on getting more Google reviews the right way. *(draft coming soon)*
+- Never buy reviews or gate reviews with incentives that violate Google rules. See our guide on [getting more Google reviews the right way](/blog/get-more-google-reviews/).
 
 ### 4. Citations and directories
 Consistent listings on the usual directories matter less than they did five years ago, but wrong data still hurts. Fix the big ones first.
@@ -61,6 +61,8 @@ Pages and posts that answer real questions ("How much does a roof repair cost in
 2. Make sure your website homepage says your service + Shelby in the first screen.
 3. Ask three recent customers for honest reviews.
 4. Read our existing [local SEO essentials guide](/blog/local-seo-essentials-2026/) for the deeper technical list.
+
+If you only do one of those, make it the first. I have watched businesses with beautiful sites stay invisible purely because of an out-of-date profile.
 
 ## Next steps
 

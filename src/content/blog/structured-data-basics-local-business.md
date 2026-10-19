@@ -41,6 +41,8 @@ Add JSON-LD schema for your business type, breadcrumbs, FAQs (only where visible
 - Marking up fake reviews or ratings
 - Dates that never change while claiming "updated"
 
+I add this markup by hand on every site I build. The schema is not the hard part — being honest about what it claims is.
+
 ## Related
 
 - [AI search & GEO guide](/blog/ai-search-geo-shelby-businesses/)

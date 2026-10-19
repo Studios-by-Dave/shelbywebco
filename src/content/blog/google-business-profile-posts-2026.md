@@ -38,6 +38,8 @@ Post weekly if you have genuine updates (offers, completed projects, events). Do
 - Fake urgency
 - Posts that promise things your site can't back up
 
+I would rather see no posts than filler. An empty quarter is better than a quarter of noise.
+
 ## How this fits the system
 
 Profile → posts/photos → reviews → service pages on your site → schema. Each piece corroborates the others for both Google and AI assistants.

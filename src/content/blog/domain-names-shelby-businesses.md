@@ -38,6 +38,8 @@ Pick a short, spellable .com you can say over the phone without confusion. Don't
 - Exact-match keywords
 - Buying multiple "defensive" domains you'll never use
 
+I have watched owners agonise over a domain for weeks and then lose the actual work — the site, the profile, the reviews. Pick something sayable and move on.
+
 ## Related
 
 - [Cost guide](/blog/website-cost-shelby-nc-2026/)

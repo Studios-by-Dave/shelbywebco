@@ -40,6 +40,8 @@ Winning service pages: state what the service is and who it's for in the first p
 
 Link the service page to 2–3 related blog posts (cost, how-to) and back from those posts. That cluster signals topical depth to search engines.
 
+This is the step I get asked to skip most often. It is also the cheapest one.
+
 ## Related
 
 - [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)

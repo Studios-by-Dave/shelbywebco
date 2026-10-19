@@ -20,7 +20,6 @@ faqs:
 ---
 
 AI assistants now answer local questions directly. If your site is not easy to parse and trust, you will not be in the answer — you will not even be a link.
-
 ## Answer-first summary
 
 To show up in AI answers: publish clear, answer-first pages on your own domain, keep your business facts consistent everywhere, add structured data (LocalBusiness, FAQ, Article), and earn real mentions from local directories, news, and partners. There is no "submit to ChatGPT" button.
@@ -44,6 +43,8 @@ To show up in AI answers: publish clear, answer-first pages on your own domain, 
 
 - Do not spin up hundreds of AI-generated thin posts; quality and consistency matter more than volume.
 - Do not fabricate reviews or stats to sound authoritative — AI systems and humans both punish this.
+
+When a business asks me why their site is not showing up in AI answers, this is almost always the reason. I would rather tell you that than sell you more content.
 
 ## Related
 

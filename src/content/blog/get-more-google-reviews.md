@@ -50,6 +50,8 @@ Keep it optional and neutral. Never condition the review on a reward.
 - Review swaps with other businesses
 - Sudden spikes of 20 reviews in a week — natural growth is steady, not a burst
 
+Every one of these is something I have had to talk a client out of. They all feel like shortcuts, and every one of them ends badly.
+
 ## Related
 
 - [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)

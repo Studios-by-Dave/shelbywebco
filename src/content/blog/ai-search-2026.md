@@ -20,7 +20,7 @@ faqs:
     answer: "Publish answer-first pages on your own site, keep your business info consistent everywhere, add structured data, and earn real local mentions. That work helps Google and AI assistants alike."
 ---
 
-Search is fragmenting: people ask ChatGPT, Gemini, Perplexity, and Google's AI Overviews the same questions they used to type into ten blue links. The businesses that show up are not gaming a new algorithm — they're doing the old fundamentals more clearly.
+Search is fragmenting: people ask ChatGPT, Gemini, Perplexity, and Google's AI Overviews the same questions they used to type into ten blue links. The businesses that show up are not gaming a new algorithm — they're doing the old fundamentals more clearly. From where I sit — hand-coding sites and running local SEO for Shelby businesses — that is exactly what I keep seeing.
 
 ## Answer-first summary
 

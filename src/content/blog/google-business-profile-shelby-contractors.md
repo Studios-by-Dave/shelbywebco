@@ -42,6 +42,8 @@ For Shelby contractors: claim the profile, pick one accurate primary category, l
 - Update hours for holidays.
 - Track calls and direction requests monthly so you know which months the profile earned its keep.
 
+This is the one habit I push hardest on. Contractors tell me their website is fine, then discover the profile has been quietly wrong for a year.
+
 ## Related reading
 
 - [Local SEO for Shelby pillar](/blog/local-seo-shelby-complete-guide/)

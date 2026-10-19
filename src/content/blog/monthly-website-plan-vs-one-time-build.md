@@ -51,6 +51,8 @@ Our [Core plan](/pricing/) is $497 launch + $297/month with a 12-month initial t
 
 Choose one-time if you have internal capacity for maintenance. Choose monthly if uptime, edits, and search performance are part of running the business — and you would rather not manage vendors for each piece.
 
+If you are honest with yourself and nobody is available to keep things updated, one-time is the more expensive option. I would rather tell you that up front than take on a project that stalls in month four.
+
 ## Next step
 
 Read the [full cost guide](/blog/website-cost-shelby-nc-2026/) or [compare plans](/pricing/).

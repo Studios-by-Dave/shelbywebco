@@ -48,6 +48,8 @@ We do not invent "market averages" here. Those are our published ranges.
 - "Make it like Brand X" without a clear goal
 - Paying for features you will not use in year one
 
+I publish our real numbers because I would rather lose a quote than win one that becomes a complaint in month three.
+
 ## Next step
 
 Read the full [website cost guide](/blog/website-cost-shelby-nc-2026/) or [book a free strategy call](/contact/). Prefer the promo path? See [The Golden Ticket](/promotions/the-golden-ticket/).
