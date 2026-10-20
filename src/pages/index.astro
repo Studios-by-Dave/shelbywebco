@@ -54,6 +54,7 @@ const faqSchema = {
     }
   }))
 };
+import marbleBg from '../../assets/marble-800x530.webp';
 ---
 
 <BaseLayout 
@@ -245,94 +246,101 @@ const faqSchema = {
            <div class="absolute -top-24 left-1/4 w-[60%] h-[120%] bg-brand-blue/15 blur-[120px] rounded-full"></div>
            <div class="absolute -bottom-24 right-1/4 w-[50%] h-[100%] bg-brand-cyan/10 blur-[120px] rounded-full"></div>
          </div>
-         <p class="relative text-silver-shimmer text-body-base uppercase tracking-widest mb-4 italic">✦ What We Do</p>
-        <h2 class="relative font-heading font-black text-white text-center tracking-tight leading-[1.05] text-[clamp(1.75rem,4.4vw,3.1rem)]">
-          Web Design &bull; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">SEO</span> &bull; Branding<br class="hidden sm:block" /> <span class="sm:hidden">&bull; </span><span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">AI Search Visibility</span> &bull; Custom Software
-        </h2>
-          <p class="relative text-body-lg text-white/80 max-w-3xl leading-relaxed text-center mt-6">
+         <div class="relative text-silver-shimmer text-body-base uppercase tracking-widest mb-4 italic">✦ What We Do</div>
+        <div class="relative w-full rounded-3xl overflow-hidden bg-cover bg-center py-8 md:py-10 px-4 md:px-8" style={`background-image: url(${marbleBg.src})`}>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65"></div>
+          <h2 class="relative font-heading font-black text-white text-center tracking-tight leading-[1.05] text-[clamp(2.2rem,5.5vw,3.8rem)]">
+            Web Design &bull; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">SEO</span> &bull; Branding<br class="hidden sm:block" /> <span class="sm:hidden">&bull; </span><span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-cyan">AI Search Visibility</span> &bull; Custom Software
+          </h2>
+          <p class="relative text-body-lg text-white/85 max-w-3xl leading-relaxed text-center mt-6">
             We're your local specialized web development and marketing toolkit. We build growth engines—designed around your business, optimized for the results that matter most. At Shelby Web Company, our focus is <span class="text-brand-cyan">YOU</span>!
           </p>
         </div>
         </div>
+      </div>
 
 
 
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Web Design Card -->
-        <a href="/services/web-design/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
-          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+        <a href="/services/web-design/" class="group block rounded-2xl p-6 bg-cover bg-center relative overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.03] hover:z-10 will-change-transform cursor-pointer border border-stone-300/70 shadow-xl" style={`background-image: url(${marbleBg.src})`}>
+          <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/25 blur-[80px] group-hover:bg-lime-500/45 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
-            <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Web Design</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
+            <h3 class="font-heading text-[1.9rem] font-bold text-brand-darkest mb-3">Web Design</h3>
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-stone-700 mb-4 italic">
               <li>Custom, responsive websites that turn visitors into customers</li>
               <li>Optimized for local service businesses</li>
               <li>Mobile-first, lightning-fast performance</li>
               <li>Lead forms and local SEO built in</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
+            <span class="text-brand-blue hover:text-brand-blue-light text-[1.07rem] font-medium italic transition-colors">
               Learn About Web Design →
             </span>
           </div>
         </a>
 
         <!-- Branding Card -->
-        <a href="/services/branding/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
-          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+        <a href="/services/branding/" class="group block rounded-2xl p-6 bg-cover bg-center relative overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.03] hover:z-10 will-change-transform cursor-pointer border border-stone-300/70 shadow-xl" style={`background-image: url(${marbleBg.src})`}>
+          <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/25 blur-[80px] group-hover:bg-lime-500/45 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
             </div>
-            <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Logo Design & Branding</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
+            <h3 class="font-heading text-[1.9rem] font-bold text-brand-darkest mb-3">Logo Design & Branding</h3>
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-stone-700 mb-4 italic">
               <li>Branding that stands out from competitors</li>
               <li>Builds trust with your customers</li>
               <li>Custom logo and complete brand identity</li>
               <li>Business cards and social media assets</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
+            <span class="text-brand-blue hover:text-brand-blue-light text-[1.07rem] font-medium italic transition-colors">
               Learn About Branding →
             </span>
           </div>
         </a>
 
         <!-- SEO Card -->
-        <a href="/services/seo/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
-          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+        <a href="/services/seo/" class="group block rounded-2xl p-6 bg-cover bg-center relative overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.03] hover:z-10 will-change-transform cursor-pointer border border-stone-300/70 shadow-xl" style={`background-image: url(${marbleBg.src})`}>
+          <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/25 blur-[80px] group-hover:bg-lime-500/45 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">SEO Services</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
+            <h3 class="font-heading text-[1.9rem] font-bold text-brand-darkest mb-3">SEO Services</h3>
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-stone-700 mb-4 italic">
               <li>Improve search visibility and attract more customers</li>
               <li>Technical and on-page optimization</li>
               <li>Local search strategy</li>
               <li>Google Business Profile optimization</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
+            <span class="text-brand-blue hover:text-brand-blue-light text-[1.07rem] font-medium italic transition-colors">
               Learn About SEO Services →
             </span>
           </div>
         </a>
 
         <!-- Custom Software & SaaS Card -->
-        <a href="/services/custom-software-saas/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
-          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
+        <a href="/services/custom-software-saas/" class="group block rounded-2xl p-6 bg-cover bg-center relative overflow-hidden transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.03] hover:z-10 will-change-transform cursor-pointer border border-stone-300/70 shadow-xl" style={`background-image: url(${marbleBg.src})`}>
+          <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/25 blur-[80px] group-hover:bg-lime-500/45 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10 text-brand-darkest"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </div>
-            <h3 class="font-heading text-[1.9rem] font-bold text-white mb-3">Custom Software & SaaS (Business Machines)</h3>
-            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-white/70 mb-4 italic">
+            <h3 class="font-heading text-[1.9rem] font-bold text-brand-darkest mb-3">Custom Software & SaaS (Business Machines)</h3>
+            <ul class="list-disc pl-5 space-y-1 text-base leading-snug text-stone-700 mb-4 italic">
               <li>Custom software built around your workflows</li>
               <li>Automate and streamline business operations</li>
               <li>SaaS applications and API integrations</li>
               <li>Purpose-built tools that give your business an edge</li>
             </ul>
-            <span class="text-brand-cyan hover:text-brand-cyanLight text-[1.07rem] font-medium italic transition-colors">
+            <span class="text-brand-blue hover:text-brand-blue-light text-[1.07rem] font-medium italic transition-colors">
               Learn About Custom Software →
             </span>
           </div>
