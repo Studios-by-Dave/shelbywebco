@@ -10,6 +10,7 @@ interface Props {
   bare?: boolean;
   ctaHref?: string;
   ctaLabel?: string;
+  standalone?: boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   bare = false,
   ctaHref = '/contact/',
   ctaLabel = 'Get Started',
+  standalone = false,
 } = Astro.props;
 
 const tiers = [
@@ -112,7 +114,7 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
 
         <div class="text-center mb-8">
           <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
-            Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Standalone builds available on request.
+            Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Prefer just the site? The Website Care Plan below covers hosting, backups, edits, and updates with no SEO subscription.
           </p>
         </div>
       </>
@@ -181,6 +183,48 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
         </div>
       ))}
     </div>
+
+    {standalone && (
+      <div class="mb-16 rounded-2xl border border-white/10 bg-brand-darkest/80 p-6 md:p-8">
+        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 items-center">
+          <div>
+            <p class="text-brand-cyan text-xs uppercase tracking-widest mb-3 font-bold">Or just the website</p>
+            <h3 class="font-heading text-3xl md:text-4xl font-black text-white mb-2">Website Care Plan</h3>
+            <p class="text-white/70 text-sm md:text-base leading-relaxed italic mb-5">
+              Prefer no ongoing SEO? Get the same custom build and keep it maintained, without the SEO subscription.
+            </p>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span class="text-white/60 text-sm">Build &amp; deploy, one time</span>
+              <span class="font-heading text-3xl font-bold text-white">$497</span>
+            </div>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-1">
+              <span class="text-white/60 text-sm">Then, per month</span>
+              <span class="font-heading text-3xl font-bold text-brand-cyan">$149</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-white/80 text-sm uppercase tracking-widest mb-4">What the $149/month covers</p>
+            <ul class="space-y-2 text-white/80 text-base">
+              <li>• Web hosting and SSL</li>
+              <li>• Automated backups</li>
+              <li>• Security monitoring and updates</li>
+              <li>• Small monthly edits and content changes</li>
+              <li>• Core code and plugin updates</li>
+            </ul>
+            <p class="text-white/50 text-xs mt-4">
+              No ongoing local SEO on this plan — that is what the $297/month Core plan adds on top.
+            </p>
+            <a
+              href="/contact/?service=website"
+              class="inline-flex items-center justify-center rounded-xl border border-white/50 bg-transparent px-6 py-3 text-white/90 font-semibold transition-all duration-300 hover:bg-white/10 hover:border-white/80 text-base text-center w-full sm:w-auto mt-6"
+            >
+              Get Started With a Website
+            </a>
+          </div>
+        </div>
+      </div>
+    )}
 
     {!bare && (
       <div class="text-center">
