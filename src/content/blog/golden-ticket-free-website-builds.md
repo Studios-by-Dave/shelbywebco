@@ -40,7 +40,7 @@ No surprises, so here is exactly how it works:
 
 - I cover the **$497** build and launch fee. That's the design, build and launch of a custom 4 to 5 page website. It's work I've previously priced at about $1,200 on average.
 - You continue on our Core plan at **$297/month for 12 months** after launch — cancel at any time. That's a total commitment of $3,564 over the year, and I want you to know that before you apply. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
-- Core isn't a basic care plan. Most website care plans run around $150 a month for hosting and maintenance. Core adds ongoing SEO and AI improvements plus continued content creation.
+- Core isn't a basic care plan. Our $149/month Website Care Plan is hosting, backups, edits, and updates only. Core adds ongoing SEO and AI improvements plus continued content creation.
 
 ## What's included in Core
 
