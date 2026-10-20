@@ -26,15 +26,15 @@ import FaqSection from '../components/FaqSection.astro';
 const faqItems = [
   {
     question: 'Do I have to purchase SEO with my website?',
-    answer: 'No. You can purchase the website build for $497 without an ongoing SEO subscription. Without SEO, the $149/month Website Care Plan covers hosting, backups, edits, and updates. We recommend pairing your website with local SEO to continue working on your search visibility after launch.'
+    answer: 'No. You can purchase the website build for $497 without an ongoing SEO subscription. Without SEO, the $149/month Website Care Plan covers hosting, backups, edits, and updates, on the same six-month minimum term. We recommend pairing your website with local SEO to continue working on your search visibility after launch.'
   },
   {
     question: 'How long should I give SEO?',
-    answer: 'We strongly recommend six to twelve months of consistent work to give improvements time to develop and provide a meaningful period for evaluating progress. This is a recommendation, not a minimum contract term. Results and timing vary based on your website, competition, and market.'
+    answer: 'We strongly recommend six to twelve months of consistent work to give improvements time to develop and provide a meaningful period for evaluating progress. Plans carry a six-month minimum term, and six to twelve months is what we recommend for evaluating progress. Results and timing vary based on your website, competition, and market.'
   },
   {
     question: 'Do I have to keep paying for SEO?',
-    answer: 'No. SEO is a month-to-month service with no long-term contract. Keep your plan active, and we continue the ongoing work outlined in your package. If you cancel, future SEO work and billing stop. Canceling SEO does not cancel your website.'
+    answer: 'SEO plans have a six-month minimum term. After that you can cancel any time with 30 days’ written notice, and future SEO work and billing stop. If you cancel before six months, a $297 early cancellation fee applies. Canceling SEO does not cancel your website.'
   },
   {
     question: 'What happens to previous SEO work if I cancel?',
@@ -58,7 +58,7 @@ const faqSchema = {
 
 <BaseLayout 
   title="Shelby Web Company | Web Design & SEO in Shelby, NC"
-  description="Custom websites from $497 and ongoing local SEO at $297/month, month-to-month. Web design and SEO for Shelby, NC businesses. Call (704) 473-8188."
+  description="Custom websites from $497 and local SEO at $297/month. Six-month minimum term, then cancel anytime. Web design and SEO in Shelby, NC. Call (704) 473-8188."
   bgVariant="charcoal"
 >
 
@@ -118,6 +118,12 @@ const faqSchema = {
           <p class="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-xl leading-relaxed">
             Launching your website is just the beginning. Pair your custom website with ongoing local SEO for $297/month to keep improving your site and building your visibility over time.
           </p>
+          <div class="mb-6">
+            <a href="/pricing/" class="inline-flex items-center gap-2 border border-white/25 rounded-xl px-5 py-3 hover:bg-white/10 hover:border-white/50 transition-all duration-300 group">
+              <span class="text-white/90 font-semibold text-base sm:text-lg">See pricing details</span>
+              <span class="text-brand-accent font-semibold text-base sm:text-lg group-hover:text-brand-accent-light transition-colors">&rarr;</span>
+            </a>
+          </div>
           <div class="flex flex-wrap gap-2 mb-6">
             <a href="/services/web-design/" class="inline-flex items-center min-h-[44px] text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Web Design</a>
             <a href="/services/seo/" class="inline-flex items-center min-h-[44px] text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">SEO</a>
@@ -168,7 +174,7 @@ const faqSchema = {
              </a>
            </div>
            <p class="italic text-white/80 text-sm sm:text-base leading-relaxed max-w-xl mb-6 sm:mb-8">
-             $497 to build and deploy + $297/month for continued buildout and SEO. Standalone build: $149/month Website Care Plan. No long-term SEO contract.
+             $497 to build and deploy + $297/month for continued buildout and SEO. Standalone build: $149/month Website Care Plan. Six-month minimum term, then cancel any time.
            </p>
           <p class="text-white/70 text-sm flex items-center gap-1.5 mb-6 sm:mb-8">
             <span class="text-brand-accent leading-none">★★★★★</span>
@@ -194,12 +200,6 @@ const faqSchema = {
             />
           </div>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-6 sm:mb-8">
-            <a href="/pricing/" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue/20 to-brand-cyan/20 border border-brand-blue/30 rounded-xl px-5 py-3 hover:from-brand-blue/30 hover:to-brand-cyan/30 transition-all duration-300 group">
-              <span class="text-white font-semibold text-base sm:text-lg italic">Professional websites from $497 to launch, SEO from $297/mo.</span>
-              <span class="text-brand-accent font-semibold text-base sm:text-lg group-hover:text-brand-accent-light transition-colors italic">See transparent pricing →</span>
-            </a>
-          </div>
 
         </div>
 
@@ -388,7 +388,7 @@ const faqSchema = {
       <div class="bg-gradient-to-r from-brand-blue/10 to-brand-cyan/10 border border-brand-blue/20 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div>
           <p class="text-white font-semibold text-lg">Simple Payment Terms</p>
-          <p class="text-white/70 text-base">$497 for your website build, then one simple month-to-month SEO plan — cancel at any time.</p>
+          <p class="text-white/70 text-base">$497 for your website build, then one simple monthly SEO plan — six-month minimum, then cancel at any time with 30 days’ notice.</p>
         </div>
         <a href="/pricing/" class="text-brand-accent hover:text-brand-accent-light font-semibold text-base whitespace-nowrap transition-colors">See transparent pricing →</a>
       </div>
@@ -437,7 +437,7 @@ const faqSchema = {
               <p class="font-heading text-3xl font-bold text-white">$497 one-time website build</p>
             </div>
             <div class="rounded-2xl border border-brand-accent/30 bg-brand-accent/[0.07] px-6 py-5">
-              <p class="text-white/60 text-sm mb-1">Ongoing local SEO &mdash; month to month</p>
+              <p class="text-white/60 text-sm mb-1">Ongoing local SEO &mdash; six-month minimum</p>
               <p class="font-heading text-3xl font-bold text-brand-accent">+ $297/month ongoing local SEO</p>
             </div>
           </div>
@@ -447,7 +447,7 @@ const faqSchema = {
               Get Started With Website + SEO
             </a>
             <p class="text-white/75 text-sm sm:text-base max-w-xl leading-relaxed">
-              Month-to-month service. Six to twelve months recommended to evaluate SEO progress&mdash;not required.
+              Six-month minimum term, then cancel any time with 30 days’ notice. Six to twelve months recommended to evaluate SEO progress.
             </p>
           </div>
         </div>
@@ -518,7 +518,7 @@ const faqSchema = {
             Throughout, we keep working through your plan&mdash;reviewing performance, making updates, refining as we learn. Results and timing vary with your starting point, competition, and market.
           </p>
           <p>
-            That&rsquo;s a recommended runway, not a contract. SEO stays month to month, and you can cancel without a long-term obligation.
+            That&rsquo;s a recommendation layered on top of a six-month minimum term. After six months you can cancel any time with 30 days&rsquo; written notice.
           </p>
         </div>
       </div>
