@@ -29,7 +29,7 @@ In the Shelby area, a professional small-business website often lands between ab
 
 On our [pricing page](/pricing/):
 
-- **Core:** $497 launch + $297/month (12-month initial term, cancel at any time)
+- **Core:** $497 launch + $297/month (six-month minimum term, then cancel at any time)
 - **Plus:** $798–$998 launch + $597/month
 - **Ultra:** $998–$1,498 launch + $797/month
 
