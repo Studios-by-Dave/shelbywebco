@@ -21,7 +21,6 @@ export const SERVICE_AREAS = [
   { '@type': 'City', name: 'Forest City, NC' },
   { '@type': 'City', name: 'Boiling Springs, NC' },
   { '@type': 'City', name: 'Polkville, NC' },
-  { '@type': 'City', name: 'Asheville, NC' },
 ];
 
 export function absoluteUrl(path: string): string {

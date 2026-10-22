@@ -99,29 +99,34 @@ const blogPostingSchema = {
           <table class="w-full text-left min-w-[600px]">
             <thead>
               <tr class="border-b border-white/10">
-                <th class="text-brand-cyan font-bold pb-4">Package</th>
-                <th class="text-brand-cyan font-bold pb-4">Price</th>
+                <th class="text-brand-cyan font-bold pb-4">Growth Plan</th>
+                <th class="text-brand-cyan font-bold pb-4">Launch Fee</th>
+                <th class="text-brand-cyan font-bold pb-4">Monthly</th>
                 <th class="text-brand-cyan font-bold pb-4">Best for</th>
               </tr>
             </thead>
             <tbody class="text-white">
               <tr class="border-b border-white/5">
-                <td class="py-4 font-medium text-white">Starter Website</td>
-                <td class="py-4">$598</td>
-                <td class="py-4 text-sm">A simple 1–5 page brochure site with basic SEO. Budget-friendly, but not built to actively generate leads — think of it as a digital business card, not a growth engine.</td>
+                <td class="py-4 font-medium text-white">Core</td>
+                <td class="py-4">$497</td>
+                <td class="py-4">$297/mo</td>
+                <td class="py-4 text-sm">A clean 4–5 page site with hosting, backups, security, and foundational SEO included. A solid professional presence without a large upfront bill.</td>
               </tr>
               <tr class="border-b border-white/5">
-                <td class="py-4 font-medium text-white">Professional Business Suite (most popular)</td>
-                <td class="py-4">$998 – $1,998 (avg. ~$1,298)</td>
-                <td class="py-4 text-sm">A 5–10 page custom site with local SEO, stronger lead-capture forms, and analytics. This is what most Shelby-area businesses trying to actually grow should budget for.</td>
+                <td class="py-4 font-medium text-white">Plus (most popular)</td>
+                <td class="py-4">$798 – $998</td>
+                <td class="py-4">$597/mo</td>
+                <td class="py-4 text-sm">Custom UI/UX, stronger lead-capture forms, analytics, and active local SEO. This is what most Shelby-area businesses trying to actually grow should budget for.</td>
               </tr>
               <tr class="border-b border-white/5">
-                <td class="py-4 font-medium text-white">Scale Business</td>
-                <td class="py-4">$2,000 – $3,998</td>
-                <td class="py-4 text-sm">10–20 pages, full blog/content strategy, CRM integrations, and e-commerce or booking — built for multi-service or multi-location businesses.</td>
+                <td class="py-4 font-medium text-white">Ultra</td>
+                <td class="py-4">$998 – $1,498</td>
+                <td class="py-4">$797/mo</td>
+                <td class="py-4 text-sm">Larger builds with e-commerce, booking, CRM integrations, and a full content strategy — built for multi-service or multi-location businesses.</td>
               </tr>
               <tr>
                 <td class="py-4 font-medium text-white">Enterprise / Custom</td>
+                <td class="py-4">Custom quote</td>
                 <td class="py-4">Custom quote</td>
                 <td class="py-4 text-sm">Fully custom web applications, membership portals, and advanced integrations for complex operations.</td>
               </tr>
@@ -130,7 +135,7 @@ const blogPostingSchema = {
         </div>
 
         <div class="bg-brand-blue/5 border-l-4 border-brand-blue p-8 my-12 rounded-r-2xl">
-          <p class="text-white font-medium italic mb-0">A quick honest note on the Starter tier: at $598, it's a great low-cost way to get a professional presence online fast — but if generating leads and ranking locally is the goal, the Professional Business package is where the local SEO, stronger forms, and analytics actually kick in. That's why most businesses serious about growth land in the $998–$1,998 range, averaging around $1,298.</p>
+          <p class="text-white font-medium italic mb-0">A quick honest note on Core: at a $497 launch fee it is a great low-cost way to get a professional presence online fast — but if generating leads and ranking locally is the goal, the Plus plan is where the custom UI, stronger forms, and active local SEO actually kick in. That's why most businesses serious about growth land in the Plus range. Every plan carries a six-month minimum term, then continues month-to-month with 30 days' written notice to cancel.</p>
         </div>
 
         <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
@@ -138,28 +143,23 @@ const blogPostingSchema = {
         </h2>
         
         <p class="text-white mb-8">
-          The build cost above covers getting your site live — but a website isn't a "set it and forget it" purchase. Hosting, backups, and code updates keep it secure, fast, and functioning as browsers and plugins change over time. We offer two Website Care Plan tiers to handle this for you:
+          The build cost above covers getting your site live — but a website isn't a "set it and forget it" purchase. Hosting, backups, and code updates keep it secure, fast, and functioning as browsers and plugins change over time. We offer a standalone Website Care Plan to handle this for you, and every Growth Plan above includes this care as standard:
         </p>
 
         <div class="bg-brand-dark border border-white/5 p-4 sm:p-8 rounded-3xl mb-16 overflow-x-auto">
           <table class="w-full text-left min-w-[600px]">
             <thead>
               <tr class="border-b border-white/10">
-                <th class="text-brand-cyan font-bold pb-4">Care Plan</th>
+                <th class="text-brand-cyan font-bold pb-4">Plan</th>
                 <th class="text-brand-cyan font-bold pb-4">Price</th>
                 <th class="text-brand-cyan font-bold pb-4">What's covered</th>
               </tr>
             </thead>
             <tbody class="text-white">
-              <tr class="border-b border-white/5">
-                <td class="py-4 font-medium text-white">Basic Website Care</td>
-                <td class="py-4">$75/mo</td>
-                <td class="py-4 text-sm">Web hosting, backups, and core code updates to keep your site secure and running smoothly</td>
-              </tr>
               <tr>
-                <td class="py-4 font-medium text-white">Premium Website Care</td>
+                <td class="py-4 font-medium text-white">Website Care Plan (standalone)</td>
                 <td class="py-4">$149/mo</td>
-                <td class="py-4 text-sm">Everything in Basic, plus more frequent revisions and a higher level of ongoing support</td>
+                <td class="py-4 text-sm">Web hosting, backups, core code updates, and regular small revisions to keep your site secure and running smoothly. Hosting and maintenance only — no ongoing local SEO, which is what the $297/month Core plan adds on top.</td>
               </tr>
             </tbody>
           </table>
@@ -223,6 +223,10 @@ const blogPostingSchema = {
           This isn't just about easing the financial entry — it keeps both sides invested in the project from start to finish, which tends to make for a smoother, more focused build than an all-upfront or all-on-delivery arrangement.
         </p>
 
+        <div class="bg-brand-dark/50 border-l-4 border-brand-cyan p-8 my-12 rounded-r-2xl">
+          <p class="text-white mb-4"><strong class="text-white">The commitment, stated plainly:</strong> every Growth Plan carries a six-month minimum term. After that it continues month-to-month, and you can cancel at any time with 30 days' written notice. If you cancel before the six months are up, there's a $297 early cancellation fee on the SEO work. Your domain and your content are always yours — website files and design are handed off to you on completion of your initial term, or available for buyout if you cancel early.</p>
+        </div>
+
         <h2 class="text-3xl font-bold text-white mt-16 mb-8 flex items-center gap-4">
           <span class="text-brand-accent">The Real Cost of Not Investing</span>
         </h2>
@@ -240,7 +244,7 @@ const blogPostingSchema = {
         </p>
 
         <p class="text-white/90 text-sm mb-12">
-          Shelby Web Co. designs and builds websites for small businesses throughout <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:underline">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:underline">Gastonia</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan hover:underline">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan hover:underline">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan hover:underline">Polkville</a> — with local SEO built in from day one, not tacked on after the fact.
+          Shelby Web Co. designs and builds websites for small businesses throughout <a href="/web-design-shelby-nc/" class="text-brand-cyan hover:underline">Shelby</a>, <a href="/web-design-gastonia-nc/" class="text-brand-cyan hover:underline">Gastonia</a>, <a href="/web-design-kings-mountain-nc/" class="text-brand-cyan hover:underline">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan hover:underline">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan hover:underline">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan hover:underline">Polkville</a> — with local SEO built in from day one, not tacked on after the fact.
         </p>
 
         <!-- CTA Section -->

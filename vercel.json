@@ -65,16 +65,6 @@
       "permanent": true
     },
     {
-      "source": "/promotions/free-website-asheville-nc",
-      "destination": "/promotions/",
-      "permanent": true
-    },
-    {
-      "source": "/promotions/free-website-asheville-nc/",
-      "destination": "/promotions/",
-      "permanent": true
-    },
-    {
       "source": "/blog/why-choose-studios-by-dave",
       "destination": "/blog/why-choose-shelby-web-company/",
       "permanent": true
@@ -86,12 +76,12 @@
     },
     {
       "source": "/web-design-asheville-nc",
-      "destination": "/web-design-western-nc/",
+      "destination": "/web-design-cleveland-county-nc/",
       "permanent": true
     },
     {
       "source": "/web-design-asheville-nc/",
-      "destination": "/web-design-western-nc/",
+      "destination": "/web-design-cleveland-county-nc/",
       "permanent": true
     },
     {
