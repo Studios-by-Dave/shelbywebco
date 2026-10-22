@@ -7,18 +7,14 @@ import { breadcrumbSchema, SITE_URL } from '../../../lib/schema';
 import nearMeImg from '../../../../assets/Near-Me-Local-Search.png';
 import websiteCostImg from '../../../../assets/website_cost_1.webp';
 import opencodeImg from '../../../../assets/opencode_2.png';
-import googleStarsImg from '../../../../assets/badge icons/google 5 stars.png';
 import sisConsoleImg from '../../../../assets/seo service page/sis_console_1.png';
-import shelbyImg from '../../../../assets/shelby nc_6.jpg';
 import auditImg from '../../../../assets/Sweb_audit_1.jpg';
 import redesignImg from '../../../../assets/webredesign_1.webp';
 
 // Per-post thumbnails so hub cards don't all share one fallback image.
 const postThumbs: Record<string, typeof nearMeImg> = {
-  'get-more-google-reviews': googleStarsImg,
   'google-business-profile-posts-2026': sisConsoleImg,
   'google-business-profile-shelby-contractors': nearMeImg,
-  'local-seo-shelby-complete-guide': shelbyImg,
   'seo-in-gastonia-gaston-county-checklist': auditImg,
   'service-pages-that-rank-cleveland-county': redesignImg,
 };
@@ -58,6 +54,33 @@ const posts = (await getCollection('blog', ({ data }) => data.cluster === cluste
   (a, b) => b.data.datePublished.localeCompare(a.data.datePublished)
 );
 
+// Legacy hand-written posts that are the canonical URL for their cluster.
+// They live as .astro pages rather than collection entries, so they have
+// to be listed explicitly or the hub orphans the strongest post it has.
+const legacyPillars: Record<string, { href: string; title: string; description: string; image: any; date: string }[]> = {
+  'local-seo': [
+    {
+      href: '/blog/local-seo-essentials-2026/',
+      title: 'Local SEO for Shelby Businesses: What to Do First',
+      description: 'The local SEO essentials for Shelby, NC businesses — Google Business Profile, reviews, citations, and on-page basics that actually move the needle.',
+      image: nearMeImg,
+      date: '2026-07-05',
+    },
+  ],
+  'website-cost': [
+    {
+      href: '/blog/website-cost-shelby-nc-2026/',
+      title: 'How Much Does a Website Cost in Shelby, NC? (2026 Pricing Guide)',
+      description: 'What actually drives website costs, realistic price ranges, and the questions worth asking before you hire anyone.',
+      image: websiteCostImg,
+      date: '2026-08-15',
+    },
+  ],
+  'ai-search': [],
+};
+
+const legacy = legacyPillars[cluster] || [];
+
 const pageUrl = `${SITE_URL}blog/topics/${cluster}/`;
 
 const formatDate = (iso: string) =>
@@ -74,6 +97,27 @@ const formatDate = (iso: string) =>
       <p class="text-white/75 text-lg mb-10">{meta.description}</p>
 
       <div class="flex flex-col gap-6">
+        {legacy.map((post) => (
+          <a href={post.href} class="group flex flex-col sm:flex-row bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-cyan/40 transition-all">
+            <div class="sm:w-48 sm:shrink-0 aspect-[16/8] sm:aspect-square bg-gray-800 relative overflow-hidden">
+              <Image
+                src={post.image}
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-brand-dark/60 to-transparent"></div>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col justify-center min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-2 text-xs uppercase tracking-widest text-white/50">
+                <time datetime={post.date}>{formatDate(post.date)}</time>
+                <span aria-hidden="true">·</span>
+                <span>Featured guide</span>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-cyan transition-colors mb-2">{post.title}</h2>
+              <p class="text-white/70 text-sm leading-relaxed line-clamp-2">{post.description}</p>
+            </div>
+          </a>
+        ))}
         {posts.map((post) => (
           <a href={`/blog/${post.id}/`} class="group flex flex-col sm:flex-row bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-cyan/40 transition-all">
             <div class="sm:w-48 sm:shrink-0 aspect-[16/8] sm:aspect-square bg-gray-800 relative overflow-hidden">
@@ -97,7 +141,7 @@ const formatDate = (iso: string) =>
         ))}
       </div>
 
-      {posts.length === 0 && (
+      {posts.length === 0 && legacy.length === 0 && (
         <p class="text-white/60">No posts in this topic yet.</p>
       )}
 

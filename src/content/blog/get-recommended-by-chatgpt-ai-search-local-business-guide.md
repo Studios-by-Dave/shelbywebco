@@ -8,7 +8,7 @@ draft: false
 pillar: { label: "AI search guide", href: "/blog/ai-search-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:
-  - { label: "AI search & GEO for local businesses", href: "/blog/ai-search-geo-shelby-businesses/" }
+  - { label: "AI search & GEO for local businesses", href: "/blog/ai-search-2026/" }
   - { label: "Structured data basics", href: "/blog/structured-data-basics-local-business/" }
   - { label: "Web design in Shelby", href: "/web-design-shelby-nc/" }
 faqs:

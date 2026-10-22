@@ -5,10 +5,10 @@ cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
 draft: false
-pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
+pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-essentials-2026/" }
 serviceLink: { label: "Web design services", href: "/services/web-design/" }
 related:
-  - { label: "Website cost ranges", href: "/blog/website-cost-shelby-area-real-ranges/" }
+  - { label: "Website cost ranges", href: "/blog/website-cost-shelby-nc-2026/" }
   - { label: "Local SEO essentials", href: "/blog/local-seo-essentials-2026/" }
 faqs:
   - question: "How long should a service page be?"
@@ -44,5 +44,5 @@ This is the step I get asked to skip most often. It is also the cheapest one.
 
 ## Related
 
-- [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)
-- [Cost ranges](/blog/website-cost-shelby-area-real-ranges/)
+- [Local SEO pillar](/blog/local-seo-essentials-2026/)
+- [Cost ranges](/blog/website-cost-shelby-nc-2026/)

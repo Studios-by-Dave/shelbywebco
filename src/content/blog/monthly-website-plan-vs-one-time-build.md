@@ -9,7 +9,7 @@ pillar: { label: "Website cost guide (Shelby 2026)", href: "/blog/website-cost-s
 serviceLink: { label: "Web design services", href: "/services/web-design/" }
 related:
   - { label: "Full pricing page", href: "/pricing/" }
-  - { label: "Shelby area real ranges", href: "/blog/website-cost-shelby-area-real-ranges/" }
+  - { label: "Shelby area real ranges", href: "/blog/website-cost-shelby-nc-2026/" }
 faqs:
   - question: "What is the difference between a monthly plan and a one-time build?"
     answer: "A one-time build pays for the initial site; you then own hosting, updates, backups, and security separately. A monthly plan bundles launch plus ongoing care."

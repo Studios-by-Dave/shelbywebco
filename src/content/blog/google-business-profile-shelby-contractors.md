@@ -5,7 +5,7 @@ cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
 draft: false
-pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
+pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-essentials-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:
   - { label: "Web design for roofers", href: "/web-design-for-roofers-shelby-nc/" }
@@ -46,6 +46,6 @@ This is the one habit I push hardest on. Contractors tell me their website is fi
 
 ## Related reading
 
-- [Local SEO for Shelby pillar](/blog/local-seo-shelby-complete-guide/)
+- [Local SEO for Shelby pillar](/blog/local-seo-essentials-2026/)
 - [Roofers web design](/web-design-for-roofers-shelby-nc/)
 - [Home remodeler lead guide](/blog/how-to-get-more-leads-home-remodeling-business-2026/)

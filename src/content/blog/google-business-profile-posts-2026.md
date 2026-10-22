@@ -5,11 +5,11 @@ cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
 draft: false
-pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
+pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-essentials-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:
   - { label: "GBP setup for contractors", href: "/blog/google-business-profile-shelby-contractors/" }
-  - { label: "Get more Google reviews", href: "/blog/get-more-google-reviews/" }
+  - { label: "Getting more Google reviews", href: "/blog/local-seo-essentials-2026/" }
 faqs:
   - question: "Do Google Business Profile posts help rankings?"
     answer: "Posts are not a major ranking factor, but they keep your profile active and give searchers a reason to click. Treat them as conversion content, not a ranking hack."
@@ -47,4 +47,4 @@ Profile → posts/photos → reviews → service pages on your site → schema. 
 ## Related
 
 - [GBP setup](/blog/google-business-profile-shelby-contractors/)
-- [Reviews guide](/blog/get-more-google-reviews/)
+- [How to get more Google reviews the right way](/blog/local-seo-essentials-2026/)

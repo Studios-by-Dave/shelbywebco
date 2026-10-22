@@ -150,6 +150,66 @@
       "permanent": true
     },
     {
+      "source": "/blog/website-cost-shelby-area-real-ranges",
+      "destination": "/blog/website-cost-shelby-nc-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/website-cost-shelby-area-real-ranges/",
+      "destination": "/blog/website-cost-shelby-nc-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-search-geo-shelby-businesses",
+      "destination": "/blog/ai-search-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-search-geo-shelby-businesses/",
+      "destination": "/blog/ai-search-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/web-designers-near-me-vs-big-agencies",
+      "destination": "/blog/best-web-designers-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/web-designers-near-me-vs-big-agencies/",
+      "destination": "/blog/best-web-designers-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/professional-web-design-shelby-nc-leads",
+      "destination": "/blog/best-web-designers-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/professional-web-design-shelby-nc-leads/",
+      "destination": "/blog/best-web-designers-near-me/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/local-seo-shelby-complete-guide",
+      "destination": "/blog/local-seo-essentials-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/local-seo-shelby-complete-guide/",
+      "destination": "/blog/local-seo-essentials-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/get-more-google-reviews",
+      "destination": "/blog/local-seo-essentials-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/get-more-google-reviews/",
+      "destination": "/blog/local-seo-essentials-2026/",
+      "permanent": true
+    },
+    {
       "source": "/:path((?!api(?:/|$)|_astro(?:/|$))(?:[^/]+/)*[^/.]+)",
       "destination": "/:path/",
       "permanent": true

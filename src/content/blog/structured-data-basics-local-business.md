@@ -8,8 +8,8 @@ draft: false
 pillar: { label: "AI search guide (2026)", href: "/blog/ai-search-2026/" }
 serviceLink: { label: "SEO services", href: "/services/seo/" }
 related:
-  - { label: "AI search & GEO", href: "/blog/ai-search-geo-shelby-businesses/" }
-  - { label: "Local SEO pillar", href: "/blog/local-seo-shelby-complete-guide/" }
+  - { label: "AI search & GEO", href: "/blog/ai-search-2026/" }
+  - { label: "Local SEO pillar", href: "/blog/local-seo-essentials-2026/" }
 faqs:
   - question: "Does schema guarantee rich results?"
     answer: "No. It makes you eligible; Google decides what to show. Still worth doing — it also helps AI systems parse your pages."
@@ -45,5 +45,5 @@ I add this markup by hand on every site I build. The schema is not the hard part
 
 ## Related
 
-- [AI search & GEO guide](/blog/ai-search-geo-shelby-businesses/)
-- [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)
+- [AI search & GEO guide](/blog/ai-search-2026/)
+- [Local SEO pillar](/blog/local-seo-essentials-2026/)

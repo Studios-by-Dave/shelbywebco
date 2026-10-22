@@ -5,7 +5,7 @@ cluster: spotlight
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
 draft: true
-pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-shelby-complete-guide/" }
+pillar: { label: "Local SEO for Shelby (pillar)", href: "/blog/local-seo-essentials-2026/" }
 serviceLink: { label: "Case studies", href: "/services/case-studies/solution-d/" }
 related:
   - { label: "Portfolio", href: "/services/portfolio/" }
@@ -51,4 +51,4 @@ faqs:
 ## Related
 
 - [Case studies](/services/case-studies/solution-d/)
-- [Local SEO pillar](/blog/local-seo-shelby-complete-guide/)
+- [Local SEO pillar](/blog/local-seo-essentials-2026/)

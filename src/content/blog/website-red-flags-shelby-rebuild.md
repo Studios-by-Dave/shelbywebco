@@ -8,7 +8,7 @@ draft: false
 pillar: { label: "Website cost guide (Shelby 2026)", href: "/blog/website-cost-shelby-nc-2026/" }
 serviceLink: { label: "Web design services", href: "/services/web-design/" }
 related:
-  - { label: "Monthly vs one-time", href: "/blog/monthly-website-plan-vs-one-time-build/" }
+  - { label: "Monthly vs one-time", href: "/blog/website-cost-shelby-nc-2026/" }
   - { label: "Free logo design promo", href: "/promotions/free-logo-design/" }
 faqs:
   - question: "How do I know if my website is losing me customers?"
@@ -43,7 +43,7 @@ I turn work down when I get here. A site that is merely unpretty is not broken, 
 
 ## Cost perspective
 
-See [cost ranges](/blog/website-cost-shelby-area-real-ranges/) and [monthly vs one-time](/blog/monthly-website-plan-vs-one-time-build/) before deciding. Patching an obsolete stack forever usually costs more than a clean rebuild.
+See [cost ranges and how monthly pricing works](/blog/website-cost-shelby-nc-2026/) before deciding. Patching an obsolete stack forever usually costs more than a clean rebuild.
 
 ## Next step
 
