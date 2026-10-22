@@ -14,22 +14,32 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. W
 
 ## Core Services
 - Custom web design & development (Astro, modern performance-first stack)
-- Local SEO and technical SEO
-- Logo design & branding
+- Local SEO, technical SEO, and AI search visibility (GEO)
+- Google Business Profile optimization & review generation
+- Logo design, branding & audio branding
 - Custom software / SaaS / business automation ("Business Machines")
-- Google Business Profile optimization
+- STRAT Console — our proprietary SEO analytics and reporting platform
 - Ongoing website care plans
 
 
 ## Pricing (transparent)
-- Core: $497 launch + $297/month (12-month initial term) — 4–5 page website, hosting, SSL, backups, security, foundational SEO, monthly edits
-- Plus: $798–$998 launch + $597/month (6–12 month initial term) — everything in Core plus active local SEO, content, Google Business Profile, review generation, AI-visibility tracking & schema markup
-- Ultra: $998–$1,498 launch + $797/month (12-month initial term) — everything in Plus plus conversion optimization, lead tracking, follow-up workflows, priority support, dedicated growth manager
-- Every website build is bundled with ongoing SEO — standalone builds available on request but not recommended
-- After initial term, plans continue month-to-month with 30 days' written notice to cancel
+Three growth plans. Every plan has a **six-month initial term, then continues month-to-month** — cancel any time with 30 days' written notice. Cancelling before six months carries a $297 early cancellation fee.
+
+- **Core — $497 launch + $297/month** (6-month initial term · 6-month total $2,279)
+- **Plus — $798–$998 launch + $597/month** (6-month initial term · 6-month total $4,380) — most popular
+- **Ultra — $998–$1,498 launch + $797/month** (6-month initial term · 6-month total $5,780)
+- **Website Care Plan (standalone, no SEO subscription) — $497 build, then $149/month** — web hosting and SSL, automated backups, security monitoring and updates, small monthly edits and content changes, core code and plugin updates
 - Free logo design with any full web package
 - Free SEO audit for selected local businesses
-- $100 unlimited referral bonus
+- $100 referral bonus, repeatable
+
+
+## What Each SEO Plan Actually Does
+These are the same three plans, described by the SEO work performed.
+
+- **Core ($297/month)** — technical SEO health check (crawlability, indexation, sitemap, robots.txt); on-page optimization on priority pages (titles, metas, headers, internal links); Core Web Vitals and mobile speed fixes; Google Business Profile setup, categories and attributes; structured data / schema markup on core pages; local citation and NAP consistency clean-up; keyword rank tracking in STRAT Console; monthly performance snapshot and quarterly growth review. Best for local businesses that need a correct, solid foundation but are not ready for aggressive growth work yet.
+- **Plus ($597/month)** — everything in Core, plus keyword and competitor research every month; new service/location content each month; review-generation system and review replies; GBP posts, photos and Q&A management; ongoing local citation building; link acquisition and digital PR outreach; conversion-rate fixes on top landing pages; AI-visibility tracking (llms.txt and AI answer inclusion); milestone audits every 90 days. Best for businesses ready to invest in real local visibility and consistent inbound leads.
+- **Ultra ($797/month)** — everything in Plus, plus a full content program (2–4 pages/month plus refreshing decaying content); off-page link building and authority campaigns; landing-page CRO testing; lead tracking and attribution (calls, forms, bookings); follow-up workflows and automation; dedicated growth manager and priority support; advanced analytics, custom dashboards and multi-location reporting; milestone audits every 90 days. Best for businesses that want SEO, lead generation, and conversion handled as one system under one roof.
 
 
 ## Who We Serve
@@ -42,18 +52,25 @@ Local service businesses including roofing, landscaping, solar installers, home 
 - Web Design: https://www.shelbywebco.com/services/web-design/
 - SEO Services: https://www.shelbywebco.com/services/seo/
 - Logo Design & Branding: https://www.shelbywebco.com/services/branding/
+- Audio Branding: https://www.shelbywebco.com/services/audio-branding/
 - Custom Software & SaaS: https://www.shelbywebco.com/services/custom-software-saas/
 - Case Studies: https://www.shelbywebco.com/services/case-studies/
 - Portfolio: https://www.shelbywebco.com/services/portfolio/
 - Pricing: https://www.shelbywebco.com/pricing/
 - About / Founder: https://www.shelbywebco.com/about/
+- How We Work: https://www.shelbywebco.com/about/how-we-work/
+- Awards: https://www.shelbywebco.com/about/awards/
 - Causes We Support: https://www.shelbywebco.com/about/causes-we-support/
 - Blog: https://www.shelbywebco.com/blog/
+- Local SEO topic hub: https://www.shelbywebco.com/blog/topics/local-seo/
+- AI Search topic hub: https://www.shelbywebco.com/blog/topics/ai-search/
+- Website Cost topic hub: https://www.shelbywebco.com/blog/topics/website-cost/
 - Glossary: https://www.shelbywebco.com/glossary/
 - Contact: https://www.shelbywebco.com/contact/
 - Free SEO Audit: https://www.shelbywebco.com/promotions/free-seo-audit/
 - Free Logo Design: https://www.shelbywebco.com/promotions/free-logo-design/
 - The Golden Ticket: https://www.shelbywebco.com/promotions/the-golden-ticket/
+- Golden Ticket Rules: https://www.shelbywebco.com/promotions/the-golden-ticket/rules/
 - Referral Bonus: https://www.shelbywebco.com/promotions/referral-bonus/
 
 
@@ -64,7 +81,7 @@ Local service businesses including roofing, landscaping, solar installers, home 
 - Web Design Kings Mountain NC: https://www.shelbywebco.com/web-design-kings-mountain-nc/
 - Web Design Forest City NC: https://www.shelbywebco.com/web-design-forest-city-nc/
 - Web Design Boiling Springs NC: https://www.shelbywebco.com/web-design-boiling-springs-nc/
- - Web Design Polkville NC: https://www.shelbywebco.com/web-design-polkville-nc/
+- Web Design Polkville NC: https://www.shelbywebco.com/web-design-polkville-nc/
 
 
 
@@ -78,8 +95,17 @@ Local service businesses including roofing, landscaping, solar installers, home 
 
 
 ## Top Blog Guides
-- Website Cost Guide (Shelby NC 2026): https://www.shelbywebco.com/blog/website-cost-shelby-nc-2026/
 - Local SEO Essentials 2026: https://www.shelbywebco.com/blog/local-seo-essentials-2026/
+- Google Business Profile Setup for Shelby Contractors: https://www.shelbywebco.com/blog/google-business-profile-shelby-contractors/
+- Google Business Profile Posts: Do They Still Matter in 2026?: https://www.shelbywebco.com/blog/google-business-profile-posts-2026/
+- Service Pages That Rank (and Convert) in Cleveland County: https://www.shelbywebco.com/blog/service-pages-that-rank-cleveland-county/
+- Structured Data Basics for Local Businesses: https://www.shelbywebco.com/blog/structured-data-basics-local-business/
+- AI Search in 2026: https://www.shelbywebco.com/blog/ai-search-2026/
+- How to Get Recommended by ChatGPT (AI Search Guide): https://www.shelbywebco.com/blog/get-recommended-by-chatgpt-ai-search-local-business-guide/
+- Website Cost Guide (Shelby NC 2026): https://www.shelbywebco.com/blog/website-cost-shelby-nc-2026/
+- Website Red Flags for Shelby Businesses: https://www.shelbywebco.com/blog/website-red-flags-shelby-rebuild/
+- Domain Names for Shelby Businesses: https://www.shelbywebco.com/blog/domain-names-shelby-businesses/
+- How to Get More Leads (Home Remodeling): https://www.shelbywebco.com/blog/how-to-get-more-leads-home-remodeling-business-2026/
 - How to Choose a Web Designer in Cleveland County: https://www.shelbywebco.com/blog/best-web-designers-near-me/
 - Does Your Business Need a Website in 2026: https://www.shelbywebco.com/blog/does-your-business-need-a-website-2026/
 
@@ -90,6 +116,8 @@ Local service businesses including roofing, landscaping, solar installers, home 
 - Transparent pricing, no hidden fees
 - Focus on turning websites into lead-generating "business machines"
 - Strong emphasis on local SEO and technical foundations from day one
+- STRAT Console — our own SEO analytics, rank tracking, and action-queue platform
+- We work on AI search visibility (GEO) so AI assistants can cite you, not just Google
 
 
 ## Contact

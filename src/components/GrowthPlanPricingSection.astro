@@ -11,6 +11,7 @@ interface Props {
   ctaHref?: string;
   ctaLabel?: string;
   standalone?: boolean;
+  content?: 'website' | 'seo';
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   ctaHref = '/contact/',
   ctaLabel = 'Get Started',
   standalone = false,
+  content = 'website',
 } = Astro.props;
 
 const tiers = [
@@ -93,9 +95,78 @@ const tiers = [
   },
 ];
 
+// SEO-only copy set: same plan names/prices, but the bullets describe the
+// SEO work itself instead of the hosted-website bundle.
+const seoTiers = [
+  {
+    key: 'website',
+    name: 'Core',
+    launch: '$497',
+    monthly: '$297',
+    term: '6 months',
+    badge: null,
+    description: 'The fundamentals that get you found and indexed — technical fixes, on-page cleanup, and a Google Business Profile that is actually complete.',
+    features: [
+      'Technical SEO health check — crawlability, indexation, sitemap, robots.txt',
+      'On-page optimization on priority pages — titles, metas, headers, internal links',
+      'Core Web Vitals & mobile speed fixes',
+      'Google Business Profile setup, categories & attributes',
+      'Structured data / schema markup on core pages',
+      'Local citation & NAP consistency clean-up',
+      'Keyword rank tracking in STRAT Console',
+      'Monthly performance snapshot + quarterly growth review',
+    ],
+    bestFor: 'Local businesses that need a correct, solid foundation but are not ready for aggressive growth work yet',
+  },
+  {
+    key: 'seo',
+    name: 'Plus',
+    launch: '$798 – $998',
+    monthly: '$597',
+    term: '6 months',
+    badge: 'Most Popular',
+    description: 'Active local SEO, content, and review systems — the tier where rankings start moving and the map pack starts pulling in calls.',
+    features: [
+      'Everything in Core',
+      'Keyword & competitor research every month',
+      'New service/location content each month',
+      'Review-generation system + review replies',
+      'GBP posts, photos & Q&A management',
+      'Ongoing local citation building',
+      'Link acquisition & digital PR outreach',
+      'Conversion-rate fixes on top landing pages',
+      'AI-visibility tracking — llms.txt & AI answer inclusion',
+      'Milestone audits every 90 days — pause or reduce if no meaningful work remains',
+    ],
+    bestFor: 'Businesses ready to invest in real local visibility and consistent inbound leads',
+  },
+  {
+    key: 'leads',
+    name: 'Ultra',
+    launch: '$998 – $1,498',
+    monthly: '$797',
+    term: '6 months',
+    badge: null,
+    description: 'SEO plus conversion, tracking, and hands-on strategy — one system, one point of contact, and we report on the numbers.',
+    features: [
+      'Everything in Plus',
+      'Full content program — 2–4 pages/month plus refreshing decaying content',
+      'Off-page link building & authority campaigns',
+      'Landing-page CRO testing',
+      'Lead tracking & attribution — calls, forms, bookings',
+      'Follow-up workflows & automation',
+      'Dedicated growth manager + priority support',
+      'Advanced analytics, custom dashboards & multi-location reporting',
+      'Milestone audits every 90 days — pause or reduce if no meaningful work remains',
+    ],
+    bestFor: 'Businesses that want SEO, lead generation, and conversion handled as one system under one roof',
+  },
+];
+
 // Single-tier "bare" mode: drop the section shell/eyebrow/notes so the card
 // can be embedded inside another page section (e.g. the Golden Ticket page).
-const visibleTiers = only ? tiers.filter((tier) => tier.key === only) : tiers;
+const activeTiers = content === 'seo' ? seoTiers : tiers;
+const visibleTiers = only ? activeTiers.filter((tier) => tier.key === only) : activeTiers;
 const gridClass = only ? 'max-w-md mx-auto grid gap-8 mb-0' : 'grid md:grid-cols-3 gap-8 mb-16';
 const Shell: any = bare ? 'div' : 'section';
 const shellProps = bare ? {} : { id, 'data-animate': '' };
@@ -114,7 +185,9 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
 
         <div class="text-center mb-8">
           <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
-            Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Prefer just the site? The Website Care Plan below covers hosting, backups, edits, and updates with no SEO subscription.
+            {content === 'seo'
+              ? 'Foundational SEO, active local visibility, content, and AI-visibility work — one monthly engagement with published scope and no surprise upsells.'
+              : 'Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Prefer just the site? The Website Care Plan below covers hosting, backups, edits, and updates with no SEO subscription.'}
           </p>
         </div>
       </>
@@ -229,7 +302,9 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
     {!bare && (
       <div class="text-center">
         <p class="text-white/80 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
-          Plans have a six-month minimum term. After that, plans continue month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee. Your domain and content are always yours — website files and design are handed off to you upon completion of your initial term, or available for buyout if you cancel early.
+          {content === 'seo'
+            ? 'Plans have a six-month minimum term. After that, SEO work continues month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee. Everything we build — content, schema, profiles, and citations — stays live on your site whether you stay with us or not.'
+            : 'Plans have a six-month minimum term. After that, plans continue month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee. Your domain and content are always yours — website files and design are handed off to you upon completion of your initial term, or available for buyout if you cancel early.'}
         </p>
       </div>
     )}
