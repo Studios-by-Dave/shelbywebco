@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GrowthPlanPricingSection from '../components/GrowthPlanPricingSection.astro';
+import marbleBg from '../../assets/marble-800x530.webp';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -106,6 +107,15 @@ const faqSchema = {
 
   <!-- Hero Section -->
   <section class="py-6 lg:py-10 px-4 relative overflow-hidden" data-animate>
+    <!-- Marble backdrop — fills the whole hero grid, then dissolves so the
+         moving pricing-tier artwork below blends into the page. -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style={`background-image: url("${encodeURI(marbleBg.src)}"); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 70%); mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 70%);`}
+      ></div>
+    </div>
+
     <!-- Decorative pricing-tier backdrop -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <svg class="w-full h-full" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMax slice" focusable="false">
@@ -200,12 +210,17 @@ const faqSchema = {
       </style>
     </div>
 
+    <!-- Scrim: tints the marble back toward the page background and fades it
+         out toward the bottom, so the texture reads strongest up top and
+         dissolves as the page continues down. -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: linear-gradient(180deg, rgba(8,14,28,0.52) 0%, rgba(8,14,28,0.44) 32%, rgba(8,14,28,0.70) 66%, rgba(8,14,28,0.94) 100%);"></div>
+
     <!-- centre vignette keeps the headline legible over the artwork -->
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse 62% 72% at 50% 46%, rgba(8,14,28,0.90) 0%, rgba(8,14,28,0.62) 42%, rgba(8,14,28,0) 100%);"></div>
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse 58% 66% at 50% 44%, rgba(8,14,28,0.58) 0%, rgba(8,14,28,0.30) 46%, rgba(8,14,28,0) 100%);"></div>
 
     <div class="max-w-7xl mx-auto text-center relative z-10">
       <p class="text-brand-purple text-label uppercase tracking-widest mb-4">✦ Transparent Pricing</p>
-      <div class="block w-full max-w-3xl mx-auto px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 mb-4">
+      <div class="block w-full max-w-3xl mx-auto px-8 py-4 rounded-2xl bg-brand-darkest/45 backdrop-blur-md border border-white/15 mb-4 shadow-[0_18px_45px_rgba(0,0,0,0.28)]">
         <h1 class="font-heading text-page-title md:text-page-title-lg font-bold text-white leading-tight">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-blue-light to-brand-sky">Shelby Web</span>
           <span class="block text-white">Total Pricing</span>

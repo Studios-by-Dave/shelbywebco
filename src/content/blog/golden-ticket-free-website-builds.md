@@ -1,7 +1,7 @@
 ---
-title: "I'm Building 5 Free Websites for Cleveland & Gaston County Businesses"
-seoTitle: "5 Free Websites for Local Business"
-description: "Dave Richardson is giving 5 local businesses a free custom website through the Golden Ticket. The $497 build fee is covered. Applications close Dec 15, 2026."
+title: "I'm Building 3 Free Websites for Cleveland & Gaston County Businesses"
+seoTitle: "3 Free Websites for Local Business"
+description: "Dave Richardson is giving 3 local businesses a free custom website through the Golden Ticket. The $497 build fee is covered. Applications close Dec 15, 2026."
 cluster: official
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
@@ -18,14 +18,14 @@ faqs:
   - question: "I already have a website. Can I still apply?"
     answer: "Yes. A dated, slow or invisible website is exactly what this program is for."
   - question: "How many businesses will win?"
-    answer: "Five. It's a one-time cohort, the Class of 2026."
+    answer: "Three. It's a one-time cohort, the Class of 2026."
   - question: "What if I'm not chosen?"
     answer: "I'll still be glad you applied. Applicants are welcome to book a free SEO audit and see our standard plans on the pricing page."
   - question: "What's the catch?"
     answer: "No hidden fees. In return I ask for a testimonial, a Google review, permission to feature your business for 6 months (you approve everything) and one warm introduction."
 ---
 
-I'm giving 5 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan on a six-month minimum term — then cancel at any time with 30 days’ notice — which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
+I'm giving 3 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan on a six-month minimum term — then cancel at any time with 30 days’ notice — which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
 
 [Apply for your Golden Ticket today!](/promotions/the-golden-ticket/)
 
@@ -33,7 +33,7 @@ I'm giving 5 local businesses a custom website through the Golden Ticket, and I'
 
 This company grew up in Shelby, and a lot of the people who helped it grow own the small businesses that make this area what it is. Over the past couple of years I've seen quite a lot of the same thing: a good local business with an outdated website, or no website at all, quietly losing customers to whoever shows up first on Google.
 
-So this fall, I'm doing something about it. Five businesses across Cleveland and Gaston County will get a brand-new, custom website, designed, built and launched by Shelby Web Company, with the build fee covered. Builds like this are work I'd normally charge for, and I'm doing it as a thank-you to the local businesses that have supported this company since the beginning. It helps you, and it helps me build this business's foundation the right way. Either way, I'd rather show you what a good website does than tell you.
+So this fall, I'm doing something about it. Three businesses across Cleveland and Gaston County will get a brand-new, custom website, designed, built and launched by Shelby Web Company, with the build fee covered. Builds like this are work I'd normally charge for, and I'm doing it as a thank-you to the local businesses that have supported this company since the beginning. It helps you, and it helps me build this business's foundation the right way. Either way, I'd rather show you what a good website does than tell you.
 
 ## The deal, in plain numbers
 
@@ -59,7 +59,7 @@ The program is for local businesses in the areas we serve, solo operators and sm
 
 Home service companies, contractors, restaurants, boutiques, health and wellness businesses, professional services and nonprofits are all welcome.
 
-## How the 5 winners are chosen
+## How the 3 winners are chosen
 
 Winners are chosen by story and need, meaning where a modern website would genuinely change the next 12 months for the business. It isn't a random drawing. I read every application myself. [TODO: if you pick one winner per town, say so here.]
 
