@@ -1,5 +1,6 @@
 ---
 title: "Google Business Profile Setup for Shelby Contractors"
+seoTitle: "Google Business Profile for Contractors"
 description: "How Shelby contractors should set up and optimize a Google Business Profile — categories, services, photos, and review basics that win map-pack work."
 cluster: local-seo
 datePublished: "2026-10-14"

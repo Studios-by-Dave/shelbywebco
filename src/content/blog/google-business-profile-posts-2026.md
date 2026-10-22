@@ -1,5 +1,6 @@
 ---
 title: "Google Business Profile Posts: Do They Still Matter in 2026?"
+seoTitle: "Do Google Business Posts Matter?"
 description: "Whether GBP posts move the needle for Shelby businesses, what to post, and how they fit with reviews, photos, and service pages."
 cluster: local-seo
 datePublished: "2026-10-14"

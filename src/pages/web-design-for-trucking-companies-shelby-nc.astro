@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from '../components/OptimizedImage.astro';
+import fsExpeditedLogo from '../../assets/portfolio/fs-expedited.jpg';
+import fsExpeditedSite from '../../assets/portfolio/fs-expeditedllc_screenshot_1.png';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Web Design for Trucking Companies',
+  'name': 'Web Design for Trucking Companies in Shelby, NC',
+  'description': 'Lead-generating websites built specifically for trucking and hauling companies in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. Custom design, local SEO, and quote-request systems.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Shelby, NC' },
+    { '@type': 'City', 'name': 'Gastonia, NC' },
+    { '@type': 'City', 'name': 'Kings Mountain, NC' },
+    { '@type': 'City', 'name': 'Forest City, NC' },
+    { '@type': 'City', 'name': 'Boiling Springs, NC' },
+    { '@type': 'City', 'name': 'Polkville, NC' }
+  ],
+  'url': 'https://www.shelbywebco.com/web-design-for-trucking-companies-shelby-nc/'
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'What should a trucking company website include?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'At minimum: the service areas you run in, a quote or dispatch request form that captures the load type and material, phone numbers that tap to call, and proof that you are licensed and insured. Dispatchers and project managers researching a carrier need that information in seconds, not after scrolling a brochure page.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'How do trucking companies get more local customers?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Most hauling searches are local and urgent — someone needs a truck today. A Google Business Profile tuned with your service areas, a page for each material or service you run, and reviews from the crews you have actually served are what put you in the map pack where those searches land.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Do you build websites for hauling and expedited companies?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes. We built the site for F&S Expedited LLC, a licensed and insured hauling company serving Shelby and the surrounding 100-mile radius. That project is visible on this page.'
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Trucking Web Design | Shelby, NC"
+  description="Lead-generating websites for trucking and hauling companies in Shelby, Gastonia, and Western NC. Quote-request systems and local SEO. (704) 473-8188."
+>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
+
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-darkest to-brand-darkest z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(132,204,22,0.12),transparent_55%)] z-0"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+        ✦ Built for Trucking Companies
+      </div>
+      <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
+        Trucking Websites That Bring in <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-accent to-lime-300">Real Loads</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+        A dispatcher looking for a truck is checking you in seconds — not minutes. We build fast, quote-ready sites for trucking and hauling companies across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> that turn "who do I call for gravel delivery today?" into a dispatched job.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a
+           href="/contact/"
+           class="group relative inline-flex items-center justify-center cta-glow-shine bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-10 py-4 rounded-xl font-bold text-lg border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7d0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 overflow-hidden"
+         >
+          <span class="relative z-10">Get Your Free Quote</span>
+          <div class="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[0%] bg-white/20 transition-transform duration-300"></div>
+        </a>
+        <a
+          href="tel:+17044738188"
+          class="inline-flex items-center justify-center border border-brand-cyan/40 text-brand-cyan px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-cyan/10 transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Work Section -->
+  <section class="py-24 px-4 bg-brand-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Trucking Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">We Built This One for a Local Hauler</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">F&S Expedited LLC is a licensed and insured hauling company out of Shelby, NC. Their site ships with the same thing every trucking site needs: fast dispatch requests, tap-to-call numbers, and service areas that rank locally.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/blog/fs-expedited-llc-spotlight/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+          <div class="aspect-video overflow-hidden">
+            <Image src={fsExpeditedSite} alt="The F&S Expedited LLC trucking website we built, showing the Fast. Reliable. Expedited Trucking homepage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Live Site</p>
+            <p class="text-white text-sm leading-relaxed">The full F&S Expedited LLC site — hero, service areas, and a quote path that reaches a dispatcher in one tap.</p>
+          </div>
+        </a>
+        <a href="/blog/trucking-industry-challenges-2026/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+          <div class="aspect-video overflow-hidden">
+            <Image src={fsExpeditedLogo} alt="F&S Expedited LLC logo, yellow and black with a dump truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Branding</p>
+            <p class="text-white text-sm leading-relaxed">Logos and brand identity that survive being printed on a trailer, a hard hat, and a business card.</p>
+          </div>
+        </a>
+        <div class="bg-brand-darkest border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
+          <span class="text-brand-cyan text-3xl mb-4" aria-hidden="true">✦</span>
+          <p class="text-white font-bold text-lg mb-2">Your company here</p>
+          <p class="text-white/70 text-sm mb-6">Get a free quote for a trucking website built to convert local searches into dispatched loads.</p>
+          <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-bold text-sm border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get Your Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Solution Section -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 leading-tight text-center">
+        Why Hauling Companies Lose Loads to <span class="text-brand-cyan">Thin Websites</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-accent text-4xl font-black mb-2">60 sec</div>
+          <div class="text-white font-bold text-lg mb-2">That's How Long You Have</div>
+          <p class="text-white/80 text-sm">A project manager scrambling for a truck needs a number, a service area, and proof you're licensed. If your site makes them dig, they call the next carrier on their list.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-cyan text-4xl font-black mb-2">100 mi</div>
+          <div class="text-white font-bold text-lg mb-2">Your Real Service Radius</div>
+          <p class="text-white/80 text-sm">Most local haulers run a tight radius, not a state. Your pages should say exactly which towns you cover — and rank for each one.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
+          <div class="text-white font-bold text-lg mb-2">Map Pack Is the Dispatch Board</div>
+          <p class="text-white/80 text-sm">"Dump truck near me" and "gravel delivery Shelby NC" are map-pack searches. We tune your profile, service areas, and reviews so you are the first name they see.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get Section -->
+  <section class="py-24 px-4 bg-brand-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Trucking Companies</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Trucking Website That Works for You</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">Every trucking site ships with what dispatchers and project managers actually use — quote capture, service-area pages, and local SEO, not bloated features.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Dispatch &amp; Quote Request Engine</h3>
+          <p class="text-white/80">Material, load size, and service-area pickers that let someone request a haul without leaving the page — and land the request in your inbox before they open the next tab.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Service-Area Landing Pages</h3>
+          <p class="text-white/80">Dedicated pages for the towns and job types you run — "Gravel Delivery in Kings Mountain" and "Expedited Hauling Gastonia" — that rank for the searches dispatchers actually type.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Tap-to-Call That Actually Works</h3>
+          <p class="text-white/80">Half your traffic is a contractor on a job site with one thumb. Every phone number on every page dials straight from a phone, because most of your calls come from a mobile.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Licensing &amp; Insurance Proof</h3>
+          <p class="text-white/80">DOT numbers, insurance status, and fleet details front-and-center. A carrier's first question is always "are you legitimate?" — answer it before they have to ask.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Fleet &amp; Equipment Showcase</h3>
+          <p class="text-white/80">A fast-loading gallery of the trucks and equipment you run. Customers with a specific load — a dump trailer, a lowboy, a flatbed — need to see you have it before they call.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Local SEO Built In</h3>
+          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">on-page SEO</a> built around hauling intent — gravel delivery, debris removal, dump truck, and expedited service across Shelby, Gastonia, and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas / Proof Section -->
+  <section class="py-24 px-4 bg-brand-darkest">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Trusted by Hauling Companies Across Western NC</h2>
+          <p class="text-white/80 text-lg mb-8">Local carriers rely on us to turn "I need a truck today" searches into dispatched loads — from <a href="/web-design-shelby-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Polkville</a>.</p>
+          <a href="/services/case-studies/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7d0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">
+            See Our Case Studies
+          </a>
+        </div>
+        <div class="grid gap-4">
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-accent text-3xl font-black mb-1">100%</div>
+            <div class="text-white font-bold mb-1">Google Indexing Guarantee</div>
+            <p class="text-white/70 text-sm">Trucking sites indexed in as little as 72 hours — earning before the next job lands.</p>
+          </div>
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-cyan text-3xl font-black mb-1">240%</div>
+            <div class="text-white font-bold mb-1">Avg. Traffic Growth</div>
+            <p class="text-white/70 text-sm">Local hauling impressions can more than double after your site goes live.</p>
+          </div>
+          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+            <div class="text-brand-blue text-3xl font-black mb-1">Top 5</div>
+            <div class="text-white font-bold mb-1">Hauling Map Pack</div>
+            <p class="text-white/70 text-sm">We move carriers to the front of Google Maps, where the "I need a truck" searches land.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-4 bg-brand-dark border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+        Questions Trucking Companies Ask
+      </h2>
+      <div class="space-y-6">
+        <div class="bg-brand-darkest border border-white/5 p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-white mb-3">What should a trucking company website include?</h3>
+          <p class="text-white/80">At minimum: the service areas you run in, a quote or dispatch request form that captures the load type and material, phone numbers that tap to call, and proof that you are licensed and insured. Dispatchers and project managers researching a carrier need that information in seconds, not after scrolling a brochure page.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/5 p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-white mb-3">How do trucking companies get more local customers?</h3>
+          <p class="text-white/80">Most hauling searches are local and urgent — someone needs a truck today. A Google Business Profile tuned with your service areas, a page for each material or service you run, and reviews from the crews you have actually served are what put you in the map pack where those searches land.</p>
+        </div>
+        <div class="bg-brand-darkest border border-white/5 p-8 rounded-2xl">
+          <h3 class="text-xl font-bold text-white mb-3">Do you build websites for hauling and expedited companies?</h3>
+          <p class="text-white/80">Yes. We built the site for F&amp;S Expedited LLC, a licensed and insured hauling company serving Shelby and the surrounding 100-mile radius. That project is visible on this page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 px-4 relative overflow-hidden bg-brand-accent/90" data-animate>
+    <div class="max-w-4xl mx-auto text-center relative z-10 text-brand-darkest">
+      <h2 class="font-heading text-5xl md:text-6xl font-black mb-8 leading-tight">
+        Ready for a Trucking Website <br />That Books Real Loads?
+      </h2>
+      <p class="text-xl md:text-2xl font-medium mb-10 opacity-90 text-balance">
+        Free strategy call. No pressure, no upsells — just a straight plan for winning local dispatch searches.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact/"
+          class="inline-block bg-brand-darkest text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+        >
+          Book a Free Chat
+        </a>
+        <a
+          href="tel:+17044738188"
+          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-darkest hover:text-white transition-all duration-300"
+        >
+          (704) 473-8188
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

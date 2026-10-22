@@ -1,6 +1,7 @@
 ---
 title: "How to Get Recommended by ChatGPT and AI Search: A Local Business Guide"
-description: "AI assistants recommend local businesses they can clearly identify, verify and quote. Practical steps for Cleveland & Gaston County owners: consistent details, direct answers, detailed reviews, schema, Bing WMA, and not blocking AI crawlers."
+seoTitle: "Get Recommended by ChatGPT & AI Search"
+description: "AI assistants recommend businesses they can identify, verify and quote. Practical steps for Cleveland & Gaston County owners: direct answers and schema."
 cluster: ai-search
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"

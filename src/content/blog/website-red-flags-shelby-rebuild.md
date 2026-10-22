@@ -1,5 +1,6 @@
 ---
 title: "Website Red Flags: When a Shelby Business Needs a Rebuild"
+seoTitle: "Website Red Flags for Shelby"
 description: "Signs your Shelby business website is costing you leads — slow load, mobile issues, outdated content, broken forms — and what to do about it."
 cluster: website-cost
 datePublished: "2026-10-14"

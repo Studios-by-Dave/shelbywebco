@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Local SEO for Shelby Businesses: What to Do First",
+  "headline": "Local SEO for Shelby Businesses",
   "description": "The local SEO essentials for Shelby, NC businesses — Google Business Profile, reviews, citations, and on-page basics that actually move the needle.",
   "author": { "@type": "Person", "name": "Dave Richardson", "jobTitle": "Founder / Lead Developer", "url": "https://www.shelbywebco.com/about/" },
   "publisher": { "@type": "Organization", "name": "Shelby Web Company", "logo": { "@type": "ImageObject", "url": "https://www.shelbywebco.com/og-image.jpg" } },
@@ -15,7 +15,7 @@ const blogPostingSchema = {
 ---
 
 <BaseLayout 
-  title="Local SEO for Shelby Businesses: What to Do First"
+  title="Local SEO for Shelby Businesses"
   description="The local SEO essentials for Shelby, NC businesses — Google Business Profile, reviews, citations, and on-page basics that actually move the needle."
 >
   <script is:inline set:html={JSON.stringify(blogPostingSchema)} type="application/ld+json"></script>

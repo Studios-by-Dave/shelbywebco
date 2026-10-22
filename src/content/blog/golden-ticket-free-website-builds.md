@@ -1,6 +1,7 @@
 ---
 title: "I'm Building 5 Free Websites for Cleveland & Gaston County Businesses"
-description: "Dave Richardson is giving 5 local businesses a custom website through the Golden Ticket — the $497 build fee is covered. Winners continue on the $297/month Core plan. Applications close December 15, 2026."
+seoTitle: "5 Free Websites for Local Business"
+description: "Dave Richardson is giving 5 local businesses a free custom website through the Golden Ticket. The $497 build fee is covered. Applications close Dec 15, 2026."
 cluster: official
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"

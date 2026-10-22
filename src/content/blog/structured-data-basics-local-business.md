@@ -1,5 +1,6 @@
 ---
 title: "Structured Data Basics: Help Google and AI Understand Your Site"
+seoTitle: "Structured Data Basics"
 description: "A plain-English guide to structured data (schema) for Shelby businesses — what to add, what it does, and what it won't do."
 cluster: ai-search
 datePublished: "2026-10-14"

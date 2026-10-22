@@ -113,6 +113,7 @@ export default function DesktopNav() {
                     <a href="/web-design-for-landscapers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Landscapers</a>
                     <a href="/web-design-for-tree-specialists-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Tree Specialists</a>
                     <a href="/web-design-for-roofers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Roofers</a>
+                    <a href="/web-design-for-trucking-companies-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Trucking &amp; Hauling</a>
                   </div>
                 )}
               </div>

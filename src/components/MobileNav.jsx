@@ -36,6 +36,7 @@ const industryLinks = [
   { href: '/web-design-for-landscapers-shelby-nc/', label: 'Landscapers' },
   { href: '/web-design-for-tree-specialists-shelby-nc/', label: 'Tree Specialists' },
   { href: '/web-design-for-roofers-shelby-nc/', label: 'Roofers' },
+  { href: '/web-design-for-trucking-companies-shelby-nc/', label: 'Trucking & Hauling' },
 ];
 
 const aboutLinks = [

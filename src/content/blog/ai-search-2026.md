@@ -1,5 +1,6 @@
 ---
 title: "AI Search 2026: How Shelby Businesses Get Found by AI Assistants"
+seoTitle: "AI Search 2026 for Shelby Businesses"
 description: "The definitive guide to AI search and generative engine optimization for Shelby, NC businesses — what changed, what still works, and how to get cited."
 cluster: ai-search
 datePublished: "2026-10-14"

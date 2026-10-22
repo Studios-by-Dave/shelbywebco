@@ -1,5 +1,6 @@
 ---
 title: "Writing Service Pages That Rank (and Convert) in Cleveland County"
+seoTitle: "Service Pages That Rank Locally"
 description: "How to structure service pages for local search and conversions — answer-first intros, proof, pricing signals, and internal linking."
 cluster: local-seo
 datePublished: "2026-10-14"

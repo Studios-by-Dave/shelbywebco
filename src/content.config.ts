@@ -5,6 +5,9 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
+    // Optional short title for the <title> tag and OG headline. Use it when
+    // the visible title is keyword-rich but pushes the tag past 60 chars.
+    seoTitle: z.string().optional(),
     description: z.string(),
     cluster: z.enum(['local-seo', 'website-cost', 'ai-search', 'spotlight', 'official']),
     datePublished: z.string(),

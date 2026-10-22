@@ -1,5 +1,6 @@
 ---
 title: "Domain Names for Shelby Businesses: What Actually Matters"
+seoTitle: "Domain Names for Shelby Businesses"
 description: "Practical domain advice for Shelby businesses — extensions, local keywords in domains, email, and the myths that don't matter."
 cluster: website-cost
 datePublished: "2026-10-14"

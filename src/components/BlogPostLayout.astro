@@ -11,6 +11,8 @@ interface FaqItem {
 
 interface Props {
   title: string;
+  // Short title for the <title> tag / OG headline. Falls back to title.
+  seoTitle?: string;
   description: string;
   datePublished: string;
   dateModified: string;
@@ -24,6 +26,7 @@ interface Props {
 
 const {
   title,
+  seoTitle,
   description,
   datePublished,
   dateModified,
@@ -36,6 +39,9 @@ const {
 } = Astro.props;
 
 const url = absoluteUrl(Astro.url.pathname);
+// The visible H1 keeps the full keyword-rich title; the search-engine
+// title uses the shorter variant when one is supplied.
+const tagTitle = seoTitle || title;
 const publishedLabel = new Date(`${datePublished}T12:00:00`).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -57,7 +63,7 @@ const titleGradient =
 
 const schemas: Record<string, unknown>[] = [
   articleSchema({
-    headline: title,
+    headline: tagTitle,
     description,
     url,
     datePublished,
@@ -68,7 +74,7 @@ const schemas: Record<string, unknown>[] = [
 if (faqs.length) schemas.push(faqSchema(faqs));
 ---
 
-<BaseLayout title={title} description={description} breadcrumbs={[{ name: title, url }]}>
+<BaseLayout title={tagTitle} description={description} breadcrumbs={[{ name: title, url }]}>
   <JsonLd data={schemas} />
 
   <article class="pt-16 pb-16 px-4">
