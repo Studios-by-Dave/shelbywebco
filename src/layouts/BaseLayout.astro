@@ -6,6 +6,7 @@ import MobileStickyBar from '../components/MobileStickyBar.astro';
 import DesktopStickyDock from '../components/DesktopStickyDock.astro';
 import '../styles/global.css';
 import jesusWatermark from '../../assets/jesuswatermark_1.jpg';
+import { SITE_URL } from '../lib/schema';
 
 interface Breadcrumb {
   name: string;
@@ -22,8 +23,12 @@ interface Props {
   noindex?: boolean;
 }
 
+// Single source of truth for the origin. Previously this string was
+// hardcoded here four times plus src/lib/schema.ts plus astro.config.mjs,
+// so changing the domain in one place silently desynced the canonicals.
+const siteOrigin = SITE_URL.replace(/\/$/, '');
+
 function normalizeCanonical(pathname: string) {
-  const siteOrigin = 'https://www.shelbywebco.com';
   let path = pathname || '/';
   if (!path.startsWith('/')) path = `/${path}`;
   if (!path.endsWith('/')) path = `${path}/`;
@@ -34,7 +39,7 @@ function normalizeCanonical(pathname: string) {
 const { 
   title, 
   description, 
-  image = 'https://www.shelbywebco.com/og-image.jpg',
+  image = `${siteOrigin}/og-image.jpg`,
   canonical = normalizeCanonical(Astro.url.pathname),
   breadcrumbs,
   bgVariant = 'legacy',
@@ -44,10 +49,9 @@ const {
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
 const fullTitle = isHomepage ? 'Shelby Web Company | Web Design & SEO in Shelby, NC' : `${title} | Shelby Web Company`;
-const absoluteImageUrl = image.startsWith('http') ? image : `https://www.shelbywebco.com${image}`;
+const absoluteImageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
 
 // Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.
-const siteOrigin = 'https://www.shelbywebco.com';
 
 function titleize(segment: string) {
   return segment
@@ -120,17 +124,23 @@ const showBreadcrumbBar = pathSegments.length > 0;
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shelby Web Company" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absoluteImageUrl} />
+    <meta property="og:image:alt" content={title} />
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonical} />
-    <meta property="twitter:title" content={fullTitle} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={absoluteImageUrl} />
+    <!-- Twitter. No twitter:site handle is set because the business has no
+         X/Twitter account -- pointing at a non-existent handle is worse than
+         omitting it. Add one here if that changes. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImageUrl} />
+    <meta name="twitter:image:alt" content={title} />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />
