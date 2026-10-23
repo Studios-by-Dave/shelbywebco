@@ -44,7 +44,7 @@ const serviceSchema = {
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div class="text-center lg:text-left">
           <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Identity</p>
-          <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          <h1 class="font-heading text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight">
             Logo Design & <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Branding Solutions</span>
           </h1>
           <p class="text-xl text-white mb-8">
@@ -69,19 +69,77 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- Badges Showcase -->
-  <section class="py-16 px-4 bg-brand-dark/50 border-y border-white/5" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Badge Design</p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
-        Custom Badges & Certifications
-      </h2>
-      <Image 
-        src={newBadges25} 
-        alt="Custom badge designs by Shelby Web Company" 
-        class="w-full max-w-2xl mx-auto h-auto rounded-2xl shadow-2xl border border-brand-sky/20"
-        loading="lazy"
-      />
+  <!-- Features Section -->
+  <section class="py-20 px-4 bg-brand-dark" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What We Offer</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+          Professional Branding Services
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Custom Logo Design</h3>
+          <p class="text-white text-base md:text-lg">Unique, memorable logos that capture your brand's essence and resonate with your target audience.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Brand Identity Package</h3>
+          <p class="text-white text-base md:text-lg">Complete brand guidelines including color palettes, typography, and usage guidelines for consistent branding.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Business Card Design</h3>
+          <p class="text-white text-base md:text-lg">Professional business cards that make a lasting impression and reinforce your brand identity.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Social Media Assets</h3>
+          <p class="text-white text-base md:text-lg">Custom profile pictures, cover images, and post templates optimized for all major social platforms.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Brand Guidelines</h3>
+          <p class="text-white text-base md:text-lg">Comprehensive documentation on how to use your brand assets correctly across all media.</p>
+        </div>
+
+        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Multiple Revisions</h3>
+          <p class="text-white text-base md:text-lg">We work with you until you're completely satisfied with your brand identity.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -319,109 +377,6 @@ const serviceSchema = {
     </style>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What We Offer</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
-          Professional Branding Services
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Custom Logo Design</h3>
-          <p class="text-white text-base md:text-lg">Unique, memorable logos that capture your brand's essence and resonate with your target audience.</p>
-        </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Brand Identity Package</h3>
-          <p class="text-white text-base md:text-lg">Complete brand guidelines including color palettes, typography, and usage guidelines for consistent branding.</p>
-        </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Business Card Design</h3>
-          <p class="text-white text-base md:text-lg">Professional business cards that make a lasting impression and reinforce your brand identity.</p>
-        </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Social Media Assets</h3>
-          <p class="text-white text-base md:text-lg">Custom profile pictures, cover images, and post templates optimized for all major social platforms.</p>
-        </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Brand Guidelines</h3>
-          <p class="text-white text-base md:text-lg">Comprehensive documentation on how to use your brand assets correctly across all media.</p>
-        </div>
-
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
-          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">Multiple Revisions</h3>
-          <p class="text-white text-base md:text-lg">We work with you until you're completely satisfied with your brand identity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mascot Spotlight -->
-  <section class="py-20 px-4 bg-brand-darkest" data-animate>
-    <div class="max-w-6xl mx-auto">
-      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-        <div class="order-2 lg:order-1">
-          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Personality</p>
-          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
-            Mascots make a brand feel memorable.
-          </h2>
-          <p class="text-white text-xl leading-relaxed">
-            A playful character gives people something to remember, something to smile about, and a reason to feel connected to your business long after the first visit.
-          </p>
-        </div>
-        <div class="order-1 lg:order-2 text-center">
-          <div class="inline-block rounded-[2rem] border border-brand-cyan/20 bg-brand-dark p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
-            <Image
-              src={dogMascot}
-              alt="Mascot illustration for Shelby Web Company branding"
-              class="w-full max-w-sm h-auto rounded-[1.5rem]"
-            />
-            <p class="mt-4 text-sm text-white italic max-w-sm mx-auto">
-              “At Shelby Web Company, we’re a big fan of mascots. We truly believe that this form of branding really drives the brand home. It connects. I mean you gotta love this guy right here!”
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Pricing Section -->
   <section class="py-20 px-4 bg-brand-dark" data-animate>
     <div class="max-w-7xl mx-auto">
@@ -442,7 +397,7 @@ const serviceSchema = {
           
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
-              <span class="text-4xl md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$598</span>
+              <span class="text-4xl md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$498</span>
             </div>
           </div>
 
@@ -471,7 +426,7 @@ const serviceSchema = {
           
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
-              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$998</span>
+              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$898</span>
             </div>
           </div>
 
@@ -497,7 +452,7 @@ const serviceSchema = {
           
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
-              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$1,998</span>
+              <span class="text-3xl md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] whitespace-nowrap">$1798</span>
             </div>
           </div>
 
@@ -515,6 +470,51 @@ const serviceSchema = {
           >
             Get Started
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges Showcase -->
+  <section class="py-16 px-4 bg-brand-dark/50 border-y border-white/5" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Badge Design</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
+        Custom Badges & Certifications
+      </h2>
+      <Image 
+        src={newBadges25} 
+        alt="Custom badge designs by Shelby Web Company" 
+        class="w-full max-w-2xl mx-auto h-auto rounded-2xl shadow-2xl border border-brand-sky/20"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- Mascot Spotlight -->
+  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Personality</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+            Mascots make a brand feel memorable.
+          </h2>
+          <p class="text-white text-xl leading-relaxed">
+            A playful character gives people something to remember, something to smile about, and a reason to feel connected to your business long after the first visit.
+          </p>
+        </div>
+        <div class="order-1 lg:order-2 text-center">
+          <div class="inline-block rounded-[2rem] border border-brand-cyan/20 bg-brand-dark p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+            <Image
+              src={dogMascot}
+              alt="Mascot illustration for Shelby Web Company branding"
+              class="w-full max-w-sm h-auto rounded-[1.5rem]"
+            />
+            <p class="mt-4 text-sm text-white italic max-w-sm mx-auto">
+              “At Shelby Web Company, we’re a big fan of mascots. We truly believe that this form of branding really drives the brand home. It connects. I mean you gotta love this guy right here!”
+            </p>
+          </div>
         </div>
       </div>
     </div>
