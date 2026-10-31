@@ -6,48 +6,34 @@ import { faqSchema, breadcrumbSchema, SITE_URL } from '../../lib/schema';
 import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
 import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
-// Flip to 'closed' after Dec 15, 2026 winners are announced — the page stays live
-// (never 404s) and swaps the application form for the Class of 2026 results.
 const PROMO_STATE = 'open' as 'open' | 'closed';
-
-// [TODO: real data] Replace with the 3 actual winners + their case-study links
-// before flipping PROMO_STATE to 'closed'.
-const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [
-  // { name: 'Example Co', town: 'Shelby, NC', caseStudy: '/blog/...' },
-];
-
+const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [];
 const pageUrl = `${SITE_URL}promotions/the-golden-ticket/`;
 
 const faqs = [
   {
     question: 'Is it really free?',
-    answer:
-      "The $497 build & launch (avg. $1,200 of work) is on us. After launch it's $297/mo on a six-month minimum term covering hosting, care, edits, and ongoing SEO — then cancel at any time with 30 days’ notice. No upfront invoice, no surprises.",
+    answer: "The $497 build & launch is on us. After launch it's $297/mo on a six-month minimum term covering hosting, care, edits, and ongoing SEO — then cancel at any time with 30 days’ notice.",
   },
   {
     question: 'Who can apply?',
-    answer:
-      'Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.',
+    answer: 'Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.'
   },
   {
     question: 'How are the 3 winners chosen?',
-    answer:
-      'Judged by story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human; it is not a random drawing. Each applicant has an equal chance — selection is discretionary.',
+    answer: 'Judged by story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human; it is not a random drawing.'
   },
   {
     question: "What's the deadline?",
-    answer:
-      'December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 3 businesses — once applications close, this page stays up with the Class of 2026 results.',
+    answer: 'December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 3 businesses.'
   },
   {
     question: 'I already have a website. Can I still apply?',
-    answer:
-      'Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.',
+    answer: 'Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.'
   },
   {
     question: "What's the catch?",
-    answer:
-      'No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.',
+    answer: 'No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.'
   },
 ];
 ---
@@ -76,7 +62,6 @@ const faqs = [
     z-index: 0;
   }
 
-  /* Static sheen — no blur filter, no animation: paints once. */
   .gold-ticket-hero-sheen {
     position: absolute;
     inset: 0;
@@ -99,16 +84,6 @@ const faqs = [
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -10px 18px rgba(120,53,15,0.22);
   }
 
-  @media (max-width: 1023px) {
-    .gold-ticket-hero-wrap {
-      width: min(100%, 24rem);
-    }
-  }
-
-  /* 3D gold-bar headline — static gold gradient + 3 cheap drop-shadows,
-     with a single white lens-flare band sweeping through the glyphs.
-     Only background-position animates: no per-letter filters, one paint
-     per frame on one element. */
   .gold-bar-title {
     background-image:
       linear-gradient(105deg,
@@ -128,10 +103,7 @@ const faqs = [
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    filter:
-      drop-shadow(0 2px 0 #5e3c00)
-      drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5))
-      drop-shadow(0 0 22px rgba(253, 211, 77, 0.3));
+    filter: drop-shadow(0 2px 0 #5e3c00) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 22px rgba(253, 211, 77, 0.3));
     animation: gt-lens-flare 4s ease-in-out infinite;
   }
 
@@ -144,23 +116,20 @@ const faqs = [
     .gold-bar-title { animation: none; background-position: 150% 0, 0 0; }
   }
 
-  /* Dark brand blue outline on a light fill — white digits, #1d4ed8 ring. */
   .gt-blue-glow {
     color: #fffdf5;
     text-shadow:
-      -1px -1px 0 var(--color-brand-blue),
-       1px -1px 0 var(--color-brand-blue),
-      -1px  1px 0 var(--color-brand-blue),
-       1px  1px 0 var(--color-brand-blue),
-      -2px  0   0 var(--color-brand-blue),
-       2px  0   0 var(--color-brand-blue),
-       0   -2px 0 var(--color-brand-blue),
-       0    2px 0 var(--color-brand-blue),
-      0 0 22px rgba(59, 130, 246, 0.45);
+      -1px -1px 0 var(--color-brand-accent),
+       1px -1px 0 var(--color-brand-accent),
+      -1px  1px 0 var(--color-brand-accent),
+       1px  1px 0 var(--color-brand-accent),
+      -2px  0   0 var(--color-brand-accent),
+       2px  0   0 var(--color-brand-accent),
+        0   -2px 0 var(--color-brand-accent),
+        0    2px 0 var(--color-brand-accent),
+      0 0 22px rgba(132, 204, 22, 0.45);
   }
 
-  /* Gold outline on a light fill — same ring treatment as .gt-blue-glow.
-     Yellow-gold, not amber: #eab308 reads gold on the dark card. */
   .gt-gold-glow {
     color: #fffdf5;
     text-shadow:
@@ -170,28 +139,24 @@ const faqs = [
        1px  1px 0 #eab308,
       -2px  0   0 #eab308,
        2px  0   0 #eab308,
-       0   -2px 0 #eab308,
-       0    2px 0 #eab308,
+        0   -2px 0 #eab308,
+        0    2px 0 #eab308,
       0 0 22px rgba(250, 204, 21, 0.45);
   }
 
-  /* text-shadow inherits — keep the small caption solid gold, not outlined. */
   .gt-gold-glow > small {
     color: #fcd34d;
     text-shadow: none;
   }
 
-  /* Same inheritance, but the blue card's caption stays legible on dark. */
   .gt-blue-glow > small {
-    color: var(--color-brand-blue-light);
+    color: var(--color-brand-accent);
     text-shadow: none;
   }
 
-  /* Hero/body highlights — lighter blue so small bold copy stays legible
-     on the dark background. */
   .gt-blue {
-    color: var(--color-brand-blue-light);
-    text-shadow: 0 0 12px rgba(59, 130, 246, 0.45);
+    color: var(--color-brand-accent);
+    text-shadow: 0 0 12px rgba(132, 204, 22, 0.45);
   }
 
   .gt-steps { counter-reset: gt; }
@@ -224,7 +189,6 @@ const faqs = [
 >
   <JsonLd data={[faqSchema(faqs), breadcrumbSchema([{ name: 'The Golden Ticket', url: pageUrl }])]} />
 
-  <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
     <div class="max-w-4xl mx-auto">
       <h1 class="gold-bar-title font-heading font-bold leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap text-[clamp(1.9rem,9vw,5rem)]">The Golden Ticket</h1>
@@ -234,23 +198,22 @@ const faqs = [
           <Image src={goldenTicket} alt="The Golden Ticket — 3 spots only, Shelby NC" class="gold-ticket-hero-image" />
         </div>
       </div>
-      <p class="italic text-xl md:text-2xl text-white max-w-xl mx-auto">We're choosing 3 lucky local businesses and building them a brand-new, fully custom website, <b class="italic text-[#fcd34d]">for FREE!</b></p>
-      <p class="italic text-xl md:text-2xl text-white/90 max-w-xl mx-auto mt-3"><b class="italic text-[#fcd34d]">That's $0</b> to completely build and deploy your website, then continue on our Core <b class="italic gt-blue">$297/mo</b> plan — which includes ongoing SEO to keep improving the site more and more over time. <b class="italic text-[#fcd34d]">Six-month minimum term</b> if selected — then cancel at any time.</p>
-      <p class="text-white/70 mt-4 max-w-2xl mx-auto">We cover the full <b class="text-[#fcd34d]">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b class="text-[#fcd34d]">$1,200</b> per website. After launch, winners continue on our <b class="gt-blue">$297/month</b> Core plan <em class="not-italic text-white/90">on a six-month minimum term</em> — then cancel at any time with 30 days’ notice.</p>
+      <p class="italic text-xl md:text-2xl text-white max-w-xl mx-auto">We're choosing 3 lucky local businesses and building them a brand-new, fully custom website, <b class="italic text-[#fcd34d]">at no cost</b> to them.</p>
+      <p class="italic text-xl md:text-2xl text-white/90 max-w-xl mx-auto mt-3"><b class="italic text-[#fcd34d]">That's $0</b> to completely build and deploy your website, then continue on our Core growth plan.</p>
+      <p class="text-white/70 mt-4 max-w-2xl mx-auto">We cover the full <b class="text-[#fcd34d]">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b class="text-white">$1,200</b> for the website build stage.</p>
       <div class="flex flex-wrap gap-2 justify-center my-7">
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60"><b class="text-[#fcd34d]">3</b> winners</span>
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Closes <b class="text-[#fcd34d]">Dec 15</b>, 11:59 PM ET</span>
         <span class="border border-white/15 bg-brand-darkest rounded-full px-4 py-1.5 text-sm text-white/60">Judged on story &amp; need — read by a real person</span>
       </div>
-      <a href="#apply" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-lg">Apply for your Golden Ticket</a>
+      <a href="#apply" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_12px_30px_rgba(132,204,22,0.35)]">Apply for the Golden Ticket</a>
       <p class="italic text-sm text-white/50 mt-4">Takes about 5 minutes. No pitch deck needed.</p>
     </div>
   </section>
 
-  <!-- The deal, plainly -->
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">The deal, <em class="not-italic">plainly</em></h2>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">The Best Deal Around</h2>
       <p class="text-white/60 text-center mb-10 italic">No surprises. Here is exactly what we cover and what you continue with.</p>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-dark border border-[#fcd34d] rounded-2xl p-8 shadow-[0_0_0_1px_rgba(252,211,77,.45),0_18px_50px_rgba(253,211,77,.1)]">
@@ -262,7 +225,7 @@ const faqs = [
             <li>About $1,200 of build work, normally</li>
           </ul>
         </div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8">
+        <div class="bg-brand-dark border border-brand-accent/80 rounded-2xl p-8 shadow-[0_0_0_1px_rgba(132,204,22,.25)]">
           <p class="font-heading font-extrabold text-6xl leading-none gt-blue-glow">$297 <small class="font-body font-medium text-base text-white/50">/month · six-month minimum term</small></p>
           <h3 class="text-xl font-bold text-white mt-3 mb-3">You continue on Core</h3>
           <ul class="list-disc pl-5 text-white/60 space-y-1">
@@ -273,80 +236,30 @@ const faqs = [
           <p class="mt-4 text-sm text-white/50">Same plan every Core client signs.</p>
         </div>
       </div>
-      <div class="max-w-3xl mx-auto mt-7 p-6 md:p-7 border-l-4 border-brand-blue-light bg-brand-dark rounded-r-2xl">
+      <div class="max-w-3xl mx-auto mt-7 p-6 md:p-7 border-l-4 border-brand-accent bg-brand-dark rounded-r-2xl">
         <h3 class="text-xl font-bold text-white">More than a care plan</h3>
-        <p class="text-white/60 mt-2">Our $149/month Website Care Plan is hosting, backups, edits, and updates only — no SEO. At the heart of the $297 Core plan is <b class="text-white">ongoing SEO and AI improvements plus continued content creation</b>, which build search visibility and authority over time. Your website keeps getting better.</p>
+        <p class="text-white/60 mt-2">Our $149/month Website Care Plan is hosting, backups, edits, and updates only — no SEO. At the heart of the $297 Core plan is <b class="text-white">ongoing local SEO and monthly optimization.</b></p>
         <p class="text-white/60 mt-2"><b class="text-white">No surprise charges, no upsells, no fine print.</b></p>
       </div>
     </div>
   </section>
 
-  <!-- What's included -->
   <section class="py-16 lg:py-20 px-4" data-animate>
     <div class="max-w-4xl mx-auto">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">What's included in Core</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">Every winner gets our Core growth plan with the launch fee covered by us — a direct giveback to the community that built this company.</p>
+      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">Every winner gets our Core growth plan with the launch fee covered by us — a direct giveback to the community that builds local businesses.</p>
       <ul class="grid md:grid-cols-2 gap-x-7 max-w-3xl mx-auto list-none p-0">
-        {['4–5 page mobile-first website','Hosting, SSL, backups & security','Contact forms & lead alerts','Google Analytics & Search Console','Foundational on-page & local SEO','One small monthly edit request','Monthly performance snapshot','Quarterly growth review'].map((item) => (
+        {['4–5 page mobile-first website','Hosting, SSL, backups & security','Contact forms & lead alerts','Google Analytics & Search Console','Foundational on-page & local SEO','One small monthly edit request'].map((item) => (
           <li class="py-3.5 pl-8 border-b border-white/10 relative text-white/85"><span class="absolute left-0 text-lime-400 font-bold">✓</span>{item}</li>
         ))}
       </ul>
 
       <div class="mt-12">
-        <GrowthPlanPricingSection
-          bare
-          only="website"
-          variant="monthly-first"
-          ctaHref="#apply"
-          ctaLabel="Apply for your Golden Ticket"
-        />
+        <GrowthPlanPricingSection bare only="website" variant="monthly-first" ctaHref="#apply" ctaLabel="Apply for your Golden Ticket" />
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
-  <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-brand-accent mb-2 text-center">How it works</h2>
-      <p class="text-white/60 text-center mb-10 italic">From application to live site in weeks, not months.</p>
-      <ol class="gt-steps grid md:grid-cols-3 lg:grid-cols-5 gap-8 list-none p-0 text-center">
-        <li><h3 class="text-lg font-bold text-white">Tell your story</h3><p class="text-sm text-white/60 mt-2">Short application — what you do, who you serve, why a new site changes your next 12 months.</p></li>
-        <li><h3 class="text-lg font-bold text-white">We review</h3><p class="text-sm text-white/60 mt-2">A human reads every submission. Real stories, real customers, real need.</p></li>
-        <li><h3 class="text-lg font-bold text-white">3 winners</h3><p class="text-sm text-white/60 mt-2">One-time cohort of 3. The Class of 2026 closes Dec 15.</p></li>
-        <li><h3 class="text-lg font-bold text-white">We build &amp; launch</h3><p class="text-sm text-white/60 mt-2">Quick pre-discovery call, then design, build, launch — weeks, not months.</p></li>
-        <li><h3 class="text-lg font-bold text-white">We measure</h3><p class="text-sm text-white/60 mt-2">30/60/90-day check-ins on traffic, calls, and rankings.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- What we ask -->
-  <section class="py-16 lg:py-20 px-4" data-animate>
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">What we ask in return</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">This program costs us real money. Four simple asks:</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">💬</div><h3 class="text-lg font-bold text-white">An honest testimonial</h3><p class="text-sm text-white/60 mt-1">Tell the truth — good and nitpicks. Becomes your case study.</p></div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">⭐</div><h3 class="text-lg font-bold text-white">A Google review</h3><p class="text-sm text-white/60 mt-1">Once your site is live and you're happy — leave us a review.</p></div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">📣</div><h3 class="text-lg font-bold text-white">Feature you — 6 months</h3><p class="text-sm text-white/60 mt-1">We show off your site and results. You approve everything first.</p></div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><div class="text-2xl mb-2">🤝</div><h3 class="text-lg font-bold text-white">One warm intro</h3><p class="text-sm text-white/60 mt-1">Know one owner who needs a better site? Pass along their name.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 30/60/90 -->
-  <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-brand-accent mb-2 text-center">The 30 / 60 / 90-day case study</h2>
-      <p class="text-white/60 text-center mb-10 max-w-2xl mx-auto italic">Every Golden Ticket site becomes a living case study — tracked from day one.</p>
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><h3 class="text-brand-accent">Day 30 · Foundation live</h3><p class="text-sm text-white/60 mt-1">Site live, Analytics running, lead forms delivering, local SEO in place.</p></div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><h3 class="text-brand-accent">Day 60 · First signals</h3><p class="text-sm text-white/60 mt-1">First calls and form fills arrive. We tune pages around what's working.</p></div>
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-6"><h3 class="text-brand-accent">Day 90 · Proof on paper</h3><p class="text-sm text-white/60 mt-1">Clean results snapshot — traffic, leads, rankings. Your case study.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Apply form (open) / Class of 2026 results (closed) -->
   {PROMO_STATE === 'open' && (
   <section id="apply" class="py-16 lg:py-20 px-4" data-animate>
     <div class="max-w-2xl mx-auto">
@@ -354,7 +267,7 @@ const faqs = [
         <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications Close December 15, 2026</p>
         <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-4">Apply for the Golden Ticket</h2>
         <p class="text-lg text-white italic">Tell your story. That's the whole application. 3 spots for the Class of 2026.</p>
-        <p class="text-white/60 text-sm mt-2">Curious how this fits our standard plans? See <a href="/pricing/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">pricing</a>.</p>
+        <p class="text-white/60 text-sm mt-2">Curious how this fits our standard plans? See <a href="/pricing/" class="text-brand-accent hover:text-white underline decoration-brand-accent/40">our pricing</a>.</p>
       </div>
 
       <form id="golden-ticket-form" action="/api/contact" method="POST" class="space-y-5 bg-brand-dark border border-[#fcd34d]/60 rounded-2xl p-6 md:p-8">
@@ -364,22 +277,22 @@ const faqs = [
 
         <div>
           <label for="gt-name" class="block text-sm font-medium text-white mb-2">Name *</label>
-          <input type="text" name="name" id="gt-name" required placeholder="John Doe" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+          <input type="text" name="name" id="gt-name" required placeholder="John Doe" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors" />
         </div>
 
         <div>
           <label for="gt-email" class="block text-sm font-medium text-white mb-2">Email *</label>
-          <input type="email" name="email" id="gt-email" required placeholder="john@example.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+          <input type="email" name="email" id="gt-email" required placeholder="john@example.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors" />
         </div>
 
         <div>
           <label for="gt-business" class="block text-sm font-medium text-white mb-2">Business Name *</label>
-          <input type="text" name="business" id="gt-business" required placeholder="Your Business LLC" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+          <input type="text" name="business" id="gt-business" required placeholder="Your Business LLC" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors" />
         </div>
 
         <div>
           <label for="gt-industry" class="block text-sm font-medium text-white mb-2">Industry</label>
-          <select name="industry" id="gt-industry" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20">
+          <select name="industry" id="gt-industry" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-colors">
             <option value="">Select one...</option>
             <option>Home services &amp; trades</option>
             <option>Construction &amp; remodeling</option>
@@ -394,7 +307,7 @@ const faqs = [
 
         <div>
           <label for="gt-town" class="block text-sm font-medium text-white mb-2">Town *</label>
-          <select name="town" id="gt-town" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20">
+          <select name="town" id="gt-town" required class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-colors">
             <option value="">Select one...</option>
             <option>Shelby</option>
             <option>Kings Mountain</option>
@@ -409,23 +322,23 @@ const faqs = [
 
         <div>
           <label for="gt-website" class="block text-sm font-medium text-white mb-2">Current Website <span class="text-white/50">(optional)</span></label>
-          <input type="url" name="website" id="gt-website" placeholder="https://yourbusiness.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+          <input type="url" name="website" id="gt-website" placeholder="https://yourbusiness.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors" />
         </div>
 
         <div>
           <label for="gt-story" class="block text-sm font-medium text-white mb-2">Why does your business deserve a new website? *</label>
-          <textarea name="story" id="gt-story" rows="5" required placeholder="Tell us what you do, who you serve, and why a modern website would change your next 12 months..." class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20 resize-none"></textarea>
+          <textarea name="story" id="gt-story" rows="5" required placeholder="Tell us what you do, who you serve, and why a modern website would change your next 12 months..." class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors resize-none"></textarea>
         </div>
 
         <div>
           <label for="gt-phone" class="block text-sm font-medium text-white mb-2">Phone <span class="text-white/50">(optional)</span></label>
-          <input type="tel" name="phone" id="gt-phone" placeholder="(704) 555-0123" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
+          <input type="tel" name="phone" id="gt-phone" placeholder="(704) 555-0123" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-colors" />
         </div>
 
-        <button type="submit" class="cta-glow-shine w-full inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-lg">
+        <button type="submit" class="cta-glow-shine w-full inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_12px_30px_rgba(132,204,22,0.35)]">
           Submit My Application
         </button>
-        <p class="text-center text-sm text-white/50">Rather talk it through? <a href="tel:+17044738188" class="text-brand-accent font-semibold hover:text-brand-accent-light transition-colors">Call us at (704) 473-8188</a> to apply by phone.</p>
+        <p class="text-center text-sm text-white/50">Rather talk it through? <a href="tel:+17044738188" class="text-brand-accent font-semibold hover:text-brand-accent-light transition-colors">Call (704) 473-8188</a></p>
 
         <div id="golden-ticket-form-status" class="min-h-6 text-sm text-white text-center"></div>
       </form>
@@ -441,34 +354,6 @@ const faqs = [
   </section>
   )}
 
-  {PROMO_STATE === 'closed' && (
-  <section id="class-of-2026" class="py-16 lg:py-20 px-4" data-animate>
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications are closed</p>
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-4">The Class of 2026</h2>
-      <p class="text-white/70 max-w-2xl mx-auto">Applications closed December 15, 2026. Our 3 winners:</p>
-      <ul class="mt-8 space-y-4 text-left">
-        {CLASS_OF_2026.map((winner) => (
-          <li class="bg-brand-dark border border-white/10 rounded-2xl p-6 flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p class="font-bold text-white">{winner.name}</p>
-              <p class="text-white/60 text-sm">{winner.town}</p>
-            </div>
-            {winner.caseStudy && (
-              <a href={winner.caseStudy} class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40 text-sm">Read the case study</a>
-            )}
-          </li>
-        ))}
-        {CLASS_OF_2026.length === 0 && (
-          <li class="text-white/50 text-sm">Winners are announced when applications close — check back then.</li>
-        )}
-      </ul>
-      <p class="mt-8 text-white/60">Want to work with us anyway? <a href="/contact/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Get in touch</a> — standard <a href="/pricing/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">plans</a> are always open.</p>
-    </div>
-  </section>
-  )}
-
-  <!-- FAQ -->
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-3xl mx-auto gt-faq">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-8 text-center">Frequently asked questions</h2>
@@ -478,30 +363,16 @@ const faqs = [
           <p class="text-white/60 pb-5">{faq.answer}</p>
         </details>
       ))}
-      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Official Rules</a>.</p>
+      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-accent hover:text-white underline decoration-brand-accent/40">Official rules</a></p>
     </div>
   </section>
 
-  <!-- Why -->
-  <section class="py-16 lg:py-20 px-4" data-animate>
-    <div class="max-w-3xl mx-auto grid md:grid-cols-[auto_1fr] gap-7 items-center">
-      <div class="w-24 h-24 rounded-full mx-auto grid place-items-center font-heading font-bold text-4xl text-white" style="background: linear-gradient(135deg, #38bdf8, #0e4a8a);">D</div>
-      <div class="text-center md:text-left">
-        <h2 class="font-heading font-bold text-3xl text-[#fcd34d] mb-3 !text-left">Why we're doing this</h2>
-        <p class="text-white/60 mb-2"><b class="text-white">It's simply good business.</b> Honest value up front builds trust before the first invoice — and confidence turns a website into opportunity.</p>
-        <p class="text-white/60 mb-2"><b class="text-white">We're a growing agency.</b> Upfront value earns credibility fast and generates real case studies and proof across the local business community.</p>
-        <p class="text-white/60"><b class="text-white">Dave Richardson</b>, Founder / Lead Developer · <a href="tel:+17044738188" class="text-brand-blue-light hover:text-white">(704) 473-8188</a> · <a href="mailto:dave@shelbywebco.com" class="text-brand-blue-light hover:text-white">dave@shelbywebco.com</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sticky mobile CTA -->
   <div class="gt-sticky hidden fixed left-0 right-0 bottom-0 z-30 bg-[#0b1020]/95 border-t border-white/10 px-4 pt-2.5" style="padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));">
     <a href="#apply" class="cta-glow-shine block text-center bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold">Apply · Closes Dec 15</a>
   </div>
 
   <script>
-    const goldenTicketForm = document.getElementById('golden-ticket-form') as HTMLFormElement | null;
+    const goldenTicketForm = document.getElementById('golden-ticket-form');
     const goldenTicketStatus = document.getElementById('golden-ticket-form-status');
     if (goldenTicketForm) {
       goldenTicketForm.addEventListener('submit', async (e) => {
