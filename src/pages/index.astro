@@ -482,10 +482,13 @@ import marbleBg from '../../assets/marble-800x530.webp';
     <div class="max-w-5xl mx-auto space-y-12">
 
       <div>
-        <h2 id="seo-process-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-5 leading-tight text-center">
-          <span class="block">Launch Your Website.</span>
-          <span class="block">Keep Building Your Search Presence.</span>
-        </h2>
+        <div class="relative w-full rounded-3xl overflow-hidden bg-cover bg-center py-8 md:py-10 px-4 md:px-8 mb-5" style={`background-image: url("${encodeURI(marbleBg.src)}")`}>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65"></div>
+          <h2 id="seo-process-heading" class="relative font-heading text-section-heading md:text-section-heading-md font-bold text-white leading-tight text-center">
+            <span class="block bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-dark to-brand-blue">Launch Your Website.</span>
+            <span class="block">Keep <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Building</span> Your Search <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Presence</span>.</span>
+          </h2>
+        </div>
         <div class="space-y-4 text-slate-300 text-body-lg leading-relaxed">
           <p>
             Some agencies charge thousands per month for SEO. We offer local businesses a more accessible option: ongoing local SEO starting at only $297/month.
@@ -811,8 +814,8 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <!-- Industries Section -->
   <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
-      <p class="text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold" style="color: #fcd34d;">✦ Specialized for Your Industry</p>
-      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8">
+      <p class="text-sm md:text-base uppercase tracking-widest mb-4 font-semibold text-center" style="color: #fcd34d;">✦ Specialized for Your Industry</p>
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8 text-center">
         We're Here to Understand Your Business
 </h2>
       <p class="text-slate-300 text-body-lg max-w-5xl mb-16 leading-relaxed font-light">
@@ -820,6 +823,15 @@ import marbleBg from '../../assets/marble-800x530.webp';
       </p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Trucking Icon -->
+        <a href="/web-design-for-trucking-companies-shelby-nc/" class="bg-brand-darkest border border-yellow-400/30 rounded-xl p-8 hover:border-yellow-400/50 transition-colors group block">
+          <div class="w-14 h-14 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-4 text-yellow-400 group-hover:bg-yellow-400/20 transition-colors">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-5h-7v6h2"/><path d="M21 13h-4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <h3 class="font-heading text-card-title font-bold text-white mb-2">Expedited Trucking</h3>
+          <p class="text-card-body text-white/70">Dispatch systems for hauling and logistics companies.</p>
+        </a>
+
         <!-- Concrete Construction Icon -->
         <a href="/web-design-for-construction-shelby-nc/" class="bg-brand-darkest border border-cyan-500/30 rounded-xl p-8 hover:border-cyan-500/50 transition-colors group block">
           <div class="w-14 h-14 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4 text-cyan-500 group-hover:bg-cyan-500/20 transition-colors">
@@ -874,15 +886,6 @@ import marbleBg from '../../assets/marble-800x530.webp';
           <p class="text-card-body text-white/70">Local Tree Service businesses built to scale.</p>
         </a>
 
-        <!-- Trucking Icon -->
-        <a href="/web-design-for-trucking-companies-shelby-nc/" class="bg-brand-darkest border border-yellow-400/30 rounded-xl p-8 hover:border-yellow-400/50 transition-colors group block">
-          <div class="w-14 h-14 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-4 text-yellow-400 group-hover:bg-yellow-400/20 transition-colors">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-5h-7v6h2"/><path d="M21 13h-4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-          </div>
-          <h3 class="font-heading text-card-title font-bold text-white mb-2">Expedited Trucking</h3>
-          <p class="text-card-body text-white/70">Dispatch systems for hauling and logistics companies.</p>
-        </a>
-
         <!-- Plumbers Icon -->
         <div class="bg-brand-darkest border border-purple-500/30 rounded-xl p-8 hover:border-purple-500/50 transition-colors group">
           <div class="w-14 h-14 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 text-purple-500 group-hover:bg-purple-500/20 transition-colors">
@@ -899,14 +902,14 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <!-- Non-Exclusive Agency Section -->
   <section class="py-16 md:py-20 px-4" data-animate>
     <div class="max-w-5xl mx-auto text-center">
-      <p class="text-body-base md:text-body-lg uppercase tracking-widest mb-4 font-semibold" style="color: #fcd34d;">✦ We're also a Non-Exclusive Agency</p>
-      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8">
+      <p class="text-sm md:text-base uppercase tracking-widest mb-4 font-semibold" style="color: #fcd34d;">✦ We're also a Non-Exclusive Agency</p>
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8 text-center">
         Your Success Is Our Success
       </h2>
       <p class="text-body-lg md:text-body-lg text-white/90 mb-10 font-serif leading-relaxed font-light">
         At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic font-normal">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
       </p>
-      <p class="text-brand-cyan font-medium italic text-body-lg md:text-card-title">
+      <p class="text-brand-cyan font-medium italic text-body-base md:text-body-lg">
         No exclusivity, just great results.
       </p>
       <a href="/contact/" class="cta-glow-shine mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 text-base">
