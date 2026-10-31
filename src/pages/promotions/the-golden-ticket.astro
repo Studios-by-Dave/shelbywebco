@@ -6,34 +6,46 @@ import { faqSchema, breadcrumbSchema, SITE_URL } from '../../lib/schema';
 import goldenTicket from '../../../assets/golden-ticket_5.jpeg';
 import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
+// Flip to 'closed' after Dec 15, 2026 winners are announced — the page stays live
+// (never 404s) and swaps the application form for the Class of 2026 results.
 const PROMO_STATE = 'open' as 'open' | 'closed';
+
+// [TODO: real data] Replace with the 3 actual winners + their case-study links
+// before flipping PROMO_STATE to 'closed'.
 const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [];
+
 const pageUrl = `${SITE_URL}promotions/the-golden-ticket/`;
 
 const faqs = [
   {
     question: 'Is it really free?',
-    answer: "The $497 build & launch is on us. After launch it's $297/mo on a six-month minimum term covering hosting, care, edits, and ongoing SEO — then cancel at any time with 30 days’ notice.",
+    answer:
+      "The $497 build & launch (avg. $1,200 of work) is on us. After launch it's $297/mo on a six-month minimum term covering hosting, care, edits, and ongoing SEO — then cancel at any time with 30 days' notice.",
   },
   {
     question: 'Who can apply?',
-    answer: 'Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.'
+    answer:
+      'Local businesses in the areas we serve — solo or small teams. Old, outdated, or no website all qualify. You need to be open for business and ready to launch in the program window.',
   },
   {
     question: 'How are the 3 winners chosen?',
-    answer: 'Judged by story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human; it is not a random drawing.'
+    answer:
+      'Judged by story and need — where a modern website genuinely changes the next 12 months. Every application is read by a human; it is not a random drawing. Each applicant has an equal chance if they fit the program.',
   },
   {
     question: "What's the deadline?",
-    answer: 'December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 3 businesses.'
+    answer:
+      'December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 3 businesses — once applications close, this page stays up with the Class of 2026 results.',
   },
   {
     question: 'I already have a website. Can I still apply?',
-    answer: 'Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.'
+    answer:
+      'Absolutely. Dated, slow, or invisible on Google is exactly what this program exists for.',
   },
   {
     question: "What's the catch?",
-    answer: 'No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.'
+    answer:
+      'No catch — testimonial, Google review, 6-month feature permission (you approve all), and one warm intro.',
   },
 ];
 ---
@@ -62,6 +74,7 @@ const faqs = [
     z-index: 0;
   }
 
+  /* Static sheen — no blur filter, no animation: paints once. */
   .gold-ticket-hero-sheen {
     position: absolute;
     inset: 0;
@@ -84,6 +97,16 @@ const faqs = [
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -10px 18px rgba(120,53,15,0.22);
   }
 
+  @media (max-width: 1023px) {
+    .gold-ticket-hero-wrap {
+      width: min(100%, 24rem);
+    }
+  }
+
+  /* 3D gold-bar headline — static gold gradient + 3 cheap drop-shadows,
+     with a single white lens-flare band sweeping through the glyphs.
+     Only background-position animates: no per-letter filters, one paint
+     per frame on one element. */
   .gold-bar-title {
     background-image:
       linear-gradient(105deg,
@@ -103,7 +126,10 @@ const faqs = [
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    filter: drop-shadow(0 2px 0 #5e3c00) drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 22px rgba(253, 211, 77, 0.3));
+    filter:
+      drop-shadow(0 2px 0 #5e3c00)
+      drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5))
+      drop-shadow(0 0 22px rgba(253, 211, 77, 0.3));
     animation: gt-lens-flare 4s ease-in-out infinite;
   }
 
@@ -116,20 +142,23 @@ const faqs = [
     .gold-bar-title { animation: none; background-position: 150% 0, 0 0; }
   }
 
+  /* Dark brand blue outline on a light fill — white digits, #1d4ed8 ring. */
   .gt-blue-glow {
     color: #fffdf5;
     text-shadow:
-      -1px -1px 0 var(--color-brand-accent),
-       1px -1px 0 var(--color-brand-accent),
-      -1px  1px 0 var(--color-brand-accent),
-       1px  1px 0 var(--color-brand-accent),
-      -2px  0   0 var(--color-brand-accent),
-       2px  0   0 var(--color-brand-accent),
-        0   -2px 0 var(--color-brand-accent),
-        0    2px 0 var(--color-brand-accent),
-      0 0 22px rgba(132, 204, 22, 0.45);
+      -1px -1px 0 var(--color-brand-blue),
+       1px -1px 0 var(--color-brand-blue),
+      -1px  1px 0 var(--color-brand-blue),
+       1px  1px 0 var(--color-brand-blue),
+      -2px  0   0 var(--color-brand-blue),
+       2px  0   0 var(--color-brand-blue),
+        0   -2px 0 var(--color-brand-blue),
+        0    2px 0 var(--color-brand-blue),
+      0 0 22px rgba(59, 130, 246, 0.45);
   }
 
+  /* Gold outline on a light fill — same ring treatment as .gt-blue-glow.
+     Yellow-gold, not amber: #eab308 reads gold on the dark card. */
   .gt-gold-glow {
     color: #fffdf5;
     text-shadow:
@@ -144,19 +173,23 @@ const faqs = [
       0 0 22px rgba(250, 204, 21, 0.45);
   }
 
+  /* text-shadow inherits — keep the small caption solid gold, not outlined. */
   .gt-gold-glow > small {
     color: #fcd34d;
     text-shadow: none;
   }
 
+  /* Same inheritance, but the blue card's caption stays legible on dark. */
   .gt-blue-glow > small {
-    color: var(--color-brand-accent);
+    color: var(--color-brand-blue-light);
     text-shadow: none;
   }
 
+  /* Hero/body highlights — lighter blue so small bold copy stays legible
+     on the dark background. */
   .gt-blue {
-    color: var(--color-brand-accent);
-    text-shadow: 0 0 12px rgba(132, 204, 22, 0.45);
+    color: var(--color-brand-blue-light);
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.45);
   }
 
   .gt-steps { counter-reset: gt; }
@@ -189,6 +222,7 @@ const faqs = [
 >
   <JsonLd data={[faqSchema(faqs), breadcrumbSchema([{ name: 'The Golden Ticket', url: pageUrl }])]} />
 
+  <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
     <div class="max-w-4xl mx-auto">
       <h1 class="gold-bar-title font-heading font-bold leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap text-[clamp(1.9rem,9vw,5rem)]">The Golden Ticket</h1>
@@ -255,7 +289,13 @@ const faqs = [
       </ul>
 
       <div class="mt-12">
-        <GrowthPlanPricingSection bare only="website" variant="monthly-first" ctaHref="#apply" ctaLabel="Apply for your Golden Ticket" />
+        <GrowthPlanPricingSection
+          bare
+          only="website"
+          variant="monthly-first"
+          ctaHref="#apply"
+          ctaLabel="Apply for your Golden Ticket"
+        />
       </div>
     </div>
   </section>
@@ -354,6 +394,33 @@ const faqs = [
   </section>
   )}
 
+  {PROMO_STATE === 'closed' && (
+  <section id="class-of-2026" class="py-16 lg:py-20 px-4" data-animate>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Applications are closed</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-4">The Class of 2026</h2>
+      <p class="text-white/70 max-w-2xl mx-auto">Applications closed December 15, 2026. Our 3 winners:</p>
+      <ul class="mt-8 space-y-4 text-left">
+        {CLASS_OF_2026.map((winner) => (
+          <li class="bg-brand-dark border border-white/10 rounded-2xl p-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p class="font-bold text-white">{winner.name}</p>
+              <p class="text-white/60 text-sm">{winner.town}</p>
+            </div>
+            {winner.caseStudy && (
+              <a href={winner.caseStudy} class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40 text-sm">Read the case study</a>
+            )}
+          </li>
+        ))}
+        {CLASS_OF_2026.length === 0 && (
+          <li class="text-white/50 text-sm">Winners are announced when applications close — check back then.</li>
+        )}
+      </ul>
+      <p class="mt-8 text-white/60">Want to work with us anyway? <a href="/contact/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Get in touch</a> — we’d love to hear from you.</p>
+    </div>
+  </section>
+  )}
+
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-3xl mx-auto gt-faq">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-8 text-center">Frequently asked questions</h2>
@@ -363,7 +430,7 @@ const faqs = [
           <p class="text-white/60 pb-5">{faq.answer}</p>
         </details>
       ))}
-      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-accent hover:text-white underline decoration-brand-accent/40">Official rules</a></p>
+      <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Official rules</a></p>
     </div>
   </section>
 
@@ -372,7 +439,7 @@ const faqs = [
   </div>
 
   <script>
-    const goldenTicketForm = document.getElementById('golden-ticket-form');
+    const goldenTicketForm = document.getElementById('golden-ticket-form') as HTMLFormElement | null;
     const goldenTicketStatus = document.getElementById('golden-ticket-form-status');
     if (goldenTicketForm) {
       goldenTicketForm.addEventListener('submit', async (e) => {
