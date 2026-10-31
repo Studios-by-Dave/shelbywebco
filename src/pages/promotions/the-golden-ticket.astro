@@ -12,7 +12,9 @@ const PROMO_STATE = 'open' as 'open' | 'closed';
 
 // [TODO: real data] Replace with the 3 actual winners + their case-study links
 // before flipping PROMO_STATE to 'closed'.
-const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [];
+const CLASS_OF_2026: { name: string; town: string; caseStudy?: string }[] = [
+  // { name: 'Example Co', town: 'Shelby, NC', caseStudy: '/blog/...' },
+];
 
 const pageUrl = `${SITE_URL}promotions/the-golden-ticket/`;
 
@@ -222,7 +224,6 @@ const faqs = [
 >
   <JsonLd data={[faqSchema(faqs), breadcrumbSchema([{ name: 'The Golden Ticket', url: pageUrl }])]} />
 
-  <!-- Hero -->
   <section class="py-14 lg:py-20 px-4 text-center" data-animate>
     <div class="max-w-4xl mx-auto">
       <h1 class="gold-bar-title font-heading font-bold leading-[1.05] mt-2 mb-10 lg:mb-14 whitespace-nowrap text-[clamp(1.9rem,9vw,5rem)]">The Golden Ticket</h1>
@@ -437,38 +438,5 @@ const faqs = [
   <div class="gt-sticky hidden fixed left-0 right-0 bottom-0 z-30 bg-[#0b1020]/95 border-t border-white/10 px-4 pt-2.5" style="padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));">
     <a href="#apply" class="cta-glow-shine block text-center bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold">Apply · Closes Dec 15</a>
   </div>
-
-  <script>
-    const goldenTicketForm = document.getElementById('golden-ticket-form') as HTMLFormElement | null;
-    const goldenTicketStatus = document.getElementById('golden-ticket-form-status');
-    if (goldenTicketForm) {
-      goldenTicketForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const formData = new FormData(goldenTicketForm);
-        if (formData.get('botcheck')) return;
-        if (goldenTicketStatus) goldenTicketStatus.textContent = 'Sending...';
-        if (goldenTicketStatus) goldenTicketStatus.className = 'min-h-6 text-sm text-white text-center';
-        try {
-          formData.set('form_type', 'The Golden Ticket');
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            body: formData
-          });
-          const data = await res.json();
-          if (data.success) {
-            goldenTicketForm.style.display = 'none';
-            const successPanel = document.getElementById('golden-ticket-form-success');
-            if (successPanel) successPanel.classList.remove('hidden');
-          } else {
-            if (goldenTicketStatus) goldenTicketStatus.textContent = data.message || 'Something went wrong. Please try again.';
-            if (goldenTicketStatus) goldenTicketStatus.className = 'min-h-6 text-sm text-red-400 text-center';
-          }
-        } catch (err) {
-          if (goldenTicketStatus) goldenTicketStatus.textContent = 'Network error. Please try again.';
-          if (goldenTicketStatus) goldenTicketStatus.className = 'min-h-6 text-sm text-red-400 text-center';
-        }
-      });
-    }
-  </script>
 
 </BaseLayout>
