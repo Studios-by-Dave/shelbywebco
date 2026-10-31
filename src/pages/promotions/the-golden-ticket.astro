@@ -187,6 +187,25 @@ const faqs = [
     text-shadow: none;
   }
 
+  /* Lime green outline — brand accent, for the $297 price card. */
+  .gt-lime-glow {
+    color: #fffdf5;
+    text-shadow:
+      -1px -1px 0 #84cc16,
+       1px -1px 0 #84cc16,
+      -1px  1px 0 #84cc16,
+       1px  1px 0 #84cc16,
+      -2px  0   0 #84cc16,
+       2px  0   0 #84cc16,
+       0   -2px 0 #84cc16,
+       0    2px 0 #84cc16,
+      0 0 22px rgba(132, 204, 22, 0.45);
+  }
+  .gt-lime-glow > small {
+    color: #a3e635;
+    text-shadow: none;
+  }
+
   /* Hero/body highlights — lighter blue so small bold copy stays legible
      on the dark background. */
   .gt-blue {
@@ -250,7 +269,7 @@ const faqs = [
   <!-- The deal, plainly -->
   <section class="py-16 lg:py-20 px-4 bg-brand-darkest/80 border-y border-white/5" data-animate>
     <div class="max-w-4xl mx-auto">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">The deal, <em class="not-italic">plainly</em></h2>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-2 text-center">The Absolute Best Deal Around</h2>
       <p class="text-white/60 text-center mb-10 italic">No surprises. Here is exactly what we cover and what you continue with.</p>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-dark border border-[#fcd34d] rounded-2xl p-8 shadow-[0_0_0_1px_rgba(252,211,77,.45),0_18px_50px_rgba(253,211,77,.1)]">
@@ -263,7 +282,7 @@ const faqs = [
           </ul>
         </div>
         <div class="bg-brand-dark border border-white/10 rounded-2xl p-8">
-          <p class="font-heading font-extrabold text-6xl leading-none gt-blue-glow">$297 <small class="font-body font-medium text-base text-white/50">/month · six-month minimum term</small></p>
+          <p class="font-heading font-extrabold text-6xl leading-none gt-lime-glow">$297 <small class="font-body font-medium text-base text-white/50">/month · six-month minimum term</small></p>
           <h3 class="text-xl font-bold text-white mt-3 mb-3">You continue on Core</h3>
           <ul class="list-disc pl-5 text-white/60 space-y-1">
             <li>Hosting, security, backups, and edits</li>

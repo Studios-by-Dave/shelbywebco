@@ -48,7 +48,6 @@ const aboutLinks = [
 const promotionLinks = [
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
-  { href: '/promotions/referral-bonus/', label: 'Referral Bonus' },
   { href: '/promotions/the-golden-ticket/', label: 'The Golden Ticket', gold: true },
 ];
 
