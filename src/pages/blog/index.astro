@@ -229,25 +229,25 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
             <p class="text-white font-bold mb-1">Start with a topic</p>
             <p class="text-white/70 text-sm mb-5">Three topics organize the practical content — pick the one that matches what you're trying to fix.</p>
             <div class="grid sm:grid-cols-3 gap-4">
-              <a href="/blog/topics/local-seo/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
-                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 1</span>
-                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">Local SEO</h3>
-                <p class="text-neutral-600 text-sm mt-1">Get found by nearby customers — GBP, reviews, on-page basics.</p>
+              <a href="/blog/topics/local-seo/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
+                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 1</span>
+                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">Local SEO</h3>
+                <p class="text-neutral-600 text-sm mt-1 italic">Get found by nearby customers — GBP, reviews, on-page basics.</p>
               </a>
-              <a href="/blog/topics/website-cost/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
-                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 2</span>
-                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">Website Cost</h3>
-                <p class="text-neutral-600 text-sm mt-1">Real ranges, plan comparisons, and what actually drives price.</p>
+              <a href="/blog/topics/website-cost/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
+                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 2</span>
+                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">Website Cost</h3>
+                <p class="text-neutral-600 text-sm mt-1 italic">Real ranges, plan comparisons, and what actually drives price.</p>
               </a>
-              <a href="/blog/topics/ai-search/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all">
-                <span class="text-brand-blue text-xs font-bold uppercase tracking-widest">Topic 3</span>
-                <h3 class="text-neutral-900 font-bold group-hover:text-brand-cyan transition-colors mt-1">AI Search &amp; GEO</h3>
-                <p class="text-neutral-600 text-sm mt-1">How AI assistants pick sources — and how to be one of them.</p>
+              <a href="/blog/topics/ai-search/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
+                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 3</span>
+                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">AI Search &amp; GEO</h3>
+                <p class="text-neutral-600 text-sm mt-1 italic">How AI assistants pick sources — and how to be one of them.</p>
               </a>
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Latest content-collection posts (newest first) -->
         {latestPosts.map((post) => (
@@ -699,7 +699,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Community Spotlight</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Post 20 (Community Spotlight) - Minister Will Groom -->
           <a href="/blog/minister-will-groom-keep-god-first-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
