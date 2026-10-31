@@ -8,6 +8,7 @@ import comptiaBadge from '../../../assets/badge icons/CompTIA_A__Digital_Badge.j
 import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
 import webFlyer from '../../../assets/Sweb_flyer_new.jpg';
 import heroBackdrop from '../../../assets/sweb_25.png';
+import marbleBg from '../../../assets/marble-800x530.webp';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -36,9 +37,12 @@ const serviceSchema = {
       <p class="text-sm uppercase tracking-widest mb-4 font-bold" style="color: #fcd34d;">✦ Web Design & Development</p>
       <div class="relative inline-block">
         <PixieDust client:load side="right" />
-        <h1 class="font-heading text-[4.2rem] md:text-[5rem] lg:text-[5.5rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
-          Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Web Design</span> with You in Mind
-        </h1>
+        <div class="relative w-full rounded-3xl overflow-hidden bg-cover bg-center py-4 px-4" style={`background-image: url("${encodeURI(marbleBg.src)}")`}>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65"></div>
+          <h1 class="relative font-heading text-[3.6rem] md:text-[4.4rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
+            Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Web Design</span> with You in Mind
+          </h1>
+        </div>
       </div>
       <p class="text-xl text-white mb-8">
         We build responsive, high-performance websites that turn visitors into customers. Optimized for your specific business needs and built for long-term growth.
