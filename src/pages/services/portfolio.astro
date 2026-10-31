@@ -14,6 +14,8 @@ import mikesGutHealer from '../../../assets/portfolio/mikes-gut-healer.webp';
 import theLivingWord from '../../../assets/portfolio/the-living-word.webp';
 import rifeGenerator from '../../../assets/portfolio/rife-generator.webp';
 import gAnalyzer from '../../../assets/portfolio/5g-analyzer.webp';
+import willGroom from '../../../assets/portfolio/will-groom-screenshot-1.png';
+import savvyTechJones from '../../../assets/portfolio/savvytechjones-screenshot-1.jpg';
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -138,6 +140,32 @@ const serviceSchema = {
             <div class="mt-2 px-1">
               <h3 class="font-heading text-sm font-bold text-white">Odyssey Custom Renovations</h3>
               <p class="text-white/90 text-xs">Cleveland County</p>
+            </div>
+          </div>
+
+          <!-- Will Groom Restorations -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={willGroom} alt="Will Groom Restorations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Will Groom Restorations</h3>
+              <p class="text-white/90 text-xs">Shelby, NC</p>
+            </div>
+          </div>
+
+          <!-- Savvy Tech Jones -->
+          <div class="group cursor-pointer">
+            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+              <div class="aspect-video relative overflow-hidden">
+                <Image src={savvyTechJones} alt="Savvy Tech Jones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              </div>
+            </div>
+            <div class="mt-2 px-1">
+              <h3 class="font-heading text-sm font-bold text-white">Savvy Tech Jones</h3>
+              <p class="text-white/90 text-xs">Shelby, NC</p>
             </div>
           </div>
 
@@ -281,5 +309,57 @@ const serviceSchema = {
       </a>
     </div>
   </section>
+
+  <!-- Lightbox Modal -->
+  <div id="portfolio-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-label="Portfolio screenshot preview">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col">
+      <button id="portfolio-lightbox-close" class="absolute -top-10 right-0 text-white text-3xl leading-none hover:text-brand-cyan transition-colors" aria-label="Close preview">&times;</button>
+      <div class="overflow-auto rounded-xl border border-white/10 bg-brand-dark shadow-2xl">
+        <img id="portfolio-lightbox-img" src="" alt="" class="w-full h-auto block" />
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const lightbox = document.getElementById('portfolio-lightbox');
+      const img = document.getElementById('portfolio-lightbox-img');
+      const closeBtn = document.getElementById('portfolio-lightbox-close');
+      if (!lightbox || !img || !closeBtn) return;
+
+      function open(src, alt) {
+        img.src = src;
+        img.alt = alt || '';
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        img.src = '';
+        document.body.style.overflow = '';
+      }
+
+      // Wire up every portfolio card
+      document.querySelectorAll('.group.cursor-pointer').forEach((card) => {
+        const image = card.querySelector('img');
+        if (!image) return;
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          open(image.src, image.alt);
+        });
+      });
+
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) close();
+      });
+    })();
+  </script>
 
 </BaseLayout>
