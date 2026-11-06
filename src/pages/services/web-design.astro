@@ -19,14 +19,51 @@ const serviceSchema = {
   "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
   "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC"]
 };
+
+const faqs = [
+  {
+    question: "How much does a website cost in Shelby, NC?",
+    answer: "Websites start with a $497 launch fee, then $297/month for hosting, maintenance, and ongoing local SEO on a six-month minimum term. After that it's month-to-month with 30 days' notice. See the plans on this page for what each includes."
+  },
+  {
+    question: "How long does it take to build a website?",
+    answer: "Most sites launch in 4–6 weeks, depending on the number of pages, how quickly content and photos are ready, and how much custom functionality the project needs. We give you a clear timeline after discovery."
+  },
+  {
+    question: "Do you build mobile-friendly websites?",
+    answer: "Yes. Every site is designed mobile-first and tested across phones, tablets, and desktops, so it looks sharp and works smoothly on every screen size."
+  },
+  {
+    question: "Is local SEO included with a new website?",
+    answer: "Yes. Local SEO foundations are built in from day one, including clean site structure, on-page optimization, schema, sitemaps, and Google Business Profile guidance. Ongoing local SEO is included in the monthly plan."
+  },
+  {
+    question: "Do you work with businesses outside Shelby?",
+    answer: "Absolutely. We build websites for businesses across Cleveland County and the surrounding region, including Kings Mountain, Boiling Springs, Forest City, Polkville, and Gastonia."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 ---
 
 <BaseLayout 
-  title="Web Design Services in Shelby, NC"
-  description="High-performance, conversion-focused web design services. We build fast, mobile-responsive websites with built-in SEO to help your business grow."
+  title="Web Design in Shelby, NC from $497"
+  description="Custom, mobile-first web design for Shelby, NC businesses. Fast sites with local SEO built in. Launch fee from $497, plans from $297/mo. Get your free quote."
   bgVariant="charcoal"
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden" data-animate>
@@ -40,12 +77,12 @@ const serviceSchema = {
         <div class="relative w-full rounded-3xl overflow-hidden bg-cover bg-center py-4 px-4" style={`background-image: url("${encodeURI(marbleBg.src)}")`}>
           <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65"></div>
           <h1 class="relative font-heading text-[3.6rem] md:text-[4.4rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]">
-            Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Web Design</span> with You in Mind
+            Professional <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-dark via-brand-blue to-brand-blue-light">Web Design</span> in Shelby, NC, with You in Mind
           </h1>
         </div>
       </div>
       <p class="text-xl text-white mb-8">
-        We build responsive, high-performance websites that turn visitors into customers. Optimized for your specific business needs and built for long-term growth.
+        We build fast, mobile-friendly websites for Shelby and Cleveland County businesses, with local SEO built in from day one, so your site doesn't just look good, it gets found.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 <a 
@@ -74,6 +111,60 @@ const serviceSchema = {
           class="h-24 md:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
+    </div>
+  </section>
+
+  <!-- Web Design for Shelby and Cleveland County -->
+  <section class="py-20 px-4 bg-brand-dark border-y border-white/5" data-animate>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Locally Focused</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Web Design for Shelby and Cleveland County Businesses</h2>
+        <p class="text-white/90 max-w-3xl mx-auto text-lg">
+          We design and build websites for local businesses that need to look credible, load fast, and turn nearby searches into calls and quote requests. Every build starts with your customers, your services, and the areas you serve.
+        </p>
+      </div>
+
+      <ul class="grid sm:grid-cols-2 gap-4 mb-10">
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Custom design built around your business and the customers you want</span>
+        </li>
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Mobile-first layouts that work smoothly on every screen size</span>
+        </li>
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Fast, standards-compliant code built for Core Web Vitals</span>
+        </li>
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Local SEO and Google Business Profile foundations built in</span>
+        </li>
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Conversion-focused pages with clear calls to action</span>
+        </li>
+        <li class="flex gap-3 items-start bg-brand-darkest border border-white/10 rounded-xl p-5">
+          <svg class="w-5 h-5 text-brand-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-white">Ongoing hosting, security, backups, and support</span>
+        </li>
+      </ul>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <span class="text-brand-glow/60 uppercase tracking-widest font-bold text-sm">Serving:</span>
+        <a href="/web-design-shelby-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Shelby</a>
+        <a href="/web-design-kings-mountain-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Kings Mountain</a>
+        <a href="/web-design-boiling-springs-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Boiling Springs</a>
+        <a href="/web-design-forest-city-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Forest City</a>
+        <a href="/web-design-polkville-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Polkville</a>
+        <a href="/web-design-gastonia-nc/" class="inline-flex items-center text-white/80 border border-white/30 rounded-lg px-3 py-1.5 text-sm font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">Gastonia</a>
+      </div>
+
+      <p class="text-center text-white/90">
+        Want the search side handled too? <a href="/services/seo/" class="text-brand-cyan font-semibold hover:text-white underline decoration-brand-cyan/30 transition-colors">Explore our local SEO services →</a>
+      </p>
     </div>
   </section>
 
@@ -118,6 +209,26 @@ const serviceSchema = {
     title="Web Design Built Into One Plan"
     subtitle={`No $3,000–$8,000 upfront website bill. Your site is designed, launched, and maintained, with ongoing local SEO starting at $297/month on a six-month minimum term, then cancel at any time with 30 days’ notice.`}
   />
+
+  <!-- Roger Padgett Review -->
+  <section class="py-20 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="rounded-3xl border border-brand-cyan/20 bg-brand-darkest/80 p-10">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+          <span class="text-yellow-300 text-3xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
+        </div>
+        <p class="text-white text-xl italic mb-4">"Very professional. And very knowledgeable about what can and can't be done. Highly recommend David."</p>
+        <p class="font-bold text-white text-lg">Roger Padgett</p>
+        <p class="text-brand-cyan/60 text-sm uppercase tracking-widest mt-2">Padgsteen Guitars</p>
+        <p class="text-brand-cyan/60 text-sm uppercase tracking-widest mt-2">Google Review</p>
+        <a href="https://www.padgsteenguitars.com/" target="_blank" rel="noopener" class="inline-block mt-4 text-brand-accent font-semibold hover:text-brand-accent-light transition-colors">See the website we built →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Payment Terms & Onboarding Section -->
   <section class="py-12 px-4" data-animate>
@@ -351,6 +462,57 @@ const serviceSchema = {
           <p class="text-white font-semibold group-hover:text-brand-cyan">Home Remodelers</p>
           <p class="text-white/50 text-sm">Before/after &amp; booking</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Process</p>
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">How It Works</h2>
+        <p class="text-white/70 max-w-2xl mx-auto text-lg">A clear, four-step process from first conversation to a site that keeps working for your business.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold mb-5">1</div>
+          <h3 class="text-xl font-bold text-white mb-3 font-heading">Discovery &amp; Strategy</h3>
+          <p class="text-white/90">We learn about your business, customers, and goals, then map the pages and calls to action your site needs.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold mb-5">2</div>
+          <h3 class="text-xl font-bold text-white mb-3 font-heading">Design &amp; Build</h3>
+          <p class="text-white/90">We design a custom, mobile-first layout and build it with clean, fast, standards-compliant code.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold mb-5">3</div>
+          <h3 class="text-xl font-bold text-white mb-3 font-heading">Review &amp; Launch</h3>
+          <p class="text-white/90">You review the site, we refine the details, connect your domain, and launch with local SEO foundations in place.</p>
+        </div>
+        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+          <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold mb-5">4</div>
+          <h3 class="text-xl font-bold text-white mb-3 font-heading">Grow &amp; Optimize</h3>
+          <p class="text-white/90">After launch, we monitor performance, maintain the site, and keep improving content and search visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Design FAQ -->
+  <section class="py-24 px-4 bg-brand-dark border-y border-white/5" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Common Questions</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Web Design FAQ</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-brand-darkest p-8 rounded-2xl border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-3">{faq.question}</h3>
+            <p class="text-white">{faq.answer}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

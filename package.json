@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.3.2",
     "animejs": "^4.5.0",
     "astro": "^7.0.6",
-    "glob": "^13.0.6",
+    "glob": "^14.0.4",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "sharp": "^0.35.3",
@@ -39,6 +39,8 @@
     "globals": "^17.11.0"
   },
   "overrides": {
+    "glob": "^14.0.4",
+    "minimatch": "^11.0.5",
     "path-to-regexp": "6.3.0",
     "postcss-selector-parser": "7.1.6"
   }
