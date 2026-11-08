@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Golden Ticket — Free Website Build for 5 Local Businesses</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0b1020;--bg2:#10172b;--card:#141c33;--line:#26304d;--text:#e8ecf5;--mute:#a3adc7;--gold:#f6c744;--gold2:#c99a1d;--cyan:#38bdf8;--green:#7ed321;--green2:#5aa812;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px;height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Inter,system-ui,sans-serif;background-image:linear-gradient(rgba(56,189,248,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.04) 1px,transparent 1px);background-size:44px 44px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.15;margin:0}
+h2{font-size:clamp(1.8rem,4.5vw,2.5rem);color:var(--gold);margin-bottom:.5rem;text-align:center}
+h3{font-size:1.2rem;color:var(--text)}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:var(--cyan)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.lede{color:var(--mute);text-align:center;margin:0 auto 2.5rem}
+.alt{background:rgba(16,23,43,.85)}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.btn{display:inline-block;background:linear-gradient(#8fe02e,var(--green2));color:#10200a;font-weight:700;padding:16px 30px;border-radius:12px;text-decoration:none;border:0;font:700 1.05rem Inter,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(126,211,33,.25)}
+.btn:hover{filter:brightness(1.08)}
+header.top{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:700 1.2rem "Playfair Display",serif;color:var(--text);text-decoration:none}
+.brand small{display:block;font:italic 400 .72rem Inter;color:var(--cyan)}
+header .btn{padding:9px 18px;font-size:.9rem;box-shadow:none}
+/* hero */
+.hero{text-align:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);color:var(--gold);text-shadow:0 0 40px rgba(246,199,68,.3)}
+.hero .sub{font-size:clamp(1.15rem,2.6vw,1.45rem);margin:1.1rem auto 0;max-width:34ch;color:var(--text)}
+.hero .sub b{color:var(--gold)}
+.ticket{width:min(440px,88%);margin:34px auto;transform:rotate(-3deg);background:linear-gradient(135deg,#f9dc7a,var(--gold) 45%,var(--gold2));color:#1a1405;border-radius:14px;padding:22px 26px;position:relative;box-shadow:0 24px 60px rgba(246,199,68,.22),0 0 0 6px #e9e9ee;text-align:center}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--bg);transform:translateY(-50%)}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket .s{font:800 2.6rem "Playfair Display",serif;color:#0e4a8a;line-height:1}
+.ticket .t{font:800 clamp(2rem,8vw,2.9rem)/1 Impact,"Arial Narrow",sans-serif;letter-spacing:.02em;margin:6px 0 10px}
+.ticket .row{display:flex;justify-content:space-between;border-top:2px solid #1a1405;padding-top:8px;font:700 .85rem Inter}
+.ticket .row span{display:block;font-weight:500;font-size:.7rem;opacity:.7}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 30px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:.92rem;color:var(--mute)}
+.chip b{color:var(--gold)}
+.hero .note{font-size:.9rem;color:var(--mute);margin:16px auto 0}
+/* deal */
+.deal{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px}
+.card.gold{border-color:var(--gold);box-shadow:0 0 0 1px rgba(246,199,68,.3),0 18px 50px rgba(246,199,68,.08)}
+.big{font:800 3.6rem "Playfair Display",serif;line-height:1;color:var(--gold)}
+.big small{font:500 1rem Inter;color:var(--mute)}
+.card h3{margin:.4rem 0 .8rem}
+.card ul{margin:0;padding-left:1.1rem;color:var(--mute)}
+.card li{margin:.3rem 0}
+.card .fine{margin:1rem 0 0;font-size:.9rem;color:var(--mute)}
+.card.blue .big{color:var(--cyan)}
+.callout{max-width:760px;margin:28px auto 0;padding:26px 30px;border-left:4px solid var(--cyan);background:var(--card);border-radius:0 14px 14px 0}
+.callout p{color:var(--mute);margin:.6rem 0 0}.callout b{color:var(--text)}
+/* included */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;max-width:760px;margin:0 auto;padding:0;list-style:none}
+.grid2 li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative}
+.grid2 li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:s;list-style:none;padding:0;margin:0;position:relative}
+.steps li{counter-increment:s;text-align:center;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);color:var(--gold);font:700 1.3rem "Playfair Display",serif;position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:26px;left:50%;width:100%;height:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps p{font-size:.95rem;color:var(--mute);margin:.4rem auto 0}
+/* asks */
+.asks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.asks .card{padding:24px}.three{grid-template-columns:repeat(3,1fr)}
+.asks .ic{font-size:1.6rem}
+.asks p{font-size:.93rem;color:var(--mute);margin:.3rem 0 0}
+/* form */
+.formcard{max-width:600px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:20px;padding:34px}
+label{display:block;font-weight:600;font-size:.95rem;margin:0 0 16px}
+label span{font-weight:400;color:var(--mute)}
+input,textarea,select{width:100%;margin-top:6px;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+textarea{min-height:120px;resize:vertical}
+.formcard .btn{width:100%;margin-top:6px}
+.formcard small{display:block;text-align:center;color:var(--mute);margin-top:12px}
+#ok{display:none;text-align:center}
+/* faq */
+details{border-bottom:1px solid var(--line);max-width:760px;margin:0 auto}
+summary{cursor:pointer;padding:20px 0;font:600 1.15rem "Playfair Display",serif;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);padding-bottom:18px}
+/* why */
+.why{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;max-width:760px;margin:0 auto}
+.avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),#0e4a8a);display:grid;place-items:center;font:700 2rem "Playfair Display",serif}
+.why p{color:var(--mute);margin-bottom:.6rem}
+footer{border-top:1px solid var(--line);padding:30px 0 100px;text-align:center;color:var(--mute);font-size:.9rem}
+.sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,16,32,.96);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));text-align:center}
+.sticky .btn{width:100%;padding:13px}
+@media(max-width:820px){section{padding:60px 0}.deal,.asks,.three{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:26px;text-align:left}.steps li{text-align:left;padding-left:70px}.steps li::before{position:absolute;left:0;top:0;margin:0}.steps li::after{top:52px;left:25px;width:2px;height:calc(100% - 26px)}.sticky{display:block}.why{grid-template-columns:1fr;text-align:center}.avatar{margin:0 auto}.why p{margin-left:auto;margin-right:auto}}
+@media(prefers-reduced-motion:no-preference){.ticket{animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:rotate(-3deg) translateY(-8px)}}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="#">Shelby Web Company<small>Formerly Studios by Dave</small></a>
+<a class="btn" href="#apply">Apply</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+<h1>The Golden Ticket</h1>
+<div class="ticket" aria-label="Golden Ticket: Class of 2026, 5 spots, Shelby NC">
+<div class="s">S</div><div class="t">GOLDEN TICKET</div>
+<div class="row"><div><span>Deadline</span>DEC. 15</div><div><span>Spots</span>5 ONLY</div><div><span>Place</span>SHELBY, NC</div></div>
+</div>
+<p class="sub" style="margin-inline:auto">We're choosing 5 lucky local businesses and building them a brand-new, fully custom website, <b>for FREE!</b></p>
+<p class="lede" style="margin-top:1rem">We cover the full <b style="color:var(--cyan)">$497</b> design, build, and launch fee, the same work we previously priced at an average of <b style="color:var(--cyan)">$1,200</b> per website. After launch, winners continue on our <b style="color:var(--cyan)">$297/month</b> Core plan for 12 months.</p>
+<div class="chips"><span class="chip"><b>5</b> winners</span><span class="chip">Closes <b>Dec 15</b>, 11:59 PM ET</span><span class="chip">Reviewed by a real person</span></div>
+<a class="btn" href="#apply">Apply for your Golden Ticket</a>
+<p class="note" style="margin-inline:auto">Takes about 5 minutes. No pitch deck needed.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>The deal, plainly</h2>
+<p class="lede">No surprises. Here is exactly what we cover and what you continue with.</p>
+<div class="deal">
+<div class="card gold"><div class="big">$0 <small>build &amp; launch</small></div>
+<h3>We cover the $497 fee</h3>
+<ul><li>Custom 4–5 page site, designed and built for you</li><li>Content setup and launch</li><li>About $1,200 of build work, normally</li></ul></div>
+<div class="card blue"><div class="big">$297 <small>/month, 12 months</small></div>
+<h3>You continue on Core</h3>
+<ul><li>Hosting, security, backups, and edits</li><li>Ongoing SEO and fresh content</li><li>Most care plans run about $150 and skip the SEO</li></ul>
+<p class="fine">Same plan every Core client signs.</p></div>
+</div>
+<div class="callout"><h3>This isn't an ordinary care plan</h3><p>Most website care plans run around $150/month for hosting and maintenance. At the heart of the $297 Core plan is <b>ongoing SEO and AI improvements plus continued content creation</b>, which build search visibility and authority over time. Your website keeps getting better.</p><p><b>No surprise charges, no upsells, no fine print.</b></p></div></div></section>
+
+<section><div class="wrap">
+<h2>What's included in Core</h2>
+<p class="lede">Every winner gets our Core growth plan with the launch fee covered by us, a direct giveback to the community that built this company. Here's everything in it.</p>
+<ul class="grid2">
+<li>4–5 page mobile-first website</li><li>Hosting, SSL, backups &amp; security</li><li>Contact forms &amp; lead alerts</li><li>Google Analytics &amp; Search Console</li><li>Foundational on-page &amp; local SEO</li><li>One small monthly edit request</li><li>Monthly performance snapshot</li><li>Quarterly growth review</li>
+</ul></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>How it works</h2>
+<p class="lede">From application to live site in weeks, not months.</p>
+<ol class="steps">
+<li><h3>Tell your story</h3><p>Fill out the short application. No pitch decks, no jargon. Tell us what you do, who you serve, and why a modern site would change your next 12 months.</p></li>
+<li><h3>We review</h3><p>A human reads every submission. We look for real stories, real customers, and a clear reason a better site matters now.</p></li>
+<li><h3>5 winners</h3><p>We choose exactly 5 businesses as a one-time cohort. The Class of 2026 closes with applications on Dec 15.</p></li>
+<li><h3>We build &amp; launch</h3><p>A friendly pre-discovery call, then we design, build, and launch: weeks, not months.</p></li>
+<li><h3>We measure</h3><p>At 30, 60, and 90 days we track traffic, calls, form fills, and rankings together.</p></li>
+</ol></div></section>
+
+<section><div class="wrap">
+<h2>What we ask in return</h2>
+<p class="lede">This program costs us real money. It only works for a small local shop like ours if it produces real proof and real relationships. Four simple asks:</p>
+<div class="asks">
+<div class="card"><div class="ic">💬</div><h3>An honest testimonial</h3><p>After launch, tell the truth about working with us, the good and the nitpicks. We'll use it as a case study with your 30/60/90-day results.</p></div>
+<div class="card"><div class="ic">⭐</div><h3>A Google review</h3><p>Once your site is live and you're happy with it, leave us a review. Reviews are the lifeblood of local businesses, including ours.</p></div>
+<div class="card"><div class="ic">📣</div><h3>Feature you for 6 months</h3><p>We'd love to show your site and results in our portfolio and social posts. You approve everything before it goes out.</p></div>
+<div class="card"><div class="ic">🤝</div><h3>One warm intro</h3><p>Know one other business owner who deserves a better website? Pass along their name. That's it.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>The 30 / 60 / 90-day case study</h2>
+<p class="lede">Every Golden Ticket site becomes a living case study. We track what matters from day one, so your giveback fuels the next business's chance.</p>
+<div class="asks three">
+<div class="card"><h3 style="color:var(--gold)">Day 30 · Foundation live</h3><p>Site launched, Analytics and Search Console running, contact forms delivering leads, foundational local SEO in place.</p></div>
+<div class="card"><h3 style="color:var(--gold)">Day 60 · First signals</h3><p>First organic impressions, calls, and form fills rolling in. We tune pages and content around what's working.</p></div>
+<div class="card"><h3 style="color:var(--gold)">Day 90 · Proof on paper</h3><p>A clean results snapshot of traffic, leads, and rankings that becomes your case study and our receipts for the program.</p></div>
+</div></div></section>
+
+<section id="apply"><div class="wrap">
+<h2>Apply for the Golden Ticket</h2>
+<p class="lede">Tell your story. That's the whole application. 5 spots for the Class of 2026, closing December 15, 2026 at 11:59 PM ET. Curious how this fits our standard plans? See <a href="#">pricing</a>.</p>
+<div class="formcard">
+<form id="f" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'">
+<label>Your name<input required autocomplete="name"></label>
+<label>Email<input type="email" required autocomplete="email"></label>
+<label>Business name<input required></label>
+<label>Industry <span>(optional)</span><select><option>Select one…</option><option>Home services &amp; trades</option><option>Construction &amp; remodeling</option><option>Restaurant &amp; food</option><option>Retail &amp; boutique</option><option>Health, wellness &amp; beauty</option><option>Professional services</option><option>Nonprofit &amp; community</option><option>Other</option></select></label>
+<label>Current website <span>(optional)</span><input type="url" placeholder="https://"></label>
+<label>Why does your business deserve a new website?<textarea required></textarea></label>
+<label>Phone <span>(optional)</span><input type="tel" autocomplete="tel"></label>
+<button class="btn" type="submit">Submit my application</button>
+<small>$0 build, then $297/mo for 12 months if selected.</small>
+</form>
+<div id="ok"><h3 style="color:var(--gold)">Application received</h3><p style="margin:.6rem auto">We read every one personally. If you're one of the 5 winners, we'll reach out directly.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2 style="margin-bottom:1.5rem">Frequently asked questions</h2>
+<details><summary>Is it really free?</summary><p>The $497 build and launch fee, covering design, build, content setup, and launch work we previously priced at an average of $1,200, is on us. The ongoing investment is then $297/month for a standard 12-month term, which includes hosting, maintenance, edits, and ongoing SEO and AI improvements. No upfront project invoice, no surprise charges.</p></details>
+<details><summary>Who can apply?</summary><p>Local businesses in the areas we serve, solo operators or small teams. You don't need a website today; old, outdated, or nonexistent all qualify. You do need to be open for business and ready to launch within the program window.</p></details>
+<details><summary>How are the 5 winners chosen?</summary><p>By story and need. We look for businesses where a modern website would genuinely change the next 12 months, and where the partnership makes sense both ways. Every application is read by a human.</p></details>
+<details><summary>What's the deadline?</summary><p>December 15, 2026 at 11:59 PM ET. The Golden Ticket is a one-time cohort of exactly 5 businesses. Once applications close, this page closes with it.</p></details>
+<details><summary>I already have a website. Can I still apply?</summary><p>Absolutely. If your current site is dated, slow, or invisible on Google, that's exactly what this program exists for. Tell us about it in your application.</p></details>
+<details><summary>What's the catch?</summary><p>No catch, just the four asks: an honest testimonial, a Google review, permission to feature your results for 6 months (with your approval), and one warm intro. We can afford the $497 waiver because those results help us win the next round of real clients.</p></details>
+</div></section>
+
+<section><div class="wrap">
+<div class="why"><div class="avatar" aria-hidden="true">D</div>
+<div><h3 style="color:var(--gold);margin-bottom:.6rem">Why we're doing this</h3>
+<p><b style="color:var(--text)">It's simply good business.</b> Being fully transparent creates value and builds trust before the first invoice ever exists. And confidence is what turns a website into a real opportunity.</p><p><b style="color:var(--text)">We're a growing agency.</b> Giving upfront value earns credibility fast and generates real case studies, proof, and organic SEO traction across the local business community.</p>
+<p><b style="color:var(--text)">Dave Richardson</b>, Founder / Lead Developer · CompTIA A+ Certified<br><i>"Developer by trade. Musician by birth. Healer by necessity."</i><br><a href="tel:+17044738188">(704) 473-8188</a> · <a href="mailto:dave@shelbywebco.com">dave@shelbywebco.com</a></p></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><p style="margin:0 auto .6rem">Serving Shelby, Gastonia, Kings Mountain, Forest City, Boiling Springs, Polkville &amp; Western NC</p><p style="margin:0 auto .6rem">© 2026 Shelby Web Company. All rights reserved.</p><p style="margin:0 auto">Proudly supporting Operation Underground Railroad, to aid the end of child trafficking.</p></div></footer>
+<div class="sticky"><a class="btn" href="#apply">Apply · Closes Dec 15</a></div>
+</body>
+</html>
