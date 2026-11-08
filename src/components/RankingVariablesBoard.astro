@@ -1,0 +1,153 @@
+---
+// Graphical conversion of the "10 Variables Behind Every Ranking" table.
+// Grouped, card-based scorecard — same copy, same tooltips, visual instead of tabular.
+import GlossaryTooltip from './GlossaryTooltip.jsx';
+
+const groups = [
+  {
+    label: 'The Technical Foundation',
+    accent: 'from-lime-400 to-lime-600',
+    ring: 'hover:border-lime-500/60',
+    badge: 'border-lime-500/40 bg-lime-500/10 text-lime-600',
+    items: [
+      {
+        n: '01',
+        title: 'Page Indexing & Crawlability',
+        desc: "Google must be able to discover, crawl, and index every important page on your site. If pages aren't indexed, they don't exist in search results — no matter how good your content is.",
+      },
+      {
+        n: '02',
+        titleHtml: true,
+        title: 'Canonicalization',
+        plain: 'Tells Google which page is the real one when you have duplicates.',
+        slug: 'canonical-tag',
+        desc: 'When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.',
+      },
+      {
+        n: '03',
+        title: 'XML Sitemap Implementation',
+        desc: 'A properly structured sitemap acts as a roadmap for search engines — listing every page, its update frequency, and relative importance so crawlers prioritize what matters most.',
+      },
+      {
+        n: '04',
+        titleHtml: true,
+        title: 'Robots.txt',
+        plain: 'A small file that tells crawlers which pages to skip or allow.',
+        slug: 'robots-txt',
+        suffix: ' Configuration',
+        desc: 'This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.',
+      },
+      {
+        n: '05',
+        titleHtml: true,
+        title: 'LLMs.txt',
+        plain: 'Helps AI like ChatGPT and Perplexity understand and surface your site.',
+        slug: 'llms-txt',
+        suffix: ' — AI Visibility',
+        desc: 'The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.',
+      },
+      {
+        n: '06',
+        title: 'Redirect Management',
+        descHtml: true,
+        desc: 'Broken links and missing pages kill ranking signals. Proper 301 redirects preserve ',
+        tooltipAfter: 'Link Equity',
+        tooltipPlain: 'The ranking power a link passes from one page to another.',
+        tooltipSlug: 'link-equity',
+        descTail: ' when URLs change, pages move, or domains are consolidated — without losing authority.',
+      },
+    ],
+  },
+  {
+    label: 'On-Page & Performance',
+    accent: 'from-cyan-400 to-cyan-600',
+    ring: 'hover:border-cyan-400/60',
+    badge: 'border-cyan-400/40 bg-cyan-400/10 text-cyan-600',
+    items: [
+      {
+        n: '07',
+        title: 'On-Page Optimization',
+        desc: 'Title tags, meta descriptions, header hierarchy, internal linking, keyword placement, content quality, and structured data — every element on every page sends signals to search engines.',
+      },
+      {
+        n: '08',
+        title: 'Technical Performance',
+        desc: 'Core Web Vitals, mobile responsiveness, page speed, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.',
+      },
+    ],
+  },
+  {
+    label: 'Local & Authority',
+    accent: 'from-blue-400 to-blue-600',
+    ring: 'hover:border-blue-400/60',
+    badge: 'border-blue-400/40 bg-blue-400/10 text-blue-600',
+    items: [
+      {
+        n: '09',
+        title: 'Local SEO & Google Business',
+        desc: 'For service-area businesses, local SEO is everything — Google Business Profile optimization, NAP consistency, local citations, review management, and map pack positioning.',
+      },
+      {
+        n: '10',
+        title: 'Content Strategy & Authority',
+        descHtml: true,
+        desc: 'Keyword research, topic clustering, content freshness, ',
+        tooltipAfter: 'E-E-A-T',
+        tooltipPlain: "Google's trust check: Experience, Expertise, Authority, Trust.",
+        tooltipSlug: 'e-e-a-t',
+        descTail: " signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.",
+      },
+    ],
+  },
+];
+---
+
+<div class="space-y-10">
+  {
+    groups.map((group) => (
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <span class={`inline-block w-2 h-2 rounded-full bg-gradient-to-br ${group.accent}`}></span>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500">{group.label}</h3>
+          <span class="flex-1 h-px bg-slate-300/70"></span>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {group.items.map((item) => (
+            <div
+              class={`relative bg-white/70 border border-slate-200 rounded-2xl p-5 transition-all duration-300 hover:bg-white hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)] hover:-translate-y-0.5 ${group.ring}`}
+            >
+              <div class="flex items-start gap-3 mb-2.5">
+                <span
+                  class={`shrink-0 inline-flex w-8 h-8 rounded-lg border items-center justify-center font-bold text-xs ${group.badge}`}
+                >
+                  {item.n}
+                </span>
+                <h4 class="text-brand-blue-dark font-bold text-sm md:text-base leading-snug pt-1">
+                  {item.titleHtml ? (
+                    <>
+                      <GlossaryTooltip client:load term={item.title} plain={item.plain} slug={item.slug} />
+                      {item.suffix && <Fragment>{item.suffix}</Fragment>}
+                    </>
+                  ) : (
+                    item.title
+                  )}
+                </h4>
+              </div>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                {item.descHtml ? (
+                  <>
+                    {item.desc}
+                    <GlossaryTooltip client:load term={item.tooltipAfter} plain={item.tooltipPlain} slug={item.tooltipSlug} />
+                    {item.descTail}
+                  </>
+                ) : (
+                  item.desc
+                )}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

@@ -9,6 +9,7 @@ import projectBadge from '../../../assets/badge icons/badge_2.jpeg';
 import webFlyer from '../../../assets/Sweb_flyer_new.jpg';
 import heroBackdrop from '../../../assets/sweb_25.png';
 import marbleBg from '../../../assets/marble-800x530.webp';
+import pricingCompare from '../../../assets/Pricing_chart_1.jpg';
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -209,6 +210,20 @@ const faqSchema = {
     title="Web Design Built Into One Plan"
     subtitle={`No $3,000–$8,000 upfront website bill. Your site is designed, launched, and maintained, with ongoing local SEO starting at $297/month on a six-month minimum term, then cancel at any time with 30 days’ notice.`}
   />
+
+  <!-- Old vs. New Pricing Comparison Graphic -->
+  <section class="py-12 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-brand-accent/10 via-transparent to-brand-cyan/5 border border-brand-accent/20 rounded-3xl p-2 md:p-4">
+        <Image
+          src={pricingCompare}
+          alt="Graph comparing traditional website pricing ($1,000-$1,500 upfront plus a $149/month care plan) with Shelby Web Co's new structure: $497 website build plus $297/month ongoing local SEO"
+          class="w-full h-auto rounded-2xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- Roger Padgett Review -->
   <section class="py-20 px-4" data-animate>

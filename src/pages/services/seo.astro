@@ -8,6 +8,7 @@ import strat3 from '../../../assets/STRAT-3.png';
 import strat4 from '../../../assets/STRAT-4.png';
 import strat5 from '../../../assets/STRAT-5.png';
 import seoHeroBackdrop from '../../../assets/seo service page/sis_console_2.png';
+import pricingCompare from '../../../assets/Pricing_chart_1.jpg';
 import { getImage } from 'astro:assets';
 
 const stratLightbox = await Promise.all(
@@ -15,7 +16,7 @@ const stratLightbox = await Promise.all(
     getImage({ src, width: 1600, format: 'webp', quality: 80 })
   )
 );
-import GlossaryTooltip from '../../components/GlossaryTooltip.jsx';
+import RankingVariablesBoard from '../../components/RankingVariablesBoard.astro';
 import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
 const serviceSchema = {
@@ -283,69 +284,8 @@ const faqSchema = {
         <p class="text-slate-600 text-center mb-10 max-w-3xl mx-auto">
           SEO isn't one thing — it's dozens of interconnected systems working together. Missing any single layer can hold your entire site back. Here's what goes into a proper SEO strategy:
         </p>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-left">
-            <caption class="sr-only">The ten variables that influence search engine rankings</caption>
-            <thead>
-              <tr class="border-b-2 border-slate-300">
-                <th scope="col" class="w-12 py-3 pr-3 text-xs font-bold uppercase tracking-widest text-slate-500">#</th>
-                <th scope="col" class="py-3 pr-4 text-xs font-bold uppercase tracking-widest text-slate-500">Variable</th>
-                <th scope="col" class="py-3 text-xs font-bold uppercase tracking-widest text-slate-500">Why it matters</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-slate-200 bg-white/60 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">01</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">Page Indexing & Crawlability</td>
-                <td class="py-4 align-top text-slate-600 text-sm">Google must be able to discover, crawl, and index every important page on your site. If pages aren't indexed, they don't exist in search results — no matter how good your content is.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/40 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">02</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base"><GlossaryTooltip client:load term="Canonicalization" plain="Tells Google which page is the real one when you have duplicates." slug="canonical-tag" /></td>
-                <td class="py-4 align-top text-slate-600 text-sm">When multiple URLs serve the same or similar content, canonical tags tell Google which version is the authoritative one — preventing duplicate content issues that split your ranking power.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/60 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">03</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">XML Sitemap Implementation</td>
-                <td class="py-4 align-top text-slate-600 text-sm">A properly structured sitemap acts as a roadmap for search engines — listing every page, its update frequency, and relative importance so crawlers prioritize what matters most.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/40 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">04</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base"><GlossaryTooltip client:load term="Robots.txt" plain="A small file that tells crawlers which pages to skip or allow." slug="robots-txt" /> Configuration</td>
-                <td class="py-4 align-top text-slate-600 text-sm">This file tells crawlers which pages to access and which to skip. A misconfigured robots.txt can block your entire site from Google or expose pages you want hidden.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/60 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">05</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base"><GlossaryTooltip client:load term="LLMs.txt" plain="Helps AI like ChatGPT and Perplexity understand and surface your site." slug="llms-txt" /> — AI Visibility</td>
-                <td class="py-4 align-top text-slate-600 text-sm">The new frontier. LLMs.txt is an emerging standard that helps AI models like ChatGPT, Claude, and Perplexity understand and surface your content — optional today, critical tomorrow.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/40 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">06</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">Redirect Management</td>
-                <td class="py-4 align-top text-slate-600 text-sm">Broken links and missing pages kill ranking signals. Proper 301 redirects preserve <GlossaryTooltip client:load term="Link Equity" plain="The ranking power a link passes from one page to another." slug="link-equity" /> when URLs change, pages move, or domains are consolidated — without losing authority.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/60 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">07</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">On-Page Optimization</td>
-                <td class="py-4 align-top text-slate-600 text-sm">Title tags, meta descriptions, header hierarchy, internal linking, keyword placement, content quality, and structured data — every element on every page sends signals to search engines.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/40 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">08</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">Technical Performance</td>
-                <td class="py-4 align-top text-slate-600 text-sm">Core Web Vitals, mobile responsiveness, page speed, HTTPS security, and JavaScript rendering — Google rewards sites that load fast and work flawlessly on every device.</td>
-              </tr>
-              <tr class="border-b border-slate-200 bg-white/60 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">09</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">Local SEO & Google Business</td>
-                <td class="py-4 align-top text-slate-600 text-sm">For service-area businesses, local SEO is everything — Google Business Profile optimization, NAP consistency, local citations, review management, and map pack positioning.</td>
-              </tr>
-              <tr class="bg-white/40 hover:bg-white transition-colors duration-200">
-                <td class="py-4 pr-3 align-top"><span class="inline-flex w-8 h-8 bg-lime-200 rounded-lg items-center justify-center text-lime-700 font-bold text-sm">10</span></td>
-                <td class="py-4 pr-4 align-top text-brand-blue-dark font-bold text-sm md:text-base">Content Strategy & Authority</td>
-                <td class="py-4 align-top text-slate-600 text-sm">Keyword research, topic clustering, content freshness, <GlossaryTooltip client:load term="E-E-A-T" plain="Google's trust check: Experience, Expertise, Authority, Trust." slug="e-e-a-t" /> signals (Experience, Expertise, Authority, Trust), and link building — the long game that separates top rankings from page two.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="relative">
+          <RankingVariablesBoard />
         </div>
       </div>
 
@@ -432,6 +372,20 @@ const faqSchema = {
     titleClass="font-heading text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-white via-[#dbeafe] to-brand-blue bg-clip-text text-transparent"
     subtitle={`Foundational SEO starts with your website. Three plans at <span class="text-brand-cyan font-semibold">$297, $597, and $797/month</span> — keyword research, content, Google Business Profile optimization, and review generation.`}
   />
+
+  <!-- Old vs. New Pricing Comparison Graphic -->
+  <section class="py-12 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-brand-accent/10 via-transparent to-brand-cyan/5 border border-brand-accent/20 rounded-3xl p-2 md:p-4">
+        <Image
+          src={pricingCompare}
+          alt="Graph comparing traditional website pricing ($1,000-$1,500 upfront plus a $149/month care plan) with Shelby Web Co's new structure: $497 website build plus $297/month ongoing local SEO"
+          class="w-full h-auto rounded-2xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- STRAT Console Showcase -->
   <section class="py-24 px-4 bg-brand-darkest relative overflow-hidden">

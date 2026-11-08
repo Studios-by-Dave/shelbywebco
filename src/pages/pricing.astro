@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GrowthPlanPricingSection from '../components/GrowthPlanPricingSection.astro';
 import marbleBg from '../../assets/marble-800x530.webp';
+import Image from '../components/OptimizedImage.astro';
+import pricingCompare from '../../assets/Pricing_chart_1.jpg';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -239,6 +241,20 @@ const faqSchema = {
   </section>
 
   <GrowthPlanPricingSection standalone />
+
+  <!-- Old vs. New Pricing Comparison Graphic -->
+  <section class="py-12 px-4" data-animate>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-brand-accent/10 via-transparent to-brand-cyan/5 border border-brand-accent/20 rounded-3xl p-2 md:p-4">
+        <Image
+          src={pricingCompare}
+          alt="Graph comparing traditional website pricing ($1,000-$1,500 upfront plus a $149/month care plan) with Shelby Web Co's new structure: $497 website build plus $297/month ongoing local SEO"
+          class="w-full h-auto rounded-2xl"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- Payment Terms & Onboarding Section -->
   <section class="py-12 px-4" data-animate>
