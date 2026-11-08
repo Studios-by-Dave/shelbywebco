@@ -4,6 +4,7 @@ import GrowthPlanPricingSection from '../components/GrowthPlanPricingSection.ast
 import marbleBg from '../../assets/marble-800x530.webp';
 import Image from '../components/OptimizedImage.astro';
 import pricingCompare from '../../assets/pricing_chart_2.jpg';
+import PricingFaqBoard from '../components/PricingFaqBoard.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -461,148 +462,7 @@ const faqSchema = {
       </h2>
 
       <div class="space-y-4" id="pricing-faq">
-        <!-- Question 1 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">What's included in the price?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Every package includes custom design, mobile responsiveness, basic SEO setup, and a contact form. Higher-tier packages add advanced functionality like booking systems, e-commerce, analytics integration, and more. All packages include web hosting setup assistance and a domain consultation.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Do you offer payment plans?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Growth Plans use a launch fee followed by one simple monthly payment for a six-month initial term — <strong class="text-white">Core is $497 to launch then $297/month</strong>, <strong class="text-white">Plus is $798–$998 to launch then $597/month</strong>, and <strong class="text-white">Ultra is $998–$1,498 to launch then $797/month</strong>. After the initial term, plans continue month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Is there a discount if I pay upfront?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes. If you pay your <strong class="text-white">entire build fee plus your first month of SEO service</strong> upfront in a single payment, we apply an <strong class="text-white">instant $50 discount</strong> to your total. It's the same plan and the same work — just one payment instead of two.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 4 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">How long does a typical project take?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Most projects are completed within 2–4 weeks, depending on the scope. A simple 1–2 page site can be ready in as little as 1–2 weeks, while more complex builds (e-commerce, custom portals) typically take 4–6 weeks. We'll give you a clear timeline during the proposal phase.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 5 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">What if I need more pages than my package includes?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              No problem! Additional pages beyond the package limit are billed at a flat rate of $75–$150 per page, depending on complexity. We can also help you prioritize which pages to launch with and add more later as your business grows.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 6 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Do you handle web hosting and domain setup?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes, we handle the full setup. We'll help you choose a domain and get everything deployed. Web hosting, SSL, backups, security monitoring, and software updates are included with every Growth Plan while your plan is active — there are no separate hosting fees.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 7 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Can I upgrade my package later?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Absolutely. Your site is built on a scalable foundation, so upgrading is smooth. Whether you need to add e-commerce, a booking system, or more pages down the road, we can handle it. We'll simply quote the additional work based on your current package rate.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 8 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">What if I'm not satisfied with the design?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Your satisfaction matters. Every Growth Plan includes <strong class="text-white">one small edit request per month</strong> (up to about 30 minutes of work) plus collaborative revision rounds during the initial build. We work iteratively, sharing progress along the way so there are no surprises. Larger redesigns, new pages, and major feature work are project-priced — just ask during your consultation.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 9 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Do you offer ongoing maintenance?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes! Every Growth Plan is ongoing by design — that is the whole point. Our plans are <strong class="text-white">Core ($497 launch + $297/month)</strong>, <strong class="text-white">Plus ($798–$998 launch + $597/month)</strong>, and <strong class="text-white">Ultra ($998–$1,498 launch + $797/month)</strong>. All include hosting, security, updates, foundational SEO, and monthly reporting. See <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">full SEO pricing</a>.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 10 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">What is a milestone audit?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Every monthly SEO plan is audited at each milestone, typically every 90 days. We review performance, rankings, technical health, and AI visibility together. If no further meaningful work is needed, we tell you and you can pause, reduce scope, or shift to lighter maintenance — no endless retainer.
-            </div>
-          </div>
-        </div>
-
-        <!-- Question 11 -->
-        <div class="faq-item bg-[#31353d] border border-white/10 rounded-xl overflow-hidden transition-all duration-300">
-          <button class="faq-question w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-[#3b404a]" aria-expanded="false">
-            <span class="text-white font-semibold pr-4">Do website packages include SEO?</span>
-            <span class="faq-icon text-brand-purple text-xl flex-shrink-0 transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 text-white/70 text-sm leading-relaxed">
-              Yes. Foundational on-page and local SEO is included with every plan, so there is no double-charging. If you already have a site and want active local visibility work, our Plus plan at $597/month covers keyword research, content, Google Business Profile optimization, and review generation — see <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">/services/seo/#growth-pricing</a>.
-            </div>
-          </div>
-        </div>
+        <PricingFaqBoard />
       </div>
     </div>
   </section>
