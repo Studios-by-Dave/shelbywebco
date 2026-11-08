@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Image from '../../components/OptimizedImage.astro';
 import swebscreen from '../../../assets/portfolio/shelby-web-portfolio-screenshot.png';
-import fsExpedited from '../../../assets/portfolio/fs-expeditedllc_screenshot_1.webp';
 import padgsteenGuitars from '../../../assets/portfolio/padgsteenguitars.webp';
 import shadesOfGray from '../../../assets/portfolio/shades-of-gray.webp';
 import leeConstruction from '../../../assets/portfolio/lee-construction.webp';
@@ -45,7 +44,7 @@ const serviceSchema = {
     <!-- Whisping portfolio preview backdrop -->
     <div class="portfolio-whisping absolute inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
       <div class="flex gap-8 items-center h-full w-max animate-[portfolio-scroll_35s_linear_infinite] opacity-[0.58] will-change-transform">
-        {[swebscreen, fsExpedited, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
+        {[swebscreen, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
           .flatMap(img => [img, img])
           .map(img => (
             <Image src={img} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
@@ -114,19 +113,6 @@ const serviceSchema = {
             <div class="mt-2 px-1">
               <h3 class="font-heading text-sm font-bold text-white">Padgsteen Guitars</h3>
               <p class="text-white/90 text-xs">Appalachia</p>
-            </div>
-          </div>
-
-          <!-- F&S Expedited -->
-          <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
-              <div class="aspect-video relative overflow-hidden">
-                <Image src={fsExpedited} alt="F&S Expedited LLC" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-            </div>
-            <div class="mt-2 px-1">
-              <h3 class="font-heading text-sm font-bold text-white">F&S Expedited LLC</h3>
-              <p class="text-white/90 text-xs">Shelby, NC</p>
             </div>
           </div>
 
