@@ -14,7 +14,7 @@ related:
   - { label: "Free SEO Audit", href: "/promotions/free-seo-audit/" }
 faqs:
   - question: "Is the Golden Ticket really free?"
-    answer: "I'm covering the $497 build and launch fee. After launch, winners pay $297 per month for a six-month minimum term covering hosting, care, edits and ongoing SEO — after that you can cancel at any time with 30 days’ notice. There's no upfront invoice."
+    answer: "I'm covering the $497 build and launch fee. After launch, winners pay $297 per month, month-to-month, covering hosting, care, edits and ongoing SEO — cancel at any time with 30 days’ notice. There's no upfront invoice."
   - question: "I already have a website. Can I still apply?"
     answer: "Yes. A dated, slow or invisible website is exactly what this program is for."
   - question: "How many businesses will win?"
@@ -25,7 +25,7 @@ faqs:
     answer: "No hidden fees. In return I ask for a testimonial, a Google review, permission to feature your business for 6 months (you approve everything) and one warm introduction."
 ---
 
-I'm giving 3 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan on a six-month minimum term — then cancel at any time with 30 days’ notice — which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
+I'm giving 3 local businesses a custom website through the Golden Ticket, and I'm covering the build and launch fee myself. Winners then continue on our $297/month Core plan — month-to-month, cancel at any time with 30 days’ notice — which includes ongoing SEO and fresh content. Applications close December 15, 2026 at 11:59 PM ET, and I read every one personally.
 
 [Apply for your Golden Ticket today!](/promotions/the-golden-ticket/)
 
@@ -40,7 +40,7 @@ So this fall, I'm doing something about it. Three businesses across Cleveland an
 No surprises, so here is exactly how it works:
 
 - I cover the **$497** build and launch fee. That's the design, build and launch of a custom 4 to 5 page website. It's work I've previously priced at about $1,200 on average.
-- You continue on our Core plan at **$297/month for a six-month minimum term** after launch — after that you can cancel at any time with 30 days’ notice. That's a total commitment of $1,782 over the term, and I want you to know that before you apply. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
+- You continue on our Core plan at **$297/month** after launch — month-to-month, and you can cancel at any time with 30 days’ notice. There's no minimum term and no early cancellation fee, so you can stop whenever you need to. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
 - Core isn't a basic care plan. Our $149/month Website Care Plan is hosting, backups, edits, and updates only. Core adds ongoing SEO and AI improvements plus continued content creation.
 
 ## What's included in Core

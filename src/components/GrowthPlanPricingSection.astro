@@ -35,7 +35,6 @@ const tiers = [
     name: 'Core',
     launch: '$497',
     monthly: '$297',
-    term: '6 months',
     badge: null,
     description: 'A professionally managed website for $297/month — without a $3,000 to $8,000 upfront project bill.',
     features: [
@@ -56,7 +55,6 @@ const tiers = [
     name: 'Plus',
     launch: '$798 – $998',
     monthly: '$597',
-    term: '6 months',
     badge: 'Most Popular',
     description: 'Active local SEO, content, Google Business Profile support, and reporting for real visibility growth.',
     features: [
@@ -78,7 +76,6 @@ const tiers = [
     name: 'Ultra',
     launch: '$998 – $1,498',
     monthly: '$797',
-    term: '6 months',
     badge: null,
     description: 'SEO plus conversion optimization, lead tracking, follow-up workflows, and priority support.',
     features: [
@@ -103,7 +100,6 @@ const seoTiers = [
     name: 'Core',
     launch: '$497',
     monthly: '$297',
-    term: '6 months',
     badge: null,
     description: 'The fundamentals that get you found and indexed — technical fixes, on-page cleanup, and a Google Business Profile that is actually complete.',
     features: [
@@ -123,7 +119,6 @@ const seoTiers = [
     name: 'Plus',
     launch: '$798 – $998',
     monthly: '$597',
-    term: '6 months',
     badge: 'Most Popular',
     description: 'Active local SEO, content, and review systems — the tier where rankings start moving and the map pack starts pulling in calls.',
     features: [
@@ -145,7 +140,6 @@ const seoTiers = [
     name: 'Ultra',
     launch: '$998 – $1,498',
     monthly: '$797',
-    term: '6 months',
     badge: null,
     description: 'SEO plus conversion, tracking, and hands-on strategy — one system, one point of contact, and we report on the numbers.',
     features: [
@@ -208,7 +202,7 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
             </div>
           )}
           <h3 class="font-heading text-4xl md:text-5xl font-black text-center mb-1 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">{tier.name}</h3>
-          <p class="text-xs uppercase tracking-widest text-center mb-1 bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent">{tier.term} initial term · cancel anytime</p>
+          <p class="text-xs uppercase tracking-widest text-center mb-1 bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent">Month-to-month · cancel anytime</p>
           <p class="text-white/70 text-sm mb-6 italic">{tier.description}</p>
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
@@ -231,7 +225,6 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
                     <span class="text-brand-cyan font-black text-[1.7rem]">{tier.monthly}<span class="text-base font-bold">/mo</span></span>
                     <span class="text-white/70 text-xs block">Ongoing management</span>
                   </div>
-                  <p class="text-white/50 text-xs text-center mt-3">6-month total: {tier.key === 'website' ? '$2,279' : tier.key === 'seo' ? '$4,380' : '$5,780'}</p>
                 </>
               )}
             </div>
@@ -303,8 +296,8 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
       <div class="text-center">
         <p class="text-white/80 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
           {content === 'seo'
-            ? 'Plans have a six-month minimum term. After that, SEO work continues month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee. Everything we build — content, schema, profiles, and citations — stays live on your site whether you stay with us or not.'
-            : 'Plans have a six-month minimum term. After that, plans continue month-to-month and you can cancel at any time with 30 days’ written notice. Cancelling before six months carries a $297 early cancellation fee. Your domain and content are always yours — website files and design are handed off to you upon completion of your initial term, or available for buyout if you cancel early.'}
+            ? 'Plans are month-to-month — no minimum term. You can cancel at any time with 30 days’ written notice. Everything we build — content, schema, profiles, and citations — stays live on your site whether you stay with us or not.'
+            : 'Plans are month-to-month — no minimum term. You can cancel at any time with 30 days’ written notice. Your domain and content are always yours — website files and design are handed off to you on request, or available for buyout if you cancel.'}
         </p>
       </div>
     )}
