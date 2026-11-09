@@ -54,6 +54,7 @@ const faqSchema = {
   }))
 };
 import marbleBg from '../../assets/marble-800x530.webp';
+import pricingCompare from '../../assets/pricing_chart_2.jpg';
 ---
 
 <BaseLayout 
@@ -107,14 +108,14 @@ import marbleBg from '../../assets/marble-800x530.webp';
         <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
         <span class="text-white font-bold text-sm tracking-wide">SHELBY, NC WEB DESIGN & LOCAL SEO</span>
       </div>
-      <h1 class="font-heading text-[clamp(2.6rem,6.5vw,4.6rem)] font-black mb-5 leading-[1.02] tracking-tight text-white max-w-3xl">
+      <h1 class="font-heading text-[clamp(3rem,7vw,5rem)] font-black mb-5 leading-[1.02] tracking-tight text-white max-w-4xl">
         Websites. <span class="text-brand-accent">Local SEO.</span> Custom Tools.
       </h1>
-      <p class="text-lg md:text-xl text-white/85 mb-2 max-w-2xl leading-relaxed font-semibold">
+      <p class="text-lg md:text-xl text-[#f4c95d] mb-2 max-w-2xl leading-relaxed font-semibold" style="text-shadow: 0 0 12px rgba(244, 201, 93, 0.25);">
         “Technology That Fills The Gaps.”
       </p>
       <p class="text-base sm:text-lg text-white/70 mb-8 max-w-2xl leading-relaxed italic">
-        We build digital solutions around the unique needs of your business. From professional websites and better search visibility to custom-built tools that solve operational challenges, we help local businesses work smarter and grow.
+        We build solutions. From professional websites and better search visibility to custom-built tools that solve operational challenges, we help local businesses work smarter and grow.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
@@ -139,7 +140,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
         <p class="text-white/60 text-xs font-medium mt-2">Just click and call! We're here <span class="text-white font-semibold">24/7</span> &bull; <span class="text-white/80">dave@shelbywebco.com</span></p>
       </a>
 
-      <div class="rounded-3xl p-1 my-8 bg-gradient-to-br from-white/20 to-white/5 w-full max-w-4xl relative">
+      <div class="rounded-3xl p-1 my-8 bg-gradient-to-br from-white/20 to-white/5 w-full max-w-[46rem] relative mx-auto">
         <Image 
           src={heroImage} 
           alt="Professional web design and local SEO services in Shelby, NC - Shelby Web Company" 
@@ -406,62 +407,54 @@ import marbleBg from '../../assets/marble-800x530.webp';
             <span class="block">Keep <span class="text-brand-accent">Building</span> Your Search <span class="text-brand-accent">Presence</span>.</span>
           </h2>
         </div>
-        <div class="space-y-4 text-white/80 text-body-lg leading-relaxed">
-          <p>
-            Some agencies charge thousands per month for SEO. We offer local businesses a more accessible option: ongoing local SEO starting at only $297/month.
-          </p>
-          <p>
-            Our focus: a clearly defined service, practical improvements, and consistent attention to your local search presence&mdash;without a monthly budget in the thousands.
-          </p>
-        </div>
 
-        <div class="space-y-4 text-white/80 text-body-lg leading-relaxed mt-8">
-          <p>
-            SEO isn&rsquo;t a one-time setup. It&rsquo;s ongoing: reviewing performance, improving content, updating your site, and refining as your business and customers&rsquo; searches evolve.
-          </p>
-          <p>
-            Each month builds on what&rsquo;s already in place, strengthening your search presence over time. Our $297/month plan keeps that work moving.
-          </p>
-        </div>
+        <div class="max-w-5xl mx-auto space-y-8 text-center">
+          <div class="space-y-5 text-white/80 text-body-lg leading-relaxed text-center mx-auto max-w-3xl">
+            <p>
+              Some agencies charge thousands per month for SEO. We keep it simpler: local SEO from just $297/month, month-to-month.
+            </p>
+            <p>
+              Our focus is clear: practical improvements, consistent attention, and steady growth in your local search presence without a big-budget retainer.
+            </p>
+            <p>
+              SEO is ongoing. We review performance, update content, improve your site, and refine as your business and customers&rsquo; searches evolve.
+            </p>
 
-        <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3">
-          <li class="flex items-start gap-3 text-white/90 text-body-lg">
-            <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-            Monthly performance snapshot
-          </li>
-          <li class="flex items-start gap-3 text-white/90 text-body-lg">
-            <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-            One small monthly edit request
-          </li>
-          <li class="flex items-start gap-3 text-white/90 text-body-lg">
-            <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-            On-page and local SEO fundamentals
-          </li>
-          <li class="flex items-start gap-3 text-white/90 text-body-lg">
-            <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-            Google Analytics and Search Console monitoring
-          </li>
-          <li class="flex items-start gap-3 text-white/90 text-body-lg sm:col-span-2">
-            <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-            Milestone audits every 90 days
-          </li>
-        </ul>
-      </div>
+            <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 pt-2 text-left mx-auto max-w-3xl">
+              <li class="flex items-start gap-3 text-white/90 text-body-lg">
+                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
+                Monthly performance snapshot
+              </li>
+              <li class="flex items-start gap-3 text-white/90 text-body-lg">
+                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
+                One small monthly edit request
+              </li>
+              <li class="flex items-start gap-3 text-white/90 text-body-lg">
+                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
+                On-page and local SEO basics
+              </li>
+              <li class="flex items-start gap-3 text-white/90 text-body-lg">
+                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
+                Google Analytics + Search Console monitoring
+              </li>
+              <li class="flex items-start gap-3 text-white/90 text-body-lg sm:col-span-2">
+                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
+                Milestone audits every 90 days
+              </li>
+            </ul>
 
-      <div class="border-t border-white/10 pt-10">
-        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-5">
-          Give Your SEO Time to Build Momentum.
-        </h3>
-        <div class="space-y-4 text-white/80 text-body-lg leading-relaxed">
-          <p>
-            SEO is an ongoing investment, not an overnight fix. We strongly recommend six to twelve months of consistent work &mdash; enough time for improvements to develop and for us to evaluate progress meaningfully.
-          </p>
-          <p>
-            Throughout, we keep working through your plan&mdash;reviewing performance, making updates, refining as we learn. Results and timing vary with your starting point, competition, and market.
-          </p>
-          <p>
-            That&rsquo;s a recommendation, not a requirement &mdash; your plan is month-to-month and you can cancel any time with 30 days&rsquo; written notice.
-          </p>
+            <p class="pt-2">
+              Give your SEO time to build momentum. We recommend six to twelve months of steady work, and your plan stays month-to-month with 30 days&rsquo; written notice to cancel.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-3 md:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)] mx-auto w-full max-w-4xl">
+            <Image
+              src={pricingCompare}
+              alt="SEO pricing comparison chart showing lower monthly local SEO pricing versus expensive agency retainers"
+              class="w-full h-auto rounded-2xl border border-white/10 mx-auto"
+            />
+          </div>
         </div>
       </div>
 

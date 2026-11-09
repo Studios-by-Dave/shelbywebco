@@ -493,9 +493,12 @@ const faqs = [
     <div class="max-w-3xl mx-auto gt-faq">
       <h2 class="font-heading font-bold text-4xl md:text-5xl text-[#fcd34d] mb-8 text-center">Frequently asked questions</h2>
       {faqs.map((faq) => (
-        <details class="border-b border-white/10">
-          <summary class="py-5 font-heading font-semibold text-lg text-white">{faq.question}</summary>
-          <p class="text-white/60 pb-5">{faq.answer}</p>
+        <details class="group overflow-hidden rounded-2xl border border-white/10 bg-[#111214] text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
+          <summary class="py-5 px-5 font-heading font-semibold text-lg text-white list-none flex items-center justify-between gap-3 cursor-pointer hover:bg-[#1a1b1f] transition-colors">
+            <span>{faq.question}</span>
+            <span aria-hidden="true" class="text-brand-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="px-5 pb-5 text-white/80 leading-relaxed">{faq.answer}</p>
         </details>
       ))}
       <p class="text-white/60 text-sm pt-5">Full terms: <a href="/promotions/the-golden-ticket/rules/" class="text-brand-blue-light hover:text-white underline decoration-brand-blue-light/40">Official Rules</a>.</p>
