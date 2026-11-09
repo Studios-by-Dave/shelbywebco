@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
 import headshotPlaceholder from '../../assets/SWeblogo1.jpg';
-import tieDyeBg from '../../assets/tie dye_3.jpg';
 import innovationImg from '../../assets/about/contractor-innovation.jpg';
 import satisfactionBadge from '../../assets/badge icons/satisfaction badge.jpg';
 import projectBadge from '../../assets/badge icons/badge_2.jpeg';
@@ -68,6 +67,7 @@ const orgSchema = {
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="About Shelby Web Company"
   description="20+ years of IT and network engineering behind a fresh web design and digital marketing agency in Shelby, NC."
 >
@@ -76,21 +76,13 @@ const orgSchema = {
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
-    <!-- Tie Dye Background -->
-    <div class="absolute inset-0 opacity-40 mix-blend-overlay pointer-events-none">
-      <Image 
-        src={tieDyeBg} 
-        alt="Colorful tie-dye background pattern" 
-        class="w-full h-full object-cover"
-        loading="eager"
-      />
-    </div>
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_15%_10%,rgba(59,130,246,0.18),transparent_42%),radial-gradient(circle_at_85%_20%,rgba(132,204,22,0.10),transparent_38%)]"></div>
     
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
       <div class="md:w-1/2 text-center md:text-left">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ About Shelby Web</p>
-        <h1 class="font-heading text-5xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Shelby Web Company
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ About Shelby Web</p>
+        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+          Shelby Web <span class="bg-gradient-to-r from-brand-blue-light to-brand-accent bg-clip-text text-transparent">Company</span>
         </h1>
         <p class="text-white/90 text-base mb-6 italic">
 Dave Richardson — Founder / Lead Developer
@@ -104,13 +96,13 @@ Dave Richardson — Founder / Lead Developer
         <div class="flex flex-wrap justify-center md:justify-start gap-4">
           <a 
             href="/contact/"
-            class="cta-glow-shine bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+            class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35)] hover:-translate-y-[1px] transition-all duration-300"
           >
             Start Building Together
           </a>
           <a 
             href="/about/causes-we-support/"
-            class="border border-white/20 text-white px-8 py-3 rounded-xl font-medium hover:bg-white/10 transition-colors"
+            class="border border-white/15 bg-white/[0.04] text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/[0.08] hover:border-white/25 transition-all"
           >
             Causes We Support
           </a>
@@ -119,13 +111,15 @@ Dave Richardson — Founder / Lead Developer
       <div class="md:w-1/2 flex justify-center">
         <div class="relative w-full max-w-sm">
           <!-- Main Shelby Hero Image -->
-          <Image 
-            src={headshotPlaceholder} 
-            alt="Shelby Web Company Logo" 
-            class="rounded-[2rem] shadow-2xl border-2 border-brand-cyan/20 w-full object-cover aspect-square transition-all duration-500" 
-          />
+          <div class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl">
+            <Image
+              src={headshotPlaceholder}
+              alt="Shelby Web Company Logo"
+              class="rounded-[1.5rem] w-full object-cover aspect-square transition-all duration-500"
+            />
+          </div>
           <!-- Spaceship/Hero Human Image overlay -->
-          <div class="absolute -bottom-8 -right-8 w-40 h-40 border-4 border-brand-darkest rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-300">
+          <div class="absolute -bottom-8 -right-8 w-40 h-40 border-4 border-[#091523] rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-300">
             <Image 
               src={spaceship} 
               alt="Shelby Web Co Innovation" 
@@ -138,7 +132,7 @@ Dave Richardson — Founder / Lead Developer
   </section>
 
   <!-- Meet the Founder Section -->
-  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+  <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/3">
@@ -158,7 +152,7 @@ Dave Richardson — Founder / Lead Developer
           <h2 class="font-heading text-4xl font-bold text-white mb-2">Dave Richardson</h2>
           <p class="text-white text-lg font-semibold mb-2">Founder / Lead Developer / Network Engineer / Audio Engineer</p>
           <p class="text-white/60 text-sm italic mb-6">"Developer by trade. Musician by birth. Healer by necessity."</p>
-          <div class="space-y-4 text-white/80 text-lg leading-relaxed text-left">
+          <div class="space-y-4 text-white/80 text-lg leading-relaxed text-left rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
             <p>
               Dave Richardson is a <span class="text-brand-cyan font-semibold">seasoned technology veteran</span> with over two decades of experience. After attending UNC Charlotte and ECPI University—where he served as President of the National Vocational Technical Honor Society—Dave began his career as a Broadband Specialist right here in Shelby with Computer Connections Inc.
             </p>
@@ -178,7 +172,7 @@ Dave Richardson — Founder / Lead Developer
   </section>
 
   <!-- Mission Section with Images -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-start mb-20">
         <div>
@@ -196,7 +190,7 @@ Dave Richardson — Founder / Lead Developer
             <h3 class="font-heading text-3xl font-bold text-white mb-4 italic">"How can we make our clients happier today?"</h3>
             <p class="text-white/75 text-lg">This isn't just a catchy phrase — <span class="text-brand-blue font-semibold">your success is our success</span>, and we're committed to delivering results that directly impact your bottom line.</p>
           </div>
-          <div class="mt-10 rounded-3xl border border-brand-cyan/20 bg-brand-darkest/85 p-8 text-left">
+          <div class="mt-10 rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-left">
             <div class="flex items-center gap-1 mb-4">
               <span class="text-yellow-300 text-4xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
               <span class="text-yellow-300 text-4xl font-black drop-shadow-[0_0_18px_rgba(252,211,77,0.75)]">★</span>
@@ -265,7 +259,7 @@ Dave Richardson — Founder / Lead Developer
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Mission</p>
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Our Mission</p>
         <h2 class="font-heading text-5xl font-bold text-white mb-6">
           Our Mission
         </h2>
@@ -280,7 +274,7 @@ Dave Richardson — Founder / Lead Developer
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Local Focus -->
-        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 hover:shadow-[0_20px_40px_rgba(132,204,22,0.2)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+        <div class="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest text-brand-darkest">
@@ -294,7 +288,7 @@ Dave Richardson — Founder / Lead Developer
         </div>
 
         <!-- Proven Results -->
-        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 hover:shadow-[0_20px_40px_rgba(132,204,22,0.2)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+        <div class="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest text-brand-darkest">
@@ -308,7 +302,7 @@ Dave Richardson — Founder / Lead Developer
         </div>
 
         <!-- Targeted Solutions -->
-        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 hover:shadow-[0_20px_40px_rgba(132,204,22,0.2)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+        <div class="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest text-brand-darkest">
@@ -322,7 +316,7 @@ Dave Richardson — Founder / Lead Developer
         </div>
 
         <!-- Innovation -->
-        <div class="group bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 hover:shadow-[0_20px_40px_rgba(132,204,22,0.2)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+        <div class="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-brand-cyan/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest text-brand-darkest">
@@ -376,7 +370,7 @@ Dave Richardson — Founder / Lead Developer
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Value -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="relative overflow-hidden w-16 h-16 rounded-xl border border-amber-300/40 bg-gradient-to-br from-amber-300/25 via-yellow-200/20 to-amber-500/25 shadow-[0_0_20px_rgba(251,191,36,0.28)] flex items-center justify-center mb-6">
             <span class="absolute inset-0 bg-gradient-to-tr from-white/35 via-transparent to-transparent rounded-xl pointer-events-none"></span>
             <svg class="relative z-10 w-8 h-8 text-amber-300 drop-shadow-[0_1px_4px_rgba(255,255,255,0.35)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -388,7 +382,7 @@ Dave Richardson — Founder / Lead Developer
         </div>
 
         <!-- Integrity -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="relative overflow-hidden w-16 h-16 rounded-xl border border-amber-300/40 bg-gradient-to-br from-amber-300/25 via-yellow-200/20 to-amber-500/25 shadow-[0_0_20px_rgba(251,191,36,0.28)] flex items-center justify-center mb-6">
             <span class="absolute inset-0 bg-gradient-to-tr from-white/35 via-transparent to-transparent rounded-xl pointer-events-none"></span>
             <svg class="relative z-10 w-8 h-8 text-amber-300 drop-shadow-[0_1px_4px_rgba(255,255,255,0.35)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -400,7 +394,7 @@ Dave Richardson — Founder / Lead Developer
         </div>
 
         <!-- Trust -->
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 hover:border-lime-500/50 transition-all duration-300">
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="relative overflow-hidden w-16 h-16 rounded-xl border border-amber-300/40 bg-gradient-to-br from-amber-300/25 via-yellow-200/20 to-amber-500/25 shadow-[0_0_20px_rgba(251,191,36,0.28)] flex items-center justify-center mb-6">
             <span class="absolute inset-0 bg-gradient-to-tr from-white/35 via-transparent to-transparent rounded-xl pointer-events-none"></span>
             <svg class="relative z-10 w-8 h-8 text-amber-300 drop-shadow-[0_1px_4px_rgba(255,255,255,0.35)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -435,7 +429,7 @@ Dave Richardson — Founder / Lead Developer
   <section class="py-20 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="bg-gradient-to-br from-brand-darkest to-brand-dark rounded-2xl p-8 border border-brand-sky/20 lg:col-span-2">
+        <div class="bg-white/[0.04] rounded-2xl p-8 border border-white/10 lg:col-span-2">
           <div class="grid grid-cols-2 gap-6">
             <div class="text-center">
               <p class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-brand-blue text-stats-outline">
@@ -476,8 +470,8 @@ Dave Richardson — Founder / Lead Developer
 
   <!-- Editorial & authorship -->
   <section class="py-12 px-4" data-animate>
-    <div class="max-w-3xl mx-auto p-6 bg-brand-dark border border-white/10 rounded-2xl">
-      <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-3">Editorial &amp; authorship</p>
+    <div class="max-w-3xl mx-auto p-6 bg-white/[0.04] border border-white/10 rounded-2xl">
+      <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">Editorial &amp; authorship</p>
       <p class="text-white/80 mb-3">
         Every guide, case study, and spotlight on this site is written or edited by <b class="text-white">Dave Richardson</b>, Founder / Lead Developer of Shelby Web Company — not a ghostwriter mill or AI content farm. Articles show their publication and last-updated dates.
       </p>
@@ -494,10 +488,10 @@ Dave Richardson — Founder / Lead Developer
       <Image src={heroHuman} alt="Background abstract" class="w-full h-full object-cover opacity-20 scale-105" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest/90 via-brand-dark/90 to-brand-darkest/90 z-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/15 to-brand-accent/10 z-10"></div>
     
-    <div class="max-w-4xl mx-auto text-center relative z-20">
-      <h2 class="font-heading text-3xl font-bold text-white mb-6">
+    <div class="max-w-4xl mx-auto text-center relative z-20 rounded-3xl border border-white/10 bg-[#091523]/80 backdrop-blur-md p-8 md:p-12">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Ready to Build Something GREAT?
       </h2>
       <p class="text-lg text-white mb-8">
@@ -511,7 +505,7 @@ Dave Richardson — Founder / Lead Developer
       </p>
       <a 
         href="/contact/"
-        class="inline-block bg-gradient-to-r from-brand-sky to-brand-cyan text-white px-8 py-3 rounded-lg font-medium hover:shadow-[0_0_20px_rgba(0,200,255,0.3)] transition-all duration-300"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35)] hover:-translate-y-[1px] transition-all duration-300"
       >
         START BUILDING TOGETHER
       </a>

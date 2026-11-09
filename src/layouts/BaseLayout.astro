@@ -42,7 +42,7 @@ const {
   image = `${siteOrigin}/og-image.jpg`,
   canonical = normalizeCanonical(Astro.url.pathname),
   breadcrumbs,
-  bgVariant = 'legacy',
+  bgVariant = Astro.url.pathname.startsWith('/blog/') ? 'blue' : 'legacy',
   noindex = false
 } = Astro.props;
 

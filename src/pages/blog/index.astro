@@ -56,11 +56,12 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Web Design & SEO Blog"
   description="Stay up to date with the latest web design, SEO, and digital marketing tips for local businesses in Shelby, NC."
 >
   <section class="py-6 lg:py-10 px-4 relative overflow-hidden" data-blog-hero>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.18),transparent_50%),radial-gradient(circle_at_75%_20%,rgba(132,204,22,0.10),transparent_40%)]"></div>
     <div class="absolute left-4 lg:left-12 top-8 w-20 h-20 lg:w-28 lg:h-28 rounded-2xl overflow-hidden border border-white/10 shadow-xl opacity-80 hidden md:block">
       <Image src={blog3Img} alt="" class="w-full h-full object-cover" />
     </div>
@@ -68,25 +69,25 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
       <Image src={blog4Img} alt="" class="w-full h-full object-cover" />
     </div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="blog-hero-badge inline-block px-4 py-1.5 mb-4 rounded-full border border-brand-glow/30 bg-brand-glow/5 text-brand-glow text-sm font-bold uppercase tracking-[0.2em]">
+      <div class="blog-hero-badge inline-block px-4 py-1.5 mb-4 rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-accent text-sm font-bold uppercase tracking-[0.2em]">
         ✦ The Shelby Web Co Blog
       </div>
       <h1 class="blog-hero-title font-heading text-5xl md:text-7xl font-black text-white mb-4 tracking-tight leading-[0.9]">
-        Insights & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Growth Tips.</span>
+        Insights & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light to-brand-accent">Growth Tips.</span>
       </h1>
-      <p class="blog-hero-sub text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
+      <p class="blog-hero-sub text-lg md:text-xl text-white/75 max-w-3xl mx-auto leading-relaxed">
         Helping Shelby businesses dominate the digital landscape, one article at a time.
       </p>
     </div>
   </section>
 
-  <section class="pt-6 pb-12 px-4 bg-brand-darkest border-y border-white/5">
+  <section class="pt-6 pb-12 px-4 bg-white/[0.02] border-y border-white/10">
     <div class="max-w-7xl mx-auto">
       <!-- Section Picker: two square preview cards -->
       <div id="section-picker" class="block">
         <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <!-- Shelby Web Official preview square -->
-          <button onclick="selectSection('official')" class="group text-left bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+          <button onclick="selectSection('official')" class="group text-left bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
               <Image
                 src={webredesignImg}
@@ -112,7 +113,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </button>
 
           <!-- Community Spotlight preview square -->
-          <button onclick="selectSection('spotlight')" class="group text-left bg-brand-dark border border-[#c9a86a]/20 rounded-2xl overflow-hidden hover:border-[#c9a86a]/40 transition-all duration-300">
+          <button onclick="selectSection('spotlight')" class="group text-left bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
               <Image
                 src={gabeWhisnantImg}
@@ -220,29 +221,29 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </button>
         <div id="shelby-web-official" class="mb-16 scroll-mt-28">
           <div class="mb-8">
-            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Section 1</p>
+            <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Section 1</p>
             <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Shelby Web Official</h2>
           </div>
 
           <!-- Cluster pillar guides -->
-          <div class="mb-10 p-6 bg-brand-darkest border border-white/10 rounded-2xl">
+          <div class="mb-10 p-6 bg-white/[0.04] border border-white/10 rounded-2xl">
             <p class="text-white font-bold mb-1">Start with a topic</p>
             <p class="text-white/70 text-sm mb-5">Three topics organize the practical content — pick the one that matches what you're trying to fix.</p>
             <div class="grid sm:grid-cols-3 gap-4">
-              <a href="/blog/topics/local-seo/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
-                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 1</span>
-                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">Local SEO</h3>
-                <p class="text-neutral-600 text-sm mt-1 italic">Get found by nearby customers — GBP, reviews, on-page basics.</p>
+              <a href="/blog/topics/local-seo/" class="group block p-4 bg-white/[0.04] border border-white/10 rounded-xl hover:border-brand-accent/50 hover:bg-white/[0.07] transition-all text-center">
+                <span class="text-brand-accent text-base font-bold uppercase tracking-widest">Section 1</span>
+                <h3 class="text-white font-black group-hover:text-brand-accent transition-colors mt-1 text-2xl">Local SEO</h3>
+                <p class="text-white/65 text-sm mt-1 italic">Get found by nearby customers — GBP, reviews, on-page basics.</p>
               </a>
-              <a href="/blog/topics/website-cost/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
-                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 2</span>
-                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">Website Cost</h3>
-                <p class="text-neutral-600 text-sm mt-1 italic">Real ranges, plan comparisons, and what actually drives price.</p>
+              <a href="/blog/topics/website-cost/" class="group block p-4 bg-white/[0.04] border border-white/10 rounded-xl hover:border-brand-accent/50 hover:bg-white/[0.07] transition-all text-center">
+                <span class="text-brand-accent text-base font-bold uppercase tracking-widest">Section 2</span>
+                <h3 class="text-white font-black group-hover:text-brand-accent transition-colors mt-1 text-2xl">Website Cost</h3>
+                <p class="text-white/65 text-sm mt-1 italic">Real ranges, plan comparisons, and what actually drives price.</p>
               </a>
-              <a href="/blog/topics/ai-search/" class="group block p-4 bg-neutral-100 border border-neutral-200 rounded-xl hover:border-brand-cyan/60 hover:shadow-lg transition-all text-center shadow-[-8px_4px_24px_rgba(0,0,0,0.18)] border-l-4 border-l-neutral-300">
-                <span class="text-blue-900 text-base font-bold uppercase tracking-widest">Section 3</span>
-                <h3 class="text-neutral-900 font-black group-hover:text-brand-cyan transition-colors mt-1 text-2xl">AI Search &amp; GEO</h3>
-                <p class="text-neutral-600 text-sm mt-1 italic">How AI assistants pick sources — and how to be one of them.</p>
+              <a href="/blog/topics/ai-search/" class="group block p-4 bg-white/[0.04] border border-white/10 rounded-xl hover:border-brand-accent/50 hover:bg-white/[0.07] transition-all text-center">
+                <span class="text-brand-accent text-base font-bold uppercase tracking-widest">Section 3</span>
+                <h3 class="text-white font-black group-hover:text-brand-accent transition-colors mt-1 text-2xl">AI Search &amp; GEO</h3>
+                <p class="text-white/65 text-sm mt-1 italic">How AI assistants pick sources — and how to be one of them.</p>
               </a>
             </div>
           </div>
@@ -251,7 +252,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 
         <!-- Latest content-collection posts (newest first) -->
         {latestPosts.map((post) => (
-          <a href={`/blog/${post.id}/`} class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+          <a href={`/blog/${post.id}/`} class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={postThumbs[post.id] || blogImage6}
@@ -280,7 +281,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         ))}
 
         <!-- Blog Post 19 NEW -->
-        <a href="/blog/why-monthly-website-plans-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/why-monthly-website-plans-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image src={websiteCostImg} alt="The 2026 Year of the Big Web Development Shift - Our New Pricing Structure" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
@@ -304,7 +305,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 18 NEW -->
-        <a href="/blog/how-to-get-more-leads-home-remodeling-business-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/how-to-get-more-leads-home-remodeling-business-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image src={remodelersLeadsImg} alt="How to Get More Leads for Your Home Remodeling Business in 2026" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
@@ -328,7 +329,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 17 -->
-        <a href="/blog/when-your-business-name-is-lost-dba-seo-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/when-your-business-name-is-lost-dba-seo-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image src={dbaImg} alt="When Your Business Name Is Lost in a Sea of Duplicates" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
@@ -352,7 +353,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 16 -->
-        <a href="/blog/new-web-design-redesign-vs-refresh-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/new-web-design-redesign-vs-refresh-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image src={webredesignImg} alt="Web Redesign vs Refresh Shelby NC" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
@@ -373,7 +374,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 18 -->
-        <a href="/blog/best-web-designers-near-me/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/best-web-designers-near-me/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={nearMeImg} 
@@ -401,7 +402,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 17 -->
-        <a href="/blog/opencode-ai-coding-tools-small-web-agencies/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/opencode-ai-coding-tools-small-web-agencies/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={opencode2Img} 
@@ -429,7 +430,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 16 -->
-        <a href="/blog/website-cost-shelby-nc-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/website-cost-shelby-nc-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={websiteCostImg} 
@@ -457,7 +458,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 15 -->
-        <a href="/blog/what-is-a-smart-talking-website/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/what-is-a-smart-talking-website/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage6} 
@@ -487,7 +488,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 
 
         <!-- Blog Post 10 -->
-        <a href="/blog/future-of-web-development-shelby-nc/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/future-of-web-development-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage5} 
@@ -517,7 +518,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 
 
         <!-- Blog Post 8 -->
-        <a href="/blog/web-development-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/web-development-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage2} 
@@ -545,7 +546,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 6 -->
-        <a href="/blog/ai-development-stack-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/ai-development-stack-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage4} 
@@ -573,7 +574,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 4 -->
-        <a href="/blog/local-seo-essentials-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/local-seo-essentials-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage6} 
@@ -601,7 +602,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 3 -->
-        <a href="/blog/website-mistakes-costing-customers/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/website-mistakes-costing-customers/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage2} 
@@ -629,7 +630,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 2 -->
-        <a href="/blog/does-your-business-need-a-website-2026/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/does-your-business-need-a-website-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage4} 
@@ -657,7 +658,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </a>
 
         <!-- Blog Post 1 -->
-        <a href="/blog/why-choose-shelby-web-company/" class="group bg-brand-dark border border-white/5 rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300">
+        <a href="/blog/why-choose-shelby-web-company/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
             <Image 
               src={blogImage5} 
@@ -695,13 +696,13 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         </button>
         <div id="community-spotlight" class="scroll-mt-28">
         <div class="mb-8">
-          <p class="text-[#c9a86a] text-xs font-bold uppercase tracking-widest mb-2">Section 2</p>
+          <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Section 2</p>
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Community Spotlight</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Post 20 (Community Spotlight) - Minister Will Groom -->
-          <a href="/blog/minister-will-groom-keep-god-first-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/minister-will-groom-keep-god-first-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={willGroomImg}
@@ -729,7 +730,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 19 (Community Spotlight) - James Richardson -->
-          <a href="/blog/building-people-not-just-buildings-james-richardson-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/building-people-not-just-buildings-james-richardson-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={richardsonImg}
@@ -759,7 +760,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 18 (Community Spotlight) -->
-          <a href="/blog/support-first-responders-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/support-first-responders-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image
                 src={frHeroImg}
@@ -789,7 +790,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 15 (Community Spotlight) -->
-          <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={reflectionsImage} 
@@ -817,7 +818,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 14 (Community Spotlight) -->
-          <a href="/blog/daniel-thomas-mayor-boiling-springs-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/daniel-thomas-mayor-boiling-springs-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={boilingSpringsImg} 
@@ -845,7 +846,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 13 (Community Spotlight) -->
-          <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={newtonImg3} 
@@ -873,7 +874,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 12 (Community Spotlight) -->
-          <a href="/blog/class-of-96-gabe-whisnant-shelby-star/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/class-of-96-gabe-whisnant-shelby-star/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={gabeWhisnantImg} 
@@ -901,7 +902,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 7 (Community Spotlight) -->
-          <a href="/blog/trucking-industry-challenges-2026/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/trucking-industry-challenges-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={fsExpeditedImg} 
@@ -929,7 +930,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           </a>
 
           <!-- Blog Post 5 (Community Spotlight) -->
-          <a href="/blog/fs-expedited-llc-spotlight/" class="group bg-brand-dark border border-[#c9a86a]/10 rounded-2xl overflow-hidden hover:border-[#c9a86a]/30 transition-all duration-300">
+          <a href="/blog/fs-expedited-llc-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
               <Image 
                 src={fsLogoImg} 
