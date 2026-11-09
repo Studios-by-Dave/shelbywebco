@@ -28,6 +28,7 @@ const serviceSchema = {
 ---
 
 <BaseLayout
+  bgVariant="blue"
   title="Web Design for Landscapers | Shelby, NC"
   description="Lead-generating websites for landscaping companies in Shelby, Gastonia, and Western NC. Custom design, local SEO, and seasonal promo systems. (704) 473-8188."
 >
@@ -41,11 +42,11 @@ const serviceSchema = {
     </div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-accent/30 bg-brand-accent/20 text-brand-accent text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
         ✦ Built for Landscapers
       </div>
       <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
-        Landscaping Websites That <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue">Fill Your Route.</span>
+        Landscaping Websites That <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Fill Your Route.</span>
       </h1>
       <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Spring and fall don't wait for a slow website. We build fast, quote-ready sites for landscaping companies across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> — engineered to turn homeowners into booked projects.
@@ -60,7 +61,7 @@ const serviceSchema = {
          </a>
         <a
           href="tel:+17044738188"
-          class="inline-flex items-center justify-center border border-brand-cyan/40 text-brand-cyan px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-cyan/10 transition-all duration-300"
+          class="inline-flex items-center justify-center border border-brand-accent/40 text-brand-accent px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent/10 transition-all duration-300"
         >
           (704) 473-8188
         </a>
@@ -69,25 +70,25 @@ const serviceSchema = {
   </section>
 
   <!-- Recent Work Section -->
-  <section class="py-24 px-4 bg-brand-dark">
+  <section class="py-24 px-4 bg-white/[0.04]">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Landscaping Work</p>
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Landscaping Work</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Sites Built to Book Seasonal Jobs</h2>
         <p class="text-white/70 max-w-2xl mx-auto">Service pages and galleries that stay fresh through every season — mowing, hardscape, irrigation, and maintenance quotes.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <a href="/contact/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+        <a href="/contact/" class="group block bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
           <div class="aspect-video overflow-hidden">
             <Image src={landscapers_1} alt="Freshly mown lawn with sharp striping on a residential property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6">
-            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Lawn &amp; Maintenance</p>
+            <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Lawn &amp; Maintenance</p>
             <p class="text-white text-sm leading-relaxed">Recurring-service pages that explain mowing schedules, seasonal cleanups, and how to request a free estimate.</p>
           </div>
         </a>
-        <div class="bg-brand-darkest border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
-          <span class="text-brand-cyan text-3xl mb-4" aria-hidden="true">✦</span>
+        <div class="bg-white/[0.03] border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
+          <span class="text-brand-accent text-3xl mb-4" aria-hidden="true">✦</span>
           <p class="text-white font-bold text-lg mb-2">Your project here</p>
           <p class="text-white/70 text-sm mb-6">Get a free quote for a landscaping website built to win local maintenance contracts.</p>
           <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-bold text-sm border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get Your Free Quote</a>
@@ -97,23 +98,23 @@ const serviceSchema = {
   </section>
 
   <!-- Problem / Solution Section -->
-  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+  <section class="py-24 px-4 border-y border-white/10">
     <div class="max-w-7xl mx-auto">
       <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 leading-tight text-center">
-        Why Landscapers Lose Jobs to <span class="text-brand-cyan">Slow Websites</span>
+        Why Landscapers Lose Jobs to <span class="text-brand-accent">Slow Websites</span>
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
           <div class="text-brand-accent text-4xl font-black mb-2">1 week</div>
           <div class="text-white font-bold text-lg mb-2">Seasonal Searches Spike and the Fastest Wins</div>
           <p class="text-white/80 text-sm">Spring and fall bring a flood of homeowners ready to hire. If your site is slow or hard to book from, the next landscaper in the search results gets the call.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
-          <div class="text-brand-cyan text-4xl font-black mb-2">$3k+</div>
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
+          <div class="text-brand-accent text-4xl font-black mb-2">$3k+</div>
           <div class="text-white font-bold text-lg mb-2">Per Project</div>
           <p class="text-white/80 text-sm">The average landscape project tops $3,000. A website that converts even one extra project a month pays for itself many times over.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
           <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
           <div class="text-white font-bold text-lg mb-2">Map Pack = Landscape Highway</div>
           <p class="text-white/80 text-sm">Seasonal "near me" searches run through the map pack first. We tune your Google Business Profile with service menus, route areas, and steady reviews so your crew is first in the queue.</p>
@@ -123,65 +124,65 @@ const serviceSchema = {
   </section>
 
   <!-- What You Get Section -->
-  <section class="py-24 px-4 bg-brand-dark">
+  <section class="py-24 px-4 bg-white/[0.04]">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Landscapers</p>
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Built for Landscapers</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Landscaping Website That Works for You</h2>
         <p class="text-white/70 max-w-2xl mx-auto">Every landscaping site ships with what seasonal crews actually need — service pages, promos, and local SEO.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Before/After Galleries</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Before/After Galleries</h3>
           <p class="text-white/80">Show off before-and-after yards that sell themselves — the moment a homeowner sees a lawn like theirs on your site, they pick up the phone.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Quote Request Engine</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Quote Request Engine</h3>
           <p class="text-white/80">Service type, property size, and budget pickers that let homeowners request a quote without leaving the page. Every form hits your phone before the next crew gets the call.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Seasonal Promo Pages</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Seasonal Promo Pages</h3>
           <p class="text-white/80">Dedicated pages like "Spring Landscaping Shelby NC" that rank the moment homeowners start planning — the fastest way to own the season.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Reviews &amp; Map Pack Optimization</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Reviews &amp; Map Pack Optimization</h3>
           <p class="text-white/80">Yard photos and kind words spread fast locally. We wire review widgets and Google Business Profile signals together so every finished property pushes you higher in local search.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Licensing &amp; Trust Badges</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Licensing &amp; Trust Badges</h3>
           <p class="text-white/80">Licensed, insured, and certified crews — displayed upfront. Credentials are what turn a quick estimate into a signed contract.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Local SEO Built In</h3>
-          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">on-page SEO</a> tuned to seasonal demand — design, maintenance, and installation searches across Cleveland and Gaston counties.</p>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Local SEO Built In</h3>
+          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-accent underline decoration-brand-accent/30">on-page SEO</a> tuned to seasonal demand — design, maintenance, and installation searches across Cleveland and Gaston counties.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Service Areas / Proof Section -->
-  <section class="py-24 px-4 bg-brand-darkest">
+  <section class="py-24 px-4 bg-white/[0.03]">
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Trusted by Landscapers Across Western NC</h2>
-          <p class="text-white/80 text-lg mb-8">Landscaping companies across the area rely on us to catch homeowners the moment the season turns — from <a href="/web-design-shelby-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Polkville</a>.</p>
+          <p class="text-white/80 text-lg mb-8">Landscaping companies across the area rely on us to catch homeowners the moment the season turns — from <a href="/web-design-shelby-nc/" class="text-brand-accent underline decoration-brand-accent/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-accent underline decoration-brand-accent/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-accent underline decoration-brand-accent/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-accent underline decoration-brand-accent/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-accent underline decoration-brand-accent/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-accent underline decoration-brand-accent/30">Polkville</a>.</p>
           <a href="/services/case-studies/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">
             See Our Case Studies
           </a>
         </div>
         <div class="grid gap-4">
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
             <div class="text-brand-accent text-3xl font-black mb-1">100%</div>
             <div class="text-white font-bold mb-1">Google Indexing Guarantee</div>
             <p class="text-white/70 text-sm">Landscaping sites fully indexed in as little as 72 hours, before the rush hits.</p>
           </div>
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
-            <div class="text-brand-cyan text-3xl font-black mb-1">240%</div>
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
+            <div class="text-brand-accent text-3xl font-black mb-1">240%</div>
             <div class="text-white font-bold mb-1">Avg. Traffic Growth</div>
             <p class="text-white/70 text-sm">Seasonal campaigns that more than double impressions when demand peaks.</p>
           </div>
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
             <div class="text-brand-blue text-3xl font-black mb-1">Top 5</div>
             <div class="text-white font-bold mb-1">Local Map Pack</div>
             <p class="text-white/70 text-sm">Landscapers placed on the front of Google Maps for every "near me" rush.</p>
@@ -203,13 +204,13 @@ const serviceSchema = {
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/contact/"
-          class="inline-block bg-brand-darkest text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+          class="inline-block bg-white/[0.03] text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
         >
           Book a Free Chat
         </a>
         <a
           href="tel:+17044738188"
-          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-darkest hover:text-white transition-all duration-300"
+          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-white/[0.03] hover:text-white transition-all duration-300"
         >
           (704) 473-8188
         </a>

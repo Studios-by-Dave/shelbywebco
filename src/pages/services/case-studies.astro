@@ -39,6 +39,7 @@ const serviceSchema = {
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Client Case Studies & Results"
   description="View our case studies and see how we've helped local businesses grow online. Real results from real clients."
 >
@@ -46,14 +47,14 @@ const serviceSchema = {
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
+  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-white/[0.03]" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-[#07090e]/70 to-black/35 pointer-events-none"></div>
     <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
     <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
     <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
     <div class="absolute left-0 top-0 h-full w-full md:w-1/2 pointer-events-none"><PixieDust client:load /></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Case Studies</p>
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Case Studies</p>
       <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Real Results</span> for Real Businesses
       </h1>
@@ -64,11 +65,11 @@ const serviceSchema = {
   </section>
 
   <!-- Case Studies Grid -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Solution A: Indexing Case Study -->
-        <a href="/services/case-studies/solution-a/" class="group bg-brand-darkest border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
+        <a href="/services/case-studies/solution-a/" class="group bg-white/[0.03] border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
           <div class="p-8">
             <div class="flex items-center gap-3 mb-4">
               <span class="bg-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Technical SEO</span>
@@ -80,14 +81,14 @@ const serviceSchema = {
             <p class="text-white mb-6">
               How we fixed severe indexing issues on a brand-new AI-generated website so it could finally be found by search engines.
             </p>
-            <div class="inline-flex items-center text-brand-cyan font-medium group-hover:gap-2 transition-all">
+            <div class="inline-flex items-center text-brand-accent font-medium group-hover:gap-2 transition-all">
               Read Full Case Study <span class="ml-2">→</span>
             </div>
           </div>
         </a>
 
         <!-- Solution B: Astro Framework Case Study -->
-        <a href="/services/case-studies/solution-b/" class="group bg-brand-darkest border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
+        <a href="/services/case-studies/solution-b/" class="group bg-white/[0.03] border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
           <div class="p-8">
             <div class="flex items-center gap-3 mb-4">
               <span class="bg-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Framework Optimization</span>
@@ -99,14 +100,14 @@ const serviceSchema = {
             <p class="text-white mb-6">
               How we upgraded a legacy JavaScript framework to Astro to ensure every page is lightning-fast and perfectly indexed.
             </p>
-            <div class="inline-flex items-center text-brand-cyan font-medium group-hover:gap-2 transition-all">
+            <div class="inline-flex items-center text-brand-accent font-medium group-hover:gap-2 transition-all">
               Read Full Case Study <span class="ml-2">→</span>
             </div>
           </div>
         </a>
 
         <!-- Local SEO Case Study -->
-        <a href="/services/case-studies/solution-c/" class="group bg-brand-darkest border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
+        <a href="/services/case-studies/solution-c/" class="group bg-white/[0.03] border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
           <div class="p-8">
             <div class="flex items-center gap-3 mb-4">
               <span class="bg-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Local SEO & Growth</span>
@@ -118,14 +119,14 @@ const serviceSchema = {
             <p class="text-white mb-6">
               Creating city-specific service area pages increased organic impressions by 214% and inbound leads by 138% in just 4 months.
             </p>
-            <div class="inline-flex items-center text-brand-cyan font-medium group-hover:gap-2 transition-all">
+            <div class="inline-flex items-center text-brand-accent font-medium group-hover:gap-2 transition-all">
               Read Full Case Study <span class="ml-2">→</span>
             </div>
           </div>
         </a>
 
         <!-- Solution D: OpenCode Case Study -->
-        <a href="/services/case-studies/solution-d/" class="group bg-brand-darkest border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
+        <a href="/services/case-studies/solution-d/" class="group bg-white/[0.03] border border-brand-sky/20 rounded-2xl overflow-hidden hover:border-brand-sky/50 transition-all duration-500 block">
           <div class="p-8">
             <div class="flex items-center gap-3 mb-4">
               <span class="bg-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Developer Workflow</span>
@@ -137,7 +138,7 @@ const serviceSchema = {
             <p class="text-white mb-6">
               Escaping restrictive AI credit limits with an open-source coding agent reclaimed development time and delivered more value to local business clients.
             </p>
-            <div class="inline-flex items-center text-brand-cyan font-medium group-hover:gap-2 transition-all">
+            <div class="inline-flex items-center text-brand-accent font-medium group-hover:gap-2 transition-all">
               Read Full Case Study <span class="ml-2">→</span>
             </div>
           </div>
@@ -148,8 +149,8 @@ const serviceSchema = {
 
   <!-- CTA Section -->
   <section class="py-20 px-4 relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
+    <div class="absolute inset-0 bg-white/[0.03]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-accent/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Want to See Your Results Here?
@@ -159,7 +160,7 @@ const serviceSchema = {
       </p>
       <a 
         href="/contact/"
-        class="inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
+        class="inline-block bg-brand-accent text-[#08090e] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light shadow-[0_0_15px_rgba(132,204,22,0.3)] transition-all duration-300"
       >
         Get Started Today
       </a>

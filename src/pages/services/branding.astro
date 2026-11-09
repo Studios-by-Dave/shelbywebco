@@ -27,14 +27,16 @@ const serviceSchema = {
 ---
 
 <BaseLayout 
+  bgVariant="blue"
+  bgVariant="blue"
   title="Logo Design & Branding"
   description="Professional logo design and branding in Shelby, NC. Custom logos, brand identity, and assets that build trust."
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-brand-darkest/45 to-black/35 pointer-events-none"></div>
+  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-white/[0.03]" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-[#07090e]/70 to-black/35 pointer-events-none"></div>
     <div class="absolute inset-0 z-0 pointer-events-none opacity-30">
       <PixieDust client:load />
     </div>
@@ -43,7 +45,7 @@ const serviceSchema = {
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div class="text-center lg:text-left">
-          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Identity</p>
+          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Brand Identity</p>
           <h1 class="font-heading text-[3.6rem] md:text-[4.4rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight">
             Logo Design & <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Branding Solutions</span>
           </h1>
@@ -70,17 +72,17 @@ const serviceSchema = {
   </section>
 
   <!-- Features Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ What We Offer</p>
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ What We Offer</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
           Professional Branding Services
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -90,7 +92,7 @@ const serviceSchema = {
           <p class="text-white text-base md:text-lg">Unique, memorable logos that capture your brand's essence and resonate with your target audience.</p>
         </div>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -100,7 +102,7 @@ const serviceSchema = {
           <p class="text-white text-base md:text-lg">Complete brand guidelines including color palettes, typography, and usage guidelines for consistent branding.</p>
         </div>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
@@ -110,7 +112,7 @@ const serviceSchema = {
           <p class="text-white text-base md:text-lg">Professional business cards that make a lasting impression and reinforce your brand identity.</p>
         </div>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
@@ -120,7 +122,7 @@ const serviceSchema = {
           <p class="text-white text-base md:text-lg">Custom profile pictures, cover images, and post templates optimized for all major social platforms.</p>
         </div>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -130,7 +132,7 @@ const serviceSchema = {
           <p class="text-white text-base md:text-lg">Comprehensive documentation on how to use your brand assets correctly across all media.</p>
         </div>
 
-        <div class="bg-brand-darkest border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -144,16 +146,16 @@ const serviceSchema = {
   </section>
 
   <!-- Logo Showcase Banner -->
-  <section class="py-16 px-4 bg-gradient-to-br from-brand-dark via-brand-darkest to-brand-dark relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/5 via-brand-cyan/5 to-brand-sky/5"></div>
+  <section class="py-16 px-4 bg-white/[0.03] relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 via-brand-accent/5 to-brand-blue/10"></div>
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Our Work</p>
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Our Work</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
           Logo Designs That Stand Out
         </h2>
         <p class="text-white max-w-2xl mx-auto text-lg md:text-xl">
-          From bold and modern to elegant and timeless, we create logos that capture <span class="text-brand-cyan font-semibold">your brand's unique personality</span>.
+          From bold and modern to elegant and timeless, we create logos that capture <span class="text-brand-accent font-semibold">your brand's unique personality</span>.
         </p>
       </div>
 
@@ -162,7 +164,7 @@ const serviceSchema = {
           <!-- First set of logos -->
           <div class="flex gap-12 md:gap-20 px-8">
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo1} 
                   alt="Logo design example 1" 
@@ -173,7 +175,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo2} 
                   alt="Logo design example 2" 
@@ -184,7 +186,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo5} 
                   alt="Logo design example 3" 
@@ -195,7 +197,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo6} 
                   alt="Logo design example 4" 
@@ -206,7 +208,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo7} 
                   alt="Logo design example 5" 
@@ -217,7 +219,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo9} 
                   alt="Logo design example 7" 
@@ -228,7 +230,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo10} 
                   alt="Logo design example 8" 
@@ -239,7 +241,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo11} 
                   alt="Logo design example 9" 
@@ -250,7 +252,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo13} 
                   alt="Logo design example 9" 
@@ -264,7 +266,7 @@ const serviceSchema = {
           <!-- Duplicate set for seamless loop -->
           <div class="flex gap-12 md:gap-20 px-8">
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo1} 
                   alt="Logo design example 1" 
@@ -275,7 +277,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo2} 
                   alt="Logo design example 2" 
@@ -286,7 +288,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo5} 
                   alt="Logo design example 3" 
@@ -297,7 +299,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo6} 
                   alt="Logo design example 4" 
@@ -308,7 +310,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo7} 
                   alt="Logo design example 5" 
@@ -319,7 +321,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo9} 
                   alt="Logo design example 7" 
@@ -330,7 +332,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo10} 
                   alt="Logo design example 8" 
@@ -341,7 +343,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo11} 
                   alt="Logo design example 9" 
@@ -352,7 +354,7 @@ const serviceSchema = {
             </div>
 
             <div class="group relative flex-shrink-0 w-40 md:w-56">
-              <div class="relative bg-brand-darkest border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
+              <div class="relative bg-white/[0.03] border border-brand-sky/20 rounded-xl p-4 hover:border-lime-500/50 transition-all duration-300">
                 <Image 
                   src={logo13} 
                   alt="Logo design example 8" 
@@ -378,10 +380,10 @@ const serviceSchema = {
   </section>
 
   <!-- Pricing Section -->
-  <section class="py-20 px-4 bg-brand-dark" data-animate>
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Branding Packages</p>
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Branding Packages</p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
           Three Branding Tiers Built for Every Business
         </h2>
@@ -391,7 +393,7 @@ const serviceSchema = {
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
-        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0">
+        <div class="bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:bg-white/[0.08] transition-all duration-300 relative z-0">
           <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Essential Brand Kit</h3>
           <p class="text-white/60 text-sm mb-6 italic">Starter branding package</p>
           
@@ -417,8 +419,8 @@ const serviceSchema = {
           </a>
         </div>
 
-        <div class="bg-gradient-to-br from-[#111111] via-brand-darkest to-brand-dark border border-[#f3db70]/50 rounded-2xl p-8 shadow-[inset_0_2px_2px_rgba(255,255,255,0.15),_0_20px_40px_rgba(0,0,0,0.6)] hover:shadow-[inset_0_2px_2px_rgba(255,255,255,0.2),_0_25px_50px_rgba(0,0,0,0.7),_0_0_40px_rgba(243,219,112,0.25)] transition-all duration-300 relative z-10 scale-100 lg:scale-105">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#1c1c1c] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md">
+        <div class="bg-white/[0.07] backdrop-blur-xl border border-[#f3db70]/50 rounded-2xl p-8 shadow-[inset_0_2px_2px_rgba(255,255,255,0.15),_0_20px_40px_rgba(0,0,0,0.6)] hover:bg-white/[0.10] transition-all duration-300 relative z-10 scale-100 lg:scale-105">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#08090e] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md">
             Most Popular
           </div>
           <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Complete Brand Suite</h3>
@@ -440,13 +442,13 @@ const serviceSchema = {
 
           <a 
             href="/contact/" 
-            class="cta-glow-shine block w-full bg-brand-accent text-[#1c1c1c] px-6 py-3 rounded-xl font-medium hover:bg-brand-accent-light text-center"
+            class="cta-glow-shine block w-full bg-brand-accent text-[#08090e] px-6 py-3 rounded-xl font-medium hover:bg-brand-accent-light text-center"
           >
             Get Started
           </a>
         </div>
 
-        <div class="bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),_0_25px_50px_rgba(0,0,0,0.6),_0_0_30px_rgba(132,204,22,0.15)] transition-all duration-300 relative z-0">
+        <div class="bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:bg-white/[0.08] transition-all duration-300 relative z-0">
           <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Brand & Wrap Package</h3>
           <p class="text-white/60 text-sm mb-6 italic">Premium branding + vehicle graphics</p>
           
@@ -476,9 +478,9 @@ const serviceSchema = {
   </section>
 
   <!-- Badges Showcase -->
-  <section class="py-16 px-4 bg-brand-dark/50 border-y border-white/5" data-animate>
+  <section class="py-16 px-4 bg-white/[0.04] border-y border-white/10" data-animate>
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Badge Design</p>
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Badge Design</p>
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
         Custom Badges & Certifications
       </h2>
@@ -492,11 +494,11 @@ const serviceSchema = {
   </section>
 
   <!-- Mascot Spotlight -->
-  <section class="py-20 px-4 bg-brand-darkest" data-animate>
+  <section class="py-20 px-4 bg-white/[0.03]" data-animate>
     <div class="max-w-6xl mx-auto">
       <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
         <div class="order-2 lg:order-1">
-          <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Brand Personality</p>
+          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Brand Personality</p>
           <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
             Mascots make a brand feel memorable.
           </h2>
@@ -505,7 +507,7 @@ const serviceSchema = {
           </p>
         </div>
         <div class="order-1 lg:order-2 text-center">
-          <div class="inline-block rounded-[2rem] border border-brand-cyan/20 bg-brand-dark p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+          <div class="inline-block rounded-[2rem] border border-brand-accent/20 bg-white/[0.04] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
             <Image
               src={dogMascot}
               alt="Mascot illustration for Shelby Web Company branding"
@@ -522,8 +524,8 @@ const serviceSchema = {
 
   <!-- CTA Section -->
   <section class="py-20 px-4 relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
+    <div class="absolute inset-0 bg-white/[0.03]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-accent/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
         Ready to Build Your Brand?
@@ -532,11 +534,11 @@ const serviceSchema = {
         Let's create a brand identity that sets you apart from the competition. Get in touch today.
       </p>
       <p class="text-white/90 mb-8 text-sm">
-        Pair your brand with a new <a href="/services/web-design/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">website design</a>, grow search visibility with <a href="/services/seo/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">local SEO</a>, or see our work in the <a href="/services/portfolio/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">portfolio</a>.
+        Pair your brand with a new <a href="/services/web-design/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">website design</a>, grow search visibility with <a href="/services/seo/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">local SEO</a>, or see our work in the <a href="/services/portfolio/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">portfolio</a>.
       </p>
       <a 
         href="/contact/"
-        class="cta-glow-shine inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+        class="cta-glow-shine inline-block bg-brand-accent text-[#08090e] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
       >
         Get Started Today
       </a>

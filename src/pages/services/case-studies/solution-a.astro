@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Solution A: Google Indexing Fix"
   description="Case Study: How we solved severe indexing issues on a brand-new website using technical SEO and pre-rendering techniques."
 >
@@ -22,7 +23,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
       </div>
 
       <div class="prose prose-invert prose-lg max-w-none">
-        <div class="bg-brand-darkest border border-brand-blue/20 rounded-2xl p-8 mb-12">
+        <div class="bg-white/[0.03] border border-brand-blue/20 rounded-2xl p-8 mb-12">
           <h2 class="text-white font-heading text-2xl mb-4">The Challenge</h2>
           <p class="text-white/80">
             A brand new website was launched using modern JavaScript frameworks, but weeks after launch, none of the pages were appearing in Google search results. Despite submitting sitemaps and using the URL Inspection tool, the pages remained unindexed, resulting in zero organic visibility.
@@ -36,32 +37,32 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         
         <ul class="space-y-4 text-white/80 mb-12">
           <li class="flex gap-3">
-            <span class="text-brand-cyan">✦</span>
+            <span class="text-brand-accent">✦</span>
             <span>Implemented server-side rendering (SSR) for critical content.</span>
           </li>
           <li class="flex gap-3">
-            <span class="text-brand-cyan">✦</span>
+            <span class="text-brand-accent">✦</span>
             <span>Optimized Core Web Vitals to ensure the crawler didn't "timeout" while waiting for assets.</span>
           </li>
           <li class="flex gap-3">
-            <span class="text-brand-cyan">✦</span>
+            <span class="text-brand-accent">✦</span>
             <span>Structured internal linking to ensure deep-crawling of all service pages.</span>
           </li>
         </ul>
 
-        <div class="bg-gradient-to-br from-brand-blue/10 to-brand-cyan/10 border border-brand-blue/30 rounded-2xl p-8">
+        <div class="bg-gradient-to-br from-brand-blue/10 to-brand-accent/10 border border-brand-blue/30 rounded-2xl p-8">
           <h2 class="text-white font-heading text-2xl mb-4">The Results</h2>
           <div class="grid sm:grid-cols-3 gap-6 text-center">
             <div>
-              <p class="text-4xl font-bold text-brand-cyan mb-2">100%</p>
+              <p class="text-4xl font-bold text-brand-accent mb-2">100%</p>
               <p class="text-white/60 text-sm italic">Pages Indexed in 72h</p>
             </div>
             <div>
-              <p class="text-4xl font-bold text-brand-cyan mb-2">240%</p>
+              <p class="text-4xl font-bold text-brand-accent mb-2">240%</p>
               <p class="text-white/60 text-sm italic">Increase in Impressions</p>
             </div>
             <div>
-              <p class="text-4xl font-bold text-brand-cyan mb-2">Top 5</p>
+              <p class="text-4xl font-bold text-brand-accent mb-2">Top 5</p>
               <p class="text-white/60 text-sm italic">Local Search Rankings</p>
             </div>
           </div>
@@ -76,13 +77,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
           </a>
           <a 
             href="/contact/"
-            class="inline-block bg-brand-accent text-[#1c1c1c] px-10 py-4 rounded-xl font-bold hover:bg-brand-accent-light shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
+            class="inline-block bg-brand-accent text-[#08090e] px-10 py-4 rounded-xl font-bold hover:bg-brand-accent-light shadow-[0_0_20px_rgba(132,204,22,0.4)] transition-all duration-300"
           >
             Get Results Like This
           </a>
         </div>
         <p class="text-center text-white/90 text-sm mt-6">
-          Explore <a href="/services/case-studies/" class="text-brand-cyan hover:underline">all case studies</a> or see how <a href="/services/seo/" class="text-brand-cyan hover:underline">local SEO</a> delivers these wins.
+          Explore <a href="/services/case-studies/" class="text-brand-accent hover:underline">all case studies</a> or see how <a href="/services/seo/" class="text-brand-accent hover:underline">local SEO</a> delivers these wins.
         </p>
       </div>
     </div>

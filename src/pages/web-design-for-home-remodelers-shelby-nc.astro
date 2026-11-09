@@ -28,6 +28,7 @@ const serviceSchema = {
 ---
 
 <BaseLayout
+  bgVariant="blue"
   title="Home Remodeler Websites | Shelby, NC"
   description="Lead-generating websites for home remodelers in Shelby and Cleveland County. Custom design, local SEO, and before/after galleries. Call (704) 473-8188."
 >
@@ -38,11 +39,11 @@ const serviceSchema = {
     <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-darkest to-brand-darkest z-0"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-glow/30 bg-brand-glow/20 text-brand-glow text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
+      <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-accent/30 bg-brand-accent/20 text-brand-accent text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
         ✦ Built for Home Remodelers
       </div>
       <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
-        Websites That Turn <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue">Before &amp; After</span> Into Booked Jobs.
+        Websites That Turn <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Before &amp; After</span> Into Booked Jobs.
       </h1>
       <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
         Remodeling is a visual business. We build fast, quote-ready sites that put your best projects front and center — so homeowners in <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> call you first.
@@ -57,7 +58,7 @@ const serviceSchema = {
          </a>
         <a
           href="tel:+17044738188"
-          class="inline-flex items-center justify-center border border-brand-cyan/40 text-brand-cyan px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-cyan/10 transition-all duration-300"
+          class="inline-flex items-center justify-center border border-brand-accent/40 text-brand-accent px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent/10 transition-all duration-300"
         >
           (704) 473-8188
         </a>
@@ -66,25 +67,25 @@ const serviceSchema = {
   </section>
 
   <!-- Recent Work Section -->
-  <section class="py-24 px-4 bg-brand-dark">
+  <section class="py-24 px-4 bg-white/[0.04]">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Remodeling Work</p>
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Remodeling Work</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Sites Built to Book High-End Remodels</h2>
         <p class="text-white/70 max-w-2xl mx-auto">Portfolio galleries and project pages that show the quality of your finish work — and turn "kitchen remodel" searches into booked consultations.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <a href="/contact/" class="group block bg-brand-darkest border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
+        <a href="/contact/" class="group block bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-blue/40 transition-all duration-300">
           <div class="aspect-video overflow-hidden">
             <Image src={remodelers1} alt="Custom luxury kitchen remodel with wood cabinetry, quartz island, and professional range" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6">
-            <p class="text-brand-cyan text-xs font-bold uppercase tracking-widest mb-2">Kitchens &amp; Whole-Home</p>
+            <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Kitchens &amp; Whole-Home</p>
             <p class="text-white text-sm leading-relaxed">Before/after galleries, finish and material details, and per-project CTIs so high-ticket work gets the attention it needs.</p>
           </div>
         </a>
-        <div class="bg-brand-darkest border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
-          <span class="text-brand-cyan text-3xl mb-4" aria-hidden="true">✦</span>
+        <div class="bg-white/[0.03] border border-brand-blue/25 rounded-2xl flex flex-col items-center justify-center text-center p-8">
+          <span class="text-brand-accent text-3xl mb-4" aria-hidden="true">✦</span>
           <p class="text-white font-bold text-lg mb-2">Your project here</p>
           <p class="text-white/70 text-sm mb-6">Get a free quote for a remodeling website built to win higher-value projects.</p>
           <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 rounded-xl font-bold text-sm border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get Your Free Quote</a>
@@ -94,23 +95,23 @@ const serviceSchema = {
   </section>
 
   <!-- Problem / Solution Section -->
-  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+  <section class="py-24 px-4 border-y border-white/10">
     <div class="max-w-7xl mx-auto">
       <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-12 leading-tight text-center">
-        Why Remodeling Companies Lose Jobs to <span class="text-brand-cyan">Slow Websites</span>
+        Why Remodeling Companies Lose Jobs to <span class="text-brand-accent">Slow Websites</span>
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
           <div class="text-brand-accent text-4xl font-black mb-2">1 week</div>
           <div class="text-white font-bold text-lg mb-2">Homeowners Judge Before They Visit</div>
           <p class="text-white/80 text-sm">A homeowner choosing a remodeler spends 10+ minutes on your site. A weak portfolio or a slow site means the next remodeler in the search results gets the call.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
-          <div class="text-brand-cyan text-4xl font-black mb-2">$25k+</div>
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
+          <div class="text-brand-accent text-4xl font-black mb-2">$25k+</div>
           <div class="text-white font-bold text-lg mb-2">Per Kitchen Remodel</div>
           <p class="text-white/80 text-sm">The average kitchen remodel tops $25,000. A website that converts even one extra project a month pays for itself many times over.</p>
         </div>
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
           <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
           <div class="text-white font-bold text-lg mb-2">Map Pack = Remodeling Highway</div>
           <p class="text-white/80 text-sm">Remodel searches live and die in the map pack. We tune your Google Business Profile with portfolio photos, remodel categories, and steady reviews so your showroom of work is the first click.</p>
@@ -120,65 +121,65 @@ const serviceSchema = {
   </section>
 
   <!-- What You Get Section -->
-  <section class="py-24 px-4 bg-brand-dark">
+  <section class="py-24 px-4 bg-white/[0.04]">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
-        <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Built for Home Remodelers</p>
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Built for Home Remodelers</p>
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">A Remodeling Website That Works for You</h2>
         <p class="text-white/70 max-w-2xl mx-auto">Every remodel site ships with what homeowners judge you on — before/after galleries, estimates, and reviews.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Before/After Galleries</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Before/After Galleries</h3>
           <p class="text-white/80">Showcase your cleanest transformations in a fast-loading gallery — homeowners decide you're the one before the first walkthrough, with your portfolio doing the talking.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Project Estimate Requests</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Project Estimate Requests</h3>
           <p class="text-white/80">Room, budget, and timeline pickers that let homeowners request an estimate without leaving the page. Every form lands straight in your phone before the next call.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Service Area Pages</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Service Area Pages</h3>
           <p class="text-white/80">Dedicated pages like "Kitchen Remodel Shelby NC" that rank for the exact searches homeowners type before they hire — kitchen, bath, and addition intent.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Reviews &amp; Map Pack Optimization</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Reviews &amp; Map Pack Optimization</h3>
           <p class="text-white/80">Remodel decisions hinge on trust. We wire review requests and Google Business Profile signals together so glowing before-and-after stories land exactly where homeowners search.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Licensing &amp; Trust Badges</h3>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Licensing &amp; Trust Badges</h3>
           <p class="text-white/80">Licensed, insured, and warranty-backed — shown upfront. Homeowners won't hire the remodeler who hides the paperwork.</p>
         </div>
-        <div class="bg-brand-darkest border border-white/10 rounded-2xl p-8">
-          <h3 class="text-card-title font-bold text-brand-cyan mb-3">Local SEO Built In</h3>
-          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-cyan underline decoration-brand-cyan/30">on-page SEO</a> aimed at high-intent remodel searches — kitchen, bath, and whole-home queries across Shelby, Gastonia, and beyond.</p>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Local SEO Built In</h3>
+          <p class="text-white/80">Every site ships with <a href="/services/seo/" class="text-brand-accent underline decoration-brand-accent/30">on-page SEO</a> aimed at high-intent remodel searches — kitchen, bath, and whole-home queries across Shelby, Gastonia, and beyond.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Service Areas / Proof Section -->
-  <section class="py-24 px-4 bg-brand-darkest">
+  <section class="py-24 px-4 bg-white/[0.03]">
     <div class="max-w-7xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Trusted by Remodelers Across Western NC</h2>
-          <p class="text-white/80 text-lg mb-8">Remodelers across Western NC use our sites to turn portfolio searches into booked consultations — from <a href="/web-design-shelby-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-cyan underline decoration-brand-cyan/30">Polkville</a>.</p>
+          <p class="text-white/80 text-lg mb-8">Remodelers across Western NC use our sites to turn portfolio searches into booked consultations — from <a href="/web-design-shelby-nc/" class="text-brand-accent underline decoration-brand-accent/30">Shelby</a> and <a href="/web-design-gastonia-nc/" class="text-brand-accent underline decoration-brand-accent/30">Gastonia</a> to <a href="/web-design-kings-mountain-nc/" class="text-brand-accent underline decoration-brand-accent/30">Kings Mountain</a>, <a href="/web-design-forest-city-nc/" class="text-brand-accent underline decoration-brand-accent/30">Forest City</a>, <a href="/web-design-boiling-springs-nc/" class="text-brand-accent underline decoration-brand-accent/30">Boiling Springs</a>, and <a href="/web-design-polkville-nc/" class="text-brand-accent underline decoration-brand-accent/30">Polkville</a>.</p>
           <a href="/services/case-studies/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300">
             See Our Case Studies
           </a>
         </div>
         <div class="grid gap-4">
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
             <div class="text-brand-accent text-3xl font-black mb-1">100%</div>
             <div class="text-white font-bold mb-1">Google Indexing Guarantee</div>
             <p class="text-white/70 text-sm">Remodeling sites fully indexed in as little as 72 hours — photography included.</p>
           </div>
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
-            <div class="text-brand-cyan text-3xl font-black mb-1">240%</div>
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
+            <div class="text-brand-accent text-3xl font-black mb-1">240%</div>
             <div class="text-white font-bold mb-1">Avg. Traffic Growth</div>
             <p class="text-white/70 text-sm">Remodeling clients commonly more than double local impressions after launch.</p>
           </div>
-          <div class="bg-brand-dark p-6 rounded-2xl border border-white/5">
+          <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
             <div class="text-brand-blue text-3xl font-black mb-1">Top 5</div>
             <div class="text-white font-bold mb-1">Remodeling Map Pack</div>
             <p class="text-white/70 text-sm">We put remodelers at the top of the map, where homeowners build their shortlist.</p>
@@ -200,13 +201,13 @@ const serviceSchema = {
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/contact/"
-          class="inline-block bg-brand-darkest text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+          class="inline-block bg-white/[0.03] text-white px-10 py-4 rounded-xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
         >
           Book a Free Chat
         </a>
         <a
           href="tel:+17044738188"
-          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-brand-darkest hover:text-white transition-all duration-300"
+          class="inline-block border-2 border-brand-darkest text-brand-darkest px-10 py-4 rounded-xl font-black text-xl hover:bg-white/[0.03] hover:text-white transition-all duration-300"
         >
           (704) 473-8188
         </a>

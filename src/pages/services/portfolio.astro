@@ -34,13 +34,14 @@ const serviceSchema = {
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Web Design Portfolio"
   description="View our portfolio of web design, branding, and digital marketing projects for local businesses in Shelby, NC."
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
-  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-brand-darkest" data-animate>
+  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-white/[0.03]" data-animate>
     <!-- Whisping portfolio preview backdrop -->
     <div class="portfolio-whisping absolute inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
       <div class="flex gap-8 items-center h-full w-max animate-[portfolio-scroll_35s_linear_infinite] opacity-[0.58] will-change-transform">
@@ -50,12 +51,12 @@ const serviceSchema = {
             <Image src={img} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
           ))}
       </div>
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-darkest/70 via-transparent to-brand-darkest/70 z-10 pointer-events-none"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-brand-darkest/60 via-transparent to-brand-darkest/60 z-10 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#07090e]/60 via-transparent to-[#07090e]/60 z-10 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#07090e]/55 via-transparent to-[#07090e]/55 z-10 pointer-events-none"></div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-br from-black/20 via-brand-darkest/30 to-black/20 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/20 via-[#07090e]/55 to-black/20 pointer-events-none"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Portfolio</p>
+      <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Portfolio</p>
       <h1 class="font-heading text-page-title md:text-page-title-lg font-bold mb-4 leading-tight bg-gradient-to-r from-white to-brand-blue bg-clip-text text-transparent">
         Portfolio
       </h1>
@@ -66,20 +67,20 @@ const serviceSchema = {
   </section>
 
   <!-- Portfolio Grid -->
-  <section class="py-16 px-4 bg-brand-darkest" data-animate>
+  <section class="py-16 px-4 bg-white/[0.03]" data-animate>
     <div class="max-w-7xl mx-auto">
       
       <!-- Websites Section -->
       <div class="mb-16">
         <div class="mb-10">
-          <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Websites</p>
+          <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Websites</p>
           <h2 class="font-heading text-3xl md:text-5xl font-bold text-white">Websites</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <!-- Lee Construction -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={leeConstruction} alt="Lee Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -92,7 +93,7 @@ const serviceSchema = {
 
           <!-- Shades of Gray Painters -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={shadesOfGray} alt="Shades of Gray Painters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -105,7 +106,7 @@ const serviceSchema = {
 
           <!-- Padgsteen Guitars -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={padgsteenGuitars} alt="Padgsteen Guitars" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -118,7 +119,7 @@ const serviceSchema = {
 
           <!-- Odyssey Renovations -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={odysseyRenovations} alt="Odyssey Custom Renovations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -131,7 +132,7 @@ const serviceSchema = {
 
           <!-- Will Groom Restorations -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={willGroom} alt="Will Groom Restorations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -144,7 +145,7 @@ const serviceSchema = {
 
           <!-- Savvy Tech Jones -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={savvyTechJones} alt="Savvy Tech Jones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -157,7 +158,7 @@ const serviceSchema = {
 
           <!-- Shelby Web Company -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-brand-accent/30 hover:border-brand-accent/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-brand-accent/30 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={swebscreen} alt="Shelby Web Company" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -174,14 +175,14 @@ const serviceSchema = {
       <!-- Web Applications Section -->
       <div>
         <div class="mb-10">
-          <p class="text-brand-glow text-label uppercase tracking-widest mb-4">✦ Web Applications</p>
+          <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Web Applications</p>
           <h2 class="font-heading text-3xl md:text-5xl font-bold text-white">Web Applications</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <!-- Big Futuristic Picture Box -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -194,7 +195,7 @@ const serviceSchema = {
 
           <!-- Audio Notes AI -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={audioNotesAi} alt="Audio Notes AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -207,7 +208,7 @@ const serviceSchema = {
 
           <!-- Musical Lock -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={musicalLock} alt="Musical Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -220,7 +221,7 @@ const serviceSchema = {
 
           <!-- Mikes Gut Healer -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={mikesGutHealer} alt="Mikes Gut Healer 5000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -233,7 +234,7 @@ const serviceSchema = {
 
           <!-- The Living Word -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={theLivingWord} alt="The Living Word" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -246,7 +247,7 @@ const serviceSchema = {
 
           <!-- RIFE Generator -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={rifeGenerator} alt="RIFE Frequency Generator" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -259,7 +260,7 @@ const serviceSchema = {
 
           <!-- 5G Analyzer -->
           <div class="group cursor-pointer">
-            <div class="relative rounded-xl overflow-hidden bg-brand-dark border border-white/10 hover:border-brand-purple/50 transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
                 <Image src={gAnalyzer} alt="5G Spectrum Analyzer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
@@ -278,8 +279,8 @@ const serviceSchema = {
 
   <!-- CTA Section -->
   <section class="py-20 px-4 relative overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-darkest via-brand-dark to-brand-darkest"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-cyan/10"></div>
+    <div class="absolute inset-0 bg-white/[0.03]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-sky/10 to-brand-accent/10"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6">
         Want Your Project Featured?
@@ -289,7 +290,7 @@ const serviceSchema = {
       </p>
       <a 
         href="/contact/"
-        class="cta-glow-shine inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+        class="cta-glow-shine inline-block bg-brand-accent text-[#08090e] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
       >
         Get Started Today
       </a>
@@ -299,8 +300,8 @@ const serviceSchema = {
   <!-- Lightbox Modal -->
   <div id="portfolio-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-label="Portfolio screenshot preview">
     <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col">
-      <button id="portfolio-lightbox-close" class="absolute -top-10 right-0 text-white text-3xl leading-none hover:text-brand-cyan transition-colors" aria-label="Close preview">&times;</button>
-      <div class="overflow-auto rounded-xl border border-white/10 bg-brand-dark shadow-2xl">
+      <button id="portfolio-lightbox-close" class="absolute -top-10 right-0 text-white text-3xl leading-none hover:text-brand-accent transition-colors" aria-label="Close preview">&times;</button>
+      <div class="overflow-auto rounded-xl border border-white/10 bg-white/[0.04] shadow-2xl">
         <img id="portfolio-lightbox-img" src="" alt="" class="w-full h-auto block" />
       </div>
     </div>
