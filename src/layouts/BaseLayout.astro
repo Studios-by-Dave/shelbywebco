@@ -19,7 +19,7 @@ interface Props {
   image?: string;
   canonical?: string;
   breadcrumbs?: Breadcrumb[];
-  bgVariant?: 'legacy' | 'charcoal';
+  bgVariant?: 'legacy' | 'charcoal' | 'blue';
   noindex?: boolean;
 }
 
@@ -301,7 +301,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     
     <title>{fullTitle}</title>
   </head>
-  <body class:list={[bgVariant === 'charcoal' ? 'bg-[#111214]' : 'bg-brand-darkest', 'text-white font-body antialiased relative overflow-x-hidden pb-[60px] md:pb-0']}>
+  <body class:list={[bgVariant === 'charcoal' ? 'bg-[#111214]' : bgVariant === 'blue' ? 'bg-[#091523]' : 'bg-brand-darkest', 'text-white font-body antialiased relative overflow-x-hidden pb-[60px] md:pb-0']}>
     <!-- Texture & Lighting Background -->
     <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
       {bgVariant === 'charcoal' ? (
@@ -310,6 +310,13 @@ const showBreadcrumbBar = pathSegments.length > 0;
           <div class="absolute inset-0 bg-[#111214]"></div>
           <!-- Faded white grid -->
           <div class="absolute inset-0 opacity-[0.12]" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </>
+      ) : bgVariant === 'blue' ? (
+        <>
+          <!-- Deep brand blue base -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#07090e] via-[#091523] to-[#0d2a5c]"></div>
+          <!-- Faded white grid -->
+          <div class="absolute inset-0 opacity-[0.10]" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px); background-size: 40px 40px;"></div>
         </>
       ) : (
         <>

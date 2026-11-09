@@ -19,7 +19,7 @@ const {
   id = 'growth-pricing',
   title = 'One Simple Monthly Plan',
   titleClass = 'font-heading text-4xl md:text-5xl font-bold text-white mb-6',
-  subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-cyan font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
+  subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-accent font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
   variant = 'launch-first',
   only = '',
   bare = false,
@@ -164,7 +164,7 @@ const visibleTiers = only ? activeTiers.filter((tier) => tier.key === only) : ac
 const gridClass = only ? 'max-w-md mx-auto grid gap-8 mb-0' : 'grid md:grid-cols-3 gap-8 mb-16';
 const Shell: any = bare ? 'div' : 'section';
 const shellProps = bare ? {} : { id, 'data-animate': '' };
-const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
+const shellClass = bare ? '' : 'py-24 px-4';
 ---
 
 <Shell {...shellProps} class={shellClass}>
@@ -172,7 +172,7 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
     {!bare && (
       <>
         <div class="text-center mb-16">
-          <p class="text-brand-purple text-sm uppercase tracking-widest mb-4">&#10022; Our Growth Plans</p>
+          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; Our Growth Plans</p>
           <h2 class={titleClass}>{title}</h2>
           <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
         </div>
@@ -191,9 +191,9 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
       {visibleTiers.map((tier) => (
         <div
           class:list={[
-            'bg-gradient-to-br from-brand-dark via-brand-darkest to-[#050505] border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_20px_40px_rgba(0,0,0,0.5)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_24px_50px_rgba(0,0,0,0.6)] relative transition-all duration-300',
-            tier.badge ? 'border-[#f3db70]/50 z-10 scale-100 lg:scale-105' : 'border-white/10',
-            focus === tier.key ? 'ring-2 ring-brand-cyan ring-offset-2 ring-offset-brand-darkest' : '',
+            'bg-white/[0.04] backdrop-blur-xl border rounded-2xl p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.10),_0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.08] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),_0_24px_50px_rgba(8,9,15,0.55)] relative transition-all duration-300',
+            tier.badge ? 'border-[#f3db70]/50 bg-white/[0.07] z-10 scale-100 lg:scale-105' : 'border-white/15',
+            focus === tier.key ? 'ring-2 ring-brand-accent ring-offset-2 ring-offset-[#091523]' : '',
           ]}
         >
           {tier.badge && (
@@ -209,20 +209,20 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
               {variant === 'monthly-first' ? (
                 <>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Per Month</span>
-                  <span class="text-5xl md:text-6xl font-black font-nav text-brand-cyan drop-shadow-[0_0_12px_rgba(0,212,255,0.4)] whitespace-nowrap">
+                  <span class="text-5xl md:text-6xl font-black font-nav text-brand-accent drop-shadow-[0_0_12px_rgba(132,204,22,0.4)] whitespace-nowrap">
                     {tier.monthly}<span class="text-2xl">/mo</span>
                   </span>
                 </>
               ) : (
                 <>
-                  <span class="inline-block bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Bundle</span>
+                  <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Bundle</span>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Launch</span>
                   <span class="text-[2.75rem] md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
                     {tier.launch}
                   </span>
                   <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">AND/OR</span>
-                  <div class="w-full bg-brand-cyan/10 border border-brand-cyan/20 rounded-xl py-2 px-3 text-center">
-                    <span class="text-brand-cyan font-black text-[1.7rem]">{tier.monthly}<span class="text-base font-bold">/mo</span></span>
+                  <div class="w-full bg-brand-accent/10 border border-brand-accent/25 rounded-xl py-2 px-3 text-center">
+                    <span class="text-brand-accent font-black text-[1.7rem]">{tier.monthly}<span class="text-base font-bold">/mo</span></span>
                     <span class="text-white/70 text-xs block">Ongoing management</span>
                   </div>
                 </>
@@ -234,7 +234,7 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
               <li>• {feature}</li>
             ))}
           </ul>
-          <p class="text-brand-cyan/80 text-xs font-semibold mb-4">Best for: {tier.bestFor}</p>
+          <p class="text-brand-accent/90 text-xs font-semibold mb-4">Best for: {tier.bestFor}</p>
           <a
             href={ctaHref}
             class:list={[
@@ -251,10 +251,10 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
     </div>
 
     {standalone && (
-      <div class="mb-16 rounded-2xl border border-white/10 bg-brand-darkest/80 p-6 md:p-8">
+      <div class="mb-16 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 md:p-8">
         <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 items-center">
           <div>
-            <p class="text-brand-cyan text-xs uppercase tracking-widest mb-3 font-bold">Or just the website</p>
+            <p class="text-brand-accent text-xs uppercase tracking-widest mb-3 font-bold">Or just the website</p>
             <h3 class="font-heading text-3xl md:text-4xl font-black text-white mb-2">Website Care Plan</h3>
             <p class="text-white/70 text-sm md:text-base leading-relaxed italic mb-5">
               Prefer no ongoing SEO? Get the same custom build and keep it maintained, without the SEO subscription.
@@ -265,7 +265,7 @@ const shellClass = bare ? '' : 'py-24 px-4 bg-brand-darkest/50';
             </div>
             <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-1">
               <span class="text-white/60 text-sm">Then, per month</span>
-              <span class="font-heading text-3xl font-bold text-brand-cyan">$149</span>
+              <span class="font-heading text-3xl font-bold text-brand-accent">$149</span>
             </div>
           </div>
 
