@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PixieDust from '../../../components/PixieDust.jsx';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website Refresh & Rebuild",
+  "description": "Website refresh and rebuild service in Shelby, NC. We clean out watermarks, AI-generated junk icons, and clutter, then modernize your existing site. $898 with 50% up front.",
+  "url": "https://www.shelbywebco.com/services/web-design/website-refresh/",
+  "provider": { "@type": "LocalBusiness", "name": "Shelby Web Company", "url": "https://www.shelbywebco.com", "telephone": "(704) 473-8188" },
+  "areaServed": ["Shelby, NC", "Kings Mountain, NC", "Gastonia, NC", "Forest City, NC", "Boiling Springs, NC", "Polkville, NC"]
+};
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="Website Refresh & Rebuild"
+  description="Website refresh and rebuild service in Shelby, NC. We clean out watermarks, AI-generated junk icons, and clutter, then modernize your existing site. $898 with 50% up front."
+>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+
+  <!-- Hero Section -->
+  <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-white/[0.03]" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-black/35 via-[#07090e]/70 to-black/35 pointer-events-none"></div>
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-30">
+      <PixieDust client:load />
+    </div>
+    <div class="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10 text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; Clean Up &amp; Modernize</p>
+      <h1 class="font-heading text-[3.6rem] md:text-[4.4rem] lg:text-[4.8rem] font-bold text-white mb-4 leading-tight">
+        Website Refresh &amp; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Rebuild</span>
+      </h1>
+      <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+        Already have a website that's gone downhill? We clean out the watermarks, AI-generated junk icons, and clutter, then rebuild your pages into something fast, clean, and professional &mdash; without starting your business over online.
+      </p>
+      <a
+        href="/contact/?service=website-refresh"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-medium border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Get Your Free Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- What's Included Section -->
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; What's Included</p>
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6">
+          A Full Cleanup, Top to Bottom
+        </h2>
+        <p class="max-w-3xl mx-auto text-white text-lg">
+          A lot of sites out there are weighed down by watermarks, generic AI-generated badge icons, stretched stock photos, and half-finished pages. We strip all of that out and rebuild what's left into a site you're proud to put on a business card.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Watermark Removal</h3>
+          <p class="text-white text-base md:text-lg">We pull watermarked and stolen-lookup images off your site and replace them with clean, licensed, or original photography that actually represents your business.</p>
+        </div>
+
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">AI Slop Cleanup</h3>
+          <p class="text-white text-base md:text-lg">Generic AI-generated badge icons, fake-looking people photos, and weird clip-art get removed and replaced with real, professional assets that build trust.</p>
+        </div>
+
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Page Rebuild &amp; Refresh</h3>
+          <p class="text-white text-base md:text-lg">We rebuild your key pages with clean, hand-coded layouts — clearer headlines, better structure, and a modern look that works on every device.</p>
+        </div>
+
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Speed &amp; Mobile Polish</h3>
+          <p class="text-white text-base md:text-lg">Bloated code, oversized images, and slow plugins get trimmed so your refreshed site loads fast and looks right on phones, tablets, and desktops.</p>
+        </div>
+
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Local SEO Basics</h3>
+          <p class="text-white text-base md:text-lg">Titles, descriptions, headings, and local signals get tightened up so your refreshed site is ready to rank — and ready for our <a href="/services/seo/" class="text-brand-accent hover:underline">ongoing local SEO</a> if you want it.</p>
+        </div>
+
+        <div class="bg-white/[0.03] border border-brand-sky/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,200,255,0.15)] transition-all duration-300">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-4 text-brand-darkest">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Keep What Works</h3>
+          <p class="text-white text-base md:text-lg">Your domain, rankings, reviews, and content history stay intact. A refresh and rebuild upgrades what's there — it doesn't throw it away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-20 px-4 bg-white/[0.03] border-y border-white/10" data-animate>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; How It Works</p>
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white">
+          Our Refresh &amp; Rebuild Process
+        </h2>
+      </div>
+
+      <ol class="space-y-6">
+        <li class="flex items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+          <span class="font-heading text-3xl font-black text-brand-accent shrink-0">1</span>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-2">Free Site Audit</h3>
+            <p class="text-white/80">We go through your current site page by page and flag everything: watermarked images, AI slop badges, broken layouts, slow pages, and outdated content. You get a clear, honest list before you pay a dime.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+          <span class="font-heading text-3xl font-black text-brand-accent shrink-0">2</span>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-2">Deep Clean</h3>
+            <p class="text-white/80">We pull the watermarks, strip the AI-generated junk icons, remove broken or embarrassing elements, and gather what's worth keeping — your real photos, reviews, and copy.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+          <span class="font-heading text-3xl font-black text-brand-accent shrink-0">3</span>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-2">Refresh &amp; Rebuild</h3>
+            <p class="text-white/80">Your key pages are rebuilt with clean, hand-coded layouts. We sharpen the writing, replace weak images with proper photography, and give the whole site a consistent, professional look.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+          <span class="font-heading text-3xl font-black text-brand-accent shrink-0">4</span>
+          <div>
+            <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-2">Review &amp; Launch</h3>
+            <p class="text-white/80">You review the refreshed site, we make your revisions, then we launch it — faster, cleaner, and mobile-friendly, with local SEO basics wired in from day one.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; Simple Pricing</p>
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6">
+        One Flat Price. No Surprises.
+      </h2>
+
+      <div class="bg-white/[0.05] backdrop-blur-xl border border-brand-accent/40 rounded-3xl p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+        <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Website Refresh &amp; Rebuild</h3>
+        <p class="text-white/60 text-sm mb-6 italic">Full cleanup + rebuild of your existing site</p>
+
+        <div class="flex flex-col items-center justify-center mb-6">
+          <span class="text-4xl md:text-5xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">$898</span>
+          <p class="text-white/70 mt-3">50% up front ($449) to start &bull; balance due at launch</p>
+        </div>
+
+        <ul class="space-y-3 text-sm text-white/75 mb-8 text-left max-w-md mx-auto">
+          <li>&bull; Full watermark and AI slop cleanup</li>
+          <li>&bull; Rebuilt key pages with modern, hand-coded layouts</li>
+          <li>&bull; Speed and mobile polish</li>
+          <li>&bull; Local SEO basics included</li>
+          <li>&bull; Revisions before launch</li>
+        </ul>
+
+        <a
+          href="/contact/?service=website-refresh"
+          class="cta-glow-shine inline-block w-full sm:w-auto bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300"
+        >
+          Start My Website Refresh
+        </a>
+        <p class="text-white/60 text-sm mt-4">Starts with a free site audit and quote — no obligation.</p>
+      </div>
+
+      <p class="text-white/75 text-base mt-8 max-w-2xl mx-auto">
+        Need ongoing care after the refresh? Pair it with our <a href="/services/seo/" class="text-brand-accent hover:underline decoration-brand-accent/30">local SEO plan at $297/month</a> or the <a href="/pricing/" class="text-brand-accent hover:underline decoration-brand-accent/30">Website Care Plan</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-white/[0.03]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-accent/10"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6">
+        Ready to Ditch the Watermarks?
+      </h2>
+      <p class="text-lg text-white mb-8">
+        Send us your current site and we'll show you exactly what we'd clean up, rebuild, and improve — free.
+      </p>
+      <a
+        href="/contact/?service=website-refresh"
+        class="cta-glow-shine inline-block bg-brand-accent text-[#08090e] px-8 py-3 rounded-xl font-medium hover:bg-brand-accent-light"
+      >
+        Get My Free Site Audit
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
