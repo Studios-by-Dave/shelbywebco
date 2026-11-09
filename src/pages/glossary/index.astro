@@ -19,13 +19,13 @@ const definedTermSet = {
 };
 ---
 
-<BaseLayout title="Web Design Glossary" description="Plain-English glossary for local business owners — SEO, web design, hosting and dev terms explained without jargon." bgVariant="charcoal">
+<BaseLayout title="Web Design Glossary" description="Plain-English glossary for local business owners — SEO, web design, hosting and dev terms explained without jargon." bgVariant="blue">
   <script is:inline set:html={JSON.stringify(definedTermSet)} type="application/ld+json"></script>
 
   <section class="py-16 lg:py-20 px-4 relative overflow-hidden" data-animate>
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Plain-English Legend</p>
-      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Web Design <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-sky">Glossary</span></h1>
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Plain-English Legend</p>
+      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">Web Design <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Glossary</span></h1>
       <p class="text-xl text-white/80 max-w-3xl mx-auto mb-4">No jargon, no runaround — just what the words actually mean for your business. Built for plumbers, builders, shop owners, and anyone who wants their site to make sense.</p>
       <p class="text-white/50 text-sm">Tap any term for a quick definition. Filter by category or search below.</p>
     </div>
@@ -33,20 +33,22 @@ const definedTermSet = {
 
   <section class="py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <GlossarySearch client:load terms={glossary} />
+      <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-5 md:p-8">
+        <GlossarySearch client:load terms={glossary} />
+      </div>
       <div class="mt-12 text-center">
-        <p class="text-white/50 text-sm">Seen a term elsewhere on the site? Every dotted underline links back here — e.g., <a href="#canonical-tag" class="text-brand-cyan hover:underline">Canonical Tag</a>.</p>
+        <p class="text-white/50 text-sm">Seen a term elsewhere on the site? Every dotted underline links back here — e.g., <a href="#canonical-tag" class="text-brand-accent hover:underline">Canonical Tag</a>.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-12 px-4 border-t border-white/5">
-    <div class="max-w-4xl mx-auto text-center">
+  <section class="py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center rounded-3xl border border-white/10 bg-white/[0.04] p-8 md:p-10">
       <h2 class="font-heading text-2xl font-bold text-white mb-3">Still have questions?</h2>
       <p class="text-white/70 mb-6">We explain this stuff on every project — no quiz required.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="cta-glow-shine inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-bold">Talk to a Human</a>
-        <a href="/services/seo/" class="inline-block border border-white/20 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10">Explore SEO Services</a>
+        <a href="/contact/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35)] hover:-translate-y-[1px] transition-all duration-300">Talk to a Human</a>
+        <a href="/services/seo/" class="inline-block border border-white/15 bg-white/[0.04] text-white px-8 py-3 rounded-xl font-bold hover:bg-white/[0.08] transition-all">Explore SEO Services</a>
       </div>
     </div>
   </section>

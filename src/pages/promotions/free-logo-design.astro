@@ -4,6 +4,7 @@ import PixieDust from '../../components/PixieDust.jsx';
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Free Logo Design with Web Package"
   description="Get a professional custom logo design completely free when you invest in a full web design package from Shelby Web Company."
 >
@@ -11,11 +12,11 @@ import PixieDust from '../../components/PixieDust.jsx';
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4" data-animate>
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offer</p>
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offer</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Free <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Logo Design</span>
+        <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+          Free <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Logo Design</span>
         </h1>
       </div>
       <p class="text-lg md:text-xl text-white mb-8">
@@ -23,7 +24,7 @@ import PixieDust from '../../components/PixieDust.jsx';
       </p>
       <a 
         href="/contact/"
-        class="inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35)] hover:-translate-y-[1px] transition-all duration-300"
       >
         Claim Your Free Logo
       </a>
@@ -31,7 +32,7 @@ import PixieDust from '../../components/PixieDust.jsx';
   </section>
 
   <!-- What's Included -->
-  <section class="py-24 px-4 bg-brand-darkest border-y border-white/5">
+  <section class="py-24 px-4">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">What You Get</h2>
@@ -41,7 +42,7 @@ import PixieDust from '../../components/PixieDust.jsx';
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
@@ -49,7 +50,7 @@ import PixieDust from '../../components/PixieDust.jsx';
           <p class="text-white/90">We develop multiple unique logo concepts tailored to your brand's personality, industry, and vision.</p>
         </div>
 
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
           </div>
@@ -57,7 +58,7 @@ import PixieDust from '../../components/PixieDust.jsx';
           <p class="text-white/90">Work with us to refine the design until it's perfect. No revision limits—your satisfaction is our priority.</p>
         </div>
 
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
           </div>
@@ -65,7 +66,7 @@ import PixieDust from '../../components/PixieDust.jsx';
           <p class="text-white/90">Receive your logo in all the formats you need: PNG, SVG, PDF, and high-resolution print files.</p>
         </div>
 
-        <div class="bg-brand-dark p-8 rounded-2xl border border-white/5">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
           <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest text-brand-darkest">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
@@ -146,32 +147,32 @@ import PixieDust from '../../components/PixieDust.jsx';
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-24 px-4 bg-brand-dark/50 border-y border-white/5">
+  <section class="py-24 px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-16 text-center">Frequently Asked Questions</h2>
       
       <div class="space-y-6">
-        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+        <div class="bg-white/[0.04] p-6 rounded-xl border border-white/10">
           <h3 class="text-lg font-bold text-white mb-3">Is the logo design truly free?</h3>
           <p class="text-white">Yes, completely free when you invest in a full web design package. It's our way of helping you build a complete brand identity.</p>
         </div>
 
-        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+        <div class="bg-white/[0.04] p-6 rounded-xl border border-white/10">
           <h3 class="text-lg font-bold text-white mb-3">What qualifies as a "full web package"?</h3>
           <p class="text-white">Our web packages include website design, development, SEO optimization, and deployment. Contact us to discuss which package works best for your business.</p>
         </div>
 
-        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+        <div class="bg-white/[0.04] p-6 rounded-xl border border-white/10">
           <h3 class="text-lg font-bold text-white mb-3">Can I use the logo after my website is live?</h3>
           <p class="text-white">Absolutely. You own the logo and can use it anywhere—social media, print, merchandise, and beyond. No restrictions.</p>
         </div>
 
-        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+        <div class="bg-white/[0.04] p-6 rounded-xl border border-white/10">
           <h3 class="text-lg font-bold text-white mb-3">How long does the logo design process take?</h3>
           <p class="text-white">You'll receive initial concepts within 5 business days. Revisions are added as needed based on your feedback.</p>
         </div>
 
-        <div class="bg-brand-darkest p-6 rounded-xl border border-white/5">
+        <div class="bg-white/[0.04] p-6 rounded-xl border border-white/10">
           <h3 class="text-lg font-bold text-white mb-3">What if I don't like any of the concepts?</h3>
           <p class="text-white">We'll start over with new concepts. There's no limit to revisions—we're committed to creating something you love.</p>
         </div>
@@ -187,11 +188,11 @@ import PixieDust from '../../components/PixieDust.jsx';
         Don't miss this limited-time offer. Combine a beautiful website with a professional logo.
       </p>
       <p class="text-white/90 mb-8 text-sm">
-        A great logo is just the start — see how our <a href="/services/branding/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">brand identity packages</a> build your full visual system, and what <a href="/services/web-design/" class="text-brand-cyan hover:text-white underline decoration-brand-cyan/30">web design</a> adds to complete the picture.
+        A great logo is just the start — see how our <a href="/services/branding/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">brand identity packages</a> build your full visual system, and what <a href="/services/web-design/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">web design</a> adds to complete the picture.
       </p>
       <a 
         href="/contact/"
-        class="inline-block bg-brand-accent text-[#1c1c1c] px-8 py-3 rounded-xl font-bold hover:bg-brand-accent-light transition-all text-lg"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35)] hover:-translate-y-[1px] transition-all duration-300 text-lg"
       >
         Start Your Project Today
       </a>

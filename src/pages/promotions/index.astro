@@ -4,6 +4,7 @@ import PixieDust from '../../components/PixieDust.jsx';
 ---
 
 <BaseLayout 
+  bgVariant="blue"
   title="Limited-Time Offers & Promotions"
   description="Limited-time offers from Shelby Web Co — The Golden Ticket free website giveaway, free logo design, free SEO audit, and referral bonuses."
 >
@@ -11,11 +12,11 @@ import PixieDust from '../../components/PixieDust.jsx';
   <!-- Hero Section -->
   <section class="py-14 lg:py-20 px-4" data-animate>
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-glow text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offers</p>
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Limited-Time Offers</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-[3.2rem] sm:text-[4.2rem] md:text-[5.2rem] lg:text-[6.4rem] font-bold text-white mb-4 leading-[0.9] tracking-tight">
-          Exclusive <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-sky">Promotions</span> from Our Business to Yours
+        <h1 class="font-heading text-[3.2rem] sm:text-[4.2rem] md:text-[5.2rem] lg:text-[6.4rem] font-black text-white mb-4 leading-[0.9] tracking-tight">
+          Exclusive <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Promotions</span> from Our Business to Yours
         </h1>
       </div>
       <p class="text-xl text-white mb-8">
@@ -29,7 +30,7 @@ import PixieDust from '../../components/PixieDust.jsx';
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Promo 1: Free Logo Design -->
-        <a href="/promotions/free-logo-design/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+        <a href="/promotions/free-logo-design/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden cursor-pointer">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
@@ -43,14 +44,14 @@ import PixieDust from '../../components/PixieDust.jsx';
               <li>• Unlimited revisions</li>
               <li>• All file formats</li>
             </ul>
-            <span class="text-brand-cyan text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-accent text-[1.07rem] font-semibold transition-colors">
               Claim Free Logo Design →
             </span>
           </div>
         </a>
 
         <!-- Promo 2: Free SEO Audit -->
-        <a href="/promotions/free-seo-audit/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+        <a href="/promotions/free-seo-audit/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden cursor-pointer">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
@@ -64,14 +65,14 @@ import PixieDust from '../../components/PixieDust.jsx';
               <li>• Competitive insights</li>
               <li>• Action plan</li>
             </ul>
-            <span class="text-brand-cyan text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-accent text-[1.07rem] font-semibold transition-colors">
               Get Your Free SEO Audit →
             </span>
           </div>
         </a>
 
         <!-- Promo 3: $100 Referral Bonus -->
-        <a href="/promotions/referral-bonus/" class="group block bg-gradient-to-br from-brand-dark to-brand-darkest border border-white/10 rounded-2xl p-6 hover:border-lime-400/60 hover:shadow-[0_25px_50px_rgba(132,204,22,0.22),0_12px_24px_rgba(0,0,0,0.5)] hover:-translate-y-3 hover:scale-[1.03] hover:z-10 transition-all duration-300 ease-out will-change-transform relative overflow-hidden cursor-pointer">
+        <a href="/promotions/referral-bonus/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden cursor-pointer">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
           <div class="relative z-10">
             <div class="w-20 h-20 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-xl flex items-center justify-center mb-4">
@@ -85,7 +86,7 @@ import PixieDust from '../../components/PixieDust.jsx';
               <li>• Fast payout process</li>
               <li>• Lifetime referral link</li>
             </ul>
-            <span class="text-brand-cyan text-[1.07rem] font-medium transition-colors">
+            <span class="text-brand-accent text-[1.07rem] font-semibold transition-colors">
               Learn About Referrals →
             </span>
           </div>
