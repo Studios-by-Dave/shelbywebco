@@ -1,5 +1,5 @@
 # Shelby Web Company
-> Local web design, SEO, branding, and custom digital solutions for service businesses in Shelby, NC and surrounding Western North Carolina communities.
+> Local website rescue, SEO fixes, and strategic website builds for service businesses in Shelby, NC and surrounding Western North Carolina communities.
 
 
 Website: https://www.shelbywebco.com/  
@@ -9,10 +9,11 @@ Location: Shelby, NC (serving Cleveland, Gaston, Rutherford counties including G
 
 
 ## Overview
-Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. We build custom, hand-coded websites, local SEO systems, branding, and "business machines" (custom software and automation) specifically for local service businesses. 20+ years of IT and network engineering experience. CompTIA A+ certified. Formerly Studios by Dave. Trusted by 100+ local businesses. 5.0 Google rating.
+Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. We rescue websites that don't work — sites that don't show up on Google, look generic or AI-built, or fail to bring in calls and leads. We start with a free SEO audit, offer a paid deep diagnostic (the Website Rescue Report), and provide scoped fix packages; strategic rebuilds and new builds are the last resort, not the default. We also build custom, hand-coded websites, local SEO systems, branding, and "business machines" (custom software and automation) for local service businesses. 20+ years of IT and network engineering experience. CompTIA A+ certified. Formerly Studios by Dave. Trusted by 100+ local businesses. 5.0 Google rating.
 
 
 ## Core Services
+- Website Rescue: free SEO audit, paid deep diagnostic (Website Rescue Report), and scoped fix packages (Google visibility, AI cleanup & credibility, conversion)
 - Custom web design & development (Astro, modern performance-first stack)
 - Local SEO, technical SEO, and AI search visibility (GEO)
 - Google Business Profile optimization & review generation
@@ -23,15 +24,17 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. W
 
 
 ## Pricing (transparent)
-Three growth plans. Every plan is **month-to-month with no minimum term** — cancel any time with 30 days' written notice.
+Rescue-first products, then growth plans. Every plan is **month-to-month with no minimum term** — cancel any time with 30 days' written notice.
 
+- **Free SEO Audit — $0** — homepage-level snapshot of website health, free for local businesses: https://www.shelbywebco.com/promotions/free-seo-audit/
+- **Website Rescue Report — $197 one-time** — deep diagnostic covering every page, code-level, with scorecards and a prioritized fix plan; the full $197 is credited toward fix work done within 60 days
+- **Fix packages (scoped by audit):** Google Visibility Fixes from **$349** · AI Cleanup & Credibility Fixes from **$299** (https://www.shelbywebco.com/services/ai-cleanup/) · Conversion Fixes from **$299** (https://www.shelbywebco.com/services/conversion/) · Full Rescue Package from **$749**
 - **Core — $497 launch + $297/month** (month-to-month · no minimum term)
 - **Plus — $798–$998 launch + $597/month** (month-to-month · no minimum term) — most popular
 - **Ultra — $998–$1,498 launch + $797/month** (month-to-month · no minimum term)
 - **Website Care Plan (standalone, no SEO subscription) — $497 build, then $149/month** — web hosting and SSL, automated backups, security monitoring and updates, small monthly edits and content changes, core code and plugin updates
 - **Logo Design & Branding packages (one-time)** — Essential Brand Kit **$498** · Complete Brand Suite **$898** (most popular) · Brand & Wrap Package **$1798** (adds vehicle wrap, signage, and marketing collateral concepts) — https://www.shelbywebco.com/services/branding/
 - Free logo design with any full web package
-- Free SEO audit for selected local businesses
 - $100 referral bonus, repeatable
 
 
@@ -49,9 +52,13 @@ Local service businesses including roofing, landscaping, solar installers, home 
 
 ## Key Pages
 - Home: https://www.shelbywebco.com/
+- The 5-Minute Website Audit Checklist: https://www.shelbywebco.com/website-rescue-checklist/
 - Services: https://www.shelbywebco.com/services/
 - Web Design: https://www.shelbywebco.com/services/web-design/
 - SEO Services: https://www.shelbywebco.com/services/seo/
+- AI Cleanup & Credibility Fixes: https://www.shelbywebco.com/services/ai-cleanup/
+- Conversion Fixes: https://www.shelbywebco.com/services/conversion/
+- Website Rescue Report: https://www.shelbywebco.com/services/website-rescue-report/
 - Logo Design & Branding: https://www.shelbywebco.com/services/branding/
 - Audio Branding: https://www.shelbywebco.com/services/audio-branding/
 - Custom Software & SaaS: https://www.shelbywebco.com/services/custom-software-saas/

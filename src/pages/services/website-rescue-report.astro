@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+import FaqSection from '../../components/FaqSection.astro';
+
+const faqItems = [
+  {
+    question: 'What\'s the difference between the free audit and the Rescue Report?',
+    answer: 'The free audit is a homepage-level snapshot: we check whether Google can find you, whether your site sends the right signals, and give you 2–3 quick recommendations. The Rescue Report is the deep version — every page, code-level — with scorecards, a full findings breakdown, and a prioritized fix plan.'
+  },
+  {
+    question: 'How does the $197 credit work?',
+    answer: 'Simple: buy the Report, and if you have us do the fix work within 60 days, the full $197 comes off your fix invoice. The report is essentially risk-free — either it tells you what to fix, or it pays for itself.'
+  },
+  {
+    question: 'What will the report say if my website is fine?',
+    answer: 'Then it says so. You\'ll get genuine positives in writing and a clean set of scorecards. Not every website needs rescue work, and we\'ll tell you honestly if yours doesn\'t.'
+  },
+  {
+    question: 'Do I need to give you access to anything?',
+    answer: 'No. The report works from your public website URL alone. If you have read-only Google Search Console access, some findings get sharper — but it\'s never required.'
+  },
+  {
+    question: 'Is this a "security audit" or "penetration test"?',
+    answer: 'No. The security scorecard covers a basic vulnerability review — things visible from the outside like HTTPS status, outdated software, and obvious risks. It\'s not a penetration test, and we won\'t pretend it is.'
+  }
+];
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="The Website Rescue Report — $197 Deep Diagnostic | Shelby Web Co"
+  description="A code-level diagnostic of every page on your website: plain-English verdict, 5 health scorecards, findings grouped by visibility, credibility, conversion, and technical — plus a prioritized fix plan. $197, credited toward fix work within 60 days."
+>
+
+  <!-- Hero -->
+  <section class="py-10 lg:py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ $197 One-Time · Credited Toward Fixes</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          The <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Website Rescue Report</span>
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-white max-w-3xl mx-auto mb-6">
+        The free audit checks your homepage. This checks <em>every page — code-level</em> — and hands you the full picture: what's working, what's broken, and exactly what to fix first.
+      </p>
+      <p class="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-8">
+        A 4–6 page plain-English PDF written for business owners, not SEO professionals. No jargon without a one-line explanation. No 40-page technical dump.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact/?service=website-rescue-audit"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+        >
+          Get My Rescue Report — $197
+        </a>
+        <a
+          href="/promotions/free-seo-audit/"
+          class="inline-block px-8 py-3 rounded-xl font-bold text-white border border-white/20 bg-white/[0.04] hover:bg-white/[0.08] hover:-translate-y-[1px] transition-all duration-300"
+        >
+          Try the Free Audit First
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Inside -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">What's Inside the Report</h2>
+        <p class="text-white max-w-2xl mx-auto">Every section answers one question: what should you do about your website, in what order?</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h4m4 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">The One-Paragraph Verdict</h3>
+          <p class="text-white/90">Your site's real strengths, the things holding it back, and the single most urgent problem — in plain English, up front.</p>
+        </div>
+
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Five Scorecards</h3>
+          <p class="text-white/90">Health, SEO, Trust, Security, and Local Visibility — each scored, each with a one-line explanation of what the number means for your business.</p>
+        </div>
+
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">What's Working</h3>
+          <p class="text-white/90">Genuine positives, first — always. If parts of your site are fine, the report says so explicitly. Credibility before criticism.</p>
+        </div>
+
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">What's Broken — By Business Impact</h3>
+          <p class="text-white/90">Findings grouped into four buckets: Visibility, Credibility, Conversion, and Technical + Security. Each one: what we saw, why it matters to your business, and how severe it is.</p>
+        </div>
+
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all md:col-span-2">
+          <div class="w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] rounded-lg flex items-center justify-center mb-6 text-brand-darkest">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Your First 3 Fixes</h3>
+          <p class="text-white/90">A mini rescue plan: what to do first, the expected impact, the rough effort — and an honest note on which ones you can handle yourself. If you'd rather we handle them, the last section shows what implementation looks like. No hard pitch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Credit -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto rounded-3xl border border-brand-accent/30 bg-brand-accent/[0.06] p-6 md:p-10 text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ The Risk-Free Part</p>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">The $197 Comes Back to You</h2>
+      <p class="text-lg text-white/90 max-w-xl mx-auto">
+        Buy the Rescue Report, and if you have us do the fix work within <strong class="text-brand-accent">60 days</strong>, the full $197 comes off your fix invoice. Either the report tells you what to fix — or it pays for itself.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-12 text-center">How It Works</h2>
+      <div class="space-y-8">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">1</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Order the Report</h3>
+            <p class="text-white">One page of info: your website URL and how to reach you. No access to your accounts required — read-only Search Console access helps, but it's optional.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">2</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">We Check Every Page, Code-Level</h3>
+            <p class="text-white">Indexing and crawlability, titles and structure, local signals, mobile experience, forms and conversion paths, trust signals, and a basic vulnerability review — across every page, not just the homepage.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">3</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">You Get the PDF</h3>
+            <p class="text-white">Within a few business days: verdict, scorecards, findings, and your prioritized fix plan — written so you can act on it whether you fix things yourself, hire someone else, or ask us to help. You're under no obligation either way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FaqSection items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10 text-center">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Ready for the Full Picture?</h2>
+      <p class="text-lg text-white/90 mb-8 max-w-xl mx-auto">
+        The Website Rescue Report — every page, code-level, with a plan. $197 one-time, credited toward fix work within 60 days.
+      </p>
+      <a
+        href="/contact/?service=website-rescue-audit"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Get My Rescue Report — $197
+      </a>
+      <p class="text-white/70 text-sm mt-6">
+        Not ready yet? Run the <a href="/website-rescue-checklist/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">5-Minute Website Audit Checklist</a> or start with the <a href="/promotions/free-seo-audit/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">free audit</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

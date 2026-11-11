@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PixieDust from '../../components/PixieDust.jsx';
+import FaqSection from '../../components/FaqSection.astro';
+
+const faqItems = [
+  {
+    question: 'Is this the same as "removing AI watermarks"?',
+    answer: 'Not exactly. Generic AI-built styling, junk icons, and robotic copy are credibility problems — they make your site look cheap and impersonal, whether or not there\'s a literal watermark. We fix the whole credibility picture: the look, the words, and the mobile experience.'
+  },
+  {
+    question: 'How much does it cost?',
+    answer: 'Credibility fix packages start at $299. The exact scope depends on what your audit finds — you\'ll get a clear, fixed price before any work starts.'
+  },
+  {
+    question: 'Do I need a full redesign?',
+    answer: 'Usually not. Most credibility problems come from a handful of elements: generic templates, robotic copy, cheap-looking icons and layouts, and mobile UX issues. We fix those and leave the rest of your site alone.'
+  },
+  {
+    question: 'How do we start?',
+    answer: 'With the free SEO audit. It shows us what\'s hurting your site\'s credibility and what\'s actually fine — so we only recommend fixing what\'s worth fixing.'
+  }
+];
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="AI Cleanup & Credibility Fixes | Shelby Web Co"
+  description="Your site looks generic or AI-built and customers can tell. We remove the fake-looking styling, rewrite robotic copy, and fix mobile UX so your site looks custom, current, and trustworthy. From $299."
+>
+
+  <!-- Hero -->
+  <section class="py-10 lg:py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Credibility Rescue · From $299</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          AI Cleanup &amp; <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Credibility Fixes</span>
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-white max-w-3xl mx-auto mb-6">
+        Customers can tell when a website was thrown together by a template or an AI tool. Generic layouts, junk icons, robotic copy — they all quietly say <em>"nobody real is behind this business."</em>
+      </p>
+      <p class="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-8">
+        We strip out what makes your site look artificial and rebuild the impression it makes — so it looks custom, current, and trustworthy.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/promotions/free-seo-audit/"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+        >
+          Start With the Free Audit
+        </a>
+        <a
+          href="/contact/?service=credibility-fixes"
+          class="inline-block px-8 py-3 rounded-xl font-bold text-white border border-white/20 bg-white/[0.04] hover:bg-white/[0.08] hover:-translate-y-[1px] transition-all duration-300"
+        >
+          Ask About Credibility Fixes
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs You Need This -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-10 text-center">Your Site May Need Credibility Rescue If...</h2>
+      <div class="space-y-4">
+        <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <p class="text-white/90"><span class="text-brand-accent font-bold">✦</span> Your site reads like everyone else's — "Welcome to our website, we offer quality solutions."</p>
+        </div>
+        <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <p class="text-white/90"><span class="text-brand-accent font-bold">✦</span> It's crowded with clip-art style icons, mismatched stock photos, or filler blocks that don't say anything.</p>
+        </div>
+        <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <p class="text-white/90"><span class="text-brand-accent font-bold">✦</span> It's hard to use on a phone — cramped text, buttons that don't work with a thumb.</p>
+        </div>
+        <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <p class="text-white/90"><span class="text-brand-accent font-bold">✦</span> There's no proof of real work — no reviews, credentials, or photos of actual jobs.</p>
+        </div>
+        <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <p class="text-white/90"><span class="text-brand-accent font-bold">✦</span> Your footer copyright year is two years old. Small thing — big signal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">What We Fix</h2>
+        <p class="text-white max-w-2xl mx-auto">Scoped by your audit — you only pay for what your site actually needs.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <h3 class="text-xl font-bold text-white mb-3">The Look</h3>
+          <p class="text-white/90">Remove generic "AI-built" styling, junk icons, and filler layouts. Make the design feel custom, current, and professional on every device.</p>
+        </div>
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <h3 class="text-xl font-bold text-white mb-3">The Words</h3>
+          <p class="text-white/90">Rewrite robotic, AI-generated copy into real human copy that says what you do, where you do it, and why customers trust you.</p>
+        </div>
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <h3 class="text-xl font-bold text-white mb-3">The Phone Experience</h3>
+          <p class="text-white/90">Fix the mobile UX problems that make sites feel cheap — readable text, working buttons, pages that load fast.</p>
+        </div>
+        <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+          <h3 class="text-xl font-bold text-white mb-3">The Proof</h3>
+          <p class="text-white/90">Real photos over stock, reviews and credentials where customers actually see them, and an up-to-date, well-kept appearance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-12 text-center">How It Works</h2>
+      <div class="space-y-8">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">1</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Free Audit First</h3>
+            <p class="text-white">We look at your site the way a first-time customer does and tell you what's hurting credibility — free, no obligation.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">2</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Fixed Scope, Fixed Price</h3>
+            <p class="text-white">You get a clear list of what we'll fix and a firm price starting at $299. No hourly billing, no surprise invoices.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.3)] text-brand-darkest font-bold">3</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">We Fix It, You Keep Your Site</h3>
+            <p class="text-white">We repair the site you already have. No full redesign, no starting over — unless a rebuild really is the right call, and we'll show you why first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FaqSection items={faqItems} />
+
+  <!-- CTA -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10 text-center">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Not Sure What's Hurting Your Credibility?</h2>
+      <p class="text-lg text-white/90 mb-8 max-w-xl mx-auto">
+        Start with the free audit. It's an honest snapshot of your website's health — free for local businesses, no obligation.
+      </p>
+      <a
+        href="/promotions/free-seo-audit/"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Request Your Free Audit
+      </a>
+      <p class="text-white/70 text-sm mt-6">
+        Want the full every-page diagnosis instead? See the <a href="/pricing/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">Website Rescue Report</a> or our <a href="/services/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">all services</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -21,10 +21,16 @@ Core idea: **Website Rescue** — fix websites that don't work (visibility, cred
 - **Checklist page** (`src/pages/website-rescue-checklist.astro`): live at `/website-rescue-checklist/`, no email gate, 15 items in 4 parts, CTAs to free audit
 - **Checklist links wired**: homepage banner (after positioning section), audit landing page "While you're here" paragraph, `BlogPostLayout.astro` aside on all collection posts, footer Company column (covers standalone blog posts too). Navbar deliberately left unchanged.
 
+- **Rescue service pages live**: `/services/ai-cleanup/` (credibility fixes) and `/services/conversion/` created — homepage cards no longer 404. Both follow the audit-landing pattern: "May Need Rescue If..." signs, what we fix, audit-first process, FAQ, free-audit CTA, `?service=` preselect
+- **Contact form updated**: rescue products first in the dropdown (Rescue Report default, Free Audit, Visibility/Credibility/Conversion/Full Rescue from $299–$749) — `?service=website-rescue-audit` preselect now works (was silently falling back to "Website + SEO")
+- **Website Rescue Report page** (`src/pages/services/website-rescue-report.astro`): what's inside (verdict, 5 scorecards, what's working/broken, first 3 fixes), $197 → 60-day credit block, process, FAQ. "Get the Rescue Report →" CTAs on homepage + pricing now point here instead of straight to contact
+- **Footer tagline** → "Website not working? We rescue it — get your business found, trusted, and hired."
+- **llms.txt**: rescue-first tagline/overview, rescue products in Core Services, rescue pricing added, checklist + ai-cleanup + conversion + rescue-report pages in Key Pages
+
 ## Next up
 1. **Start lead-gen actions** — execution tracker now lives in `docs/lead-gen-tracker.md` (warm-contact audits, "I searched for you" screenshot outreach)
 2. Optional: relocate the pricing chart section to `/services/seo/` or keep on pricing page (currently still on pricing page, fine)
-3. Later: `/services/ai-cleanup/` and `/services/conversion/` pages (homepage cards currently point to these — they 404)
+3. Content pages still build-first: `/services/` index, `/about/`, `/about/how-we-work/` — rewrite toward rescue-first framing
 4. Optional: print/PDF version of the checklist page
 
 ## Docs map
