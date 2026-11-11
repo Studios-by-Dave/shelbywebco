@@ -7,37 +7,25 @@ import googleStars from '../../assets/badge icons/google 5 stars.png';
 import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
 
 import mascotOne from '../../assets/mascot_1.jpg';
-import newBadges25 from '../../assets/badge icons/NewBadges25.png';
 
-import chatgptLogo from '../../assets/logo banner/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.jpg';
-import claudeLogo from '../../assets/logo banner/claude-Ekx6wd5U.png';
-import comptiaTool from '../../assets/logo banner/comptia-Cm7O9_X6.png';
-import devinLogo from '../../assets/logo banner/devin-logo-1.png';
-import githubLogo from '../../assets/logo banner/github-logo-png_seeklogo-304612.png';
-import grokLogo from '../../assets/logo banner/grok-ai-icon.webp';
-import linuxLogo from '../../assets/logo banner/linux-operating-systems-logo-whatsapp-logo.jpg';
-import ollamaLogo from '../../assets/logo banner/ollama-logo1.png';
-import opencodeLogo from '../../assets/logo banner/opencode-BrfWWnj4.png';
-import vscodeLogo from '../../assets/logo banner/vscode--vbwWAnL.jpeg';
-import hsCross from '../../assets/logo banner/hscross.webp';
 import FaqSection from '../components/FaqSection.astro';
 
 const faqItems = [
   {
-    question: 'Do I have to purchase SEO with my website?',
-    answer: 'No. You can purchase the website build for $497 without an ongoing SEO subscription. Without SEO, the $149/month Website Care Plan covers hosting, backups, edits, and updates, month-to-month with no minimum term. We recommend pairing your website with local SEO to continue working on your search visibility after launch.'
+    question: 'How do I know if my website has a problem?',
+    answer: 'Start with our free SEO audit. It checks whether your homepage is visible on Google, reviews your titles and meta descriptions, spot-checks indexing, and flags obvious local SEO issues — with 2–3 quick recommendations you can act on right away. It’s a diagnostic, not consulting, and it’s free for local businesses.'
   },
   {
-    question: 'How long should I give SEO?',
-    answer: 'We strongly recommend six to twelve months of consistent work to give improvements time to develop and provide a meaningful period for evaluating progress. Plans are month-to-month, and six to twelve months is what we recommend for evaluating progress. Results and timing vary based on your website, competition, and market.'
+    question: 'Can AI-built websites be fixed, or do I need a new one?',
+    answer: 'It depends on the foundation. Many AI-generated sites have fixable problems — missing indexing setup, generic copy, weak structure. We diagnose first, then tell you honestly whether a rescue or a rebuild is the better investment.'
   },
   {
-    question: 'Do I have to keep paying for SEO?',
-    answer: 'SEO plans are month-to-month, so there is no minimum term. You can cancel any time with 30 days’ written notice, and future SEO work and billing stop. Canceling SEO does not cancel your website.'
+    question: 'My website isn’t showing up on Google at all. What does that usually mean?',
+    answer: 'Usually one of three things: the site isn’t being indexed, basic technical SEO is missing, or the content doesn’t match what local customers actually search for. The free audit identifies which of these applies to you.'
   },
   {
-    question: 'What happens to previous SEO work if I cancel?',
-    answer: 'Canceling ends the ongoing service; it does not mean we reverse completed website improvements. Future updates, monitoring, and optimization included in your SEO plan stop when the service ends.'
+    question: 'Do you offer ongoing support after the fixes?',
+    answer: 'Yes. Website care and ongoing local SEO plans are month-to-month with no minimum term. You can cancel any time with 30 days’ written notice, and future work and billing stop. Canceling service does not reverse completed improvements to your website.'
   }
 ];
 
@@ -54,7 +42,6 @@ const faqSchema = {
   }))
 };
 import marbleBg from '../../assets/marble-800x530.webp';
-import pricingCompare from '../../assets/pricing_chart_2.jpg';
 ---
 
 <BaseLayout 
@@ -106,7 +93,7 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
       <span class="handshake-anchor absolute top-0 right-2 lg:hidden" aria-hidden="true"></span>
       <div class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
         <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
-        <span class="text-white font-bold text-sm tracking-wide">SHELBY, NC WEB DESIGN & LOCAL SEO</span>
+        <span class="text-white font-bold text-sm tracking-wide">SHELBY, NC — WEBSITE RESCUE & LOCAL SEO</span>
       </div>
       <h1 class="font-heading text-[clamp(2.5rem,5.5vw,4.25rem)] font-black mb-5 leading-[1.05] tracking-tight text-white max-w-4xl">
         <span class="text-brand-accent">Website Rescue,</span> SEO Fixes, and Strategic Website Builds
@@ -122,16 +109,16 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
-          href="/contact/"
+          href="/promotions/free-seo-audit/"
           class="cta-glow-shine rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-base sm:text-lg text-center"
         >
-          Start a Project
+          Get My Free Audit
         </a>
         <a
-          href="/promotions/"
+          href="/services/"
           class="rounded-full border border-white/30 bg-white/5 px-8 py-4 text-center text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
         >
-          View Promotions
+          Explore Services
         </a>
       </div>
       <a
@@ -155,18 +142,15 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
         <div class="handshake-anchor absolute pointer-events-none" style="left:48%;top:78%;" aria-hidden="true"></div>
       </div>
 
-      <p class="italic text-white/85 text-base sm:text-lg leading-relaxed max-w-2xl mb-6">
-        $497 to build and deploy + $297/month for continued buildout and SEO. Standalone build: $149/month Website Care Plan. Month-to-month, cancel any time.
-      </p>
       <p class="text-white/80 text-sm flex items-center gap-1.5 mb-10">
         <span class="text-brand-accent leading-none">★★★★★</span>
         5.0 on Google
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-10">
-        <p class="italic text-white/85 text-base sm:text-lg">• Custom websites that convert</p>
+        <p class="italic text-white/85 text-base sm:text-lg">• Websites repaired, rescued, and rebuilt — only when a rebuild is truly needed</p>
         <p class="italic text-white/85 text-base sm:text-lg">• Local SEO for Shelby &amp; Cleveland County</p>
-        <p class="italic text-white/85 text-base sm:text-lg">• Custom Business Machines</p>
+        <p class="italic text-white/85 text-base sm:text-lg">• Free SEO audit so you know exactly what's wrong</p>
       </div>
 
       <div class="flex flex-wrap gap-2 mb-10 justify-center">
@@ -191,6 +175,75 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
     </div>
   </section>
 
+  <!-- Problem Section: Your website may need rescue if... -->
+  <section class="py-14 md:py-18 px-4 border-t border-white/10" data-animate aria-labelledby="rescue-if-heading">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="uppercase tracking-widest mb-3 font-semibold italic text-brand-accent text-sm">THE WARNING SIGNS</p>
+        <h2 id="rescue-if-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">
+          Your Website May Need Rescue If...
+        </h2>
+        <p class="text-white/75 text-body-lg max-w-2xl mx-auto leading-relaxed">
+          Most website problems are invisible to the owner. You don't see them — your customers (and Google) do. Check any that sound familiar:
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5 md:gap-6">
+        <!-- Symptom 1 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Your site isn't showing up on Google.</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">You can search your business name and still can't find it — or only the homepage appears, never your services.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: indexing problems, technical SEO, or no sitemap.</p>
+        </div>
+
+        <!-- Symptom 2 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">You're not getting calls, forms, or leads from it.</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">The site looks fine to you, but the phone stays quiet and nobody fills out the form.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: weak calls-to-action, no trust signals, confusing page flow.</p>
+        </div>
+
+        <!-- Symptom 3 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">It looks "AI-built" or generic.</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">Cookie-cutter layout, robotic copy, stock everything. Customers notice — and so does Google.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: AI-generated pages published without review or strategy.</p>
+        </div>
+
+        <!-- Symptom 4 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">It hasn't been touched in months (or years).</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">Broken links, outdated info, slow load times, features that stopped working.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: no ongoing care or monitoring.</p>
+        </div>
+
+        <!-- Symptom 5 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">You built it yourself, with a tool, or with AI — and it never really launched.</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">It went live, but never got indexed, never ranked, and never produced business.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: no SEO foundation at launch.</p>
+        </div>
+
+        <!-- Symptom 6 -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/40 transition-colors">
+          <h3 class="font-heading text-xl font-bold text-white mb-2">It fails on a phone.</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-3">Half your customers are on mobile. If buttons are tiny, text is cramped, or pages crawl, they leave.</p>
+          <p class="text-brand-accent/90 text-sm font-semibold italic">Likely cause: template or AI layout never tested on real devices.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <p class="text-white/85 text-lg mb-5">Sound familiar? <span class="text-brand-accent font-semibold">You don't need a new website — you need a rescue.</span></p>
+        <a
+          href="/promotions/free-seo-audit/"
+          class="cta-glow-shine inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base"
+        >
+          Get My Free SEO Audit →
+        </a>
+      </div>
+    </div>
+  </section>
+
 <!-- Services Section -->
   <section class="py-10 md:py-14 px-4 relative z-20" data-animate>
     <div class="max-w-7xl mx-auto">
@@ -198,272 +251,184 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
         <div class="relative w-full rounded-[22px] overflow-hidden bg-cover bg-center py-10 md:py-14 px-4 md:px-8" style={`background-image: url("${encodeURI(marbleBg.src)}")`}>
           <div class="absolute inset-0 bg-[#08090f]/55"></div>
           <h2 class="relative font-heading font-black text-white text-center tracking-tight leading-[1.05] text-[clamp(2.4rem,5.75vw,4.3rem)]">
-            Web Design &bull; <span class="text-brand-blue">SEO</span> &bull; Branding<br class="hidden sm:block" /> <span class="sm:hidden">&bull; </span><span class="text-brand-blue">AI Visibility</span> &bull; Custom Software
+            Website <span class="text-brand-blue">Rescue</span> Services
           </h2>
           <p class="relative text-body-lg text-white/90 max-w-3xl leading-relaxed text-center mt-6 mx-auto">
-            We help local businesses grow with custom websites and SEO built around your goals. At Shelby Web Company, everything we do is focused on getting you found, trusted, and hired.
+            Four ways we make your website work — visibility, credibility, conversion, and a clean rebuild when it's time.
           </p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Web Design Card -->
-        <a href="/services/web-design/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-          <div class="relative z-10">
-            <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Web Design</h3>
-            <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
-              <li>Custom sites that turn visitors into customers</li>
-              <li>Built for local service businesses</li>
-              <li>Mobile-first and lightning-fast</li>
-              <li>Lead forms + local SEO included</li>
-            </ul>
-            <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
-              Learn About Web Design →
-            </span>
-          </div>
-        </a>
-
-        <!-- Branding Card -->
-        <a href="/services/branding/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-          <div class="relative z-10">
-            <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
-            </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Logo Design & Branding</h3>
-            <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
-              <li>Branding that stands out</li>
-              <li>Builds trust with customers</li>
-              <li>Custom logo + full brand identity</li>
-              <li>Business cards and social assets</li>
-            </ul>
-            <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
-              Learn About Branding →
-            </span>
-          </div>
-        </a>
-
-        <!-- SEO Card -->
+        <!-- Google Visibility Fixes Card -->
         <a href="/services/seo/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
           <div class="relative z-10">
             <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">SEO Services</h3>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">Google Visibility Fixes</h3>
             <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
-              <li>More visibility, more customers</li>
-              <li>Technical + on-page optimization</li>
-              <li>Local search strategy</li>
-              <li>Google Business Profile setup</li>
+              <li>Indexing and crawlability repairs (sitemap, robots, Search Console)</li>
+              <li>Technical SEO cleanup and page speed fixes</li>
+              <li>Schema markup so Google understands your pages</li>
+              <li>Local SEO foundation: Google Business Profile, local pages, citations</li>
             </ul>
             <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
-              Learn About SEO Services →
+              Learn About Visibility Fixes →
             </span>
           </div>
         </a>
 
-        <!-- Custom Software & SaaS Card -->
-        <a href="/services/custom-software-saas/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+        <!-- AI Cleanup & Credibility Fixes Card -->
+        <a href="/services/ai-cleanup/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
           <div class="relative z-10">
             <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-3">Custom Software & SaaS (Business Machines)</h3>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">AI Cleanup &amp; Credibility Fixes</h3>
             <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
-              <li>Software built around your workflow</li>
-              <li>Automate the busywork</li>
-              <li>SaaS apps and API integrations</li>
-              <li>Tools that give you an edge</li>
+              <li>Remove generic "AI-built" styling and layouts</li>
+              <li>Rewrite robotic, AI-generated copy into real human copy</li>
+              <li>Fix mobile UX problems that make sites feel cheap</li>
+              <li>Make the site look custom, current, and trustworthy</li>
             </ul>
             <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
-              Learn About Custom Software →
+              Learn About Credibility Fixes →
+            </span>
+          </div>
+        </a>
+
+        <!-- Conversion Fixes Card -->
+        <a href="/services/conversion/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">Conversion Fixes</h3>
+            <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
+              <li>Clearer calls-to-action and lead forms people actually fill out</li>
+              <li>Service pages structured around what customers search for</li>
+              <li>Trust signals: reviews, credentials, real photos, guarantees</li>
+              <li>Phone and contact optimization + local landing pages</li>
+            </ul>
+            <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
+              Learn About Conversion Fixes →
+            </span>
+          </div>
+        </a>
+
+        <!-- Full Rebuilds & New Builds Card -->
+        <a href="/services/web-design/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/60 hover:bg-white/[0.07] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-brand-accent/15 border border-brand-accent/40 shadow-[0_0_15px_rgba(132,204,22,0.25)] rounded-xl flex items-center justify-center mb-4">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-7 h-7 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10h14V10M9 20v-6h6v6"></path></svg>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-3">Full Rebuilds &amp; New Builds</h3>
+            <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
+              <li>Strategic rebuilds when repair isn't the right answer</li>
+              <li>New builds with SEO foundations from day one</li>
+              <li>Design and copy that fits your actual business, not a template</li>
+              <li>Built to be found: indexing, speed, and local SEO included</li>
+            </ul>
+            <span class="text-brand-accent group-hover:text-brand-accent-light text-base font-semibold transition-colors">
+              Learn About Rebuilds →
             </span>
           </div>
         </a>
       </div>
 
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
-        <a href="/services/" class="inline-flex items-center text-white/90 hover:text-white font-semibold text-body-lg transition-colors underline decoration-brand-accent decoration-2 underline-offset-4">
-          View All Services →
+        <a href="/promotions/free-seo-audit/" class="cta-glow-shine inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base">
+          Get My Free SEO Audit
         </a>
-        <a href="/contact/" class="cta-glow-shine inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base">
-          Get Your Free Quote
+        <a href="/services/" class="inline-flex items-center text-white/90 hover:text-white font-semibold text-body-lg transition-colors underline decoration-brand-accent decoration-2 underline-offset-4">
+          Explore all services →
         </a>
       </div>
+      <p class="mt-6 text-center text-white/70 text-base">
+        Also need a logo, branding, or custom software? <a href="/services/" class="text-brand-accent hover:text-brand-accent-light font-semibold underline decoration-brand-accent/40 underline-offset-4 transition-colors">See our full service list →</a>
+      </p>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 px-4 border-t border-white/10" data-animate>
+  <!-- Offer Section: Sales Ladder -->
+  <section id="offer-ladder" class="py-16 md:py-20 px-4 border-t border-white/10 scroll-mt-24" data-animate aria-labelledby="offer-ladder-heading">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-section-heading-md lg:text-5xl font-bold text-white mb-4">
-          3 Simple Steps. No Red Tape. <span class="text-brand-accent">Just Process.</span>
+        <p class="uppercase tracking-widest mb-3 font-semibold italic text-brand-accent text-sm">HOW WE WORK</p>
+        <h2 id="offer-ladder-heading" class="font-heading text-section-heading-md lg:text-5xl font-bold text-white mb-4">
+          Know What's Wrong. <span class="text-brand-accent">Fix It Right.</span>
         </h2>
         <p class="text-white/75 text-body-lg max-w-2xl mx-auto">
-          Every project starts with a conversation, gets shaped by research, and is built with a clear plan.
+          Start free. Go deeper when you're ready. We only sell fixes you actually need.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 mb-10">
-        <!-- Step 1 -->
+      <div class="grid md:grid-cols-3 gap-6 mb-10 items-start">
+        <!-- Tier 1: Free SEO Audit -->
         <div class="relative bg-white/[0.04] border border-white/10 rounded-2xl p-7 hover:border-brand-accent/40 transition-colors">
-          <div class="w-14 h-14 rounded-full bg-brand-accent border border-brand-accent shadow-[0_0_18px_rgba(132,204,22,0.4)] flex items-center justify-center text-[#08090f] text-2xl font-black mb-5">1</div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">The Friendly Pre-Discovery</h3>
-          <p class="text-white/75 text-lg leading-relaxed">A casual conversation about your business — no jargon, no pressure. We learn what makes you unique and what you need online.</p>
+          <p class="uppercase tracking-widest text-xs font-semibold text-white/60 mb-2">Step 1 &mdash; Free</p>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Free SEO Audit</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-4">A high-level snapshot of your website's health, free for local businesses.</p>
+          <ul class="space-y-2 text-white/85 text-sm leading-snug mb-5">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Homepage visibility check — is Google finding you?</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Basic on-page SEO and title/meta review</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Quick indexing spot-check</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Obvious local SEO issues</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>2–3 quick recommendations you can act on today</li>
+          </ul>
+          <p class="text-white/60 text-sm italic mb-5">A diagnostic, not consulting — but it tells you if there's a problem worth fixing.</p>
+          <a href="/promotions/free-seo-audit/" class="block text-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_4px_14px_rgba(0,0,0,0.4)] hover:-translate-y-[1px] transition-all duration-300 text-base">
+            Get My Free Audit →
+          </a>
         </div>
 
-        <!-- Step 2 -->
-        <div class="relative bg-white/[0.04] border border-white/10 rounded-2xl p-7 hover:border-brand-accent/40 transition-colors">
-          <div class="w-14 h-14 rounded-full bg-brand-accent border border-brand-accent shadow-[0_0_18px_rgba(132,204,22,0.4)] flex items-center justify-center text-[#08090f] text-2xl font-black mb-5">2</div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">The Strategy Map</h3>
-          <p class="text-white/75 text-lg leading-relaxed">Research becomes a plan. We map out SEO, content, and structure tailored to your keywords, geography, and customers.</p>
+        <!-- Tier 2: Full Website Rescue Audit -->
+        <div class="relative bg-white/[0.05] border border-brand-accent/40 rounded-2xl p-7 shadow-[0_0_40px_rgba(132,204,22,0.08)] hover:border-brand-accent/60 transition-colors">
+          <p class="uppercase tracking-widest text-xs font-semibold text-brand-accent mb-2">Step 2 &mdash; Paid</p>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Full Website Rescue Audit</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-4">The complete diagnostic. Every issue found, ranked by what to fix first.</p>
+          <ul class="space-y-2 text-white/85 text-sm leading-snug mb-5">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Full indexing review + Google Search Console analysis</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Crawlability, sitemap, and robots review</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Deeper technical SEO and code-level concerns</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Basic vulnerability review and obvious security risks</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Content, trust, and conversion blockers</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Your <span class="text-white font-semibold">Website Rescue Report</span> — a prioritized fix plan with health scorecards</li>
+          </ul>
+          <p class="text-white/60 text-sm italic mb-5">Free answers "What's wrong?" This answers "Why, how bad, and what first?"</p>
+          <a href="/contact/?service=website-rescue-audit" class="block text-center rounded-xl border border-brand-accent/50 bg-brand-accent/10 text-white px-6 py-3 font-bold hover:bg-brand-accent/20 hover:-translate-y-[1px] transition-all duration-300 text-base">
+            Request a Rescue Audit →
+          </a>
         </div>
 
-        <!-- Step 3 -->
+        <!-- Tier 3: Fixes & Rebuilds -->
         <div class="relative bg-white/[0.04] border border-white/10 rounded-2xl p-7 hover:border-brand-accent/40 transition-colors">
-          <div class="w-14 h-14 rounded-full bg-brand-accent border border-brand-accent shadow-[0_0_18px_rgba(132,204,22,0.4)] flex items-center justify-center text-[#08090f] text-2xl font-black mb-5">3</div>
-          <h3 class="font-heading text-2xl font-bold text-white mb-3">The Build</h3>
-          <p class="text-white/75 text-lg leading-relaxed">Design, copy, and build follow the strategy. Review rounds keep you in control. Launch with SEO foundations in place.</p>
+          <p class="uppercase tracking-widest text-xs font-semibold text-white/60 mb-2">Step 3 &mdash; Implement</p>
+          <h3 class="font-heading text-2xl font-bold text-white mb-3">Fixes &amp; Rebuilds</h3>
+          <p class="text-white/75 text-base leading-relaxed mb-4">We implement the rescue plan — in the order that matters.</p>
+          <ul class="space-y-2 text-white/85 text-sm leading-snug mb-5">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Google visibility fixes and technical SEO</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>AI cleanup and credibility repairs</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Conversion and lead-generation improvements</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Full rebuilds when a fresh start makes sense</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Optional ongoing care and SEO support</li>
+          </ul>
+          <p class="text-white/60 text-sm italic mb-5">Month-to-month, cancel any time. No lock-in contracts.</p>
+          <a href="/promotions/free-seo-audit/" class="block text-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),0_4px_14px_rgba(0,0,0,0.4)] hover:-translate-y-[1px] transition-all duration-300 text-base">
+            Start With a Free Audit →
+          </a>
         </div>
       </div>
 
-      <!-- Payment Terms Trust Bar -->
-      <div class="bg-white/[0.05] border border-brand-accent/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+      <!-- Build pricing band (builds still offered — just not the headline) -->
+      <div class="bg-white/[0.05] border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <p class="text-white font-semibold text-lg">Simple Payment Terms</p>
-          <p class="text-white/75 text-base">$497 for your website build, then one simple monthly SEO plan — month-to-month, cancel at any time with 30 days’ notice.</p>
+          <p class="text-white font-semibold text-lg">Planning a new build instead?</p>
+          <p class="text-white/75 text-base">Website + ongoing local SEO from $497 + $297/month. Month-to-month, cancel at any time with 30 days' notice.</p>
         </div>
         <a href="/pricing/" class="text-brand-accent hover:text-brand-accent-light font-semibold text-base whitespace-nowrap transition-colors">See transparent pricing →</a>
       </div>
-
-      <div class="text-center flex flex-col items-center gap-5">
-        <a href="/contact/?service=website-seo" class="cta-glow-shine inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base text-center">
-          Get Started With Website + SEO
-        </a>
-        <a href="/about/how-we-work/" class="text-white/85 hover:text-white font-semibold text-lg transition-colors underline decoration-brand-accent decoration-2 underline-offset-4">
-          See the full process details →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recommended Website + SEO Offer -->
-  <section id="recommended-offer" class="py-16 md:py-20 px-4 scroll-mt-24" data-animate aria-labelledby="recommended-offer-heading">
-    <div class="max-w-5xl mx-auto">
-      <div class="relative overflow-hidden rounded-3xl border border-white/15 bg-white/[0.05] backdrop-blur px-6 py-10 md:py-14 shadow-[0_0_60px_rgba(132,204,22,0.08)]">
-        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div class="absolute -top-24 left-1/4 w-[60%] h-[120%] bg-brand-blue-light/25 blur-[120px] rounded-full"></div>
-          <div class="absolute -bottom-24 right-1/4 w-[50%] h-[100%] bg-brand-accent/10 blur-[120px] rounded-full"></div>
-        </div>
-
-        <div class="relative text-center">
-          <p class="uppercase tracking-widest mb-4 font-semibold italic text-brand-accent">OUR RECOMMENDED APPROACH</p>
-          <h2 id="recommended-offer-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6 leading-tight">
-            A Website Built for Your Business. SEO to Help Customers Find It.
-          </h2>
-
-          <div class="max-w-3xl mx-auto space-y-4 text-left">
-            <p class="text-white/80 text-body-lg leading-relaxed">
-              Your website gives customers a place to learn about your business and take the next step. Ongoing local SEO helps more nearby customers find you when they search for what you offer.
-            </p>
-            <p class="text-white/80 text-body-lg leading-relaxed">
-              That&rsquo;s why we recommend both: a custom website for $497 one time, paired with ongoing local SEO at $297/month.
-            </p>
-          </div>
-
-          <!-- Two distinct charges: never merged into a single figure -->
-          <div class="mt-10 mb-8 grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
-            <div class="rounded-2xl border border-white/15 bg-white/[0.05] px-6 py-5">
-              <p class="text-white/60 text-sm mb-1">Website &mdash; one time</p>
-              <p class="font-heading text-3xl font-bold text-white">$497 one-time website build</p>
-            </div>
-            <div class="rounded-2xl border border-brand-accent/40 bg-brand-accent/[0.1] px-6 py-5">
-              <p class="text-white/60 text-sm mb-1">Ongoing local SEO &mdash; month-to-month</p>
-              <p class="font-heading text-3xl font-bold text-brand-accent">+ $297/month ongoing local SEO</p>
-            </div>
-          </div>
-
-          <div class="flex flex-col items-center gap-4">
-            <a href="/contact/?service=website-seo" class="cta-glow-shine inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base text-center w-full sm:w-auto">
-              Get Started With Website + SEO
-            </a>
-            <p class="text-white/75 text-sm sm:text-base max-w-xl leading-relaxed">
-              Month-to-month, cancel any time with 30 days’ notice. Six to twelve months recommended to evaluate SEO progress.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO as an ongoing process (§4) + realistic expectations (§5) + affordability (§6) -->
-  <section id="seo-process" class="py-16 md:py-20 px-4" data-animate aria-labelledby="seo-process-heading">
-    <div class="max-w-5xl mx-auto space-y-12">
-
-      <div>
-        <div class="relative w-full rounded-3xl overflow-hidden bg-cover bg-center py-8 md:py-10 px-4 md:px-8 mb-6" style={`background-image: url("${encodeURI(marbleBg.src)}")`}>
-          <div class="absolute inset-0 bg-[#08090f]/55"></div>
-          <h2 id="seo-process-heading" class="relative font-heading text-section-heading md:text-section-heading-md font-bold text-white leading-tight text-center">
-            Launch Your Website.
-            <span class="block">Keep <span class="text-brand-accent">Building</span> Your Search <span class="text-brand-accent">Presence</span>.</span>
-          </h2>
-        </div>
-
-        <div class="max-w-5xl mx-auto space-y-8 text-center">
-          <div class="space-y-5 text-white/80 text-body-lg leading-relaxed text-center mx-auto max-w-3xl">
-            <p>
-              Some agencies charge thousands per month for SEO. We keep it simpler: local SEO from just $297/month, month-to-month.
-            </p>
-            <p>
-              Our focus is clear: practical improvements, consistent attention, and steady growth in your local search presence without a big-budget retainer.
-            </p>
-          </div>
-
-          <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-3 md:p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)] mx-auto w-full max-w-4xl">
-            <Image
-              src={pricingCompare}
-              alt="SEO pricing comparison chart showing lower monthly local SEO pricing versus expensive agency retainers"
-              class="w-full h-auto rounded-2xl border border-white/10 mx-auto"
-            />
-          </div>
-
-          <div class="space-y-5 text-white/80 text-body-lg leading-relaxed text-center mx-auto max-w-3xl">
-            <p>
-              SEO is ongoing. We review performance, update content, improve your site, and refine as your business and customers&rsquo; searches evolve.
-            </p>
-
-            <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 pt-2 text-left mx-auto max-w-3xl">
-              <li class="flex items-start gap-3 text-white/90 text-body-lg">
-                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-                Monthly performance snapshot
-              </li>
-              <li class="flex items-start gap-3 text-white/90 text-body-lg">
-                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-                One small monthly edit request
-              </li>
-              <li class="flex items-start gap-3 text-white/90 text-body-lg">
-                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-                On-page and local SEO basics
-              </li>
-              <li class="flex items-start gap-3 text-white/90 text-body-lg">
-                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-                Google Analytics + Search Console monitoring
-              </li>
-              <li class="flex items-start gap-3 text-white/90 text-body-lg sm:col-span-2">
-                <span class="text-brand-accent leading-none mt-1" aria-hidden="true">&#10003;</span>
-                Milestone audits every 90 days
-              </li>
-            </ul>
-
-            <p class="pt-2">
-              Give your SEO time to build momentum. We recommend six to twelve months of steady work, and your plan stays month-to-month with 30 days&rsquo; written notice to cancel.
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -552,33 +517,14 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
   </script>
 
 
-  <!-- Tool Logo Showcase -->
-  <section class="py-12 md:py-16 px-4 border-t border-white/10" data-animate>
-    <div class="max-w-7xl mx-auto text-center">
-      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-14 opacity-80">
-        <Image src={chatgptLogo} alt="ChatGPT" class="h-20 w-auto object-contain rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={claudeLogo} alt="Claude" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
-        <Image src={comptiaTool} alt="CompTIA" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
-        <Image src={devinLogo} alt="DevIn" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={githubLogo} alt="GitHub" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
-        <Image src={grokLogo} alt="Grok" class="h-20 w-auto object-contain brightness-0 invert transition-all duration-300" loading="lazy" />
-        <Image src={linuxLogo} alt="Linux" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={ollamaLogo} alt="Ollama" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={opencodeLogo} alt="OpenCode" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={vscodeLogo} alt="VS Code" class="h-20 w-auto object-contain grayscale rounded-lg transition-all duration-300" loading="lazy" />
-        <Image src={hsCross} alt="Holy Spirit Cross" class="h-20 w-auto object-contain rounded-lg transition-all duration-300" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
   <!-- Industries Section -->
   <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8 text-center">
-        We're Here to Understand Your Business
+        We Rescue Websites for Local Businesses Like Yours
       </h2>
       <p class="text-white/75 text-body-lg max-w-5xl mx-auto mb-16 leading-relaxed font-light">
-        Our unique tailored approach establishes the proper client relationship framework that is crucial to fully understand before any project actually begins. This is in order for us to implement the proper business model that meets your business needs. <span class="text-brand-accent font-normal">Not just a website.</span> We're here to construct your <span class="text-white font-semibold">online business machine.</span>
+        From trucking companies to tree services, we help Cleveland County businesses get found, look credible, and turn their website into a source of calls and customers. <span class="text-brand-accent font-normal">Not just a website.</span> <span class="text-white font-semibold">A website that works.</span>
       </p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -658,20 +604,26 @@ import pricingCompare from '../../assets/pricing_chart_2.jpg';
     </div>
   </section>
 
-  <!-- Non-Exclusive Agency Section -->
+  <!-- Positioning Statement + Proof -->
   <section class="py-16 md:py-20 px-4" data-animate>
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8 text-center">
-        Your Success Is Our Success
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4 text-center">
+        Not Every Website Needs to Be Replaced.
       </h2>
-      <p class="text-body-lg md:text-body-lg text-white/85 mb-10 font-serif leading-relaxed font-light">
-        At Shelby Web Company, we believe in building relationships, not restrictions. We're proud to be a non-exclusive agency that welcomes and caters to anyone in need of our services. <span class="italic font-normal">Whether you're a small startup, an established business, or anywhere in between, we're here to help you succeed online.</span>
+      <p class="font-heading text-brand-accent text-2xl md:text-3xl font-bold mb-8">
+        Some just need to be fixed the right way.
       </p>
-      <p class="text-brand-accent font-medium italic text-body-base md:text-body-lg mb-2">
-        No exclusivity, just great results.
+      <p class="text-body-lg md:text-body-lg text-white/85 mb-4 leading-relaxed font-light">
+        Most agencies want to sell you a new website — it's the bigger ticket. We'd rather tell you the truth first. If your site can be rescued, we rescue it. If it can be improved, we improve it. And if a rebuild really is the right call, we'll show you exactly why before you spend a dollar.
       </p>
-      <a href="/contact/" class="cta-glow-shine mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base">
-        Book a Free Chat
+      <p class="text-body-lg md:text-body-lg text-white/85 mb-10 leading-relaxed font-light">
+        Every engagement starts with a free audit, so you know what's wrong before you decide what to do about it.
+      </p>
+      <p class="text-brand-accent font-medium text-body-base md:text-body-lg mb-2 tracking-wide">
+        Certified (CompTIA A+) &middot; 5.0 on Google &middot; Local to Shelby &amp; Cleveland County &middot; Month-to-month, no lock-in
+      </p>
+      <a href="/promotions/free-seo-audit/" class="cta-glow-shine mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base">
+        Get My Free SEO Audit
       </a>
     </div>
   </section>
