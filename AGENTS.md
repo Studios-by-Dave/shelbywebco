@@ -1,5 +1,8 @@
 # Project Rules
 
+## Session Startup
+- **Read `docs/project-status.md` first** — it's the handoff note tracking the Website Rescue repositioning project: what's shipped, what's next, and where all strategy/copy docs live.
+
 ## Build & Push Authorization
 - **DO NOT run any builds (`npm run build`, `astro build`, etc.) or push to ANY repo (`git commit`, `git push`, or any other remote) unless the user explicitly says to.**
 - Make code edits freely, but hold off on building and pushing until the user gives the go-ahead (e.g. "build it", "push to the repo", "commit this").
