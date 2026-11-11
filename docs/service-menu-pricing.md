@@ -7,7 +7,7 @@
 ## 1. Free SEO Audit — $0
 As defined. Delivered as a short written summary (half page) within a few business days. Costs you ~1 hour per audit — that's your marketing budget, spend it on businesses that could plausibly afford fixes.
 
-## 2. Full Website Rescue Audit — $197 (one-time)
+## 2. Website Rescue Report (paid deep diagnostic) — $197 (one-time)
 **Includes:** everything in the report structure (deliverable #4B): full indexing review, GSC analysis (if access granted), crawlability/sitemap/robots, deeper technical SEO, basic vulnerability review, content/trust/conversion blockers, scorecards, prioritized fix plan (Website Rescue Report, PDF).
 
 **🧠 Key rule: the $197 is credited.** If they proceed with fixes through you within 60 days, the $197 comes off the fix invoice. This makes the audit a low-risk purchase instead of a toll booth — and it filters out freebie-hunters while never penalizing buyers.

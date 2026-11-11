@@ -55,7 +55,7 @@
 **🧠 Risk flag removed with the copy:** backlinks, competitor analysis, and keyword research are now *implicit upsell hooks* — the paid audit and fixes tier own those.
 
 **Honesty note (new, small italic line below the cards):**
-> *This audit is a high-level diagnostic. If we find deeper issues, we'll tell you — and we offer a paid Full Website Rescue Audit for that. But the snapshot is genuinely free, and it's yours either way.*
+> *This audit is a high-level diagnostic. If we find deeper issues, we'll tell you — and we offer a paid Website Rescue Report (paid deep diagnostic) for that. But the snapshot is genuinely free, and it's yours either way.*
 
 🧠 **Why this note matters:** It pre-frames the upsell *without a pitch*, which makes the free offer credible. Visitors believe a free thing more when you're honest about its limits.
 
@@ -75,7 +75,7 @@ We run the visibility, indexing, and on-page checks by hand — looking at your 
 Within a few business days, you'll get a short, plain-English summary of what we found and 2–3 recommended fixes. No 40-page PDF. No jargon.
 
 **Step 4 — What Happens Next (Your Choice)** (rewrite — replaces "Optional Consultation")
-If the audit surfaces bigger problems, we'll tell you what a deeper Full Website Rescue Audit would cover. Whether you fix things yourself, hire someone else, or ask us to help — you're under no obligation.
+If the audit surfaces bigger problems, we'll tell you what a deeper Website Rescue Report (paid deep diagnostic) would cover. Whether you fix things yourself, hire someone else, or ask us to help — you're under no obligation.
 
 ---
 
@@ -113,7 +113,7 @@ Keep 3, rewrite 3:
 4. **What if my website is new or has no traffic yet?** (keep ✅)
 
 5. **What if the audit finds a bigger problem?** (NEW — replaces "Can I implement recommendations myself")
-   Then we'll tell you honestly. Some fixes are simple DIY tasks; deeper issues may be worth a paid Full Website Rescue Audit. We'll explain the difference so you can decide what's right for you — no pressure either way.
+   Then we'll tell you honestly. Some fixes are simple DIY tasks; deeper issues may be worth a paid Website Rescue Report (paid deep diagnostic). We'll explain the difference so you can decide what's right for you — no pressure either way.
 
 6. **Do I need to give you access to anything?** (NEW)
    No. We only need your website URL. For a deeper look later, read-only Google Search Console access helps, but it's never required for the free snapshot.

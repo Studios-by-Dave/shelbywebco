@@ -166,8 +166,8 @@ That flow says "we build websites." The new strategy says "we fix websites (and 
 >
 > **[Get My Free Audit →]**
 
-### Tier 2 — Full Website Rescue Audit (paid, first revenue step)
-> **Full Website Rescue Audit**
+### Tier 2 — Website Rescue Report (paid deep diagnostic) (paid, first revenue step)
+> **Website Rescue Report (paid deep diagnostic)**
 > The complete diagnostic. Every issue found, ranked by what to fix first.
 >
 > ✅ Full indexing review + Google Search Console analysis

@@ -2,6 +2,7 @@
 interface Props {
   focus?: 'website' | 'seo' | 'leads';
   id?: string;
+  eyebrow?: string;
   title?: string;
   titleClass?: string;
   subtitle?: string;
@@ -17,6 +18,7 @@ interface Props {
 const {
   focus = '',
   id = 'growth-pricing',
+  eyebrow = '✦ Our Growth Plans',
   title = 'One Simple Monthly Plan',
   titleClass = 'font-heading text-4xl md:text-5xl font-bold text-white mb-6',
   subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-accent font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
@@ -172,7 +174,7 @@ const shellClass = bare ? '' : 'py-24 px-4';
     {!bare && (
       <>
         <div class="text-center mb-16">
-          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">&#10022; Our Growth Plans</p>
+          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">{eyebrow}</p>
           <h2 class={titleClass}>{title}</h2>
           <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
         </div>
