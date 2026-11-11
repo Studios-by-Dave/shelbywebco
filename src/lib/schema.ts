@@ -6,7 +6,7 @@ export const PHONE = '(704) 473-8188';
 export const EMAIL = 'dave@shelbywebco.com';
 
 export const BUSINESS_DESCRIPTION =
-  'Shelby Web Company is a non-exclusive local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.';
+  'Shelby Web Company is a local web design, SEO, branding, and custom digital agency in Shelby, NC. We build hand-coded, performance-first websites and local SEO systems for service businesses across Western North Carolina.';
 
 export const SAME_AS = [
   'https://www.facebook.com/profile.php?id=61591509287089',

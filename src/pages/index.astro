@@ -8,6 +8,7 @@ import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg'
 
 import mascotOne from '../../assets/mascot_1.jpg';
 
+import GoogleReview from '../components/GoogleReview.astro';
 import FaqSection from '../components/FaqSection.astro';
 
 const faqItems = [
@@ -98,7 +99,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
         “Technology That Fills The Gaps.”
       </p>
       <p class="text-base sm:text-lg text-white/70 mb-3 max-w-2xl leading-relaxed">
-        We repair underperforming websites, clean up AI-generated issues, improve local SEO, and build new sites when a fresh start makes sense.
+        We also repair underperforming websites, clean up AI-generated issues, and build new sites when a fresh start makes sense.
       </p>
       <p class="text-base sm:text-lg text-white/85 mb-8 max-w-2xl leading-relaxed italic">
         If your website looks generic, isn’t indexing, or isn’t bringing in business — <span class="text-brand-accent font-semibold not-italic">we can help.</span>
@@ -138,10 +139,15 @@ import marbleBg from '../../assets/marble-800x530.webp';
         <div class="handshake-anchor absolute pointer-events-none" style="left:48%;top:78%;" aria-hidden="true"></div>
       </div>
 
-      <p class="text-white/80 text-sm flex items-center gap-1.5 mb-10">
+      <p class="text-white/80 text-sm flex items-center gap-1.5 mb-4">
         <span class="text-brand-accent leading-none">★★★★★</span>
         5.0 on Google
       </p>
+      <GoogleReview
+        quote="Very professional. And very knowledgeable about what can and can't be done. Highly recommend David."
+        name="Roger P."
+        class="mb-10"
+      />
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-10">
         <p class="italic text-white/85 text-base sm:text-lg">• Websites repaired, rescued, and rebuilt — only when a rebuild is truly needed</p>
@@ -425,6 +431,12 @@ import marbleBg from '../../assets/marble-800x530.webp';
         </div>
         <a href="/pricing/" class="text-brand-accent hover:text-brand-accent-light font-semibold text-base whitespace-nowrap transition-colors">See transparent pricing →</a>
       </div>
+
+      <GoogleReview
+        quote="Dave really presented opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully!"
+        name="Paul R."
+        class="mt-10"
+      />
     </div>
   </section>
 
@@ -597,6 +609,11 @@ import marbleBg from '../../assets/marble-800x530.webp';
         </div>
 
       </div>
+      <GoogleReview
+        quote="Our online presence is not only fully present, it's generating our business so many leads now!"
+        name="Ryan “Kris” J."
+        class="mt-10"
+      />
     </div>
   </section>
 
@@ -613,11 +630,16 @@ import marbleBg from '../../assets/marble-800x530.webp';
         Most agencies want to sell you a new website — it's the bigger ticket. We'd rather tell you the truth first. If your site can be rescued, we rescue it. If it can be improved, we improve it. And if a rebuild really is the right call, we'll show you exactly why before you spend a dollar.
       </p>
       <p class="text-body-lg md:text-body-lg text-white/85 mb-10 leading-relaxed font-light">
-        Every engagement starts with a free audit, so you know what's wrong before you decide what to do about it.
+        Every engagement starts with a free audit, so you know what's wrong before you decide what to do about it. The goal is simple: <span class="text-white font-semibold">found, trusted, and hired.</span>
       </p>
       <p class="text-brand-accent font-medium text-body-base md:text-body-lg mb-2 tracking-wide">
         Certified (CompTIA A+) &middot; 5.0 on Google &middot; Local to Shelby &amp; Cleveland County &middot; Month-to-month, no lock-in
       </p>
+      <GoogleReview
+        quote="Hey Dave just reaching out here to give you a big thanks for that concept site you built for us. It really looks great!"
+        name="Willie G."
+        class="mt-8"
+      />
       <a href="/promotions/free-seo-audit/" class="cta-glow-shine mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3.5 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] active:translate-y-[1px] transition-all duration-300 text-base">
         Get My Free SEO Audit
       </a>
@@ -661,10 +683,21 @@ import marbleBg from '../../assets/marble-800x530.webp';
             class="relative w-48 sm:w-56 md:w-64 h-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
           />
         </div>
-       </div>
+      </div>
+      <GoogleReview
+        quote="The BEST experience!!"
+        name="Michelle B."
+        class="mt-10"
+      />
     </div>
   </section>
   <FaqSection items={faqItems} />
+  <section class="py-10 px-4 border-t border-white/10" data-animate>
+    <GoogleReview
+      quote="Great customer service!"
+      name="William S."
+    />
+  </section>
 
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
