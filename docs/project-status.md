@@ -18,13 +18,14 @@ Core idea: **Website Rescue** — fix websites that don't work (visibility, cred
 - **Audit landing page** (`src/pages/promotions/free-seo-audit.astro`): honest offer copy, homepage-style FAQ accordion, Business Name field + Search Console note in form (plumbing untouched)
 - **Pricing page** (`src/pages/pricing.astro`): rescue pricing section at top, divider, "Website Build Packages — With or Without SEO" header, FAQ board 4-across incl. new Website Rescue group; removed "Understanding the Range" + ROI Calculator
 - Promo card for $100 Referral Bonus removed from `/promotions/` (page already gone)
+- **Checklist page** (`src/pages/website-rescue-checklist.astro`): live at `/website-rescue-checklist/`, no email gate, 15 items in 4 parts, CTAs to free audit
+- **Checklist links wired**: homepage banner (after positioning section), audit landing page "While you're here" paragraph, `BlogPostLayout.astro` aside on all collection posts, footer Company column (covers standalone blog posts too). Navbar deliberately left unchanged.
 
 ## Next up
-1. **Build the checklist page** — content ready in `docs/website-rescue-checklist.md` ("The 5-Minute Website Audit Checklist"). Recommended: visible page, no email gate. Location TBD (suggest `/website-rescue-checklist/`)
-2. **Link it**: homepage small banner/link, audit landing page, blog footers
-3. **Start lead-gen actions** per `docs/lead-generation-plan.md` (warm-contact audits, "I searched for you" screenshot outreach)
-4. Optional: relocate the pricing chart section to `/services/seo/` or keep on pricing page (currently still on pricing page, fine)
-5. Later: `/services/ai-cleanup/` and `/services/conversion/` pages (homepage cards currently point to these — they 404)
+1. **Start lead-gen actions** — execution tracker now lives in `docs/lead-gen-tracker.md` (warm-contact audits, "I searched for you" screenshot outreach)
+2. Optional: relocate the pricing chart section to `/services/seo/` or keep on pricing page (currently still on pricing page, fine)
+3. Later: `/services/ai-cleanup/` and `/services/conversion/` pages (homepage cards currently point to these — they 404)
+4. Optional: print/PDF version of the checklist page
 
 ## Docs map
 - `docs/homepage-copy-website-rescue.md` — homepage copy decisions
@@ -32,7 +33,8 @@ Core idea: **Website Rescue** — fix websites that don't work (visibility, cred
 - `docs/website-rescue-checklist.md` — lead magnet content (NOT yet a page)
 - `docs/audit-template-and-rescue-report.md` — internal audit template + client report structure (operational tool, not site code)
 - `docs/service-menu-pricing.md` — pricing rationale (implemented on pricing page)
-- `docs/lead-generation-plan.md` — client acquisition plan (actions, not code)
+- `docs/lead-generation-plan.md` — client acquisition plan (strategy, not code)
+- `docs/lead-gen-tracker.md` — lead-gen execution tracker (checkboxes, weekly rhythm, outreach log)
 
 ## Process rules (from AGENTS.md)
 - **No build/push without explicit user authorization.** One page at a time; pause after each page for review.

@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PixieDust from '../components/PixieDust.jsx';
+
+type ChecklistItem = {
+  title: string;
+  body: string;
+};
+
+type ChecklistPart = {
+  part: string;
+  items: ChecklistItem[];
+};
+
+const parts: ChecklistPart[] = [
+  {
+    part: 'Part 1 — Can Google Find You?',
+    items: [
+      {
+        title: 'Search your business name + city on Google.',
+        body: 'Does your website show up on page one? If not, you have an indexing or SEO problem.'
+      },
+      {
+        title: 'Search “yourcity + your service” (e.g., “Shelby NC roofing”).',
+        body: 'Are you anywhere in the results? Are competitors there instead?'
+      },
+      {
+        title: 'Type yourdomain.com/sitemap.xml in your browser.',
+        body: 'If nothing loads, Google may not know your pages exist.'
+      },
+      {
+        title: 'Type yourdomain.com/robots.txt.',
+        body: 'No result or an error? Crawler instructions may be missing — or accidentally blocking Google.'
+      }
+    ]
+  },
+  {
+    part: 'Part 2 — Does Your Site Look Trustworthy?',
+    items: [
+      {
+        title: 'Look at your site on your phone, not your laptop.',
+        body: 'Is text readable without zooming? Do buttons work with a thumb?'
+      },
+      {
+        title: 'Is your phone number clickable at the top of your homepage?',
+        body: 'Customers call the easiest number to tap.'
+      },
+      {
+        title: 'Count the real photos vs. stock photos.',
+        body: 'Sites that feel generic get less trust — and less business.'
+      },
+      {
+        title: 'Read your homepage headline out loud.',
+        body: 'Does it say what you do and where? Or does it say something clever but vague?'
+      },
+      {
+        title: 'Check your copyright year in the footer.',
+        body: 'A stale year quietly says “nobody’s home.”'
+      }
+    ]
+  },
+  {
+    part: 'Part 3 — Does It Bring You Business?',
+    items: [
+      {
+        title: 'Can a stranger tell what you do in 5 seconds?',
+        body: 'Show the homepage to someone outside your industry and ask.'
+      },
+      {
+        title: 'Is there ONE obvious next step (call, form, book)?',
+        body: 'Or do three different buttons compete for attention?'
+      },
+      {
+        title: 'Fill out your own contact form.',
+        body: 'Does it work? Do you actually get notified?'
+      },
+      {
+        title: 'Do you show reviews, testimonials, or credentials near your call-to-action?',
+        body: 'Trust converts.'
+      }
+    ]
+  },
+  {
+    part: 'Part 4 — The AI Test',
+    items: [
+      {
+        title: 'Does your site read like everyone else’s?',
+        body: 'Generic “Welcome to our website, we offer quality solutions” copy is a red flag to customers — and to search engines.'
+      },
+      {
+        title: 'Would you hire you based on this website?',
+        body: 'Be honest. That’s the real test.'
+      }
+    ]
+  }
+];
+
+// Global item numbering across parts
+let itemNumber = 0;
+const numberedParts = parts.map((p) => ({
+  ...p,
+  items: p.items.map((item) => ({ ...item, number: ++itemNumber }))
+}));
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="The 5-Minute Website Audit Checklist | Shelby Web Co"
+  description="15 things to check on your website in 5 minutes — the same things we check in our free SEO audit. Can Google find you? Does your site look trustworthy? Does it bring you business?"
+>
+
+  <!-- Hero -->
+  <section class="py-10 lg:py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">✦ Free Checklist · No Email Required</p>
+      <div class="relative inline-block">
+        <PixieDust client:load />
+        <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          The 5-Minute <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light to-brand-accent">Website Audit Checklist</span>
+        </h1>
+      </div>
+      <p class="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8">
+        Your website has one job: bring you customers. This quick checklist shows you the 15 things most likely to be broken — the same things we check in our free SEO audit. Grab a coffee and your phone. Five minutes.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#the-checklist"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+        >
+          Start the Checklist
+        </a>
+        <a
+          href="/promotions/free-seo-audit/"
+          class="inline-block px-8 py-3 rounded-xl font-bold text-white border border-white/20 bg-white/[0.04] hover:bg-white/[0.08] hover:-translate-y-[1px] transition-all duration-300"
+        >
+          Skip Ahead → Free Audit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Checklist -->
+  <section id="the-checklist" class="py-16 px-4">
+    <div class="max-w-3xl mx-auto space-y-16">
+
+      {numberedParts.map((part) => (
+        <div>
+          <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_12px_rgba(132,204,22,0.5)] flex-shrink-0"></span>
+            {part.part}
+          </h2>
+          <div class="space-y-4">
+            {part.items.map((item) => (
+              <div class="bg-white/[0.04] rounded-2xl border border-white/10 p-5 md:p-6 hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all">
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_12px_rgba(132,204,22,0.3)] text-brand-darkest font-bold text-sm">
+                      {item.number}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-white mb-1">{item.title}</h3>
+                    <p class="text-white/85">{item.body}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+  <!-- Outro / CTA -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10 text-center">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Checked several boxes? Don't panic.</h2>
+      <p class="text-lg text-white/90 mb-2 max-w-xl mx-auto">
+        Most of these are fixable — some in minutes, some in an afternoon.
+      </p>
+      <p class="text-lg text-white/90 mb-8 max-w-xl mx-auto">
+        Get your <strong class="text-brand-accent">free SEO audit</strong> and we'll tell you exactly what's wrong, what's fine, and what's worth fixing first. Free for local businesses, no obligation.
+      </p>
+      <a
+        href="/promotions/free-seo-audit/"
+        class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
+      >
+        Request Your Free Audit
+      </a>
+      <p class="text-white/70 text-sm mt-6">
+        Prefer to dig deeper first? See our <a href="/services/seo/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">SEO services</a> or the <a href="/pricing/" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">pricing page</a>.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
