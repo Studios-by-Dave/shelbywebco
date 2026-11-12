@@ -5,6 +5,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
 import Image from '../components/OptimizedImage.astro';
 import pricingCompare from '../../assets/pricing_chart_2.jpg';
 import PricingFaqBoard from '../components/PricingFaqBoard.astro';
+import GoogleReview from '../components/GoogleReview.astro';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -394,6 +395,14 @@ const faqSchema = {
         <p class="mt-3"><span class="text-white font-semibold">Is SEO required?</span> No. SEO is optional — if you'd rather have the website cared for without ongoing SEO, that's the $149/mo Website Care Plan. Either way, plans are month-to-month with no contracts, and you can cancel any time.</p>
       </div>
     </div>
+  </section>
+
+  <!-- Client proof: value/ROI quote sits next to the pricing decision -->
+  <section class="py-8 px-4" data-animate>
+    <GoogleReview
+      quote="Dave really presented opportunities that we wouldn't have ever known otherwise. And now our website is really generating our online business beautifully!"
+      name="Paul R."
+    />
   </section>
 
   <!-- Divider: build pricing below -->
