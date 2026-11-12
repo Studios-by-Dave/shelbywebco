@@ -8,9 +8,14 @@ interface Props {
    * monogram instead — never a stock face, which would misrepresent the person.
    */
   photo?: string;
+  /**
+   * Card size. 'sm' (default) is the compact half-size card used across the
+   * site; 'md' is the original large card for places that need more presence.
+   */
+  size?: 'sm' | 'md';
 }
 
-const { quote, name, class: className = '', photo } = Astro.props;
+const { quote, name, class: className = '', photo, size = 'sm' } = Astro.props;
 
 const initials = name
   .replace(/[^A-Za-z ]/g, ' ')
@@ -22,21 +27,50 @@ const initials = name
   .toUpperCase();
 
 const stars = [0, 1, 2, 3, 4];
+
+const sm = size === 'sm';
+
+const shell = sm ? 'max-w-md' : 'max-w-2xl';
+// Clear reflective glass: neutral (no blue tint), frosted, with a specular sheen
+const card = sm
+  ? 'relative overflow-hidden rounded-[28px] bg-white/[0.05] backdrop-blur-xl backdrop-saturate-50 p-4 md:p-5 border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-1px_0_rgba(255,255,255,0.18),0_18px_50px_-24px_rgba(0,0,0,0.7)]'
+  : 'relative overflow-hidden rounded-[36px] bg-white/[0.05] backdrop-blur-xl backdrop-saturate-50 p-6 md:p-8 border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-1px_0_rgba(255,255,255,0.18),0_28px_70px_-28px_rgba(0,0,0,0.75)]';
+
+const starClass = sm ? 'h-5 w-5' : 'h-7 w-7 md:h-8 md:w-8';
+const badgeText = sm
+  ? 'text-[10px] gap-1'
+  : 'text-[11px] gap-1.5 md:text-xs';
+const badgeIcon = sm ? 'h-3.5 w-3.5' : 'h-4 w-4';
+const quoteClass = sm ? 'text-sm leading-relaxed' : 'text-lg leading-relaxed md:text-xl';
+const captionWrap = sm ? 'mt-3 gap-2.5' : 'mt-5 gap-3';
+const avatarClass = sm
+  ? 'h-9 w-9 text-xs'
+  : 'h-11 w-11 text-sm';
+const avatarRing = sm
+  ? 'ring-1 ring-white/25'
+  : 'ring-2 ring-white/25';
+const nameClass = sm ? 'text-sm' : '';
 ---
 
-<figure class={`max-w-2xl mx-auto ${className}`}>
-  <div class="rounded-3xl bg-white p-6 md:p-8 border border-white/60 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.65)]">
-    <div class="mb-4 flex items-center justify-between gap-4">
-      <div class="flex gap-1" role="img" aria-label="Rated 5 out of 5 stars">
+<figure class={`mx-auto ${shell} ${className}`}>
+  <div class={card}>
+    {/* Specular highlight — reads as a light reflection across the glass */}
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -left-1/4 -top-1/3 h-2/3 w-3/4 rotate-[-18deg] bg-gradient-to-r from-transparent via-white/25 to-transparent blur-xl"></div>
+      <div class="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent"></div>
+    </div>
+
+    <div class="relative mb-3 flex items-center justify-between gap-3">
+      <div class="flex gap-0.5" role="img" aria-label="Rated 5 out of 5 stars">
         {stars.map(() => (
-          <svg viewBox="0 0 20 20" aria-hidden="true" class="h-7 w-7 fill-amber-400 md:h-8 md:w-8">
+          <svg viewBox="0 0 20 20" aria-hidden="true" class={`${starClass} fill-amber-400`}>
             <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.644-.772-1.966 0l-1.05 2.553a1.18 1.18 0 0 1-.888.866l-2.78.64c-.816.189-1.103 1.22-.55 1.847l2.06 2.025a1.18 1.18 0 0 1 .34 1.123l-.512 2.73c-.144.77.659 1.364 1.368.99l2.482-1.344a1.18 1.18 0 0 1 1.1 0l2.482 1.344c.709.374 1.512-.221 1.368-.99l-.512-2.73a1.18 1.18 0 0 1 .34-1.123l2.06-2.025c.553-.627.266-1.658-.55-1.847l-2.78-.64a1.18 1.18 0 0 1-.888-.866l-1.05-2.553Z" clip-rule="evenodd" />
           </svg>
         ))}
       </div>
 
-      <span class="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-600 md:text-xs">
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+      <span class={`inline-flex shrink-0 items-center font-semibold uppercase tracking-wider text-white/55 ${badgeText}`}>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class={badgeIcon}>
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
           <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
           <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
@@ -46,31 +80,31 @@ const stars = [0, 1, 2, 3, 4];
       </span>
     </div>
 
-    <blockquote class="text-lg leading-relaxed text-slate-800 italic md:text-xl">
+    <blockquote class={`relative text-white/90 italic ${quoteClass}`}>
       “{quote}”
     </blockquote>
 
-    <figcaption class="mt-5 flex items-center gap-3">
+    <figcaption class={`relative flex items-center ${captionWrap}`}>
       {photo ? (
         <img
           src={photo}
           alt=""
-          width="44"
-          height="44"
+          width="36"
+          height="36"
           loading="lazy"
-          class="h-11 w-11 shrink-0 rounded-full object-cover shadow ring-2 ring-white"
+          class={`${avatarClass} shrink-0 rounded-full object-cover shadow ${avatarRing}`}
         />
       ) : (
         <span
           aria-hidden="true"
-          class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-accent to-green-700 text-sm font-black text-white shadow ring-2 ring-white"
+          class={`inline-flex ${avatarClass} shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-accent to-green-700 font-black text-white shadow ${avatarRing}`}
         >
           {initials}
         </span>
       )}
       <span class="min-w-0">
-        <span class="block truncate font-bold text-slate-900">{name}</span>
-        <span class="block text-xs text-slate-600">Posted on Google</span>
+        <span class={`block truncate font-bold text-white ${nameClass}`}>{name}</span>
+        <span class={`block text-white/50 ${sm ? 'text-[10px]' : 'text-xs'}`}>Posted on Google</span>
       </span>
     </figcaption>
   </div>
