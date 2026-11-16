@@ -9,10 +9,18 @@ Core idea: **Website Rescue** — fix websites that don't work (visibility, cred
 |---|---|---|
 | Free SEO Audit | $0 | Homepage-level snapshot; landing page `/promotions/free-seo-audit/` (copy scaled down to match real offer) |
 | Website Rescue Report | $197 | Paid deep diagnostic, every page code-level; **credited toward fixes if fix work within 60 days** |
-| Fix packages | from $299–$749 | Visibility $349 / Credibility $299 / Conversion $299 / Full Rescue $749; "from" prices, scoped by audit |
+| Fix packages | from $299–$749 | Visibility $299 / Credibility $299 / Conversion $299 / Full Rescue $749; "from" prices, scoped by audit (Nov 2026: Visibility unified from $349 → $299) |
 | Ongoing plans / Rebuild | $149–$297/mo, $497 build | Unchanged |
 
 ## Shipped (all pushed)
+- **Copy-abbreviation pass, round 1 (Nov 2026)** — homepage + pricing page, visual design preserved, text shortened, prose converted to graphs:
+  - Homepage: hero paragraphs merged; warning-signs cards → icon cards + **fix-path chips with legend** (Visibility/Credibility/Conversion/Full Rescue, color-coded); service cards 4 bullets → 3; **ascending price-bar graph** ($0 / $197 / $299+) above the offer ladder; positioning 110 words → 1 line + **Found/Trusted/Hired chip graphic**; industries intro 35 → 18 words. Commit `6726979`
+  - Pricing: rescue tiers collapsed 6 → 4; two diagnostic cards → **3-step diagnose strip**; 4 fix-package cards → **comparison matrix table** (Found/Trusted/Hired row groups, ✓/— cells); **removed the duplicated "What a Website Actually Costs" section** (its $497/$149 Website Care table duplicated the standalone card); FAQ schema + `PricingFaqBoard.astro` answers trimmed; **Visibility unified $349 → $299** (contact dropdown, llms.txt, docs updated to match)
+  - Pricing hero: h1 bumped to `text-5xl/6xl/7xl`; "Shelby Web" gradient → **white → cyan → electric blue**; "✦ Transparent Pricing" eyebrow → smaller, **gold chrome gradient**
+  - Pricing: **Full Rescue ($749) elevated** — highlighted matrix column (Best Value ribbon, blue-tinted cells, glowing checks, larger price) + dedicated Full Rescue banner with `?service=full-rescue` deep link
+  - Build plan columns: "Launch" → **"Build/Launch"**; green "Ongoing management" → **"SEO +"**
+  - **Chrome/gold reflection** added to the nav CTA + hero CTA via a new global `.cta-chrome` utility in `src/styles/global.css` (static iridescent wash + 6.5s specular sweep, reduced-motion safe)
+  - Reviews redistributed: homepage 4 → **2** (Roger P. hero, Willie G. positioning); William S. → pricing CTA; Michelle B. → services index
 - **Homepage** (`src/pages/index.astro`): rescue hero CTAs, problem section ("Your Website May Need Rescue If..."), 4 rescue service cards (+ full-services one-liner for branding/software), 3-tier offer ladder, positioning section, industries reword, rescue FAQ, tool logo wall removed, referral bonus removed from ticker, pricing chart section removed
 - **Navbar**: top-right CTA "Free SEO Audit / Includes Website Health Check" (rounded-2xl)
 - **Audit landing page** (`src/pages/promotions/free-seo-audit.astro`): honest offer copy, homepage-style FAQ accordion, Business Name field + Search Console note in form (plumbing untouched)

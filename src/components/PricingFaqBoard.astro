@@ -1,7 +1,7 @@
 ---
 /**
  * PricingFaqBoard — graphical conversion of the pricing page FAQ.
- * 11 accordion questions grouped into 3 visual categories.
+ * 12 accordion questions grouped into 4 visual categories.
  * Uses the same .faq-item / .faq-question / .faq-answer / .faq-icon classes
  * expected by the page's existing toggle script, and preserves all copy.
  */
@@ -21,6 +21,11 @@ const groups = [
         rich: true,
       },
       {
+        q: "Which fix package do I need?",
+        a: `Match it to the symptom. <strong class="text-white">Visibility</strong> — Google can't find you. <strong class="text-white">Credibility</strong> — the site looks generic or AI-built. <strong class="text-white">Conversion</strong> — you get traffic but no calls. Not sure? The free audit tells you which one applies, and Full Rescue covers all three.`,
+        rich: true,
+      },
+      {
         q: "Do fix packages apply to AI-built websites?",
         a: `Yes — many of the sites we rescue were built with AI tools or templates. Common fixes include indexing setup that was never completed, robotic copy rewritten into real human copy, de-generic styling, and mobile UX repairs. The audit determines what applies to your site.`,
       },
@@ -33,7 +38,7 @@ const groups = [
     questions: [
       {
         q: "Do you offer payment plans?",
-        a: `Growth Plans use a launch fee followed by one monthly payment — <strong class="text-white">Core is $497 to launch then $297/month</strong>, <strong class="text-white">Plus is $798–$998 to launch then $597/month</strong>, and <strong class="text-white">Ultra is $998–$1,498 to launch then $797/month</strong>. Every Growth Plan includes everything in the <strong class="text-white">$149/month Website Care Plan</strong> (hosting, SSL, backups, security, maintenance). SEO is optional — if you'd rather skip it, the website-only Website Care Plan is <strong class="text-white">$497 to launch then $149/month</strong>. Plans are month-to-month with no contracts, and you can cancel at any time.`,
+        a: `Growth Plans use a launch fee followed by one monthly payment — <strong class="text-white">Core is $497 to launch then $297/month</strong>, <strong class="text-white">Plus is $798–$998 to launch then $597/month</strong>, and <strong class="text-white">Ultra is $998–$1,498 to launch then $797/month</strong>. Every plan includes hosting, SSL, backups, security, and maintenance. SEO is optional — without it, the Website Care Plan is <strong class="text-white">$497 to launch then $149/month</strong>. Month-to-month, no contracts, cancel any time.`,
         rich: true,
       },
       {
@@ -58,15 +63,15 @@ const groups = [
     questions: [
       {
         q: "What's included in the price?",
-        a: `Every package includes custom design, mobile responsiveness, basic SEO setup, and a contact form. Higher-tier packages add advanced functionality like booking systems, e-commerce, analytics integration, and more. All packages include web hosting setup assistance and a domain consultation.`,
+        a: `Every package includes custom design, mobile responsiveness, basic SEO setup, a contact form, and hosting setup assistance.`,
       },
       {
         q: "Do you handle web hosting and domain setup?",
-        a: `Yes, we handle the full setup. We'll help you choose a domain and get everything deployed. Web hosting, SSL, backups, security monitoring, and software updates are included with every Growth Plan while your plan is active — there are no separate hosting fees.`,
+        a: `Yes. We'll help you choose a domain and deploy everything. Hosting, SSL, backups, security monitoring, and updates are included with every active plan — there are no separate hosting fees.`,
       },
       {
         q: "Do you offer ongoing maintenance?",
-        a: `Yes! Every Growth Plan is ongoing by design — that is the whole point. Our plans are <strong class="text-white">Core ($497 launch + $297/month)</strong>, <strong class="text-white">Plus ($798–$998 launch + $597/month)</strong>, and <strong class="text-white">Ultra ($998–$1,498 launch + $797/month)</strong>. All include hosting, security, updates, foundational SEO, and monthly reporting. See <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">full SEO pricing</a>.`,
+        a: `Yes — every Growth Plan is ongoing by design. Hosting, security, updates, foundational SEO, and monthly reporting are all included. See <a href="/services/seo/#growth-pricing" class="text-brand-cyan underline">full SEO pricing</a>.`,
         rich: true,
       },
       {
@@ -92,7 +97,7 @@ const groups = [
       },
       {
         q: "What is a milestone audit?",
-        a: `Every monthly SEO plan is audited at each milestone, typically every 90 days. We review performance, rankings, technical health, and AI visibility together. If no further meaningful work is needed, we tell you and you can pause, reduce scope, or shift to lighter maintenance — no endless retainer.`,
+        a: `Every plan is audited every 90 days. If no further meaningful work is needed, we tell you — and you can pause, reduce scope, or shift to lighter maintenance. No endless retainer.`,
       },
     ],
   },

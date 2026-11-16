@@ -452,6 +452,88 @@
     @apply shadow-[0_0_20px_rgba(132,204,22,0.6)];
   }
 
+  /* ── Chrome/gold reflection (nav CTA + hero CTA) ─────────────────────
+     Two layers: a static iridescent wash (gold + cyan) that is always
+     faintly present, plus a specular band that sweeps across the surface.
+     Both paint UNDER the label, so text stays legible. */
+  .cta-chrome {
+    @apply relative overflow-hidden transition-all duration-300;
+    isolation: isolate;
+  }
+
+  .cta-chrome::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.34) 0%,
+      rgba(255, 255, 255, 0.06) 26%,
+      rgba(255, 206, 92, 0.22) 48%,
+      rgba(103, 232, 249, 0.18) 66%,
+      rgba(255, 255, 255, 0.28) 100%
+    );
+    opacity: 0.75;
+    transition: opacity 400ms ease;
+    pointer-events: none;
+  }
+
+  .cta-chrome:hover::before {
+    opacity: 1;
+  }
+
+  .cta-chrome::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: 0;
+    width: 45%;
+    height: 220%;
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 22%,
+      rgba(255, 255, 255, 0.92) 40%,
+      rgba(255, 214, 122, 0.7) 55%,
+      rgba(103, 232, 249, 0.55) 70%,
+      rgba(255, 255, 255, 0.45) 86%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(-260%) skewX(-16deg);
+    animation: ctaChromeSweep 6.5s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+    pointer-events: none;
+  }
+
+  .cta-chrome:hover {
+    @apply shadow-[0_0_20px_rgba(132,204,22,0.6)];
+  }
+
+  @keyframes ctaChromeSweep {
+    0%, 58% {
+      transform: translateX(-260%) skewX(-16deg);
+      opacity: 0;
+    }
+    63% {
+      opacity: 0.9;
+    }
+    88% {
+      transform: translateX(360%) skewX(-16deg);
+      opacity: 0.9;
+    }
+    93%, 100% {
+      transform: translateX(360%) skewX(-16deg);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta-chrome::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+
   @keyframes color-cycle-blue {
     0%, 100% {
       color: var(--color-brand-blue-darkest);

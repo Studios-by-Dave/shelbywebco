@@ -19,7 +19,8 @@ As defined. Delivered as a short written summary (half page) within a few busine
 
 ## 3. Fix Packages (project-based, quoted after the audit)
 
-**A. Visibility Rescue — from $349 one-time**
+**A. Visibility Rescue — from $299 one-time**
+*(Nov 2026: price unified with B and C — one entry point, three paths, $299 across the board.)*
 Indexing repairs, sitemap/robots fixes, GSC setup, technical SEO cleanup, speed fixes on key pages, LocalBusiness schema.
 *Roughly: 6–10 hours work. Undercuts a rebuild psychologically: "less than your rebuild price to get found."*
 
@@ -47,10 +48,10 @@ Positioned as "when a fresh start makes sense" — stays the anchor that makes f
 |---|---|---|---|
 | Free audit | $0 | ~1 hr | Marketing |
 | Full Rescue Audit | $197 (credited) | 3–4 hrs | ~$50–65/hr → fine, it's a foot in the door |
-| Visibility Rescue | from $349 | 6–10 hrs | ~$35–58/hr → OK solo; raise floor after first 3 clients |
+| Visibility Rescue | from $299 | 6–10 hrs | ~$30–50/hr → OK solo; raise floor after first 3 clients |
 | Full Rescue combo | from $749 | 15–22 hrs | ~$34–50/hr → acceptable early; this is portfolio-building pricing |
 | Rebuild | $497 + monthly | existing | unchanged |
 
-🧠 **Honest flag:** these day-rates are low for a solo operator — this is deliberately *market-entry* pricing to win the first 5–10 rescue clients and gather before/after proof. Build the case studies, then raise: the natural move is "from $349 → from $497" and audit $197 → $247 once you have three documented rescues.
+🧠 **Honest flag:** these day-rates are low for a solo operator — this is deliberately *market-entry* pricing to win the first 5–10 rescue clients and gather before/after proof. Build the case studies, then raise: the natural move is "from $299 → from $497" and audit $197 → $247 once you have three documented rescues.
 
 🧠 **What NOT to do:** no hourly billing (invites micro-management), no "SEO guaranteed rankings" claims, no bundled single price for build+SEO (your existing two-charge rule stays).

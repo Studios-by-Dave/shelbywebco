@@ -105,9 +105,9 @@ import marbleBg from '../../assets/marble-800x530.webp';
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
           href="/promotions/free-seo-audit/"
-          class="cta-glow-shine rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-base sm:text-lg text-center"
+          class="cta-chrome rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-base sm:text-lg text-center"
         >
-          Get My Free Audit
+          <span class="relative z-10">Get My Free Audit</span>
         </a>
         <a
           href="/services/"
@@ -770,20 +770,9 @@ import marbleBg from '../../assets/marble-800x530.webp';
           />
         </div>
       </div>
-      <GoogleReview
-        quote="The BEST experience!!"
-        name="Michelle B."
-        class="mt-10"
-      />
     </div>
   </section>
   <FaqSection items={faqItems} />
-  <section class="py-10 px-4 border-t border-white/10" data-animate>
-    <GoogleReview
-      quote="Great customer service!"
-      name="William S."
-    />
-  </section>
 
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
