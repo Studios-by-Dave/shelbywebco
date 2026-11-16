@@ -48,7 +48,7 @@ const {
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
-const fullTitle = isHomepage ? 'Shelby Web Company | Web Design & SEO in Shelby, NC' : `${title} | Shelby Web Company`;
+const fullTitle = isHomepage ? 'Website Rescue & Web Design in Shelby, NC | Shelby Web Company' : `${title} | Shelby Web Company`;
 const absoluteImageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
 
 // Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.
