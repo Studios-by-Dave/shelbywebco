@@ -13,7 +13,7 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. W
 
 
 ## Core Services
-- Website Rescue: free SEO audit, paid deep diagnostic (Website Rescue Report), and scoped fix packages (Google visibility, AI cleanup & credibility, conversion)
+- Website Rescue: free SEO audit, paid deep diagnostic (Website Rescue Report), and scoped fix packages (Google visibility, AI cleanup & credibility, conversion), plus the Full Rescue bundle covering all three (from $749)
 - Custom web design & development (Astro, modern performance-first stack)
 - Local SEO, technical SEO, and AI search visibility (GEO)
 - Google Business Profile optimization & review generation
@@ -58,6 +58,7 @@ Local service businesses including roofing, landscaping, solar installers, home 
 - SEO Services: https://www.shelbywebco.com/services/seo/
 - AI Cleanup & Credibility Fixes: https://www.shelbywebco.com/services/ai-cleanup/
 - Conversion Fixes: https://www.shelbywebco.com/services/conversion/
+- Full Rescue (all three fixes bundled, from $749): https://www.shelbywebco.com/services/full-rescue/
 - Website Rescue Report: https://www.shelbywebco.com/services/website-rescue-report/
 - Logo Design & Branding: https://www.shelbywebco.com/services/branding/
 - Audio Branding: https://www.shelbywebco.com/services/audio-branding/
