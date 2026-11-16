@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Image from '../components/OptimizedImage.astro';
 import ProjectPopup from '../components/ProjectPopup.jsx';
 import heroImage from '../../assets/Sweb_hero1.jpg';
+import rescueImage from '../../assets/Website-rescue-image-1.png';
 import googleStars from '../../assets/badge icons/google 5 stars.png';
 import googleStars4 from '../../assets/badge icons/google-5-stars-4.png';
 import comptiaBadge from '../../assets/badge icons/CompTIA_A__Digital_Badge.jpg';
@@ -88,20 +89,21 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <!-- Hero Section -->
   <section class="pt-14 pb-16 px-4 sm:px-6 lg:pt-20 lg:pb-20 overflow-hidden" data-animate>
     <div class="max-w-5xl mx-auto flex flex-col items-center text-center relative">
-      <Image src={googleStars4} alt="5 Star Google Reviews" class="absolute right-0 top-0 h-20 w-auto object-contain opacity-90 hidden lg:block" />
+      <Image src={googleStars4} alt="5 Star Google Reviews" class="absolute left-0 top-44 h-20 w-auto object-contain opacity-90 hidden lg:block" />
+      <Image src={rescueImage} alt="Website rescue" class="absolute right-[-3rem] top-12 h-64 w-auto object-contain opacity-30 hidden lg:block pointer-events-none" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%); mask-image: linear-gradient(to right, transparent 0%, black 60%);" />
       <span class="handshake-anchor absolute top-0 right-2 lg:hidden" aria-hidden="true"></span>
       <div class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
         <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
         <span class="text-white font-bold text-sm tracking-wide">SHELBY, NC — WEBSITE RESCUE & LOCAL SEO</span>
       </div>
       <h1 class="font-heading text-[clamp(3rem,6vw,4.5rem)] font-black mb-5 leading-[1.05] tracking-tight text-white max-w-4xl">
-        <span class="text-brand-accent">Website Rescue,</span> SEO Fixes, and Strategic Website Builds
+        <span class="text-brand-accent">Website Rescue,</span> <span class="bg-gradient-to-r from-[#1e3a5f] via-[#3b82f6] to-white bg-clip-text" style="-webkit-text-stroke: 1.5px #ffffff; color: transparent;">SEO,</span> and Strategic Website Builds
       </h1>
       <p class="text-lg md:text-xl text-[#f4c95d] mb-2 max-w-2xl leading-relaxed font-semibold" style="text-shadow: 0 0 12px rgba(244, 201, 93, 0.25);">
         “Technology That Fills The Gaps.”
       </p>
       <p class="text-base sm:text-lg text-white/75 mb-8 max-w-2xl leading-relaxed">
-        We repair underperforming websites, clean up AI-generated issues, and build new sites when a fresh start makes sense.
+        We repair underperforming websites, clean up AI-generated issues, and build new sites when a fresh start makes sense.<br /><br />
         <span class="text-white/85 italic">Generic, not indexing, not bringing in business? <span class="text-brand-accent font-semibold not-italic">We can help.</span></span>
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
@@ -117,14 +119,24 @@ import marbleBg from '../../assets/marble-800x530.webp';
         >
           Explore Services
         </a>
+        <a
+          href="mailto:dave@shelbywebco.com"
+          class="inline-flex flex-col items-center rounded-full border border-white/30 bg-white/5 px-8 py-4 text-center text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+        >
+          <span>Email Us</span>
+          <span class="text-xs font-normal text-white/70 mt-1">dave@shelbywebco.com</span>
+        </a>
       </div>
       <a
         href="tel:+17044738188"
         class="inline-flex flex-col items-center group rounded-2xl bg-white/5 border border-white/15 backdrop-blur px-8 py-5 hover:border-brand-accent/50 transition-all duration-300 mb-4"
       >
         <p class="text-white/70 text-xs font-semibold tracking-[0.2em] mb-1">CALL OR TEXT 24/7</p>
-        <p class="text-brand-accent text-3xl sm:text-4xl font-heading font-bold group-hover:text-brand-accent-light transition-colors leading-none tracking-tight" style="text-shadow: 0 0 12px rgba(132,204,22,0.6), 0 0 24px rgba(132,204,22,0.3);">(704) 473-8188</p>
-        <p class="text-white/60 text-xs font-medium mt-2">Just click and call! We're here <span class="text-white font-semibold">24/7</span> &bull; <span class="text-white/80">dave@shelbywebco.com</span></p>
+        <p class="flex items-center justify-center gap-2 text-brand-accent text-4xl sm:text-5xl font-heading font-bold group-hover:text-brand-accent-light transition-colors leading-none tracking-tight" style="text-shadow: 0 0 12px rgba(132,204,22,0.6), 0 0 24px rgba(132,204,22,0.3);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+          (704) 473-8188
+        </p>
+        <p class="text-white/60 text-xs font-medium mt-2">Just click and call! We're here <span class="text-red-500 font-semibold">24/7</span> &bull; <span class="text-white/80">dave@shelbywebco.com</span></p>
       </a>
 
       <div class="rounded-3xl p-1 my-8 bg-gradient-to-br from-white/20 to-white/5 w-full max-w-[46rem] relative mx-auto">
@@ -180,10 +192,16 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <!-- Problem Section: Your website may need rescue if... -->
   <section class="py-14 md:py-18 px-4 border-t border-white/10" data-animate aria-labelledby="rescue-if-heading">
     <div class="max-w-6xl mx-auto">
+      <div class="mb-10 flex justify-center">
+        <div class="relative inline-block">
+          <Image src={rescueImage} alt="Website rescue example" class="rounded-2xl w-full max-w-3xl h-auto" />
+          <h2 class="absolute top-4 left-6 font-heading text-4xl md:text-5xl font-bold text-white drop-shadow-lg -rotate-6 origin-top-left" style="-webkit-text-stroke: 2px #84cc16;">Website Rescue</h2>
+        </div>
+      </div>
       <div class="text-center mb-10">
         <p class="uppercase tracking-widest mb-3 font-semibold italic text-brand-accent text-sm">THE WARNING SIGNS</p>
         <h2 id="rescue-if-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">
-          Your Website May Need Rescue If...
+          Your <span style="-webkit-text-stroke: 1.5px #84cc16;">Website</span> May Need <span style="-webkit-text-stroke: 1.5px #84cc16;">Rescue</span> If...
         </h2>
         <p class="text-white/75 text-body-lg max-w-2xl mx-auto leading-relaxed">
           Most website problems are invisible to the owner. You don't see them — your customers (and Google) do. Check any that sound familiar:
@@ -434,17 +452,17 @@ import marbleBg from '../../assets/marble-800x530.webp';
       <div class="mb-12">
         <div class="flex items-end justify-center gap-3 sm:gap-6">
           <div class="flex-1 flex flex-col items-center">
-            <p class="font-heading font-bold text-brand-accent text-xl sm:text-2xl mb-2">$0</p>
+            <p class="font-heading font-bold text-brand-accent text-xl sm:text-2xl mb-2" style="-webkit-text-stroke: 1px #ffffff;">$0</p>
             <div class="w-full rounded-t-2xl h-20 sm:h-28 bg-gradient-to-t from-brand-accent/45 to-brand-accent/10 border border-brand-accent/40 border-b-0"></div>
             <p class="text-white/70 text-xs sm:text-sm font-semibold mt-3 text-center">Free Audit</p>
           </div>
           <div class="flex-1 flex flex-col items-center">
-            <p class="font-heading font-bold text-[#f4c95d] text-xl sm:text-2xl mb-2">$197</p>
+            <p class="font-heading font-bold text-[#f4c95d] text-xl sm:text-2xl mb-2" style="-webkit-text-stroke: 1px #ffffff;">$197</p>
             <div class="w-full rounded-t-2xl h-28 sm:h-36 bg-gradient-to-t from-[#f4c95d]/45 to-[#f4c95d]/10 border border-[#f4c95d]/40 border-b-0"></div>
             <p class="text-white/70 text-xs sm:text-sm font-semibold mt-3 text-center">Rescue Report</p>
           </div>
           <div class="flex-1 flex flex-col items-center">
-            <p class="font-heading font-bold text-brand-blue-light text-xl sm:text-2xl mb-2">$299+</p>
+            <p class="font-heading font-bold text-brand-blue-light text-xl sm:text-2xl mb-2" style="-webkit-text-stroke: 1px #ffffff;">$299+</p>
             <div class="w-full rounded-t-2xl h-36 sm:h-44 bg-gradient-to-t from-brand-blue-light/45 to-brand-blue-light/10 border border-brand-blue-light/40 border-b-0"></div>
             <p class="text-white/70 text-xs sm:text-sm font-semibold mt-3 text-center">Fixes &amp; Rebuilds</p>
           </div>
@@ -608,7 +626,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <section class="py-12 md:py-16 px-4" data-animate>
     <div class="max-w-7xl mx-auto">
       <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-8 text-center">
-        We Rescue Websites for Local Businesses Like Yours
+        We <span style="-webkit-text-stroke: 1.5px #84cc16;">Rescue</span> Websites for <span style="-webkit-text-stroke: 1.5px #84cc16;">Local</span> <span style="-webkit-text-stroke: 1.5px #84cc16;">Businesses</span> Like Yours
       </h2>
       <p class="text-white/75 text-body-lg max-w-5xl mx-auto mb-16 leading-relaxed font-light">
         From trucking to tree services, we help Cleveland County businesses get found, look credible, and turn their site into calls and customers.
