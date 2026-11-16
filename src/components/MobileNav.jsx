@@ -12,6 +12,7 @@ const phoneLink = { href: 'tel:+17044738188', label: '(704) 473-8188' };
 
 const serviceLinks = [
   { href: '/services/', label: 'All Services' },
+  { href: '/services/full-rescue/', label: 'Full Rescue — from $749' },
   { href: '/services/web-design/', label: 'Web Design' },
   { href: '/services/branding/', label: 'Logo Design & Branding' },
   { href: '/services/seo/', label: 'SEO Services' },
@@ -339,6 +340,15 @@ export default function MobileNav() {
                       ))}
                     </ul>
                   )}
+                </li>
+                <li>
+                  <a
+                    href="/services/full-rescue/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-brand-blue-light transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    Full Rescue
+                  </a>
                 </li>
                 <li>
                   <a
