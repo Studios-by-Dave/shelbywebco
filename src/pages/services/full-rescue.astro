@@ -162,7 +162,7 @@ const pillars = [
                 <span class={`text-sm font-bold uppercase tracking-widest ${p.tint}`}>{p.name}</span>
               </div>
               <h3 class="mb-2 font-heading text-3xl font-bold text-white">{p.title}</h3>
-              <p class={`mb-5 font-heading text-2xl font-bold ${p.tint}`}>{p.price}</p>
+              <p class={`mb-5 font-heading text-4xl font-bold ${p.tint}`}>{p.price}</p>
               <ul class="space-y-3 text-lg leading-snug text-white/90">
                 {p.items.map((item) => <li>• {item}</li>)}
               </ul>
@@ -185,17 +185,23 @@ const pillars = [
       <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10">
         <div class="grid grid-cols-3 gap-3 md:gap-5 items-stretch">
           <div class="text-center bg-brand-accent/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
-            <p class="font-heading text-2xl md:text-4xl font-black text-brand-accent [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="font-heading text-4xl md:text-6xl font-black text-brand-accent [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
             <p class="text-brand-accent/90 text-sm md:text-base font-semibold mt-2">Visibility</p>
           </div>
           <div class="text-center bg-[#22d3ee]/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
-            <p class="font-heading text-2xl md:text-4xl font-black text-[#22d3ee] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="font-heading text-4xl md:text-6xl font-black text-[#22d3ee] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
             <p class="text-[#22d3ee]/90 text-sm md:text-base font-semibold mt-2">Credibility</p>
           </div>
           <div class="text-center bg-[#f4c95d]/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
-            <p class="font-heading text-2xl md:text-4xl font-black text-[#f4c95d] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="font-heading text-4xl md:text-6xl font-black text-[#f4c95d] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
             <p class="text-[#f4c95d]/90 text-sm md:text-base font-semibold mt-2">Conversion</p>
           </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 md:gap-5 mt-3">
+          <div class="flex justify-center"><svg class="w-6 h-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="18"/><polyline points="6 12 12 18 18 12"/></svg></div>
+          <div class="flex justify-center"><svg class="w-6 h-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="18"/><polyline points="6 12 12 18 18 12"/></svg></div>
+          <div class="flex justify-center"><svg class="w-6 h-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="18"/><polyline points="6 12 12 18 18 12"/></svg></div>
         </div>
 
         <div class="flex items-center gap-4 my-5">
@@ -206,7 +212,7 @@ const pillars = [
 
         <div class="rounded-2xl border-2 border-brand-blue-light/70 bg-gradient-to-r from-brand-blue-light/25 via-brand-cyan/10 to-brand-blue-light/5 p-7 md:p-9 text-center shadow-[0_0_35px_rgba(59,130,246,0.14),inset_0_1px_0_rgba(255,255,255,0.1)]">
           <p class="text-brand-cyan text-sm md:text-base uppercase tracking-widest font-bold mb-3">Full Rescue — everything included</p>
-          <p class="font-heading text-5xl md:text-7xl font-black text-white">$749</p>
+          <p class="font-heading text-6xl md:text-8xl font-black text-white pulse-gold-silver">$749</p>
           <p class="text-brand-accent font-bold text-lg md:text-xl mt-3">You save about $150</p>
         </div>
 
@@ -339,5 +345,21 @@ const pillars = [
       </p>
     </div>
   </section>
+
+<style>
+  .pulse-gold-silver {
+    animation: pulse-gold-silver 1.2s ease-in-out infinite;
+  }
+  @keyframes pulse-gold-silver {
+    0%, 100% {
+      color: #ffffff;
+      text-shadow: 0 0 0 rgba(192, 192, 192, 0);
+    }
+    50% {
+      color: #e5e5e5;
+      text-shadow: 0 0 20px rgba(220, 220, 220, 0.6), 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+  }
+</style>
 
 </BaseLayout>
