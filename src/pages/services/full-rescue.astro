@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PixieDust from '../../components/PixieDust.jsx';
 import FaqSection from '../../components/FaqSection.astro';
+import GoogleReview from '../../components/GoogleReview.astro';
 
 const faqItems = [
   {
@@ -38,8 +39,6 @@ const pillars = [
     price: 'from $299',
     tint: 'text-brand-accent',
     dot: 'bg-brand-accent',
-    border: 'border-brand-accent/40',
-    bg: 'bg-brand-accent/5',
     href: '/services/seo/',
     items: [
       'Indexing & crawlability repairs',
@@ -54,8 +53,6 @@ const pillars = [
     price: 'from $299',
     tint: 'text-[#22d3ee]',
     dot: 'bg-[#22d3ee]',
-    border: 'border-[#22d3ee]/40',
-    bg: 'bg-[#22d3ee]/5',
     href: '/services/ai-cleanup/',
     items: [
       'AI-generated copy rewritten',
@@ -70,8 +67,6 @@ const pillars = [
     price: 'from $299',
     tint: 'text-[#f4c95d]',
     dot: 'bg-[#f4c95d]',
-    border: 'border-[#f4c95d]/40',
-    bg: 'bg-[#f4c95d]/5',
     href: '/services/conversion/',
     items: [
       'Calls-to-action & lead form rebuild',
@@ -90,17 +85,17 @@ const pillars = [
   <!-- Hero -->
   <section class="py-10 lg:py-16 px-4" data-animate>
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-brand-blue-light text-sm uppercase tracking-widest mb-4">✦ Full Rescue · From $749</p>
+      <p class="text-brand-blue-light text-base uppercase tracking-widest mb-4">✦ Full Rescue · From $749</p>
       <div class="relative inline-block">
         <PixieDust client:load />
-        <h1 class="font-heading text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-          Most Websites Have <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light via-brand-cyan to-brand-accent">Three Problems, Not One.</span>
+        <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+          Most Websites Can Have <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-light via-brand-cyan to-brand-accent">Three Sets of Problems, Not Just One.</span>
         </h1>
       </div>
-      <p class="text-lg md:text-xl text-white max-w-3xl mx-auto mb-6">
+      <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-6">
         Not found. Not trusted. Not hired. Fixing one leaves the other two — and the customer still doesn't call you.
       </p>
-      <p class="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-8">
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">
         The Full Rescue fixes all three together, in the order that matters — for less than buying them separately.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -153,22 +148,26 @@ const pillars = [
       <div class="text-center mb-12">
         <p class="text-brand-blue-light text-sm uppercase tracking-widest mb-4">✦ What's Included</p>
         <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">All Three, Done Together</h2>
-        <p class="text-white max-w-2xl mx-auto">Scoped by your audit — you only pay for what your site actually needs.</p>
+        <p class="text-lg text-white max-w-2xl mx-auto">Scoped by your audit — you only pay for what your site actually needs.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
         {pillars.map((p) => (
-          <a href={p.href} class={`block ${p.bg} border ${p.border} rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300`}>
-            <div class="flex items-center gap-2 mb-3">
-              <span class={`w-2.5 h-2.5 rounded-full ${p.dot}`}></span>
-              <span class={`text-xs uppercase tracking-widest font-bold ${p.tint}`}>{p.name}</span>
+          <a href={p.href} class="relative block overflow-hidden rounded-2xl border border-white/35 bg-white/[0.06] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_12px_35px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-all duration-300 hover:bg-white/[0.09] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:p-8">
+            <span class={`absolute inset-x-0 top-0 h-1 ${p.dot} opacity-80`}></span>
+            <span class={`absolute -right-16 -top-16 h-40 w-40 rounded-full ${p.dot} opacity-[0.08] blur-3xl`}></span>
+            <div class="relative z-10">
+              <div class="mb-4 flex items-center gap-2">
+                <span class={`h-2.5 w-2.5 rounded-full ${p.dot} shadow-[0_0_12px_currentColor]`}></span>
+                <span class={`text-sm font-bold uppercase tracking-widest ${p.tint}`}>{p.name}</span>
+              </div>
+              <h3 class="mb-2 font-heading text-3xl font-bold text-white">{p.title}</h3>
+              <p class={`mb-5 font-heading text-2xl font-bold ${p.tint}`}>{p.price}</p>
+              <ul class="space-y-3 text-lg leading-snug text-white/90">
+                {p.items.map((item) => <li>• {item}</li>)}
+              </ul>
+              <span class={`mt-6 inline-block text-base font-semibold ${p.tint} underline decoration-current/40 underline-offset-4`}>Learn more →</span>
             </div>
-            <h3 class="font-heading text-2xl font-bold text-white mb-1">{p.title}</h3>
-            <p class={`font-heading text-lg font-bold ${p.tint} mb-4`}>{p.price}</p>
-            <ul class="space-y-2 text-white/80 text-base leading-snug">
-              {p.items.map((item) => <li>• {item}</li>)}
-            </ul>
-            <span class={`inline-block mt-5 text-sm font-semibold ${p.tint}`}>Learn more →</span>
           </a>
         ))}
       </div>
@@ -179,36 +178,36 @@ const pillars = [
   <section class="py-16 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-10">
-        <p class="text-brand-blue-light text-sm uppercase tracking-widest mb-4">✦ The Math</p>
+        <p class="text-brand-blue-light text-base uppercase tracking-widest mb-4">✦ The Math</p>
         <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">One Bundle, Less Than Three</h2>
       </div>
 
       <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10">
         <div class="grid grid-cols-3 gap-3 md:gap-5 items-stretch">
-          <div class="text-center bg-white/[0.04] border border-white/10 rounded-2xl p-4 md:p-6">
-            <p class="font-heading text-xl md:text-3xl font-black text-white">$299</p>
-            <p class="text-white/60 text-xs md:text-sm mt-2">Visibility</p>
+          <div class="text-center bg-brand-accent/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
+            <p class="font-heading text-2xl md:text-4xl font-black text-brand-accent [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="text-brand-accent/90 text-sm md:text-base font-semibold mt-2">Visibility</p>
           </div>
-          <div class="text-center bg-white/[0.04] border border-white/10 rounded-2xl p-4 md:p-6">
-            <p class="font-heading text-xl md:text-3xl font-black text-white">$299</p>
-            <p class="text-white/60 text-xs md:text-sm mt-2">Credibility</p>
+          <div class="text-center bg-[#22d3ee]/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
+            <p class="font-heading text-2xl md:text-4xl font-black text-[#22d3ee] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="text-[#22d3ee]/90 text-sm md:text-base font-semibold mt-2">Credibility</p>
           </div>
-          <div class="text-center bg-white/[0.04] border border-white/10 rounded-2xl p-4 md:p-6">
-            <p class="font-heading text-xl md:text-3xl font-black text-white">$299</p>
-            <p class="text-white/60 text-xs md:text-sm mt-2">Conversion</p>
+          <div class="text-center bg-[#f4c95d]/10 border border-white/70 rounded-2xl p-4 md:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_16px_rgba(255,255,255,0.06)]">
+            <p class="font-heading text-2xl md:text-4xl font-black text-[#f4c95d] [-webkit-text-stroke:0.5px_rgba(255,255,255,0.8)]">$299</p>
+            <p class="text-[#f4c95d]/90 text-sm md:text-base font-semibold mt-2">Conversion</p>
           </div>
         </div>
 
         <div class="flex items-center gap-4 my-5">
           <div class="flex-1 h-px bg-white/15"></div>
-          <span class="font-heading text-lg md:text-2xl font-black text-white/70">=</span>
+          <span class="font-heading text-2xl md:text-3xl font-black text-brand-blue-light">=</span>
           <div class="flex-1 h-px bg-white/15"></div>
         </div>
 
-        <div class="rounded-2xl border border-brand-blue-light/50 bg-gradient-to-r from-brand-blue-light/15 via-brand-blue-light/5 to-transparent p-6 md:p-8 text-center">
-          <p class="text-brand-blue-light text-xs uppercase tracking-widest font-bold mb-2">Full Rescue — everything included</p>
-          <p class="font-heading text-4xl md:text-6xl font-black text-white">$749</p>
-          <p class="text-brand-accent font-bold text-base md:text-lg mt-3">You save about $150</p>
+        <div class="rounded-2xl border-2 border-brand-blue-light/70 bg-gradient-to-r from-brand-blue-light/25 via-brand-cyan/10 to-brand-blue-light/5 p-7 md:p-9 text-center shadow-[0_0_35px_rgba(59,130,246,0.14),inset_0_1px_0_rgba(255,255,255,0.1)]">
+          <p class="text-brand-cyan text-sm md:text-base uppercase tracking-widest font-bold mb-3">Full Rescue — everything included</p>
+          <p class="font-heading text-5xl md:text-7xl font-black text-white">$749</p>
+          <p class="text-brand-accent font-bold text-lg md:text-xl mt-3">You save about $150</p>
         </div>
 
         <p class="text-white/60 text-sm text-center mt-6">
@@ -299,6 +298,28 @@ const pillars = [
 
   <!-- FAQ -->
   <FaqSection items={faqItems} />
+
+  <!-- Client reviews -->
+  <section class="px-4 py-16">
+    <div class="mx-auto max-w-5xl">
+      <div class="mb-10 text-center">
+        <p class="mb-4 text-brand-blue-light text-sm uppercase tracking-widest">✦ Client Reviews</p>
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white">A Few Words From Our Clients</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <GoogleReview
+          quote="Great customer service!"
+          name="William S."
+          size="md"
+        />
+        <GoogleReview
+          quote="The BEST experience!!"
+          name="Michelle B."
+          size="md"
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- CTA -->
   <section class="py-16 px-4">

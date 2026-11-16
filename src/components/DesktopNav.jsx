@@ -123,15 +123,6 @@ export default function DesktopNav() {
         )}
       </div>
       
-      {/* Full Rescue — flagship offer, top level */}
-      <a
-        href="/services/full-rescue/"
-        className="text-brand-blue-light text-[1.05rem] leading-relaxed font-semibold tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center gap-1.5 border border-brand-blue-light/40 hover:border-brand-blue-light/80 hover:bg-brand-blue-light/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] px-3 py-1.5 rounded-lg"
-      >
-        Full Rescue
-        <span className="text-[10px] font-bold uppercase tracking-wider text-brand-blue-light/80">$749</span>
-      </a>
-
       {/* About Dropdown */}
       <div className="relative" ref={aboutRef}>
         <button

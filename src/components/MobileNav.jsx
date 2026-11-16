@@ -343,15 +343,6 @@ export default function MobileNav() {
                 </li>
                 <li>
                   <a
-                    href="/services/full-rescue/"
-                    onClick={closeMenu}
-                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-brand-blue-light transition-colors hover:bg-white/5 hover:text-white"
-                  >
-                    Full Rescue
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="/about/"
                     onClick={closeMenu}
                     className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
