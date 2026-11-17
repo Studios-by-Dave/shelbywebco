@@ -99,7 +99,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Shelby Web Official preview square -->
           <button onclick="selectSection('official')" class="group text-left bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
-              <Image
+              <Image width={640}
                 src={webredesignImg}
                 alt="Shelby Web Official articles"
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -125,7 +125,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Community Spotlight preview square -->
           <button onclick="selectSection('spotlight')" class="group text-left bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-[16/6] bg-gray-800 relative overflow-hidden">
-              <Image
+              <Image width={640}
                 src={gabeWhisnantImg}
                 alt="Community Spotlight articles - The Shelby Star"
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -264,7 +264,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         {latestPosts.map((post) => (
           <a href={`/blog/${post.id}/`} class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image
+              <Image width={640}
                 src={postThumbs[post.id] || blogImage6}
                 alt={post.data.title}
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -293,7 +293,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 19 NEW -->
         <a href="/blog/why-monthly-website-plans-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image src={websiteCostImg} alt="The 2026 Year of the Big Web Development Shift - Our New Pricing Structure" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            <Image width={640} src={websiteCostImg} alt="The 2026 Year of the Big Web Development Shift - Our New Pricing Structure" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #19</span>
@@ -317,7 +317,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 18 NEW -->
         <a href="/blog/how-to-get-more-leads-home-remodeling-business-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image src={remodelersLeadsImg} alt="How to Get More Leads for Your Home Remodeling Business in 2026" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            <Image width={640} src={remodelersLeadsImg} alt="How to Get More Leads for Your Home Remodeling Business in 2026" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #18</span>
@@ -341,7 +341,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 17 -->
         <a href="/blog/when-your-business-name-is-lost-dba-seo-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image src={dbaImg} alt="When Your Business Name Is Lost in a Sea of Duplicates" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+            <Image width={640} src={dbaImg} alt="When Your Business Name Is Lost in a Sea of Duplicates" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <span class="text-brand-sky/10 font-heading text-2xl font-bold uppercase tracking-widest transform -rotate-12">Article #17</span>
@@ -365,7 +365,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 16 -->
         <a href="/blog/new-web-design-redesign-vs-refresh-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image src={webredesignImg} alt="Web Redesign vs Refresh Shelby NC" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+            <Image width={640} src={webredesignImg} alt="Web Redesign vs Refresh Shelby NC" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
           </div>
           <div class="p-6">
@@ -386,7 +386,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 18 -->
         <a href="/blog/best-web-designers-near-me/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={nearMeImg} 
               alt="Choosing a web designer in Cleveland County" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -414,7 +414,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 17 -->
         <a href="/blog/opencode-ai-coding-tools-small-web-agencies/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={opencode2Img} 
               alt="OpenCode AI Coding Tools for Small Web Agencies" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -442,7 +442,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 16 -->
         <a href="/blog/website-cost-shelby-nc-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={websiteCostImg} 
               alt="Website Cost in Shelby NC 2026" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -470,7 +470,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 15 -->
         <a href="/blog/what-is-a-smart-talking-website/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage6} 
               alt="What Is a Smart Talking Website" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -500,7 +500,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 10 -->
         <a href="/blog/future-of-web-development-shelby-nc/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage5} 
               alt="Future of Web Development" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -530,7 +530,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 8 -->
         <a href="/blog/web-development-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage2} 
               alt="Web Development 2026" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -558,7 +558,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 6 -->
         <a href="/blog/ai-development-stack-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage4} 
               alt="AI Development Stack" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -586,7 +586,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 4 -->
         <a href="/blog/local-seo-essentials-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage6} 
               alt="Local SEO for Shelby businesses" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -614,7 +614,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 3 -->
         <a href="/blog/website-mistakes-costing-customers/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage2} 
               alt="Website Mistakes" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -642,7 +642,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 2 -->
         <a href="/blog/does-your-business-need-a-website-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage4} 
               alt="Does Your Business Need a Website?" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -670,7 +670,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
         <!-- Blog Post 1 -->
         <a href="/blog/why-choose-shelby-web-company/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
           <div class="aspect-video bg-gray-800 relative overflow-hidden">
-            <Image 
+            <Image width={640} 
               src={blogImage5} 
               alt="Why Choose Shelby Web Company?" 
               class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -714,7 +714,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 20 (Community Spotlight) - Minister Will Groom -->
           <a href="/blog/minister-will-groom-keep-god-first-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image
+              <Image width={640}
                 src={willGroomImg}
                 alt="Minister Will Groom Community Spotlight"
                 class="absolute inset-0 w-full h-full object-cover object-[50%_18%] opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -802,7 +802,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 15 (Community Spotlight) -->
           <a href="/blog/reflections-paint-body-works-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={reflectionsImage} 
                 alt="Reflections Paint & Body Works Shelby Community Spotlight" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -830,7 +830,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 14 (Community Spotlight) -->
           <a href="/blog/daniel-thomas-mayor-boiling-springs-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={boilingSpringsImg} 
                 alt="Daniel Thomas Community Spotlight" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -858,7 +858,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 13 (Community Spotlight) -->
           <a href="/blog/newtons-karate-jimmy-newton-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={newtonImg3} 
                 alt="Newton's Karate Community Spotlight" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -886,7 +886,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 12 (Community Spotlight) -->
           <a href="/blog/class-of-96-gabe-whisnant-shelby-star/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={gabeWhisnantImg} 
                 alt="Class of 96 Spotlight" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -914,7 +914,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 7 (Community Spotlight) -->
           <a href="/blog/trucking-industry-challenges-2026/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={fsExpeditedImg} 
                 alt="Trucking Industry Challenges" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
@@ -942,7 +942,7 @@ const latestPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
           <!-- Blog Post 5 (Community Spotlight) -->
           <a href="/blog/fs-expedited-llc-spotlight/" class="group bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/40 hover:bg-white/[0.07] transition-all duration-300">
             <div class="aspect-video bg-gray-800 relative overflow-hidden">
-              <Image 
+              <Image width={640} 
                 src={fsLogoImg} 
                 alt="F&S Expedited LLC Spotlight" 
                 class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"

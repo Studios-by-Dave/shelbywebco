@@ -10,6 +10,16 @@ import webFlyer from '../../../assets/sweb-NEWEST-FLYER-1.png';
 import heroBackdrop from '../../../assets/sweb_25.png';
 import marbleBg from '../../../assets/marble-800x530.webp';
 import pricingCompare from '../../../assets/pricing_chart_2.jpg';
+import { getImage } from 'astro:assets';
+
+// The hero backdrop is a CSS background, so it bypasses <Image>. Optimize it
+// imperatively — a raw .src would ship the full 561KB PNG instead of a WebP.
+const heroBackdropWebp = await getImage({
+  src: heroBackdrop,
+  width: 1600,
+  format: 'webp',
+  quality: 70,
+});
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -68,7 +78,7 @@ const faqSchema = {
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden" data-animate>
-    <div class="web-design-hero-backdrop absolute inset-[-12px] pointer-events-none" style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url("${heroBackdrop.src}") center/cover no-repeat;`}></div>
+    <div class="web-design-hero-backdrop absolute inset-[-12px] pointer-events-none" style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url("${heroBackdropWebp.src}") center/cover no-repeat;`}></div>
     <div class="web-design-hero-glow web-design-hero-glow-cyan absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(34,211,238,0.5) 0%, rgba(34,211,238,0.18) 35%, transparent 70%);"></div>
     <div class="web-design-hero-glow web-design-hero-glow-white absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.85) 0%, rgba(165,243,252,0.5) 40%, transparent 65%);"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">

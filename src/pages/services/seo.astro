@@ -19,6 +19,14 @@ const stratLightbox = await Promise.all(
 import RankingVariablesBoard from '../../components/RankingVariablesBoard.astro';
 import GrowthPlanPricingSection from '../../components/GrowthPlanPricingSection.astro';
 
+// CSS-background hero: optimize imperatively instead of shipping the raw PNG.
+const seoHeroBackdropWebp = await getImage({
+  src: seoHeroBackdrop,
+  width: 1400,
+  format: 'webp',
+  quality: 70,
+});
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -198,7 +206,7 @@ const faqSchema = {
 
   <!-- Hero Section: What Is SEO? -->
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden" data-animate>
-    <div class="seo-hero-backdrop absolute inset-[-12px] pointer-events-none" style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url("${seoHeroBackdrop.src}") center/cover no-repeat;`}></div>
+    <div class="seo-hero-backdrop absolute inset-[-12px] pointer-events-none" style={`background: linear-gradient(rgba(2,6,23,0.55), rgba(2,6,23,0.45)), url("${seoHeroBackdropWebp.src}") center/cover no-repeat;`}></div>
     <div class="seo-hero-glow seo-hero-glow-cyan absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 600px 400px at 85% 5%, rgba(34,211,238,0.5) 0%, rgba(34,211,238,0.18) 35%, transparent 70%);"></div>
     <div class="seo-hero-glow seo-hero-glow-white absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 88% 8%, rgba(255,255,255,0.85) 0%, rgba(165,243,252,0.5) 40%, transparent 65%);"></div>
     <div class="max-w-4xl mx-auto text-center relative z-10">

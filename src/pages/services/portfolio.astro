@@ -48,7 +48,7 @@ const serviceSchema = {
         {[swebscreen, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
           .flatMap(img => [img, img])
           .map(img => (
-            <Image src={img} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
+            <Image width={400} src={img} alt="" class="h-28 md:h-36 w-auto rounded-xl object-cover blur-[5px] skew-x-[-8deg] shrink-0" loading="lazy" />
           ))}
       </div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#07090e]/60 via-transparent to-[#07090e]/60 z-10 pointer-events-none"></div>
@@ -82,7 +82,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={leeConstruction} alt="Lee Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={leeConstruction} alt="Lee Construction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -95,7 +95,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={shadesOfGray} alt="Shades of Gray Painters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={shadesOfGray} alt="Shades of Gray Painters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -108,7 +108,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={padgsteenGuitars} alt="Padgsteen Guitars" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={padgsteenGuitars} alt="Padgsteen Guitars" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -121,7 +121,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={odysseyRenovations} alt="Odyssey Custom Renovations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={odysseyRenovations} alt="Odyssey Custom Renovations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -134,7 +134,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={willGroom} alt="Will Groom Restorations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={willGroom} alt="Will Groom Restorations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -147,7 +147,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={savvyTechJones} alt="Savvy Tech Jones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={savvyTechJones} alt="Savvy Tech Jones" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -160,7 +160,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-brand-accent/30 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={swebscreen} alt="Shelby Web Company" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={swebscreen} alt="Shelby Web Company" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -184,7 +184,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={bigFuturisticPictureBox} alt="Big Futuristic Picture Box" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -197,7 +197,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={audioNotesAi} alt="Audio Notes AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={audioNotesAi} alt="Audio Notes AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -210,7 +210,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={musicalLock} alt="Musical Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={musicalLock} alt="Musical Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -223,7 +223,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={mikesGutHealer} alt="Mikes Gut Healer 5000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={mikesGutHealer} alt="Mikes Gut Healer 5000" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -236,7 +236,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={theLivingWord} alt="The Living Word" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={theLivingWord} alt="The Living Word" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -249,7 +249,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={rifeGenerator} alt="RIFE Frequency Generator" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={rifeGenerator} alt="RIFE Frequency Generator" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
@@ -262,7 +262,7 @@ const serviceSchema = {
           <div class="group cursor-pointer">
             <div class="relative rounded-xl overflow-hidden bg-white/[0.04] border border-white/10 hover:border-brand-accent/50 transition-all duration-500">
               <div class="aspect-video relative overflow-hidden">
-                <Image src={gAnalyzer} alt="5G Spectrum Analyzer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image width={700} src={gAnalyzer} alt="5G Spectrum Analyzer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </div>
             <div class="mt-2 px-1">
