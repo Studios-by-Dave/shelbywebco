@@ -3,6 +3,13 @@
 // Drop-in replacement: `import Image from './OptimizedImage.astro'` in place of
 // `import { Image } from 'astro:assets'` — all existing <Image ...> usages keep working,
 // but Astro's build pipeline now emits optimized .webp files instead of the original format.
+//
+// Image optimization defaults (Phase 1 sweep):
+//   - WebP format (SVG string sources pass through unchanged)
+//   - quality 70 instead of Astro's default 80
+//   - loading="lazy" for below-the-fold images (explicit loading="eager" still wins)
+//   - 1600px width cap for large sources placed into small cards
+// Every default can be overridden by passing the prop on the individual <Image>.
 import { Image } from 'astro:assets';
 
 const props = Astro.props as Record<string, any>;
@@ -10,6 +17,33 @@ const src = props.src;
 // SVGs can't be rasterized to webp without extra config — pass them through unchanged.
 const srcPath = typeof src === 'string' ? src : src?.src;
 const isSvg = typeof srcPath === 'string' && srcPath.toLowerCase().endsWith('.svg');
-const { format = isSvg ? 'svg' : 'webp', ...rest } = props;
+
+// Only cap sources that are actually larger than the cap, and only when the caller
+// hasn't chosen their own dimensions. Never resize SVGs or remote string URLs.
+const MAX_WIDTH = 1600;
+const intrinsicWidth =
+  src && typeof src === 'object' && typeof src.width === 'number' ? src.width : undefined;
+const defaultWidth =
+  !isSvg &&
+  intrinsicWidth !== undefined &&
+  intrinsicWidth > MAX_WIDTH &&
+  props.width == null &&
+  props.height == null
+    ? MAX_WIDTH
+    : undefined;
+
+const {
+  format = isSvg ? 'svg' : 'webp',
+  quality = isSvg ? undefined : 70,
+  loading = 'lazy',
+  width = defaultWidth,
+  ...rest
+} = props;
 ---
-<Image format={format} {...rest as any} />
+<Image
+  format={format}
+  quality={quality}
+  loading={loading}
+  width={width}
+  {...rest as any}
+/>
