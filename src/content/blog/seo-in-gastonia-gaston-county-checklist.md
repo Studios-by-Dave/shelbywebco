@@ -1,6 +1,7 @@
 ---
 title: "SEO in Gastonia: What Gaston County Businesses Should Do First"
-description: "A 90-day local SEO checklist for Gastonia businesses — Google Business Profile, service pages, real reviews, and the mistakes that cost local owners customers. Free SEO audit offered."
+seoTitle: "SEO in Gastonia, NC: What to Do First"
+description: "A 90-day local SEO checklist for Gastonia businesses — Google Business Profile, service pages, real reviews, and the mistakes that cost owners customers."
 cluster: local-seo
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"

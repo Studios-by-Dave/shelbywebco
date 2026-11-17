@@ -1,5 +1,6 @@
 ---
 title: "Monthly Website Plan vs One-Time Build: Which Is Right for Shelby Businesses?"
+seoTitle: "Monthly Plan vs One-Time Website Build"
 description: "Compare monthly website plans and one-time builds for Shelby businesses — cost over time, maintenance, SEO, and ownership trade-offs."
 cluster: website-cost
 datePublished: "2026-10-14"

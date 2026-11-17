@@ -57,7 +57,15 @@ const {
 
 const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 
-const fullTitle = isHomepage ? 'Website Rescue & Web Design in Shelby, NC | Shelby Web Company' : `${title} | Shelby Web Company`;
+// Only append the site name when the page title doesn't already carry it —
+// otherwise pages that set "| Shelby Web Co" end up double-branded and the
+// offer gets truncated in the SERP.
+const hasBrand = /shelby web/i.test(title);
+const fullTitle = isHomepage
+  ? 'Website Rescue & Web Design in Shelby, NC | Shelby Web Co.'
+  : hasBrand
+    ? title
+    : `${title} | Shelby Web Company`;
 const absoluteImageUrl = image.startsWith('http') ? image : `${siteOrigin}${image}`;
 
 // Auto-generate breadcrumbs from the URL path when a page doesn't supply its own.

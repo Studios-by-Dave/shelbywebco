@@ -1,5 +1,6 @@
 ---
 title: "Case Study: Lead Growth for a Cleveland County Service Business"
+seoTitle: "Case Study: Cleveland County Leads"
 description: "A transparent look at how a Cleveland County service business improved local leads with a rebuild, local SEO, and steady content. [TODO: real client data]"
 cluster: spotlight
 datePublished: "2026-10-14"
