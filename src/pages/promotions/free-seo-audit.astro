@@ -331,19 +331,19 @@ const faqItems = [
         auditStatus.className = 'min-h-6 text-sm text-white';
         try {
           formData.set('form_type', 'Free SEO Audit');
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            body: formData
-          });
-          const data = await res.json();
-          if (data.success) {
-            auditForm.style.display = 'none';
-            const successPanel = document.getElementById('audit-form-success');
-            if (successPanel) successPanel.classList.remove('hidden');
-          } else {
-            auditStatus.textContent = data.message || 'Something went wrong. Please try again.';
-            auditStatus.className = 'min-h-6 text-sm text-red-400';
-          }
+          const name = formData.get('name') || '';
+const email = formData.get('email') || '';
+const business = formData.get('business_name') || '';
+const website = formData.get('website') || '';
+const phone = formData.get('phone') || '';
+const challenge = formData.get('challenge') || '';
+const message = formData.get('message') || '';
+const subject = 'Free SEO Audit Request — Shelby Web Co';
+const body = `Name: ${name}\nEmail: ${email}\nBusiness: ${business}\nWebsite: ${website}\nPhone: ${phone}\nChallenge: ${challenge}\n\n${message}`;
+window.location.href = `mailto:dave@shelbywebco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+auditForm.style.display = 'none';
+const successPanel = document.getElementById('audit-form-success');
+if (successPanel) successPanel.classList.remove('hidden');
         } catch (err) {
           auditStatus.textContent = 'Network error. Please try again.';
           auditStatus.className = 'min-h-6 text-sm text-red-400';
