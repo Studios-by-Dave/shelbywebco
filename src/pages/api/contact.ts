@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { buildFormspreePayload, normalizeContactSubmission } from '../../utils/contactSubmission.js';
 
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
   const contentType = request.headers.get('content-type') || '';
   const isFormSubmission = contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded') || contentType.includes('application/json');

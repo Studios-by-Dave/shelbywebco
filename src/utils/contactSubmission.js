@@ -70,7 +70,7 @@ export function normalizeContactSubmission(raw = {}) {
     name,
     email,
     phone: sanitizeText(raw.phone),
-    business: sanitizeText(raw.business),
+    business: sanitizeText(raw.business || raw.business_name),
     industry: sanitizeText(raw.industry),
     town: sanitizeText(raw.town),
     website: sanitizeText(raw.website),

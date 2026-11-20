@@ -89,8 +89,8 @@ import marbleBg from '../../assets/marble-800x530.webp';
   <!-- Hero Section -->
   <section class="pt-14 pb-16 px-4 sm:px-6 lg:pt-20 lg:pb-20 overflow-hidden" data-animate>
     <div class="max-w-5xl mx-auto flex flex-col items-center text-center relative">
-      <Image src={googleStars4} alt="5 Star Google Reviews" class="absolute left-0 top-44 h-20 w-auto object-contain opacity-90 hidden lg:block" />
-      <Image src={rescueImage} alt="Website rescue" class="absolute right-[-3rem] top-12 h-64 w-auto object-contain opacity-30 hidden lg:block pointer-events-none" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%); mask-image: linear-gradient(to right, transparent 0%, black 60%);" />
+      <Image src={googleStars4} alt="5 Star Google Reviews" class="absolute left-0 top-20 sm:top-44 h-14 sm:h-20 w-auto object-contain opacity-90 pointer-events-none" />
+      <Image src={rescueImage} alt="Website rescue" class="absolute right-[-1.5rem] sm:right-[-3rem] top-8 sm:top-12 h-32 sm:h-64 w-auto object-contain opacity-30 pointer-events-none" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%); mask-image: linear-gradient(to right, transparent 0%, black 60%);" />
       <span class="handshake-anchor absolute top-0 right-2 lg:hidden" aria-hidden="true"></span>
       <div class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
         <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
@@ -106,6 +106,17 @@ import marbleBg from '../../assets/marble-800x530.webp';
         We repair underperforming websites, clean up AI-generated issues, and build new sites when a fresh start makes sense.<br /><br />
         <span class="text-white/85 italic">Generic, not indexing, not bringing in business? <span class="text-brand-accent font-semibold not-italic">We can help.</span></span>
       </p>
+      <!-- Hero mechanism: the three jobs every website has to do -->
+      <p class="text-base sm:text-lg text-white/90 mb-4 max-w-2xl leading-relaxed font-semibold">
+        Every website has three jobs: <span class="text-brand-accent">get found</span> on Google, <span class="text-[#22d3ee]">look trusted</span> to customers, and <span class="text-[#f4c95d]">get called</span>. We diagnose first, fix the weakest link, and only rebuild when it's the right call.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-brand-accent/40 bg-brand-accent/10 px-3 py-1 text-sm font-semibold text-brand-accent">Found</span>
+        <span class="text-white/40 text-sm" aria-hidden="true">→</span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#22d3ee]/40 bg-[#22d3ee]/10 px-3 py-1 text-sm font-semibold text-[#22d3ee]">Trusted</span>
+        <span class="text-white/40 text-sm" aria-hidden="true">→</span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#f4c95d]/40 bg-[#f4c95d]/10 px-3 py-1 text-sm font-semibold text-[#f4c95d]">Hired</span>
+      </div>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
           href="/promotions/free-seo-audit/"
@@ -722,6 +733,9 @@ import marbleBg from '../../assets/marble-800x530.webp';
         Most agencies want to sell you a new website. We diagnose first, rescue what's salvageable, and only rebuild when it's genuinely the right call.
       </p>
 
+      <p class="font-heading text-brand-accent text-lg md:text-xl font-bold mb-6">
+        Every website has three jobs. We fix whichever one is broken.
+      </p>
       <!-- Found / Trusted / Hired -->
       <div class="grid sm:grid-cols-3 gap-4 mb-10">
         <div class="bg-white/[0.04] border border-brand-accent/40 rounded-2xl px-6 py-5">
