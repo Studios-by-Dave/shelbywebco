@@ -43,13 +43,13 @@ export const POST: APIRoute = async ({ request }) => {
   const payload = buildFormspreePayload(submission);
 
   try {
-    const response = await fetch('https://formspree.io/f/mqaeapoa', {
+    const response = await fetch('https://formsubmit.co/ajax/dave@shelbywebco.com', {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
-      body: payload.toString()
+      body: JSON.stringify(Object.fromEntries(payload.entries()))
     });
 
     if (!response.ok) {
