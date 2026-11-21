@@ -42,18 +42,29 @@ export const POST: APIRoute = async ({ request }) => {
 
   const payload = buildFormspreePayload(submission);
 
+  const body: Record<string, string> = Object.fromEntries(payload.entries());
+  body._captcha = 'false';
+  body._template = 'table';
+  body._subject = submission.subject;
+  body._replyto = submission.email;
+
   try {
     const response = await fetch('https://formsubmit.co/ajax/dave@shelbywebco.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json'
+        Accept: 'application/json',
+        Origin: 'https://www.shelbywebco.com',
+        Referer: 'https://www.shelbywebco.com/'
       },
-      body: JSON.stringify(Object.fromEntries(payload.entries()))
+      body: JSON.stringify(body)
     });
 
-    if (!response.ok) {
-      throw new Error('The message service could not accept the submission right now.');
+    const result = (await response.json().catch(() => ({}))) as { success?: string | boolean; message?: string };
+    const ok = result.success === true || result.success === 'true';
+
+    if (!response.ok || !ok) {
+      throw new Error(result.message || 'The message service could not accept the submission right now.');
     }
 
     return new Response(JSON.stringify({ success: true, message: 'Thanks! Your message was sent successfully.' }), {
