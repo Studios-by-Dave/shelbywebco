@@ -56,7 +56,7 @@ const faqItems = [
         No obligation. No sales pitch. Just a clear look at where your website stands.
       </p>
 <a 
-         href="#audit-form"
+         href="/contact/?service=free-seo-audit"
          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300"
        >
           Request Your Free Audit
@@ -152,7 +152,7 @@ const faqItems = [
           </div>
           <div>
             <h3 class="text-xl font-bold text-white mb-2">Submit Your Request</h3>
-            <p class="text-white">Fill out the short form below with your website URL and basic business info. Tell us what's frustrating you most about your website.</p>
+            <p class="text-white">Head to our contact page, pick “Free SEO Audit,” and tell us your website URL plus what's frustrating you most about your site.</p>
           </div>
         </div>
 
@@ -239,7 +239,7 @@ const faqItems = [
   <!-- FAQ Section -->
   <FaqSection items={faqItems} />
 
-  <!-- CTA / Audit Request Form -->
+  <!-- CTA → routes to /contact/?service=free-seo-audit -->
   <section id="audit-form" class="py-24 px-4">
     <div class="max-w-2xl mx-auto rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10">
       <div class="text-center mb-10">
@@ -252,104 +252,19 @@ const faqItems = [
         </p>
       </div>
 
-      <form id="seo-audit-form" action="/api/contact" method="POST" class="space-y-5">
-        <input type="hidden" name="subject" value="Free SEO Audit Request — Shelby Web Co" />
-        <input type="hidden" name="form_type" value="Free SEO Audit" />
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-
-        <div>
-          <label for="audit-name" class="block text-sm font-medium text-white mb-2">Name *</label>
-          <input type="text" name="name" id="audit-name" required placeholder="John Doe" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
-        </div>
-
-        <div>
-          <label for="audit-business" class="block text-sm font-medium text-white mb-2">Business Name *</label>
-          <input type="text" name="business_name" id="audit-business" required placeholder="Your Business LLC" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
-        </div>
-
-        <div>
-          <label for="audit-email" class="block text-sm font-medium text-white mb-2">Email *</label>
-          <input type="email" name="email" id="audit-email" required placeholder="john@example.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
-        </div>
-
-        <div>
-          <label for="audit-website" class="block text-sm font-medium text-white mb-2">Website URL</label>
-          <input type="url" name="website" id="audit-website" placeholder="https://yourbusiness.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
-        </div>
-
-        <div>
-          <label for="audit-phone" class="block text-sm font-medium text-white mb-2">Phone <span class="text-brand-sky/60">(optional)</span></label>
-          <input type="tel" name="phone" id="audit-phone" placeholder="(704) 555-0123" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20" />
-        </div>
-
-        <div>
-          <label for="audit-challenge" class="block text-sm font-medium text-white mb-2">Your biggest SEO challenge</label>
-          <select name="challenge" id="audit-challenge" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20">
-            <option value="">Select one...</option>
-            <option>Not showing up on Google at all</option>
-            <option>Ranking below my competitors</option>
-            <option>Getting traffic but no leads/calls</option>
-            <option>Not sure where to start with SEO</option>
-            <option>Something else</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="audit-message" class="block text-sm font-medium text-white mb-2">Anything else? <span class="text-brand-sky/60">(optional)</span></label>
-          <textarea name="message" id="audit-message" rows="4" placeholder="Tell us a bit about your business or goals..." class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 text-base focus:outline-none focus:border-brand-accent transition-all focus:ring-1 focus:ring-brand-accent/20 resize-none"></textarea>
-          <p class="text-white/60 text-xs mt-2">Have Google Search Console access? You can note it here — read-only access helps us verify indexing, but it's never required for the free snapshot.</p>
-        </div>
-
-<button type="submit" class="cta-glow-shine w-full inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-3 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 text-lg">
-           Request My Free Audit
-         </button>
-
-        <div id="audit-form-status" class="min-h-6 text-sm text-white"></div>
-      </form>
-
-      <div id="audit-form-success" class="hidden text-center bg-white/[0.04] border border-lime-400/20 rounded-2xl p-10">
-        <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 shadow-[0_0_15px_rgba(132,204,22,0.4)] text-brand-darkest mb-6">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-        </div>
-        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Thanks! Your Request Is In.</h3>
-        <p class="text-white text-lg max-w-md mx-auto">
-          Your email app should open with the details pre-filled — hit Send to deliver it to us, and we'll reach out within a few business days.
+      <div class="text-center">
+        <a
+          href="/contact/?service=free-seo-audit"
+          class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 rounded-xl font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:from-[#b5f146] hover:via-brand-accent-light hover:to-[#4d7c0f] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3),0_2px_6px_rgba(0,0,0,0.3)] transition-all duration-300 text-lg"
+        >
+          Request Your Free Audit
+        </a>
+        <p class="text-white/70 text-sm mt-6">
+          Takes you to our contact page — just pick “Free SEO Audit” and send it over. Prefer to talk?
+          Call or text <a href="tel:+17044738188" class="text-brand-accent hover:text-white underline decoration-brand-accent/30">(704) 473-8188</a>.
         </p>
       </div>
     </div>
   </section>
-
-  <script>
-    const auditForm = document.getElementById('seo-audit-form') as HTMLFormElement | null;
-    const auditStatus = document.getElementById('audit-form-status');
-    if (auditForm) {
-      auditForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const formData = new FormData(auditForm);
-        if (formData.get('botcheck')) return;
-        auditStatus.textContent = 'Sending...';
-        auditStatus.className = 'min-h-6 text-sm text-white';
-        try {
-          formData.set('form_type', 'Free SEO Audit');
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            body: formData
-          });
-          const data = await res.json();
-          if (data.success) {
-            auditForm.style.display = 'none';
-            const successPanel = document.getElementById('audit-form-success');
-            if (successPanel) successPanel.classList.remove('hidden');
-          } else {
-            auditStatus.textContent = data.message || 'Something went wrong. Please try again.';
-            auditStatus.className = 'min-h-6 text-sm text-red-400';
-          }
-        } catch (err) {
-          auditStatus.textContent = 'Network error. Please try again.';
-          auditStatus.className = 'min-h-6 text-sm text-red-400';
-        }
-      });
-    }
-  </script>
 
 </BaseLayout>

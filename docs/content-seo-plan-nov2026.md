@@ -42,8 +42,7 @@ Three of the strategy's premises are already partly handled in code — worth kn
 The homepage converts 0 of 98 organic sessions. Nothing else in this plan matters until that moves.
 
 - [ ] **Add GA4 events** (new small script or inline in `BaseLayout.astro`):
-  - `generate_lead` — fire on `result.success` in `src/pages/contact.astro` form submit handler (~line 196).
-  - `generate_lead` — same for the free-audit form in `src/pages/promotions/free-seo-audit.astro`.
+  - `generate_lead` — fire on `result.success` in `src/pages/contact.astro` form submit handler (~line 196). The free-audit landing page no longer has its own form; it routes to `/contact/?service=free-seo-audit`, so this one handler covers both.
   - `contact_click` — delegated listener for `a[href^="tel:"]` / `a[href^="sms:"]`
     (covers `MobileStickyBar.astro`, `DesktopStickyDock.astro`, `Footer.astro`).
   - `audit_click` — delegated listener for `a[href*="/promotions/free-seo-audit/"]`.

@@ -120,34 +120,28 @@ Keep 3, rewrite 3:
 
 ---
 
-## SECTION 6 — Form (keep working form; small adjustments)
+## SECTION 6 — CTA (no on-page form; routes to /contact/)
 
-**Form header:**
+**Nov 2026 change:** the inline signup form was removed because it kept failing. All audit requests now go through the main contact form, which already has a `Free SEO Audit — $0 snapshot` option.
+
+**CTA header:**
 - H2 (keep): `Get Your Free SEO Audit`
-- Sub (reword): `Tell us where to look. We'll take it from there — completely free, no obligation.`
+- Sub (keep): `Tell us where to look. We'll take it from there — completely free, no obligation.`
 
-**Field changes (per strategy decisions):**
-1. **Add: Business Name** (required) — the strategy specifies it; also helps run brand-name visibility checks.
-   Field order becomes: Name → Business Name → Email → Website URL → Phone (optional) → challenge dropdown → message.
-2. **Keep:** challenge dropdown ✅ (the options already match rescue framing well)
-3. **Keep:** message field ✅
-4. **Add (optional, small text under message field):** *"Have Google Search Console access? You can note it here — read-only access helps us verify indexing, but it's never required for the free snapshot."*
-5. **Keep hidden fields, botcheck, and the `/api/contact` endpoint exactly as-is** — form plumbing works; we don't touch it.
+**Button:** `Request Your Free Audit` → `/contact/?service=free-seo-audit` (the contact page reads `?service=` and preselects the matching option).
 
-**Blog links line above the form:** keep — it's good internal linking ✅
+**Helper line under the button:** *"Takes you to our contact page — just pick "Free SEO Audit" and send it over. Prefer to talk? Call or text (704) 473-8188."*
 
-**Success message (reword):**
-> Thanks! Your Request Is In.
-> We've received your free audit request and will reach out within a few business days with your snapshot and recommendations.
+**Blog links line above the CTA:** keep — it's good internal linking ✅
 
-**Submit button text:** keep `Request My Free Audit` ✅
+The hero CTA and process step 1 point at the same `/contact/?service=free-seo-audit` destination. The section keeps `id="audit-form"` so existing deep links still land on the CTA.
 
 ---
 
 ## Section order on the page
-Hero → What Your Free Audit Covers (+ honesty note) → How the Audit Works → Why We Give This Away Free → FAQ → Form. *(Same order as now — just reworded throughout.)*
+Hero → What Your Free Audit Covers (+ honesty note) → How the Audit Works → Why We Give This Away Free → FAQ → CTA. *(Same order as now — just reworded throughout.)*
 
 ## What stays untouched
-- Form mechanics, hidden fields, fetch/JS, success panel toggle
+- `/api/contact`, `src/utils/contactSubmission.js`, and the contact page form (audit requests land there)
 - PixieDust, flyer image, BaseLayout wrapper
 - URL, meta title/description (minor meta tweak optional: update description to "Get a free SEO audit snapshot... homepage visibility, indexing check, and 2–3 quick recommendations" — closer to the real offer, better for SEO truthfulness)
