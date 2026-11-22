@@ -148,13 +148,10 @@ const faqSchema = {
 
   <!-- Hero Section -->
   <section class="py-6 lg:py-10 px-4 relative overflow-hidden" data-animate>
-    <!-- Marble backdrop — fills the whole hero grid, then dissolves so the
-         moving pricing-tier artwork below blends into the page. -->
+    <!-- Dark backdrop: charcoal/blue gradient with subtle grid, matching the homepage hero. -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div
-        class="absolute inset-0 bg-cover bg-center"
-        style={`background-image: url("${encodeURI(marbleBg.src)}"); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 70%); mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 70%);`}
-      ></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(30,58,95,0.55) 0%, rgba(8,14,28,0.92) 60%, #08090f 100%);"></div>
+      <div class="absolute inset-0 opacity-[0.07]" style="background-image: linear-gradient(rgba(125,211,252,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(125,211,252,0.6) 1px, transparent 1px); background-size: 46px 46px;"></div>
     </div>
 
     <!-- Decorative pricing-tier backdrop -->
