@@ -1,7 +1,7 @@
 ---
 title: "I'm Building 3 Free Websites for Cleveland & Gaston County Businesses"
 seoTitle: "3 Free Websites for Local Business"
-description: "Dave Richardson is giving 3 local businesses a free custom website through the Golden Ticket. The $497 build fee is covered. Applications close Dec 15, 2026."
+description: "Dave Richardson is giving 3 local businesses a free custom website through the Golden Ticket. The $597 build fee is covered. Applications close Dec 15, 2026."
 cluster: official
 datePublished: "2026-10-14"
 dateModified: "2026-10-14"
@@ -14,7 +14,7 @@ related:
   - { label: "Free SEO Audit", href: "/promotions/free-seo-audit/" }
 faqs:
   - question: "Is the Golden Ticket really free?"
-    answer: "I'm covering the $497 build and launch fee. After launch, winners pay $297 per month, month-to-month, covering hosting, care, edits and ongoing SEO — cancel at any time with 30 days’ notice. There's no upfront invoice."
+    answer: "I'm covering the $597 build and launch fee. After launch, winners pay $297 per month, month-to-month, covering hosting, care, edits and ongoing SEO — cancel at any time with 30 days’ notice. There's no upfront invoice."
   - question: "I already have a website. Can I still apply?"
     answer: "Yes. A dated, slow or invisible website is exactly what this program is for."
   - question: "How many businesses will win?"
@@ -39,7 +39,7 @@ So this fall, I'm doing something about it. Three businesses across Cleveland an
 
 No surprises, so here is exactly how it works:
 
-- I cover the **$497** build and launch fee. That's the design, build and launch of a custom 4 to 5 page website. It's work I've previously priced at about $1,200 on average.
+- I cover the **$597** build and launch fee. That's the design, build and launch of a custom 4 to 5 page website. It's work I've previously priced at about $1,200 on average.
 - You continue on our Core plan at **$297/month** after launch — month-to-month, and you can cancel at any time with 30 days’ notice. There's no minimum term and no early cancellation fee, so you can stop whenever you need to. This isn't a build-and-goodbye deal: your site keeps improving with ongoing SEO, fresh content and regular updates.
 - Core isn't a basic care plan. Our $149/month Website Care Plan is hosting, backups, edits, and updates only. Core adds ongoing SEO and AI improvements plus continued content creation.
 
