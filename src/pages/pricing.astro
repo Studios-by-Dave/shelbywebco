@@ -259,19 +259,39 @@ const faqSchema = {
     <!-- centre vignette keeps the headline legible over the artwork -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse 58% 66% at 50% 44%, rgba(8,14,28,0.58) 0%, rgba(8,14,28,0.30) 46%, rgba(8,14,28,0) 100%);"></div>
 
-    <div class="max-w-7xl mx-auto text-center relative z-10">
-      <p class="font-heading text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-[0.18em] bg-clip-text text-transparent bg-[linear-gradient(110deg,#f3db70,42%,#fff,50%,#9b7b2a)] drop-shadow-[0_0_14px_rgba(243,219,112,0.3)] mb-4">✦ Transparent Pricing</p>
-      <div class="block w-full max-w-2xl mx-auto px-6 py-3 rounded-2xl bg-[#08090f]/45 backdrop-blur-md border border-white/15 mb-4 shadow-[0_18px_45px_rgba(0,0,0,0.28)]">
-        <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-cyan to-brand-blue-light">Shelby Web</span>
-          <span class="block text-white">Total Pricing</span>
-        </h1>
+    <div class="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
+      <div class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
+        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
+        <span class="text-white font-bold text-sm tracking-wide">SHELBY, NC — TRANSPARENT PRICING</span>
       </div>
-      <p class="text-yellow-400 text-sm md:text-base uppercase tracking-[0.2em] font-semibold mb-4">Total Transparency</p>
-      <p class="text-body-lg text-white/80 max-w-3xl mx-auto">
-        Clear prices for every project. No hidden fees, no surprises. Three local businesses can also win a waived $497 build fee through the <a href="/promotions/the-golden-ticket/" class="text-[#f4c95d] underline decoration-[#fbbf24]/40 underline-offset-4 hover:text-[#f8d66d]">Golden Ticket giveaway</a>.
+      <h1 class="font-heading text-[3.5rem] sm:text-[clamp(3rem,6vw,4.5rem)] lg:text-[4.5rem] font-black mb-5 leading-[1.05] tracking-tight text-white max-w-4xl">
+        <span class="text-brand-accent text-[1.1em]">Transparent Pricing,</span> <span class="bg-gradient-to-r from-[#1e3a5f] via-[#3b82f6] to-white bg-clip-text text-[1.1em]" style="-webkit-text-stroke: 1.5px #ffffff; color: transparent;">No Hidden Fees,</span> and <span class="text-[1.1em]">No Surprises</span>
+      </h1>
+      <p class="text-lg md:text-xl text-[#f4c95d] mb-2 max-w-2xl leading-relaxed font-semibold" style="text-shadow: 0 0 12px rgba(244, 201, 93, 0.25);">
+        “Total Transparency.”
       </p>
-      <div class="mt-8 max-w-4xl mx-auto">
+      <p class="text-base sm:text-lg text-white/75 mb-8 max-w-2xl leading-relaxed">
+        Clear plans from $497 + $297/mo. Month-to-month after your initial term, no surprises. Three local businesses can also win a waived $497 build fee through the <a href="/promotions/the-golden-ticket/" class="text-[#f4c95d] underline decoration-[#fbbf24]/40 underline-offset-4 hover:text-[#f8d66d]">Golden Ticket giveaway</a>.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+        <a
+          href="/promotions/free-seo-audit/"
+          class="cta-chrome rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-8 py-4 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4),0_2px_8px_rgba(132,204,22,0.35),0_0_20px_rgba(132,204,22,0.25)] hover:-translate-y-[1px] transition-all duration-300 text-base sm:text-lg text-center"
+        >
+          <span class="relative z-10">Get My Free Audit</span>
+        </a>
+        <a
+          href="#plans"
+          class="rounded-full border border-white/30 bg-white/5 px-8 py-4 text-center text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+        >
+          Compare Plans
+        </a>
+      </div>
+      <p class="text-white/80 text-sm flex items-center gap-1.5 mb-4">
+        <span class="text-brand-accent leading-none">★★★★★</span>
+        5.0 on Google · CompTIA A+ Certified · Local to Shelby
+      </p>
+      <div class="mt-6 max-w-4xl mx-auto">
         <div class="bg-gradient-to-r from-brand-cyan/10 via-white/5 to-brand-cyan/10 border border-brand-cyan/20 rounded-2xl px-6 py-5">
           <p class="text-white text-lg md:text-xl font-medium italic leading-relaxed">“At Shelby Web Company we don’t think you should have to pay <span class="text-yellow-400 font-bold not-italic">thousands and thousands of dollars a month</span> for SEO.”</p>
         </div>
