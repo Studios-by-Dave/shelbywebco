@@ -44,7 +44,7 @@ const serviceSchema = {
   <section class="py-10 lg:py-12 px-4 relative overflow-hidden bg-white/[0.03]" data-animate>
     <!-- Whisping portfolio preview backdrop -->
     <div class="portfolio-whisping absolute inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
-      <div class="flex gap-8 items-center h-full w-max animate-[portfolio-scroll_35s_linear_infinite] opacity-[0.58] will-change-transform">
+      <div class="flex gap-8 items-center h-full w-max animate-[portfolio-scroll_35s_linear_infinite] motion-reduce:animate-none opacity-[0.58] will-change-transform">
         {[swebscreen, padgsteenGuitars, shadesOfGray, leeConstruction, odysseyRenovations, audioNotesAi, musicalLock]
           .flatMap(img => [img, img])
           .map(img => (

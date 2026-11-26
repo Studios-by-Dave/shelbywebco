@@ -128,7 +128,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     </script>
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0EA5E9" />
+    <meta name="theme-color" content="#1d4ed8" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     
     <!-- Favicons -->
@@ -350,6 +350,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
       <div class="absolute bottom-[-10%] right-[-10%] w-[70%] h-[70%] bg-brand-blue/5 blur-[140px] rounded-full"></div>
     </div>
 
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100000] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-brand-accent focus:text-black focus:font-bold">Skip to main content</a>
     <Navbar />
     {showBreadcrumbBar && (
       <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-sm text-white/60">
@@ -373,7 +374,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
         </ol>
       </nav>
     )}
-    <main class="min-h-screen">
+    <main id="main-content" class="min-h-screen" tabindex="-1">
       <slot />
     </main>
     <div class="fixed bottom-[76px] right-4 md:bottom-5 md:right-5 z-[99999] pointer-events-none select-none" aria-hidden="true">

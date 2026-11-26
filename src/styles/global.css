@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Global visible focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 @theme {
   --color-brand-darkest: #1c1c1c;
   --color-brand-dark: #2e2e2e;
