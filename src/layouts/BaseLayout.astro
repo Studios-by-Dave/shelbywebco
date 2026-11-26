@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
 import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.jsx';
 import MobileStickyBar from '../components/MobileStickyBar.astro';
@@ -118,14 +119,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-JWQC4HHQNQ"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JWQC4HHQNQ');
-    </script>
+    <!-- Google Analytics loaded conditionally via ConsentBanner (consent + GPC aware) -->
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1d4ed8" />
@@ -387,6 +381,7 @@ const showBreadcrumbBar = pathSegments.length > 0;
       />
     </div>
     <Footer />
+    <ConsentBanner />
     <ChatWidget client:load />
     <MobileStickyBar />
     <DesktopStickyDock />

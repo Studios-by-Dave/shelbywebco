@@ -1,0 +1,84 @@
+---
+// Consent banner for GA4. Blocks non-essential tracking until explicit consent.
+// Honors Global Privacy Control (GPC).
+---
+
+<div
+  id="consent-banner"
+  class="fixed bottom-0 left-0 right-0 z-[99998] hidden"
+  role="dialog"
+  aria-live="polite"
+  aria-label="Cookie consent"
+>
+  <div class="max-w-4xl mx-auto m-4 rounded-2xl border border-white/10 bg-[#0d1a2e]/95 backdrop-blur p-5 md:p-6 shadow-2xl">
+    <p class="text-white/90 text-sm md:text-base leading-relaxed mb-4">
+      We use Google Analytics to understand how visitors use this site. No advertising pixels or session replay. You can accept or reject non-essential tracking. Learn more in our
+      <a href="/privacy/" class="text-brand-accent hover:text-white underline">Privacy Policy</a>.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <button
+        id="consent-accept"
+        class="px-5 py-2 rounded-full bg-brand-accent text-black font-bold hover:opacity-90 transition"
+      >Accept</button>
+      <button
+        id="consent-reject"
+        class="px-5 py-2 rounded-full border border-white/20 text-white hover:bg-white/10 transition"
+      >Reject</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'swc_consent';
+    var gpc = (navigator.globalPrivacyControl === true);
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JWQC4HHQNQ';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-JWQC4HHQNQ', { anonymize_ip: true });
+    }
+
+    function setConsent(value) {
+      try { localStorage.setItem(KEY, value); } catch (e) {}
+      if (value === 'accepted' && !gpc) loadGA();
+      hideBanner();
+    }
+
+    function hideBanner() {
+      var b = document.getElementById('consent-banner');
+      if (b) b.classList.add('hidden');
+    }
+
+    // Apply stored or GPC-derived consent on load
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    if (gpc) {
+      // GPC = reject; do not load GA
+      if (!stored) { try { localStorage.setItem(KEY, 'rejected'); } catch (e) {} }
+    } else if (stored === 'accepted') {
+      loadGA();
+    }
+
+    // Show banner only if no decision yet and no GPC
+    if (!gpc && !stored) {
+      var b = document.getElementById('consent-banner');
+      if (b) b.classList.remove('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var a = document.getElementById('consent-accept');
+      var r = document.getElementById('consent-reject');
+      if (a) a.addEventListener('click', function () { setConsent('accepted'); });
+      if (r) r.addEventListener('click', function () { setConsent('rejected'); });
+    });
+  })();
+</script>
