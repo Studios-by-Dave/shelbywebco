@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="Accessibility Statement"
+  description="Shelby Web Company's commitment to web accessibility and how to report barriers."
+>
+  <section class="py-10 md:py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-10">
+      <p class="text-brand-accent text-sm uppercase tracking-[0.2em] mb-4">Legal</p>
+      <h1 class="font-heading text-5xl md:text-6xl font-black text-white mb-6">Accessibility <span class="bg-gradient-to-r from-brand-blue-light to-brand-accent bg-clip-text text-transparent">Statement</span></h1>
+      <p class="text-white/80 leading-relaxed">
+        Shelby Web Company is committed to making its website accessible to people with disabilities. We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA.
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-24 px-4">
+    <div class="max-w-4xl mx-auto space-y-10 text-white leading-relaxed">
+      <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 md:p-8">
+        <h2 class="font-heading text-2xl text-white mb-4">Our Commitment</h2>
+        <p>
+          We continually work to improve the accessibility of shelbywebco.com and follow best practices for accessible design, including keyboard navigation, visible focus indicators, sufficient color contrast, and descriptive alt text.
+        </p>
+      </div>
+
+      <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 md:p-8">
+        <h2 class="font-heading text-2xl text-white mb-4">Feedback and Contact</h2>
+        <p class="mb-3">
+          If you experience any difficulty accessing content on this site, or have suggestions for improvement, please contact us:
+        </p>
+        <p>
+          Email:
+          <a href="mailto:dave@shelbywebco.com" class="text-brand-accent hover:text-white transition-colors">dave@shelbywebco.com</a>
+          · Phone:
+          <a href="tel:+17044738188" class="text-brand-accent hover:text-white transition-colors">(704) 473-8188</a>
+        </p>
+        <p class="mt-3 text-white/60 text-sm">
+          We aim to respond to accessibility feedback within 5 business days.
+        </p>
+      </div>
+
+      <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-6 md:p-8">
+        <h2 class="font-heading text-2xl text-white mb-4">Known Limitations</h2>
+        <p>
+          Some third-party content or embedded services may not be fully accessible. We are working with our providers to address these gaps.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

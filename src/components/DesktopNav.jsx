@@ -39,6 +39,8 @@ export default function DesktopNav() {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setServicesOpen(!servicesOpen)}
+          aria-expanded={servicesOpen}
+          aria-haspopup="menu"
           className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           Services
@@ -127,6 +129,8 @@ export default function DesktopNav() {
       <div className="relative" ref={aboutRef}>
         <button
           onClick={() => setAboutOpen(!aboutOpen)}
+          aria-expanded={aboutOpen}
+          aria-haspopup="menu"
           className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           About
@@ -156,6 +160,8 @@ export default function DesktopNav() {
       <div className="relative" ref={pricingRef}>
         <button
           onClick={() => setPricingOpen(!pricingOpen)}
+          aria-expanded={pricingOpen}
+          aria-haspopup="menu"
           className="text-white text-[1.05rem] font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 flex items-center border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg"
         >
           Pricing
