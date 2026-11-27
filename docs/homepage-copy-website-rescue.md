@@ -5,11 +5,13 @@
 
 ---
 
+> Historical copy brief. Pricing references below are updated to the current $597 Core/rescue starting price; the project-status document has the authoritative setup ranges.
+
 ## Why the page needs restructuring (read first)
 
 The current homepage flow is:
 
-> Hero → Services (Web Design / Branding / SEO / Software) → 3-Step Build Process → $497 Build Offer → SEO Process → Tool Logos → Industries → "Non-Exclusive" → Tour CTA → FAQ
+> Hero → Services (Web Design / Branding / SEO / Software) → 3-Step Build Process → $597 Core Build Offer → SEO Process → Tool Logos → Industries → "Non-Exclusive" → Tour CTA → FAQ
 
 That flow says "we build websites." The new strategy says "we fix websites (and build when needed)." The proposed new flow matches your brief:
 
@@ -38,8 +40,8 @@ That flow says "we build websites." The new strategy says "we fix websites (and 
 3. **Badge text — change "SHELBY, NC WEB DESIGN & LOCAL SEO" → "SHELBY, NC — WEBSITE RESCUE & LOCAL SEO"**
    🧠 Reinforces the core idea one more time before they even read the headline.
 
-4. **The italic pricing line under the hero image** ("$497 to build and deploy + $297/month...") — **remove from hero.** Move pricing to the offer section and the process section, where it already exists.
-   🧠 A rescue-minded visitor sees "$497 to build" before they've even been told their problem can be *fixed instead of rebuilt*. It anchors them toward buying a new site — the opposite of the new positioning.
+4. **The italic pricing line under the hero image** ("$597 to build and deploy + $297/month...") — **remove from hero.** Move pricing to the offer section and the process section, where it already exists.
+   🧠 A rescue-minded visitor sees a build price before they've even been told their problem can be *fixed instead of rebuilt*. It anchors them toward buying a new site — the opposite of the new positioning.
 
 5. **The three italic bullet points under the stars:**
    - ~~Custom websites that convert~~ → *Websites repaired, rescued, and rebuilt — only when a rebuild is truly needed*
@@ -145,7 +147,7 @@ That flow says "we build websites." The new strategy says "we fix websites (and 
 
 ---
 
-## SECTION 4 — Offer Section (replaces the "$497 + $297" recommended offer + the 3-step process section)
+## SECTION 4 — Offer Section (replaces the "$597 + $297" recommended offer + the 3-step process section)
 
 **This is the sales ladder, presented as three options.** It replaces the current "Recommended Approach" block and absorbs the 3-step process cards (the process can live on the How We Work page instead — it's build-framed).
 
@@ -199,7 +201,7 @@ That flow says "we build websites." The new strategy says "we fix websites (and 
 
 🧠 **Security wording:** "Basic vulnerability review and obvious security risks" — deliberately hedged, per your brief. Never imply pen-testing.
 
-🧠 **What to do with the current $497/$297 pricing block:** Move it *below* the ladder as a smaller band: "Planning a new build instead? Website + ongoing local SEO from $497 + $297/month. See pricing →". Builds are still offered — they're just not the headline anymore. FAQ answers reference those prices, so keep the pages consistent.
+🧠 **What to do with the current $597/$297 Core pricing block:** Move it *below* the ladder as a smaller band: "Planning a new build instead? Website + ongoing local SEO from $597 + $297/month. See pricing →". Plus and Ultra setup ranges are higher. Builds are still offered — they're just not the headline anymore. FAQ answers reference those prices, so keep the pages consistent.
 
 ---
 

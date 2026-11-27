@@ -9,11 +9,11 @@ Location: Shelby, NC (serving Cleveland, Gaston, Rutherford counties including G
 
 
 ## Overview
-Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. **Rescue-first**: we fix websites that don't work — sites that don't show up on Google, look generic or AI-built, or fail to bring in calls and leads. We start with a free SEO audit, offer a paid deep diagnostic (the Website Rescue Report), and then a single flat $597 setup fee (new site or existing-site rescue). Strategic new builds are the last resort, not the default. **Primary audience:** kitchen and bath remodelers and home remodeling contractors priced out of $1,500+/month agencies; other local service industries are served as secondary pages. We build custom, hand-coded websites, local SEO systems, branding, and "business machines" (custom software and automation). 20+ years of IT and network engineering experience. CompTIA A+ certified. Formerly Studios by Dave. Trusted by 100+ local businesses. 5.0 Google rating.
+Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. **Rescue-first**: we fix websites that don't work — sites that don't show up on Google, look generic or AI-built, or fail to bring in calls and leads. We start with a free SEO audit and offer a paid deep diagnostic (the Website Rescue Report). Existing-site rescue and Core website setup are $597; new Plus and Ultra website builds have higher setup ranges. Strategic new builds are the last resort, not the default. **Primary audience:** kitchen and bath remodelers and home remodeling contractors priced out of $1,500+/month agencies; other local service industries are served as secondary pages. We build custom, hand-coded websites, local SEO systems, branding, and "business machines" (custom software and automation). 20+ years of IT and network engineering experience. CompTIA A+ certified. Formerly Studios by Dave. Trusted by 100+ local businesses. 5.0 Google rating.
 
 
 ## Core Services
-- Website Rescue: free SEO audit, paid deep diagnostic (Website Rescue Report), then one flat $597 setup covering new sites or existing-site fixes (Found / Trusted / Hired), followed by monthly SEO plans
+- Website Rescue: free SEO audit, paid deep diagnostic (Website Rescue Report), then $597 existing-site rescue setup (Found / Trusted / Hired), followed by monthly SEO plans; Core website builds also start at $597
 - Custom web design & development (Astro, modern performance-first stack)
 - Local SEO, technical SEO, and AI search visibility (GEO)
 - Google Business Profile optimization & review generation
@@ -21,18 +21,20 @@ Shelby Web Company is a non-exclusive local agency founded by Dave Richardson. *
 - Custom software / SaaS / business automation ("Business Machines")
 - STRAT Console — our proprietary SEO analytics and reporting platform
 - Ongoing website care plans
-- Free Lead Leak Score — self-assessment and revenue calculator for remodeling and contractor business owners (Found / Trusted / Hired)
+- Free Lead Track Quiz Bot — take the challenge, answer 12 questions, and get your lead-leak score plus a revenue estimate; no email needed to see results. The results are on us.
 
 
 ## Pricing (transparent)
-One ladder, in order: free audit, paid deep diagnostic, one flat setup fee, then a monthly plan. Every plan is **month-to-month. Cancel any time with 30 days' written notice.**
+The rescue ladder is free audit → paid deep diagnostic → $597 rescue setup → monthly plan. New website setup is $597 for Core, $998–$1,498 for Plus, and $1,798–$2,498 for Ultra. Every monthly plan is **month-to-month. Cancel any time with 30 days' written notice.**
 
 - **Free SEO Audit — $0** — homepage-level snapshot of website health, free for local businesses: https://www.shelbywebco.com/promotions/free-seo-audit/
-- **Website Rescue Report — $197 one-time** — deep diagnostic covering every page, code-level, with scorecards and a prioritized fix plan; the full $197 is credited toward your **$597 setup** if you start within 60 days
-- **Setup — $597 one-time** — a new site or an existing-site rescue; scope confirmed after the audit. Covers Found (indexing, technical SEO, Google Business Profile), Trusted (real copy, your own photos, trust signals), Hired (calls, forms, service pages, lead tracking), or all three. No separate fix packages or bundle.
-- **Core — $297/month** (after $597 setup)
-- **Plus — $597/month** (after $597 setup) — most popular
-- **Ultra — $797/month** (after $597 setup)
+- **Website Rescue Report — $197 one-time** — deep diagnostic covering every page, code-level, with scorecards and a prioritized fix plan; the full $197 is credited toward the **$597 rescue setup** if you start within 60 days
+- **Existing-site rescue setup — $597 one-time** — scope confirmed after the audit. Covers Found (indexing, technical SEO, Google Business Profile), Trusted (real copy, your own photos, trust signals), Hired (calls, forms, service pages, lead tracking), or all three. No separate fix packages or bundle.
+- **Website builds — one-time setup:** Core **$597** · Plus **$998–$1,498** · Ultra **$1,798–$2,498**
+- **Core — $297/month** — $597 website setup
+- **Plus — $597/month** — website setup $998–$1,498; most popular
+- **Ultra — $797/month** — website setup $1,798–$2,498
+- **SEO-only setup — $597 one-time** for Found ($297/month), Trusted ($597/month), or Hired ($797/month)
 - **Website Care Plan (site only, no SEO) — $597 setup, then $149/month** — web hosting and SSL, automated backups, security monitoring and updates, small monthly edits and content changes, core code and plugin updates
 - **Logo Design & Branding packages (one-time)** — Essential Brand Kit **$498** · Complete Brand Suite **$898** (most popular) · Brand & Wrap Package **$1798** (adds vehicle wrap, signage, and marketing collateral concepts) — https://www.shelbywebco.com/services/branding/
 - Free logo design with any full web package
@@ -45,7 +47,7 @@ One ladder, in order: free audit, paid deep diagnostic, one flat setup fee, then
 ## What Each SEO Plan Actually Does
 These are the same three plans, described by the SEO work performed.
 
-- **Core ($297/month)** — technical SEO health check (crawlability, indexation, sitemap, robots.txt); on-page optimization on priority pages (titles, metas, headers, internal links); Core Web Vitals and mobile speed fixes; Google Business Profile setup, categories and attributes; structured data / schema markup on core pages; local citation and NAP consistency clean-up; keyword rank tracking in STRAT Console; monthly performance snapshot and quarterly growth review. Best for local businesses that need a correct, solid foundation but are not ready for aggressive growth work yet.
+- **Core ($297/month; $597 website setup)** — technical SEO health check (crawlability, indexation, sitemap, robots.txt); on-page optimization on priority pages (titles, metas, headers, internal links); Core Web Vitals and mobile speed fixes; Google Business Profile setup, categories and attributes; structured data / schema markup on core pages; local citation and NAP consistency clean-up; keyword rank tracking in STRAT Console; monthly performance snapshot and quarterly growth review. Best for local businesses that need a correct, solid foundation but are not ready for aggressive growth work yet.
 - **Plus ($597/month)** — everything in Core, plus keyword and competitor research every month; new service/location content each month; review-generation system and review replies; GBP posts, photos and Q&A management; ongoing local citation building; link acquisition and digital PR outreach; conversion-rate fixes on top landing pages; AI-visibility tracking (llms.txt and AI answer inclusion); milestone audits every 90 days. Best for businesses ready to invest in real local visibility and consistent inbound leads.
 - **Ultra ($797/month)** — everything in Plus, plus a full content program (2–4 pages/month plus refreshing decaying content); off-page link building and authority campaigns; landing-page CRO testing; lead tracking and attribution (calls, forms, bookings); follow-up workflows and automation; dedicated growth manager and priority support; advanced analytics, custom dashboards and multi-location reporting; milestone audits every 90 days. Best for businesses that want SEO, lead generation, and conversion handled as one system under one roof.
 
@@ -62,9 +64,9 @@ Kitchen and bath remodelers and home remodeling contractors are our primary focu
 - SEO Services: https://www.shelbywebco.com/services/seo/
 - AI Cleanup & Credibility Fixes: https://www.shelbywebco.com/services/ai-cleanup/
 - Conversion Fixes: https://www.shelbywebco.com/services/conversion/
-- Website Setup ($597 one-time, new site or rescue): https://www.shelbywebco.com/services/full-rescue/
+- Website Setup (existing-site rescue or Core website: $597 setup; Plus and Ultra builds have tiered setup prices): https://www.shelbywebco.com/services/full-rescue/
 - Website Rescue Report: https://www.shelbywebco.com/services/website-rescue-report/
-- Free Lead Leak Score (12-question quiz + revenue calculator for remodelers and contractors, no email needed to see results): https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/
+- Free Lead Track Quiz Bot (12-question challenge for remodelers and contractors; CTA: “Start the Free Leak Quiz”; includes a self-assessment score and revenue estimate, with no email needed to see results): https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/
 - Logo Design & Branding: https://www.shelbywebco.com/services/branding/
 - Audio Branding: https://www.shelbywebco.com/services/audio-branding/
 - Custom Software & SaaS: https://www.shelbywebco.com/services/custom-software-saas/
@@ -83,8 +85,6 @@ Kitchen and bath remodelers and home remodeling contractors are our primary focu
 - Contact: https://www.shelbywebco.com/contact/
 - Free SEO Audit: https://www.shelbywebco.com/promotions/free-seo-audit/
 - Free Logo Design: https://www.shelbywebco.com/promotions/free-logo-design/
-- The Golden Ticket: https://www.shelbywebco.com/promotions/the-golden-ticket/
-- Golden Ticket Rules: https://www.shelbywebco.com/promotions/the-golden-ticket/rules/
 - Referral Bonus: https://www.shelbywebco.com/promotions/referral-bonus/
 
 

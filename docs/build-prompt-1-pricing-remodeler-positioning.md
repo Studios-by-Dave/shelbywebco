@@ -9,15 +9,16 @@ You are a senior Astro/front-end developer and conversion copywriter working ins
 (1) Simplify pricing so a visitor sees far fewer numbers. (2) Shift positioning toward kitchen and bath remodelers and home remodeling contractors while keeping the other industry pages live as secondary pages. Keep the existing voice: plain-spoken, honest, "Total Transparency", "Technology That Fills The Gaps", Found -> Trusted -> Hired.
 
 ## DECISIONS (defaults; edit before running)
-- Setup fee model: FLAT $597 for every monthly plan (Core, Plus, Ultra). No ranges anywhere.
-- Full Rescue: fold the three $349 fixes and the $749 Full Rescue into "Setup". Setup starts at $597 for a new build OR existing-site rescue; scope is confirmed after the audit. Do not sell the three fixes as separate headline products on the main pricing page (keep detail on their service pages).
+- Setup fee model: $597 for existing-site rescue and Core website builds; Plus website setup is $998–$1,498; Ultra website setup is $1,798–$2,498. SEO-only plans have a flat $597 setup at all levels.
+- Rescue offer: no separate fix packages or Full Rescue bundle. Existing-site rescue setup is $597; scope is confirmed after the audit. Do not sell obsolete fix packages as headline products on the main pricing page.
 - Other industry pages (roofers, landscapers, trees, trucking, construction): keep live, move to secondary placement. Remodelers become the primary homepage focus.
 - Prompt-2 tool: the Lead Leak Score is the primary lead magnet and should be linked from the hero.
 
 ## CURRENT PRICING (verified on the live pricing page; use as source of truth for what exists today)
-- Free SEO Audit $0 (homepage snapshot). Website Rescue Report $197 one-time, credited toward fixes within 60 days.
-- Fix packages from $349 each (Visibility, Credibility, Conversion). Full Rescue from $749.
-- Core: $597 build + $297/mo. Plus: $798-$998 build + $597/mo. Ultra: $998-$1,498 build + $797/mo.
+- Free SEO Audit $0 (homepage snapshot). Website Rescue Report $197 one-time, credited toward the $597 rescue setup within 60 days.
+- Existing-site rescue setup: $597.
+- Website builds: Core $597 setup + $297/mo; Plus $998–$1,498 setup + $597/mo; Ultra $1,798–$2,498 setup + $797/mo.
+- SEO-only setup: $597 one time at all levels; monthly levels are Found $297, Trusted $597, Hired $797.
 - Website Care Plan: $597 build + $149/mo (no SEO).
 - Extra pages $75-$150 each. Pay-upfront discount $50 off (build + first month in one payment). Golden Ticket promo waives the $597 build fee for 3 local businesses.
 - Terms: month-to-month, cancel with 30 days' written notice, domain and content always the client's, milestone audit every 90 days.
@@ -26,13 +27,13 @@ You are a senior Astro/front-end developer and conversion copywriter working ins
 Show one ladder, in this order:
 1. Free audit $0
 2. Deep audit (Rescue Report) $197, credited toward setup within 60 days
-3. Setup, one time, starts at $597 (new site or existing-site fixes)
-4. Monthly plan: Core $297/mo, Plus $597/mo, Ultra $797/mo. Keep the feature lists as they are.
+3. Existing-site rescue setup is $597. New website setup is Core $597, Plus $998–$1,498, or Ultra $1,798–$2,498.
+4. Monthly plan: Core $297/mo, Plus $597/mo, Ultra $797/mo. SEO-only levels share a flat $597 setup.
 5. Site-only Care Plan $149/mo as a small footnote under the cards, not a fourth card.
 Keep the $50 upfront discount, extra-page pricing and Golden Ticket as small secondary notes.
 
 ## PRICING COPY RULES
-- "$597" appears as both the setup fee and Plus's monthly price. Always write "$597 setup" and "$597/month" in full, never a bare "$597". Visually separate one-time fees from monthly fees (labels or a divider).
+- "$597" appears as setup and as a monthly price. Always label the context ("Core setup $597", "rescue setup $597", "Plus $597/month", or "SEO-only setup $597"); never use a bare "$597" where it could be ambiguous. Visually separate one-time fees from monthly fees.
 - Replace the claim that Full Rescue saves "about $200". Three fixes at $349 total $1,047 vs $749 = about $298. Remove the claim entirely if Full Rescue is folded into Setup.
 - Resolve the contradiction "month-to-month after your initial term" vs "no minimum term". Use one consistent line site-wide: "Month-to-month. Cancel any time with 30 days' written notice."
 - Search the whole repo (pages, blog, schema/JSON-LD, llms.txt, meta descriptions, OG text) for stale prices, "$497", and old Full Rescue or fix pricing. List every place changed in your summary.

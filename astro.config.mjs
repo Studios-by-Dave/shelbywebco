@@ -7,6 +7,10 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://www.shelbywebco.com',
   trailingSlash: 'always',
+  redirects: {
+    '/promotions/the-golden-ticket/': '/promotions/',
+    '/promotions/the-golden-ticket/rules/': '/promotions/',
+  },
   vite: {
     plugins: [tailwindcss()],
   },

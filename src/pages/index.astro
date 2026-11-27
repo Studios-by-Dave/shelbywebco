@@ -89,7 +89,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
 
 <BaseLayout 
   title="Websites for Remodelers & Contractors That Get Found, Trusted, and Called | Shelby Web Co."
-  description="Websites, SEO, and website rescue for kitchen and bath remodelers and remodeling contractors in Shelby, NC. $597 setup, then $297/month. Month-to-month. Call (704) 473-8188."
+  description="Remodeler website rescue; Core setup $597; Plus $998–$1,498; Ultra $1,798–$2,498. Monthly plans from $297. Shelby, NC. Call (704) 473-8188."
   bgVariant="blue"
 >
 
@@ -113,8 +113,6 @@ import marbleBg from '../../assets/marble-800x530.webp';
       </div>
     </div>
   </div>
-
-  <div id="golden-ticket-easter-egg" class="golden-ticket-easter-egg" aria-hidden="true"></div>
 
   <style>
     @keyframes promo-ticker {
@@ -168,7 +166,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
           href="/free-tools/remodeler-lead-leak-score/"
           class="rounded-full border border-brand-accent/40 bg-brand-accent/10 px-8 py-4 text-center text-base sm:text-lg font-semibold text-brand-accent transition-all duration-300 hover:bg-brand-accent/20 hover:border-brand-accent/70"
         >
-          Try the Free Lead Leak Score
+          Try the Free Lead Track Quiz Bot
         </a>
         <a
           href="/services/"
@@ -458,7 +456,7 @@ import marbleBg from '../../assets/marble-800x530.webp';
               <h3 class="font-heading text-2xl font-bold text-white">Website Setup</h3>
             </div>
             <ul class="list-disc pl-4 space-y-1.5 text-base leading-snug text-white/75 mb-4">
-              <li>$597 one time — new site or existing-site rescue</li>
+              <li>$597 rescue or Core setup; Plus/Ultra builds have higher setup ranges</li>
               <li>Found + Trusted + Hired, scoped by your audit</li>
               <li>Then a monthly plan from $297/month</li>
             </ul>
@@ -592,91 +590,6 @@ import marbleBg from '../../assets/marble-800x530.webp';
 
     </div>
   </section>
-
-  <script>
-    (() => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const tray = document.getElementById('golden-ticket-easter-egg');
-      if (!tray) return;
-
-      let introRunning = false;
-
-      const makeTicket = () => {
-        const ticket = document.createElement('a');
-        ticket.className = 'golden-ticket-float';
-        ticket.href = '/promotions/the-golden-ticket/';
-        ticket.setAttribute('aria-label', 'Visit the Golden Ticket promotion');
-
-        const label = document.createElement('span');
-        label.textContent = 'Golden Ticket';
-
-        const rim = document.createElement('div');
-        rim.className = 'ticket-rim';
-
-        ticket.appendChild(label);
-        ticket.appendChild(rim);
-        return ticket;
-      };
-
-      const shakeScreen = () => {
-        document.body.classList.add('gt-nose-shake');
-        window.setTimeout(() => document.body.classList.remove('gt-nose-shake'), 260);
-      };
-
-      const playIntro = async () => {
-        if (introRunning) return;
-        introRunning = true;
-        try {
-          // Phase 1 - exactly one ticket: it flies out and zooms in.
-          const t1 = makeTicket();
-          t1.classList.add('gt-intro');
-          t1.setAttribute('aria-hidden', 'true');
-          t1.removeAttribute('href');
-          t1.tabIndex = -1;
-          t1.style.left = '0px';
-          t1.style.top = '30vh';
-          tray.appendChild(t1);
-
-          const t1Anim = t1.animate(
-            [
-              { transform: 'translate3d(-140px, 0, 0) rotate(-14deg) scale(0.8)', opacity: 0 },
-              { transform: 'translate3d(28vw, 0, 0) rotate(-4deg) scale(2.2)', opacity: 1, offset: 0.35 },
-              { transform: 'translate3d(50vw, -8px, 0) rotate(2deg) scale(3.6)', opacity: 1, offset: 0.5 },
-              { transform: 'translate3d(72vw, 30px, 0) rotate(10deg) scale(1.8)', opacity: 0.95, offset: 0.75 },
-              { transform: 'translate3d(115vw, 90px, 0) rotate(20deg) scale(0.8)', opacity: 0 },
-            ],
-            { duration: 2600, easing: 'cubic-bezier(0.3, 0, 0.6, 1)', fill: 'forwards' }
-          );
-          window.setTimeout(shakeScreen, 1300);
-
-          await t1Anim.finished.catch(() => {});
-          t1.remove();
-        } finally {
-          introRunning = false;
-        }
-      };
-
-      if (prefersReducedMotion) {
-        // Reduced motion: no ticket animation.
-      } else {
-        const REPLAY_INTERVAL_MS = 90_000;
-
-        const runIntro = async () => {
-          if (introRunning) return;
-          introRunning = true;
-          try {
-            await playIntro();
-          } finally {
-            introRunning = false;
-          }
-        };
-
-        runIntro();
-        window.setInterval(runIntro, REPLAY_INTERVAL_MS);
-      }
-    })();
-  </script>
-
 
   <!-- Industries Section -->
   <section class="py-12 md:py-16 px-4" data-animate>

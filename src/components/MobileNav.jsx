@@ -51,7 +51,6 @@ const aboutLinks = [
 const promotionLinks = [
   { href: '/promotions/free-seo-audit/', label: 'Free SEO Audit' },
   { href: '/promotions/free-logo-design/', label: 'Free Logo Design' },
-  { href: '/promotions/the-golden-ticket/', label: 'The Golden Ticket', gold: true },
 ];
 
 const allLinks = [...topLinks, ...serviceLinks, ...serviceAreaLinks, ...industryLinks, ...aboutLinks, ...promotionLinks];
@@ -117,19 +116,16 @@ export default function MobileNav() {
   const renderLink = (link) => {
     const isBlog = link.label === 'Blog';
     const isTel = link.href.startsWith('tel:');
-    const isGold = 'gold' in link && link.gold;
     const topLevel = isTel
       ? 'py-3 text-2xl font-bold text-lime-300 bg-lime-400/10 hover:bg-lime-400/15'
       : isBlog
         ? 'py-3 animate-blog-stream font-poofy text-3xl text-white hover:text-brand-cyan hover:bg-white/5'
-        : isGold
-          ? 'py-3 text-3xl font-bold text-[#fbbf24] hover:text-[#f8d66d] bg-[#fbbf24]/5 hover:bg-[#fbbf24]/10'
-          : 'py-3 text-3xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
+        : 'py-3 text-3xl font-bold text-white hover:text-brand-cyan hover:bg-white/5';
     return (
       <a
         href={link.href}
         onClick={closeMenu}
-        className={`block px-4 text-center mobile-nav-subtle-italic transition-colors ${topLevel} ${isGold ? 'animate-mobile-golden-ticket-glow' : ''}`}
+        className={`block px-4 text-center mobile-nav-subtle-italic transition-colors ${topLevel}`}
         style={isBlog ? { WebkitTextStroke: '0.6px white' } : undefined}
       >
         {link.label}
@@ -410,7 +406,7 @@ export default function MobileNav() {
                           <a
                             href={promotion.href}
                             onClick={closeMenu}
-                            className={`block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 whitespace-nowrap ${promotion.gold ? 'text-[#fbbf24] hover:text-[#f8d66d] animate-mobile-golden-ticket-glow' : 'text-white hover:text-brand-cyan'}`}
+                            className="block px-8 py-2 text-left text-lg font-semibold transition-colors hover:bg-white/5 whitespace-nowrap text-white hover:text-brand-cyan"
                           >
                             {promotion.label}
                           </a>

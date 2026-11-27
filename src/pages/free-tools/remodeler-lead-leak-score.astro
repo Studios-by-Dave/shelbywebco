@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import Image from '../../components/OptimizedImage.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import LeadLeakScore from '../../components/LeadLeakScore.astro';
+import quizBotImage from '../../../assets/quizbot-1.jpg';
 
 const faqItems = [
   {
@@ -48,7 +50,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': 'https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/',
   'url': 'https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/',
-  'name': 'Free Lead Leak Score for Remodelers & Contractors',
+  'name': 'Free Lead Track Quiz Bot for Remodelers & Contractors',
   'description': 'A free 12-question self-assessment and revenue calculator for remodeling and contractor business owners — see where leads leak before you hand over any contact details.',
   'inLanguage': 'en-US',
   'isPartOf': { '@id': 'https://www.shelbywebco.com/#website' },
@@ -67,7 +69,7 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Free Lead Leak Score for Remodelers & Contractors | Shelby Web Co."
+  title="Free Lead Track Quiz Bot for Remodelers & Contractors | Shelby Web Co."
   description="Free 12-question quiz and revenue calculator for remodeling and contractor business owners. Find where leads leak — no email needed to see your score."
   bgVariant="blue"
 >
@@ -75,21 +77,33 @@ const faqSchema = {
 
   <!-- Hero -->
   <section class="pt-14 pb-10 px-4 sm:pt-20" data-animate>
-    <div class="max-w-4xl mx-auto text-center">
-      <span class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
-        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
-        <span class="text-white font-bold text-sm tracking-wide">FREE TOOL · REMODELERS &amp; CONTRACTORS</span>
-      </span>
-      <h1 class="font-heading text-[2.75rem] sm:text-[clamp(2.5rem,5.5vw,4rem)] lg:text-[4rem] font-black mb-5 leading-[1.05] tracking-tight text-white">
-        Find Where Your <span class="text-brand-accent">Remodeling</span> Business Is Leaking Leads
-      </h1>
-      <p class="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
-        A free Lead Leak Score for remodeling and contractor business owners. Twelve quick questions, a dollar estimate, and a clear next step — no email needed to see your results.
-      </p>
-      <p class="text-white/80 text-sm flex items-center justify-center gap-1.5 mt-5">
-        <span class="text-brand-accent leading-none">★★★★★</span>
-        5.0 on Google · CompTIA A+ Certified · Local to Shelby
-      </p>
+    <div class="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-[minmax(0,1fr)_18rem] lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <div class="text-center md:text-left">
+        <span class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
+          <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
+          <span class="text-white font-bold text-sm tracking-wide">FREE LEAD TRACK QUIZ BOT · REMODELERS &amp; CONTRACTORS</span>
+        </span>
+        <h1 class="font-heading text-[3rem] sm:text-[clamp(3rem,6.5vw,4.75rem)] lg:text-[4.75rem] font-black mb-5 leading-[1.05] tracking-tight text-white">
+          Take the <span class="text-brand-accent">Lead Leak Quiz Bot</span> Challenge
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-[#67e8f9] mb-4">The results are on us!</p>
+        <p class="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto md:mx-0">
+          The Free Lead Track Quiz Bot helps remodeling and contractor business owners spot where leads may be slipping away. Answer twelve quick questions to see an estimate and a clear next step — no email needed.
+        </p>
+        <p class="text-white/80 text-sm flex items-center justify-center md:justify-start gap-1.5 mt-5">
+          <span class="text-brand-accent leading-none">★★★★★</span>
+          5.0 on Google · CompTIA A+ Certified · Local to Shelby
+        </p>
+      </div>
+      <div class="mx-auto w-48 sm:w-56 md:w-full overflow-hidden rounded-2xl border border-[#67e8f9]/40 bg-white/90 opacity-80 shadow-[0_0_30px_rgba(103,232,249,0.14)] md:justify-self-end">
+        <Image
+          src={quizBotImage}
+          alt="Friendly home remodel quiz bot holding a quiz clipboard"
+          class="block h-auto w-full"
+          width={320}
+          loading="eager"
+        />
+      </div>
     </div>
   </section>
 
@@ -133,7 +147,7 @@ const faqSchema = {
     </div>
   </section>
 
-  <FaqSection items={faqItems} heading="Lead Leak Score FAQs" />
+  <FaqSection items={faqItems} heading="Lead Track Quiz Bot FAQs" />
 
   <!-- Next steps -->
   <section class="py-16 px-4" data-animate>

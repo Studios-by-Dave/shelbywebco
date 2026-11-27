@@ -56,7 +56,7 @@ const faqSchema = {
       "name": "Do you offer payment plans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every plan is $597 setup, one time, followed by one monthly payment: Core $297/month, Plus $597/month, or Ultra $797/month. All plans are month-to-month. Cancel any time with 30 days' written notice."
+        "text": "Rescue and Core setup is $597 one time. New website setup is $597 for Core, $998–$1,498 for Plus, and $1,798–$2,498 for Ultra. SEO-only setup is $597 at all levels. Monthly plans are Core $297, Plus $597, or Ultra $797 per month. All plans are month-to-month. Cancel any time with 30 days' written notice."
       }
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       "name": "What does the $597 setup cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One flat $597 setup fee covers a new site or fixing the one you have — new build or existing-site rescue. Scope is confirmed after the audit. It can cover Found (indexing, technical SEO, Google Business Profile), Trusted (real copy, your own photos, trust signals), Hired (calls, forms, service pages, lead tracking), or all three."
+        "text": "The $597 rescue setup covers fixing the site you have, with scope confirmed after the audit. It can cover Found (indexing, technical SEO, Google Business Profile), Trusted (real copy, your own photos, trust signals), Hired (calls, forms, service pages, lead tracking), or all three. A new Core website also starts at $597; Plus and Ultra build setup ranges are listed below."
       }
     },
     {
@@ -72,7 +72,7 @@ const faqSchema = {
       "name": "Is there a discount if I pay upfront?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. If you pay your entire $597 setup plus your first monthly payment upfront in a single payment, we apply an instant $50 discount to your total. It's the same plan and the same work — just one payment instead of two."
+        "text": "Yes. If you pay your entire setup fee plus your first monthly payment upfront in a single payment, we apply an instant $50 discount to your total. It's the same plan and the same work — just one payment instead of two."
       }
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
 
 <BaseLayout 
   title="Web Design & SEO Pricing in Shelby, NC"
-  description="Transparent pricing from Shelby Web Company — $597 setup, then $297/month. No hidden fees. Month-to-month; cancel with 30 days' written notice."
+  description="Rescue and Core setup: $597. Plus builds: $998–$1,498; Ultra: $1,798–$2,498. Monthly plans start at $297. Month-to-month; cancel with 30 days' written notice."
   bgVariant="blue"
 >
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
@@ -272,7 +272,7 @@ const faqSchema = {
         “Total Transparency.”
       </p>
       <p class="text-base sm:text-lg text-white/75 mb-8 max-w-2xl leading-relaxed">
-        $597 setup, then $297/month. Month-to-month. Cancel any time with 30 days' written notice. Three local businesses can also win their <a href="/promotions/the-golden-ticket/" class="text-[#f4c95d] underline decoration-[#fbbf24]/40 underline-offset-4 hover:text-[#f8d66d]">setup fee waived</a>.
+        Core setup is $597, then $297/month. Existing-site rescue setup is also $597; Plus and Ultra new website builds have higher setup ranges. Month-to-month. Cancel any time with 30 days' written notice.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
@@ -320,7 +320,7 @@ const faqSchema = {
       <!-- Diagnose: 2 steps + fixes — styled to match the build/SEO pricing columns -->
       <div class="grid md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 md:gap-5 items-stretch mb-12 max-w-6xl mx-auto">
         <!-- Step 1 -->
-        <div class="relative flex flex-col bg-white/[0.04] backdrop-blur-xl border border-white/15 rounded-2xl p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.10),_0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.08] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),_0_24px_50px_rgba(8,9,15,0.55)] transition-all duration-300">
+        <div class="relative flex flex-col bg-[linear-gradient(165deg,#272a31_0%,#1a1c22_38%,#131418_75%,#0f1014_100%)] border border-white/10 rounded-2xl p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_0_0_1px_rgba(255,255,255,0.04),0_20px_40px_rgba(0,0,0,0.55)] hover:bg-[linear-gradient(165deg,#313541_0%,#212430_38%,#171920_75%,#121318_100%)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.24),inset_0_0_0_1px_rgba(255,255,255,0.06),0_24px_50px_rgba(0,0,0,0.6)] transition-all duration-300">
           <p class="inline-block self-center bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Step 1 — Free</p>
           <h3 class="font-heading text-3xl md:text-4xl font-black text-center mb-4 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">
             <a href="/promotions/free-seo-audit/" class="text-inherit hover:underline decoration-white/40 underline-offset-4">Free SEO Audit</a>
@@ -328,14 +328,20 @@ const faqSchema = {
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
               <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Free</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">Price</span>
+              <span class="text-white/70 text-xs uppercase tracking-widest">Price</span>
               <span class="text-[3rem] md:text-[3.6rem] font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">$0</span>
               <div class="mt-3 w-full bg-brand-accent/10 border border-brand-accent/25 rounded-xl py-2 px-3 text-center">
                 <span class="text-white/85 text-xs font-semibold tracking-wide">Free for local businesses</span>
               </div>
             </div>
           </div>
-          <p class="text-white/70 text-sm italic mb-6 flex-1">A homepage snapshot of your site's health.</p>
+          <p class="text-white/80 text-sm italic mb-4">A homepage snapshot of your site's health.</p>
+          <ul class="space-y-2 text-sm text-white/75 mb-6 flex-1">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Homepage visibility & indexing spot-check — can Google see you?</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Titles, metas, and on-page basics reviewed</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Local SEO red flags — profile, listings, and citations</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>2–3 quick wins ranked by impact — yours to keep, no obligation</li>
+          </ul>
           <a href="/promotions/free-seo-audit/" class="cta-glow-shine block w-full text-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4)] hover:brightness-110 transition-all duration-300 text-base">
             Get My Free Audit →
           </a>
@@ -344,7 +350,7 @@ const faqSchema = {
         <div class="hidden md:flex items-center text-brand-accent/60 text-2xl font-bold" aria-hidden="true">→</div>
 
         <!-- Step 2 (featured) -->
-        <div class="relative z-10 flex flex-col bg-white/[0.07] backdrop-blur-xl border border-[#f3db70]/50 rounded-2xl p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12),0_0_40px_rgba(132,204,22,0.10),0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.10] transition-all duration-300">
+        <div class="relative z-10 flex flex-col bg-[linear-gradient(165deg,#2e3138_0%,#1f2229_38%,#16181d_75%,#111318_100%)] border border-[#f3db70]/50 rounded-2xl p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_0_0_1px_rgba(243,219,112,0.14),0_0_40px_rgba(132,204,22,0.10),0_20px_40px_rgba(0,0,0,0.55)] hover:bg-[linear-gradient(165deg,#373b44_0%,#262a33_38%,#1b1e24_75%,#15171d_100%)] transition-all duration-300">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f3db70] text-[#1c1c1c] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider drop-shadow-md whitespace-nowrap">Step 2 — Paid</div>
           <p class="h-[26px] mb-4" aria-hidden="true"></p>
           <h3 class="font-heading text-3xl md:text-4xl font-black text-center mb-4 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">
@@ -353,7 +359,7 @@ const faqSchema = {
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
               <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">One-time</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">Price</span>
+              <span class="text-white/70 text-xs uppercase tracking-widest">Price</span>
               <span class="text-[3rem] md:text-[3.6rem] font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">$197</span>
               <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">one-time</span>
               <div class="w-full bg-brand-accent/10 border border-brand-accent/25 rounded-xl py-2 px-3 text-center">
@@ -361,7 +367,14 @@ const faqSchema = {
               </div>
             </div>
           </div>
-          <p class="text-white/70 text-sm italic mb-6 flex-1">Every page, code-level, ranked by what to fix first.</p>
+          <p class="text-white/80 text-sm italic mb-4">Every page, code-level, ranked by what to fix first.</p>
+          <ul class="space-y-2 text-sm text-white/75 mb-6 flex-1">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>One-paragraph verdict — fix it, rebuild it, or leave it alone</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Five scorecards: Health, SEO, Trust, Security, Local Visibility</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>What's working first, then what's broken by business impact</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Your first 3 fixes as a mini rescue plan — impact, effort, order</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Every page checked code-level — not just the homepage</li>
+          </ul>
           <a href="/services/website-rescue-report/" class="cta-glow-shine block w-full text-center rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-6 py-3 font-bold border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4)] hover:brightness-110 transition-all duration-300 text-base">
             Get the Rescue Report →
           </a>
@@ -370,7 +383,7 @@ const faqSchema = {
         <div class="hidden md:flex items-center text-brand-accent/60 text-2xl font-bold" aria-hidden="true">→</div>
 
         <!-- Step 3 -->
-        <div class="relative flex flex-col bg-white/[0.04] backdrop-blur-xl border border-white/15 rounded-2xl p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.10),_0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.08] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),_0_24px_50px_rgba(8,9,15,0.55)] transition-all duration-300">
+        <div class="relative flex flex-col bg-[linear-gradient(165deg,#272a31_0%,#1a1c22_38%,#131418_75%,#0f1014_100%)] border border-white/10 rounded-2xl p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_0_0_1px_rgba(255,255,255,0.04),0_20px_40px_rgba(0,0,0,0.55)] hover:bg-[linear-gradient(165deg,#313541_0%,#212430_38%,#171920_75%,#121318_100%)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.24),inset_0_0_0_1px_rgba(255,255,255,0.06),0_24px_50px_rgba(0,0,0,0.6)] transition-all duration-300">
           <p class="inline-block self-center bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Step 3 — Implement</p>
           <h3 class="font-heading text-3xl md:text-4xl font-black text-center mb-4 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">
             <a href="#setup-coverage" class="text-inherit hover:underline decoration-white/40 underline-offset-4">Core Setup</a>
@@ -378,7 +391,7 @@ const faqSchema = {
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
               <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">One-time</span>
-              <span class="text-white/60 text-xs uppercase tracking-widest">Setup</span>
+              <span class="text-white/70 text-xs uppercase tracking-widest">Setup</span>
               <span class="text-[3rem] md:text-[3.6rem] font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">$597</span>
               <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">one time setup fee</span>
               <span class="text-white/55 text-xs font-bold uppercase tracking-widest my-1">AND/OR</span>
@@ -388,7 +401,13 @@ const faqSchema = {
               </a>
             </div>
           </div>
-          <p class="text-white/70 text-sm italic mb-6 flex-1">New site or existing-site rescue. Scope confirmed after the audit.</p>
+          <p class="text-white/80 text-sm italic mb-4">New site or existing-site rescue. Scope confirmed after the audit.</p>
+          <ul class="space-y-2 text-sm text-white/75 mb-6 flex-1">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Technical foundation — indexing, sitemap, schema, and speed fixed</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Google Business Profile set up right — categories, photos, posts</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Service pages with real copy, photos, and internal links</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">✓</span>Forms, lead alerts, and analytics wired in from day one</li>
+          </ul>
           <a href="#setup-coverage" class="block w-full text-center rounded-xl border border-white/20 bg-white/5 text-white px-6 py-3 font-bold hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-base">
             See What's Included ↓
           </a>
@@ -422,10 +441,10 @@ const faqSchema = {
         </p>
       </div>
 
-      <!-- Setup coverage: one flat fee, three pillars -->
+      <!-- Rescue/Core setup coverage: one flat fee, three pillars -->
       <div id="setup-coverage" class="mb-10 scroll-mt-24">
-        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-2">What $597 Setup Covers</h3>
-        <p class="text-white/70 text-center text-base mb-8 max-w-2xl mx-auto">One flat fee — a new site or fixing the one you have. Scope is confirmed after the audit.</p>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-2">What the $597 Rescue/Core Setup Covers</h3>
+        <p class="text-white/70 text-center text-base mb-8 max-w-2xl mx-auto">This $597 setup covers an existing-site rescue or a new Core website. Plus and Ultra builds have higher setup ranges. Rescue scope is confirmed after the audit.</p>
 
         <div class="overflow-x-auto">
           <table class="w-full text-left border border-white/10 rounded-2xl overflow-hidden">
@@ -507,6 +526,7 @@ const faqSchema = {
 
   <GrowthPlanPricingSection
     standalone
+    skin="charcoal"
     eyebrow="✦ Website Build Packages"
     title="Website Build Packages — With or Without SEO"
     eyebrowClass="text-brand-accent text-base md:text-lg uppercase tracking-widest mb-4 font-semibold"
@@ -535,7 +555,7 @@ const faqSchema = {
               <ul class="space-y-3 mt-4">
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold">1</div>
-                  <span class="text-white"><span class="font-bold text-brand-accent">$597 setup</span> to scope and start the work</span>
+                  <span class="text-white"><span class="font-bold text-brand-accent">$597 rescue/Core setup</span> to scope and start the work; Plus and Ultra builds use their published ranges</span>
                 </li>
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-cyan/20 flex items-center justify-center text-brand-cyan font-bold">2</div>
@@ -548,7 +568,7 @@ const faqSchema = {
           <div class="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             <h3 class="text-body-lg font-bold text-white mb-4">Why we do this:</h3>
             <p class="text-slate-400 mb-6 italic">
-              "A flat $597 setup fee gets your project started, and the monthly plan keeps everything improving — hosting, security, SEO, and ongoing care all handled for you."
+              "Rescue and Core setup starts at $597; Plus and Ultra website builds have published setup ranges. Your monthly plan keeps everything improving — hosting, security, SEO, and ongoing care all handled for you."
             </p>
             <div class="flex items-center gap-4 border-t border-white/10 pt-6">
               <div class="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center text-brand-darkest font-bold text-xl">✓</div>
@@ -568,7 +588,7 @@ const faqSchema = {
           <div>
             <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-1">Pay upfront &amp; save instantly</h3>
             <p class="text-white/75 text-sm md:text-body-sm leading-relaxed">
-              Cover your <span class="text-brand-accent font-semibold">entire $597 setup</span> plus your <span class="text-brand-accent font-semibold">first monthly payment</span> in a single payment, and we'll apply an <span class="text-white font-semibold">instant $50 discount</span> to your total. Same plan, same work — just one payment instead of two.
+              Cover your <span class="text-brand-accent font-semibold">entire setup fee</span> plus your <span class="text-brand-accent font-semibold">first monthly payment</span> in a single payment, and we'll apply an <span class="text-white font-semibold">instant $50 discount</span> to your total. Same plan, same work — just one payment instead of two.
             </p>
           </div>
         </div>
@@ -582,10 +602,10 @@ const faqSchema = {
       <div class="text-center mb-10">
         <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Side by Side</p>
         <h2 id="compare-paths-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-5 leading-tight">
-          Two Ways In. <span class="text-brand-accent">The Same Pricing.</span>
+          Two Ways In. <span class="text-brand-accent">Same Monthly Plans.</span>
         </h2>
         <p class="text-body-lg text-white/80 max-w-2xl mx-auto">
-          Both sections above lead to the same place: a <span class="text-white font-semibold">$597 setup</span>, then one of the same three monthly plans. The only difference is where the work starts.
+          Rescue setup is $597. New website setup is $597 for Core, $998–$1,498 for Plus, and $1,798–$2,498 for Ultra. Both paths can continue with the same three monthly plans; the upfront scope and price differ.
         </p>
       </div>
 
@@ -619,7 +639,7 @@ const faqSchema = {
             <tr class="border-t border-white/10 bg-white/[0.02]">
               <th scope="row" class="p-4 md:p-5 font-semibold text-white">Upfront, one time</th>
               <td class="p-4 md:p-5"><span class="text-white font-bold">$597 setup</span> — scope confirmed after the audit</td>
-              <td class="p-4 md:p-5"><span class="text-white font-bold">$597 setup</span> — a new 4–5 page site</td>
+              <td class="p-4 md:p-5">Core $597 · Plus $998–$1,498 · Ultra $1,798–$2,498</td>
             </tr>
             <tr class="border-t border-white/10">
               <th scope="row" class="p-4 md:p-5 font-semibold text-white">Then, per month</th>

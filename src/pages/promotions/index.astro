@@ -6,7 +6,7 @@ import PixieDust from '../../components/PixieDust.jsx';
 <BaseLayout 
   bgVariant="blue"
   title="Limited-Time Offers & Promotions"
-  description="Limited-time offers from Shelby Web Co — The Golden Ticket free website giveaway, free logo design, free SEO audit, and referral bonuses."
+  description="Current offers from Shelby Web Co, including free logo design with a web package and a free SEO audit for local businesses."
 >
 
   <!-- Hero Section -->
@@ -20,7 +20,7 @@ import PixieDust from '../../components/PixieDust.jsx';
         </h1>
       </div>
       <p class="text-xl text-white mb-8">
-        We're offering limited-time promotions to help your business grow. Explore what we have available right now.
+        Explore current offers designed to help local businesses grow.
       </p>
     </div>
   </section>
@@ -28,7 +28,7 @@ import PixieDust from '../../components/PixieDust.jsx';
   <!-- Promotions Grid -->
   <section class="py-24 px-4">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Promo 1: Free Logo Design -->
         <a href="/promotions/free-logo-design/" class="group block bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:border-brand-accent/50 hover:bg-white/[0.07] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden cursor-pointer">
           <div class="absolute -top-24 -right-24 w-48 h-48 bg-lime-500/5 blur-[80px] group-hover:bg-lime-500/20 transition-all duration-500"></div>
@@ -70,31 +70,6 @@ import PixieDust from '../../components/PixieDust.jsx';
             </span>
           </div>
         </a>
-
-
-
-        <!-- Promo 4: The Golden Ticket -->
-        <div class="gt-wrap">
-          <a href="/promotions/the-golden-ticket/" class="golden-ticket" aria-label="The Golden Ticket — 3 local businesses win a free website">
-            <span class="gt-shine" aria-hidden="true"></span>
-            <div class="gt-inner">
-              <p class="gt-admit">★ Admit One · Class of 2026 ★</p>
-              <div class="gt-icon" aria-hidden="true">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-10 h-10"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
-              </div>
-              <h3 class="gt-title font-heading text-[1.9rem] font-black mb-3">The Golden Ticket</h3>
-              <p class="gt-text text-[1.07rem] mb-4">3 local businesses win a brand-new website — we waive the full $597 setup fee for the Class of 2026.</p>
-              <ul class="gt-text space-y-2 text-[1.07rem] mb-4">
-                <li>★ $597 setup fee waived</li>
-                <li>★ 4–5 page mobile-first site</li>
-                <li>★ 30/60/90-day results tracking</li>
-                <li>★ Only 3 spots — closes Dec 15</li>
-              </ul>
-              <span class="gt-cta">Apply for a chance to win a free website →</span>
-            </div>
-          </a>
-        </div>
-
       </div>
 
       <!-- Bottom CTA -->
@@ -111,109 +86,3 @@ import PixieDust from '../../components/PixieDust.jsx';
   </section>
 
 </BaseLayout>
-
-<style>
-  /* Golden Ticket card — gold, shiny, ticket-shaped */
-  .gt-wrap {
-    display: flex;
-    position: relative;
-    filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.45)) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.5));
-    transition: transform 0.3s ease-out, filter 0.3s ease-out;
-    will-change: transform;
-  }
-  .gt-wrap:hover {
-    transform: translateY(-12px) scale(1.03);
-    filter: drop-shadow(0 0 26px rgba(253, 224, 71, 0.75)) drop-shadow(0 20px 28px rgba(0, 0, 0, 0.55));
-    z-index: 10;
-  }
-  .golden-ticket {
-    --notch: 38%;
-    position: relative;
-    display: block;
-    flex: 1;
-    overflow: hidden;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    color: #2b1a00;
-    cursor: pointer;
-    background:
-      linear-gradient(135deg, #fff6b7 0%, #fde047 16%, #f5b301 42%, #d99a06 58%, #fbd24d 80%, #c98a0b 100%);
-    box-shadow:
-      inset 0 0 0 2px rgba(255, 244, 168, 0.9),
-      inset 0 0 0 4px rgba(146, 84, 6, 0.35),
-      inset 0 3px 6px rgba(255, 255, 255, 0.6),
-      inset 0 -4px 10px rgba(120, 53, 15, 0.35);
-    /* ticket notches on both sides */
-    -webkit-mask:
-      radial-gradient(circle 15px at 0 var(--notch), #0000 97%, #000),
-      radial-gradient(circle 15px at 100% var(--notch), #0000 97%, #000);
-    -webkit-mask-composite: source-in;
-    mask:
-      radial-gradient(circle 15px at 0 var(--notch), #0000 97%, #000),
-      radial-gradient(circle 15px at 100% var(--notch), #0000 97%, #000);
-    mask-composite: intersect;
-  }
-  /* moving light sweep */
-  .gt-shine {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.85) 50%, transparent 65%);
-    transform: translateX(-130%);
-    animation: gt-sweep 4s ease-in-out infinite;
-    mix-blend-mode: soft-light;
-  }
-  @keyframes gt-sweep {
-    0%, 55% { transform: translateX(-130%); }
-    100% { transform: translateX(130%); }
-  }
-  .gt-inner { position: relative; z-index: 3; }
-  .gt-admit {
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #6b3a00;
-    margin-bottom: 0.9rem;
-  }
-  .gt-icon {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    color: #fde047;
-    background: linear-gradient(135deg, #4a2a00, #1f1100);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 3px 8px rgba(80, 40, 0, 0.45);
-  }
-  .gt-title { color: #2b1a00; text-shadow: 0 1px 0 rgba(255, 246, 183, 0.8); }
-  .gt-text { color: #4a2c00; font-weight: 500; }
-  /* perforated stub line above the call to action */
-  .gt-cta {
-    display: block;
-    margin-top: 1.25rem;
-    padding: 0.8rem 1rem;
-    border-radius: 0.6rem;
-    text-align: center;
-    font-weight: 800;
-    color: #fde047;
-    background: linear-gradient(180deg, #3d2300, #1f1100);
-    box-shadow: 0 2px 6px rgba(80, 40, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-  }
-  .gt-cta::before {
-    content: "";
-    position: absolute;
-    left: -0.4rem;
-    right: -0.4rem;
-    top: -0.75rem;
-    border-top: 2px dashed rgba(107, 58, 0, 0.55);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .gt-shine { animation: none; opacity: 0; }
-    .gt-wrap, .gt-wrap:hover { transition: none; }
-  }
-</style>

@@ -14,6 +14,8 @@ interface Props {
   ctaLabel?: string;
   standalone?: boolean;
   content?: 'website' | 'seo';
+  /** Card skin: 'glass' (default, translucent white glass) or 'charcoal' (glossy dark charcoal). */
+  skin?: 'glass' | 'charcoal';
 }
 
 const {
@@ -31,9 +33,34 @@ const {
   ctaLabel = 'Get Started',
   standalone = false,
   content = 'website',
+  skin = 'glass',
 } = Astro.props;
 
-const tiers = [
+// Card shell per skin. Full literal strings so Tailwind can scan them —
+// never interpolate partial class names.
+const cardClasses = (featured: boolean) => {
+  if (skin === 'charcoal') {
+    return featured
+      ? 'bg-[linear-gradient(165deg,#2e3138_0%,#1f2229_38%,#16181d_75%,#111318_100%)] border border-[#f3db70]/50 rounded-2xl p-6 relative z-10 scale-100 lg:scale-105 shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_0_0_1px_rgba(243,219,112,0.14),0_0_40px_rgba(132,204,22,0.10),0_20px_40px_rgba(0,0,0,0.55)] hover:bg-[linear-gradient(165deg,#373b44_0%,#262a33_38%,#1b1e24_75%,#15171d_100%)] transition-all duration-300'
+      : 'bg-[linear-gradient(165deg,#272a31_0%,#1a1c22_38%,#131418_75%,#0f1014_100%)] border border-white/10 rounded-2xl p-6 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.16),inset_0_0_0_1px_rgba(255,255,255,0.04),0_20px_40px_rgba(0,0,0,0.55)] hover:bg-[linear-gradient(165deg,#313541_0%,#212430_38%,#171920_75%,#121318_100%)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.24),inset_0_0_0_1px_rgba(255,255,255,0.06),0_24px_50px_rgba(0,0,0,0.6)] transition-all duration-300';
+  }
+  return featured
+    ? 'bg-white/[0.07] backdrop-blur-xl border border-[#f3db70]/50 rounded-2xl p-6 relative z-10 scale-100 lg:scale-105 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12),0_0_40px_rgba(132,204,22,0.10),0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.10] transition-all duration-300'
+    : 'bg-white/[0.04] backdrop-blur-xl border border-white/15 rounded-2xl p-6 relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.10),_0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.08] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),_0_24px_50px_rgba(8,9,15,0.55)] transition-all duration-300';
+};
+
+interface Tier {
+  key: string;
+  name: string;
+  launch: string;
+  monthly: string;
+  badge: string | null;
+  description: string;
+  features: string[];
+  bestFor: string;
+}
+
+const tiers: Tier[] = [
   {
     key: 'website',
     name: 'Core',
@@ -66,6 +93,7 @@ const tiers = [
       'Keyword & competitor research',
       'Search Console analysis & fixes',
       'New service/location content',
+      '<span class="animate-blog-stream [-webkit-text-stroke:0.5px_rgba(255,255,255,0.9)]">Blog</span> Buildout — Custom Content articles for your specific Niche!',
       'Google Business Profile optimization',
       'Review-generation system',
       'Local citation cleanup/buildout',
@@ -99,7 +127,7 @@ const tiers = [
 // SEO-only copy set: same prices, but the SEO levels carry their own names —
 // Found / Trusted / Hired (matching the site's three pillars) — and the bullets
 // describe the SEO work itself instead of the hosted-website bundle.
-const seoTiers = [
+const seoTiers: Tier[] = [
   {
     key: 'website',
     name: 'Found',
@@ -162,8 +190,7 @@ const seoTiers = [
   },
 ];
 
-// Single-tier "bare" mode: drop the section shell/eyebrow/notes so the card
-// can be embedded inside another page section (e.g. the Golden Ticket page).
+// Single-tier "bare" mode: drop the section shell/eyebrow/notes when embedding a card.
 const activeTiers = content === 'seo' ? seoTiers : tiers;
 const visibleTiers = only ? activeTiers.filter((tier) => tier.key === only) : activeTiers;
 const gridClass = only ? 'max-w-md mx-auto grid gap-8 mb-0' : 'grid md:grid-cols-3 gap-8 mb-16';
@@ -196,8 +223,7 @@ const shellClass = bare ? '' : 'py-24 px-4';
       {visibleTiers.map((tier) => (
         <div
           class:list={[
-            'bg-white/[0.04] backdrop-blur-xl border rounded-2xl p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.10),_0_20px_40px_rgba(8,9,15,0.45)] hover:bg-white/[0.08] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),_0_24px_50px_rgba(8,9,15,0.55)] relative transition-all duration-300',
-            tier.badge ? 'border-[#f3db70]/50 bg-white/[0.07] z-10 scale-100 lg:scale-105' : 'border-white/15',
+            cardClasses(Boolean(tier.badge)),
             focus === tier.key ? 'ring-2 ring-brand-accent ring-offset-2 ring-offset-[#091523]' : '',
           ]}
         >
@@ -208,7 +234,7 @@ const shellClass = bare ? '' : 'py-24 px-4';
           )}
           <h3 class="font-heading text-4xl md:text-5xl font-black text-center mb-1 bg-[linear-gradient(110deg,#e8e8e8,45%,#ffffff,55%,#d0d0d0)] bg-[length:200%_auto] animate-shine bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">{tier.name}</h3>
           <p class="text-xs uppercase tracking-widest text-center mb-1 bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent">Month-to-month · cancel anytime</p>
-          <p class="text-white/70 text-sm mb-6 italic">{tier.description}</p>
+          <p class={`text-sm mb-6 italic ${skin === 'charcoal' ? 'text-white/80' : 'text-white/70'}`}>{tier.description}</p>
           <div class="mb-6">
             <div class="flex flex-col items-center justify-center">
               {variant === 'monthly-first' ? (
@@ -234,9 +260,9 @@ const shellClass = bare ? '' : 'py-24 px-4';
               )}
             </div>
           </div>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-1">
+          <ul class={`space-y-3 text-sm mb-8 flex-1 ${skin === 'charcoal' ? 'text-white/85' : 'text-white/70'}`}>
             {tier.features.map((feature) => (
-              <li>• {feature}</li>
+              feature.includes('<') ? <li set:html={`• ${feature}`} /> : <li>• {feature}</li>
             ))}
           </ul>
           <p class="text-brand-accent/90 text-xs font-semibold mb-4">Best for: {tier.bestFor}</p>

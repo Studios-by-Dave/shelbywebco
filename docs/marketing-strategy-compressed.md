@@ -2,7 +2,7 @@
 **Compiled:** Nov 19, 2026 · **Source:** Strategy chat + site project-status.md
 **Business:** Shelby Web Company (Shelby, NC) · Owner: Dave
 **Positioning:** Website Rescue — fix websites that don't work (visibility, credibility, leads); builds secondary.
-**Offer ladder:** Free SEO Audit → $197 Website Rescue Report (credited toward fixes within 60 days) → Fix packages $299–$749 → Ongoing plans $149–$297/mo, $497 build.
+**Current pricing:** Free SEO Audit ($0) → $197 Website Rescue Report (credited toward the $597 rescue setup within 60 days) → Existing-site rescue / Core build setup $597; Plus build $998–$1,498; Ultra build $1,798–$2,498 → monthly plans $297 / $597 / $797. Site-only Care Plan: $597 setup + $149/month. No separate fix packages.
 **Differentiator:** Month-to-month, cancel anytime, local, responds within 24 hrs, free audit first.
 **Hero mechanism:** "Found / Trusted / Hired" — every site has three jobs: get found on Google, look trusted to customers, get called. Fix the weakest link first.
 **Target:** Service business owners — home remodelers (favorite), roofers, landscapers (broad for now). Cleveland County + surrounding (Kings Mountain, Boiling Springs, Gastonia, Forest City).

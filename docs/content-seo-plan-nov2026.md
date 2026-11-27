@@ -64,11 +64,11 @@ The homepage converts 0 of 98 organic sessions. Nothing else in this plan matter
 
 Current:
 - Title: `Website Rescue, SEO Fixes & New Website Builds | Shelby Web Co.`
-- Description: `Website rescue, SEO fixes, and strategic website builds from $497. Month-to-month, cancel anytime. Web design and SEO in Shelby, NC. Call (704) 473-8188.`
+- Description: `Website rescue in Shelby, NC. Core setup $597; Plus $998–$1,498; Ultra $1,798–$2,498. Monthly plans from $297. Call (704) 473-8188.`
 
 Proposed (test one change at a time, keep under limits):
 - Title: `Website Rescue & Local SEO in Shelby, NC | Shelby Web Co.` (55 chars)
-- Description: `Website not bringing leads? We fix visibility, credibility, and conversion for Shelby-area businesses — new builds from $497. Free SEO audit.` (140)
+- Description: `Website not bringing leads? We fix visibility, credibility, and conversion for Shelby-area businesses. Core setup $597; builds up to $2,498. Free SEO audit.` (150)
 
 Rationale: leads with the local query + the rescue offer, drops the vague "strategic".
 
