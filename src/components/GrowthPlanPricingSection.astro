@@ -57,7 +57,7 @@ const tiers = [
   {
     key: 'seo',
     name: 'Plus',
-    launch: '$597 setup',
+    launch: '$998 – $1,498',
     monthly: '$597',
     badge: 'Most Popular',
     description: 'Active local SEO, content, Google Business Profile support, and reporting for real visibility growth.',
@@ -78,7 +78,7 @@ const tiers = [
   {
     key: 'leads',
     name: 'Ultra',
-    launch: '$597 setup',
+    launch: '$1,798 – $2,498',
     monthly: '$797',
     badge: null,
     description: 'SEO plus conversion optimization, lead tracking, follow-up workflows, and priority support.',
@@ -96,12 +96,13 @@ const tiers = [
   },
 ];
 
-// SEO-only copy set: same plan names/prices, but the bullets describe the
-// SEO work itself instead of the hosted-website bundle.
+// SEO-only copy set: same prices, but the SEO levels carry their own names —
+// Found / Trusted / Hired (matching the site's three pillars) — and the bullets
+// describe the SEO work itself instead of the hosted-website bundle.
 const seoTiers = [
   {
     key: 'website',
-    name: 'Core',
+    name: 'Found',
     launch: '$597 setup',
     monthly: '$297',
     badge: null,
@@ -120,7 +121,7 @@ const seoTiers = [
   },
   {
     key: 'seo',
-    name: 'Plus',
+    name: 'Trusted',
     launch: '$597 setup',
     monthly: '$597',
     badge: 'Most Popular',
@@ -141,7 +142,7 @@ const seoTiers = [
   },
   {
     key: 'leads',
-    name: 'Ultra',
+    name: 'Hired',
     launch: '$597 setup',
     monthly: '$797',
     badge: null,
@@ -221,8 +222,8 @@ const shellClass = bare ? '' : 'py-24 px-4';
                 <>
                   <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">One-time</span>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Setup</span>
-                  <span class="text-[2.4rem] md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
-                    {tier.launch}
+                  <span class="text-[3rem] md:text-[3.6rem] font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
+                    {tier.launch.split(' ')[0]}<span class="block text-center text-lg md:text-xl font-extrabold tracking-wide mt-1">{tier.launch.split(' ').slice(1).join(' ')}</span>
                   </span>
                   <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">then, per month</span>
                   <div class="w-full bg-brand-accent/10 border border-brand-accent/25 rounded-xl py-2 px-3 text-center">
