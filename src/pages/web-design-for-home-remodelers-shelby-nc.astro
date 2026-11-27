@@ -6,9 +6,9 @@ import remodelers1 from '../../assets/industry pages/remodelers_1.webp';
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  'serviceType': 'Web Design for Home Remodelers',
-  'name': 'Web Design for Home Remodelers in Shelby, NC',
-  'description': 'Lead-generating websites built specifically for home remodeling companies in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. Custom design, local SEO, and before/after showcase systems.',
+  'serviceType': 'Websites & SEO for Kitchen and Bath Remodelers and Remodeling Contractors',
+  'name': 'Websites & SEO for Home Remodelers and Contractors in Shelby, NC',
+  'description': 'Websites, local SEO, and website rescue for kitchen and bath remodelers and remodeling contractors in Shelby, Gastonia, Kings Mountain, Forest City, and the surrounding area. $597 setup, then plans from $297/month. Month-to-month, no lock-in.',
   'provider': {
     '@type': 'LocalBusiness',
     'name': 'Shelby Web Company',
@@ -25,14 +25,52 @@ const serviceSchema = {
   ],
   'url': 'https://www.shelbywebco.com/web-design-for-home-remodelers-shelby-nc/'
 };
+
+const faqItems = [
+  {
+    question: 'Why isn’t my remodeling website getting leads?',
+    answer: 'Usually it isn’t being found, isn’t showing in the map results, or doesn’t give a homeowner a clear reason to call. The free audit tells you which before you spend anything.'
+  },
+  {
+    question: 'Why am I not showing in the map pack for “kitchen remodeler near me”?',
+    answer: 'Often the Google Business Profile is unclaimed, uses the wrong categories, or has too few recent reviews. We check the profile, categories, and location pages as part of the audit.'
+  },
+  {
+    question: 'Do I need separate kitchen and bathroom remodeling pages?',
+    answer: 'Yes, if you want to be found for both. One combined page splits the intent. Each service gets its own page, photos, and local targeting.'
+  },
+  {
+    question: 'Should I show prices on my remodeling site?',
+    answer: 'A typical project range plus a clear process usually helps. It answers the homeowner’s first question and filters out tire-kickers without committing you to a fixed quote.'
+  },
+  {
+    question: 'Is SEO worth it, or should I just buy leads?',
+    answer: 'Paid leads are faster but cost more each time and skew toward price-shoppers. Practitioners commonly estimate SEO takes about 3–6 months, but you own the channel and it keeps working. We don’t guarantee rankings or lead counts.'
+  },
+  {
+    question: 'Who owns my website and Google Business Profile if I leave?',
+    answer: 'You do. Your domain, content, and Google profile stay in your name. Files are handed over on request. We’re non-exclusive and month-to-month — cancel any time with 30 days’ written notice.'
+  }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map((item) => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': { '@type': 'Answer', 'text': item.answer }
+  }))
+};
 ---
 
 <BaseLayout
   bgVariant="blue"
-  title="Home Remodeler Websites | Shelby, NC"
-  description="Lead-generating websites for home remodelers in Shelby and Cleveland County. Custom design, local SEO, and before/after galleries. Call (704) 473-8188."
+  title="Websites & SEO for Remodelers and Contractors | Shelby, NC"
+  description="Websites, SEO, and website rescue for kitchen and bath remodelers and remodeling contractors in Shelby and Cleveland County. $597 setup, then $297/month. Call (704) 473-8188."
 >
   <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
 
   <!-- Hero Section -->
   <section class="py-10 lg:py-16 px-4 relative overflow-hidden" data-animate>
@@ -40,13 +78,14 @@ const serviceSchema = {
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
     <div class="max-w-5xl mx-auto text-center relative z-10">
       <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-accent/30 bg-brand-accent/20 text-brand-accent text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
-        ✦ Built for Home Remodelers
+        ✦ Built for Remodelers &amp; Contractors
       </div>
       <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.9]">
-        Websites That Turn <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Before &amp; After</span> Into Booked Jobs.
+        Websites for Remodelers That Get <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Found, Trusted</span> and Called.
       </h1>
+      <p class="text-2xl md:text-3xl font-bold text-[#f4c95d] mb-3">$597 setup. Month-to-month.</p>
       <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Remodeling is a visual business. We build fast, quote-ready sites that put your best projects front and center — so homeowners in <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span> call you first.
+        Kitchen and bath remodelers and remodeling contractors priced out of $1,500+/month agencies: we fix the site you have or build one that turns <span class="text-white font-bold">before &amp; after</span> into booked jobs across <span class="text-white font-bold">Shelby, Gastonia, Kings Mountain &amp; Forest City</span>. You own your site, your domain, and your Google profile.
       </p>
       <div class="flex flex-col sm:flex-row gap-5 justify-center">
 <a
@@ -102,19 +141,19 @@ const serviceSchema = {
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
-          <div class="text-brand-accent text-4xl font-black mb-2">1 week</div>
+          <div class="text-brand-accent text-4xl font-black mb-2">Found</div>
           <div class="text-white font-bold text-lg mb-2">Homeowners Judge Before They Visit</div>
-          <p class="text-white/80 text-sm">A homeowner choosing a remodeler spends 10+ minutes on your site. A weak portfolio or a slow site means the next remodeler in the search results gets the call.</p>
+          <p class="text-white/80 text-sm">A weak portfolio or a slow site means the next remodeler in the search results gets the call. We check whether Google can find you and whether your best work is visible.</p>
         </div>
         <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
-          <div class="text-brand-accent text-4xl font-black mb-2">$25k+</div>
-          <div class="text-white font-bold text-lg mb-2">Per Kitchen Remodel</div>
-          <p class="text-white/80 text-sm">The average kitchen remodel tops $25,000. A website that converts even one extra project a month pays for itself many times over.</p>
+          <div class="text-brand-accent text-4xl font-black mb-2">Hired</div>
+          <div class="text-white font-bold text-lg mb-2">High-Ticket Projects Start With a Call</div>
+          <p class="text-white/80 text-sm">A kitchen or bath project is a big decision. Your site has to make it easy to call, and your follow-up has to be fast. Industry sources report many home-service leads aren't answered within an hour.</p>
         </div>
         <div class="bg-white/[0.04] p-8 rounded-2xl border border-white/10">
-          <div class="text-brand-blue text-4xl font-black mb-2">#1</div>
-          <div class="text-white font-bold text-lg mb-2">Map Pack = Remodeling Highway</div>
-          <p class="text-white/80 text-sm">Remodel searches live and die in the map pack. We tune your Google Business Profile with portfolio photos, remodel categories, and steady reviews so your showroom of work is the first click.</p>
+          <div class="text-brand-blue text-4xl font-black mb-2">Trusted</div>
+          <div class="text-white font-bold text-lg mb-2">The Map Pack Matters</div>
+          <p class="text-white/80 text-sm">Remodel searches often start in the map results. We tune your Google Business Profile with portfolio photos, correct remodel categories, and steady reviews. We don't promise a rank.</p>
         </div>
       </div>
     </div>
@@ -170,22 +209,46 @@ const serviceSchema = {
         </div>
         <div class="grid gap-4">
           <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
-            <div class="text-brand-accent text-3xl font-black mb-1">100%</div>
-            <div class="text-white font-bold mb-1">Google Indexing Guarantee</div>
-            <p class="text-white/70 text-sm">Remodeling sites fully indexed in as little as 72 hours — photography included.</p>
+            <div class="text-brand-accent text-3xl font-black mb-1">5.0</div>
+            <div class="text-white font-bold mb-1">Google Rating</div>
+            <p class="text-white/70 text-sm">Local, direct service from Dave — not an account manager three states away.</p>
           </div>
           <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
-            <div class="text-brand-accent text-3xl font-black mb-1">240%</div>
-            <div class="text-white font-bold mb-1">Avg. Traffic Growth</div>
-            <p class="text-white/70 text-sm">Remodeling clients commonly more than double local impressions after launch.</p>
+            <div class="text-brand-accent text-3xl font-black mb-1">$597</div>
+            <div class="text-white font-bold mb-1">Setup, one time</div>
+            <p class="text-white/70 text-sm">New site or existing-site rescue. Scope confirmed after the audit.</p>
           </div>
           <div class="bg-white/[0.04] p-6 rounded-2xl border border-white/10">
-            <div class="text-brand-blue text-3xl font-black mb-1">Top 5</div>
-            <div class="text-white font-bold mb-1">Remodeling Map Pack</div>
-            <p class="text-white/70 text-sm">We put remodelers at the top of the map, where homeowners build their shortlist.</p>
+            <div class="text-brand-blue text-3xl font-black mb-1">90 days</div>
+            <div class="text-white font-bold mb-1">Milestone Audit</div>
+            <p class="text-white/70 text-sm">We report, then tell you honestly if there's no meaningful work left. No endless retainer.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Remodeler FAQ -->
+  <section class="py-20 px-4 border-t border-white/10" data-animate aria-labelledby="remodeler-faq-heading">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-brand-accent text-label uppercase tracking-widest mb-4 text-center">✦ Common Questions</p>
+      <h2 id="remodeler-faq-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-10 text-center">
+        Straight Answers for Remodelers &amp; Contractors
+      </h2>
+      <div class="space-y-4">
+        {faqItems.map((item) => (
+          <details class="bg-white/[0.04] border border-white/10 rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-semibold text-white text-lg flex items-center justify-between gap-4 list-none marker:hidden">
+              {item.question}
+              <span class="text-brand-accent text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="text-white/75 text-base leading-relaxed mt-4">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+      <p class="text-center text-white/60 text-sm mt-8">
+        Want a deeper look at your own site? <a href="/promotions/free-seo-audit/" class="text-brand-accent underline decoration-brand-accent/40 underline-offset-4 hover:text-brand-accent-light">Start with the free SEO audit →</a>
+      </p>
     </div>
   </section>
 

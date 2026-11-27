@@ -46,7 +46,7 @@ If nobody owns that list, the site decays — slow, broken forms, stale content.
 - Foundational SEO
 - A real person to call
 
-Our [Core plan](/pricing/) is $597 launch + $297/month, month-to-month — cancel at any time. That is a published number, not a "custom quote" gameshow.
+Our [Core plan](/pricing/) is $597 setup + $297/month, month-to-month — cancel any time with 30 days' written notice. That is a published number, not a "custom quote" gameshow.
 
 ## How to decide
 

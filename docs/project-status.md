@@ -1,5 +1,10 @@
 # Project Status — Website Rescue Transition
-**Last updated:** Nov 11, 2026 · **Branch:** main · **Latest commit:** b086575
+**Last updated:** Nov 26, 2026 · **Branch:** main
+
+## Pricing restructure (Nov 26, 2026 — in progress, not yet pushed)
+One ladder site-wide: **Free audit $0 → Rescue Report $197 (credited toward setup within 60 days) → $597 setup (new site or existing-site rescue) → Core $297/month / Plus $597/month / Ultra $797/month.** Site-only Care Plan is a footnote: $597 setup + $149/month. No ranges, no separate fix packages, no Full Rescue bundle — the old `/services/full-rescue/` URL now serves "Website Setup" copy so links keep working. Month-to-month, cancel with 30 days' written notice everywhere.
+Remodelers are the primary audience; other industry pages remain live but secondary. New pages: `/web-design-for-kitchen-remodelers-shelby-nc/` and `/web-design-for-bathroom-remodelers-shelby-nc/`.
+`npx astro check --no-sync`: 0 errors. ESLint: 14 pre-existing errors, none from this pass. Build/push still awaiting authorization.
 
 ## Positioning (decided)
 Core idea: **Website Rescue** — fix websites that don't work (visibility, credibility, leads); builds are secondary. Hierarchy: fixes first, design/build second. Full strategy brief lives with Dave; key decisions below.

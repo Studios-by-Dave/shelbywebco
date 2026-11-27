@@ -63,7 +63,7 @@ export default function DesktopNav() {
                 <p className="text-[#f3db70] text-xs uppercase tracking-widest mb-2 font-bold">Our Services</p>
                 <div className="space-y-1">
                   <a href="/services/" className="block text-brand-blue hover:text-white transition-colors py-1 font-bold">View All Services →</a>
-                  <a href="/services/full-rescue/" className="block text-brand-blue-light hover:text-white transition-colors py-1 font-semibold">Full Rescue — from $749</a>
+                  <a href="/services/full-rescue/" className="block text-brand-blue-light hover:text-white transition-colors py-1 font-semibold">Website Setup — $597</a>
                   <a href="/services/web-design/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Web Design</a>
                   <a href="/services/branding/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">Logo Design & Branding</a>
                   <a href="/services/seo/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold">SEO Services</a>
@@ -111,7 +111,9 @@ export default function DesktopNav() {
                 </button>
                 {industriesOpen && (
                   <div className="grid grid-cols-2 gap-1">
-                    <a href="/web-design-for-home-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Home Remodelers</a>
+                    <a href="/web-design-for-home-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Home Remodelers &amp; Contractors</a>
+                    <a href="/web-design-for-kitchen-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Kitchen Remodelers</a>
+                    <a href="/web-design-for-bathroom-remodelers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Bathroom Remodelers</a>
                     <a href="/web-design-for-construction-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Construction Trades</a>
                     <a href="/web-design-for-landscapers-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Landscapers</a>
                     <a href="/web-design-for-tree-specialists-shelby-nc/" className="block text-white hover:text-brand-cyan transition-colors py-1 font-semibold text-xs">Tree Specialists</a>
@@ -203,6 +205,7 @@ export default function DesktopNav() {
         )}
       </div>
       
+      <a href="/free-tools/remodeler-lead-leak-score/" className="text-brand-accent text-[1.05rem] leading-relaxed font-semibold tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-brand-accent-light transition-all duration-300 border border-transparent hover:border-brand-accent/60 hover:bg-brand-accent/10 hover:shadow-[0_0_15px_rgba(132,204,22,0.3)] px-3 py-1.5 rounded-lg">Free Tools</a>
       <a href="/contact/" className="text-white text-[1.05rem] leading-relaxed font-medium tracking-tight drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] hover:text-white transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg">Contact</a>
       <a href="/blog/" className="font-poofy font-bold text-2xl animate-blog-stream drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] transition-all duration-300 border border-transparent hover:border-white/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] px-3 py-1.5 rounded-lg" style={{ WebkitTextStroke: '1px white' }}>Blog</a>
     </div>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'Websites & SEO for Kitchen Remodelers and Remodeling Contractors',
+  'name': 'Kitchen Remodeler Websites & SEO in Shelby, NC',
+  'description': 'Websites, local SEO, and website rescue for kitchen remodelers and remodeling contractors in Shelby, Gastonia, Kings Mountain, Forest City, and surrounding Western NC. $597 setup, then plans from $297/month.',
+  'provider': {
+    '@type': 'LocalBusiness',
+    'name': 'Shelby Web Company',
+    'url': 'https://www.shelbywebco.com',
+    'telephone': '(704) 473-8188'
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Shelby, NC' },
+    { '@type': 'City', 'name': 'Gastonia, NC' },
+    { '@type': 'City', 'name': 'Kings Mountain, NC' },
+    { '@type': 'City', 'name': 'Forest City, NC' },
+    { '@type': 'City', 'name': 'Boiling Springs, NC' },
+    { '@type': 'City', 'name': 'Polkville, NC' }
+  ],
+  'url': 'https://www.shelbywebco.com/web-design-for-kitchen-remodelers-shelby-nc/'
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'Do I need a separate kitchen remodeling page?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes. Homeowners searching for a kitchen remodel are looking for a specific outcome. A dedicated page with your own kitchen photos, process, and project range gives those searches somewhere to land. One combined kitchen-and-bath page splits that intent.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'What should a kitchen remodeling page include?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Your best before-and-after kitchen work, the cities you serve, a typical project range, a short process, real reviews, and a clear way to ask for an estimate. We build those as standard sections.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'How fast can I get found for kitchen remodel searches?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'We do not promise a rank or a timeline. Practitioners commonly estimate SEO takes about 3–6 months. Paid leads are faster but cost more each time and skew toward price-shoppers.'
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  bgVariant="blue"
+  title="Websites & SEO for Kitchen Remodelers | Shelby, NC | Shelby Web Co."
+  description="Websites and SEO for kitchen remodelers and remodeling contractors in Shelby and Cleveland County. $597 setup, then $297/month. Month-to-month. Call (704) 473-8188."
+>
+  <script is:inline set:html={JSON.stringify(serviceSchema)} type="application/ld+json"></script>
+  <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
+
+  <section class="py-14 lg:py-20 px-4 relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-darkest to-brand-darkest z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.12),transparent_55%)] z-0"></div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <p class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-accent/30 bg-brand-accent/20 text-brand-accent text-sm font-bold uppercase tracking-[0.2em] backdrop-blur-sm">✦ For Kitchen Remodelers &amp; Contractors</p>
+      <h1 class="font-heading text-5xl md:text-7xl font-black text-white mb-6 tracking-tight leading-[0.95]">
+        Kitchen Remodeling Websites That Get <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Found and Called</span>
+      </h1>
+      <p class="text-2xl md:text-3xl font-bold text-[#f4c95d] mb-4">$597 setup. Month-to-month.</p>
+      <p class="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+        A kitchen search is high intent. We give remodelers a dedicated page for that intent — your own before-and-after work, a typical project range, and a clear path to an estimate — backed by local SEO across Shelby, Gastonia, Kings Mountain, and Forest City.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/promotions/free-seo-audit/" class="cta-glow-shine inline-block bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] text-black px-9 py-4 rounded-xl font-bold text-lg border border-white/20 hover:-translate-y-[1px] transition-all duration-300">Get My Free Audit</a>
+        <a href="tel:+17044738188" class="inline-flex items-center justify-center border border-brand-accent/40 text-brand-accent px-9 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent/10 transition-all duration-300">(704) 473-8188</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-white/[0.04]" data-animate>
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Built Around Kitchen Searches</p>
+        <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-4">What Your Kitchen Page Actually Needs</h2>
+        <p class="text-white/70 max-w-2xl mx-auto">No filler. Just the things that make a homeowner stop scrolling and pick up the phone.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Your Own Before &amp; Afters</h3>
+          <p class="text-white/80 leading-relaxed">Real kitchen projects with finish details — cabinets, counters, lighting, and layout — so homeowners can picture your work in their home.</p>
+        </div>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">A Typical Project Range</h3>
+          <p class="text-white/80 leading-relaxed">A plain-English range and what changes it. It answers the first question and filters out inquiries that aren't a fit.</p>
+        </div>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Local Pages That Rank</h3>
+          <p class="text-white/80 leading-relaxed">A page for kitchen remodeling in each city you serve, so your name shows up when a homeowner searches your area.</p>
+        </div>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Tap-to-Call &amp; Fast Reply</h3>
+          <p class="text-white/80 leading-relaxed">Calls you can tap from a phone without scrolling, missed-call text-back, and an auto-reply on every form. Speed of follow-up matters.</p>
+        </div>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Reviews in the Right Places</h3>
+          <p class="text-white/80 leading-relaxed">A review request system and replies, tied to a complete Google Business Profile with the correct categories.</p>
+        </div>
+        <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7">
+          <h3 class="text-card-title font-bold text-brand-accent mb-3">Monthly Tracking</h3>
+          <p class="text-white/80 leading-relaxed">A monthly snapshot of traffic, rankings, calls, and forms — plus a 90-day audit so you know whether the work is paying off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4" data-animate aria-labelledby="kitchen-faq-heading">
+    <div class="max-w-4xl mx-auto">
+      <h2 id="kitchen-faq-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-10 text-center">Kitchen Remodeling Website FAQs</h2>
+      <div class="space-y-4">
+        {[
+          { q: 'Do I need a separate kitchen remodeling page?', a: 'Yes. A dedicated page gives high-intent kitchen searches somewhere to land. One combined kitchen-and-bath page splits that intent.' },
+          { q: 'What should the page include?', a: 'Your own before-and-afters, the cities you serve, a typical project range, a short process, real reviews, and a clear estimate request.' },
+          { q: 'How fast will I rank?', a: 'We do not promise rankings or lead counts. Practitioners commonly estimate SEO takes about 3–6 months; paid leads are faster but cost more each time.' }
+        ].map((item) => (
+          <details class="bg-white/[0.04] border border-white/10 rounded-2xl p-5 group">
+            <summary class="cursor-pointer font-semibold text-white text-lg flex items-center justify-between gap-4 list-none marker:hidden">{item.q}<span class="text-brand-accent text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary>
+            <p class="text-white/75 text-base leading-relaxed mt-4">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-brand-accent/90" data-animate>
+    <div class="max-w-4xl mx-auto text-center text-brand-darkest">
+      <h2 class="font-heading text-4xl md:text-5xl font-black mb-6">Ready to Win More Kitchen Searches?</h2>
+      <p class="text-xl font-medium mb-8 opacity-90">Start with a free audit. We'll tell you what's working, what's broken, and which path makes sense.</p>
+      <a href="/contact/" class="inline-block bg-white text-brand-darkest px-9 py-4 rounded-xl font-black text-lg hover:scale-105 transition-all duration-300 shadow-2xl">Book a Free Chat</a>
+    </div>
+  </section>
+</BaseLayout>

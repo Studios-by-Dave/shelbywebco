@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import LeadLeakScore from '../../components/LeadLeakScore.astro';
+
+const faqItems = [
+  {
+    question: 'Is this really free?',
+    answer: 'Yes. The 12 questions, your score, and the revenue estimate are free with no email required. We only ask for contact details if you want the written breakdown sent to you.'
+  },
+  {
+    question: 'How is the score calculated?',
+    answer: 'Each of the 12 answers is scored 0, 1, or 2, with 2 being the strongest answer. The four questions in each area — Found, Trusted, and Hired — add up to a pillar score out of 100, and the 12 together give your overall score. It is a self-assessment based on your answers, not an audit of your site. The free SEO audit is the real verification.'
+  },
+  {
+    question: 'Is my data shared?',
+    answer: 'No. We use your name, email, and website URL only to send your breakdown and follow up. We do not sell or share your details, and your quiz answers stay in the page until you submit.'
+  },
+  {
+    question: 'How long does it take?',
+    answer: 'Most owners finish in about three minutes. You can go back and change any answer before you see your results.'
+  },
+  {
+    question: 'What happens after I submit?',
+    answer: 'Dave reads your answers and takes a look at the website URL you provided, then sends a written breakdown with specific notes instead of a generic pitch. There is no obligation and no auto-email sequence.'
+  },
+  {
+    question: 'Do I need to be a remodeler?',
+    answer: 'The questions are written for kitchen and bath remodelers and remodeling contractors, but any home-service business owner will find most of them relevant.'
+  },
+  {
+    question: 'Why is my website not getting leads?',
+    answer: 'Usually one of three things: Google is not finding it, you are not showing in the map results, or the pages do not give a homeowner a clear reason to call. The free audit tells you which applies before you spend anything.'
+  },
+  {
+    question: 'Should I put prices on my remodeling site?',
+    answer: 'A typical project range plus a short process usually helps. It answers the first question a homeowner has and filters out inquiries that are not a fit.'
+  },
+  {
+    question: 'Who owns my website and Google Business Profile if I leave an agency?',
+    answer: 'You do. Your domain, content, and Google profile stay in your name. Website files are handed over on request. Our plans are month-to-month with 30 days’ written notice to cancel.'
+  }
+];
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/',
+  'url': 'https://www.shelbywebco.com/free-tools/remodeler-lead-leak-score/',
+  'name': 'Free Lead Leak Score for Remodelers & Contractors',
+  'description': 'A free 12-question self-assessment and revenue calculator for remodeling and contractor business owners — see where leads leak before you hand over any contact details.',
+  'inLanguage': 'en-US',
+  'isPartOf': { '@id': 'https://www.shelbywebco.com/#website' },
+  'publisher': { '@id': 'https://www.shelbywebco.com/#localbusiness' }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map((item) => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': { '@type': 'Answer', 'text': item.answer }
+  }))
+};
+---
+
+<BaseLayout
+  title="Free Lead Leak Score for Remodelers & Contractors | Shelby Web Co."
+  description="Free 12-question quiz and revenue calculator for remodeling and contractor business owners. Find where leads leak — no email needed to see your score."
+  bgVariant="blue"
+>
+  <JsonLd data={[webPageSchema, faqSchema]} />
+
+  <!-- Hero -->
+  <section class="pt-14 pb-10 px-4 sm:pt-20" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-flex items-center space-x-2 rounded-full py-1.5 px-4 mb-6 bg-white/10 border border-white/20 backdrop-blur">
+        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(132,204,22,0.8)]"></span>
+        <span class="text-white font-bold text-sm tracking-wide">FREE TOOL · REMODELERS &amp; CONTRACTORS</span>
+      </span>
+      <h1 class="font-heading text-[2.75rem] sm:text-[clamp(2.5rem,5.5vw,4rem)] lg:text-[4rem] font-black mb-5 leading-[1.05] tracking-tight text-white">
+        Find Where Your <span class="text-brand-accent">Remodeling</span> Business Is Leaking Leads
+      </h1>
+      <p class="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
+        A free Lead Leak Score for remodeling and contractor business owners. Twelve quick questions, a dollar estimate, and a clear next step — no email needed to see your results.
+      </p>
+      <p class="text-white/80 text-sm flex items-center justify-center gap-1.5 mt-5">
+        <span class="text-brand-accent leading-none">★★★★★</span>
+        5.0 on Google · CompTIA A+ Certified · Local to Shelby
+      </p>
+    </div>
+  </section>
+
+  <!-- Tool -->
+  <section class="px-4 pb-8" data-animate>
+    <div class="max-w-5xl mx-auto">
+      <LeadLeakScore />
+    </div>
+  </section>
+
+  <!-- How it's scored -->
+  <section class="py-14 px-4" data-animate aria-labelledby="scored-heading">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-brand-accent text-label uppercase tracking-widest mb-4 text-center">✦ How This Is Scored</p>
+      <h2 id="scored-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-6 text-center leading-tight">
+        Three Pillars. Twelve Checks. One Honest Starting Point.
+      </h2>
+      <p class="text-white/75 text-body-lg leading-relaxed max-w-3xl mx-auto text-center mb-10">
+        Every website has three jobs: get <span class="text-brand-accent font-semibold">found</span>, look <span class="text-[#22d3ee] font-semibold">trusted</span>, and get <span class="text-[#f4c95d] font-semibold">called</span>. This tool checks each one. It is a self-assessment based on your own answers — the free SEO audit is the real verification.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-brand-accent/25 bg-white/[0.03] p-6">
+          <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Found</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Can Google and homeowners find you?</h3>
+          <p class="text-white/75 leading-relaxed">Profile categories, map results, service and city pages, and indexing.</p>
+        </div>
+        <div class="rounded-2xl border border-[#22d3ee]/25 bg-white/[0.03] p-6">
+          <p class="text-[#22d3ee] text-xs font-bold uppercase tracking-widest mb-2">Trusted</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Do they believe you?</h3>
+          <p class="text-white/75 leading-relaxed">Recent reviews, replies, your own before-and-after photos, and clear pricing or process.</p>
+        </div>
+        <div class="rounded-2xl border border-[#f4c95d]/25 bg-white/[0.03] p-6">
+          <p class="text-[#f4c95d] text-xs font-bold uppercase tracking-widest mb-2">Hired</p>
+          <h3 class="font-heading text-xl font-bold text-white mb-3">Do they actually call?</h3>
+          <p class="text-white/75 leading-relaxed">Tap-to-call, response time, missed-call text-back, and knowing where jobs come from.</p>
+        </div>
+      </div>
+      <p class="text-white/55 text-sm text-center mt-7 max-w-2xl mx-auto">
+        The revenue estimate uses your own numbers and a conservative recapture assumption that you can change. It is an estimate, not a guarantee of revenue or leads.
+      </p>
+    </div>
+  </section>
+
+  <FaqSection items={faqItems} heading="Lead Leak Score FAQs" />
+
+  <!-- Next steps -->
+  <section class="py-16 px-4" data-animate>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-5">Ready to Verify the Score?</h2>
+      <p class="text-body-lg text-white/80 mb-8">
+        A free audit shows what is really happening on your site. If fixes are needed, the path is simple: $197 report (credited toward setup), $597 setup, then a monthly plan from $297/month.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/promotions/free-seo-audit/" class="cta-glow-shine inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] px-8 py-4 font-bold text-black border border-white/20 transition-all duration-300 hover:-translate-y-[1px]">Get My Free SEO Audit</a>
+        <a href="/pricing/" class="rounded-full border border-white/30 bg-white/5 px-8 py-4 font-semibold text-white transition-all hover:bg-white/10 hover:border-white/50">See Pricing →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

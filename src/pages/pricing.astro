@@ -1,15 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GrowthPlanPricingSection from '../components/GrowthPlanPricingSection.astro';
-import marbleBg from '../../assets/marble-800x530.webp';
-import Image from '../components/OptimizedImage.astro';
-import pricingCompare from '../../assets/pricing_chart_2.jpg';
 import PricingFaqBoard from '../components/PricingFaqBoard.astro';
 import GoogleReview from '../components/GoogleReview.astro';
 // NOTE: the Paul R. Google Review remains disabled (removed by request, Nov 2026)
 
-// Fix matrix: which rescue path covers which fix.
-// Column order = Visibility, Credibility, Conversion, Full Rescue.
+// Setup coverage: the fix areas a single $597 setup can include, by pillar.
 const fixMatrix = [
   {
     group: 'Found',
@@ -60,7 +56,15 @@ const faqSchema = {
       "name": "Do you offer payment plans?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — a launch fee followed by one monthly payment. Core is $597 to launch then $297/month, Plus is $798–$998 then $597/month, and Ultra is $998–$1,498 then $797/month. All plans are month-to-month with no contracts, and you can cancel at any time."
+        "text": "Every plan is $597 setup, one time, followed by one monthly payment: Core $297/month, Plus $597/month, or Ultra $797/month. All plans are month-to-month. Cancel any time with 30 days' written notice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the $597 setup cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One flat $597 setup fee covers a new site or fixing the one you have — new build or existing-site rescue. Scope is confirmed after the audit. It can cover Found (indexing, technical SEO, Google Business Profile), Trusted (real copy, your own photos, trust signals), Hired (calls, forms, service pages, lead tracking), or all three."
       }
     },
     {
@@ -68,7 +72,7 @@ const faqSchema = {
       "name": "Is there a discount if I pay upfront?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. If you pay your entire build fee plus your first month of SEO service upfront in a single payment, we apply an instant $50 discount to your total. It's the same plan and the same work — just one payment instead of two."
+        "text": "Yes. If you pay your entire $597 setup plus your first monthly payment upfront in a single payment, we apply an instant $50 discount to your total. It's the same plan and the same work — just one payment instead of two."
       }
     },
     {
@@ -141,7 +145,7 @@ const faqSchema = {
 
 <BaseLayout 
   title="Web Design & SEO Pricing in Shelby, NC"
-  description="Transparent pricing from Shelby Web Company — websites from $597 to launch, ongoing local SEO from $297/month. No hidden fees, no minimum term."
+  description="Transparent pricing from Shelby Web Company — $597 setup, then $297/month. No hidden fees. Month-to-month; cancel with 30 days' written notice."
   bgVariant="blue"
 >
   <script is:inline set:html={JSON.stringify(faqSchema)} type="application/ld+json"></script>
@@ -268,7 +272,7 @@ const faqSchema = {
         “Total Transparency.”
       </p>
       <p class="text-base sm:text-lg text-white/75 mb-8 max-w-2xl leading-relaxed">
-        Clear plans from $597 + $297/mo. Month-to-month after your initial term, no surprises. Three local businesses can also win a waived $597 build fee through the <a href="/promotions/the-golden-ticket/" class="text-[#f4c95d] underline decoration-[#fbbf24]/40 underline-offset-4 hover:text-[#f8d66d]">Golden Ticket giveaway</a>.
+        $597 setup, then $297/month. Month-to-month. Cancel any time with 30 days' written notice. Three local businesses can also win their <a href="/promotions/the-golden-ticket/" class="text-[#f4c95d] underline decoration-[#fbbf24]/40 underline-offset-4 hover:text-[#f8d66d]">setup fee waived</a>.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
         <a
@@ -278,7 +282,7 @@ const faqSchema = {
           <span class="relative z-10">Get My Free Audit</span>
         </a>
         <a
-          href="#plans"
+          href="#growth-pricing"
           class="rounded-full border border-white/30 bg-white/5 px-8 py-4 text-center text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/50"
         >
           Compare Plans
@@ -345,52 +349,60 @@ const faqSchema = {
         <!-- Step 3 -->
         <div class="bg-white/[0.04] border border-white/10 rounded-2xl p-8 flex flex-col">
           <p class="uppercase tracking-widest text-xs font-semibold text-white/60 mb-2">Step 3 &mdash; Implement</p>
-          <h3 class="font-heading text-3xl font-bold text-white mb-1"><a href="/services/full-rescue/" class="hover:underline">The Fix</a></h3>
-          <p class="font-heading text-5xl font-bold text-white mb-3">from $349</p>
-          <p class="text-white/70 text-base leading-snug mb-5 flex-1">Visibility, Credibility, or Conversion — scoped by your audit.</p>
-          <a href="#fix-matrix" class="block text-center rounded-xl border border-white/20 bg-white/5 text-white px-5 py-3 font-bold hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-base">
-            Compare the Fixes ↓
+          <h3 class="font-heading text-3xl font-bold text-white mb-1"><a href="#setup-coverage" class="hover:underline">Setup</a></h3>
+          <p class="font-heading text-5xl font-bold text-white mb-1">$597 <span class="text-white/60 text-sm font-normal">setup, one time</span></p>
+          <p class="text-white/70 text-base leading-snug mb-5 flex-1">New site or existing-site rescue. Scope confirmed after the audit.</p>
+          <a href="#monthly-seo" class="block text-center rounded-xl border border-white/20 bg-white/5 text-white px-5 py-3 font-bold hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-base">
+            See What's Included ↓
           </a>
         </div>
       </div>
 
-      <!-- Fix matrix: 4 paths, one table -->
-      <div id="fix-matrix" class="mb-10 scroll-mt-24">
-        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-2">Fix Packages</h3>
-        <p class="text-white/70 text-center text-base mb-8 max-w-2xl mx-auto">Scoped by your audit — you only pay for what your site actually needs.</p>
+      <!-- What the monthly plan actually does, in plain language -->
+      <div id="monthly-seo" class="mb-12 rounded-2xl border border-brand-accent/25 bg-white/[0.04] p-6 md:p-8 scroll-mt-24">
+        <div class="grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] gap-8 items-start">
+          <div>
+            <p class="uppercase tracking-widest text-xs font-semibold text-brand-accent mb-2">Then, every month</p>
+            <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Ongoing SEO — from $297/month</h3>
+            <p class="text-white/75 text-base leading-relaxed mb-4">
+              Setup fixes what's broken. The monthly plan keeps it working and growing. Month-to-month. Cancel any time with 30 days' written notice.
+            </p>
+            <a href="#growth-pricing" class="inline-flex text-brand-accent hover:text-brand-accent-light font-semibold underline decoration-brand-accent/40 underline-offset-4 transition-colors">
+              See all three plans →
+            </a>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-white/85 text-base leading-snug">
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Your Google Business Profile — right categories, photos, posts, and review replies</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Pages that rank — service and city pages with clear titles and useful content</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Technical health — indexing, speed, sitemap, and schema checked and fixed</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>New content each month so Google has a reason to come back</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>A monthly snapshot of calls, traffic, and rankings — plus a 90-day audit</li>
+            <li class="flex items-start gap-2"><span class="text-brand-accent mt-0.5" aria-hidden="true">&#10003;</span>Hosting, SSL, backups, security, and small edits are included</li>
+          </ul>
+        </div>
+        <p class="text-white/60 text-sm mt-6 pt-5 border-t border-white/10">
+          Need more? <span class="text-white font-semibold">Plus ($597/month)</span> adds deeper keyword research, more content, review generation, and conversion fixes. <span class="text-white font-semibold">Ultra ($797/month)</span> adds lead tracking, follow-up workflows, and priority support.
+        </p>
+      </div>
+
+      <!-- Setup coverage: one flat fee, three pillars -->
+      <div id="setup-coverage" class="mb-10 scroll-mt-24">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-2">What $597 Setup Covers</h3>
+        <p class="text-white/70 text-center text-base mb-8 max-w-2xl mx-auto">One flat fee — a new site or fixing the one you have. Scope is confirmed after the audit.</p>
 
         <div class="overflow-x-auto">
-          <table class="w-full min-w-[46rem] text-left border border-white/10 rounded-2xl overflow-hidden">
+          <table class="w-full text-left border border-white/10 rounded-2xl overflow-hidden">
             <thead>
               <tr class="bg-white/[0.06] text-white">
-                <th class="p-4 font-heading font-bold w-[38%]">What's fixed</th>
-                <th class="p-4 font-heading font-bold text-center">
-                  <span class="flex items-center justify-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-brand-accent"></span>Visibility</span>
-                </th>
-                <th class="p-4 font-heading font-bold text-center">
-                  <span class="flex items-center justify-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#22d3ee]"></span>Credibility</span>
-                </th>
-                <th class="p-4 font-heading font-bold text-center">
-                  <span class="flex items-center justify-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#f4c95d]"></span>Conversion</span>
-                </th>
-                <th class="p-4 font-heading font-bold text-center bg-brand-blue-light/10 relative">
-                  <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-brand-blue-light text-[#08090f] text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full whitespace-nowrap">Best Value</span>
-                  <span class="flex items-center justify-center gap-2 pt-1"><span class="w-2.5 h-2.5 rounded-full bg-brand-blue-light"></span><a href="/services/full-rescue/" class="hover:underline">Full Rescue</a></span>
-                </th>
-              </tr>
-              <tr class="bg-white/[0.03] text-white">
-                <td class="p-4 text-white/50 text-xs uppercase tracking-widest font-semibold">Price</td>
-                <td class="p-4 text-center font-heading font-bold text-brand-accent">from $349</td>
-                <td class="p-4 text-center font-heading font-bold text-[#22d3ee]">from $349</td>
-                <td class="p-4 text-center font-heading font-bold text-[#f4c95d]">from $349</td>
-                <td class="p-4 text-center font-heading font-black text-xl text-brand-blue-light bg-brand-blue-light/10">from $749</td>
+                <th class="p-4 font-heading font-bold w-[55%]">What's covered</th>
+                <th class="p-4 font-heading font-bold text-center bg-brand-blue-light/10">Setup — $597, one time</th>
               </tr>
             </thead>
             <tbody class="text-white/85">
               {fixMatrix.map((group) => (
                 <>
                   <tr class="bg-white/[0.02]">
-                    <td colspan="5" class="px-4 py-2">
+                    <td colspan="2" class="px-4 py-2">
                       <span class={`inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold ${group.tint}`}>
                         <span class={`w-2 h-2 rounded-full ${group.dot}`}></span>{group.group}
                       </span>
@@ -399,13 +411,9 @@ const faqSchema = {
                   {group.items.map((item) => (
                     <tr class="border-t border-white/10">
                       <td class="p-4 text-base leading-snug">{item.label}</td>
-                      {item.cols.map((on, i) => (
-                        <td class:list={['p-4 text-center', i === 3 && 'bg-brand-blue-light/[0.07]']}>
-                          {on
-                            ? <span class:list={['text-lg font-bold', i === 3 ? 'text-brand-blue-light drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]' : 'text-brand-accent']} aria-label="Included">✓</span>
-                            : <span class="text-white/20" aria-hidden="true">—</span>}
-                        </td>
-                      ))}
+                      <td class="p-4 text-center bg-brand-blue-light/[0.07]">
+                        <span class="text-lg font-bold text-brand-blue-light drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" aria-label="Included">✓</span>
+                      </td>
                     </tr>
                   ))}
                 </>
@@ -415,31 +423,8 @@ const faqSchema = {
         </div>
 
         <p class="text-white/55 text-xs mt-4 text-center">
-          Every rescue starts with a free audit. Full Rescue ($749) bundles all three — about $200 less than buying them separately.
+          Already have a site? Same $597 setup fee — we scope the work to what your free audit actually finds.
         </p>
-      </div>
-
-      <!-- Full Rescue highlight -->
-      <div class="mt-8 mb-10 rounded-2xl border border-brand-blue-light/40 bg-gradient-to-r from-brand-blue-light/12 via-brand-accent/5 to-transparent p-6 md:p-7 flex flex-col md:flex-row md:items-center gap-6 justify-between">
-        <div class="flex items-start gap-4">
-          <span class="shrink-0 w-12 h-12 rounded-xl bg-brand-blue-light/15 border border-brand-blue-light/40 flex items-center justify-center text-brand-blue-light">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10h14V10M9 20v-6h6v6"></path></svg>
-          </span>
-          <div>
-            <p class="uppercase tracking-widest text-xs font-bold text-brand-blue-light mb-1">Best value · Everything included</p>
-            <h4 class="font-heading text-2xl md:text-3xl font-black text-white mb-2">Full Rescue — from $749</h4>
-            <p class="text-white/75 text-sm md:text-base leading-relaxed max-w-xl">
-              Visibility, Credibility, and Conversion handled together — one team, one plan, one price.
-              Every fix above, for about $200 less than buying them separately.
-            </p>
-          </div>
-        </div>
-        <a
-          href="/contact/?service=full-rescue"
-          class="shrink-0 inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-b from-brand-blue-light to-brand-blue px-7 py-3.5 font-bold text-white border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_4px_14px_rgba(0,0,0,0.4),0_0_20px_rgba(59,130,246,0.35)] hover:-translate-y-[1px] hover:brightness-110 transition-all duration-300 text-base"
-        >
-          Get the Full Rescue →
-        </a>
       </div>
 
       <div class="text-center">
@@ -483,21 +468,13 @@ const faqSchema = {
     </div>
   </section>
 
-  <GrowthPlanPricingSection standalone eyebrow="✦ Website Build Packages" title="Website Build Packages — With or Without SEO" />
-
-  <!-- Old vs. New Pricing Comparison Graphic -->
-  <section class="py-12 px-4" data-animate>
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-gradient-to-br from-brand-accent/10 via-transparent to-brand-cyan/5 border border-brand-accent/20 rounded-3xl p-2 md:p-4">
-        <Image
-          src={pricingCompare}
-          alt="Graph comparing traditional website pricing ($1,000-$1,500 upfront plus a $149/month care plan) with Shelby Web Co's new structure: $597 website build plus $297/month ongoing local SEO"
-          class="w-full h-auto rounded-2xl"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </section>
+  <GrowthPlanPricingSection
+    standalone
+    eyebrow="✦ Website Build Packages"
+    title="Website Build Packages — With or Without SEO"
+    eyebrowClass="text-brand-accent text-base md:text-lg uppercase tracking-widest mb-4 font-semibold"
+    titleClass="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.05]"
+  />
 
   <!-- Payment Terms & Onboarding Section -->
   <section class="py-12 px-4" data-animate>
@@ -521,7 +498,7 @@ const faqSchema = {
               <ul class="space-y-3 mt-4">
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold">1</div>
-                  <span class="text-white"><span class="font-bold text-brand-accent">Launch Fee</span> to start discovery and build</span>
+                  <span class="text-white"><span class="font-bold text-brand-accent">$597 setup</span> to scope and start the work</span>
                 </li>
                 <li class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-full bg-brand-cyan/20 flex items-center justify-center text-brand-cyan font-bold">2</div>
@@ -534,7 +511,7 @@ const faqSchema = {
           <div class="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             <h3 class="text-body-lg font-bold text-white mb-4">Why we do this:</h3>
             <p class="text-slate-400 mb-6 italic">
-              "A modest launch fee gets your project started, and the monthly plan keeps everything improving — hosting, security, SEO, and ongoing care all handled for you."
+              "A flat $597 setup fee gets your project started, and the monthly plan keeps everything improving — hosting, security, SEO, and ongoing care all handled for you."
             </p>
             <div class="flex items-center gap-4 border-t border-white/10 pt-6">
               <div class="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center text-brand-darkest font-bold text-xl">✓</div>
@@ -554,11 +531,96 @@ const faqSchema = {
           <div>
             <h3 class="font-heading text-xl md:text-2xl font-bold text-white mb-1">Pay upfront &amp; save instantly</h3>
             <p class="text-white/75 text-sm md:text-body-sm leading-relaxed">
-              Cover your <span class="text-brand-accent font-semibold">entire build fee</span> plus your <span class="text-brand-accent font-semibold">first month of SEO service</span> in a single payment, and we'll apply an <span class="text-white font-semibold">instant $50 discount</span> to your total. Same plan, same work — just one payment instead of two.
+              Cover your <span class="text-brand-accent font-semibold">entire $597 setup</span> plus your <span class="text-brand-accent font-semibold">first monthly payment</span> in a single payment, and we'll apply an <span class="text-white font-semibold">instant $50 discount</span> to your total. Same plan, same work — just one payment instead of two.
             </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Cross-reference: the two pricing paths side by side -->
+  <section class="py-16 md:py-20 px-4" data-animate aria-labelledby="compare-paths-heading">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-brand-accent text-label uppercase tracking-widest mb-4">✦ Side by Side</p>
+        <h2 id="compare-paths-heading" class="font-heading text-section-heading md:text-section-heading-md font-bold text-white mb-5 leading-tight">
+          Two Ways In. <span class="text-brand-accent">The Same Pricing.</span>
+        </h2>
+        <p class="text-body-lg text-white/80 max-w-2xl mx-auto">
+          Both sections above lead to the same place: a <span class="text-white font-semibold">$597 setup</span>, then one of the same three monthly plans. The only difference is where the work starts.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-white/10">
+        <table class="w-full min-w-[44rem] text-left border-collapse">
+          <caption class="sr-only">Comparison of rescuing an existing website versus building a new one</caption>
+          <thead>
+            <tr class="bg-white/[0.06] text-white">
+              <th scope="col" class="p-4 md:p-5 font-heading font-bold w-[26%]"><span class="sr-only">Comparison point</span></th>
+              <th scope="col" class="p-4 md:p-5 font-heading font-bold text-brand-accent">
+                <span class="block text-xs uppercase tracking-widest text-white/60 font-semibold mb-1">Section 1 above</span>
+                Rescue what you have
+              </th>
+              <th scope="col" class="p-4 md:p-5 font-heading font-bold text-brand-blue-light">
+                <span class="block text-xs uppercase tracking-widest text-white/60 font-semibold mb-1">Section 2 above</span>
+                Build something new
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-white/85">
+            <tr class="border-t border-white/10 bg-white/[0.02]">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Best when</th>
+              <td class="p-4 md:p-5">Your site exists but isn't found, trusted, or bringing in calls</td>
+              <td class="p-4 md:p-5">The foundation is too weak to fix, or you don't have a site yet</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">First step</th>
+              <td class="p-4 md:p-5">Free SEO audit, or the $197 Rescue Report for a deeper look</td>
+              <td class="p-4 md:p-5">Free audit or a strategy call — we'll tell you honestly if a build is needed</td>
+            </tr>
+            <tr class="border-t border-white/10 bg-white/[0.02]">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Upfront, one time</th>
+              <td class="p-4 md:p-5"><span class="text-white font-bold">$597 setup</span> — scope confirmed after the audit</td>
+              <td class="p-4 md:p-5"><span class="text-white font-bold">$597 setup</span> — a new 4–5 page site</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Then, per month</th>
+              <td class="p-4 md:p-5">Core $297/month · Plus $597/month · Ultra $797/month</td>
+              <td class="p-4 md:p-5">Core $297/month · Plus $597/month · Ultra $797/month</td>
+            </tr>
+            <tr class="border-t border-white/10 bg-white/[0.02]">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">What the setup does</th>
+              <td class="p-4 md:p-5">Indexing and technical SEO, Google Business Profile, real copy and photos, calls, forms, and service pages</td>
+              <td class="p-4 md:p-5">Design and build the site, service and city pages, forms and lead alerts, analytics, and foundational SEO</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">What goes on every month</th>
+              <td class="p-4 md:p-5">The same ongoing SEO: profile, content, technical checks, reporting, hosting, and edits</td>
+              <td class="p-4 md:p-5">The same ongoing SEO: profile, content, technical checks, reporting, hosting, and edits</td>
+            </tr>
+            <tr class="border-t border-white/10 bg-white/[0.02]">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Your stuff</th>
+              <td class="p-4 md:p-5">Your domain, content, and Google profile stay yours</td>
+              <td class="p-4 md:p-5">Your domain, content, and Google profile stay yours</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Commitment</th>
+              <td class="p-4 md:p-5">Month-to-month. Cancel any time with 30 days' written notice.</td>
+              <td class="p-4 md:p-5">Month-to-month. Cancel any time with 30 days' written notice.</td>
+            </tr>
+            <tr class="border-t border-white/10 bg-white/[0.06]">
+              <th scope="row" class="p-4 md:p-5 font-semibold text-white">Start here</th>
+              <td class="p-4 md:p-5"><a href="/promotions/free-seo-audit/" class="text-brand-accent hover:text-brand-accent-light font-semibold underline decoration-brand-accent/40 underline-offset-4">Get the free audit →</a></td>
+              <td class="p-4 md:p-5"><a href="/contact/" class="text-brand-blue-light hover:text-white font-semibold underline decoration-brand-blue-light/40 underline-offset-4">Book a strategy call →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-center text-white/60 text-sm mt-5 max-w-2xl mx-auto">
+        Not sure which one fits? Start with the free audit — we'll tell you which path makes sense before you spend anything.
+      </p>
     </div>
   </section>
 

@@ -1,0 +1,411 @@
+---
+/**
+ * LeadLeakScore — self-contained client-side quiz + calculator.
+ * No data is stored in the browser; answers live only in memory until submit.
+ * GA4 hooks are intentionally commented until analytics is confirmed.
+ */
+---
+
+<div id="lls-app" class="rounded-3xl border border-white/15 bg-white/[0.04] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_24px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8" aria-live="polite">
+  <!-- INTRO -->
+  <section id="lls-intro">
+    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">3 minutes · no email needed to see your results</p>
+    <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-3">Find out where your remodeling business is leaking leads.</h2>
+    <p class="text-white/75 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
+      Answer 12 quick questions about how your business gets found, trusted, and hired. Then adjust four numbers to put a dollar figure on what those gaps may be costing you. Your score and estimate are free — no gate.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-7 text-sm">
+      <span class="rounded-full border border-brand-accent/40 bg-brand-accent/10 px-3 py-1 font-semibold text-brand-accent">Found</span>
+      <span class="text-white/40" aria-hidden="true">→</span>
+      <span class="rounded-full border border-[#22d3ee]/40 bg-[#22d3ee]/10 px-3 py-1 font-semibold text-[#22d3ee]">Trusted</span>
+      <span class="text-white/40" aria-hidden="true">→</span>
+      <span class="rounded-full border border-[#f4c95d]/40 bg-[#f4c95d]/10 px-3 py-1 font-semibold text-[#f4c95d]">Hired</span>
+    </div>
+    <button id="lls-start" type="button" class="cta-glow-shine inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] px-8 py-4 text-base font-bold text-black border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.65),inset_0_-2px_6px_rgba(0,0,0,0.25),0_4px_14px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-[1px]">
+      Start the free score →
+    </button>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="lls-quiz" hidden>
+    <div class="mb-6">
+      <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-white/60 mb-2">
+        <span id="lls-pillar">Found</span>
+        <span id="lls-step-label">Question 1 of 12</span>
+      </div>
+      <div class="h-2 w-full overflow-hidden rounded-full bg-white/10" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="12" aria-valuenow="1" id="lls-progress-track">
+        <div id="lls-progress" class="h-full rounded-full bg-gradient-to-r from-brand-accent to-[#22d3ee] transition-all duration-300" style="width: 8.33%"></div>
+      </div>
+    </div>
+    <fieldset>
+      <legend id="lls-question" class="font-heading text-2xl md:text-3xl font-bold text-white mb-6 leading-snug"></legend>
+      <div id="lls-options" class="space-y-3"></div>
+    </fieldset>
+    <div class="flex items-center justify-between gap-3 mt-8">
+      <button id="lls-back" type="button" class="rounded-xl border border-white/25 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10 disabled:opacity-40">← Back</button>
+      <button id="lls-next" type="button" class="rounded-xl bg-brand-accent px-6 py-3 font-bold text-black transition-colors hover:bg-brand-accent-light disabled:cursor-not-allowed disabled:opacity-40">Next →</button>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="lls-calc" hidden>
+    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">Step 2 of 2 · your numbers</p>
+    <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-3">Put a dollar figure on it.</h2>
+    <p class="text-white/75 text-base leading-relaxed mb-7 max-w-2xl">
+      Rough numbers are fine. This is an estimate, not a promise — and you can change every assumption.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div>
+        <label for="lls-leads" class="block text-sm font-bold text-white mb-2">Leads per month</label>
+        <input id="lls-leads" type="number" min="0" max="10000" step="1" value="20" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white text-base focus:outline-none focus:border-brand-accent" />
+        <p class="text-white/50 text-xs mt-1.5">Calls, forms, and messages from homeowners.</p>
+      </div>
+      <div>
+        <label for="lls-job" class="block text-sm font-bold text-white mb-2">Average job size ($)</label>
+        <input id="lls-job" type="number" min="0" step="500" value="25000" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white text-base focus:outline-none focus:border-brand-accent" />
+        <p class="text-white/50 text-xs mt-1.5">Your typical kitchen or bath project value.</p>
+      </div>
+      <div>
+        <label for="lls-fast" class="block text-sm font-bold text-white mb-2">% of leads answered within an hour</label>
+        <input id="lls-fast" type="number" min="0" max="100" step="1" value="50" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white text-base focus:outline-none focus:border-brand-accent" />
+        <p class="text-white/50 text-xs mt-1.5">Industry sources report most home-service leads aren't answered within an hour.</p>
+      </div>
+      <div>
+        <label for="lls-close" class="block text-sm font-bold text-white mb-2">Close rate (%)</label>
+        <input id="lls-close" type="number" min="0" max="100" step="1" value="30" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white text-base focus:outline-none focus:border-brand-accent" />
+        <p class="text-white/50 text-xs mt-1.5">Default 30% — studies suggest a healthy range is 25–35% on qualified leads.</p>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="lls-recap" class="block text-sm font-bold text-white mb-2">Recapture rate (%) — your estimate</label>
+        <input id="lls-recap" type="number" min="0" max="100" step="1" value="15" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white text-base focus:outline-none focus:border-brand-accent" />
+        <p class="text-white/50 text-xs mt-1.5">What share of missed leads better follow-up could win back. This is our conservative assumption, not a sourced number — adjust it.</p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 mt-8">
+      <button id="lls-calc-back" type="button" class="rounded-xl border border-white/25 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10">← Back to questions</button>
+      <button id="lls-calc-go" type="button" class="rounded-xl bg-brand-accent px-6 py-3 font-bold text-black transition-colors hover:bg-brand-accent-light">See my results →</button>
+    </div>
+  </section>
+
+  <!-- RESULTS (no gate) -->
+  <section id="lls-results" hidden>
+    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">Your Lead Leak Score</p>
+    <div class="flex flex-wrap items-end gap-4 mb-6">
+      <span id="lls-overall" class="font-heading text-7xl md:text-8xl font-black text-white leading-none">0</span>
+      <span class="text-white/60 text-lg mb-2">out of 100 · self-assessment</span>
+    </div>
+
+    <div id="lls-pillars" class="grid sm:grid-cols-3 gap-4 mb-8"></div>
+
+    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:p-6 mb-6">
+      <h3 class="font-heading text-xl font-bold text-white mb-3">Your three weakest areas</h3>
+      <ol id="lls-weak" class="list-decimal pl-5 space-y-2 text-white/80 leading-relaxed"></ol>
+    </div>
+
+    <div class="rounded-2xl border border-brand-accent/30 bg-brand-accent/[0.07] p-5 md:p-6 mb-8">
+      <p class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2">Estimated recoverable revenue per year</p>
+      <p id="lls-money" class="font-heading text-3xl md:text-4xl font-black text-white mb-3"></p>
+      <p id="lls-assumptions" class="text-white/70 text-sm leading-relaxed"></p>
+      <p class="text-white/50 text-xs mt-3">An estimate based on your inputs — not a guarantee of revenue or leads.</p>
+    </div>
+
+    <div id="lls-next" class="rounded-2xl border border-[#22d3ee]/30 bg-[#22d3ee]/[0.07] p-5 md:p-6 mb-8">
+      <p class="text-[#22d3ee] text-xs font-bold uppercase tracking-widest mb-2">Your next step</p>
+      <h3 id="lls-next-title" class="font-heading text-2xl font-bold text-white mb-2"></h3>
+      <p id="lls-next-copy" class="text-white/75 leading-relaxed mb-4"></p>
+      <a id="lls-next-link" href="#" class="inline-flex items-center justify-center rounded-xl bg-[#22d3ee] px-6 py-3 font-bold text-[#08090f] hover:bg-[#67e8f9] transition-colors"></a>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:p-6 mb-8">
+      <p class="text-white/70 text-sm leading-relaxed">
+        Where this goes next: <span class="text-white font-semibold">free audit</span> → <span class="text-white font-semibold">$197 report</span> (credited toward setup) → <span class="text-white font-semibold">$597 setup</span> → <span class="text-white font-semibold">monthly plan from $297/month</span>. No lock-in — month-to-month, cancel with 30 days' written notice.
+      </p>
+      <a href="/pricing/" class="mt-3 inline-block text-brand-accent font-semibold underline decoration-brand-accent/40 underline-offset-4 hover:text-brand-accent-light">See the full pricing ladder →</a>
+    </div>
+
+    <!-- GATED BREAKDOWN -->
+    <form id="lls-form" class="rounded-2xl border border-white/15 bg-[#111214] p-5 md:p-6">
+      <h3 class="font-heading text-2xl font-bold text-white mb-2">Want the full breakdown?</h3>
+      <p class="text-white/75 text-sm leading-relaxed mb-5">
+        Your score and estimate are yours to keep. Give us your name, email, and website and we'll send a written breakdown — and look at your site before we reply, so our first message is specific to you.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label for="lls-name" class="block text-sm font-bold text-white mb-2">Your name *</label>
+          <input id="lls-name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white focus:outline-none focus:border-brand-accent" />
+        </div>
+        <div>
+          <label for="lls-email" class="block text-sm font-bold text-white mb-2">Email address *</label>
+          <input id="lls-email" name="email" type="email" required autocomplete="email" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white focus:outline-none focus:border-brand-accent" />
+        </div>
+        <div class="sm:col-span-2">
+          <label for="lls-website" class="block text-sm font-bold text-white mb-2">Your website URL *</label>
+          <input id="lls-website" name="website" type="url" required placeholder="https://yourbusiness.com" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white focus:outline-none focus:border-brand-accent" />
+        </div>
+        <div class="sm:col-span-2">
+          <label for="lls-phone" class="block text-sm font-bold text-white mb-2">Phone (optional)</label>
+          <input id="lls-phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-xl border border-white/20 bg-white/[0.06] px-4 py-3 text-white focus:outline-none focus:border-brand-accent" />
+        </div>
+      </div>
+      <input type="hidden" id="lls-field-score" name="score" value="" />
+      <input type="hidden" id="lls-field-estimate" name="estimate" value="" />
+      <input type="hidden" id="lls-field-answers" name="answers" value="" />
+      <input type="hidden" name="subject" value="New Lead Leak Score submission — Shelby Web Co" />
+      <button id="lls-submit" type="submit" class="mt-6 w-full rounded-xl bg-gradient-to-b from-[#a3e635] via-brand-accent to-[#65a30d] px-6 py-3.5 font-bold text-black border border-white/20 transition-all hover:-translate-y-[1px] disabled:opacity-60">Send me the breakdown →</button>
+      <p id="lls-form-status" class="mt-3 text-sm text-[#22d3ee] min-h-5" role="status"></p>
+      <p class="text-white/45 text-xs mt-2">We use your details only to send this breakdown and follow up. No spam, no list-sharing.</p>
+    </form>
+
+    <button id="lls-restart" type="button" class="mt-6 text-white/60 hover:text-white text-sm underline underline-offset-4">Start over</button>
+  </section>
+</div>
+
+<script>
+  // TODO: set PUBLIC_WEB3FORMS_ACCESS_KEY in your environment, or replace the
+  // placeholder below with your Web3Forms access key. Do not commit a real key.
+  const WEB3FORMS_ACCESS_KEY =
+    (import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY as string | undefined) ||
+    'TODO_REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+
+  type ScoreOption = { label: string; score: number };
+  type Question = {
+    pillar: 'Found' | 'Trusted' | 'Hired';
+    text: string;
+    options: ScoreOption[];
+    fix: string;
+  };
+
+  const questions: Question[] = [
+    { pillar: 'Found', text: 'Is your Google Business Profile claimed and set with the right categories (e.g. Kitchen Remodeler, Bathroom Remodeler)?', options: [{ label: 'Yes, accurate', score: 2 }, { label: 'Claimed but unsure about categories', score: 1 }, { label: 'Not claimed or not sure', score: 0 }], fix: 'Your Google Business Profile needs the right categories — it is often the first thing a homeowner sees.' },
+    { pillar: 'Found', text: 'Search "kitchen remodeler + your city". Do you show up in the map results?', options: [{ label: 'Yes', score: 2 }, { label: 'Sometimes', score: 1 }, { label: 'No or haven’t checked', score: 0 }], fix: 'You may not be showing in the map results. A free audit checks what Google sees for your city.' },
+    { pillar: 'Found', text: 'Does your website have a separate page for each service (kitchens, baths, etc.) and each main city you serve?', options: [{ label: 'Yes, both', score: 2 }, { label: 'Services only', score: 1 }, { label: 'One services page or neither', score: 0 }], fix: 'One combined page splits search intent. Separate service and city pages give homeowners a clear landing place.' },
+    { pillar: 'Found', text: 'Do you know whether Google has indexed your website (Search Console)?', options: [{ label: 'Yes, I check it', score: 2 }, { label: 'I think so', score: 1 }, { label: 'No idea', score: 0 }], fix: 'If Google has not indexed your pages, nobody can find them. Indexing is the first thing we verify.' },
+    { pillar: 'Trusted', text: 'Google reviews: do you have 25+ and at least one in the last 60 days?', options: [{ label: 'Yes, both', score: 2 }, { label: 'One of the two', score: 1 }, { label: 'Neither', score: 0 }], fix: 'Recent, real reviews help homeowners trust you. A review request system makes them steady instead of random.' },
+    { pillar: 'Trusted', text: 'Do you reply to your Google reviews, including bad ones?', options: [{ label: 'Always', score: 2 }, { label: 'Sometimes', score: 1 }, { label: 'Rarely or never', score: 0 }], fix: 'Replying to reviews — including the tough ones — shows homeowners there is a real person behind the business.' },
+    { pillar: 'Trusted', text: 'Does your site show your own before-and-after project photos?', options: [{ label: 'Yes, many', score: 2 }, { label: 'A few', score: 1 }, { label: 'Mostly stock or none', score: 0 }], fix: 'Your own before-and-after work is the proof a remodeling homeowner is looking for. Stock photos do not do that job.' },
+    { pillar: 'Trusted', text: 'Does your site give homeowners price ranges, a typical timeline or your process?', options: [{ label: 'Yes', score: 2 }, { label: 'Some', score: 1 }, { label: 'None', score: 0 }], fix: 'A typical range, timeline, and process answer the first questions a homeowner has and filter out poor-fit inquiries.' },
+    { pillar: 'Hired', text: 'On your phone, can someone tap-to-call from your mobile site without scrolling?', options: [{ label: 'Yes', score: 2 }, { label: 'With scrolling', score: 1 }, { label: 'No', score: 0 }], fix: 'If a homeowner has to hunt for your number on a phone, many will leave. Tap-to-call should work immediately.' },
+    { pillar: 'Hired', text: 'How fast do you usually respond to a new lead?', options: [{ label: 'Under 5 minutes', score: 2 }, { label: 'Under an hour', score: 1 }, { label: 'Same day', score: 0 }, { label: 'Longer', score: 0 }], fix: 'Industry sources report many home-service leads are not answered within an hour. Faster follow-up wins more of them.' },
+    { pillar: 'Hired', text: 'Do you have missed-call text-back or an automatic reply to form submissions?', options: [{ label: 'Yes', score: 2 }, { label: 'Partial', score: 1 }, { label: 'No', score: 0 }], fix: 'Missed-call text-back and form auto-replies keep the conversation alive when you are on a job site.' },
+    { pillar: 'Hired', text: 'Do you know where your last 10 jobs came from?', options: [{ label: 'Yes, tracked', score: 2 }, { label: 'Roughly', score: 1 }, { label: 'No', score: 0 }], fix: 'Tracking where jobs come from tells you what to keep doing — and what to stop paying for.' },
+  ];
+
+  const nextSteps = {
+    Found: { title: 'Start with a free SEO audit', copy: 'Your weakest area is visibility. The audit shows whether Google can find you and what is blocking it.', href: '/promotions/free-seo-audit/', label: 'Get my free audit →' },
+    Trusted: { title: 'Fix the credibility gaps', copy: 'Your weakest area is trust. We will show you what to change so homeowners believe you are the right choice.', href: '/services/ai-cleanup/', label: 'See credibility fixes →' },
+    Hired: { title: 'Fix lead response and conversion', copy: 'Your weakest area is turning interest into calls. Small changes to calls, forms, and follow-up make a difference.', href: '/services/conversion/', label: 'See conversion fixes →' },
+  };
+
+  const $ = (id: string) => document.getElementById(id) as HTMLElement | null;
+  const screens = ['intro', 'quiz', 'calc', 'results'];
+  function show(screen: string) {
+    screens.forEach((name) => {
+      const el = $('lls-' + name);
+      if (el) el.hidden = name !== screen;
+    });
+    $('lls-app')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  let answers: Array<{ score: number; label: string } | null> = Array(questions.length).fill(null);
+  let index = 0;
+
+  // gtag('event', 'lead_leak_score_start'); // TODO: enable once GA4 is confirmed.
+
+  function renderQuestion() {
+    const q = questions[index];
+    const pillarEl = $('lls-pillar');
+    const stepEl = $('lls-step-label');
+    const questionEl = $('lls-question');
+    const optionsEl = $('lls-options');
+    const progressEl = $('lls-progress');
+    const track = $('lls-progress-track');
+    const nextBtn = $('lls-next') as HTMLButtonElement | null;
+    const backBtn = $('lls-back') as HTMLButtonElement | null;
+    if (!pillarEl || !stepEl || !questionEl || !optionsEl || !progressEl || !nextBtn || !backBtn) return;
+
+    pillarEl.textContent = q.pillar;
+    stepEl.textContent = `Question ${index + 1} of ${questions.length}`;
+    questionEl.textContent = q.text;
+    const pct = Math.round(((index + 1) / questions.length) * 100);
+    progressEl.style.width = pct + '%';
+    track?.setAttribute('aria-valuenow', String(index + 1));
+
+    optionsEl.replaceChildren();
+    q.options.forEach((option) => {
+      const label = document.createElement('label');
+      label.className = 'flex items-center gap-3 rounded-xl border border-white/15 bg-white/[0.03] px-4 py-3.5 cursor-pointer transition-colors hover:border-brand-accent/50 hover:bg-white/[0.06]';
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'lls-answer';
+      input.value = String(option.score);
+      input.className = 'h-5 w-5 shrink-0 accent-brand-accent';
+      input.checked = answers[index]?.score === option.score;
+      input.addEventListener('change', () => {
+        answers[index] = { score: option.score, label: option.label };
+        if (nextBtn) nextBtn.disabled = false;
+      });
+      const text = document.createElement('span');
+      text.className = 'text-white/90 text-base';
+      text.textContent = option.label;
+      label.append(input, text);
+      optionsEl.appendChild(label);
+    });
+
+    backBtn.disabled = index === 0;
+    nextBtn.disabled = answers[index] === null;
+    nextBtn.textContent = index === questions.length - 1 ? 'Calculate my estimate →' : 'Next →';
+  }
+
+  function numberValue(id: string, fallback: number): number {
+    const el = $(id) as HTMLInputElement | null;
+    const value = el ? Number(el.value) : fallback;
+    return Number.isFinite(value) ? value : fallback;
+  }
+
+  function money(value: number): string {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
+  }
+
+  function showResults() {
+    const pillarKeys: Array<'Found' | 'Trusted' | 'Hired'> = ['Found', 'Trusted', 'Hired'];
+    const pillarColors: Record<string, string> = { Found: '#84cc16', Trusted: '#22d3ee', Hired: '#f4c95d' };
+    const pillarData = pillarKeys.map((key) => {
+      const relevant = questions.map((q, i) => ({ q, i })).filter((entry) => entry.q.pillar === key);
+      const earned = relevant.reduce((sum, entry) => sum + (answers[entry.i]?.score ?? 0), 0);
+      const score = Math.round((earned / (relevant.length * 2)) * 100);
+      return { key, score };
+    });
+
+    const totalEarned = answers.reduce((sum, a) => sum + (a?.score ?? 0), 0);
+    const overall = Math.round((totalEarned / (questions.length * 2)) * 100);
+    const overallEl = $('lls-overall');
+    if (overallEl) overallEl.textContent = String(overall);
+
+    const pillarsEl = $('lls-pillars');
+    if (pillarsEl) {
+      pillarsEl.replaceChildren();
+      pillarData.forEach((p) => {
+        const card = document.createElement('div');
+        card.className = 'rounded-2xl border border-white/10 bg-white/[0.03] p-4';
+        const label = document.createElement('p');
+        label.className = 'text-sm font-bold uppercase tracking-widest mb-2';
+        label.style.color = pillarColors[p.key];
+        label.textContent = p.key;
+        const value = document.createElement('p');
+        value.className = 'font-heading text-3xl font-black text-white mb-2';
+        value.textContent = p.score + ' / 100';
+        const bar = document.createElement('div');
+        bar.className = 'h-2 w-full overflow-hidden rounded-full bg-white/10';
+        const fill = document.createElement('div');
+        fill.className = 'h-full rounded-full';
+        fill.style.width = p.score + '%';
+        fill.style.backgroundColor = pillarColors[p.key];
+        bar.appendChild(fill);
+        card.append(label, value, bar);
+        pillarsEl.appendChild(card);
+      });
+    }
+
+    const weak = questions
+      .map((q, i) => ({ q, i, score: answers[i]?.score ?? 0 }))
+      .filter((entry) => entry.score <= 1)
+      .sort((a, b) => a.score - b.score)
+      .slice(0, 3);
+    const weakEl = $('lls-weak');
+    if (weakEl) {
+      weakEl.replaceChildren();
+      if (weak.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'No obvious weak spots in your answers. The free audit is still the real verification.';
+        weakEl.appendChild(li);
+      } else {
+        weak.forEach((entry) => {
+          const li = document.createElement('li');
+          li.textContent = entry.q.fix;
+          weakEl.appendChild(li);
+        });
+      }
+    }
+
+    const leads = Math.max(0, numberValue('lls-leads', 20));
+    const job = Math.max(0, numberValue('lls-job', 25000));
+    const fast = Math.min(100, Math.max(0, numberValue('lls-fast', 50))) / 100;
+    const close = Math.min(100, Math.max(0, numberValue('lls-close', 30))) / 100;
+    const recapture = Math.min(100, Math.max(0, numberValue('lls-recap', 15))) / 100;
+    const estimate = (rate: number) => leads * (1 - fast) * recapture * rate * job * 12;
+    const low = estimate(Math.max(0, close - 0.05));
+    const high = estimate(Math.min(1, close + 0.05));
+    const moneyEl = $('lls-money');
+    if (moneyEl) moneyEl.textContent = `${money(low)} – ${money(high)}`;
+    const assumptionsEl = $('lls-assumptions');
+    if (assumptionsEl) {
+      assumptionsEl.textContent = `Based on ${leads} leads/month, ${money(job)} average job, ${Math.round(fast * 100)}% answered within an hour, ${Math.round(close * 100)}% close rate, and your ${Math.round(recapture * 100)}% recapture estimate. Low/high uses a 5-point swing in close rate.`;
+    }
+
+    const weakest = [...pillarData].sort((a, b) => a.score - b.score)[0];
+    const step = nextSteps[weakest.key];
+    const nextTitle = $('lls-next-title');
+    const nextCopy = $('lls-next-copy');
+    const nextLink = $('lls-next-link') as HTMLAnchorElement | null;
+    if (nextTitle) nextTitle.textContent = step.title;
+    if (nextCopy) nextCopy.textContent = step.copy;
+    if (nextLink) { nextLink.href = step.href; nextLink.textContent = step.label; }
+
+    const scoreField = $('lls-field-score') as HTMLInputElement | null;
+    const estimateField = $('lls-field-estimate') as HTMLInputElement | null;
+    const answersField = $('lls-field-answers') as HTMLInputElement | null;
+    if (scoreField) scoreField.value = overall + '/100';
+    if (estimateField) estimateField.value = `${money(low)} – ${money(high)}`;
+    if (answersField) {
+      answersField.value = questions.map((q, i) => `${q.pillar}: ${answers[i]?.label ?? 'skipped'}`).join(' | ');
+    }
+
+    // gtag('event', 'lead_leak_score_complete', { value: overall }); // TODO: enable once GA4 is confirmed.
+    show('results');
+  }
+
+  $('lls-start')?.addEventListener('click', () => { index = 0; answers = Array(questions.length).fill(null); renderQuestion(); show('quiz'); });
+  $('lls-next')?.addEventListener('click', () => {
+    if (answers[index] === null) return;
+    if (index < questions.length - 1) { index += 1; renderQuestion(); }
+    else show('calc');
+  });
+  $('lls-back')?.addEventListener('click', () => {
+    if (index > 0) { index -= 1; renderQuestion(); }
+  });
+  $('lls-calc-back')?.addEventListener('click', () => show('quiz'));
+  $('lls-calc-go')?.addEventListener('click', showResults);
+  $('lls-restart')?.addEventListener('click', () => { index = 0; answers = Array(questions.length).fill(null); show('intro'); });
+
+  const form = $('lls-form') as HTMLFormElement | null;
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const status = $('lls-form-status');
+    const submitBtn = $('lls-submit') as HTMLButtonElement | null;
+    if (submitBtn) submitBtn.disabled = true;
+    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.startsWith('TODO')) {
+      if (status) status.textContent = 'Lead capture is not connected yet. Your results are still yours — please call (704) 473-8188 or email dave@shelbywebco.com and we’ll send the breakdown.';
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+    try {
+      const payload = new FormData(form);
+      payload.append('access_key', WEB3FORMS_ACCESS_KEY);
+      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: payload });
+      const result = await response.json();
+      if (response.ok && result.success) {
+        if (status) status.textContent = 'Sent! We’ll be in touch shortly.';
+        form.reset();
+        // gtag('event', 'lead_leak_score_submit'); // TODO: enable once GA4 is confirmed.
+      } else {
+        if (status) status.textContent = 'Something went wrong sending that. Please call (704) 473-8188 or email dave@shelbywebco.com.';
+      }
+    } catch {
+      if (status) status.textContent = 'Something went wrong sending that. Please call (704) 473-8188 or email dave@shelbywebco.com.';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+</script>

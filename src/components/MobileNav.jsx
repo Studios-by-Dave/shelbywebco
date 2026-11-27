@@ -12,7 +12,7 @@ const phoneLink = { href: 'tel:+17044738188', label: '(704) 473-8188' };
 
 const serviceLinks = [
   { href: '/services/', label: 'All Services' },
-  { href: '/services/full-rescue/', label: 'Full Rescue — from $749' },
+  { href: '/services/full-rescue/', label: 'Website Setup — $597' },
   { href: '/services/web-design/', label: 'Web Design' },
   { href: '/services/branding/', label: 'Logo Design & Branding' },
   { href: '/services/seo/', label: 'SEO Services' },
@@ -32,7 +32,9 @@ const serviceAreaLinks = [
 ];
 
 const industryLinks = [
-  { href: '/web-design-for-home-remodelers-shelby-nc/', label: 'Home Remodelers' },
+  { href: '/web-design-for-home-remodelers-shelby-nc/', label: 'Home Remodelers & Contractors' },
+  { href: '/web-design-for-kitchen-remodelers-shelby-nc/', label: 'Kitchen Remodelers' },
+  { href: '/web-design-for-bathroom-remodelers-shelby-nc/', label: 'Bathroom Remodelers' },
   { href: '/web-design-for-construction-shelby-nc/', label: 'Construction Trades' },
   { href: '/web-design-for-landscapers-shelby-nc/', label: 'Landscapers' },
   { href: '/web-design-for-tree-specialists-shelby-nc/', label: 'Tree Specialists' },
@@ -357,6 +359,15 @@ export default function MobileNav() {
                     className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-white transition-colors hover:bg-white/5 hover:text-brand-cyan"
                   >
                     Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/remodeler-lead-leak-score/"
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-center text-3xl font-bold mobile-nav-subtle-italic text-brand-accent transition-colors hover:bg-brand-accent/10 hover:text-brand-accent-light"
+                  >
+                    Free Tools
                   </a>
                 </li>
                 <li>

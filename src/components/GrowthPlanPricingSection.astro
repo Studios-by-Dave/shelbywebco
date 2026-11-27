@@ -5,6 +5,7 @@ interface Props {
   eyebrow?: string;
   title?: string;
   titleClass?: string;
+  eyebrowClass?: string;
   subtitle?: string;
   variant?: 'launch-first' | 'monthly-first';
   only?: 'website' | 'seo' | 'leads';
@@ -21,6 +22,7 @@ const {
   eyebrow = '✦ Our Growth Plans',
   title = 'One Simple Monthly Plan',
   titleClass = 'font-heading text-4xl md:text-5xl font-bold text-white mb-6',
+  eyebrowClass = 'text-brand-accent text-sm uppercase tracking-widest mb-4',
   subtitle = 'A professionally managed website with built-in ongoing SEO for <span class="text-brand-accent font-semibold">$297/month</span> — no large upfront project bill. Build, host, maintain, and grow — all in one plan.',
   variant = 'launch-first',
   only = '',
@@ -35,7 +37,7 @@ const tiers = [
   {
     key: 'website',
     name: 'Core',
-    launch: '$597',
+    launch: '$597 setup',
     monthly: '$297',
     badge: null,
     description: 'A professionally managed website for $297/month — without a $3,000 to $8,000 upfront project bill.',
@@ -55,7 +57,7 @@ const tiers = [
   {
     key: 'seo',
     name: 'Plus',
-    launch: '$798 – $998',
+    launch: '$597 setup',
     monthly: '$597',
     badge: 'Most Popular',
     description: 'Active local SEO, content, Google Business Profile support, and reporting for real visibility growth.',
@@ -76,7 +78,7 @@ const tiers = [
   {
     key: 'leads',
     name: 'Ultra',
-    launch: '$998 – $1,498',
+    launch: '$597 setup',
     monthly: '$797',
     badge: null,
     description: 'SEO plus conversion optimization, lead tracking, follow-up workflows, and priority support.',
@@ -100,7 +102,7 @@ const seoTiers = [
   {
     key: 'website',
     name: 'Core',
-    launch: '$597',
+    launch: '$597 setup',
     monthly: '$297',
     badge: null,
     description: 'The fundamentals that get you found and indexed — technical fixes, on-page cleanup, and a Google Business Profile that is actually complete.',
@@ -119,7 +121,7 @@ const seoTiers = [
   {
     key: 'seo',
     name: 'Plus',
-    launch: '$798 – $998',
+    launch: '$597 setup',
     monthly: '$597',
     badge: 'Most Popular',
     description: 'Active local SEO, content, and review systems — the tier where rankings start moving and the map pack starts pulling in calls.',
@@ -140,7 +142,7 @@ const seoTiers = [
   {
     key: 'leads',
     name: 'Ultra',
-    launch: '$998 – $1,498',
+    launch: '$597 setup',
     monthly: '$797',
     badge: null,
     description: 'SEO plus conversion, tracking, and hands-on strategy — one system, one point of contact, and we report on the numbers.',
@@ -174,7 +176,7 @@ const shellClass = bare ? '' : 'py-24 px-4';
     {!bare && (
       <>
         <div class="text-center mb-16">
-          <p class="text-brand-accent text-sm uppercase tracking-widest mb-4">{eyebrow}</p>
+          <p class={eyebrowClass}>{eyebrow}</p>
           <h2 class={titleClass}>{title}</h2>
           <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" set:html={subtitle} />
         </div>
@@ -183,7 +185,7 @@ const shellClass = bare ? '' : 'py-24 px-4';
           <p class="text-white/70 max-w-2xl mx-auto text-sm md:text-base leading-relaxed italic">
             {content === 'seo'
               ? 'Foundational SEO, active local visibility, content, and AI-visibility work — one monthly engagement with published scope and no surprise upsells.'
-              : 'Every website build comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Prefer just the site? The Website Care Plan below covers hosting, backups, edits, and updates with no SEO subscription.'}
+              : 'Every setup comes with ongoing SEO built in — visibility is one of the core components of what turns a website into a lead-generating asset. Prefer just the site? The note under the plans covers the site-only care option.'}
           </p>
         </div>
       </>
@@ -212,19 +214,19 @@ const shellClass = bare ? '' : 'py-24 px-4';
                 <>
                   <span class="text-white/60 text-xs uppercase tracking-widest">Per Month</span>
                   <span class="text-5xl md:text-6xl font-black font-nav text-[#22d3ee] drop-shadow-[0_0_12px_rgba(34,211,238,0.4)] whitespace-nowrap">
-                    {tier.monthly}<span class="text-2xl">/mo</span>
+                    {tier.monthly}<span class="text-2xl">/month</span>
                   </span>
                 </>
               ) : (
                 <>
-                  <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">Bundle</span>
-                  <span class="text-white/60 text-xs uppercase tracking-widest">Build/Launch</span>
+                  <span class="inline-block bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">One-time</span>
+                  <span class="text-white/60 text-xs uppercase tracking-widest">Setup</span>
                   <span class="text-[2.4rem] md:text-4xl font-black font-nav bg-[linear-gradient(110deg,#f3db70,45%,#fff,55%,#9b7b2a)] bg-[length:200%_auto] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(243,219,112,0.35)] whitespace-nowrap">
                     {tier.launch}
                   </span>
-                  <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">AND/OR</span>
+                  <span class="text-zinc-200 text-xs font-bold tracking-widest my-1">then, per month</span>
                   <div class="w-full bg-brand-accent/10 border border-brand-accent/25 rounded-xl py-2 px-3 text-center">
-                    <span class="text-[#22d3ee] font-black text-[1.7rem]">{tier.monthly}<span class="text-base font-bold">/mo</span></span>
+                    <span class="text-[#22d3ee] font-black text-[1.7rem]">{tier.monthly}<span class="text-base font-bold">/month</span></span>
                     <span class="text-white/70 text-xs block">SEO +</span>
                   </div>
                 </>
@@ -253,45 +255,9 @@ const shellClass = bare ? '' : 'py-24 px-4';
     </div>
 
     {standalone && (
-      <div class="mb-16 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 md:p-8">
-        <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-8 items-center">
-          <div>
-            <p class="text-brand-accent text-xs uppercase tracking-widest mb-3 font-bold">Or just the website</p>
-            <h3 class="font-heading text-4xl md:text-5xl font-black text-white mb-2">Website Care Plan</h3>
-            <p class="text-white/70 text-sm md:text-base leading-relaxed italic mb-5">
-              Prefer no ongoing SEO? Get the same custom build and keep it maintained, without the SEO subscription.
-            </p>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-              <span class="text-white/60 text-sm">Build &amp; deploy, one time</span>
-              <span class="font-heading text-4xl md:text-5xl font-bold text-white">$597</span>
-            </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-1">
-              <span class="text-white/60 text-sm">Then, per month</span>
-              <span class="font-heading text-4xl md:text-5xl font-bold text-brand-accent">$149</span>
-            </div>
-          </div>
-
-          <div>
-            <p class="text-white/80 text-sm uppercase tracking-widest mb-4">What the $149/month covers</p>
-            <ul class="space-y-2 text-white/80 text-base">
-              <li>• Web hosting and SSL</li>
-              <li>• Automated backups</li>
-              <li>• Security monitoring and updates</li>
-              <li>• Small monthly edits and content changes</li>
-              <li>• Core code and plugin updates</li>
-            </ul>
-            <p class="text-white/50 text-xs mt-4">
-              No ongoing local SEO on this plan — that is what the $297/month Core plan adds on top.
-            </p>
-            <a
-              href="/contact/?service=website"
-              class="inline-flex items-center justify-center rounded-xl border border-white/50 bg-transparent px-6 py-3 text-white/90 font-semibold transition-all duration-300 hover:bg-white/10 hover:border-white/80 text-base text-center w-full sm:w-auto mt-6"
-            >
-              Get Started With a Website
-            </a>
-          </div>
-        </div>
-      </div>
+      <p class="mb-16 text-center text-white/60 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
+        Site-only? The <a href="/contact/?service=website" class="text-brand-accent underline decoration-brand-accent/40 underline-offset-4 hover:text-brand-accent-light">Website Care Plan</a> is $597 setup, then $149/month for hosting, backups, edits, and updates — no SEO. It is what the $297/month Core plan adds SEO on top of.
+      </p>
     )}
 
     {!bare && (
