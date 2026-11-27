@@ -13,6 +13,8 @@ import steepleImage from '../../assets/about/steeple_1.jpg';
 import daveHeadshot from '../../assets/about/Headshot_1.jpg';
 import mascotImg from '../../assets/about/mascot_1.jpg';
 import meandmascotImg from '../../assets/about/meandmascot_2.jpg';
+import emsPhoto from '../../assets/about/dave-with-ems-paramedic.png';
+import rescueFounderPhoto from '../../assets/about/website-rescue-founder.png';
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -206,6 +208,10 @@ Dave Richardson — Founder / Lead Developer
         <div class="space-y-6">
           <Image src={mascotImg} alt="Mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
           <Image src={meandmascotImg} alt="Dave and mascot" class="rounded-2xl shadow-2xl w-full h-auto max-h-[460px] object-cover" />
+          <div class="grid grid-cols-2 gap-4">
+            <Image src={emsPhoto} alt="Dave Richardson with a Cleveland County EMS paramedic" class="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover" />
+            <Image src={rescueFounderPhoto} alt="Dave Richardson wearing a Website Rescue cap" class="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover" />
+          </div>
           <p class="text-white/60 text-sm italic mt-2 text-center">Ok yes this is an AI generated image and we figured you deserved to know this. But it never hurts to dream! lol</p>
         </div>
       </div>
